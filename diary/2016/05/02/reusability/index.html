@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>What is chroot jail? | Coding Sunday</title>
+  <title>Is code reusing always good? | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+  <meta name="description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is chroot jail?">
-<meta property="og:url" content="http://199911.github.io/blog/diary/2016/04/23/chroot/index.html">
+<meta property="og:title" content="Is code reusing always good?">
+<meta property="og:url" content="http://199911.github.io/blog/diary/2016/05/02/reusability/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
-<meta property="og:updated_time" content="2016-04-23T07:53:55.000Z">
+<meta property="og:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
+<meta property="og:updated_time" content="2016-05-02T15:06:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is chroot jail?">
-<meta name="twitter:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+<meta name="twitter:title" content="Is code reusing always good?">
+<meta name="twitter:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -63,10 +63,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-reusability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+    <a href="/blog/diary/2016/05/02/reusability/" class="article-date">
+  <time datetime="2016-05-02T15:01:24.000Z" itemprop="datePublished">2016-05-02</time>
 </a>
     
   </div>
@@ -77,7 +77,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      What is chroot jail?
+      Is code reusing always good?
     </h1>
   
 
@@ -85,19 +85,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+        <p>Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new code be reuse?</p>
+<p>When come to reusability, things become tricky. I always try to integrate the new feature into current routine, to make the code “reusable”. But it is not a good idea everytime.</p>
+<p>When the function is shared by many components, the new feature may not be compatable with all components. It takes lots of effort the handle the conflict. </p>
+<p>After spending effort to integrate the new feature, we may find we need to customize some component, we have to break the function into two. The effort on making the code “reusable” is wasted.</p>
+<p>It is time consuming to refactor the same piece of code again and again. That’s why i come up with a question: When to reuse code?</p>
+<h2 id="Functional-code-vs-glue-code"><a href="#Functional-code-vs-glue-code" class="headerlink" title="Functional code vs glue code"></a>Functional code vs glue code</h2><p>I divide the code into two types, functional code and glue code. Functional code is the core logic. It can be business logic, database logic and other logic which is ‘working’. Glue code is the code which join different components, libraries and functional code together. It perform wrapping the interface, data formating.</p>
+<h2 id="Never-reuse-glue-code-even-the-code-is-exactly-the-same"><a href="#Never-reuse-glue-code-even-the-code-is-exactly-the-same" class="headerlink" title="Never reuse glue code, even the code is exactly the same"></a>Never reuse glue code, even the code is exactly the same</h2><p>Glue code is doing integration. It join two components together, it can never be decoupled from that components. In other words, glue code is tailor made for and depends on specific components. The glue code cannot be reused from the ground up. Sometime you may found the glue code are similiar, but it is just a coincidence. After a few iteration and development the glue code can be completely different. Don’t waste time on making it reusable.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/04/23/chroot/" data-id="cinq4j5sk00043l657rewdtpz" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/diary/2016/05/02/reusability/" data-id="cinq4j5sn00063l65nfs7v34p" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/diary/2016/05/02/reusability/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -106,19 +107,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/diary/2016/05/02/reusability/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Is code reusing always good?
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/diary/2016/04/18/functional-utility/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/diary/2016/04/23/chroot/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Functional utility library is good</div>
+      <div class="article-nav-title">What is chroot jail?</div>
     </a>
   
 </nav>
@@ -201,7 +193,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/blog/diary/2016/04/23/chroot/';
+  var disqus_url = 'http://199911.github.io/blog/diary/2016/05/02/reusability/';
   
   (function(){
     var dsq = document.createElement('script');
