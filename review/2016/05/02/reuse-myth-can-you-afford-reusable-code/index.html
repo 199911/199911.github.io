@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>What is chroot jail? | Coding Sunday</title>
+  <title>Review of &quot;Reuse Myth - can you afford reusable code?&quot; | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+  <meta name="description" content="It is the review of Reuse Myth - can you afford reusable code?.
+TL;DRTestability &amp;gt; Reusability when writing code.
+Reviewed points
+Testability &amp;gt; Reusability
+The cost to make a code reusable (gene">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is chroot jail?">
-<meta property="og:url" content="http://199911.github.io/blog/diary/2016/04/23/chroot/index.html">
+<meta property="og:title" content="Review of "Reuse Myth - can you afford reusable code?"">
+<meta property="og:url" content="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
-<meta property="og:updated_time" content="2016-05-02T15:54:41.000Z">
+<meta property="og:description" content="It is the review of Reuse Myth - can you afford reusable code?.
+TL;DRTestability &amp;gt; Reusability when writing code.
+Reviewed points
+Testability &amp;gt; Reusability
+The cost to make a code reusable (gene">
+<meta property="og:updated_time" content="2016-05-04T16:39:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is chroot jail?">
-<meta name="twitter:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+<meta name="twitter:title" content="Review of "Reuse Myth - can you afford reusable code?"">
+<meta name="twitter:description" content="It is the review of Reuse Myth - can you afford reusable code?.
+TL;DRTestability &amp;gt; Reusability when writing code.
+Reviewed points
+Testability &amp;gt; Reusability
+The cost to make a code reusable (gene">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -63,14 +75,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-reuse-myth-can-you-afford-reusable-code" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+    <a href="/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" class="article-date">
+  <time datetime="2016-05-02T15:53:58.000Z" itemprop="datePublished">2016-05-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
   </div>
 
   </div>
@@ -81,7 +93,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      What is chroot jail?
+      Review of &quot;Reuse Myth - can you afford reusable code?&quot;
     </h1>
   
 
@@ -89,19 +101,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+        <p>It is the review of <a href="http://allankelly.blogspot.hk/2010/10/reuse-myth-can-you-afford-reusable-code.html" target="_blank" rel="external">Reuse Myth - can you afford reusable code?</a>.</p>
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>Testability &gt; Reusability when writing code.</p>
+<h2 id="Reviewed-points"><a href="#Reviewed-points" class="headerlink" title="Reviewed points"></a>Reviewed points</h2><ul>
+<li>Testability &gt; Reusability<ul>
+<li>The cost to make a code reusable (general) enough is high</li>
+<li>Actually what we want is modularity, high cohesion, low coupling</li>
+<li>Very little code can be reuse four times, but we always need to test the code<ul>
+<li>Design the code for test is more practical than design for reuse</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When to reuse?<ul>
+<li>We still reuse the code if possible, but when?</li>
+<li>Micro answer<ul>
+<li>Find module to use before coding a new one</li>
+<li>Refactor the code to make it reusable after we reuse it 3 or 4 times<ul>
+<li>Refactor should be easy if the code is design for test</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Macro answer<ul>
+<li>If the code widely reusable, make it as a library, a plugin or an application<ul>
+<li>Let market to decide the economics of reusability</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>It is a article explain the slide reviewed <a href="review/2016/05/02/how-much-quality-can-we-afford/">here</a>. It explain the idea of the slide in a detail way. Quite good. For the macro answer of reusability, it looks not very practical for a developer.</p>
+<p>It mentions a book named “Mythical Man Month”, it seems a good book.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/04/23/chroot/" data-id="cinq6o5sg00045w6591o1risf" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" data-id="cinrmjpkb0000pa65uxrkq7sg" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -110,19 +150,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Review of &quot;How much quality can we afford?
+          Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;
         
       </div>
     </a>
   
   
-    <a href="/blog/diary/2016/04/18/functional-utility/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/diary/2016/05/02/reusability/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Functional utility library is good</div>
+      <div class="article-nav-title">Is code reusing always good?</div>
     </a>
   
 </nav>
@@ -220,7 +260,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/blog/diary/2016/04/23/chroot/';
+  var disqus_url = 'http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/';
   
   (function(){
     var dsq = document.createElement('script');
