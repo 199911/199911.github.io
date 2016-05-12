@@ -64,6 +64,123 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-learn-multiple-programming-languages" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/12/learn-multiple-programming-languages/" class="article-date">
+  <time datetime="2016-05-11T16:00:00.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/12/learn-multiple-programming-languages/">Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It is the review of <a href="http://blog.thefirehoseproject.com/posts/2-1-learn-multiple-programming-languages/" target="_blank" rel="external">2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages</a></p>
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.</p>
+<h2 id="What-is-a-good-programmer"><a href="#What-is-a-good-programmer" class="headerlink" title="What is a good programmer?"></a>What is a good programmer?</h2><ul>
+<li>Don’t try to think like a computer, try to think like a human, then force the computer to think like a human. *</li>
+</ul>
+<p>In another words, a good programmer write readable code and can encapsulate abstract programming concept into a simple interface. To achieve this target, we have to understand and use design patterns in a proper way. The first step is to understand how to organize codes, for exmaple when to use if, when to use loop, when to define a method, etc.</p>
+<h2 id="What-do-we-learn-from-learning-programming-language"><a href="#What-do-we-learn-from-learning-programming-language" class="headerlink" title="What do we learn from learning programming language?"></a>What do we learn from learning programming language?</h2><p>For first language</p>
+<ul>
+<li>Learn how to break down problems</li>
+<li>Understand what you don’t know and find out resource to help you easily.</li>
+</ul>
+<p>For second language</p>
+<ul>
+<li>Try to compare similarity and difference with the first language</li>
+<li>Deeper understand on the first language you learn<ul>
+<li>What the language is designed in that way</li>
+<li>How features make the language good or bad</li>
+</ul>
+</li>
+</ul>
+<h1 id="Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way"><a href="#Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way" class="headerlink" title="Different programing language try to push you to solve problems in a certain way."></a>Different programing language try to push you to solve problems in a certain way.</h1><p>For example, Rudy encourage us to orgnaize code as objects and javascript encourage us to write code in a functional style.</p>
+<p>We can consider language is a framework. They have equivalent computing power, as all programs will be translated to machine code. The program features are syntactic sugar, which help us to implement and maintain the code.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/review/2016/05/12/learn-multiple-programming-languages/" data-id="cio4f3hyw0000bn65ufquws1t" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/review/2016/05/12/learn-multiple-programming-languages/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-rspec-vs-test-unit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/10/rspec-vs-test-unit/" class="article-date">
+  <time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/10/rspec-vs-test-unit/">Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>It is the review of <a href="http://blog.thefirehoseproject.com/posts/test-driven-development-rspec-vs-test-unit/" target="_blank" rel="external">RSpec vs. Test Unit: How Test Driven Development Works</a>.</p>
+<p>When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement a small feature, test it and make sure it works, and then move on to the next. This is the workflow of test driven development. TDD is a basically repeating write a few line of code and testing.</p>
+<p>Manual testing is time consuming, so automated tests are introduced. Besides automated test is really useful in a big team. It help us to prevent to break other feature you don’t know. It is common to have feature you don’t know because the code base is too large for one developer to understand every detail. Automated tests help us to detect error during development. Fixing a bug during development is much easier, because every detail is in our brain. Automated test prevent our feature broken by others, saving us from undoing the feature in the future.</p>
+<p>After having automated test, we can improve the code by rewriting it easier. Rewriting a working code is called ‘refactor’. ‘Red/Green/Refactor’ methodology is a workflow that</p>
+<ol>
+<li>Write a test first (Red, as the test fail before we implement the feature)</li>
+<li>Implement the feature (Green, the test should be passed)</li>
+<li>Refactor</li>
+</ol>
+<p>Ruby has a unit test standard library, Test::Unit. It is the original test suite. But when developer have to take into account the behaviour that’s expected by users. Test::Unit is not very handy. They invent rspec to replace Test::Unit. They also rename the methodology to behaviour driven development.</p>
+<p>RSpec have higher readability(?). Sometimes Test::Unit is easier to write(?). RSpec is more common in industry.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/" data-id="cio4f2xwb0000at651khcsj2c" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-stop-coding-like-a-cowboy" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/review/2016/05/08/stop-coding-like-a-cowboy/" class="article-date">
@@ -90,7 +207,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>It is the review of <a href="http://blog.thefirehoseproject.com/posts/best-team-tactics-to-write-software/?utm_source=quora&amp;utm_medium=quora_ken_answer&amp;utm_content=what_is_the_biggest_mistake&amp;utm_campaign=quora_answers" target="_blank" rel="external">Get off Your Horse and Stop Coding like a Cowboy</a>.</p>
+        <p>It is the review of <a href="http://blog.thefirehoseproject.com/posts/best-team-tactics-to-write-software/" target="_blank" rel="external">Get off Your Horse and Stop Coding like a Cowboy</a>.</p>
 <h2 id="One-man-team"><a href="#One-man-team" class="headerlink" title="One man team"></a>One man team</h2><ul>
 <li>Zero-Communication Overhead</li>
 <li>Know all aspects of codebase</li>
@@ -725,6 +842,14 @@
       <ul>
         
           <li>
+            <a href="/blog/review/2016/05/12/learn-multiple-programming-languages/">Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/blog/review/2016/05/10/rspec-vs-test-unit/">Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;</a>
+          </li>
+        
+          <li>
             <a href="/blog/review/2016/05/08/stop-coding-like-a-cowboy/">Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;</a>
           </li>
         
@@ -734,14 +859,6 @@
         
           <li>
             <a href="/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/">Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/">Review of &quot;Reuse Myth - can you afford reusable code?&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/diary/2016/05/02/reusability/">Is code reusing always good?</a>
           </li>
         
       </ul>

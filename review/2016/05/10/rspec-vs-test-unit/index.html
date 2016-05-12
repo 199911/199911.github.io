@@ -3,30 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Reuse Myth - can you afford reusable code?&quot; | Coding Sunday</title>
+  <title>Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot; | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="It is the review of Reuse Myth - can you afford reusable code?.
-TL;DRTestability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (gene">
+  <meta name="description" content="It is the review of RSpec vs. Test Unit: How Test Driven Development Works.
+When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Reuse Myth - can you afford reusable code?"">
-<meta property="og:url" content="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/index.html">
+<meta property="og:title" content="Review of "RSpec vs. Test Unit: How Test Driven Development Works"">
+<meta property="og:url" content="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="It is the review of Reuse Myth - can you afford reusable code?.
-TL;DRTestability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (gene">
-<meta property="og:updated_time" content="2016-05-04T16:39:20.000Z">
+<meta property="og:description" content="It is the review of RSpec vs. Test Unit: How Test Driven Development Works.
+When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement">
+<meta property="og:updated_time" content="2016-05-12T14:55:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Reuse Myth - can you afford reusable code?"">
-<meta name="twitter:description" content="It is the review of Reuse Myth - can you afford reusable code?.
-TL;DRTestability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (gene">
+<meta name="twitter:title" content="Review of "RSpec vs. Test Unit: How Test Driven Development Works"">
+<meta name="twitter:description" content="It is the review of RSpec vs. Test Unit: How Test Driven Development Works.
+When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -75,10 +66,10 @@ The cost to make a code reusable (gene">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-reuse-myth-can-you-afford-reusable-code" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-rspec-vs-test-unit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" class="article-date">
-  <time datetime="2016-05-02T15:53:58.000Z" itemprop="datePublished">2016-05-02</time>
+    <a href="/blog/review/2016/05/10/rspec-vs-test-unit/" class="article-date">
+  <time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time>
 </a>
     
   <div class="article-category">
@@ -93,7 +84,7 @@ The cost to make a code reusable (gene">
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Reuse Myth - can you afford reusable code?&quot;
+      Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;
     </h1>
   
 
@@ -101,47 +92,24 @@ The cost to make a code reusable (gene">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>It is the review of <a href="http://allankelly.blogspot.hk/2010/10/reuse-myth-can-you-afford-reusable-code.html" target="_blank" rel="external">Reuse Myth - can you afford reusable code?</a>.</p>
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><p>Testability &gt; Reusability when writing code.</p>
-<h2 id="Reviewed-points"><a href="#Reviewed-points" class="headerlink" title="Reviewed points"></a>Reviewed points</h2><ul>
-<li>Testability &gt; Reusability<ul>
-<li>The cost to make a code reusable (general) enough is high</li>
-<li>Actually what we want is modularity, high cohesion, low coupling</li>
-<li>Very little code can be reuse four times, but we always need to test the code<ul>
-<li>Design the code for test is more practical than design for reuse</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>When to reuse?<ul>
-<li>We still reuse the code if possible, but when?</li>
-<li>Micro answer<ul>
-<li>Find module to use before coding a new one</li>
-<li>Refactor the code to make it reusable after we reuse it 3 or 4 times<ul>
-<li>Refactor should be easy if the code is design for test</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Macro answer<ul>
-<li>If the code widely reusable, make it as a library, a plugin or an application<ul>
-<li>Let market to decide the economics of reusability</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>It is a article explain the slide reviewed <a href="review/2016/05/02/how-much-quality-can-we-afford/">here</a>. It explain the idea of the slide in a detail way. Quite good. For the macro answer of reusability, it looks not very practical for a developer.</p>
-<p>It mentions a book named “Mythical Man Month”, it seems a good book.</p>
+        <p>It is the review of <a href="http://blog.thefirehoseproject.com/posts/test-driven-development-rspec-vs-test-unit/" target="_blank" rel="external">RSpec vs. Test Unit: How Test Driven Development Works</a>.</p>
+<p>When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement a small feature, test it and make sure it works, and then move on to the next. This is the workflow of test driven development. TDD is a basically repeating write a few line of code and testing.</p>
+<p>Manual testing is time consuming, so automated tests are introduced. Besides automated test is really useful in a big team. It help us to prevent to break other feature you don’t know. It is common to have feature you don’t know because the code base is too large for one developer to understand every detail. Automated tests help us to detect error during development. Fixing a bug during development is much easier, because every detail is in our brain. Automated test prevent our feature broken by others, saving us from undoing the feature in the future.</p>
+<p>After having automated test, we can improve the code by rewriting it easier. Rewriting a working code is called ‘refactor’. ‘Red/Green/Refactor’ methodology is a workflow that</p>
+<ol>
+<li>Write a test first (Red, as the test fail before we implement the feature)</li>
+<li>Implement the feature (Green, the test should be passed)</li>
+<li>Refactor</li>
+</ol>
+<p>Ruby has a unit test standard library, Test::Unit. It is the original test suite. But when developer have to take into account the behaviour that’s expected by users. Test::Unit is not very handy. They invent rspec to replace Test::Unit. They also rename the methodology to behaviour driven development.</p>
+<p>RSpec have higher readability(?). Sometimes Test::Unit is easier to write(?). RSpec is more common in industry.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" data-id="cinrmjpkb0000pa65uxrkq7sg" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/" data-id="cio4f2xwb0000at651khcsj2c" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -150,19 +118,19 @@ The cost to make a code reusable (gene">
     
 <nav id="article-nav">
   
-    <a href="/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/review/2016/05/12/learn-multiple-programming-languages/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;
+          Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;
         
       </div>
     </a>
   
   
-    <a href="/blog/diary/2016/05/02/reusability/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/review/2016/05/08/stop-coding-like-a-cowboy/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Is code reusing always good?</div>
+      <div class="article-nav-title">Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;</div>
     </a>
   
 </nav>
@@ -260,7 +228,7 @@ The cost to make a code reusable (gene">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/';
+  var disqus_url = 'http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/';
   
   (function(){
     var dsq = document.createElement('script');
