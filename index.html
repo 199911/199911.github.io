@@ -64,6 +64,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-making-abstract-products-is-hard" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/14/making-abstract-products-is-hard/" class="article-date">
+  <time datetime="2016-05-13T16:00:00.000Z" itemprop="datePublished">2016-05-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h2><h3 id="Business-can-be-divided-to-providing-product-or-service"><a href="#Business-can-be-divided-to-providing-product-or-service" class="headerlink" title="Business can be divided to providing product or service"></a>Business can be divided to providing product or service</h3><p>Product is something can be transfered to customer, but service cannot. A business can provide both. Software is a service.</p>
+<h1 id="Software-is-an-abstract-product"><a href="#Software-is-an-abstract-product" class="headerlink" title="Software is an abstract product"></a>Software is an abstract product</h1><p>We cannot ‘see’ a software, so it is abstract. </p>
+<p>We are shipping code to user and user can ‘get’ a UI. Why we cannot see a software? UI is just a tip of the iceberg of software, the functional unit is the code behind. Code is the reflection of coder’s mental working, show how the programmer organize the logic, how to divide and solve the problems. As the software can be change quickly, a software is a living product, not a static one. A tech company is also providing service to maintain the software.</p>
+<h3 id="Softwares-are-complex"><a href="#Softwares-are-complex" class="headerlink" title="Softwares are complex"></a>Softwares are complex</h3><p>Software is instructions to computer. A computer is actually doing simple calculation, changing bits from 0 to 1 or from 1 to 0. To make a software from simple instruction is extremely complex. So programmer pack the small sets instructions together to form some commands and pack the commands in to module. Therefore, we can create a software with higher level commands. We are calling the ways we pack the commands as “creating layers of software abstractions”.</p>
+<p>Each layer of abstraction simple a large amount of instruction. If anyone get lost in one or two layer, they will have no idea what the software is going on.</p>
+<p>Software is too complex to manage, especially it have not physical constraints and cost to limit the complexity of a software.</p>
+<p>Reference: <a href="http://arthurtw.github.io/2015/02/01/making-abstract-products-makes-things-hard.html" target="_blank" rel="external">Making Abstract Products Makes Things Hard</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/review/2016/05/14/making-abstract-products-is-hard/" data-id="cio6qejdi0000sp65b7wf8a69" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/review/2016/05/14/making-abstract-products-is-hard/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-be-a-programmer" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/review/2016/05/13/how-to-be-a-programmer/" class="article-date">
@@ -743,54 +792,6 @@
 
 
   
-    <article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/diary/2016/04/23/chroot/">What is chroot jail?</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/04/23/chroot/" data-id="cio5y9xho000413659zsonq15" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/blog/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -832,6 +833,10 @@
       <ul>
         
           <li>
+            <a href="/blog/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
+          </li>
+        
+          <li>
             <a href="/blog/review/2016/05/13/how-to-be-a-programmer/">&quot;程式員求生指南：關於寫程式的二三事&quot; 感想</a>
           </li>
         
@@ -845,10 +850,6 @@
         
           <li>
             <a href="/blog/review/2016/05/08/stop-coding-like-a-cowboy/">Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/diary/2016/05/07/mean-and-median/">Mean vs Median</a>
           </li>
         
       </ul>
