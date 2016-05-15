@@ -64,6 +64,134 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-reusability" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/diary/2016/05/02/reusability/" class="article-date">
+  <time datetime="2016-05-02T15:01:24.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/diary/2016/05/02/reusability/">Is code reusing always good?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new code be reuse?</p>
+<p>When come to reusability, things become tricky. I always try to integrate the new feature into current routine, to make the code “reusable”. But it is not a good idea everytime.</p>
+<p>When the function is shared by many components, the new feature may not be compatable with all components. It takes lots of effort the handle the conflict. </p>
+<p>After spending effort to integrate the new feature, we may find we need to customize some component, we have to break the function into two. The effort on making the code “reusable” is wasted.</p>
+<p>It is time consuming to refactor the same piece of code again and again. That’s why i come up with a question: When to reuse code?</p>
+<h2 id="Functional-code-vs-glue-code"><a href="#Functional-code-vs-glue-code" class="headerlink" title="Functional code vs glue code"></a>Functional code vs glue code</h2><p>I divide the code into two types, functional code and glue code. Functional code is the core logic. It can be business logic, database logic and other logic which is ‘working’. Glue code is the code which join different components, libraries and functional code together. It perform wrapping the interface, data formating.</p>
+<h2 id="Never-reuse-glue-code-even-the-code-is-exactly-the-same"><a href="#Never-reuse-glue-code-even-the-code-is-exactly-the-same" class="headerlink" title="Never reuse glue code, even the code is exactly the same"></a>Never reuse glue code, even the code is exactly the same</h2><p>Glue code is doing integration. It join two components together, it can never be decoupled from that components. In other words, glue code is tailor made for and depends on specific components. The glue code cannot be reused from the ground up. Sometime you may found the glue code are similiar, but it is just a coincidence. After a few iteration and development the glue code can be completely different. Don’t waste time on making it reusable.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/diary/2016/05/02/reusability/" data-id="cio5y9xhv00081365r033q9xg" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/diary/2016/05/02/reusability/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-much-quality-can-we-afford" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/02/how-much-quality-can-we-afford/" class="article-date">
+  <time datetime="2016-05-02T14:47:44.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/02/how-much-quality-can-we-afford/">Review of &quot;How much quality can we afford?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Strive a balance between development speed and reusability.</p>
+<h2 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h2><p>I only pick the points I think it is correct here.</p>
+<ul>
+<li>The cost is development time</li>
+<li>Good quality mean<ul>
+<li>Free of bugs</li>
+<li>Few feature make for reusability</li>
+<li>Maintainable</li>
+<li>Knife through butter testing (Easy to test)</li>
+</ul>
+</li>
+<li>Minimal<ul>
+<li>No unuse feature</li>
+<li>No half baked ideas</li>
+</ul>
+</li>
+<li>Reusable code take more cost<ul>
+<li>About 3 times more, it mean we have to use it 4 times to recover the cost</li>
+</ul>
+</li>
+<li>Lean and Agile does not mean low quality</li>
+<li>Make defect prevention cheap by<ul>
+<li>Continuous integration</li>
+<li>Virgin install</li>
+<li>Test Driven Development</li>
+<li>Acceptance Test Driven Development</li>
+<li>Lightweight code-reviews</li>
+<li>Pair programming</li>
+<li>Static analysis tools </li>
+</ul>
+</li>
+</ul>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>It mention good quality means ‘no rework’. It is difficult to make a ‘perfect’ code during planing. The market is changing, the technology is changing, everything is changing. We may find the customers’ requirement change. May be there are some new technology can solve the problem easily. We always need to refactor the code. I believe ‘design for change’ has a higher priority than ‘design for no rework’.</p>
+<p>This powerpoint remind me that the cost of software development is ‘time’. We should strive a balance between development time and feature. Reusability is not a golden rule, if the cost is too high, we can give up reusability. We are using time to judge the quality of code. I mean time we spent on both development and maintainace. Cost on maintainace is still have more weight than development cost.</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>It is a slide from an consulting company. It do not provide technical example, only some figures. Not very useful, but it reminds me some old idea on software development.</p>
+<p>It also mentions lots of jargon, it give me some keywords to search.</p>
+<p>Reference: <a href="http://www.allankelly.net/static/presentations/ABC2010_HowMuchQuality.pdf" target="_blank" rel="external">How much quality can we afford?</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/review/2016/05/02/how-much-quality-can-we-afford/" data-id="cio5y9xi100091365ttlcyz2y" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/review/2016/05/02/how-much-quality-can-we-afford/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
@@ -229,6 +357,14 @@
       <ul>
         
           <li>
+            <a href="/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/">Review of &quot;The Key To Accelerating Your Coding Skills&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/blog/review/2016/05/14/the-law-of-leaky-abstraction/">Review of &quot;The Law of Leaky Abstractions&quot;</a>
+          </li>
+        
+          <li>
             <a href="/blog/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
           </li>
         
@@ -238,14 +374,6 @@
         
           <li>
             <a href="/blog/review/2016/05/12/learn-multiple-programming-languages/">Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/review/2016/05/10/rspec-vs-test-unit/">Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/review/2016/05/08/stop-coding-like-a-cowboy/">Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;</a>
           </li>
         
       </ul>

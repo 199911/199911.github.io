@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>What is chroot jail? | Coding Sunday</title>
+  <title>Review of &quot;The Key To Accelerating Your Coding Skills&quot; | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+  <meta name="description" content="You will never know everything you need to solve all your problems. The key point is learn how to figure stuff out on our own.
+BeginnerAt first we learn domain specific knowledge. For example prgoramm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is chroot jail?">
-<meta property="og:url" content="http://199911.github.io/blog/diary/2016/04/23/chroot/index.html">
+<meta property="og:title" content="Review of "The Key To Accelerating Your Coding Skills"">
+<meta property="og:url" content="http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
-<meta property="og:updated_time" content="2016-05-02T15:54:41.000Z">
+<meta property="og:description" content="You will never know everything you need to solve all your problems. The key point is learn how to figure stuff out on our own.
+BeginnerAt first we learn domain specific knowledge. For example prgoramm">
+<meta property="og:updated_time" content="2016-05-15T06:41:47.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is chroot jail?">
-<meta name="twitter:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+<meta name="twitter:title" content="Review of "The Key To Accelerating Your Coding Skills"">
+<meta name="twitter:description" content="You will never know everything you need to solve all your problems. The key point is learn how to figure stuff out on our own.
+BeginnerAt first we learn domain specific knowledge. For example prgoramm">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -63,14 +66,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-learn-to-code-and-be-self-reliant" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+    <a href="/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/" class="article-date">
+  <time datetime="2016-05-14T16:00:00.000Z" itemprop="datePublished">2016-05-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
   </div>
 
   </div>
@@ -81,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      What is chroot jail?
+      Review of &quot;The Key To Accelerating Your Coding Skills&quot;
     </h1>
   
 
@@ -89,19 +92,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+        <p>You will never know everything you need to solve all your problems. The key point is learn how to figure stuff out on our own.</p>
+<h2 id="Beginner"><a href="#Beginner" class="headerlink" title="Beginner"></a>Beginner</h2><p>At first we learn domain specific knowledge. For example prgoramming language syntax, library function. Some facts that cannot be generalize.</p>
+<h2 id="Next-Step"><a href="#Next-Step" class="headerlink" title="Next Step"></a>Next Step</h2><p>Learn how to read debug message and fix the code on your own. We also need to understand each error message resolved, to generalize our experience on fixing bugs.</p>
+<h2 id="A-self-sufficient-programmer"><a href="#A-self-sufficient-programmer" class="headerlink" title="A self-sufficient programmer"></a>A self-sufficient programmer</h2><p>Able to googling and finding solution. Can reference to the code we have written and follow the pattern. It is a process to generalize the experience and knowledge.</p>
+<p>These knowledge help us to teach ourself what we don’t know along the way. With these skill we can do specific task, even we have not know everything about our task.</p>
+<h2 id="How-to-learn-to-be-self-sufficient-efficiently"><a href="#How-to-learn-to-be-self-sufficient-efficiently" class="headerlink" title="How to learn to be self-sufficient efficiently"></a>How to learn to be self-sufficient efficiently</h2><ol>
+<li>Ask ourself “Do I build similar thing before?”</li>
+<li>Learn to read documentation and code instead of video tutorial.</li>
+<li>Learn how to build thing from scratch and deploy.</li>
+</ol>
+<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ol>
+<li>Be patient and understand this is a difficult process and go easy on yourself. </li>
+<li>Work consistently, but don’t overwork yourself.</li>
+</ol>
+<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/learn-to-code-and-be-self-reliant/" target="_blank" rel="external">The Key To Accelerating Your Coding Skills</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/04/23/chroot/" data-id="cio5y9xho000413659zsonq15" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/" data-id="cio87uk3h00007865ihl8pu0r" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -110,19 +122,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;How much quality can we afford?
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/diary/2016/04/18/functional-utility/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/review/2016/05/14/the-law-of-leaky-abstraction/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Functional utility library is good</div>
+      <div class="article-nav-title">Review of &quot;The Law of Leaky Abstractions&quot;</div>
     </a>
   
 </nav>
@@ -220,7 +223,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/blog/diary/2016/04/23/chroot/';
+  var disqus_url = 'http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/';
   
   (function(){
     var dsq = document.createElement('script');
