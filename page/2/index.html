@@ -64,6 +64,119 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-what-are-the-programming-mistakes-most-inexperienced-programmers-make" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" class="article-date">
+  <time datetime="2016-05-03T16:04:01.000Z" itemprop="datePublished">2016-05-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/">Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><h3 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer 1"></a>Answer 1</h3><ul>
+<li>Deploy experimental feature on Friday, it crashes the whole system<ul>
+<li>Never put yourself in a position to make mistake<ul>
+<li>TDD</li>
+</ul>
+</li>
+<li>Not a good idea to deploy big stuff on Friday</li>
+<li>Think about the risk before deploy</li>
+<li>Confirm after deploy asap</li>
+<li>Don’t be afraid to move fast and break things<ul>
+<li>Mistake make you grow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Short summary</p>
+<p>We did everything he mentioned besides TDD, just keep it as a reminder.</p>
+<h3 id="Answer-2"><a href="#Answer-2" class="headerlink" title="Answer 2"></a>Answer 2</h3><ul>
+<li>Early optimization is bad<ul>
+<li>Lower readability</li>
+</ul>
+</li>
+<li>Readablility &gt; Performance (in most cases)<ul>
+<li>only tune performance on bottleneck</li>
+<li>compiler is smart enough to optimize</li>
+<li>Note: firmware have performance &gt; readability</li>
+</ul>
+</li>
+</ul>
+<p>Short summary</p>
+<p>I argee the points. Premature optimization is bad, but sometime it is hard to determine what is premature optimization. We should have Readablility &gt; Performance unless we are doing very low level stuff. </p>
+<h3 id="Answer-3"><a href="#Answer-3" class="headerlink" title="Answer 3"></a>Answer 3</h3><ul>
+<li>Ask for code review, read code of great engineer</li>
+</ul>
+<h3 id="Answer-4"><a href="#Answer-4" class="headerlink" title="Answer 4"></a>Answer 4</h3><ul>
+<li>Abuse OOP, don’t forget single responsibility</li>
+<li>over-complicated</li>
+<li>over-simplifying</li>
+<li>extreme failure test<ul>
+<li>shutdown and turn on the database</li>
+<li>flush all the cache</li>
+</ul>
+</li>
+</ul>
+<h3 id="Answer-5"><a href="#Answer-5" class="headerlink" title="Answer 5"></a>Answer 5</h3><ul>
+<li>Reinvent the wheel</li>
+<li>Code before think</li>
+<li>Use the wrong tool, simply because it is popular</li>
+</ul>
+<h3 id="Answer-6"><a href="#Answer-6" class="headerlink" title="Answer 6"></a>Answer 6</h3><ul>
+<li>Infatuated with the process of building the product<ul>
+<li>Get things done, engineer are solving problems</li>
+</ul>
+</li>
+<li>Ingore code written by others</li>
+</ul>
+<h3 id="Answer-7"><a href="#Answer-7" class="headerlink" title="Answer 7"></a>Answer 7</h3><ul>
+<li>Someone make his AWS key public…<ul>
+<li>Luckily, Amazon recover the cost</li>
+</ul>
+</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>Read others code to learn</li>
+<li>Study TDD</li>
+<li>Focus on problem solving</li>
+<li>Code before think</li>
+<li>Think about risk before deploy</li>
+</ul>
+<p>Reference: <a href="https://www.quora.com/What-are-the-programming-mistakes-most-inexperienced-programmers-make" target="_blank" rel="external">What are the programming mistakes most inexperienced programmers make?</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" data-id="cio5y9xis000m1365uvv3dhcc" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-reuse-myth-can-you-afford-reusable-code" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" class="article-date">
@@ -433,6 +546,10 @@
       <ul>
         
           <li>
+            <a href="/blog/diary/2016/05/23/skills-for-hackathon/">Skills for hackathon</a>
+          </li>
+        
+          <li>
             <a href="/blog/diary/2016/05/22/software-as-a-slide/">SaaS - Software as a slide</a>
           </li>
         
@@ -446,10 +563,6 @@
         
           <li>
             <a href="/blog/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/review/2016/05/13/how-to-be-a-programmer/">&quot;程式員求生指南：關於寫程式的二三事&quot; 感想</a>
           </li>
         
       </ul>

@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>What is chroot jail? | Coding Sunday</title>
+  <title>Skills for hackathon | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+  <meta name="description" content="After joining angelhack, I identify some useful skill sets for hackathon.
+TechnologyThe mission of developer in hackathon is to make software for presentation. 
+
+UI and UX is everything, developer sho">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is chroot jail?">
-<meta property="og:url" content="http://199911.github.io/blog/diary/2016/04/23/chroot/index.html">
+<meta property="og:title" content="Skills for hackathon">
+<meta property="og:url" content="http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
-<meta property="og:updated_time" content="2016-05-02T15:54:41.000Z">
+<meta property="og:description" content="After joining angelhack, I identify some useful skill sets for hackathon.
+TechnologyThe mission of developer in hackathon is to make software for presentation. 
+
+UI and UX is everything, developer sho">
+<meta property="og:updated_time" content="2016-05-23T11:32:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is chroot jail?">
-<meta name="twitter:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+<meta name="twitter:title" content="Skills for hackathon">
+<meta name="twitter:description" content="After joining angelhack, I identify some useful skill sets for hackathon.
+TechnologyThe mission of developer in hackathon is to make software for presentation. 
+
+UI and UX is everything, developer sho">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -63,10 +72,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-skills-for-hackathon" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+    <a href="/blog/diary/2016/05/23/skills-for-hackathon/" class="article-date">
+  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
 </a>
     
   <div class="article-category">
@@ -81,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      What is chroot jail?
+      Skills for hackathon
     </h1>
   
 
@@ -89,19 +98,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+        <p>After joining angelhack, I identify some useful skill sets for hackathon.</p>
+<h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><p>The mission of developer in hackathon is to make software for presentation. </p>
+<ul>
+<li>UI and UX is everything, developer should put most effort on it</li>
+<li>Hardcode everything<ul>
+<li>If it can save development time</li>
+<li>If it can make the presentation more smooth<ul>
+<li>If the computation is slow, just hardcode it to make it fast.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Forget everything about backend<ul>
+<li>Because it cannot be ‘seen’ by judges</li>
+</ul>
+</li>
+<li>Learn to use prototype tool and API before hackathon<ul>
+<li>This help us build good looking and ‘functional’ prototype.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><p>User Experience and User Interface is the key point. It is the visual content for judges</p>
+<ul>
+<li>Interface need to be clean and simple, it helps judges to focus on the feature you are going to present.</li>
+<li>The operation should be intuitive enough, judges should be able to use it without learning.<ul>
+<li>Save time on explain how to use in pitch<ul>
+<li>It is wasting time to explain “We click this button to perform bla bla bla…” to judges</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Pitch"><a href="#Pitch" class="headerlink" title="Pitch"></a>Pitch</h2><p>Presnetation time is too short. Squeese the speech to maximize the value of every word you speak.</p>
+<ul>
+<li>Don’t waste time on saying anything cannot add value to the product.<ul>
+<li>such as team introduction</li>
+</ul>
+</li>
+<li>User Story may not be very useful<ul>
+<li>Time is too short for demonstrate your product after provide a user story</li>
+</ul>
+</li>
+<li>Present your idea and demonstrate your prototype at the same time<ul>
+<li>Use one or two sentence to explain your idea<ul>
+<li>Your idea must be simple and well-known.<ul>
+<li>The idea can be solving some simple problems in daily lives</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>One member demonstrate the usage of prototype<ul>
+<li>The UI/UX of prototype must be clear and simple</li>
+</ul>
+</li>
+<li>Another member explain the function and idea of the prototype</li>
+</ul>
+</li>
+<li>If your prototype is using some common technology, technical part can be skipped</li>
+</ul>
+<h2 id="Product-design"><a href="#Product-design" class="headerlink" title="Product design"></a>Product design</h2><p>In the aspect of engineer, we are always focus on problem. We identify the problem and then find out best solution to solve it. </p>
+<p>But in businuess, it is not the case. Even you solution is perfect, the client may not use them. Some client don’t think a problem is problem, they may not want to solve it.</p>
+<p>To design a product, we can focus on what do user need. Sometimes, client is not paying to buy an object, but some abstract values or feelings. For example, some people spend lots of money on online games not because they enjoy the game, they may just want to show off and beat other player. That is the feeling the client want to buy.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/04/23/chroot/" data-id="cio5y9xho000413659zsonq15" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -110,19 +175,10 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;How much quality can we afford?
-        
-      </div>
-    </a>
   
-  
-    <a href="/blog/diary/2016/04/18/functional-utility/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/diary/2016/05/22/software-as-a-slide/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Functional utility library is good</div>
+      <div class="article-nav-title">SaaS - Software as a slide</div>
     </a>
   
 </nav>
@@ -220,7 +276,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/blog/diary/2016/04/23/chroot/';
+  var disqus_url = 'http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/';
   
   (function(){
     var dsq = document.createElement('script');
