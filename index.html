@@ -64,6 +64,77 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
+  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
+<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
+<p>例如callback function入邊個<code>this</code>有時會唔小心指左去第2個scope。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.name = &apos;my app&apos;</span><br><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback( this, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">app.getUsers(function countUser(data)&#123;</span><br><span class="line">  console.log(&apos;There are &apos; + data.length + &apos; users using &apos; + this.name);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>以上果段code個this就會指左去jQuery個scope。當callback function入邊有用到<code>this</code>果時，咁就會有D unexpected behaviour出現。以上例子中嘅<code>this.name</code>會指左去<code>$.name</code>，而唔係<code>app.name</code>。</p>
+<p>有D人可能會諗</p>
+<blockquote>
+<p>Callback果度用<code>app.name</code>唔好用<code>this.name</code>咪得囉。</p>
+</blockquote>
+<p>E個solution有2個缺點</p>
+<ol>
+<li>hardcode caller個variable name會少左flexibility。<br> 有時後個callback可以用係唔同地方，但係一要hardcode個caller variable入去，個callback就變左context specific，廢左武功，冇得reuse。咁當然可以用D wrapper 去fix E 個problem，但係就要寫好多boilerplate code，搞到段code好冗長。</li>
+<li>abstract唔到個function interface做一個API<br> 其實一個function已經係一個abstraction，當個user 入個callback去call你個function，佢suppose唔洗知你個function點implement。以上文為例，人地跟本唔知你用jQuery咁樣implement，唔知道用<code>this</code>會有bug。咁樣寫getUsers係做唔到一個public api。</li>
+</ol>
+<p>咁點樣寫先啱？個問題主要係function個scope冇清淅define，只要我地用一D native javascript function指定返個<code>this</code>就得。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  var self = this;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback.call( self, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>callback.call( self, data )</code> 第一個argument就係指定左個<code>this</code>係做<code>self</code>，姐係call緊<code>self.callback(data)</code>。<br>又或者可以用<code>callback.apply( self, [data] )</code>，姐係call緊<code>self.callback(data[0], data[1], data[2] ...)</code>。<br>都可以用<code>(callback.bind(self))(data)</code>，<code>bind</code>都係指定個this，但係佢唔會直接行個function，而係return一個bind左scope嘅function。</p>
+<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><ul>
+<li>當implement callback pattern，要記住留意this嘅binding。</li>
+<li>當要借其他object D method用，最好用call，apply或者bind，因為我地唔知人地點implement。</li>
+<li>如果只需要借人地D method用一次，直接用<code>call</code>或<code>apply</code>就得。如果唔係馬上call或者要用幾次，最好用<code>bind</code> create一個新function先。</li>
+</ul>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank" rel="external">First-class function</a></li>
+<li><a href="http://dreamerslab.com/blog/tw/javascript-this/" target="_blank" rel="external">Javascript <code>this</code></a></li>
+<li><a href="http://dreamerslab.com/blog/tw/javascript-call-and-apply/" target="_blank" rel="external">Javascript call 以及 apply</a></li>
+<li><a href="http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind" target="_blank" rel="external">Javascript call() &amp; apply() vs bind()?</a></li>
+<li><a href="https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/" target="_blank" rel="external">What You Should Already Know about JavaScript Scope</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/blog/blog/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-skills-for-hackathon" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/diary/2016/05/23/skills-for-hackathon/" class="article-date">
@@ -156,9 +227,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -215,9 +286,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/05/22/software-as-a-slide/" data-id="cioisqrv100010x65pmkevk4z" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/diary/2016/05/22/software-as-a-slide/" data-id="cioisqrv100010x65pmkevk4z" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/diary/2016/05/22/software-as-a-slide/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/diary/2016/05/22/software-as-a-slide/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -272,9 +343,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/" data-id="cio84td820000fi65f0a4a2c2" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/" data-id="cio84td820000fi65f0a4a2c2" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/15/learn-to-code-and-be-self-reliant/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -318,9 +389,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/14/the-law-of-leaky-abstraction/" data-id="cio6usukk0000fh65hkxc90tq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/14/the-law-of-leaky-abstraction/" data-id="cio6usukk0000fh65hkxc90tq" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/14/the-law-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/14/the-law-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -367,9 +438,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/14/making-abstract-products-is-hard/" data-id="cio6qejdi0000sp65b7wf8a69" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/14/making-abstract-products-is-hard/" data-id="cio6qejdi0000sp65b7wf8a69" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/14/making-abstract-products-is-hard/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/14/making-abstract-products-is-hard/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -430,9 +501,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/13/how-to-be-a-programmer/" data-id="cio5y9xid000d13657h4czewo" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/13/how-to-be-a-programmer/" data-id="cio5y9xid000d13657h4czewo" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/13/how-to-be-a-programmer/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/13/how-to-be-a-programmer/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -494,9 +565,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/12/learn-multiple-programming-languages/" data-id="cio5y9xia000b1365tl6v1e4i" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/12/learn-multiple-programming-languages/" data-id="cio5y9xia000b1365tl6v1e4i" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/12/learn-multiple-programming-languages/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/12/learn-multiple-programming-languages/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -547,9 +618,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/" data-id="cio5y9xio000i1365i58p4j8w" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/10/rspec-vs-test-unit/" data-id="cio5y9xio000i1365i58p4j8w" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/10/rspec-vs-test-unit/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/10/rspec-vs-test-unit/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -682,57 +753,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/review/2016/05/08/stop-coding-like-a-cowboy/" data-id="cio5y9xiq000k1365hqpxrniq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/blog/blog/review/2016/05/08/stop-coding-like-a-cowboy/" data-id="cio5y9xiq000k1365hqpxrniq" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/blog/review/2016/05/08/stop-coding-like-a-cowboy/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mean-and-median" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/diary/2016/05/07/mean-and-median/" class="article-date">
-  <time datetime="2016-05-06T16:00:00.000Z" itemprop="datePublished">2016-05-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/diary/2016/05/07/mean-and-median/">Mean vs Median</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>To give an overview of a set of number, we can use mean or median. When to use mean and when to use median?</p>
-<p>We can get the sum of numbers from mean, but not median. If we need the total value, mean is a good choice. If you want to eliminate the effect of some extrem value, we may use median. If we only care the overview of a set of number, median is also a good choice.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="How-much-milk-we-should-buy"><a href="#How-much-milk-we-should-buy" class="headerlink" title="How much milk we should buy?"></a>How much milk we should buy?</h3><p>In this question, we care the total amount of milk consumed. Average consumption of milk per member is more useful than median of the milk consumption.</p>
-<h3 id="Should-a-student-care-mean-or-median-of-exam-score"><a href="#Should-a-student-care-mean-or-median-of-exam-score" class="headerlink" title="Should a student care mean or median of exam score?"></a>Should a student care mean or median of exam score?</h3><p>Median if the student want to know his/her rank. There 50% of student have score higher and 50% of them have lower than median. Student can know he/she is in the upper half or lower half.</p>
-<h2 id="Truncated-mean"><a href="#Truncated-mean" class="headerlink" title="Truncated mean"></a>Truncated mean</h2><p>Truncated mean is a mean value of a set of number with some maximum and minimum number removed. It strive a balance between mean and median.</p>
-<p>This method is used in scoring method of some sport. If judges gives extremely high or low score, their score will be removed. It lowers the effect of bias of some judges.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/blog/diary/2016/05/07/mean-and-median/" data-id="cio5y9xhp000513658fxvfsex" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/blog/diary/2016/05/07/mean-and-median/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/blog/blog/review/2016/05/08/stop-coding-like-a-cowboy/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -745,7 +768,7 @@
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">__('next') &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
   </nav>
 </section>
         
@@ -783,6 +806,10 @@
       <ul>
         
           <li>
+            <a href="/blog/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
+          </li>
+        
+          <li>
             <a href="/blog/diary/2016/05/23/skills-for-hackathon/">Skills for hackathon</a>
           </li>
         
@@ -796,10 +823,6 @@
         
           <li>
             <a href="/blog/review/2016/05/14/the-law-of-leaky-abstraction/">Review of &quot;The Law of Leaky Abstractions&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/blog/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
           </li>
         
       </ul>
