@@ -62,6 +62,123 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-learn-multiple-programming-languages" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/12/learn-multiple-programming-languages/" class="article-date">
+  <time datetime="2016-05-11T16:00:00.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/12/learn-multiple-programming-languages/">Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.</p>
+<h2 id="What-is-a-good-programmer"><a href="#What-is-a-good-programmer" class="headerlink" title="What is a good programmer?"></a>What is a good programmer?</h2><ul>
+<li>Don’t try to think like a computer, try to think like a human, then force the computer to think like a human. *</li>
+</ul>
+<p>In another words, a good programmer write readable code and can encapsulate abstract programming concept into a simple interface. To achieve this target, we have to understand and use design patterns in a proper way. The first step is to understand how to organize codes, for exmaple when to use if, when to use loop, when to define a method, etc.</p>
+<h2 id="What-do-we-learn-from-learning-programming-language"><a href="#What-do-we-learn-from-learning-programming-language" class="headerlink" title="What do we learn from learning programming language?"></a>What do we learn from learning programming language?</h2><p>For first language</p>
+<ul>
+<li>Learn how to break down problems</li>
+<li>Understand what you don’t know and find out resource to help you easily.</li>
+</ul>
+<p>For second language</p>
+<ul>
+<li>Try to compare similarity and difference with the first language</li>
+<li>Deeper understand on the first language you learn<ul>
+<li>What the language is designed in that way</li>
+<li>How features make the language good or bad</li>
+</ul>
+</li>
+</ul>
+<h1 id="Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way"><a href="#Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way" class="headerlink" title="Different programing language try to push you to solve problems in a certain way."></a>Different programing language try to push you to solve problems in a certain way.</h1><p>For example, Rudy encourage us to orgnaize code as objects and javascript encourage us to write code in a functional style.</p>
+<p>We can consider language is a framework. They have equivalent computing power, as all programs will be translated to machine code. The program features are syntactic sugar, which help us to implement and maintain the code.</p>
+<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/2-1-learn-multiple-programming-languages/" target="_blank" rel="external">2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/" data-id="cio5y9xia000b1365tl6v1e4i" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-rspec-vs-test-unit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/10/rspec-vs-test-unit/" class="article-date">
+  <time datetime="2016-05-09T16:00:00.000Z" itemprop="datePublished">2016-05-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/10/rspec-vs-test-unit/">Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>When develop a web application, we work in an iterative manner to make code to be deployed as soon as possible. We implement a small feature, test it and make sure it works, and then move on to the next. This is the workflow of test driven development. TDD is a basically repeating write a few line of code and testing.</p>
+<p>Manual testing is time consuming, so automated tests are introduced. Besides automated test is really useful in a big team. It help us to prevent to break other feature you don’t know. It is common to have feature you don’t know because the code base is too large for one developer to understand every detail. Automated tests help us to detect error during development. Fixing a bug during development is much easier, because every detail is in our brain. Automated test prevent our feature broken by others, saving us from undoing the feature in the future.</p>
+<p>After having automated test, we can improve the code by rewriting it easier. Rewriting a working code is called ‘refactor’. ‘Red/Green/Refactor’ methodology is a workflow that</p>
+<ol>
+<li>Write a test first (Red, as the test fail before we implement the feature)</li>
+<li>Implement the feature (Green, the test should be passed)</li>
+<li>Refactor</li>
+</ol>
+<p>Ruby has a unit test standard library, Test::Unit. It is the original test suite. But when developer have to take into account the behaviour that’s expected by users. Test::Unit is not very handy. They invent rspec to replace Test::Unit. They also rename the methodology to behaviour driven development.</p>
+<p>RSpec have higher readability(?). Sometimes Test::Unit is easier to write(?). RSpec is more common in industry.</p>
+<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/test-driven-development-rspec-vs-test-unit/" target="_blank" rel="external">RSpec vs. Test Unit: How Test Driven Development Works</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/10/rspec-vs-test-unit/" data-id="cio5y9xio000i1365i58p4j8w" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/10/rspec-vs-test-unit/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-stop-coding-like-a-cowboy" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/05/08/stop-coding-like-a-cowboy/" class="article-date">
@@ -699,9 +816,28 @@
   
     
   <div class="widget-wrap">
+    <h3 class="widget-title">Advertisement</h3>
+    <div class="widget">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Testing -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4208803683107796"
+             data-ad-slot="4489226860"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
     </div>
   </div>
 
@@ -729,6 +865,14 @@
       <ul>
         
           <li>
+            <a href="/rust/2016/05/30/day1/">Rust - Day 1</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/05/29/airbnb-javascript-style/">Airbnb javascript style guide</a>
+          </li>
+        
+          <li>
             <a href="/diary/2016/05/26/example-of-leaky-abstraction/">Example of leaky abstraction</a>
           </li>
         
@@ -738,14 +882,6 @@
         
           <li>
             <a href="/diary/2016/05/23/skills-for-hackathon/">Skills for hackathon</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/05/22/software-as-a-slide/">SaaS - Software as a slide</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/05/15/learn-to-code-and-be-self-reliant/">Review of &quot;The Key To Accelerating Your Coding Skills&quot;</a>
           </li>
         
       </ul>

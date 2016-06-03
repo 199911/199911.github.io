@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>What is chroot jail? | Coding Sunday</title>
+  <title>Rust - Day 1 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+  <meta name="description" content="William and his friend is going to rewrite their game in Rust. I am going to join them. So I start to learn Rust.
+What is Rust?Rust is target to be a new generation of system programming language
+Carg">
 <meta property="og:type" content="article">
-<meta property="og:title" content="What is chroot jail?">
-<meta property="og:url" content="http://199911.github.io/diary/2016/04/23/chroot/index.html">
+<meta property="og:title" content="Rust - Day 1">
+<meta property="og:url" content="http://199911.github.io/rust/2016/05/30/day1/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
-<meta property="og:updated_time" content="2016-05-02T15:54:41.000Z">
+<meta property="og:description" content="William and his friend is going to rewrite their game in Rust. I am going to join them. So I start to learn Rust.
+What is Rust?Rust is target to be a new generation of system programming language
+Carg">
+<meta property="og:updated_time" content="2016-05-30T15:58:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="What is chroot jail?">
-<meta name="twitter:description" content="Where do I heard about chroot jail?I make a slack command to run git command on my EC2 server. So I can deploy by typing git pull in my own slack channel. When I share this on my facebook wall, Bill t">
+<meta name="twitter:title" content="Rust - Day 1">
+<meta name="twitter:description" content="William and his friend is going to rewrite their game in Rust. I am going to join them. So I start to learn Rust.
+What is Rust?Rust is target to be a new generation of system programming language
+Carg">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-day1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/04/23/chroot/" class="article-date">
-  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+    <a href="/rust/2016/05/30/day1/" class="article-date">
+  <time datetime="2016-05-29T16:00:00.000Z" itemprop="datePublished">2016-05-30</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Rust/">Rust</a>
   </div>
 
   </div>
@@ -79,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      What is chroot jail?
+      Rust - Day 1
     </h1>
   
 
@@ -87,19 +93,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
-<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
-<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
-<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
-<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
-<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+        <p>William and his friend is going to rewrite their game in Rust. I am going to join them. So I start to learn Rust.</p>
+<h2 id="What-is-Rust"><a href="#What-is-Rust" class="headerlink" title="What is Rust?"></a>What is Rust?</h2><p>Rust is target to be a new generation of system programming language</p>
+<h2 id="Cargo"><a href="#Cargo" class="headerlink" title="Cargo"></a>Cargo</h2><p>It is an package manager, just like npm for NodeJS.</p>
+<p>Use <code>cargo new &lt;application name&gt; --bin</code> to create a repo for an application. If you want to create a library, omit the <code>--bin</code> option. After setting up a package, we can use <code>cargo build</code> to compile and <code>cargo run</code> to run rust code easily.</p>
+<h2 id="Crates"><a href="#Crates" class="headerlink" title="Crates"></a>Crates</h2><p>It means libraries and packages in Rust</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/04/23/chroot/" data-id="cio5y9xho000413659zsonq15" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/rust/2016/05/30/day1/" data-id="ciozssuip0001t8656fcabuqk" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/rust/2016/05/30/day1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -108,19 +113,10 @@
     
 <nav id="article-nav">
   
-    <a href="/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;How much quality can we afford?
-        
-      </div>
-    </a>
   
-  
-    <a href="/diary/2016/04/18/functional-utility/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2016/05/29/airbnb-javascript-style/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Functional utility library is good</div>
+      <div class="article-nav-title">Airbnb javascript style guide</div>
     </a>
   
 </nav>
@@ -247,7 +243,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/diary/2016/04/23/chroot/';
+  var disqus_url = 'http://199911.github.io/rust/2016/05/30/day1/';
   
   (function(){
     var dsq = document.createElement('script');
