@@ -62,6 +62,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-the-mythical-man-month-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/04/the-mythical-man-month-1/" class="article-date">
+  <time datetime="2016-06-03T16:00:00.000Z" itemprop="datePublished">2016-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/04/the-mythical-man-month-1/">From programming to software engineering</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Programming is fun and interesting. A lot of people can build functional programs, but only few of them can convert a program into a product or system. Why?</p>
+<h2 id="The-joys-of-programming"><a href="#The-joys-of-programming" class="headerlink" title="The joys of programming"></a>The joys of programming</h2><ul>
+<li>Joy of building things</li>
+<li>Fascination of watching complex system running</li>
+<li>Delight to build thing without limitation</li>
+<li>Excitement to learn new things</li>
+<li>Pleasure to build useful tool for others</li>
+</ul>
+<p>The joy of programming comes from the nature of a software. Software is abstract. You can build anything that you can imagine. You can build a complex software with no limitation, as long as it does not against logic. As the nature the programming is to automate repeated task, in other words, programming task are never repeat. The most excitement on programming is what comes from your imagination can produce visible output and become a useful tool for others.</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/06/04/the-mythical-man-month-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/" data-id="cip0js68a00002865hdxv2he7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-day1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/rust/2016/05/30/day1/" class="article-date">
@@ -138,35 +193,11 @@
         <p>I will pick some special rules and some rules i don’t think it is useful here</p>
 <h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Rule-3-4-Define-all-the-properties-of-an-object-in-one-place"><a href="#Rule-3-4-Define-all-the-properties-of-an-object-in-one-place" class="headerlink" title="Rule 3.4: Define all the properties of an object in one place."></a>Rule 3.4: Define all the properties of an object in one place.</h3><p>It is my common mistake. Don’t add properties to object once it defined. It is easy for other to miss the properties.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function getKey(k) &#123;</span><br><span class="line">  return `a key named $&#123;k&#125;`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// bad</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">obj[getKey(&apos;enabled&apos;)] = true;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">  [getKey(&apos;enabled&apos;)]: true,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Rule-3-8-Only-quote-properties-that-are-invalid-identifiers"><a href="#Rule-3-8-Only-quote-properties-that-are-invalid-identifiers" class="headerlink" title="Rule 3.8: Only quote properties that are invalid identifiers."></a>Rule 3.8: Only quote properties that are invalid identifiers.</h3><p>Airbnb think it is easier to read, improves syntax highlighting, and it is also more easily optimized by many JS engines.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">const bad = &#123;</span><br><span class="line">  &apos;foo&apos;: 3,</span><br><span class="line">  &apos;bar&apos;: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const good = &#123;</span><br><span class="line">  foo: 3,</span><br><span class="line">  bar: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>This rule is more useful for client side javascript, beacuse server side javascript do not need to be minifed. For consistency of among object properties and between server side and client side code, I perfer to abolish this rule.</p>
-<h3 id="Rule-6-1-Use-single-quotes-for-strings"><a href="#Rule-6-1-Use-single-quotes-for-strings" class="headerlink" title="Rule 6.1 Use single quotes for strings"></a>Rule 6.1 Use single quotes for strings</h3><p>It is useful when we use double quote in json string and html.</p>
-<h3 id="Rule-7-1-Use-function-declarations-instead-of-function-expressions"><a href="#Rule-7-1-Use-function-declarations-instead-of-function-expressions" class="headerlink" title="Rule 7.1 Use function declarations instead of function expressions."></a>Rule 7.1 Use function declarations instead of function expressions.</h3><p>It is becuase function declarations are named, so they’re easier to identify in call stacks. A useful debuggin skill when dealing with callback.</p>
-<p>##$ Rule 7.3 Never declare a function in a non-function block (if, while, etc).</p>
-<p>Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears.</p>
-<p>##$ Rule 7.6 Never use <code>arguments</code>, opt to use rest syntax <code>...</code> instead.</p>
-<p>It is becuase <code>...</code> is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like <code>arguments</code>.</p>
-<p>##$ Rule 7.7, 7.8, 7.12 and 7.13</p>
-<p>They are:</p>
-<ul>
-<li>Use default parameter syntax rather than mutating function arguments.</li>
-<li>Avoid side effects with default parameters.</li>
-<li>Never mutate parameters.</li>
-<li>Never reassign parameters.</li>
-</ul>
-<p>The idea is to keep the input parameter remain unchange and make the code have less unexpected behaviour.</p>
-<p>##$ Rule 9.3 Method can return <code>this</code> to help method chaining</p>
-<p>For the functions do not have value to return, we can return <code>this</code></p>
-<h3 id="Rule-9-4-toString-must-have-no-side-effects"><a href="#Rule-9-4-toString-must-have-no-side-effects" class="headerlink" title="Rule 9.4 toString() must have no side effects"></a>Rule 9.4 <code>toString()</code> must have no side effects</h3><p>It makes the code more difficult to debug, especially when we use <code>console.log()</code> to check the values.</p>
-<h3 id="Rule-10-5-Do-not-export-mutable-bindings"><a href="#Rule-10-5-Do-not-export-mutable-bindings" class="headerlink" title="Rule 10.5 Do not export mutable bindings."></a>Rule 10.5 Do not export mutable bindings.</h3><p>Make the behaviour of function consistance.</p>
-<h3 id="Rule-11-1-Don’t-use-iterators"><a href="#Rule-11-1-Don’t-use-iterators" class="headerlink" title="Rule 11.1 Don’t use iterators"></a>Rule 11.1 Don’t use iterators</h3><p>So we are easier to enforces the immutable rule</p>
-<h3 id="Rule-15-5-Use-braces-to-create-blocks-in-case-and-default-clauses-that-contain-lexical-declarations"><a href="#Rule-15-5-Use-braces-to-create-blocks-in-case-and-default-clauses-that-contain-lexical-declarations" class="headerlink" title="Rule 15.5 Use braces to create blocks in case and default clauses that contain lexical declarations"></a>Rule 15.5 Use braces to create blocks in case and default clauses that contain lexical declarations</h3><p>To prevent variable in different case mess up.</p>
-<h3 id="Rule-18-1-Use-soft-tabs-set-to-2-spaces"><a href="#Rule-18-1-Use-soft-tabs-set-to-2-spaces" class="headerlink" title="Rule 18.1 Use soft tabs set to 2 spaces."></a>Rule 18.1 Use soft tabs set to 2 spaces.</h3><p>I perfer to use 4 spaces, 2 spaces is too tight.</p>
-<h3 id="Rule-22-5-Don’t-save-references-to-this-Use-arrow-functions-or-Function-bind"><a href="#Rule-22-5-Don’t-save-references-to-this-Use-arrow-functions-or-Function-bind" class="headerlink" title="Rule 22.5 Don’t save references to this. Use arrow functions or Function#bind."></a>Rule 22.5 Don’t save references to this. Use arrow functions or Function#bind.</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="external">Airbnb JavaScript Style Guide</a></li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/29/airbnb-javascript-style/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -212,91 +243,17 @@
 <p>Leaky abstraction is a necessary evil, here is some of my own experience.</p>
 <h2 id="Github-API-and-npm-‘request’-module"><a href="#Github-API-and-npm-‘request’-module" class="headerlink" title="Github API and npm ‘request’ module"></a>Github API and npm ‘request’ module</h2><p>I use npm ‘request’ module to query pull request of a private repo. I use the correct authetication method, but still fail to get data from the API.</p>
 <p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</span><br><span class="line">  &apos;auth&apos;: &#123;</span><br><span class="line">    &apos;user&apos;: &apos;username&apos;,</span><br><span class="line">    &apos;pass&apos;: &apos;password&apos;,</span><br><span class="line">    &apos;sendImmediately&apos;: false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Set <code>sendImmediately</code> to <code>true</code>. </p>
-<p>If <code>sendImmediately</code> is <code>false</code>, the first will not have the authentication data. Only if the server reply a <code>401</code> response, another request with authentication data will be made. But Github API return <code>404</code> instead of <code>401</code> for the unauthenticated request, so it does not work.</p>
-<p>This bug can only be solved by the engineer who understand the <code>sendImmediately</code> option and the behaviour of Github API. By the way, unit test cannot catch this problem, as every individual parts are correct.</p>
-<h2 id="Passing-console-log-into-callback-does-not-work"><a href="#Passing-console-log-into-callback-does-not-work" class="headerlink" title="Passing console.log into callback does not work"></a>Passing <code>console.log</code> into callback does not work</h2><p>Sometime we want to test the return value of an asynchronus function, say <code>async(callback)</code>. We try to use <code>console.log</code> to echo the result directly. We may write some thing like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async(console.log)</span><br></pre></td></tr></table></figure></p>
-<p>We expect it will output the result of async function, but it print nothing.</p>
-<h3 id="Use-async-console-log-bind-console"><a href="#Use-async-console-log-bind-console" class="headerlink" title="Use async(console.log.bind(console))"></a>Use <code>async(console.log.bind(console))</code></h3><p>In the implementation of <code>console.log</code>, <code>this</code> is used. So when we pass the <code>log</code> function to other callback, the <code>console</code> scope is lost, so the function does not work. The solution is to <code>bind</code> the <code>console</code> to the function. Only the engineer understand the implementation of <code>console.log</code> and properties of javascript can understand this problem.</p>
-<h2 id="Call-for-example"><a href="#Call-for-example" class="headerlink" title="Call for example"></a>Call for example</h2><p>If you have similar experience, please put the problem and solution in the comment and share with us. :D</p>
-
+        
+          <p class="article-more-link">
+            <a href="/diary/2016/05/26/example-of-leaky-abstraction/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="ciooiggey0000o465bof8q2j0" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
-  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
-<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
-<p>例如callback function入邊個<code>this</code>有時會唔小心指左去第2個scope。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.name = &apos;my app&apos;</span><br><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback( this, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">app.getUsers(function countUser(data)&#123;</span><br><span class="line">  console.log(&apos;There are &apos; + data.length + &apos; users using &apos; + this.name);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>以上果段code個this就會指左去jQuery個scope。當callback function入邊有用到<code>this</code>果時，咁就會有D unexpected behaviour出現。以上例子中嘅<code>this.name</code>會指左去<code>$.name</code>，而唔係<code>app.name</code>。</p>
-<p>有D人可能會諗</p>
-<blockquote>
-<p>Callback果度用<code>app.name</code>唔好用<code>this.name</code>咪得囉。</p>
-</blockquote>
-<p>E個solution有2個缺點</p>
-<ol>
-<li>hardcode caller個variable name會少左flexibility。<br> 有時後個callback可以用係唔同地方，但係一要hardcode個caller variable入去，個callback就變左context specific，廢左武功，冇得reuse。咁當然可以用D wrapper 去fix E 個problem，但係就要寫好多boilerplate code，搞到段code好冗長。</li>
-<li>abstract唔到個function interface做一個API<br> 其實一個function已經係一個abstraction，當個user 入個callback去call你個function，佢suppose唔洗知你個function點implement。以上文為例，人地跟本唔知你用jQuery咁樣implement，唔知道用<code>this</code>會有bug。咁樣寫getUsers係做唔到一個public api。</li>
-</ol>
-<p>咁點樣寫先啱？個問題主要係function個scope冇清淅define，只要我地用一D native javascript function指定返個<code>this</code>就得。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  var self = this;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback.call( self, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><code>callback.call( self, data )</code> 第一個argument就係指定左個<code>this</code>係做<code>self</code>，姐係call緊<code>self.callback(data)</code>。<br>又或者可以用<code>callback.apply( self, [data] )</code>，姐係call緊<code>self.callback(data[0], data[1], data[2] ...)</code>。<br>都可以用<code>(callback.bind(self))(data)</code>，<code>bind</code>都係指定個this，但係佢唔會直接行個function，而係return一個bind左scope嘅function。</p>
-<h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><ul>
-<li>當implement callback pattern，要記住留意this嘅binding。</li>
-<li>當要借其他object D method用，最好用call，apply或者bind，因為我地唔知人地點implement。</li>
-<li>如果只需要借人地D method用一次，直接用<code>call</code>或<code>apply</code>就得。如果唔係馬上call或者要用幾次，最好用<code>bind</code> create一個新function先。</li>
-</ul>
-<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
-<li><a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank" rel="external">First-class function</a></li>
-<li><a href="http://dreamerslab.com/blog/tw/javascript-this/" target="_blank" rel="external">Javascript <code>this</code></a></li>
-<li><a href="http://dreamerslab.com/blog/tw/javascript-call-and-apply/" target="_blank" rel="external">Javascript call 以及 apply</a></li>
-<li><a href="http://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind" target="_blank" rel="external">Javascript call() &amp; apply() vs bind()?</a></li>
-<li><a href="https://spin.atomicobject.com/2014/10/20/javascript-scope-closures/" target="_blank" rel="external">What You Should Already Know about JavaScript Scope</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -353,54 +310,65 @@
 </ul>
 </li>
 </ul>
-<h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><p>User Experience and User Interface is the key point. It is the visual content for judges</p>
-<ul>
-<li>Interface need to be clean and simple, it helps judges to focus on the feature you are going to present.</li>
-<li>The operation should be intuitive enough, judges should be able to use it without learning.<ul>
-<li>Save time on explain how to use in pitch<ul>
-<li>It is wasting time to explain “We click this button to perform bla bla bla…” to judges</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Pitch"><a href="#Pitch" class="headerlink" title="Pitch"></a>Pitch</h2><p>Presnetation time is too short. Squeese the speech to maximize the value of every word you speak.</p>
-<ul>
-<li>Don’t waste time on saying anything cannot add value to the product.<ul>
-<li>such as team introduction</li>
-</ul>
-</li>
-<li>User Story may not be very useful<ul>
-<li>Time is too short for demonstrate your product after provide a user story</li>
-</ul>
-</li>
-<li>Present your idea and demonstrate your prototype at the same time<ul>
-<li>Use one or two sentence to explain your idea<ul>
-<li>Your idea must be simple and well-known.<ul>
-<li>The idea can be solving some simple problems in daily lives</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>One member demonstrate the usage of prototype<ul>
-<li>The UI/UX of prototype must be clear and simple</li>
-</ul>
-</li>
-<li>Another member explain the function and idea of the prototype</li>
-</ul>
-</li>
-<li>If your prototype is using some common technology, technical part can be skipped</li>
-</ul>
-<h2 id="Product-design"><a href="#Product-design" class="headerlink" title="Product design"></a>Product design</h2><p>In the aspect of engineer, we are always focus on problem. We identify the problem and then find out best solution to solve it. </p>
-<p>But in businuess, it is not the case. Even you solution is perfect, the client may not use them. Some client don’t think a problem is problem, they may not want to solve it.</p>
-<p>To design a product, we can focus on what do user need. Sometimes, client is not paying to buy an object, but some abstract values or feelings. For example, some people spend lots of money on online games not because they enjoy the game, they may just want to show off and beat other player. That is the feeling the client want to buy.</p>
-
+        
+          <p class="article-more-link">
+            <a href="/diary/2016/05/23/skills-for-hackathon/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
       <a data-url="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
+  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
+<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/23/this-call-apply-in-javascipt/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -438,22 +406,11 @@
       
         <p>今日係參加嘅Angelhack同我想像中嘅Hackathon有好大出入。比起Hackathon，大部份嘅參加者更加似係參加緊Startup比賽。</p>
 <h2 id="Hackathon-v-s-Startup-比賽"><a href="#Hackathon-v-s-Startup-比賽" class="headerlink" title="Hackathon v.s. Startup 比賽"></a>Hackathon v.s. Startup 比賽</h2><p>我本來諗住Hackathon係大家有一D有趣嘅問題或諗法，之後一齊討論下可以點樣用technology去解決，之後會起一個prototype出黎做demo。但係唔少人都係business background。佢地D idea都好正路同普通嘅Business idea，參加都主要係揾人幫手implement個prototype。當我地 pitch 完個idea之後，人地第一時間問點賺錢同埋有咩business model。</p>
-<h2 id="Software-as-a-slide"><a href="#Software-as-a-slide" class="headerlink" title="Software as a slide"></a>Software as a slide</h2><p>當個Topic係做一個business idea嘅prototype，以唔訓教嘅前題下都係得24個鐘，好明顯係唔夠時間。咁佢地個prototype同我地engineer心目中嘅prototype係好唔同。</p>
-<p>我地Engineer嘅prototype係minimal value product，起碼真user係用到下先。但係個比賽嘅limitation下，做到嘅野連product都稱唔上。本來我諗住冇backend，frontend hardcode少少都可以算係prototype，但係係個比賽嘅脈絡之下，咁樣己經係太複雜。好多Team都係target做一個披住Software皮嘅Slides用黎做presentation，連frontend D 野都係fake同hardcode嘅，可以係一個webpage去邊有少少link同javascript去demo個flow，甚至連個flow都係播animation，或者用photoshop做出黎嘅。講到尾，code for presentation，如果可以冇code E part，D人一定會Remove左E一部份。</p>
-<h2 id="High-tech，為Present帶黎吹水"><a href="#High-tech，為Present帶黎吹水" class="headerlink" title="High tech，為Present帶黎吹水"></a>High tech，為Present帶黎吹水</h2><p>個比賽得果24個鐘，好明顯做唔到D咩針對問題嘅research，咁一D高科技嘅野就可以係Demo任吹。例如個topic係做Machine learning on big data，咁個demo是但hardcode D data，之後用D template整靚個webpage就得。一個鐘搞掂，返屋企訓返教，第二日再準備present都仲得。點樣收集data，點用做machine learning真係知少少就可以是但吹，最多google下D API名同algo名交下貨。最近block chain比較熱門，但係present得果幾分鐘，解釋點解用block chain己經冇時間，更唔好講你個prototype可以點樣運用。</p>
-<h2 id="個人感受"><a href="#個人感受" class="headerlink" title="個人感受"></a>個人感受</h2><p>有少少感覺自己去錯地方，但係同成班friend一齊整D side project係幾開心，以宏觀D嘅角度，係可以學到唔少野。</p>
-<h3 id="冇岩用嘅Skill"><a href="#冇岩用嘅Skill" class="headerlink" title="冇岩用嘅Skill"></a>冇岩用嘅Skill</h3><p>上文提到，做一個用software皮既slide係效益最大嘅。好明顯D咩software engineering嘅skill都唔啱洗，咩code design，咩reusability，咩algorithm都係唔岩用。我仲要係擅長做backend嘅，真係收得皮。</p>
-<h3 id="一齊brain-storm低能idea"><a href="#一齊brain-storm低能idea" class="headerlink" title="一齊brain storm低能idea"></a>一齊brain storm低能idea</h3><p>同班friend一齊brain storm低能idea係開心嘅，但係真係冇諗過會有街外人加入。一齊討論激發左D火花之後，個低能idea又好似work work地，成個experience係得意同開心嘅。</p>
-<h3 id="Programming以外嘅insight"><a href="#Programming以外嘅insight" class="headerlink" title="Programming以外嘅insight"></a>Programming以外嘅insight</h3><p>當個idea俾一個完全唔同background嘅人，用完全唔同嘅角度去質疑自己嘅諗法，係可以刺激到好多思考，得到好多啟發。係成個weekend，我揾到自己嘅職業病同盲點，並identify到自己以一個full stack engineer嘅身份做product所缺乏嘅skill set。E D野都唔係睇書或者自己做project可以學到嘅野</p>
-<p>至於實際上有咩learning同insight，就遲D得閒再寫一篇文去解釋。</p>
-<h2 id="比賽冠軍"><a href="#比賽冠軍" class="headerlink" title="比賽冠軍"></a>比賽冠軍</h2><p>比賽過後，同William仔細討論(主要都係我問，William答我)過後，HKU果條Team拎冠軍都係實至名歸。</p>
-<h3 id="Writio-an-eassy-quoting-chrome-extension"><a href="#Writio-an-eassy-quoting-chrome-extension" class="headerlink" title="Writio, an eassy quoting chrome extension"></a>Writio, an eassy quoting chrome extension</h3><p>冠軍隊由HKU嘅學生組成。佢地嘅作品係一個chrome extension，透過highline可以save低網頁上嘅內容，之後可以係extension果個page drag入去google doc，咁就有一個靚靚仔仔嘅qoute係essay入面。</p>
-<h3 id="目標鮮明簡潔"><a href="#目標鮮明簡潔" class="headerlink" title="目標鮮明簡潔"></a>目標鮮明簡潔</h3><p>個Product用一句就可以清楚解釋就証明左個idea係清淅明確，完全冇D咩複雜嘅logic係背後，唔洗解釋個product係做D咩，係2分鐘嘅present時間起左關鍵性嘅作用。</p>
-<h3 id="Product用法直接，冇learning-curve"><a href="#Product用法直接，冇learning-curve" class="headerlink" title="Product用法直接，冇learning curve"></a>Product用法直接，冇learning curve</h3><p>成個操作都係hightlight，right click同drag and drop，完全唔洗解釋點樣用，齋睇就得，大部份嘅時間可以用黎講product function同feature。成個presentation可以隻眼睇住demo，對耳聽住人地pitch，成個flow非常smooth。</p>
-<h3 id="Product完成度高"><a href="#Product完成度高" class="headerlink" title="Product完成度高"></a>Product完成度高</h3><p>由於唔需要D咩高深技術，而且用途同操作都簡單，相信係24小時內係可以搞掂，而且係demo入面，個product靚仔，function到，基本上係個prototype係product，已經完成左。</p>
-<h3 id="學生身份有加分"><a href="#學生身份有加分" class="headerlink" title="學生身份有加分"></a>學生身份有加分</h3><p>比賽前邀請左上年冠軍share，佢話以學生身份係有著數，易D得到機會。而HKU team係present第一句就係”We are students from HKU”，係presentation一開波用左三秒已經攞到個buff。而且成個product係以學生身份design，令人印象深刻。雖然唔係關鍵勝負位，但係可以有效運用優勢，係評判心中留下好印象。</p>
-<h3 id="完全冇提到business"><a href="#完全冇提到business" class="headerlink" title="完全冇提到business"></a>完全冇提到business</h3><p>成個Demo係冇講過user同business有關嘅野，可能係同學生身份有關，但E條Team攞到冠軍，真係正面打左D以business為題材嘅Team塊面一野。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/diary/2016/05/22/software-as-a-slide/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -603,9 +560,11 @@
       
         <p>Abstraction is hiding infomation to simplify a task. In most cases, abstraction is doing well. But in some cases, something inside abstraction layer can go wrong and make the abstraction fail, user have no ideas what is going on as the detail is hidden. The only way to fix it is to check the implementation of the abstracted layer. Therefore, abstraction fail to save us from complexity.</p>
 <h2 id="Paradox"><a href="#Paradox" class="headerlink" title="Paradox"></a>Paradox</h2><p>Programmers want to make programming easier by providing abstraction, but become a proficient programmer is getting harder. Programmer have to understand all related abstraction layer to solve bugs caused by leaky abstraction. At the end, programmer cannot escape from understand the detail of abstraction layer.</p>
-<h2 id="Next-Action"><a href="#Next-Action" class="headerlink" title="Next Action"></a>Next Action</h2><p>Need to have broaden our knowledge in different abstraction layer, otherwise, we will get stuck when there is leaky abstraction.</p>
-<p>Reinvent the wheel is not encouraged, but understand why and how a wheel is invented is useful. To understand that, reinvent the wheel is a efficient way. Bare in mind everytime we going to reinvent the wheel: focus on learning, not building.</p>
-
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/14/the-law-of-leaky-abstraction/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -621,74 +580,11 @@
 
 
   
-    <article id="post-how-to-be-a-programmer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/13/how-to-be-a-programmer/" class="article-date">
-  <time datetime="2016-05-12T16:00:00.000Z" itemprop="datePublished">2016-05-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/13/how-to-be-a-programmer/">&quot;程式員求生指南：關於寫程式的二三事&quot; 感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>文章嘅結構非常清淅，段落標題已經係一個好好嘅小結，冇必要再作總結。</p>
-<h2 id="要點"><a href="#要點" class="headerlink" title="要點"></a>要點</h2><h3 id="職業道德"><a href="#職業道德" class="headerlink" title="職業道德"></a>職業道德</h3><p>Programmer嘅職業道德就係寫D有Quality嘅Code。</p>
-<p>行外人可能唔明，Product有冇Quality，Client好易睇得出，冇Quality嘅野好易俾市場圖汰，跟本生存唔到，何來道德？事實上，Software嘅Quality，唔識寫Code嘅人真係會睇唔出。</p>
-<p>行外人眼中，淨係睇到你整個UI好唔好睇，D功能用唔用到。其實E D野好多時call個library, copy and paste 下D Code就做到。真正嘅Software Quality係要睇背後個Logic嚴唔嚴謹，結構易唔易Extend。行外人眼中淨係見到一D符號，連D Code咩意思都唔知，點樣明白背後嘅Idea，何來講得出有冇Quality?</p>
-<p>正如作者所講，Software 冇一個「外觀」(啱啱講有UI唔代表Software Quality)，係一D抽象嘅，只有係實際contribute嘅人先知到個Quality，好多時都係靠自己良心去做。</p>
-<p>揾工真係要揾D上司有technical backgound，隊Team注重Code Quality嘅公司。如果老細係行外人，跟本唔識分D Code有冇Quality，好易就升左D亂寫Code交數又識卸膊嘅Programmer。果D幫人地執手尾嘅良心Programmer真係灰左機。</p>
-<h3 id="基本功"><a href="#基本功" class="headerlink" title="基本功"></a>基本功</h3><p>文中程式語言，資料結構及演算法，網路協定幾個段落，都帶出一個concept，要打好基本功。</p>
-<p>做野好多D都係直接用library，好high level咁solve一D問題，未必真係吓吓要用到D低層野，可能得少於10%嘅Task先有少少機會用到。一個Programmer去唔去到專家Level就係睇果10%。所以練好基本功，係為未來一D Solve唔到嘅問題做準備，正謂書到用時方恨少。</p>
-<p>咁當然，除左深度，廣度都好重要，keep住學新野，但要留意點樣用最快嘅方法去學到，唔係俾幾條命你都唔夠用。</p>
-<h3 id="除錯能力"><a href="#除錯能力" class="headerlink" title="除錯能力"></a>除錯能力</h3><p>我希望佢可以再講得Solid D。</p>
-<h3 id="寫出可讀、易維護的代碼"><a href="#寫出可讀、易維護的代碼" class="headerlink" title="寫出可讀、易維護的代碼"></a>寫出可讀、易維護的代碼</h3><p>絕對同意。Readability &gt; Maintainability &gt; Performance。我以前都係Performance行先，連加減乘除都要想用bit operator去optimize，跟本係傻仔行為。</p>
-<p>Optimize係好花時間，用左成幾日做完optimize，最後發現快左唔夠1%，但D Code完全亂曬，過幾日連自己都睇唔明，改少少野又有bug，真係得不償失。</p>
-<p>好多時都係Readability行先，D Code易睇，代表佢用一個簡單精練嘅方法去solve到一個問題。其他人好易咁去理解到個思路，知道D code做緊咩，點解work點解唔work一目了然，自然易maintain。<br>D Code易睇，就容易去揾到去關鍵嘅瓶頸去Optimize，又因為易maintain，又唔怕optimize果時會製造D bug。成件事有效率好多。</p>
-<p>有好多Programmer都會忽略左一樣野。Code其實係一篇文章，係Programmer之間嘅溝通工具。如果D Code寫到亂七八糟，成條Team真係好難合作，好可能變左我整炒你段Code，你又整炒左我段Code，最後大家日日係度fix bug，唔知做D咩。</p>
-<h3 id="程式語言的多樣性"><a href="#程式語言的多樣性" class="headerlink" title="程式語言的多樣性"></a>程式語言的多樣性</h3><p><a href="http://199911.github.io/blog/review/2016/05/12/learn-multiple-programming-languages/">見此</a></p>
-<h3 id="四、非關技術"><a href="#四、非關技術" class="headerlink" title="四、非關技術"></a>四、非關技術</h3><p>主要係一D soft skills。</p>
-<h4 id="停止砍掉重練"><a href="#停止砍掉重練" class="headerlink" title="停止砍掉重練"></a>停止砍掉重練</h4><p>有砍掉重練嘅衝動，其中一個原因係睇唔明人地D Code，唔想睇，好似重寫一次比較快。<br>但係咁樣好多時係解決唔到問題，因為自己睇唔明自己D Code係好常見。<br>尤其係D Code寫得唔好嘅時候⋯⋯有時唔一定係人地寫得唔好，都有可能係自己未夠班，睇唔明人地嘅Design。<br>所以除左自己寫Code之外，都要睇多D人嘅Code。Code Review都係一個好好嘅練習。<br>PS: 有時Code Reivew係等寫Code果個Review你個Code Review :0)</p>
-<h4 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h4><p>Software engineer好多時都唔係one man band，係同成條Team合作。</p>
-<h4 id="Keep-Learning"><a href="#Keep-Learning" class="headerlink" title="Keep Learning"></a>Keep Learning</h4><p>科技日新月異，唔洗解釋。</p>
-<h2 id="檢討"><a href="#檢討" class="headerlink" title="檢討"></a>檢討</h2><p>文中提到嘅文章同書都應該要睇下。當中我Security同ORM都要鑽研下。同埋真係要練習睇多Code。<br>目前Target係先增加廣度再pick topic深造。</p>
-<p>原文：<a href="https://tw.twincl.com/programming/*652e" target="_blank" rel="external">程式員求生指南：關於寫程式的二三事</a>。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/13/how-to-be-a-programmer/" data-id="cio5y9xid000d13657h4czewo" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/13/how-to-be-a-programmer/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -733,7 +629,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -746,6 +642,10 @@
       <ul>
         
           <li>
+            <a href="/review/2016/06/04/the-mythical-man-month-1/">From programming to software engineering</a>
+          </li>
+        
+          <li>
             <a href="/rust/2016/05/30/day1/">Rust - Day 1</a>
           </li>
         
@@ -755,10 +655,6 @@
         
           <li>
             <a href="/diary/2016/05/26/example-of-leaky-abstraction/">Example of leaky abstraction</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
           </li>
         
           <li>
