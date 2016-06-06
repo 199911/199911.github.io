@@ -62,6 +62,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-restapi-is-a-lie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/06/restapi-is-a-lie/" class="article-date">
+  <time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/06/restapi-is-a-lie/">review of &quot;RESTful APIs, the big lie&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Someone think RESTful api is bad and give 5 points.</p>
+<h3 id="There-is-little-agreement-on-what-a-RESTful-API"><a href="#There-is-little-agreement-on-what-a-RESTful-API" class="headerlink" title="There is little agreement on what a RESTful API"></a>There is little agreement on what a RESTful API</h3><p>I would say yes if the scope is for all public API. There are different interpretation on the HTTP response codes. There are no strict rules or unified guidelines on RESTful API. But the HTTP response code and method give us a set of handy vocabulary. Companies can easily define their own rules and following them internally. It does save our development times. The vague HTTP method and response code give us freedom on design and implement our own API. User should refer the the API documentation for more details.</p>
+<p>The proposer suggest using a set of self defined vocabulary, it make the action precise. In my point of view, user still need to read the document to see what vocabularies are avaliable. This does not shorten the development time.</p>
+<h3 id="The-REST-vocabulary-is-not-fully-supported"><a href="#The-REST-vocabulary-is-not-fully-supported" class="headerlink" title="The REST vocabulary is not fully supported"></a>The REST vocabulary is not fully supported</h3><p>Not all verbs or response codes for the HTTP protocol. It is true, but most of us use AJAX to make RESTful API call. Who care HTTP not supporting DELETE or PUT?</p>
+<h3 id="The-REST-vocabulary-is-not-rich-enough-for-APIs"><a href="#The-REST-vocabulary-is-not-rich-enough-for-APIs" class="headerlink" title="The REST vocabulary is not rich enough for APIs"></a>The REST vocabulary is not rich enough for APIs</h3><p>It is true, but in most cases, we actually only need 4 actions: create, read, update, delete. We always can map any actions into these actions. For example, activating a user account can be interpret as updating the user’s account to active. This will introduce ambigouity, but clear documentation with careful resource naming can solve this problem.</p>
+<h3 id="RESTful-APIs-are-very-hard-to-debug"><a href="#RESTful-APIs-are-very-hard-to-debug" class="headerlink" title="RESTful APIs are very hard to debug"></a>RESTful APIs are very hard to debug</h3><p>I can argee with this point. As RESTful API is popular, there are lots of tools help debugging and building RESTful API. Using RESTful API with right tools should be much more productive than using your unique API structure.</p>
+<h3 id="RESTful-APIs-are-usually-tied-to-HTTP"><a href="#RESTful-APIs-are-usually-tied-to-HTTP" class="headerlink" title="RESTful APIs are usually tied to HTTP"></a>RESTful APIs are usually tied to HTTP</h3><p>Why not? Most RESTful API build for web, it makes sense to use HTTP to transmit data. For some special case, we may not be able to use HTTP, but it is not a reason to say RESTful is bad.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>RESTful API is a simple and easy to follow standard. RESTful is not perfect, but there are lots of tools and article help us to build a good design. RESTful API is useful in many common scenario and worth following.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://mmikowski.github.io/the_lie/" target="_blank" rel="external">RESTful APIs, the big lie</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-the-mythical-man-month-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/06/04/the-mythical-man-month-1/" class="article-date">
@@ -263,6 +316,54 @@
 
 
   
+    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
+  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
+<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/23/this-call-apply-in-javascipt/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-skills-for-hackathon" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/05/23/skills-for-hackathon/" class="article-date">
@@ -321,54 +422,6 @@
       <a data-url="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
-  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
-<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/05/23/this-call-apply-in-javascipt/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -532,54 +585,6 @@
 
 
   
-    <article id="post-the-law-of-leaky-abstraction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/14/the-law-of-leaky-abstraction/" class="article-date">
-  <time datetime="2016-05-13T16:00:00.000Z" itemprop="datePublished">2016-05-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/14/the-law-of-leaky-abstraction/">Review of &quot;The Law of Leaky Abstractions&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Abstraction is hiding infomation to simplify a task. In most cases, abstraction is doing well. But in some cases, something inside abstraction layer can go wrong and make the abstraction fail, user have no ideas what is going on as the detail is hidden. The only way to fix it is to check the implementation of the abstracted layer. Therefore, abstraction fail to save us from complexity.</p>
-<h2 id="Paradox"><a href="#Paradox" class="headerlink" title="Paradox"></a>Paradox</h2><p>Programmers want to make programming easier by providing abstraction, but become a proficient programmer is getting harder. Programmer have to understand all related abstraction layer to solve bugs caused by leaky abstraction. At the end, programmer cannot escape from understand the detail of abstraction layer.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/05/14/the-law-of-leaky-abstraction/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/14/the-law-of-leaky-abstraction/" data-id="cio6usukk0000fh65hkxc90tq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/14/the-law-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -590,25 +595,6 @@
 </section>
         
           <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Advertisement</h3>
-    <div class="widget">
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Testing -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4208803683107796"
-             data-ad-slot="4489226860"
-             data-ad-format="auto"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-  </div>
-
-
   
     
   <div class="widget-wrap">
@@ -642,6 +628,10 @@
       <ul>
         
           <li>
+            <a href="/review/2016/06/06/restapi-is-a-lie/">review of &quot;RESTful APIs, the big lie&quot;</a>
+          </li>
+        
+          <li>
             <a href="/review/2016/06/04/the-mythical-man-month-1/">From programming to software engineering</a>
           </li>
         
@@ -655,10 +645,6 @@
         
           <li>
             <a href="/diary/2016/05/26/example-of-leaky-abstraction/">Example of leaky abstraction</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/05/23/skills-for-hackathon/">Skills for hackathon</a>
           </li>
         
       </ul>

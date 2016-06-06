@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot; | Coding Sunday</title>
+  <title>review of &quot;RESTful APIs, the big lie&quot; | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.
-What">
+  <meta name="description" content="Someone think RESTful api is bad and give 5 points.
+There is little agreement on what a RESTful APII would say yes if the scope is for all public API. There are different interpretation on the HTTP re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages"">
-<meta property="og:url" content="http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/index.html">
+<meta property="og:title" content="review of "RESTful APIs, the big lie"">
+<meta property="og:url" content="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.
-What">
-<meta property="og:updated_time" content="2016-05-14T05:57:38.000Z">
+<meta property="og:description" content="Someone think RESTful api is bad and give 5 points.
+There is little agreement on what a RESTful APII would say yes if the scope is for all public API. There are different interpretation on the HTTP re">
+<meta property="og:updated_time" content="2016-06-06T17:01:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages"">
-<meta name="twitter:description" content="We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.
-What">
+<meta name="twitter:title" content="review of "RESTful APIs, the big lie"">
+<meta name="twitter:description" content="Someone think RESTful api is bad and give 5 points.
+There is little agreement on what a RESTful APII would say yes if the scope is for all public API. There are different interpretation on the HTTP re">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -64,10 +64,10 @@ What">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-learn-multiple-programming-languages" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-restapi-is-a-lie" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/05/12/learn-multiple-programming-languages/" class="article-date">
-  <time datetime="2016-05-11T16:00:00.000Z" itemprop="datePublished">2016-05-12</time>
+    <a href="/review/2016/06/06/restapi-is-a-lie/" class="article-date">
+  <time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished">2016-06-06</time>
 </a>
     
   <div class="article-category">
@@ -82,7 +82,7 @@ What">
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages&quot;
+      review of &quot;RESTful APIs, the big lie&quot;
     </h1>
   
 
@@ -90,35 +90,24 @@ What">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>We should set our target to be a software engineer, not a programmer in specific language. Learning another language prove that we are able to work with any language, provide us more opportunity.</p>
-<h2 id="What-is-a-good-programmer"><a href="#What-is-a-good-programmer" class="headerlink" title="What is a good programmer?"></a>What is a good programmer?</h2><ul>
-<li>Don’t try to think like a computer, try to think like a human, then force the computer to think like a human. *</li>
+        <p>Someone think RESTful api is bad and give 5 points.</p>
+<h3 id="There-is-little-agreement-on-what-a-RESTful-API"><a href="#There-is-little-agreement-on-what-a-RESTful-API" class="headerlink" title="There is little agreement on what a RESTful API"></a>There is little agreement on what a RESTful API</h3><p>I would say yes if the scope is for all public API. There are different interpretation on the HTTP response codes. There are no strict rules or unified guidelines on RESTful API. But the HTTP response code and method give us a set of handy vocabulary. Companies can easily define their own rules and following them internally. It does save our development times. The vague HTTP method and response code give us freedom on design and implement our own API. User should refer the the API documentation for more details.</p>
+<p>The proposer suggest using a set of self defined vocabulary, it make the action precise. In my point of view, user still need to read the document to see what vocabularies are avaliable. This does not shorten the development time.</p>
+<h3 id="The-REST-vocabulary-is-not-fully-supported"><a href="#The-REST-vocabulary-is-not-fully-supported" class="headerlink" title="The REST vocabulary is not fully supported"></a>The REST vocabulary is not fully supported</h3><p>Not all verbs or response codes for the HTTP protocol. It is true, but most of us use AJAX to make RESTful API call. Who care HTTP not supporting DELETE or PUT?</p>
+<h3 id="The-REST-vocabulary-is-not-rich-enough-for-APIs"><a href="#The-REST-vocabulary-is-not-rich-enough-for-APIs" class="headerlink" title="The REST vocabulary is not rich enough for APIs"></a>The REST vocabulary is not rich enough for APIs</h3><p>It is true, but in most cases, we actually only need 4 actions: create, read, update, delete. We always can map any actions into these actions. For example, activating a user account can be interpret as updating the user’s account to active. This will introduce ambigouity, but clear documentation with careful resource naming can solve this problem.</p>
+<h3 id="RESTful-APIs-are-very-hard-to-debug"><a href="#RESTful-APIs-are-very-hard-to-debug" class="headerlink" title="RESTful APIs are very hard to debug"></a>RESTful APIs are very hard to debug</h3><p>I can argee with this point. As RESTful API is popular, there are lots of tools help debugging and building RESTful API. Using RESTful API with right tools should be much more productive than using your unique API structure.</p>
+<h3 id="RESTful-APIs-are-usually-tied-to-HTTP"><a href="#RESTful-APIs-are-usually-tied-to-HTTP" class="headerlink" title="RESTful APIs are usually tied to HTTP"></a>RESTful APIs are usually tied to HTTP</h3><p>Why not? Most RESTful API build for web, it makes sense to use HTTP to transmit data. For some special case, we may not be able to use HTTP, but it is not a reason to say RESTful is bad.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>RESTful API is a simple and easy to follow standard. RESTful is not perfect, but there are lots of tools and article help us to build a good design. RESTful API is useful in many common scenario and worth following.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://mmikowski.github.io/the_lie/" target="_blank" rel="external">RESTful APIs, the big lie</a></li>
 </ul>
-<p>In another words, a good programmer write readable code and can encapsulate abstract programming concept into a simple interface. To achieve this target, we have to understand and use design patterns in a proper way. The first step is to understand how to organize codes, for exmaple when to use if, when to use loop, when to define a method, etc.</p>
-<h2 id="What-do-we-learn-from-learning-programming-language"><a href="#What-do-we-learn-from-learning-programming-language" class="headerlink" title="What do we learn from learning programming language?"></a>What do we learn from learning programming language?</h2><p>For first language</p>
-<ul>
-<li>Learn how to break down problems</li>
-<li>Understand what you don’t know and find out resource to help you easily.</li>
-</ul>
-<p>For second language</p>
-<ul>
-<li>Try to compare similarity and difference with the first language</li>
-<li>Deeper understand on the first language you learn<ul>
-<li>What the language is designed in that way</li>
-<li>How features make the language good or bad</li>
-</ul>
-</li>
-</ul>
-<h1 id="Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way"><a href="#Different-programing-language-try-to-push-you-to-solve-problems-in-a-certain-way" class="headerlink" title="Different programing language try to push you to solve problems in a certain way."></a>Different programing language try to push you to solve problems in a certain way.</h1><p>For example, Rudy encourage us to orgnaize code as objects and javascript encourage us to write code in a functional style.</p>
-<p>We can consider language is a framework. They have equivalent computing power, as all programs will be translated to machine code. The program features are syntactic sugar, which help us to implement and maintain the code.</p>
-<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/2-1-learn-multiple-programming-languages/" target="_blank" rel="external">2 Is Greater Than 1 : Why You Should Learn Multiple Programming Languages</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/" data-id="cio5y9xia000b1365tl6v1e4i" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -127,19 +116,10 @@ What">
     
 <nav id="article-nav">
   
-    <a href="/review/2016/05/13/how-to-be-a-programmer/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          &quot;程式員求生指南：關於寫程式的二三事&quot; 感想
-        
-      </div>
-    </a>
   
-  
-    <a href="/review/2016/05/10/rspec-vs-test-unit/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2016/06/04/the-mythical-man-month-1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;</div>
+      <div class="article-nav-title">From programming to software engineering</div>
     </a>
   
 </nav>
@@ -247,7 +227,7 @@ What">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/05/12/learn-multiple-programming-languages/';
+  var disqus_url = 'http://199911.github.io/review/2016/06/06/restapi-is-a-lie/';
   
   (function(){
     var dsq = document.createElement('script');
