@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Is code reusing always good? | Coding Sunday</title>
+  <title>Learning a programming language | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
+  <meta name="description" content="I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.
+How programming is different from other science subjec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Is code reusing always good?">
-<meta property="og:url" content="http://199911.github.io/diary/2016/05/02/reusability/index.html">
+<meta property="og:title" content="Learning a programming language">
+<meta property="og:url" content="http://199911.github.io/diary/2016/05/22/learning-a-programming-language/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
-<meta property="og:updated_time" content="2016-06-04T03:09:18.000Z">
+<meta property="og:description" content="I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.
+How programming is different from other science subjec">
+<meta property="og:updated_time" content="2016-06-09T16:46:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Is code reusing always good?">
-<meta name="twitter:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
+<meta name="twitter:title" content="Learning a programming language">
+<meta name="twitter:description" content="I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.
+How programming is different from other science subjec">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-reusability" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-learning-a-programming-language" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/05/02/reusability/" class="article-date">
-  <time datetime="2016-05-02T15:01:24.000Z" itemprop="datePublished">2016-05-02</time>
+    <a href="/diary/2016/05/22/learning-a-programming-language/" class="article-date">
+  <time datetime="2016-05-21T16:00:00.000Z" itemprop="datePublished">2016-05-22</time>
 </a>
     
   <div class="article-category">
@@ -79,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Is code reusing always good?
+      Learning a programming language
     </h1>
   
 
@@ -87,21 +90,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new code be reuse?</p>
-<p>When come to reusability, things become tricky. I always try to integrate the new feature into current routine, to make the code “reusable”. But it is not a good idea everytime.</p>
-<a id="more"></a> 
-<p>When the function is shared by many components, the new feature may not be compatable with all components. It takes lots of effort the handle the conflict. </p>
-<p>After spending effort to integrate the new feature, we may find we need to customize some component, we have to break the function into two. The effort on making the code “reusable” is wasted.</p>
-<p>It is time consuming to refactor the same piece of code again and again. That’s why i come up with a question: When to reuse code?</p>
-<h2 id="Functional-code-vs-glue-code"><a href="#Functional-code-vs-glue-code" class="headerlink" title="Functional code vs glue code"></a>Functional code vs glue code</h2><p>I divide the code into two types, functional code and glue code. Functional code is the core logic. It can be business logic, database logic and other logic which is ‘working’. Glue code is the code which join different components, libraries and functional code together. It perform wrapping the interface, data formating.</p>
-<h2 id="Never-reuse-glue-code-even-the-code-is-exactly-the-same"><a href="#Never-reuse-glue-code-even-the-code-is-exactly-the-same" class="headerlink" title="Never reuse glue code, even the code is exactly the same"></a>Never reuse glue code, even the code is exactly the same</h2><p>Glue code is doing integration. It join two components together, it can never be decoupled from that components. In other words, glue code is tailor made for and depends on specific components. The glue code cannot be reused from the ground up. Sometime you may found the glue code are similiar, but it is just a coincidence. After a few iteration and development the glue code can be completely different. Don’t waste time on making it reusable.</p>
+        <p>I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.</p>
+<h2 id="How-programming-is-different-from-other-science-subject"><a href="#How-programming-is-different-from-other-science-subject" class="headerlink" title="How programming is different from other science subject"></a>How programming is different from other science subject</h2><p>You cannot ask why there are natural number. You cannot ask why there are gravity. It is the law of the world, decide by God. But for programming language, which is design by people for some reason. It is alway good to ask why the programming language is design in this way.</p>
+<h2 id="What-can-be-learn-from-programming-language"><a href="#What-can-be-learn-from-programming-language" class="headerlink" title="What can be learn from programming language"></a>What can be learn from programming language</h2><p>First of all, code in any programming languages will be convert to machine code. They have the same power on solving problems, why we need different programming language?</p>
+<p>Programming language is also an abstraction, using language problem, syntatic sugar to simplify the programming task, make developers’ life easier. Learning programming language is asking why the language designer going to abstract programming in this way. The designers of programming language integrate good design pattern and useful techniques into the language. For example, many good design pattern is integrated of C language is become language feature of other languages. Such as the template method become the concept of class and object in OOP. The function pointer becomes first class function in functional language.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>When learning a language, we should think about why it is designed in this way. After understanding the principle, we can write better code, or apply the good pattern in another language.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/02/reusability/" data-id="cio5y9xhv00081365r033q9xg" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/05/22/learning-a-programming-language/" data-id="cip8je3yv00006c65k17wlyg8" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/05/02/reusability/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/2016/05/22/learning-a-programming-language/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -110,19 +110,19 @@
     
 <nav id="article-nav">
   
-    <a href="/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/diary/2016/05/23/skills-for-hackathon/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Review of &quot;Reuse Myth - can you afford reusable code?&quot;
+          Skills for hackathon
         
       </div>
     </a>
   
   
-    <a href="/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/2016/05/22/software-as-a-slide/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Review of &quot;How much quality can we afford?</div>
+      <div class="article-nav-title">SaaS - Software as a slide</div>
     </a>
   
 </nav>
@@ -230,7 +230,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/diary/2016/05/02/reusability/';
+  var disqus_url = 'http://199911.github.io/diary/2016/05/22/learning-a-programming-language/';
   
   (function(){
     var dsq = document.createElement('script');
