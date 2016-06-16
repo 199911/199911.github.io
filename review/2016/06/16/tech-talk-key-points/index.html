@@ -3,18 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot; | Coding Sunday</title>
+  <title>Review of &#39;Key points on giving a tech talk&#39; | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+  <meta name="description" content="There are three common problems in a tech talk
+
+Time management
+Too much tech content
+Lack of practice
+
+Time managementNervous speakers usually speak too fast. Listeners do not have enough time to und">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta property="og:url" content="http://199911.github.io/review/2016/06/09/optimizing-mongodb/index.html">
+<meta property="og:title" content="Review of 'Key points on giving a tech talk'">
+<meta property="og:url" content="http://199911.github.io/review/2016/06/16/tech-talk-key-points/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
-<meta property="og:updated_time" content="2016-06-09T07:10:25.000Z">
+<meta property="og:description" content="There are three common problems in a tech talk
+
+Time management
+Too much tech content
+Lack of practice
+
+Time managementNervous speakers usually speak too fast. Listeners do not have enough time to und">
+<meta property="og:updated_time" content="2016-06-16T15:56:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta name="twitter:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+<meta name="twitter:title" content="Review of 'Key points on giving a tech talk'">
+<meta name="twitter:description" content="There are three common problems in a tech talk
+
+Time management
+Too much tech content
+Lack of practice
+
+Time managementNervous speakers usually speak too fast. Listeners do not have enough time to und">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,10 +79,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-tech-talk-key-points" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
+    <a href="/review/2016/06/16/tech-talk-key-points/" class="article-date">
+  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
 </a>
     
   <div class="article-category">
@@ -79,7 +97,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;
+      Review of &#39;Key points on giving a tech talk&#39;
     </h1>
   
 
@@ -87,43 +105,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
-<a id="more"></a> 
-<h2 id="Document-Design"><a href="#Document-Design" class="headerlink" title="Document Design"></a>Document Design</h2><p>In term of SQL, it is table design. The main idea is to reduce the document size. It suggest to shorten the field’s name, use binary to store id instead of strings and remove extra index. This will make the document difficult to understand. We need better doucmentation and introduce a layer for translating the data.</p>
-<h2 id="Index-tricks"><a href="#Index-tricks" class="headerlink" title="Index tricks"></a>Index tricks</h2><p>The idea is to reduce index size by partition the index. It is useful when the field doesn’t have many possible values. A similar technique can be applied in MySQL. It is a trade off between the space required for the index and the cardinality of the index.</p>
-<h2 id="Fregmentation"><a href="#Fregmentation" class="headerlink" title="Fregmentation"></a>Fregmentation</h2><p>It is similar to freqmentation on file system. When we delete a document, there will be a ‘hole’ in the disk. To reduce the ‘hole’, we may need to break down the new document into small pieces. A read action will cost more disk operation. MongoDB provide a <code>repair</code> command to fix this problem, but it is very slow.</p>
-<h2 id="Chunk-migration"><a href="#Chunk-migration" class="headerlink" title="Chunk migration"></a>Chunk migration</h2><p>Chunks are a logical construct in MongoDB, the documentation are not neccessary to be stored in the same place. The solution is to migrate chunk to shard.</p>
-<p>Using a better shard keys can avoid bad migrations. If we know our key distribution, we can pre-create chucks and assign shard keys. One suggestion is to include time in the shard key, but beware of write hotspot</p>
-<h2 id="Hardware-optimization"><a href="#Hardware-optimization" class="headerlink" title="Hardware optimization"></a>Hardware optimization</h2><p>The performance is very bad if the data is not in RAM</p>
+        <p>There are three common problems in a tech talk</p>
 <ul>
-<li>Do a read operation before update to warm up the doc in RAM<ul>
-<li>Read can run in parallel, but update hold a lock</li>
+<li>Time management</li>
+<li>Too much tech content</li>
+<li>Lack of practice</li>
 </ul>
-</li>
-</ul>
-<p>Use a shard per core instead of shard per server</p>
+<h2 id="Time-management"><a href="#Time-management" class="headerlink" title="Time management"></a>Time management</h2><p>Nervous speakers usually speak too fast. Listeners do not have enough time to understand the material. Another case is the speaker becomed too excited, spent too much time on a small part and overrun. At the end, the speaker have to skip part of the contents.</p>
+<p>To prevent overrun, we can limit the amount of material. Here are some rule of thumbs.</p>
 <ul>
-<li>Overcome write locks when writes per second matter<ul>
-<li>As MongoDB use a big write lock<br>The article is written on 2011, I am not sure this technique is still valid. As mongoDB seems have lots of change on write lock.</li>
+<li>Spend one minute for one page of slide</li>
+<li>Keep 10 minute for Q&amp;A section</li>
+<li>A 45 minute presentation, prepare 30 to 40 pages of slide</li>
 </ul>
-</li>
+<p>It is always good to have rehearsal. It can make presenter less nervous and presenter have data to tune the content and the weight on slides.</p>
+<h2 id="Too-much-tech-content"><a href="#Too-much-tech-content" class="headerlink" title="Too much tech content"></a>Too much tech content</h2><p>Presentation is not documentation. The focus is not on how much the presenter can speak, but how much listeners can take away. Presentation is communication. We have to catch the listeners’ attention. Speaker need to present the content in an interesting way, with solid example and detail explanation. When we have not enough time to present all content, we have to remove some of them, even it is worth sharing. </p>
+<h2 id="Lack-of-practice"><a href="#Lack-of-practice" class="headerlink" title="Lack of practice"></a>Lack of practice</h2><p>Practice make perfect. Good presenter practise controlling the pace of talk and interacting with listeners. Recording our own presentation can help us to make progress.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="http://blog.devtang.com/2016/06/05/tech-talk-notes/" target="_blank" rel="external">技术演讲中最容易被忽视的问题</a></li>
 </ul>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>When we need to do optimization</p>
-<ol>
-<li>Having basic understanding on the implementation of abstraction layers</li>
-<li>Search related resource on optimization</li>
-<li>If we cannot understand why the optimization works, it means our understanding on the abstraction layer is not deep enough. Better to do more research on the implementation of abstraction layers</li>
-<li>After getting enough context and knowledge of the abstraction layers, we can try to apply optimization skills</li>
-<li>Review the performance afte optimization, go back to step 3 if the result is not good enough.</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://eng.localytics.com/optimizing-mongodb-lessons-learned-at-localytics/" target="_blank" rel="external">Optimizing MongoDB: Lessons Learned at Localytics</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/16/tech-talk-key-points/" data-id="cipihpaay0001lm65i5daopfg" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/2016/06/16/tech-talk-key-points/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -132,19 +139,10 @@
     
 <nav id="article-nav">
   
-    <a href="/diary/2016/06/10/learning-a-programming-language/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Learning a programming language
-        
-      </div>
-    </a>
   
-  
-    <a href="/review/2016/06/06/restapi-is-a-lie/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2016/06/16/high-output-management-summary/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">review of &quot;RESTful APIs, the big lie&quot;</div>
+      <div class="article-nav-title">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</div>
     </a>
   
 </nav>
@@ -252,7 +250,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/06/09/optimizing-mongodb/';
+  var disqus_url = 'http://199911.github.io/review/2016/06/16/tech-talk-key-points/';
   
   (function(){
     var dsq = document.createElement('script');
