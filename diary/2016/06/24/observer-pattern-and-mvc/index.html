@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Observer pattern and MVC | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="@thwonghenry refactor the javascript of an inhouse plugin and I am the one who review his code. He apply the observer pattern and we have some discussion on it.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Observer pattern and MVC">
+<meta property="og:url" content="http://199911.github.io/diary/2016/06/24/observer-pattern-and-mvc/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="@thwonghenry refactor the javascript of an inhouse plugin and I am the one who review his code. He apply the observer pattern and we have some discussion on it.">
+<meta property="og:updated_time" content="2016-06-26T13:23:14.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Observer pattern and MVC">
+<meta name="twitter:description" content="@thwonghenry refactor the javascript of an inhouse plugin and I am the one who review his code. He apply the observer pattern and we have some discussion on it.">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-observer-pattern-and-mvc" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/2016/06/24/observer-pattern-and-mvc/" class="article-date">
+  <time datetime="2016-06-23T16:00:00.000Z" itemprop="datePublished">2016-06-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Observer pattern and MVC
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@thwonghenry refactor the javascript of an inhouse plugin and I am the one who review his code. He apply the observer pattern and we have some discussion on it.</p>
+<a id="more"></a>
+<h2 id="Observer-pattern"><a href="#Observer-pattern" class="headerlink" title="Observer pattern"></a>Observer pattern</h2><p>There are two roles in observer pattern, subject and observer. Subject is an object implemented <code>on()</code> and <code>notify()</code>. Observers are modules, objects or functions depend on subject.</p>
+<p>The pattern works in this way: observers’ logic is not embedded in subject directly, they register a “handler” to subject’s “events” using <code>on()</code>. When the subject is called, subject fire an event using <code>notify()</code> and call the “handlers” which registered that specific event.</p>
+<h2 id="When-and-why-we-use-observer-pattern"><a href="#When-and-why-we-use-observer-pattern" class="headerlink" title="When and why we use observer pattern?"></a>When and why we use observer pattern?</h2><p>From the definition, we know there 3 components in observer pattern: subject, events and observers. A specific action of subject trigger specific events and specific observers are notified by specific event. In other words, specific subject action trigger specific observer action indirectly. Subject is depending on observers. Observer pattern is decoupling the subject and observers by converting the dependency to an “event”.</p>
+<p>As long as two objects or modules have a fixed dependency or relationship, we can apply observer pattern. But why we need it?</p>
+<h2 id="Reuse-similar-dependency"><a href="#Reuse-similar-dependency" class="headerlink" title="Reuse similar dependency"></a>Reuse similar dependency</h2><p>It is common to have dependency among modules, we can convert an abstract “dependency” to a concrete “event”. Therefore we can organize the dependency in a tidy way. Also, when there are new dependency, we can register the function to the “event” without changing logic of any modules.</p>
+<p>For example, when there is a fire in building, we need to call fire station, turn on sprinkler and resident need to escape. We can consider <code>resident</code>, <code>sprinkler</code> and <code>fireStation</code> objects depend on <code>building</code> object. We can implement the dependency like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">building.fire = function()&#123;</span><br><span class="line">    resident.escape();</span><br><span class="line">    sprinkler.water();</span><br><span class="line">    fireStation.call();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>If we need to do something more now, such as journalist needs to report the fire in news, we have to update <code>building.fire</code>.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">building.fire = function()&#123;</span><br><span class="line">    building.notify(&quot;fire&quot;);</span><br><span class="line">    resident.escape();</span><br><span class="line">    sprinkler.water();</span><br><span class="line">    fireStation.call();</span><br><span class="line">    journalist.report();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Everytime we change a piece of deployed code, we need to do a lot of testing to make sure no new or regression bugs is introduced. This can be avoided by observer pattern.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">building.fire = function()&#123;</span><br><span class="line">    this.notify(&quot;fire&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">building.on(&quot;fire&quot;, resident.escape);</span><br><span class="line">building.on(&quot;fire&quot;, sprinkler.water);</span><br><span class="line">building.on(&quot;fire&quot;, fireStation.call);</span><br></pre></td></tr></table></figure>
+<p>To let journalist to report the new, we only need to append <code>building.on(&quot;fire&quot;, journalist.report);</code> to some where, without changing any implemented functions.</p>
+<h2 id="How-observer-pattern-plays-its-part-in-MVC"><a href="#How-observer-pattern-plays-its-part-in-MVC" class="headerlink" title="How observer pattern plays its part in MVC?"></a>How observer pattern plays its part in MVC?</h2><p>In user interface, there are two main components, data models and front end views. They have a fixed dependency. For example, when user click a button, some data need to be updated. After a model is updated, some tables need to be updated. The code will look like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">button.click = function()&#123;</span><br><span class="line">    data.update();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">data.update = function()&#123;</span><br><span class="line">    table.update();</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line">table.update = function()&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>We have a button.click -&gt; data.update -&gt; tables.update chains. When we have more UI components or more complex data logic, the chain will be getting longer and the code become unmaintainable.</p>
+<p>If we use observer pattern, the code will look like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">button.click = function()&#123;</span><br><span class="line">    this.notify(&quot;click&quot;);</span><br><span class="line">&#125;</span><br><span class="line">data.update = function()&#123;</span><br><span class="line">    ...</span><br><span class="line">    this.notify(&quot;update&quot;);</span><br><span class="line">&#125;</span><br><span class="line">table.update = function()&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>and we have to register handlers to events.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button.on(&apos;click&apos;, data.update);</span><br><span class="line">data.on(&apos;update&apos;, table.update);</span><br></pre></td></tr></table></figure></p>
+<p>There are no nested function calls anymore. Observer “flatten” the code for us. Observer pattern is converting “model update” and “view update” dependencies into events and save programmers from trivial handling of components update chains.</p>
+<p>We have a MVC structure now. We can put <code>data.update()</code> in models, <code>buton.click()</code> and <code>table.update()</code> in views. The controller will be the event registration logic like <code>button.on(&#39;click&#39;, data.update);</code> and <code>data.on(&#39;update&#39;, table.update);</code>.</p>
+<h2 id="MVC-is-an-example-of-observer-pattern"><a href="#MVC-is-an-example-of-observer-pattern" class="headerlink" title="MVC is an example of observer pattern"></a>MVC is an example of observer pattern</h2><p>To sum up, MVC is a special scenario of observer pattern, which hide the detail on update chains of models and views. By putting the dependency definition in controller, we can decouple model logic and view logic.</p>
+<h2 id="Further-improvement"><a href="#Further-improvement" class="headerlink" title="Further improvement"></a>Further improvement</h2><p>After we identitfy the problem in MVC, we will get redux. But I am not familiar with it, I better not discuss it here.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://stackoverflow.com/questions/15594905/difference-between-observer-pub-sub-and-data-binding" target="_blank" rel="external">http://stackoverflow.com/questions/15594905/difference-between-observer-pub-sub-and-data-binding</a><br><a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="external">https://en.wikipedia.org/wiki/Observer_pattern</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/2016/06/24/observer-pattern-and-mvc/" data-id="cipwmmoea0000lz65netgeww2" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/2016/06/24/observer-pattern-and-mvc/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/diary/2016/06/19/readings-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文集一</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/diary/2016/06/24/observer-pattern-and-mvc/">Observer pattern and MVC</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/06/19/readings-1/">文集一</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/06/16/tech-talk-key-points/">Review of &#39;Key points on giving a tech talk&#39;</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/06/16/git-clone-depth/">git clone &lt;repo&gt; --depth 1</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/diary/2016/06/24/observer-pattern-and-mvc/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
