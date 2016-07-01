@@ -62,6 +62,114 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-restapi-is-a-lie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/06/restapi-is-a-lie/" class="article-date">
+  <time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished">2016-06-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/06/restapi-is-a-lie/">review of &quot;RESTful APIs, the big lie&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Someone think RESTful api is bad and give 5 points.</p>
+<h3 id="There-is-little-agreement-on-what-a-RESTful-API"><a href="#There-is-little-agreement-on-what-a-RESTful-API" class="headerlink" title="There is little agreement on what a RESTful API"></a>There is little agreement on what a RESTful API</h3><p>I would say yes if the scope is for all public API. There are different interpretation on the HTTP response codes. There are no strict rules or unified guidelines on RESTful API. But the HTTP response code and method give us a set of handy vocabulary. Companies can easily define their own rules and following them internally. It does save our development times. The vague HTTP method and response code give us freedom on design and implement our own API. User should refer the the API documentation for more details.</p>
+<p>The proposer suggest using a set of self defined vocabulary, it make the action precise. In my point of view, user still need to read the document to see what vocabularies are avaliable. This does not shorten the development time.</p>
+<h3 id="The-REST-vocabulary-is-not-fully-supported"><a href="#The-REST-vocabulary-is-not-fully-supported" class="headerlink" title="The REST vocabulary is not fully supported"></a>The REST vocabulary is not fully supported</h3><p>Not all verbs or response codes for the HTTP protocol. It is true, but most of us use AJAX to make RESTful API call. Who care HTTP not supporting DELETE or PUT?</p>
+<h3 id="The-REST-vocabulary-is-not-rich-enough-for-APIs"><a href="#The-REST-vocabulary-is-not-rich-enough-for-APIs" class="headerlink" title="The REST vocabulary is not rich enough for APIs"></a>The REST vocabulary is not rich enough for APIs</h3><p>It is true, but in most cases, we actually only need 4 actions: create, read, update, delete. We always can map any actions into these actions. For example, activating a user account can be interpret as updating the user’s account to active. This will introduce ambigouity, but clear documentation with careful resource naming can solve this problem.</p>
+<h3 id="RESTful-APIs-are-very-hard-to-debug"><a href="#RESTful-APIs-are-very-hard-to-debug" class="headerlink" title="RESTful APIs are very hard to debug"></a>RESTful APIs are very hard to debug</h3><p>I can argee with this point. As RESTful API is popular, there are lots of tools help debugging and building RESTful API. Using RESTful API with right tools should be much more productive than using your unique API structure.</p>
+<h3 id="RESTful-APIs-are-usually-tied-to-HTTP"><a href="#RESTful-APIs-are-usually-tied-to-HTTP" class="headerlink" title="RESTful APIs are usually tied to HTTP"></a>RESTful APIs are usually tied to HTTP</h3><p>Why not? Most RESTful API build for web, it makes sense to use HTTP to transmit data. For some special case, we may not be able to use HTTP, but it is not a reason to say RESTful is bad.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>RESTful API is a simple and easy to follow standard. RESTful is not perfect, but there are lots of tools and article help us to build a good design. RESTful API is useful in many common scenario and worth following.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://mmikowski.github.io/the_lie/" target="_blank" rel="external">RESTful APIs, the big lie</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-the-mythical-man-month-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/04/the-mythical-man-month-1/" class="article-date">
+  <time datetime="2016-06-03T16:00:00.000Z" itemprop="datePublished">2016-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/04/the-mythical-man-month-1/">From programming to software engineering</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Programming is fun and interesting. A lot of people can build functional programs, but only few of them can convert a program into a product or system. Why?</p>
+<h2 id="The-joys-of-programming"><a href="#The-joys-of-programming" class="headerlink" title="The joys of programming"></a>The joys of programming</h2><ul>
+<li>Joy of building things</li>
+<li>Fascination of watching complex system running</li>
+<li>Delight to build thing without limitation</li>
+<li>Excitement to learn new things</li>
+<li>Pleasure to build useful tool for others</li>
+</ul>
+<p>The joy of programming comes from the nature of a software. Software is abstract. You can build anything that you can imagine. You can build a complex software with no limitation, as long as it does not against logic. As the nature the programming is to automate repeated task, in other words, programming task are never repeat. The most excitement on programming is what comes from your imagination can produce visible output and become a useful tool for others.</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/06/04/the-mythical-man-month-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/" data-id="cip0js68a00002865hdxv2he7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-day1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/rust/2016/05/30/day1/" class="article-date">
@@ -476,112 +584,11 @@
 
 
   
-    <article id="post-making-abstract-products-is-hard" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/14/making-abstract-products-is-hard/" class="article-date">
-  <time datetime="2016-05-13T16:00:00.000Z" itemprop="datePublished">2016-05-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/14/making-abstract-products-is-hard/">Review of &quot;Making Abstract Products Makes Things Hard&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Learning"><a href="#Learning" class="headerlink" title="Learning"></a>Learning</h2><h3 id="Business-can-be-divided-to-providing-product-or-service"><a href="#Business-can-be-divided-to-providing-product-or-service" class="headerlink" title="Business can be divided to providing product or service"></a>Business can be divided to providing product or service</h3><p>Product is something can be transfered to customer, but service cannot. A business can provide both. Software is a service.</p>
-<h1 id="Software-is-an-abstract-product"><a href="#Software-is-an-abstract-product" class="headerlink" title="Software is an abstract product"></a>Software is an abstract product</h1><p>We cannot ‘see’ a software, so it is abstract. </p>
-<p>We are shipping code to user and user can ‘get’ a UI. Why we cannot see a software? UI is just a tip of the iceberg of software, the functional unit is the code behind. Code is the reflection of coder’s mental working, show how the programmer organize the logic, how to divide and solve the problems. As the software can be change quickly, a software is a living product, not a static one. A tech company is also providing service to maintain the software.</p>
-<h3 id="Softwares-are-complex"><a href="#Softwares-are-complex" class="headerlink" title="Softwares are complex"></a>Softwares are complex</h3><p>Software is instructions to computer. A computer is actually doing simple calculation, changing bits from 0 to 1 or from 1 to 0. To make a software from simple instruction is extremely complex. So programmer pack the small sets instructions together to form some commands and pack the commands in to module. Therefore, we can create a software with higher level commands. We are calling the ways we pack the commands as “creating layers of software abstractions”.</p>
-<p>Each layer of abstraction simple a large amount of instruction. If anyone get lost in one or two layer, they will have no idea what the software is going on.</p>
-<p>Software is too complex to manage, especially it have not physical constraints and cost to limit the complexity of a software.</p>
-<p>Reference: <a href="http://arthurtw.github.io/2015/02/01/making-abstract-products-makes-things-hard.html" target="_blank" rel="external">Making Abstract Products Makes Things Hard</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/14/making-abstract-products-is-hard/" data-id="cio6qejdi0000sp65b7wf8a69" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/14/making-abstract-products-is-hard/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-be-a-programmer" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/13/how-to-be-a-programmer/" class="article-date">
-  <time datetime="2016-05-12T16:00:00.000Z" itemprop="datePublished">2016-05-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/13/how-to-be-a-programmer/">&quot;程式員求生指南：關於寫程式的二三事&quot; 感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>文章嘅結構非常清淅，段落標題已經係一個好好嘅小結，冇必要再作總結。</p>
-<h2 id="要點"><a href="#要點" class="headerlink" title="要點"></a>要點</h2><h3 id="職業道德"><a href="#職業道德" class="headerlink" title="職業道德"></a>職業道德</h3><p>Programmer嘅職業道德就係寫D有Quality嘅Code。</p>
-<p>行外人可能唔明，Product有冇Quality，Client好易睇得出，冇Quality嘅野好易俾市場圖汰，跟本生存唔到，何來道德？事實上，Software嘅Quality，唔識寫Code嘅人真係會睇唔出。</p>
-<p>行外人眼中，淨係睇到你整個UI好唔好睇，D功能用唔用到。其實E D野好多時call個library, copy and paste 下D Code就做到。真正嘅Software Quality係要睇背後個Logic嚴唔嚴謹，結構易唔易Extend。行外人眼中淨係見到一D符號，連D Code咩意思都唔知，點樣明白背後嘅Idea，何來講得出有冇Quality?</p>
-<p>正如作者所講，Software 冇一個「外觀」(啱啱講有UI唔代表Software Quality)，係一D抽象嘅，只有係實際contribute嘅人先知到個Quality，好多時都係靠自己良心去做。</p>
-<p>揾工真係要揾D上司有technical backgound，隊Team注重Code Quality嘅公司。如果老細係行外人，跟本唔識分D Code有冇Quality，好易就升左D亂寫Code交數又識卸膊嘅Programmer。果D幫人地執手尾嘅良心Programmer真係灰左機。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/05/13/how-to-be-a-programmer/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/13/how-to-be-a-programmer/" data-id="cio5y9xid000d13657h4czewo" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/13/how-to-be-a-programmer/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -620,6 +627,14 @@
       <ul>
         
           <li>
+            <a href="/diary/2016/06/29/readings-2/">文集二</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/06/26/objc-interface-design/">&quot;objc@interface的设计哲学与设计技巧&quot;感想</a>
+          </li>
+        
+          <li>
             <a href="/diary/2016/06/24/observer-pattern-and-mvc/">Observer pattern and MVC</a>
           </li>
         
@@ -629,14 +644,6 @@
         
           <li>
             <a href="/review/2016/06/16/tech-talk-key-points/">Review of &#39;Key points on giving a tech talk&#39;</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/06/16/git-clone-depth/">git clone &lt;repo&gt; --depth 1</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
           </li>
         
       </ul>

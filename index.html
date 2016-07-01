@@ -62,6 +62,106 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-readings-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/2016/06/29/readings-2/" class="article-date">
+  <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/diary/2016/06/29/readings-2/">文集二</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-flow"><a href="#git-flow" class="headerlink" title="git-flow"></a><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_TW.html" target="_blank" rel="external">git-flow</a></h2><p>提供一個git work flow 嘅abstraction，唔洗打一堆git command 先開到新branch。但係個design係俾每人fork一個repo嘅use case，到我地公司大家share 一個 repo個情況唔同，好似唔係幾岩用。</p>
+<h2 id="制作一个苦力"><a href="#制作一个苦力" class="headerlink" title="制作一个苦力"></a><a href="https://github.com/nixzhu/dev-blog/blob/master/2016-06-29-coolie.md" target="_blank" rel="external">制作一个苦力</a></h2><p>用swift寫一個JSON parse，想學寫compiler果時可以睇返。</p>
+<h2 id="MAC下常用软件推荐"><a href="#MAC下常用软件推荐" class="headerlink" title="MAC下常用软件推荐"></a><a href="http://miao.hu/2012/02/26/osx-exp-share/" target="_blank" rel="external">MAC下常用软件推荐</a></h2><p>一堆mac app。有用開Slack, GifGrabber(Giphy Capture), Dash, HomeBrew, iTerm2, Sublime Text 3, Seqel Pro 同 Caffeine。試用緊OmniFocus, Alfred, RescueTime 同 ClipMenu。</p>
+<h2 id="使用Vagrant練習環境佈署"><a href="#使用Vagrant練習環境佈署" class="headerlink" title="使用Vagrant練習環境佈署"></a><a href="http://gogojimmy.net/2013/05/26/vagrant-tutorial/" target="_blank" rel="external">使用Vagrant練習環境佈署</a></h2><p>個concept 同docker大同小異，可以簡單咁係devlopment environment build infrastructure。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/2016/06/29/readings-2/" data-id="ciq3gbvk20001uw65an4zccle" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/2016/06/29/readings-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-objc-interface-design" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/26/objc-interface-design/" class="article-date">
+  <time datetime="2016-06-25T16:00:00.000Z" itemprop="datePublished">2016-06-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/26/objc-interface-design/">&quot;objc@interface的设计哲学与设计技巧&quot;感想</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>作者係文中比較java同objective C 嘅 OO。Objective C 嘅pattern係比較嚴格，可以由當中學到一D OOP嘅good practise.</p>
+<p>Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object function，作者係文中提及點樣可以做到E幾個keyword嘅效果。由於Objective C 歷史較長，佢冇E D keyword唔係因為佢design得唔好，可能係調返轉，果D keyword係由Objective C 啟發出來。</p>
+<p>同埋我地design一個class嘅時候，要注意到</p>
+<ul>
+<li>Interface 要簡單</li>
+<li>唔好expose不必要嘅function</li>
+<li>要包好個object，隐藏implementation嘅detail</li>
+</ul>
+<p>文中提出一個例子。解釋obejct method要簡單。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@interface Sark : NSObject</span><br><span class="line">- (instancetype)init;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age friends:(NSArray *)friends;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>其實E個係java一個叫telecope constructor嘅anti-pattern，只要轉用builder pattern就可以解決</p>
+<p>文中指出，可以用class method 去取代一D不必要嘅instance method。簡單去諗，只要個class冇多過一個instance，咁其實可以直接用class method。但係有一個pattern 叫 singleton，都係一個class得一個instance，咁幾時用class，幾時用singleton？</p>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a href="http://blog.sunnyxx.com/2014/04/13/objc_dig_interface/" target="_blank" rel="external">http://blog.sunnyxx.com/2014/04/13/objc_dig_interface/</a><br><a href="http://www.captaindebug.com/2011/05/telescoping-constructor-antipattern.html#.V2_1hpN97Vo" target="_blank" rel="external">http://www.captaindebug.com/2011/05/telescoping-constructor-antipattern.html#.V2_1hpN97Vo</a><br><a href="https://kodelog.wordpress.com/tag/telescopic-constructor-pattern/" target="_blank" rel="external">https://kodelog.wordpress.com/tag/telescopic-constructor-pattern/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/26/objc-interface-design/" data-id="ciq3gbvjx0000uw65ii3tw8bh" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/26/objc-interface-design/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-observer-pattern-and-mvc" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/06/24/observer-pattern-and-mvc/" class="article-date">
@@ -466,119 +566,11 @@
 
 
   
-    <article id="post-restapi-is-a-lie" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/06/restapi-is-a-lie/" class="article-date">
-  <time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/06/restapi-is-a-lie/">review of &quot;RESTful APIs, the big lie&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Someone think RESTful api is bad and give 5 points.</p>
-<h3 id="There-is-little-agreement-on-what-a-RESTful-API"><a href="#There-is-little-agreement-on-what-a-RESTful-API" class="headerlink" title="There is little agreement on what a RESTful API"></a>There is little agreement on what a RESTful API</h3><p>I would say yes if the scope is for all public API. There are different interpretation on the HTTP response codes. There are no strict rules or unified guidelines on RESTful API. But the HTTP response code and method give us a set of handy vocabulary. Companies can easily define their own rules and following them internally. It does save our development times. The vague HTTP method and response code give us freedom on design and implement our own API. User should refer the the API documentation for more details.</p>
-<p>The proposer suggest using a set of self defined vocabulary, it make the action precise. In my point of view, user still need to read the document to see what vocabularies are avaliable. This does not shorten the development time.</p>
-<h3 id="The-REST-vocabulary-is-not-fully-supported"><a href="#The-REST-vocabulary-is-not-fully-supported" class="headerlink" title="The REST vocabulary is not fully supported"></a>The REST vocabulary is not fully supported</h3><p>Not all verbs or response codes for the HTTP protocol. It is true, but most of us use AJAX to make RESTful API call. Who care HTTP not supporting DELETE or PUT?</p>
-<h3 id="The-REST-vocabulary-is-not-rich-enough-for-APIs"><a href="#The-REST-vocabulary-is-not-rich-enough-for-APIs" class="headerlink" title="The REST vocabulary is not rich enough for APIs"></a>The REST vocabulary is not rich enough for APIs</h3><p>It is true, but in most cases, we actually only need 4 actions: create, read, update, delete. We always can map any actions into these actions. For example, activating a user account can be interpret as updating the user’s account to active. This will introduce ambigouity, but clear documentation with careful resource naming can solve this problem.</p>
-<h3 id="RESTful-APIs-are-very-hard-to-debug"><a href="#RESTful-APIs-are-very-hard-to-debug" class="headerlink" title="RESTful APIs are very hard to debug"></a>RESTful APIs are very hard to debug</h3><p>I can argee with this point. As RESTful API is popular, there are lots of tools help debugging and building RESTful API. Using RESTful API with right tools should be much more productive than using your unique API structure.</p>
-<h3 id="RESTful-APIs-are-usually-tied-to-HTTP"><a href="#RESTful-APIs-are-usually-tied-to-HTTP" class="headerlink" title="RESTful APIs are usually tied to HTTP"></a>RESTful APIs are usually tied to HTTP</h3><p>Why not? Most RESTful API build for web, it makes sense to use HTTP to transmit data. For some special case, we may not be able to use HTTP, but it is not a reason to say RESTful is bad.</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>RESTful API is a simple and easy to follow standard. RESTful is not perfect, but there are lots of tools and article help us to build a good design. RESTful API is useful in many common scenario and worth following.</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://mmikowski.github.io/the_lie/" target="_blank" rel="external">RESTful APIs, the big lie</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-the-mythical-man-month-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/04/the-mythical-man-month-1/" class="article-date">
-  <time datetime="2016-06-03T16:00:00.000Z" itemprop="datePublished">2016-06-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/04/the-mythical-man-month-1/">From programming to software engineering</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Programming is fun and interesting. A lot of people can build functional programs, but only few of them can convert a program into a product or system. Why?</p>
-<h2 id="The-joys-of-programming"><a href="#The-joys-of-programming" class="headerlink" title="The joys of programming"></a>The joys of programming</h2><ul>
-<li>Joy of building things</li>
-<li>Fascination of watching complex system running</li>
-<li>Delight to build thing without limitation</li>
-<li>Excitement to learn new things</li>
-<li>Pleasure to build useful tool for others</li>
-</ul>
-<p>The joy of programming comes from the nature of a software. Software is abstract. You can build anything that you can imagine. You can build a complex software with no limitation, as long as it does not against logic. As the nature the programming is to automate repeated task, in other words, programming task are never repeat. The most excitement on programming is what comes from your imagination can produce visible output and become a useful tool for others.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/04/the-mythical-man-month-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/" data-id="cip0js68a00002865hdxv2he7" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -617,6 +609,14 @@
       <ul>
         
           <li>
+            <a href="/diary/2016/06/29/readings-2/">文集二</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/06/26/objc-interface-design/">&quot;objc@interface的设计哲学与设计技巧&quot;感想</a>
+          </li>
+        
+          <li>
             <a href="/diary/2016/06/24/observer-pattern-and-mvc/">Observer pattern and MVC</a>
           </li>
         
@@ -626,14 +626,6 @@
         
           <li>
             <a href="/review/2016/06/16/tech-talk-key-points/">Review of &#39;Key points on giving a tech talk&#39;</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/06/16/git-clone-depth/">git clone &lt;repo&gt; --depth 1</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
           </li>
         
       </ul>
