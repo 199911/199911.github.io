@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>文集四 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data
+写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。
+适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文集四">
+<meta property="og:url" content="http://199911.github.io/diary/2016/07/03/readings-4/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data
+写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。
+适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+<meta property="og:updated_time" content="2016-07-03T09:20:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文集四">
+<meta name="twitter:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data
+写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。
+适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-readings-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/2016/07/03/readings-4/" class="article-date">
+  <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      文集四
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/" target="_blank" rel="external">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
+<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/" target="_blank" rel="external">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
+<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/" target="_blank" rel="external">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
+<h2 id="我所理解的执行力"><a href="#我所理解的执行力" class="headerlink" title="我所理解的执行力"></a><a href="http://blog.devtang.com/2015/08/15/talk-about-execution/" target="_blank" rel="external">我所理解的执行力</a></h2><p>我覺得可以歸納做2點：</p>
+<ul>
+<li>堅持解決問題<ul>
+<li>有時候問題嘅根原唔係咁明顯，往往要花好多時間同精力先解決到，好多時都需要堅持。但係有可以簡單解決嘅技巧，當然要運用。</li>
+</ul>
+</li>
+<li>識補位<ul>
+<li>現實中嘅工作係團隊合作，當隊友有D咩甩漏，一定要補位，諗方法去解決。而要做到E樣野，就要有唔同方面嘅知識同經驗。</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据的秘密（上）-为什么要关注数据"><a href="#数据的秘密（上）-为什么要关注数据" class="headerlink" title="数据的秘密（上）- 为什么要关注数据"></a><a href="http://blog.devtang.com/2015/09/02/why-we-need-monitor-data/" target="_blank" rel="external">数据的秘密（上）- 为什么要关注数据</a></h2><p>Data 己經講同爛。簡單黎講，Data係一種唔可以缺少嘅System Feedback。冇左Data，好難去 debug, optimize 同做 tuning</p>
+<h2 id="数据的秘密（下）-如何分析数据"><a href="#数据的秘密（下）-如何分析数据" class="headerlink" title="数据的秘密（下）- 如何分析数据"></a><a href="http://blog.devtang.com/2015/09/03/how-to-monitor-data/" target="_blank" rel="external">数据的秘密（下）- 如何分析数据</a></h2><p>比較有意思嘅一點係，Data 要易睇同易分析。好多時係data extract insight，要日復日嘅觀察同多方面嘅分析。如果每日都要搞一大輪野先睇到，好容易會miss左D野。</p>
+<h2 id="应该如何管理密码-我的密码管理心得"><a href="#应该如何管理密码-我的密码管理心得" class="headerlink" title="应该如何管理密码 - 我的密码管理心得"></a><a href="http://blog.devtang.com/2016/04/07/my-password-management-way/" target="_blank" rel="external">应该如何管理密码 - 我的密码管理心得</a></h2><p>唔重要嘅account可以直接用third party tool去管理，避免repeated password attack。可以用facebook/google login就用。</p>
+<h2 id="Javscript-library-detector"><a href="#Javscript-library-detector" class="headerlink" title="Javscript library detector"></a><a href="https://github.com/johnmichel/Library-Detector-for-Chrome" target="_blank" rel="external">Javscript library detector</a></h2><p>如題。對分析人地唧網站好有用。</p>
+<h2 id="《引爆点》读书心得"><a href="#《引爆点》读书心得" class="headerlink" title="《引爆点》读书心得"></a><a href="http://blog.devtang.com/2015/03/01/tipping-point/" target="_blank" rel="external">《引爆点》读书心得</a></h2><p>流行理論可以分做三個因素。</p>
+<h3 id="內部因素"><a href="#內部因素" class="headerlink" title="內部因素"></a>內部因素</h3><p>件野本身要好。「好」嘅定義可以係得意，幫到用戶解決問題</p>
+<h3 id="可控因素"><a href="#可控因素" class="headerlink" title="可控因素"></a>可控因素</h3><p>要先揾到關鍵人物做用戶，等佢地幫你宣傳。可以分為内行，聯系人員同推銷員。文中冇解釋，搞到我有D想睇。</p>
+<h3 id="不可控因素"><a href="#不可控因素" class="headerlink" title="不可控因素"></a>不可控因素</h3><p>環境因素。如時機，行業發展。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/2016/07/03/readings-4/" data-id="ciq6e0zw100007165evosiru5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/2016/07/03/readings-4/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/diary/2016/07/02/readings-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文集三</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/diary/2016/07/03/readings-4/">文集四</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/07/02/readings-3/">文集三</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/06/29/readings-2/">文集二</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/06/26/objc-interface-design/">&quot;objc@interface的设计哲学与设计技巧&quot;感想</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/06/24/observer-pattern-and-mvc/">Observer pattern and MVC</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/diary/2016/07/03/readings-4/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
