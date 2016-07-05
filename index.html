@@ -62,6 +62,108 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/07/04/singleton/" class="article-date">
+  <time datetime="2016-07-03T16:00:00.000Z" itemprop="datePublished">2016-07-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/07/04/singleton/">Review of &quot;Avoiding Singleton Abuse&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The singleton mentioned here is Singleton Design Pattern</p>
+<ul>
+<li>Private constructor</li>
+<li>Global referal to the instace</li>
+</ul>
+<h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group od global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
+<h3 id="Why-global-variable-is-evil"><a href="#Why-global-variable-is-evil" class="headerlink" title="Why global variable is evil?"></a>Why global variable is evil?</h3><p>The root of the problem is, the dependencies of modules on global variable is not clear. It makes the module difficult to understand and test.</p>
+<p>For example,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">    global $bar;</span><br><span class="line">    // or</span><br><span class="line">    $bar = Singleton::get_instance()-&gt;bar;</span><br><span class="line">    return ($bar &gt; 10);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>If we run <code>foo()</code>, it can return <code>true</code> or <code>false</code>. As <code>foo()</code> depends on $bar implicitly, we have no idea why the behaviour changed, until we read the source code. This means <code>foo()</code> fail to abstract the detail of implementation.</p>
+<h3 id="How-Singleton-solve-the-implicitly-dependency"><a href="#How-Singleton-solve-the-implicitly-dependency" class="headerlink" title="How Singleton solve the implicitly dependency?"></a>How Singleton solve the implicitly dependency?</h3><p>Singleton instance is similar to global variable, but it can solve the implicitly dependency casued by gloabl variable. What we need is “Dependency Injection”. It means we do not depend on the method directly in the implementation, but we pass the dependency using parameters.</p>
+<p>Let’s rewrite <code>foo()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo($singleton)&#123;</span><br><span class="line">    $bar = $singleton-&gt;bar;</span><br><span class="line">    return ($bar &gt; 10);</span><br><span class="line">&#125;</span><br><span class="line">// We call foo() like this</span><br><span class="line">foo(Singleton::get_instance());</span><br></pre></td></tr></table></figure></p>
+<p>Everytime, we call <code>foo()</code>, we know which module it depends on. We can test the function easily by changing the dependency to a mock instance.</p>
+<p>In another aspect, read-only global variable do no harm. If the Singleton’s fields are constant, and methods have no side effect, feel free to use Singleton. But in these case, static class or namespace may be a better choice.</p>
+<p>To sum up, advantage of Singleton pattern faciliate dependency injection.</p>
+<h3 id="Lifespan-of-object-is-not-a-strong-reason-to-use-singleton"><a href="#Lifespan-of-object-is-not-a-strong-reason-to-use-singleton" class="headerlink" title="Lifespan of object is not a strong reason to use singleton"></a>Lifespan of object is not a strong reason to use singleton</h3><p>If only one object is needed in the whole software does not mean we must use singleton. We can just create an object and store it in somewhere but not in the global scope. We shoud handle the lifespan of the object careful. We cannot escape the responsiblity on lifespan handling by abusing Singleton pattern.</p>
+<p>We need to understand what problem does the design pattern want to solve before applying them. “We only need one object” is not a sounded reason to apply Singleton. Software requirement always change, we only need one object now, but we may need more in the future. Applying design pattern in a wrong way make the system unneccesorily complex, increase the difficulty on developmention and maintainance.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.objc.io/issues/13-architecture/singletons/" target="_blank" rel="external">Avoiding Singleton Abuse</a></p>
+<p>PS: In the article they use a built in function <code>dispatch_once()</code>, it makes the refactoring from singleton to object difficult. But in other language, singleton to objects may be a smooth transition</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="ciq9jkor500010o65vjzxadpb" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/07/04/singleton/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-reading-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/03/reading-5/" class="article-date">
+  <time datetime="2016-07-03T15:21:32.000Z" itemprop="datePublished">2016-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>es6 have multiple return, using destructing</p>
+<p><a href="https://mikeash.com/pyblog/friday-qa-2014-06-20-interesting-swift-features.html" target="_blank" rel="external">https://mikeash.com/pyblog/friday-qa-2014-06-20-interesting-swift-features.html</a></p>
+<!--
+### [《成为技术领导者》读书心得](http://blog.devtang.com/2015/08/01/become-a-tech-leader-summary/)
+
+比較深刻嘅有幾點
+ -->
+<h2 id="对函数式编程的一点理解"><a href="#对函数式编程的一点理解" class="headerlink" title="对函数式编程的一点理解"></a><a href="https://github.com/nixzhu/dev-blog/blob/master/2015-07-30-functional-programming.md" target="_blank" rel="external">对函数式编程的一点理解</a></h2><p>currying, the usage of currying here is to construct a bind function can be apply to function with different # of parameters<br>swift is strong type, check the number of input, so need to do more step to unify the <code>bind</code> function</p>
+<h2 id="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"><a href="#奔向三张，不破不立：一个iOS开发工程师的职业规划思考" class="headerlink" title="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"></a><a href="http://bbs.iosre.com/t/ios/689" target="_blank" rel="external">奔向三张，不破不立：一个iOS开发工程师的职业规划思考</a></h2><p>作者對出書有一個特別嘅睇法。佢賣嘅唔係一本書，而係一個服務。當讀者睇完本書，有咩問題，作者都會去解答。透過E種 interaction，建立左一個 ecosystem。作者係個ecosystem，可以跟據讀者嘅問題俾feedback改善本書嘅內容，而且仲係一個promotion channel。</p>
+<p>同埋作者提到好重要嘅一點，終日埋首係技術上面，好易會混淆左目的同過程。好多野唔一定要靠技術先解決到，間中要 review 下自己嘅方向。無論個人有幾勁，冇一個正確嘅方向係做唔到D咩出黎。</p>
+<h2 id="API-Blueprint-指导手册"><a href="#API-Blueprint-指导手册" class="headerlink" title="API Blueprint 指导手册"></a><a href="http://blog.callmewhy.com/2014/06/05/blueprint-tutorial/" target="_blank" rel="external">API Blueprint 指导手册</a></h2><p>An tool to generate API doc from markdown. It is not very useful for me now.</p>
+<h2 id="Swift-初学手册：可选类型-Optionals"><a href="#Swift-初学手册：可选类型-Optionals" class="headerlink" title="Swift 初学手册：可选类型 (Optionals)"></a><a href="http://blog.callmewhy.com/2014/09/23/beginners-guide-optionals-swift/" target="_blank" rel="external">Swift 初学手册：可选类型 (Optionals)</a></h2><p>Swift 嘅optional 同 Rust 嘅box 有D類似，可以作為參考。</p>
+<h2 id="如何用Swift做一个不错的按钮变换动画"><a href="#如何用Swift做一个不错的按钮变换动画" class="headerlink" title="如何用Swift做一个不错的按钮变换动画"></a><a href="http://blog.callmewhy.com/2014/10/12/a-hamburger-button-transition/" target="_blank" rel="external">如何用Swift做一个不错的按钮变换动画</a></h2><p>原來有工具可以轉SVG做 IOS 嘅animation path，唔洗下下用手計數。</p>
+<h2 id="用-Swift-来写-Swift-的方法"><a href="#用-Swift-来写-Swift-的方法" class="headerlink" title="用 Swift 来写 Swift 的方法"></a><a href="http://blog.callmewhy.com/2014/11/16/swifty-methods/" target="_blank" rel="external">用 Swift 来写 Swift 的方法</a></h2><p>比較左Objective C 同 Swift嘅 readability。可以加強對精簡代碼嘅感覺。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/03/reading-5/" data-id="ciq9jkoqo00000o656j6mwxfq" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/03/reading-5/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-readings-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/07/03/readings-4/" class="article-date">
@@ -494,110 +596,6 @@
 
 
   
-    <article id="post-high-output-management-summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/16/high-output-management-summary/" class="article-date">
-  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="優化流程"><a href="#優化流程" class="headerlink" title="優化流程"></a>優化流程</h2><p>第一步係揾出bottleneck，bottleneck可能係：</p>
-<ul>
-<li>人員數目</li>
-<li>開發時間</li>
-<li>產品功能</li>
-<li>測試時間</li>
-<li>技術實現方案<br>之後可以針對問題去改善流程。</li>
-</ul>
-<h2 id="監察指標"><a href="#監察指標" class="headerlink" title="監察指標"></a>監察指標</h2><p>如果冇左監察，好難去揾出bottleneck係邊度。但原文冇詳細解釋。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/16/high-output-management-summary/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/16/high-output-management-summary/" data-id="ciph53q1c0000sp6551z4uugl" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/16/high-output-management-summary/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-day2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/rust/2016/06/10/day2/" class="article-date">
-  <time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished">2016-06-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Rust/">Rust</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/rust/2016/06/10/day2/">Rust - Day 2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Rust support pattern matching, it save programmer lots of effort and make the code elegant</p>
-<h2 id="Switch-case-and-Pattern-matching"><a href="#Switch-case-and-Pattern-matching" class="headerlink" title="Switch-case and Pattern matching"></a>Switch-case and Pattern matching</h2><p>Rust do not have “switch case” pattern, but we don’t need a long chain of “else if”. Rust using pattern matching instead.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">match ch &#123;</span><br><span class="line">    &apos;a&apos; =&gt; return 0,</span><br><span class="line">    &apos;b&apos; =&gt; return 1,</span><br><span class="line">    &apos;c&apos; =&gt; return 2,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>It is good to skip the <code>break</code> in other language, but the advantage is not only saving keystrokes. </p>
-        
-          <p class="article-more-link">
-            <a href="/rust/2016/06/10/day2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/rust/2016/06/10/day2/" data-id="cip9t31so0000h765rckpdaqa" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/rust/2016/06/10/day2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -641,6 +639,14 @@
       <ul>
         
           <li>
+            <a href="/review/2016/07/04/singleton/">Review of &quot;Avoiding Singleton Abuse&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2016/07/03/reading-5/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/diary/2016/07/03/readings-4/">文集四</a>
           </li>
         
@@ -650,14 +656,6 @@
         
           <li>
             <a href="/diary/2016/06/29/readings-2/">文集二</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/06/26/objc-interface-design/">&quot;objc@interface的设计哲学与设计技巧&quot;感想</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/06/24/observer-pattern-and-mvc/">Observer pattern and MVC</a>
           </li>
         
       </ul>
