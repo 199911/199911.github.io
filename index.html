@@ -62,6 +62,378 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-yahoo-design-part-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/07/10/yahoo-design-part-1/" class="article-date">
+  <time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/07/10/yahoo-design-part-1/">Review of &quot;Yahoo Design Pattern Library&quot; Part I</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The library is pretty old. May be it is a good document for us to review the design of commonly used UI/X design pattern. This library explains patterns clearly. It talks about “What it solve”, “When to use”, “How it solve”, “Why we use it”.</p>
+<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><h3 id="Grid-System"><a href="#Grid-System" class="headerlink" title="Grid System"></a>Grid System</h3><p>Grid system standardize the size of elements</p>
+<ul>
+<li>What it solve<ul>
+<li>The consistency among common page elements, page width, division of space, ad usage and code base.</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>Creating/managing a large quantity of web pages</li>
+<li>Web pages are created by different groups and individuals</li>
+</ul>
+</li>
+<li>Why use this<ul>
+<li>Templages reduces designers’ and engineers’ effort</li>
+<li>Consistency contributes to a cohesive brand and user expereience</li>
+</ul>
+</li>
+<li>Accessibility<ul>
+<li>Consistency make the position of page elements easy to predict</li>
+</ul>
+</li>
+</ul>
+<h2 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h2><h3 id="Accordion"><a href="#Accordion" class="headerlink" title="Accordion"></a>Accordion</h3><p>An accordion is a group of collapsible panels with links and selectable items inside.</p>
+<ul>
+<li>What it solve<ul>
+<li>Give user access to a large quantity of item without overwhelming them</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The space is constrained</li>
+<li>The number of options is large</li>
+<li>The list of items can be logically grouped into smaller, roughly equal sized chunks</li>
+</ul>
+</li>
+<li>How to solve<ul>
+<li>Prsent a two-tiered set of options: the top level is category, the second level is options</li>
+<li>Only expand one default panel to help user focus</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>Expand the main category</li>
+<li>Avoid nested accordion</li>
+<li>Expand all categories when javascript is disabled</li>
+<li>Use <code>height:0</code> instead of <code>display:none</code> to hide the folded accordion<ul>
+<li>For screen reader</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Alphanumeric-Filter-Links"><a href="#Alphanumeric-Filter-Links" class="headerlink" title="Alphanumeric Filter Links"></a>Alphanumeric Filter Links</h3><p>Grouped links alphabetically. Show groups in different pages.</p>
+<ul>
+<li>What it solve<ul>
+<li>Help user to find resources alphabetically within a large data set</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>When user know the first letter of result</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>The idea is to reduce the length of page</li>
+<li>I think this solution is outdated</li>
+</ul>
+</li>
+</ul>
+<h3 id="Breadcrumbs"><a href="#Breadcrumbs" class="headerlink" title="Breadcrumbs"></a>Breadcrumbs</h3><p>Displaying a horizontal list of labels that reflect the location of current page in the hierarchy of a website.</p>
+<ul>
+<li>What it solve<ul>
+<li>Help users navigate up</li>
+<li>Help users to understand where they is in relation to the rest of the site.</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The website have lots of layer</li>
+<li>Users are difficult the navigate between different layer</li>
+<li>Users get into the webpage from external resource<ul>
+<li>Such as search engine</li>
+<li>User need to get context of current page</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How to solve<ul>
+<li>Showing a horizontal tag. The tags are the page levels.</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>Don’t use “Home” for topmost page, use specific name<ul>
+<li>The user may not know what is the website about, the specific name give extra information</li>
+</ul>
+</li>
+<li>The breadcrumb label should mach the corresponding page title</li>
+</ul>
+</li>
+</ul>
+<h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><ul>
+<li>There are two kinds of pagination<ul>
+<li>Item pagination</li>
+<li>Search pagination</li>
+</ul>
+</li>
+<li>Disable the hyperlink of current page in pagination bar for accessibility</li>
+</ul>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>For navigating stacked panes</p>
+<h4 id="Module-Tabs"><a href="#Module-Tabs" class="headerlink" title="Module Tabs"></a>Module Tabs</h4><p>Show the content in a small “window” with multiple tabs. Update the content (switch to different pane) by javascript.</p>
+<p>Note:</p>
+<ul>
+<li>Clicking the tab should not affect other component</li>
+<li>The categories title is short and informative</li>
+<li>It is similar to accordion, but<ul>
+<li>accordion is showing options and items</li>
+<li>module tag is show information and content</li>
+</ul>
+</li>
+<li>Add <code>:active</code> on the showing tag to increase accessibility</li>
+</ul>
+<h4 id="Navigation-Tabs"><a href="#Navigation-Tabs" class="headerlink" title="Navigation Tabs"></a>Navigation Tabs</h4><ul>
+<li>What it solve<ul>
+<li>Navigate through a site to locate content and features</li>
+<li>Clearly indicate user current location in the site</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>It is Module Tabs with scope is the whole site</li>
+</ul>
+</li>
+</ul>
+<h3 id="Navigation-Bar"><a href="#Navigation-Bar" class="headerlink" title="Navigation Bar"></a>Navigation Bar</h3><p>Provides persistent navigation assistance</p>
+<h4 id="Top-Navigation-Bar"><a href="#Top-Navigation-Bar" class="headerlink" title="Top Navigation Bar"></a>Top Navigation Bar</h4><p>Similar to Navigation Tabs, but it is a bar</p>
+<ul>
+<li>Note<ul>
+<li>Navigation bar is in header</li>
+<li>We can have a second level bar under the top level navigation bar</li>
+<li>If there are second or third level bar, we can consider using left navigation bar</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>When the categories is kind of individual</li>
+</ul>
+</li>
+</ul>
+<h3 id="Left-Navigation-Bar"><a href="#Left-Navigation-Bar" class="headerlink" title="Left Navigation Bar"></a>Left Navigation Bar</h3><p>Similar to Top Navigation Bar. It is better than Top Navigation Bar when:</p>
+<ul>
+<li>There are more categories</li>
+<li>The categories title is long<ul>
+<li>There more space to show the navigation bar</li>
+</ul>
+</li>
+<li>The category labels can be an expend button or hyperlink<ul>
+<li>Make the behaviour consistent</li>
+</ul>
+</li>
+</ul>
+<h3 id="Progress-Bar"><a href="#Progress-Bar" class="headerlink" title="Progress Bar"></a>Progress Bar</h3><p>The UI is similar to Breadcrumbs, but their purpose is different</p>
+<ul>
+<li>What it solve<ul>
+<li>Tell users where they are in a multi-screen process</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>The tag need to be an action</li>
+<li>Don’t use this in some common or routine missions</li>
+<li>Let user to estimate the length of flow</li>
+</ul>
+</li>
+</ul>
+<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><h3 id="Autocomplete"><a href="#Autocomplete" class="headerlink" title="Autocomplete"></a>Autocomplete</h3><ul>
+<li>What it solve<ul>
+<li>Help user to enter input into a text box which could be ambiguous or hard to remember</li>
+<li>Prevent typo</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The suggestion can be pulled from a manageable set of data</li>
+<li>The input item can be entered in multiple ways</li>
+<li>Input speed and accuracy is important</li>
+<li>The required input is not very long</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>It gives lots of suggestion on interaction, but I don’t think we need to implement it</li>
+</ul>
+</li>
+</ul>
+<h3 id="Calendar-picker"><a href="#Calendar-picker" class="headerlink" title="Calendar picker"></a>Calendar picker</h3><p>Use calendar picker library. The library can handle this for us</p>
+<h3 id="Carousel"><a href="#Carousel" class="headerlink" title="Carousel"></a>Carousel</h3><p>Provide a better object selection experience.</p>
+<ul>
+<li>When to use<ul>
+<li>Image oriented menu</li>
+</ul>
+</li>
+<li>How it solve<ul>
+<li>Provide focus</li>
+<li>User can slide</li>
+<li>Order the items</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>Need to show other options to indicate the carousel is slidable</li>
+<li>Just use a carousel plugin</li>
+</ul>
+</li>
+</ul>
+<h2 id="Rich-Interaction"><a href="#Rich-Interaction" class="headerlink" title="Rich Interaction"></a>Rich Interaction</h2><h3 id="Invitation"><a href="#Invitation" class="headerlink" title="Invitation"></a>Invitation</h3><p>Indicator there are extra feature on page element. It is useful when AJAX is not very common. I think it becomes common sense now.</p>
+<h4 id="Cursor-Invitation"><a href="#Cursor-Invitation" class="headerlink" title="Cursor Invitation"></a>Cursor Invitation</h4><p>Change the icon of pointers</p>
+<ul>
+<li>When to use<ul>
+<li>User can have interaction with some objects</li>
+<li>Difficult to provide preview</li>
+<li>Don’t need to provide preview</li>
+<li>Want to simplify the operation</li>
+</ul>
+</li>
+</ul>
+<h4 id="Drop-Invitation"><a href="#Drop-Invitation" class="headerlink" title="Drop Invitation"></a>Drop Invitation</h4><p>Indicate valid candidate drop sites.</p>
+<ul>
+<li>Note<ul>
+<li>We can have more clear instrcution by using javascript</li>
+</ul>
+</li>
+</ul>
+<h4 id="Hover-Invitation"><a href="#Hover-Invitation" class="headerlink" title="Hover Invitation"></a>Hover Invitation</h4><p>The description need to be short</p>
+<h4 id="Tool-Tip-Invitation"><a href="#Tool-Tip-Invitation" class="headerlink" title="Tool Tip Invitation"></a>Tool Tip Invitation</h4><p>Show a short description when mouse hover on the page element</p>
+<h3 id="Transition"><a href="#Transition" class="headerlink" title="Transition"></a>Transition</h3><ul>
+<li>Let users understand the system is processing</li>
+<li>Let users feel they need to wiat shorter</li>
+<li>Make the UI more natural, because thing do not disappear in real world</li>
+<li>User focus on changing element</li>
+<li>Most transition should less then 0.5 second</li>
+<li>When the change of element is not very important, we can use transition with 1 second duration</li>
+</ul>
+<h4 id="Animate-Transition"><a href="#Animate-Transition" class="headerlink" title="Animate Transition"></a>Animate Transition</h4><p>Animating the in-between positions of a moving object.</p>
+<ul>
+<li>When to use <ul>
+<li>Make the transition of hiding element more smooth</li>
+<li>Show how an element change the position</li>
+<li>Resizing element</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>Don’t add animation which is not trigger by user.<ul>
+<li>It distraction the user</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Bright-transition"><a href="#Bright-transition" class="headerlink" title="Bright transition"></a>Bright transition</h4><p>Singal that a previously dimmed object is now active or avaliable.</p>
+<h4 id="Collapse-Transition"><a href="#Collapse-Transition" class="headerlink" title="Collapse Transition"></a>Collapse Transition</h4><p>Hide an object which is no logner of primary importance. </p>
+<h4 id="Cross-Fade-Transition"><a href="#Cross-Fade-Transition" class="headerlink" title="Cross Fade Transition"></a>Cross Fade Transition</h4><p>Smoothly replace an old element with new element.</p>
+<ul>
+<li>Fade out the old element and Fade in the new element</li>
+<li>User can focus on the same area, but with content updated</li>
+<li>I feel like this is outdated</li>
+</ul>
+<h4 id="Dim-Transition"><a href="#Dim-Transition" class="headerlink" title="Dim Transition"></a>Dim Transition</h4><p>Indicate an object is secondary importance, not available or currently inactive. If it will not be available or active later, hiding it may be a better option.</p>
+<h4 id="Expand-Transition"><a href="#Expand-Transition" class="headerlink" title="Expand Transition"></a>Expand Transition</h4><p>Indicate the previously collapsed object become active or available now. It can get more attention than Dim and Highlight transition.</p>
+<h4 id="Fade-In-Transition"><a href="#Fade-In-Transition" class="headerlink" title="Fade In Transition"></a>Fade In Transition</h4><p>Note </p>
+<ul>
+<li>Duration; 0.25 to 0.5</li>
+<li>If you need to show a secondary importance object, we can use fade in</li>
+<li>Useful when you don’t want the transition catch too much attention</li>
+</ul>
+<h4 id="Fade-Out-Transition"><a href="#Fade-Out-Transition" class="headerlink" title="Fade Out Transition"></a>Fade Out Transition</h4><p>It is used in self-healing Transition. The property is similar to Fade In Transition</p>
+<h4 id="Self-Healing-Transition"><a href="#Self-Healing-Transition" class="headerlink" title="Self Healing Transition"></a>Self Healing Transition</h4><p>We can use this when some object is removed and leaving a hole in the list or form. It use slide or fade out to make resize more smooth.</p>
+<h4 id="Slide-Transition"><a href="#Slide-Transition" class="headerlink" title="Slide Transition"></a>Slide Transition</h4><p>Note</p>
+<ul>
+<li>Replace popup window</li>
+<li>When the content is context dependent, use this to prevent context switch</li>
+</ul>
+<h4 id="Spotlight-Transition"><a href="#Spotlight-Transition" class="headerlink" title="Spotlight Transition"></a>Spotlight Transition</h4><ul>
+<li>Have the highlight appear instantly when the change occurs and then fade out within one second or less</li>
+<li>Useful to catch user’s attention</li>
+</ul>
+<h3 id="Drag-and-Drop"><a href="#Drag-and-Drop" class="headerlink" title="Drag and Drop"></a>Drag and Drop</h3><ul>
+<li>Useful for reorder layout without reload the page</li>
+<li>There lots of detail, but we usually use library. So we can skip it</li>
+<li>Revise <a href="https://developer.yahoo.com/ypatterns/richinteraction/dragdrop/modules.html" target="_blank" rel="external">this</a> when we need</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://developer.yahoo.com/ypatterns/" target="_blank" rel="external">Yahoo Design Pattern Library</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/" data-id="ciqgizrvj0004ld65q9580thw" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-readings-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/10/readings-5/" class="article-date">
+  <time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/07/10/readings-5/">文集五</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="对函数式编程的一点理解"><a href="#对函数式编程的一点理解" class="headerlink" title="对函数式编程的一点理解"></a><a href="https://github.com/nixzhu/dev-blog/blob/master/2015-07-30-functional-programming.md" target="_blank" rel="external">对函数式编程的一点理解</a></h2><p>This article talk about currying. The usage of currying here is to construct a bind function can be apply to function with different # of parameters. Swift is strong type. It checks the number of parameter, so need to do more steps to generalize the <code>bind</code> function.</p>
+<h2 id="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"><a href="#奔向三张，不破不立：一个iOS开发工程师的职业规划思考" class="headerlink" title="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"></a><a href="http://bbs.iosre.com/t/ios/689" target="_blank" rel="external">奔向三张，不破不立：一个iOS开发工程师的职业规划思考</a></h2><p>作者對出書有一個特別嘅睇法。佢賣嘅唔係一本書，而係一個服務。當讀者睇完本書，有咩問題，作者都會去解答。透過E種 interaction，建立左一個 ecosystem。作者係個ecosystem，可以跟據讀者嘅問題俾feedback改善本書嘅內容，而且仲係一個promotion channel。</p>
+<p>同埋作者提到好重要嘅一點，終日埋首係技術上面，好易會混淆左目的同過程。好多野唔一定要靠技術先解決到，間中要 review 下自己嘅方向。無論個人有幾勁，冇一個正確嘅方向係做唔到D咩出黎。</p>
+<h2 id="API-Blueprint-指导手册"><a href="#API-Blueprint-指导手册" class="headerlink" title="API Blueprint 指导手册"></a><a href="http://blog.callmewhy.com/2014/06/05/blueprint-tutorial/" target="_blank" rel="external">API Blueprint 指导手册</a></h2><p>An tool to generate API doc from markdown. It is not very useful for me now.</p>
+<h2 id="Swift-初学手册：可选类型-Optionals"><a href="#Swift-初学手册：可选类型-Optionals" class="headerlink" title="Swift 初学手册：可选类型 (Optionals)"></a><a href="http://blog.callmewhy.com/2014/09/23/beginners-guide-optionals-swift/" target="_blank" rel="external">Swift 初学手册：可选类型 (Optionals)</a></h2><p>Swift 嘅optional 同 Rust 嘅box 有D類似，可以作為參考。</p>
+<h2 id="如何用Swift做一个不错的按钮变换动画"><a href="#如何用Swift做一个不错的按钮变换动画" class="headerlink" title="如何用Swift做一个不错的按钮变换动画"></a><a href="http://blog.callmewhy.com/2014/10/12/a-hamburger-button-transition/" target="_blank" rel="external">如何用Swift做一个不错的按钮变换动画</a></h2><p>原來有工具可以轉SVG做 IOS 嘅animation path，唔洗下下用手計數。</p>
+<h2 id="用-Swift-来写-Swift-的方法"><a href="#用-Swift-来写-Swift-的方法" class="headerlink" title="用 Swift 来写 Swift 的方法"></a><a href="http://blog.callmewhy.com/2014/11/16/swifty-methods/" target="_blank" rel="external">用 Swift 来写 Swift 的方法</a></h2><p>比較左Objective C 同 Swift嘅 readability。可以加強對精簡代碼嘅感覺。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/10/readings-5/" data-id="ciqgizrvk0005ld65ecizrd82" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/10/readings-5/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/07/04/singleton/" class="article-date">
@@ -122,56 +494,14 @@
 
 
   
-    <article id="post-reading-5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/insight/2016/07/03/reading-5/" class="article-date">
-  <time datetime="2016-07-03T15:21:32.000Z" itemprop="datePublished">2016-07-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>es6 have multiple return, using destructing</p>
-<p><a href="https://mikeash.com/pyblog/friday-qa-2014-06-20-interesting-swift-features.html" target="_blank" rel="external">https://mikeash.com/pyblog/friday-qa-2014-06-20-interesting-swift-features.html</a></p>
-<!--
-### [《成为技术领导者》读书心得](http://blog.devtang.com/2015/08/01/become-a-tech-leader-summary/)
-
-比較深刻嘅有幾點
- -->
-<h2 id="对函数式编程的一点理解"><a href="#对函数式编程的一点理解" class="headerlink" title="对函数式编程的一点理解"></a><a href="https://github.com/nixzhu/dev-blog/blob/master/2015-07-30-functional-programming.md" target="_blank" rel="external">对函数式编程的一点理解</a></h2><p>currying, the usage of currying here is to construct a bind function can be apply to function with different # of parameters<br>swift is strong type, check the number of input, so need to do more step to unify the <code>bind</code> function</p>
-<h2 id="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"><a href="#奔向三张，不破不立：一个iOS开发工程师的职业规划思考" class="headerlink" title="奔向三张，不破不立：一个iOS开发工程师的职业规划思考"></a><a href="http://bbs.iosre.com/t/ios/689" target="_blank" rel="external">奔向三张，不破不立：一个iOS开发工程师的职业规划思考</a></h2><p>作者對出書有一個特別嘅睇法。佢賣嘅唔係一本書，而係一個服務。當讀者睇完本書，有咩問題，作者都會去解答。透過E種 interaction，建立左一個 ecosystem。作者係個ecosystem，可以跟據讀者嘅問題俾feedback改善本書嘅內容，而且仲係一個promotion channel。</p>
-<p>同埋作者提到好重要嘅一點，終日埋首係技術上面，好易會混淆左目的同過程。好多野唔一定要靠技術先解決到，間中要 review 下自己嘅方向。無論個人有幾勁，冇一個正確嘅方向係做唔到D咩出黎。</p>
-<h2 id="API-Blueprint-指导手册"><a href="#API-Blueprint-指导手册" class="headerlink" title="API Blueprint 指导手册"></a><a href="http://blog.callmewhy.com/2014/06/05/blueprint-tutorial/" target="_blank" rel="external">API Blueprint 指导手册</a></h2><p>An tool to generate API doc from markdown. It is not very useful for me now.</p>
-<h2 id="Swift-初学手册：可选类型-Optionals"><a href="#Swift-初学手册：可选类型-Optionals" class="headerlink" title="Swift 初学手册：可选类型 (Optionals)"></a><a href="http://blog.callmewhy.com/2014/09/23/beginners-guide-optionals-swift/" target="_blank" rel="external">Swift 初学手册：可选类型 (Optionals)</a></h2><p>Swift 嘅optional 同 Rust 嘅box 有D類似，可以作為參考。</p>
-<h2 id="如何用Swift做一个不错的按钮变换动画"><a href="#如何用Swift做一个不错的按钮变换动画" class="headerlink" title="如何用Swift做一个不错的按钮变换动画"></a><a href="http://blog.callmewhy.com/2014/10/12/a-hamburger-button-transition/" target="_blank" rel="external">如何用Swift做一个不错的按钮变换动画</a></h2><p>原來有工具可以轉SVG做 IOS 嘅animation path，唔洗下下用手計數。</p>
-<h2 id="用-Swift-来写-Swift-的方法"><a href="#用-Swift-来写-Swift-的方法" class="headerlink" title="用 Swift 来写 Swift 的方法"></a><a href="http://blog.callmewhy.com/2014/11/16/swifty-methods/" target="_blank" rel="external">用 Swift 来写 Swift 的方法</a></h2><p>比較左Objective C 同 Swift嘅 readability。可以加強對精簡代碼嘅感覺。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/07/03/reading-5/" data-id="ciq9jkoqo00000o656j6mwxfq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/insight/2016/07/03/reading-5/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-readings-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/07/03/readings-4/" class="article-date">
+    <a href="/insight/2016/07/03/readings-4/" class="article-date">
   <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -182,7 +512,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/07/03/readings-4/">文集四</a>
+      <a class="article-title" href="/insight/2016/07/03/readings-4/">文集四</a>
     </h1>
   
 
@@ -216,9 +546,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/07/03/readings-4/" data-id="ciq6e0zw100007165evosiru5" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/07/03/readings-4/" data-id="ciqgizrvm0007ld65nxnh901z" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/07/03/readings-4/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2016/07/03/readings-4/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -230,12 +560,12 @@
   
     <article id="post-readings-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/07/02/readings-3/" class="article-date">
+    <a href="/insight/2016/07/02/readings-3/" class="article-date">
   <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -246,7 +576,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/07/02/readings-3/">文集三</a>
+      <a class="article-title" href="/insight/2016/07/02/readings-3/">文集三</a>
     </h1>
   
 
@@ -272,15 +602,15 @@
 <p>I have no experience on MVVM. I need to find some example to support my thought</p>
         
           <p class="article-more-link">
-            <a href="/diary/2016/07/02/readings-3/#more">Read More</a>
+            <a href="/insight/2016/07/02/readings-3/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/07/02/readings-3/" data-id="ciq6e0zwc0001716579naxebc" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/07/02/readings-3/" data-id="ciqgizrv30000ld65z068p90u" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/07/02/readings-3/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2016/07/02/readings-3/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -292,12 +622,12 @@
   
     <article id="post-readings-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/06/29/readings-2/" class="article-date">
+    <a href="/insight/2016/06/29/readings-2/" class="article-date">
   <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -308,7 +638,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/06/29/readings-2/">文集二</a>
+      <a class="article-title" href="/insight/2016/06/29/readings-2/">文集二</a>
     </h1>
   
 
@@ -324,9 +654,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/06/29/readings-2/" data-id="ciq3gbvk20001uw65an4zccle" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/06/29/readings-2/" data-id="ciqgizrv70001ld65iu0gjkvl" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/06/29/readings-2/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2016/06/29/readings-2/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -439,12 +769,12 @@
   
     <article id="post-readings-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/06/19/readings-1/" class="article-date">
+    <a href="/insight/2016/06/19/readings-1/" class="article-date">
   <time datetime="2016-06-18T16:00:00.000Z" itemprop="datePublished">2016-06-19</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -455,7 +785,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/06/19/readings-1/">文集一</a>
+      <a class="article-title" href="/insight/2016/06/19/readings-1/">文集一</a>
     </h1>
   
 
@@ -479,9 +809,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/06/19/readings-1/" data-id="cipms51mb0000j765ckt1cyd0" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/06/19/readings-1/" data-id="ciqgizrvj0003ld65xjwyh1jf" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/06/19/readings-1/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2016/06/19/readings-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -552,50 +882,6 @@
 
 
   
-    <article id="post-git-clone-depth" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/2016/06/16/git-clone-depth/" class="article-date">
-  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/06/16/git-clone-depth/">git clone &lt;repo&gt; --depth 1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Just find out a way to speed up the build of docker image for testing environment. We can use <code>git clone &lt;repo&gt; --depth 1</code> to get the repo with latest copy only. In other words, no commit history is cloned.</p>
-<p>It can speed up the <code>git clone</code>, especially your project is big and with long history.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/06/16/git-clone-depth/" data-id="cipihpaal0000lm658qsogzqx" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/2016/06/16/git-clone-depth/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -611,7 +897,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
     </div>
   </div>
 
@@ -639,23 +925,23 @@
       <ul>
         
           <li>
+            <a href="/review/2016/07/10/yahoo-design-part-1/">Review of &quot;Yahoo Design Pattern Library&quot; Part I</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2016/07/10/readings-5/">文集五</a>
+          </li>
+        
+          <li>
             <a href="/review/2016/07/04/singleton/">Review of &quot;Avoiding Singleton Abuse&quot;</a>
           </li>
         
           <li>
-            <a href="/insight/2016/07/03/reading-5/">(no title)</a>
+            <a href="/insight/2016/07/03/readings-4/">文集四</a>
           </li>
         
           <li>
-            <a href="/diary/2016/07/03/readings-4/">文集四</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/07/02/readings-3/">文集三</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/06/29/readings-2/">文集二</a>
+            <a href="/insight/2016/07/02/readings-3/">文集三</a>
           </li>
         
       </ul>
