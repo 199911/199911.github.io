@@ -3,30 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Reuse Myth - can you afford reusable code?&quot; | Coding Sunday</title>
+  <title>Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Testability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (general) enough is high
-Actually what we want is modularity, high cohesio">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Reuse Myth - can you afford reusable code?"">
-<meta property="og:url" content="http://199911.github.io/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Coding Sunday">
+<meta property="og:url" content="http://199911.github.io/page/5/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Testability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (general) enough is high
-Actually what we want is modularity, high cohesio">
-<meta property="og:updated_time" content="2016-07-10T12:12:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Reuse Myth - can you afford reusable code?"">
-<meta name="twitter:description" content="Testability &amp;gt; Reusability when writing code.
-Reviewed points
-Testability &amp;gt; Reusability
-The cost to make a code reusable (general) enough is high
-Actually what we want is modularity, high cohesio">
+<meta name="twitter:title" content="Coding Sunday">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -73,14 +57,16 @@ Actually what we want is modularity, high cohesio">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-reuse-myth-can-you-afford-reusable-code" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-functional-utility" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" class="article-date">
-  <time datetime="2016-05-02T15:53:58.000Z" itemprop="datePublished">2016-05-02</time>
+    <a href="/diary/2016/04/18/functional-utility/" class="article-date">
+  <time datetime="2016-04-18T15:01:24.000Z" itemprop="datePublished">2016-04-18</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
   </div>
 
   </div>
@@ -90,8 +76,8 @@ Actually what we want is modularity, high cohesio">
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Review of &quot;Reuse Myth - can you afford reusable code?&quot;
+    <h1 itemprop="name">
+      <a class="article-title" href="/diary/2016/04/18/functional-utility/">Functional utility library is good</a>
     </h1>
   
 
@@ -99,92 +85,42 @@ Actually what we want is modularity, high cohesio">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Testability &gt; Reusability when writing code.</p>
-<h2 id="Reviewed-points"><a href="#Reviewed-points" class="headerlink" title="Reviewed points"></a>Reviewed points</h2><ul>
-<li>Testability &gt; Reusability<ul>
-<li>The cost to make a code reusable (general) enough is high</li>
-<li>Actually what we want is modularity, high cohesion, low coupling</li>
-<li>Very little code can be reuse four times, but we always need to test the code<ul>
-<li>Design the code for test is more practical than design for reuse</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>When to reuse?<ul>
-<li>We still reuse the code if possible, but when?</li>
-<li>Micro answer<ul>
-<li>Find module to use before coding a new one</li>
-<li>Refactor the code to make it reusable after we reuse it 3 or 4 times<ul>
-<li>Refactor should be easy if the code is design for test</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Macro answer<ul>
-<li>If the code widely reusable, make it as a library, a plugin or an application<ul>
-<li>Let market to decide the economics of reusability</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a> 
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>It is a article explain the slide reviewed <a href="review/2016/05/02/how-much-quality-can-we-afford/">here</a>. It explain the idea of the slide in a detail way. Quite good. For the macro answer of reusability, it looks not very practical for a developer.</p>
-<p>It mentions a book named “Mythical Man Month”, it seems a good book.</p>
-<p>Reference: <a href="http://allankelly.blogspot.hk/2010/10/reuse-myth-can-you-afford-reusable-code.html" target="_blank" rel="external">Reuse Myth - can you afford reusable code?</a>.</p>
-
+        <p>I refactor a report interface today. We have a new summary data, so i can simiplify the code on updating report cache.But we also have a new requirement, we want to show some expired data. </p>
+<p>So I have to:</p>
+<ol>
+<li>Update the new report cache workflow and structure</li>
+<li>Clean up deprecated code (some old and long query)</li>
+<li>Show the expired data in the report</li>
+</ol>
+<p>Task 1 and 2 are easy jobs, but the remote read-only database is quite slow. I speed up the develop and debug speed by using a mock input (hardcoding part of the query result instead of doing query everytime).</p>
+<p>Problems comes form Task 3, the context is a little bit complicated, let me explain here.</p>
+        
+          <p class="article-more-link">
+            <a href="/diary/2016/04/18/functional-utility/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" data-id="cio5y9xik000g13657zx0jgs8" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/04/18/functional-utility/" data-id="cio5y9xht00071365q5t7gxnu" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/2016/04/18/functional-utility/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/review/2016/05/04/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;
-        
-      </div>
-    </a>
-  
-  
-    <a href="/diary/2016/05/02/reusability/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Is code reusing always good?</div>
-    </a>
-  
-</nav>
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Testing -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4208803683107796"
-     data-ad-slot="4489226860"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>  
-  
 </article>
 
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
 </section>
         
           <aside id="sidebar">
@@ -269,13 +205,11 @@ Actually what we want is modularity, high cohesio">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
