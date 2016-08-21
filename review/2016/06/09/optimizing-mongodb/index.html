@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://199911.github.io/review/2016/06/09/optimizing-mongodb/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
-<meta property="og:updated_time" content="2016-06-09T07:10:25.000Z">
+<meta property="og:updated_time" content="2016-08-20T11:20:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
 <meta name="twitter:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
@@ -88,10 +88,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
-<a id="more"></a> 
+<a id="more"></a>
 <h2 id="Document-Design"><a href="#Document-Design" class="headerlink" title="Document Design"></a>Document Design</h2><p>In term of SQL, it is table design. The main idea is to reduce the document size. It suggest to shorten the field’s name, use binary to store id instead of strings and remove extra index. This will make the document difficult to understand. We need better doucmentation and introduce a layer for translating the data.</p>
 <h2 id="Index-tricks"><a href="#Index-tricks" class="headerlink" title="Index tricks"></a>Index tricks</h2><p>The idea is to reduce index size by partition the index. It is useful when the field doesn’t have many possible values. A similar technique can be applied in MySQL. It is a trade off between the space required for the index and the cardinality of the index.</p>
-<h2 id="Fregmentation"><a href="#Fregmentation" class="headerlink" title="Fregmentation"></a>Fregmentation</h2><p>It is similar to freqmentation on file system. When we delete a document, there will be a ‘hole’ in the disk. To reduce the ‘hole’, we may need to break down the new document into small pieces. A read action will cost more disk operation. MongoDB provide a <code>repair</code> command to fix this problem, but it is very slow.</p>
+<h2 id="Fragmentation"><a href="#Fragmentation" class="headerlink" title="Fragmentation"></a>Fragmentation</h2><p>It is similar to fragmentation on file system. When we delete a document, there will be a ‘hole’ in the disk. To reduce the ‘hole’, we may need to break down the new document into small pieces. A read action will cost more disk operation. MongoDB provide a <code>repair</code> command to fix this problem, but it is very slow.</p>
 <h2 id="Chunk-migration"><a href="#Chunk-migration" class="headerlink" title="Chunk migration"></a>Chunk migration</h2><p>Chunks are a logical construct in MongoDB, the documentation are not neccessary to be stored in the same place. The solution is to migrate chunk to shard.</p>
 <p>Using a better shard keys can avoid bad migrations. If we know our key distribution, we can pre-create chucks and assign shard keys. One suggestion is to include time in the shard key, but beware of write hotspot</p>
 <h2 id="Hardware-optimization"><a href="#Hardware-optimization" class="headerlink" title="Hardware optimization"></a>Hardware optimization</h2><p>The performance is very bad if the data is not in RAM</p>
@@ -204,6 +204,10 @@
       <ul>
         
           <li>
+            <a href="/review/2016/08/20/the-mythical-man-month-2/">Review of &quot;the mythical man month&quot; chapter 2</a>
+          </li>
+        
+          <li>
             <a href="/insight/2016/08/20/readings-9/">文集九</a>
           </li>
         
@@ -217,10 +221,6 @@
         
           <li>
             <a href="/insight/2016/08/05/readings-6/">文集六</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/07/10/readings-5/">文集五</a>
           </li>
         
       </ul>
