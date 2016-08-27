@@ -59,6 +59,117 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-readings-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/03/readings-4/" class="article-date">
+  <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/07/03/readings-4/">文集四</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
+<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
+<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
+        
+          <p class="article-more-link">
+            <a href="/insight/2016/07/03/readings-4/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/03/readings-4/" data-id="ciqgizrvm0007ld65nxnh901z" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/03/readings-4/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-readings-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/02/readings-3/" class="article-date">
+  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/07/02/readings-3/">文集三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更轻量的-View-Controllers"><a href="#更轻量的-View-Controllers" class="headerlink" title="更轻量的 View Controllers"></a><a href="http://objccn.io/issue-1-1/">更轻量的 View Controllers</a></h2><p>文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。</p>
+<h2 id="MVVM-介绍"><a href="#MVVM-介绍" class="headerlink" title="MVVM 介绍"></a><a href="http://objccn.io/issue-13-1/">MVVM 介绍</a></h2><p>VM stand for View Model. The idea is to improve MVC by adding a layer (View Model) between Controller and Model.<br>View Model handles all presnetation logic, such as format data in Model for View. In MVC, we put the data formating code in Controller. MVVM make the controller slimmer.</p>
+<p>We should put all code which cannot be reused in Controller. I thought data format code usually is not reusabile, it makes sense to put the logic in Controller. When the system grow and become more complex, we can apply MVVM to break down the controller is small pieces. So the code base will be cleaner.</p>
+<p>Pros of MVVM:</p>
+<ul>
+<li>easy to migrate from MVC by adding view models<ul>
+<li>we can migrate progressively</li>
+</ul>
+</li>
+<li>view model is testable<ul>
+<li>in most cases, controller is not worth to write automated test</li>
+</ul>
+</li>
+<li>easier to bind logic, as controller is smaller</li>
+</ul>
+<p>I have no experience on MVVM. I need to find some example to support my thought</p>
+        
+          <p class="article-more-link">
+            <a href="/insight/2016/07/02/readings-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/02/readings-3/" data-id="ciqgizrv30000ld65z068p90u" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/02/readings-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-readings-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/insight/2016/06/29/readings-2/" class="article-date">
@@ -400,55 +511,6 @@
 
 
   
-    <article id="post-day2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/rust/2016/06/10/day2/" class="article-date">
-  <time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished">2016-06-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Rust/">Rust</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/rust/2016/06/10/day2/">Rust - Day 2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Rust support pattern matching, it save programmer lots of effort and make the code elegant</p>
-<h2 id="Switch-case-and-Pattern-matching"><a href="#Switch-case-and-Pattern-matching" class="headerlink" title="Switch-case and Pattern matching"></a>Switch-case and Pattern matching</h2><p>Rust do not have “switch case” pattern, but we don’t need a long chain of “else if”. Rust using pattern matching instead.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">match ch &#123;</span><br><span class="line">    &apos;a&apos; =&gt; return 0,</span><br><span class="line">    &apos;b&apos; =&gt; return 1,</span><br><span class="line">    &apos;c&apos; =&gt; return 2,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>It is good to skip the <code>break</code> in other language, but the advantage is not only saving keystrokes. </p>
-        
-          <p class="article-more-link">
-            <a href="/rust/2016/06/10/day2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/rust/2016/06/10/day2/" data-id="cip9t31so0000h765rckpdaqa" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/rust/2016/06/10/day2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-learning-a-programming-language" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/06/10/learning-a-programming-language/" class="article-date">
@@ -496,53 +558,6 @@
 
 
   
-    <article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/09/optimizing-mongodb/">Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/09/optimizing-mongodb/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -558,7 +573,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
     </div>
   </div>
 
@@ -586,6 +601,14 @@
       <ul>
         
           <li>
+            <a href="/code/2016/08/27/bootstrap-3/">Implementation of Bootstrap 3 - variables.less</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/08/21/the-mythical-man-month-3/">Review of &quot;the mythical man month&quot; chapter 3</a>
+          </li>
+        
+          <li>
             <a href="/review/2016/08/20/the-mythical-man-month-2/">Review of &quot;the mythical man month&quot; chapter 2</a>
           </li>
         
@@ -595,14 +618,6 @@
         
           <li>
             <a href="/insight/2016/08/07/readings-8/">文集八</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/08/06/readings-7/">文集七</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/08/05/readings-6/">文集六</a>
           </li>
         
       </ul>

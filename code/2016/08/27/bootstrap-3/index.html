@@ -3,30 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot; | Coding Sunday</title>
+  <title>Implementation of Bootstrap 3 - variables.less | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
+  <meta name="description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
+This design of variable.less against the rule of thumb that variable should be declare">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Get off Your Horse and Stop Coding like a Cowboy"">
-<meta property="og:url" content="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/index.html">
+<meta property="og:title" content="Implementation of Bootstrap 3 - variables.less">
+<meta property="og:url" content="http://199911.github.io/code/2016/08/27/bootstrap-3/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
-<meta property="og:updated_time" content="2016-07-10T12:13:07.000Z">
+<meta property="og:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
+This design of variable.less against the rule of thumb that variable should be declare">
+<meta property="og:updated_time" content="2016-08-27T08:32:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Get off Your Horse and Stop Coding like a Cowboy"">
-<meta name="twitter:description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
+<meta name="twitter:title" content="Implementation of Bootstrap 3 - variables.less">
+<meta name="twitter:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
+This design of variable.less against the rule of thumb that variable should be declare">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -73,14 +64,14 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-stop-coding-like-a-cowboy" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bootstrap-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/05/08/stop-coding-like-a-cowboy/" class="article-date">
-  <time datetime="2016-05-07T16:00:00.000Z" itemprop="datePublished">2016-05-08</time>
+    <a href="/code/2016/08/27/bootstrap-3/" class="article-date">
+  <time datetime="2016-08-26T16:00:00.000Z" itemprop="datePublished">2016-08-27</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Code/">Code</a>
   </div>
 
   </div>
@@ -91,7 +82,7 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;
+      Implementation of Bootstrap 3 - variables.less
     </h1>
   
 
@@ -99,107 +90,23 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="One-man-team"><a href="#One-man-team" class="headerlink" title="One man team"></a>One man team</h2><ul>
-<li>Zero-Communication Overhead</li>
-<li>Know all aspects of codebase</li>
-<li>Usually have lower quality<ul>
-<li>No peer pressure to stop doing dirty hack. Code become patchy and messy.</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a> 
-<h2 id="Agile-Team"><a href="#Agile-Team" class="headerlink" title="Agile Team"></a>Agile Team</h2><ul>
-<li>Product Backlog (Tickets)<ul>
-<li>Feature request</li>
-<li>Describe ‘what to build’, but not ‘how to build’</li>
-</ul>
-</li>
-<li>What is Sprint?<ul>
-<li>The collection of work (tickets) to be done in a certain timeframe.</li>
-<li>The timeframe can be 1 week, 2 weeks or even 1 month.</li>
-<li>Each member was assigned some tickets.</li>
-<li>Some tickets are unassigned, members who finish their work before the end can pick them.</li>
-<li>Only deploy at the end of sprint.</li>
-<li>If member cannot finish the task, they have to communicate before the end of sprint</li>
-</ul>
-</li>
-<li>Sprint planning<ul>
-<li>Before the end of sprint, team need to pick important tasks for the next sprint</li>
-<li>Use “Story point” to measure complexity, not time<ul>
-<li>Because different engineer need different amount of time to finish it.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Stand-up meetings (SCRUM Meetings)<ul>
-<li>10-15 minute</li>
-<li>Answer 3 questions:<ul>
-<li>What did you do yesterday?</li>
-<li>What are you going to work on today?</li>
-<li>Is anything preventing you from getting what you need to done?</li>
-</ul>
-</li>
-<li>Another meeting may be scheduled if follow up is needed.</li>
-</ul>
-</li>
-<li>Task Boards<ul>
-<li>Each one have at most one task at the same time.</li>
-<li>Keep track tasks in different stagings, such as<ul>
-<li>To do</li>
-<li>In progress</li>
-<li>Finished</li>
-</ul>
-</li>
-<li>Having a real board can help in stand up meeting.</li>
-</ul>
-</li>
-<li>Headphones mean: Don’t bother me</li>
-<li>Best Practices<ul>
-<li>“The stuff that is generally accepted as a good idea in the long run, even if it is a bit of a pain to implement in the short run.”</li>
-</ul>
-</li>
-<li>Test Driven Development<ul>
-<li>More people work in the same project -&gt; # of code increase fast -&gt; software complexity grow fast -&gt; engineer don’t know the big picture in detail -&gt; new code easy to break other’s work</li>
-<li>Use test to verify the code is working</li>
-</ul>
-</li>
-<li>Continuous Integration<ul>
-<li>Run test automatically before integration.</li>
-</ul>
-</li>
-<li>Continuous Deployment<ul>
-<li>Automatically deploy to production once code is accepted</li>
-</ul>
-</li>
-<li>Pair Programming<ul>
-<li>One person code, another give alternative and suggestion.</li>
-<li>Switch position from time to time.</li>
-<li>As a junior developer, it is good to see how other code, to learn thing you don’t know.</li>
-</ul>
-</li>
-<li>Code Review<ul>
-<li>To identify issues hasn’t thought about by the person who write the code.</li>
-<li>Person who review should not involved in writing the code.</li>
-</ul>
-</li>
-<li>Code Style Guides</li>
-</ul>
-<h2 id="Some-questions-to-ask-by-developers"><a href="#Some-questions-to-ask-by-developers" class="headerlink" title="Some questions to ask by developers"></a>Some questions to ask by developers</h2><ol>
-<li>Do you use test driven development?  If so, dive in and find out more specifics of how they write tests.</li>
-<li>Do you have continuous integration or deployment setup?</li>
-<li>How do you feel about pair programming?</li>
-<li>Do you follow a certain coding style guide?</li>
-<li>How do you conduct code reviews?</li>
-</ol>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>The Story point concept assume the difficulty of a task is the same for all engineers. It ignores the fact that knowledge need to be transfer if a new engineer take over the task.</p>
-<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/best-team-tactics-to-write-software/" target="_blank" rel="external">Get off Your Horse and Stop Coding like a Cowboy</a>.</p>
+        <p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
+<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+<h3 id="Cons-of-centralize-all-variable’s-declaration"><a href="#Cons-of-centralize-all-variable’s-declaration" class="headerlink" title="Cons of centralize all variable’s declaration"></a>Cons of centralize all variable’s declaration</h3><p>Imagine you are working on a new component, every time you need a new variable, you have to go back variables.less to add a new one. When you forget the value of a variable, you also have to go back variable.less to check the value. Lots of context switching during development.</p>
+<h3 id="Pros-of-declare-on-use"><a href="#Pros-of-declare-on-use" class="headerlink" title="Pros of declare on use"></a>Pros of declare on use</h3><p>Declare variable on use can benefit from scope and context. Suppose I am working on navigation bar and I have <code>nav-bar.less</code>. To declare the width of navigation bar, <code>@width</code> may be clear enough to be a variable’s name. Because we are in the context of navigation bar.</p>
+<p>If we put all variables in <code>variable.less</code>, we have to use <code>@nav-bar-width</code>. In <code>nav-bar.less</code>, we will see the <code>nav-bar</code> prefix repeat and repeat again. It is redundant and annoying. Why bootstrap 3 design in this way?</p>
+<h3 id="Nature-of-Bootstrap-3"><a href="#Nature-of-Bootstrap-3" class="headerlink" title="Nature of Bootstrap 3"></a>Nature of Bootstrap 3</h3><p>Bootstrap is a open source project. In the documentation, it gives guideline on the source code and encourage user to reuse the mixins. Users are encouraged configure, modify and compile Bootstrap 3 from source code.</p>
+<h4 id="variables-less-help-new-users-to-configure-Bootstrap-3-easily"><a href="#variables-less-help-new-users-to-configure-Bootstrap-3-easily" class="headerlink" title="variables.less help new users to configure Bootstrap 3 easily"></a>variables.less help new users to configure Bootstrap 3 easily</h4><p>Declare on use make use of context, and it becomes context dependent. But a new user don’t have any context. They need to go through the whole file to find out the declaration variable and what to change. It also increase the maintenance cost when the MOD spread in different part of the source code.</p>
+<p>The <code>variables.less</code> does it part to help new users. They can go through <code>variables.less</code>, figure out what can be configure. They can go deep into the implementation when they found something interesting. Users only need to change and maintain <code>variables.less</code>.</p>
+<h2 id="Insight-Team-project-vs-Open-source-project"><a href="#Insight-Team-project-vs-Open-source-project" class="headerlink" title="Insight - Team project vs Open source project"></a>Insight - Team project vs Open source project</h2><p>In a team project, the team does not change frequently. Every member have their own responsibility. Members may have to maintain set of codes in some directories. They try to prevent code conflict by reducing the number of file shared. When a member need to use the code maintained by others, they can get the context quickly by asking the person in charge. This file structure and workflow makes the team work efficiently.</p>
+<p>But for a open source project, contributors come and go. The communication cost is high. New users tend to read to code instead of finding someone to ask. Users have to maintain the whole project by themselves. Complex file structure for division of responsibility is not needed. Gathering all configuration makes the structure simpler and easier to maintain.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/" data-id="cio5y9xiq000k1365hqpxrniq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3/" data-id="ciscxnp8s00003865m4induc7" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/code/2016/08/27/bootstrap-3/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -208,19 +115,10 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
     
 <nav id="article-nav">
   
-    <a href="/review/2016/05/10/rspec-vs-test-unit/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;
-        
-      </div>
-    </a>
   
-  
-    <a href="/diary/2016/05/07/mean-and-median/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2016/08/21/the-mythical-man-month-3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Mean vs Median</div>
+      <div class="article-nav-title">Review of &quot;the mythical man month&quot; chapter 3</div>
     </a>
   
 </nav>
@@ -328,7 +226,7 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/';
+  var disqus_url = 'http://199911.github.io/code/2016/08/27/bootstrap-3/';
   
   (function(){
     var dsq = document.createElement('script');
