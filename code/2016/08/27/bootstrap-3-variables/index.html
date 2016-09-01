@@ -9,11 +9,11 @@
 This design of variable.less against the rule of thumb that variable should be declare">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Implementation of Bootstrap 3 - variables.less">
-<meta property="og:url" content="http://199911.github.io/code/2016/08/27/bootstrap-3/index.html">
+<meta property="og:url" content="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
 This design of variable.less against the rule of thumb that variable should be declare">
-<meta property="og:updated_time" content="2016-08-27T08:32:49.000Z">
+<meta property="og:updated_time" content="2016-09-01T14:30:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementation of Bootstrap 3 - variables.less">
 <meta name="twitter:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
@@ -64,9 +64,9 @@ This design of variable.less against the rule of thumb that variable should be d
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-bootstrap-3" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/code/2016/08/27/bootstrap-3/" class="article-date">
+    <a href="/code/2016/08/27/bootstrap-3-variables/" class="article-date">
   <time datetime="2016-08-26T16:00:00.000Z" itemprop="datePublished">2016-08-27</time>
 </a>
     
@@ -92,6 +92,7 @@ This design of variable.less against the rule of thumb that variable should be d
       
         <p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
 <p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+<a id="more"></a>
 <h3 id="Cons-of-centralize-all-variable’s-declaration"><a href="#Cons-of-centralize-all-variable’s-declaration" class="headerlink" title="Cons of centralize all variable’s declaration"></a>Cons of centralize all variable’s declaration</h3><p>Imagine you are working on a new component, every time you need a new variable, you have to go back variables.less to add a new one. When you forget the value of a variable, you also have to go back variable.less to check the value. Lots of context switching during development.</p>
 <h3 id="Pros-of-declare-on-use"><a href="#Pros-of-declare-on-use" class="headerlink" title="Pros of declare on use"></a>Pros of declare on use</h3><p>Declare variable on use can benefit from scope and context. Suppose I am working on navigation bar and I have <code>nav-bar.less</code>. To declare the width of navigation bar, <code>@width</code> may be clear enough to be a variable’s name. Because we are in the context of navigation bar.</p>
 <p>If we put all variables in <code>variable.less</code>, we have to use <code>@nav-bar-width</code>. In <code>nav-bar.less</code>, we will see the <code>nav-bar</code> prefix repeat and repeat again. It is redundant and annoying. Why bootstrap 3 design in this way?</p>
@@ -104,9 +105,9 @@ This design of variable.less against the rule of thumb that variable should be d
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3/" data-id="ciscxnp8s00003865m4induc7" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/" data-id="ciskfic9q00025g657skwj2tb" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/code/2016/08/27/bootstrap-3/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -114,6 +115,15 @@ This design of variable.less against the rule of thumb that variable should be d
   
     
 <nav id="article-nav">
+  
+    <a href="/code/2016/08/28/bootstrap-3-mixins/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Implementation of Bootstrap 3 - mixins.less
+        
+      </div>
+    </a>
   
   
     <a href="/review/2016/08/21/the-mythical-man-month-3/" id="article-nav-older" class="article-nav-link-wrap">
@@ -165,7 +175,7 @@ This design of variable.less against the rule of thumb that variable should be d
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -178,7 +188,15 @@ This design of variable.less against the rule of thumb that variable should be d
       <ul>
         
           <li>
-            <a href="/code/2016/08/27/bootstrap-3/">Implementation of Bootstrap 3 - variables.less</a>
+            <a href="/code/2016/09/01/bootstrap-3-learning/">Learning from Bootstrap 3</a>
+          </li>
+        
+          <li>
+            <a href="/code/2016/08/28/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+          </li>
+        
+          <li>
+            <a href="/code/2016/08/27/bootstrap-3-variables/">Implementation of Bootstrap 3 - variables.less</a>
           </li>
         
           <li>
@@ -187,14 +205,6 @@ This design of variable.less against the rule of thumb that variable should be d
         
           <li>
             <a href="/review/2016/08/20/the-mythical-man-month-2/">Review of &quot;the mythical man month&quot; chapter 2</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/08/20/readings-9/">文集九</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/08/07/readings-8/">文集八</a>
           </li>
         
       </ul>
@@ -226,7 +236,7 @@ This design of variable.less against the rule of thumb that variable should be d
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/code/2016/08/27/bootstrap-3/';
+  var disqus_url = 'http://199911.github.io/code/2016/08/27/bootstrap-3-variables/';
   
   (function(){
     var dsq = document.createElement('script');

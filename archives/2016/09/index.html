@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Is code reusing always good? | Coding Sunday</title>
+  <title>Archives: 2016/9 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Is code reusing always good?">
-<meta property="og:url" content="http://199911.github.io/diary/2016/05/02/reusability/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Coding Sunday">
+<meta property="og:url" content="http://199911.github.io/archives/2016/09/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
-<meta property="og:updated_time" content="2016-06-04T03:09:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Is code reusing always good?">
-<meta name="twitter:description" content="Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new">
+<meta name="twitter:title" content="Coding Sunday">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,91 +57,41 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-reusability" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/2016/05/02/reusability/" class="article-date">
-  <time datetime="2016-05-02T15:01:24.000Z" itemprop="datePublished">2016-05-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      Is code reusing always good?
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/code/2016/09/01/bootstrap-3-learning/" class="archive-article-date">
+  <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">Sep 1</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/code/2016/09/01/bootstrap-3-learning/">Learning from Bootstrap 3</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Everytime we need a new feature, code need to be added. Adding a new feature is not difficult, the most difficult part is how to add the new code. Can the new code bug be easily extended? Can the new code be reuse?</p>
-<p>When come to reusability, things become tricky. I always try to integrate the new feature into current routine, to make the code “reusable”. But it is not a good idea everytime.</p>
-<a id="more"></a> 
-<p>When the function is shared by many components, the new feature may not be compatable with all components. It takes lots of effort the handle the conflict. </p>
-<p>After spending effort to integrate the new feature, we may find we need to customize some component, we have to break the function into two. The effort on making the code “reusable” is wasted.</p>
-<p>It is time consuming to refactor the same piece of code again and again. That’s why i come up with a question: When to reuse code?</p>
-<h2 id="Functional-code-vs-glue-code"><a href="#Functional-code-vs-glue-code" class="headerlink" title="Functional code vs glue code"></a>Functional code vs glue code</h2><p>I divide the code into two types, functional code and glue code. Functional code is the core logic. It can be business logic, database logic and other logic which is ‘working’. Glue code is the code which join different components, libraries and functional code together. It perform wrapping the interface, data formating.</p>
-<h2 id="Never-reuse-glue-code-even-the-code-is-exactly-the-same"><a href="#Never-reuse-glue-code-even-the-code-is-exactly-the-same" class="headerlink" title="Never reuse glue code, even the code is exactly the same"></a>Never reuse glue code, even the code is exactly the same</h2><p>Glue code is doing integration. It join two components together, it can never be decoupled from that components. In other words, glue code is tailor made for and depends on specific components. The glue code cannot be reused from the ground up. Sometime you may found the glue code are similiar, but it is just a coincidence. After a few iteration and development the glue code can be completely different. Don’t waste time on making it reusable.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/02/reusability/" data-id="cio5y9xhv00081365r033q9xg" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/2016/05/02/reusability/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/review/2016/05/02/reuse-myth-can-you-afford-reusable-code/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;Reuse Myth - can you afford reusable code?&quot;
-        
-      </div>
-    </a>
-  
-  
-    <a href="/review/2016/05/02/how-much-quality-can-we-afford/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Review of &quot;How much quality can we afford?</div>
-    </a>
-  
-</nav>
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Testing -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4208803683107796"
-     data-ad-slot="4489226860"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>  
-  
 </article>
+  
+  
+    </div></section>
+  
 
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 </section>
         
           <aside id="sidebar">
@@ -230,13 +176,11 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/diary/2016/05/02/reusability/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
