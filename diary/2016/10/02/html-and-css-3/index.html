@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot; | Coding Sunday</title>
+  <title>HTML and CSS part 3 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+  <meta name="description" content="HTML5 layoutNamespaceWe can use a div with id as namespace, such as1234&amp;lt;body&amp;gt;  &amp;lt;div id=&amp;quot;page&amp;quot;&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
+header and footerThese tag can be used as header or foot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta property="og:url" content="http://199911.github.io/review/2016/06/09/optimizing-mongodb/index.html">
+<meta property="og:title" content="HTML and CSS part 3">
+<meta property="og:url" content="http://199911.github.io/diary/2016/10/02/html-and-css-3/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
-<meta property="og:updated_time" content="2016-08-20T11:20:48.000Z">
+<meta property="og:description" content="HTML5 layoutNamespaceWe can use a div with id as namespace, such as1234&amp;lt;body&amp;gt;  &amp;lt;div id=&amp;quot;page&amp;quot;&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
+header and footerThese tag can be used as header or foot">
+<meta property="og:updated_time" content="2016-10-02T10:40:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta name="twitter:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+<meta name="twitter:title" content="HTML and CSS part 3">
+<meta name="twitter:description" content="HTML5 layoutNamespaceWe can use a div with id as namespace, such as1234&amp;lt;body&amp;gt;  &amp;lt;div id=&amp;quot;page&amp;quot;&amp;gt;  &amp;lt;/div&amp;gt;&amp;lt;/body&amp;gt;
+header and footerThese tag can be used as header or foot">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-html-and-css-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
+    <a href="/diary/2016/10/02/html-and-css-3/" class="article-date">
+  <time datetime="2016-10-01T16:00:00.000Z" itemprop="datePublished">2016-10-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
   </div>
 
   </div>
@@ -79,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;
+      HTML and CSS part 3
     </h1>
   
 
@@ -87,43 +90,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
+        <h2 id="HTML5-layout"><a href="#HTML5-layout" class="headerlink" title="HTML5 layout"></a>HTML5 layout</h2><h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>We can use a div with id as namespace, such as<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="header-and-footer"><a href="#header-and-footer" class="headerlink" title="header and footer"></a><code>header</code> and <code>footer</code></h3><p>These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.</p>
+<h3 id="article"><a href="#article" class="headerlink" title="article"></a><code>article</code></h3><p>It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.<br>Notice <code>article</code> can be nested inside each other, comments of comments is one of the use case.</p>
+<h3 id="aside"><a href="#aside" class="headerlink" title="aside"></a><code>aside</code></h3><p><code>aside</code> tag have 2 usage.</p>
+<ul>
+<li>If it is inside <code>article</code>, it should contain information that is related to the article.</li>
+<li>If it is outside <code>article</code>, it should contain information related to the entire page.</li>
+</ul>
 <a id="more"></a>
-<h2 id="Document-Design"><a href="#Document-Design" class="headerlink" title="Document Design"></a>Document Design</h2><p>In term of SQL, it is table design. The main idea is to reduce the document size. It suggest to shorten the field’s name, use binary to store id instead of strings and remove extra index. This will make the document difficult to understand. We need better doucmentation and introduce a layer for translating the data.</p>
-<h2 id="Index-tricks"><a href="#Index-tricks" class="headerlink" title="Index tricks"></a>Index tricks</h2><p>The idea is to reduce index size by partition the index. It is useful when the field doesn’t have many possible values. A similar technique can be applied in MySQL. It is a trade off between the space required for the index and the cardinality of the index.</p>
-<h2 id="Fragmentation"><a href="#Fragmentation" class="headerlink" title="Fragmentation"></a>Fragmentation</h2><p>It is similar to fragmentation on file system. When we delete a document, there will be a ‘hole’ in the disk. To reduce the ‘hole’, we may need to break down the new document into small pieces. A read action will cost more disk operation. MongoDB provide a <code>repair</code> command to fix this problem, but it is very slow.</p>
-<h2 id="Chunk-migration"><a href="#Chunk-migration" class="headerlink" title="Chunk migration"></a>Chunk migration</h2><p>Chunks are a logical construct in MongoDB, the documentation are not neccessary to be stored in the same place. The solution is to migrate chunk to shard.</p>
-<p>Using a better shard keys can avoid bad migrations. If we know our key distribution, we can pre-create chucks and assign shard keys. One suggestion is to include time in the shard key, but beware of write hotspot</p>
-<h2 id="Hardware-optimization"><a href="#Hardware-optimization" class="headerlink" title="Hardware optimization"></a>Hardware optimization</h2><p>The performance is very bad if the data is not in RAM</p>
+<h3 id="section"><a href="#section" class="headerlink" title="section"></a><code>section</code></h3><p><code>section</code> group related content together, usually with their own heading. It may contains several <code>article</code> inside. <code>section</code> can also be used in <code>article</code> tag, if the article is long and you want to split it into separate sections.</p>
+<h3 id="hgroup"><a href="#hgroup" class="headerlink" title="hgroup"></a><code>hgroup</code></h3><p><code>hgroup</code> stand for header group. For example, you can use <code>hgroup</code> to group a title in <code>h2</code> and a subtitle in <code>h3</code> together.</p>
+<h3 id="figure"><a href="#figure" class="headerlink" title="figure"></a><code>figure</code></h3><p><code>figure</code> can be used not only in images, the examples of usage include:</p>
 <ul>
-<li>Do a read operation before update to warm up the doc in RAM<ul>
-<li>Read can run in parallel, but update hold a lock</li>
+<li>images</li>
+<li>videos</li>
+<li>graphs</li>
+<li>diagrams</li>
+<li>code samples</li>
+<li>text that supports the main body of an article</li>
 </ul>
-</li>
-</ul>
-<p>Use a shard per core instead of shard per server</p>
-<ul>
-<li>Overcome write locks when writes per second matter<ul>
-<li>As MongoDB use a big write lock<br>The article is written on 2011, I am not sure this technique is still valid. As mongoDB seems have lots of change on write lock.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>When we need to do optimization</p>
-<ol>
-<li>Having basic understanding on the implementation of abstraction layers</li>
-<li>Search related resource on optimization</li>
-<li>If we cannot understand why the optimization works, it means our understanding on the abstraction layer is not deep enough. Better to do more research on the implementation of abstraction layers</li>
-<li>After getting enough context and knowledge of the abstraction layers, we can try to apply optimization skills</li>
-<li>Review the performance afte optimization, go back to step 3 if the result is not good enough.</li>
-</ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://eng.localytics.com/optimizing-mongodb-lessons-learned-at-localytics/" target="_blank" rel="external">Optimizing MongoDB: Lessons Learned at Localytics</a></p>
+<h3 id="a"><a href="#a" class="headerlink" title="a"></a><code>a</code></h3><p>Before HTML5, putting block element inside <code>a</code> tag is considered incorrect. But in HTML5, place <code>a</code> element around a block level element that contains child elements is allowed.</p>
+<h3 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h3><p>Older browsers which do not support HTML5 element treat them as inline element. To support HTML5 in old browsers, we need HTML5 shiv (HTML5 shim)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/10/02/html-and-css-3/" data-id="citshzilb0000xb658wxjsow3" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/2016/10/02/html-and-css-3/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -132,19 +127,10 @@
     
 <nav id="article-nav">
   
-    <a href="/diary/2016/06/10/learning-a-programming-language/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Learning a programming language
-        
-      </div>
-    </a>
   
-  
-    <a href="/review/2016/06/06/restapi-is-a-lie/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/2016/10/01/html-and-css-2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">review of &quot;RESTful APIs, the big lie&quot;</div>
+      <div class="article-nav-title">HTML and CSS part 2</div>
     </a>
   
 </nav>
@@ -252,7 +238,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/06/09/optimizing-mongodb/';
+  var disqus_url = 'http://199911.github.io/diary/2016/10/02/html-and-css-3/';
   
   (function(){
     var dsq = document.createElement('script');

@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot; | Coding Sunday</title>
+  <title>HTML and CSS part 2 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+  <meta name="description" content="DoctypeIt defines which version of HTML is using, it may affect how the page is rendered.
+Browser’s bugBug is unavoidable in software, no exception in browsers. The bugs in browser is also called brow">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta property="og:url" content="http://199911.github.io/review/2016/06/09/optimizing-mongodb/index.html">
+<meta property="og:title" content="HTML and CSS part 2">
+<meta property="og:url" content="http://199911.github.io/diary/2016/10/01/html-and-css-2/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
-<meta property="og:updated_time" content="2016-08-20T11:20:48.000Z">
+<meta property="og:description" content="DoctypeIt defines which version of HTML is using, it may affect how the page is rendered.
+Browser’s bugBug is unavoidable in software, no exception in browsers. The bugs in browser is also called brow">
+<meta property="og:updated_time" content="2016-10-01T13:03:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Optimizing MongoDB: Lessons Learned at Localytics"">
-<meta name="twitter:description" content="This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an">
+<meta name="twitter:title" content="HTML and CSS part 2">
+<meta name="twitter:description" content="DoctypeIt defines which version of HTML is using, it may affect how the page is rendered.
+Browser’s bugBug is unavoidable in software, no exception in browsers. The bugs in browser is also called brow">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -61,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-html-and-css-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
+    <a href="/diary/2016/10/01/html-and-css-2/" class="article-date">
+  <time datetime="2016-09-30T16:00:00.000Z" itemprop="datePublished">2016-10-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
   </div>
 
   </div>
@@ -79,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;
+      HTML and CSS part 2
     </h1>
   
 
@@ -87,43 +90,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
+        <h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
+<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
+<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
+<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
 <a id="more"></a>
-<h2 id="Document-Design"><a href="#Document-Design" class="headerlink" title="Document Design"></a>Document Design</h2><p>In term of SQL, it is table design. The main idea is to reduce the document size. It suggest to shorten the field’s name, use binary to store id instead of strings and remove extra index. This will make the document difficult to understand. We need better doucmentation and introduce a layer for translating the data.</p>
-<h2 id="Index-tricks"><a href="#Index-tricks" class="headerlink" title="Index tricks"></a>Index tricks</h2><p>The idea is to reduce index size by partition the index. It is useful when the field doesn’t have many possible values. A similar technique can be applied in MySQL. It is a trade off between the space required for the index and the cardinality of the index.</p>
-<h2 id="Fragmentation"><a href="#Fragmentation" class="headerlink" title="Fragmentation"></a>Fragmentation</h2><p>It is similar to fragmentation on file system. When we delete a document, there will be a ‘hole’ in the disk. To reduce the ‘hole’, we may need to break down the new document into small pieces. A read action will cost more disk operation. MongoDB provide a <code>repair</code> command to fix this problem, but it is very slow.</p>
-<h2 id="Chunk-migration"><a href="#Chunk-migration" class="headerlink" title="Chunk migration"></a>Chunk migration</h2><p>Chunks are a logical construct in MongoDB, the documentation are not neccessary to be stored in the same place. The solution is to migrate chunk to shard.</p>
-<p>Using a better shard keys can avoid bad migrations. If we know our key distribution, we can pre-create chucks and assign shard keys. One suggestion is to include time in the shard key, but beware of write hotspot</p>
-<h2 id="Hardware-optimization"><a href="#Hardware-optimization" class="headerlink" title="Hardware optimization"></a>Hardware optimization</h2><p>The performance is very bad if the data is not in RAM</p>
-<ul>
-<li>Do a read operation before update to warm up the doc in RAM<ul>
-<li>Read can run in parallel, but update hold a lock</li>
+<h2 id="Brightness-vs-lightness"><a href="#Brightness-vs-lightness" class="headerlink" title="Brightness vs lightness"></a>Brightness vs lightness</h2><p>Brightness only adds black, whereas lightness offers both white and black.</p>
+<h2 id="serif-sans-serif-monospace-cursive-and-fantasy"><a href="#serif-sans-serif-monospace-cursive-and-fantasy" class="headerlink" title="serif, sans serif, monospace, cursive and fantasy"></a>serif, sans serif, monospace, cursive and fantasy</h2><p>Use serif for long text,it is easier to read. Sans serif is clearer to read, better for small text. Use monospace for code, easier to align.<br>Cursive fonts look like handwriting. Also Fantasy font is for decoration.</p>
+<h2 id="italic-vs-oblique"><a href="#italic-vs-oblique" class="headerlink" title="italic vs oblique"></a>italic vs oblique</h2><p>Italic have cursive aspect (a new font), oblique just put font at a angle.</p>
+<h2 id="Text-transform"><a href="#Text-transform" class="headerlink" title="Text transform"></a>Text transform</h2><p>There are CSS to transform text to uppercase, lowercase, or make the first character capitalize</p>
+<h2 id="line-height"><a href="#line-height" class="headerlink" title="line height"></a>line height</h2><p>When line height is larger than the font size, there is a gap above the text. The gap is named ‘leading’. In other words, line height - font size = leading.</p>
+<h2 id="letter-spacing-and-word-spacing"><a href="#letter-spacing-and-word-spacing" class="headerlink" title="letter spacing and word spacing"></a>letter spacing and word spacing</h2><p>There are CSS to control the spacing between letters and words. These are style seems does not work well in Chinese or other language using block characters.</p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical align"></a>vertical align</h2><p><code>vertical</code> align should be the most commonly misunderstood style. It is not intended to allow you to vertically align text in the middle of block level elements (but this works in table cells, such as <code>td</code> and <code>th</code>). It replaces the depreciated <code>align</code> HTML attribute. It is used in inline elements.</p>
+<h2 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h2><p>It is used in a trick to hide the text which is only available for screen reader and SEO. But in Bootstrap 3, there is a better trick with better performance.</p>
+<h2 id="Pseudo-elements"><a href="#Pseudo-elements" class="headerlink" title="Pseudo-elements"></a>Pseudo-elements</h2><ul>
+<li><code>:first-letter</code> and <code>:first-line</code>: select first letter or line in text.</li>
+<li><code>:link</code> and <code>:visited</code>: select not visited and visited <code>&lt;a&gt;</code> link.</li>
+<li><code>:active</code>: select element is being activated by a user.<ul>
+<li>pressed button</li>
+<li>clicked link.</li>
 </ul>
 </li>
-</ul>
-<p>Use a shard per core instead of shard per server</p>
-<ul>
-<li>Overcome write locks when writes per second matter<ul>
-<li>As MongoDB use a big write lock<br>The article is written on 2011, I am not sure this technique is still valid. As mongoDB seems have lots of change on write lock.</li>
+<li><code>:focus</code>: elements that can be interacted with have focus state.<ul>
+<li>from input with cursor in it</li>
+<li>It is also possible to use tab key to focus</li>
 </ul>
 </li>
-</ul>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>When we need to do optimization</p>
-<ol>
-<li>Having basic understanding on the implementation of abstraction layers</li>
-<li>Search related resource on optimization</li>
-<li>If we cannot understand why the optimization works, it means our understanding on the abstraction layer is not deep enough. Better to do more research on the implementation of abstraction layers</li>
-<li>After getting enough context and knowledge of the abstraction layers, we can try to apply optimization skills</li>
-<li>Review the performance afte optimization, go back to step 3 if the result is not good enough.</li>
+<li>When pseduo classes are used, they should appear in this order:<ol>
+<li><code>:link</code></li>
+<li><code>:visited</code></li>
+<li><code>:hover</code></li>
+<li><code>:focus</code></li>
+<li><code>:active</code></li>
 </ol>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://eng.localytics.com/optimizing-mongodb-lessons-learned-at-localytics/" target="_blank" rel="external">Optimizing MongoDB: Lessons Learned at Localytics</a></p>
+</li>
+</ul>
+<h2 id="Shadow-in-CSS3"><a href="#Shadow-in-CSS3" class="headerlink" title="Shadow in CSS3"></a>Shadow in CSS3</h2><p><code>box-shadow</code> and <code>text-shadow</code> are new style in CSS3.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/10/01/html-and-css-2/" data-id="citshzilf0001xb65nemrws50" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/2016/10/01/html-and-css-2/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -132,19 +141,19 @@
     
 <nav id="article-nav">
   
-    <a href="/diary/2016/06/10/learning-a-programming-language/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/diary/2016/10/02/html-and-css-3/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Learning a programming language
+          HTML and CSS part 3
         
       </div>
     </a>
   
   
-    <a href="/review/2016/06/06/restapi-is-a-lie/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/2016/09/20/html-and-css/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">review of &quot;RESTful APIs, the big lie&quot;</div>
+      <div class="article-nav-title">HTML and CSS part 1</div>
     </a>
   
 </nav>
@@ -252,7 +261,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/06/09/optimizing-mongodb/';
+  var disqus_url = 'http://199911.github.io/diary/2016/10/01/html-and-css-2/';
   
   (function(){
     var dsq = document.createElement('script');
