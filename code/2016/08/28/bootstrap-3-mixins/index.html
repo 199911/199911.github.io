@@ -13,7 +13,7 @@ Utilities Mixinsmixins/hide-text.lessIt is used to hide the text in the dom. Why
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="mixins.less contains utilities, components, skins and layout ‘functions’ of LESS.
 Utilities Mixinsmixins/hide-text.lessIt is used to hide the text in the dom. Why don’t we use display: none or visible">
-<meta property="og:updated_time" content="2016-09-01T14:30:24.000Z">
+<meta property="og:updated_time" content="2016-10-02T11:59:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Implementation of Bootstrap 3 - mixins.less">
 <meta name="twitter:description" content="mixins.less contains utilities, components, skins and layout ‘functions’ of LESS.
@@ -93,6 +93,7 @@ Utilities Mixinsmixins/hide-text.lessIt is used to hide the text in the dom. Why
         <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
 <h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076" target="_blank" rel="external">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
 <h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+<a id="more"></a>
 <h3 id="mixins-image-less"><a href="#mixins-image-less" class="headerlink" title="mixins/image.less"></a><code>mixins/image.less</code></h3><p>It has two mixins. The first one is for responsive image, which scale the image with ratio fixed.The second one <code>.img-retina(@file-1x; @file-2x; @width-1x; @height-1x)</code> is for retina image.</p>
 <h4 id="Why-we-need-special-handle-on-retina-image"><a href="#Why-we-need-special-handle-on-retina-image" class="headerlink" title="Why we need special handle on retina image?"></a>Why we need special handle on retina image?</h4><p>From this <a href="https://www.sitepoint.com/css-techniques-for-retina-displays/" target="_blank" rel="external">article</a>, the term ‘pixel’ used in images and CSS have a subtle difference. The pixel of image is the smallest physical unit in a display, but the CSS pixel is an abstract unit which is device independent. Suppose we display a 200*200 image in physical pixel. The image is small on a screen with higher dpi, because the more pixel can be shown in the same area. If the image is in CSS pixel, the image size is the same in screen with any DPI.</p>
 <p>Retina image is image with a high resolution, if we use CSS pixel, the image will be extremely large, which may break the page’s layout. Therefore we need to limit the size by parameter <code>@width-1x</code> and <code>@height-1x</code>. If the user don’t have a retina display, we don’t need to download and display the retina version of image (<code>@file-2x</code>), we can display a smaller image (<code>@file-1x</code>) with standard resolution.</p>
@@ -199,23 +200,23 @@ Utilities Mixinsmixins/hide-text.lessIt is used to hide the text in the dom. Why
       <ul>
         
           <li>
-            <a href="/diary/2016/10/02/html-and-css-3/">HTML and CSS part 3</a>
+            <a href="/insight/2016/10/04/readings-10/">文集十</a>
           </li>
         
           <li>
-            <a href="/diary/2016/10/01/html-and-css-2/">HTML and CSS part 2</a>
+            <a href="/review/2016/10/02/html-and-css-3/">HTML and CSS part 3</a>
           </li>
         
           <li>
-            <a href="/diary/2016/09/20/html-and-css/">HTML and CSS part 1</a>
+            <a href="/review/2016/10/01/html-and-css-2/">HTML and CSS part 2</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/09/20/html-and-css-1/">HTML and CSS part 1</a>
           </li>
         
           <li>
             <a href="/diary/2016/09/11/bootstrap-3-implementation-demo/">Bootstrap 3 implementation demo</a>
-          </li>
-        
-          <li>
-            <a href="/code/2016/09/01/bootstrap-3-learning/">Learning from Bootstrap 3</a>
           </li>
         
       </ul>
