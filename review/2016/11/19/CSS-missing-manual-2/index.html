@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&quot;CSS - the missing manual 2nd edition&quot; Applied CSS | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Applied CSSI almost know all style introduced in this chapter. I only jot down the information worth mentioning and some knowledge I don’t know.">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""CSS - the missing manual 2nd edition" Applied CSS">
+<meta property="og:url" content="http://199911.github.io/review/2016/11/19/CSS-missing-manual-2/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="Applied CSSI almost know all style introduced in this chapter. I only jot down the information worth mentioning and some knowledge I don’t know.">
+<meta property="og:updated_time" content="2016-11-19T14:17:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""CSS - the missing manual 2nd edition" Applied CSS">
+<meta name="twitter:description" content="Applied CSSI almost know all style introduced in this chapter. I only jot down the information worth mentioning and some knowledge I don’t know.">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS-missing-manual-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/11/19/CSS-missing-manual-2/" class="article-date">
+  <time datetime="2016-11-18T16:00:00.000Z" itemprop="datePublished">2016-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &quot;CSS - the missing manual 2nd edition&quot; Applied CSS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Applied-CSS"><a href="#Applied-CSS" class="headerlink" title="Applied CSS"></a>Applied CSS</h2><p>I almost know all style introduced in this chapter. I only jot down the information worth mentioning and some knowledge I don’t know.</p>
+<a id="more"></a>
+<h3 id="Font"><a href="#Font" class="headerlink" title="Font"></a>Font</h3><ul>
+<li>Font license<ul>
+<li>Some font companies ban other to use their fonts on web to prevent their creation is pirated.</li>
+<li>Some companies offer license for web usage.</li>
+</ul>
+</li>
+<li>Data format of icon font<ul>
+<li>There are graphical icon or SVG icon.</li>
+<li>These data format take more space to store, so the file size is bigger than web font.</li>
+</ul>
+</li>
+<li>For fonts which are tailor made for italic and bold, we need to override font style in <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>.</li>
+<li>Absolute font size keyword<ul>
+<li>For <code>font-size</code> property, we usually use number value, like <code>16px</code>, <code>2em</code>, <code>2</code> etc. Actually there are absolute size keywords, like <code>xx-small</code>, <code>medium</code>, <code>larger</code> etc.</li>
+<li>These keywords are handled in different ways by browser vendors, it is seldom be used.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Don’t-add-unit-to-Line-height"><a href="#Don’t-add-unit-to-Line-height" class="headerlink" title="Don’t add unit to Line height"></a>Don’t add unit to Line height</h3><p>Don’t put unit in <code>line-height</code>. Use numeric value only to make sure line height is calculated base on the current font size. This can prevent the bugs cause by CSS inheritance.</p>
+<h3 id="Use-negative-margin-to-remove-space"><a href="#Use-negative-margin-to-remove-space" class="headerlink" title="Use negative margin to remove space"></a>Use negative margin to remove space</h3><p>It is a common technique.</p>
+<h3 id="List-style"><a href="#List-style" class="headerlink" title="List style"></a>List style</h3><p>There are many option in <code>list-style-type</code>. We can also customize the style. <a href="http://blog.teamtreehouse.com/customize-ordered-lists-pseudo-element" target="_blank" rel="external">REF</a></p>
+<h3 id="Collapsing-margins"><a href="#Collapsing-margins" class="headerlink" title="Collapsing margins"></a>Collapsing margins</h3><p>Margins will not stack, the maximum margin will be took. Use padding if you want to stack.<br>PS: If one margin is positive and one is negative, there is no collapsing margin</p>
+<h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><ul>
+<li>Avoid setting height of elements<ul>
+<li>The content may overflow in some screen size</li>
+</ul>
+</li>
+<li>Float make the element outside the normal layout flow<ul>
+<li>Some element will be shown under the float element<ul>
+<li>Such as background</li>
+</ul>
+</li>
+<li>We can use overflow hidden to fix it</li>
+</ul>
+</li>
+<li>Background image bottom bug<ul>
+<li>When the screen is very big, the bottom is not the bottom of browser window.<ul>
+<li>Using height 100% can make the page size at least as large as browser window</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Background percentage<ul>
+<li>A percentage value aligns the specified percentage of the image with the same percentage of the styled element.<ul>
+<li>In another words, both origin of background image and position of the origin is affected by percentage value</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some browsers ignore background image when printing the web page</li>
+<li>To implement background with color overlay, we can use background image blend.</li>
+<li>To protect users’ privacy, limited style can be applied to the :visited pseudo-class<ul>
+<li><code>color</code>, <code>background-color</code> and <code>border-color</code> is available</li>
+</ul>
+</li>
+<li>Double border problem in list items<ul>
+<li>All elements have top border, use <code>:last-child</code> or <code>:last-of-type</code> to add bottom border.</li>
+<li>In bootstrap 3, it use -1px technique</li>
+<li>In <code>&lt;table&gt;</code>, we can use <code>border-collapse</code> directly</li>
+</ul>
+</li>
+<li>Don’t use <code>&lt;table&gt;</code> for layout</li>
+</ul>
+<h3 id="Jargon"><a href="#Jargon" class="headerlink" title="Jargon"></a>Jargon</h3><ul>
+<li>Gutter<ul>
+<li>It means white space between elements</li>
+</ul>
+</li>
+<li>Source order<ul>
+<li>The order in which you write your HTML</li>
+</ul>
+</li>
+<li>Absolute path<ul>
+<li><a href="http://199911.github.io/review/2016/11/12/CSS-missing-manual-1/">http://199911.github.io/</a></li>
+</ul>
+</li>
+<li>Root-related path<ul>
+<li><a href="/review/2016/11/12/CSS-missing-manual-1/">/review/2016/11/12/CSS-missing-manual-1/</a></li>
+</ul>
+</li>
+<li>Document-related path<ul>
+<li><a href="../CSS-missing-manual-1/">../CSS-missing-manual-1/</a></li>
+</ul>
+</li>
+<li>CSS Sprites<ul>
+<li>Merge all small image into a big one, use background position to show the particular image.<ul>
+<li>It also is a preload technique, download all small image in batch.<ul>
+<li>Avoid delay on user action and image download.<ul>
+<li>Useful in imaged buttons.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Can make rollover event easier (by changing <code>background-position</code>).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Transformation-Transition-and-Animation"><a href="#Transformation-Transition-and-Animation" class="headerlink" title="Transformation, Transition and Animation"></a>Transformation, Transition and Animation</h3><ul>
+<li>scale can have negative value<ul>
+<li>the element will be flipped</li>
+</ul>
+</li>
+<li><a href="https://matthewlein.com/ceaser/" target="_blank" rel="external">animation timing function tools</a><ul>
+<li>When class with transition is removed, there are no transition during the removal</li>
+<li>Usually put transition style in the starting class instead of final class</li>
+</ul>
+</li>
+<li>Transition delay can is useful in CSS dropdown<ul>
+<li>Prevent the menu disappear quickly by delaying the style of transition class removal</li>
+</ul>
+</li>
+<li>Transition on opacity, translate, scale and rotate is smoother than other as they take less CPU</li>
+<li>Force the browser to use GPU: <code>transform: translateZ(0)</code></li>
+<li>Animation<ul>
+<li>write css rule for key framework, and then use the CSS animation rule to animate</li>
+<li>can pause animation by <code>animation-play-state</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Other-information"><a href="#Other-information" class="headerlink" title="Other information"></a>Other information</h3><ul>
+<li>Percentage does not work on drop shadows</li>
+<li>Document-related path in CSS provide directions in relation to the style sheet file, not the HTML page URL</li>
+<li>Less color can be shown in GIF<ul>
+<li>Use GIF for icon</li>
+</ul>
+</li>
+<li>Web surfer already familiar with form<ul>
+<li>Don’t change the style of form too much otherwise they may be confused.</li>
+</ul>
+</li>
+<li>There are some “@ rules”, like <code>@media</code></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/11/19/CSS-missing-manual-2/" data-id="civpat2sa0000e465yj990smt" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/11/19/CSS-missing-manual-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/review/2016/11/12/CSS-missing-manual-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&quot;CSS - the missing manual 2nd edition&quot; Basic CSS</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/2016/11/19/CSS-missing-manual-2/">&quot;CSS - the missing manual 2nd edition&quot; Applied CSS</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/11/12/CSS-missing-manual-1/">&quot;CSS - the missing manual 2nd edition&quot; Basic CSS</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/11/02/how-to-picking-a-library/">How to pick a framework?</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/10/21/html5-missing-manual-2/">&quot;HTML5 - the missing manual 2nd edition&quot; part 2</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/10/16/html5-missing-manual-1/">&quot;HTML5 - the missing manual 2nd edition&quot; part 1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2016/11/19/CSS-missing-manual-2/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
