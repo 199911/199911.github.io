@@ -1,0 +1,1724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Coding Sunday</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://199911.github.io/"/>
+  <updated>2016-11-12T03:33:26.000Z</updated>
+  <id>http://199911.github.io/</id>
+  
+  <author>
+    <name>Sunday Ku</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;CSS - the missing manual 2nd edition&quot; Basic CSS</title>
+    <link href="http://199911.github.io/review/2016/11/12/CSS-missing-manual-1/"/>
+    <id>http://199911.github.io/review/2016/11/12/CSS-missing-manual-1/</id>
+    <published>2016-11-11T16:00:00.000Z</published>
+    <updated>2016-11-12T03:33:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.</p>
+<p>But this only have few picture and lots of text, it is quite boring to read.</p>
+<ol>
+<li>Basic CSS</li>
+<li>Applied CSS</li>
+<li>Page Layout CSS</li>
+<li>Advanced CSS</li>
+</ol>
+<a id="more"></a>
+<h2 id="Basic-CSS"><a href="#Basic-CSS" class="headerlink" title="Basic CSS"></a>Basic CSS</h2><h3 id="Know-what-browser-to-support"><a href="#Know-what-browser-to-support" class="headerlink" title="Know what browser to support"></a>Know what browser to support</h3><p>Browsers are also software product. They have bugs and feature not support. We may need to have work around on browser quirk. Market share of browser can help us to determine which browser and what version to support.:</p>
+<ul>
+<li><a href="http://www.netmarketshare.com/browser-market-share.aspx" target="_blank" rel="external">http://www.netmarketshare.com/browser-market-share.aspx</a></li>
+<li><a href="http://gs.statcounter.com" target="_blank" rel="external">http://gs.statcounter.com</a></li>
+<li><a href="https://developer.microsoft.com/en-us/microsoft-edge/ie6countdown/" target="_blank" rel="external">https://developer.microsoft.com/en-us/microsoft-edge/ie6countdown/</a></li>
+</ul>
+<h3 id="Some-tips-on-HTML"><a href="#Some-tips-on-HTML" class="headerlink" title="Some tips on HTML"></a>Some tips on HTML</h3><p>We can solve problem in many ways. But using some well known technique help other understand your code and help us avoid bugs. Here are some tips:</p>
+<ul>
+<li>Stop using <code>&lt;font&gt;</code>.</li>
+<li>Don’t use <code>&lt;table&gt;</code> for layout.</li>
+<li>Don’t use <code>&lt;br&gt;</code> for spacing, use margin or padding.</li>
+<li>Don’t overuse <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></li>
+<li>Don’t forget Doctype!<ul>
+<li>No doctype will fallback to old browser mode, which may make the page render in a strange way.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Some-mistakes-in-the-book"><a href="#Some-mistakes-in-the-book" class="headerlink" title="Some mistakes in the book"></a>Some mistakes in the book</h3><p>The book mention that there will be no CSS4, because CSS3 will only updating CSS3 modules. Actually w3c is release CSS4 on 2011</p>
+<h3 id="Jargon-of-CSS"><a href="#Jargon-of-CSS" class="headerlink" title="Jargon of CSS"></a>Jargon of CSS</h3><p>A CSS rule have:</p>
+<ul>
+<li>selector<ul>
+<li>type (element) selector</li>
+<li>class selector</li>
+<li>id selector</li>
+</ul>
+</li>
+<li>declaration block<ul>
+<li>declaration<ul>
+<li>property</li>
+<li>value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CSS-Inheritance"><a href="#CSS-Inheritance" class="headerlink" title="CSS Inheritance"></a>CSS Inheritance</h3><ul>
+<li>Positioning style is not Inherit</li>
+<li>Browser built in style may override the Inheritance</li>
+</ul>
+<h3 id="External-CSS-vs-Internal-CSS"><a href="#External-CSS-vs-Internal-CSS" class="headerlink" title="External CSS vs Internal CSS"></a>External CSS vs Internal CSS</h3><p>External CSS will be cached by browsers, need use force reload to view the changes ( cmd/ctrl + shift + R ). It is quite inconvenient during development. The cache may mislead us to think our CSS is wrong. One way to avoid it is to develop with internal CSS, move it to external later</p>
+<p>Some developer use external script for general style and internal script for page customization. Make sure internal script is load after the external one if you do this.</p>
+<h3 id="Avoid-ID-selector"><a href="#Avoid-ID-selector" class="headerlink" title="Avoid ID selector"></a>Avoid ID selector</h3><p>ID selectors have the highest specificity, stop using it in CSS to avoid specificity wars.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.&lt;/p&gt;
+&lt;p&gt;But this only have few picture and lots of text, it is quite boring to read.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Basic CSS&lt;/li&gt;
+&lt;li&gt;Applied CSS&lt;/li&gt;
+&lt;li&gt;Page Layout CSS&lt;/li&gt;
+&lt;li&gt;Advanced CSS&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>How to pick a framework?</title>
+    <link href="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/"/>
+    <id>http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/</id>
+    <published>2016-11-01T16:00:00.000Z</published>
+    <updated>2016-11-02T15:28:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>I am working on building an auto-scaling docker cluster for our testing environment. I have no idea on the machine cluster, auto-scaling api and deployment framework, but I have to make decision on which framework to use and build the system. It is a challenge for me. There are lots of failure and lots of learning.</p>
+<a id="more"></a>
+<h2 id="Failure-one-Know-the-feature-but-does-not-understand-how-they-solve-the-problem"><a href="#Failure-one-Know-the-feature-but-does-not-understand-how-they-solve-the-problem" class="headerlink" title="Failure one: Know the feature, but does not understand how they solve the problem."></a>Failure one: Know the feature, but does not understand how they solve the problem.</h2><p>Schedule is tight, I don’t have time to learn everything from zero. I start from reading article comparing ECS, kubernetes and mesos, after skiming through the introduction in their official pages. But start fast does not mean good progress, I cannot make decision after reading several articles, because I don’t know which feature is important and which is matter to me.</p>
+<p>At that time, I want to get hands on experience so I can understand the framework in a better way. These will take more time on learning unrelated stuff, such as setting up and configuring the framework. In the worst case, we may found the framework we spent lots of time on it does not suit our need!</p>
+<p>It will be great if we understand how the framework works without trying it. It seems impossible. But if we can focus on testing the feature we need, we already save lots of effort. To do this, we must have a good understanding on the problems framework going to use. We don’t need to understand every details, but at least having an overview of the problems.</p>
+<p>A good framework solve a problem in an easy way. To pick a framework, we must understand the problems and how the framework solve them.</p>
+<h2 id="Failure-two-Without-refine-the-requirement"><a href="#Failure-two-Without-refine-the-requirement" class="headerlink" title="Failure two: Without refine the requirement"></a>Failure two: Without refine the requirement</h2><p>There is no silver bullet. There does not exist a single framework good at solving all kinds of problems. Every framework have their feature and design. It is really difficult to compare them, as the pros and cons are difficult to quantize the pros and cons of the features.</p>
+<p>To find out the best framework which match our need, we need a marking scheme. The marking scheme can be a list of requirement.</p>
+<p>Listing requirements is a really simple step, we always think we have know what we need, we understand the problem we have to solve. Write down the requirement is often skipped as it is too simple. But in most case, it is not as simple as you think.</p>
+<p>No matter how simple the problem is, never skip the step writing down the requirement. Read every single words in your requirement. Think carefully to clarify every ambiguous word in the requirement. Evil is in the detail, every ambiguity mislead you to the wrong decision.</p>
+<h2 id="Failure-three-Dig-too-deep-into-the-API-which-most-of-them-are-not-useful"><a href="#Failure-three-Dig-too-deep-into-the-API-which-most-of-them-are-not-useful" class="headerlink" title="Failure three: Dig too deep into the API ( which most of them are not useful )"></a>Failure three: Dig too deep into the API ( which most of them are not useful )</h2><p>Understanding what feature does a it provided is an important step when picking a framework, but reading the API documentation is not a good way to do it.</p>
+<p>I read the ECS API documentation and understand how to use the service. But at the end, I still miss some APIs I need. Even I read the APIs, I still don’t know how to use it, because I cannot remember every details important to me. The time spent on reading the API documentation is kind of wasted, because I have to read it again after I understand every detail of the problem I am going to solve.</p>
+<h2 id="Workflow-on-choosing-a-suitable-framework"><a href="#Workflow-on-choosing-a-suitable-framework" class="headerlink" title="Workflow on choosing a suitable framework"></a>Workflow on choosing a suitable framework</h2><h3 id="Step-1-Understand-the-problem"><a href="#Step-1-Understand-the-problem" class="headerlink" title="Step 1. Understand the problem"></a>Step 1. Understand the problem</h3><p>This is the most important step, we have to make sure we understanding the problem completely. Any ambiguous will lead us to make a wrong decision later. When we discover the mistake during implementation, the effort to fix it is doubled or even more.</p>
+<p>To understand a new problem, I suggest</p>
+<ul>
+<li>Learn the related knowledge about this kind of problem</li>
+<li>Search how others break it down into smaller problems</li>
+<li>Search how others solve the problems<br>These help use to understand the structure of the problems, give us some direction to learn the frameworks.</li>
+</ul>
+<h3 id="Step-2-List-the-use-cases"><a href="#Step-2-List-the-use-cases" class="headerlink" title="Step 2. List the use cases"></a>Step 2. List the use cases</h3><p>This step is important for us to understand the requirements. Idea in our head is incomplete and inconsistent. Writing down the user stories can reveal the flaw of our idea. You may found the solution in your mind is missing some component to solve the problem. These missing puzzles will be a hint to pick a suitable framework.</p>
+<h3 id="Step-3-Draft-the-requirement-from-the-use-cases"><a href="#Step-3-Draft-the-requirement-from-the-use-cases" class="headerlink" title="Step 3. Draft the requirement from the use cases"></a>Step 3. Draft the requirement from the use cases</h3><p>After step 1 and 2, we have a well understanding of the problem. We should not miss any important points now. We can list the requirement from the use case easily. In this step, we should prioritize the requirements.</p>
+<p>There may have no framework to help us solve all problems easily, we may need to write some code or having some workaround. The priority help us to identify the importance of different features of framework, which help us a lot on quantizing the value of frameworks.</p>
+<h3 id="Step-4-Check-the-documentation-of-framework"><a href="#Step-4-Check-the-documentation-of-framework" class="headerlink" title="Step 4. Check the documentation of framework"></a>Step 4. Check the documentation of framework</h3><p>After we got marking scheme, we can start grading the framework. We can search the documentation and the API by our requirements. If the time is enough, don’t miss the APIs which are not directly related to your requirement. It may inspire us to have a more efficient solution or a simpler way to solve the problem.</p>
+<p>Tips: We can google the pros and cons of frameworks in this step, we should now able to understand the technical article and identify the article is related to our problem or not.</p>
+<h3 id="Step-5-Go-back-to-step-3-until-you-can-decide-which-framework-to-use"><a href="#Step-5-Go-back-to-step-3-until-you-can-decide-which-framework-to-use" class="headerlink" title="Step 5. Go back to step 3 until you can decide which framework to use"></a>Step 5. Go back to step 3 until you can decide which framework to use</h3><p>If you have any new idea, don’t hesitate to go back to step 3. The requirements may not perfect, we can update it when we find a better way to solve the problems. Repeating the steps of requirement refinement and framework research can give us more confidence on our decision, also lower the chance we missed something during planning.</p>
+<h3 id="Step-6-Work-on-the-technical-specification-and-then-implement-the-solution"><a href="#Step-6-Work-on-the-technical-specification-and-then-implement-the-solution" class="headerlink" title="Step 6. Work on the technical specification and then implement the solution"></a>Step 6. Work on the technical specification and then implement the solution</h3><p>After the research, we understand our problems and tools. We know what feature is going to be implement, which API we are going to use. We can predict behavior of the system implemented from user stories. In this stage, there should be no big surprise.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I am working on building an auto-scaling docker cluster for our testing environment. I have no idea on the machine cluster, auto-scaling api and deployment framework, but I have to make decision on which framework to use and build the system. It is a challenge for me. There are lots of failure and lots of learning.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&quot;HTML5 - the missing manual 2nd edition&quot; part 2</title>
+    <link href="http://199911.github.io/review/2016/10/21/html5-missing-manual-2/"/>
+    <id>http://199911.github.io/review/2016/10/21/html5-missing-manual-2/</id>
+    <published>2016-10-20T16:00:00.000Z</published>
+    <updated>2016-10-21T14:14:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Audio-and-Video"><a href="#Audio-and-Video" class="headerlink" title="Audio and Video"></a>Audio and Video</h2><p>Internet become a place for entertainment from sharing academic research. Better supports on video and audio are introduced in HTML5</p>
+<ul>
+<li>Does not have any copy protect system, any one can download.</li>
+<li>Digital rights management is developing in HTML5.1</li>
+<li>current positioning of video (currentTime)</li>
+<li>play speed (playbackRate)</li>
+<li>download progress (seekable)</li>
+<li>The book say no HTML5 only solution for web chat<ul>
+<li>How about web RTC?</li>
+</ul>
+</li>
+<li>lazy loading<ul>
+<li>Use <code>preload</code> attribute, but some old browser does not pay attention on it</li>
+</ul>
+</li>
+<li>media group<ul>
+<li>sync different video and audio</li>
+</ul>
+</li>
+<li>video subtitle<ul>
+<li>WebVTT,SRT, TTML</li>
+</ul>
+</li>
+<li>There are lots of other stuff to handle, better use video player library instead of building our own.</li>
+</ul>
+<a id="more"></a>
+<h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><ul>
+<li>browser does not support rgba will not fallback to rgb automatically</li>
+<li>vendor prefix:<ul>
+<li>let developer to use new feature and give feedback</li>
+<li>tell developer the style rule may change in the future</li>
+</ul>
+</li>
+<li>‘Sliding door’ technique:<ul>
+<li>Create a resizable image by breaking it into 3 piece: left, middle and right.</li>
+<li>The middle one will repeat.</li>
+</ul>
+</li>
+<li>Transition support:<ul>
+<li>transparency</li>
+<li>shadow</li>
+<li>gradients</li>
+<li>transforms<ul>
+<li>move</li>
+<li>scale</li>
+<li>skew</li>
+<li>rotate</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Column layout<ul>
+<li>The layout used in newspaper)</li>
+<li>Properties:<ul>
+<li>count</li>
+<li>width</li>
+<li>span</li>
+<li>rule</li>
+<li>gap</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Responsive web design<ul>
+<li>Two types<ul>
+<li>fluid</li>
+<li>fixed</li>
+</ul>
+</li>
+<li>Fluid typography<ul>
+<li>Two ways to implement<ul>
+<li>percentage</li>
+<li><code>em</code> (more popular)<ul>
+<li><code>em</code> is a unit from print typography</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>calc()</code> can combine fluid and fixed design</li>
+<li>Use <code>em</code> for margin, border and padding to make the layout match the font size</li>
+<li>Handle multiple level responsive typography<ul>
+<li><code>em</code> inherit size from parent element</li>
+<li><code>rem</code> (root em) specific the absolute size</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Viewport"><a href="#Viewport" class="headerlink" title="Viewport"></a>Viewport</h3><ul>
+<li>Prevent mobile browsers not to perform their automatic viewport scaling.<ul>
+<li>I guess view desktop version will ignore the viewport tag</li>
+</ul>
+</li>
+</ul>
+<h3 id="Media-query"><a href="#Media-query" class="headerlink" title="Media query"></a>Media query</h3><ul>
+<li>width</li>
+<li>height</li>
+<li>device-height</li>
+<li>orientation</li>
+<li>device-aspect-ratio</li>
+<li>device-pixel-ratio<ul>
+<li>CSS pixel vs screen pixel</li>
+</ul>
+</li>
+<li>color<ul>
+<li>Query number of bits of color coding is used by the device</li>
+</ul>
+</li>
+</ul>
+<h3 id="Mobile-first-design"><a href="#Mobile-first-design" class="headerlink" title="Mobile first design"></a>Mobile first design</h3><ul>
+<li>default mobile, extra for desktop</li>
+<li>TODO: read<ul>
+<li><a href="https://blog.intercom.com/why-mobile-first-may-already-be-outdated/" target="_blank" rel="external">https://blog.intercom.com/why-mobile-first-may-already-be-outdated/</a></li>
+<li><a href="https://codemyviews.com/blog/mobilefirst" target="_blank" rel="external">https://codemyviews.com/blog/mobilefirst</a></li>
+</ul>
+</li>
+<li>hidden content will still be downloaded (also images!)</li>
+<li>using media attribute in link tag can replace whole css script</li>
+<li><code>media</code> also work for <code>&lt;video&gt;</code> element<ul>
+<li>load different resolution in different device</li>
+</ul>
+</li>
+</ul>
+<h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><ul>
+<li>require js</li>
+<li>for graphically advanced applications<ul>
+<li>games</li>
+<li>mapping tools</li>
+<li>dynamic chart</li>
+<li>current only support 2d drawing</li>
+<li>no semantics or accessibility (check the current)<ul>
+<li>seems some new rules added in 2015</li>
+</ul>
+</li>
+<li>can be used to copy image from video</li>
+<li>have fill function</li>
+</ul>
+</li>
+</ul>
+<h2 id="Webapp"><a href="#Webapp" class="headerlink" title="Webapp"></a>Webapp</h2><h3 id="Web-storage-API"><a href="#Web-storage-API" class="headerlink" title="Web storage API"></a>Web storage API</h3><ul>
+<li>may fail if open in loacl file (some browser link storage to domain name)</li>
+<li>storageChanged event<ul>
+<li>can sync different tabs</li>
+</ul>
+</li>
+</ul>
+<h3 id="File-API"><a href="#File-API" class="headerlink" title="File API"></a>File API</h3><ul>
+<li>To use the API, need to get file from<ul>
+<li>input or</li>
+<li>drag and drop</li>
+</ul>
+</li>
+<li>Can read file content</li>
+<li>Can read multiple file by adding <code>multiple</code> attribute to input element</li>
+<li>Drag and drop need the to readAsDataURL() method, also drag and drop event</li>
+</ul>
+<h3 id="IndexedDB-web-SQL-database"><a href="#IndexedDB-web-SQL-database" class="headerlink" title="IndexedDB (web SQL database)"></a>IndexedDB (web SQL database)</h3><ul>
+<li>for offline applications</li>
+<li>enhancing performance</li>
+<li>improving local storage</li>
+<li>transaction is very important in indexedDB<ul>
+<li>because the task will be interrupted easily (user close the page)</li>
+<li>can transaction have multiple operations?</li>
+</ul>
+</li>
+</ul>
+<h3 id="Running-webapp-offline"><a href="#Running-webapp-offline" class="headerlink" title="Running webapp offline"></a>Running webapp offline</h3><ul>
+<li>Use manifest file<ul>
+<li>let browser know to download the manifest file by modify the web page</li>
+<li>configure the web server to serve manifest files</li>
+<li>don’t cache the page with query string</li>
+<li>may turn off the caching for manifest files</li>
+<li>support &gt;= IE 10</li>
+<li>browser may request user’s permission to download the file</li>
+<li>update when user visit the page next time</li>
+<li>may need to clear browser cache when testing</li>
+<li>beware the space limit<ul>
+<li>mobile &lt;= 50MB</li>
+<li>desktop &lt;= 250MB</li>
+</ul>
+</li>
+<li><code>SETTINGS</code> only work in firefox</li>
+<li><code>FALLBACK</code> can be use with javascript to check browser is online or not</li>
+</ul>
+</li>
+<li>Trigger update<ul>
+<li>manifest cannot be cached</li>
+<li>manifest file need a new date (last-updated timestamp)</li>
+<li>New content in manifest<ul>
+<li>may have a line of comment to specific the version</li>
+</ul>
+</li>
+<li>Need to specific the file to download when online (cached file default not downloaded)</li>
+</ul>
+</li>
+<li>Traditional cache vs offline application (need more research)<ul>
+<li>controlled by cache-control headers and time limit vs controlled by manifest</li>
+</ul>
+</li>
+</ul>
+<h3 id="Server-sent-event"><a href="#Server-sent-event" class="headerlink" title="Server sent event"></a>Server sent event</h3><ul>
+<li>Server trigger the send data action to client</li>
+<li>one way communication</li>
+<li>IE does not support</li>
+<li>Difficult to handle in server side, need to check the web server framework support it or not</li>
+</ul>
+<h3 id="web-socket"><a href="#web-socket" class="headerlink" title="web socket"></a>web socket</h3><ul>
+<li>Two ways communication</li>
+<li>Computer network setting may block web socket<ul>
+<li>Proxy server (if any) may drop the socket connection</li>
+</ul>
+</li>
+<li>web socket server need to handle lots of complex stuff</li>
+</ul>
+<h3 id="Geolocation"><a href="#Geolocation" class="headerlink" title="Geolocation"></a>Geolocation</h3><ul>
+<li>It is not part of HTML5</li>
+<li>Require user permission</li>
+<li>may not accurate</li>
+<li>geolocation can help debugging</li>
+</ul>
+<h3 id="Web-worker"><a href="#Web-worker" class="headerlink" title="Web worker"></a>Web worker</h3><ul>
+<li>worker can only run code save in a separated file</li>
+<li>communicate with <code>postMessage()</code></li>
+<li>can we have multiple workers?</li>
+</ul>
+<h3 id="History-management"><a href="#History-management" class="headerlink" title="History management"></a>History management</h3><ul>
+<li>Sync url when updated the content with ajax</li>
+<li>Solve bookmarking the ajax page problem<ul>
+<li>The old solution is using hashbang URLs</li>
+</ul>
+</li>
+<li>Why give up hashbang solution<ul>
+<li>complex url</li>
+<li>inflexibility (cannot use hash)</li>
+<li>no SEO</li>
+<li>Cool URLs matter</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Audio-and-Video&quot;&gt;&lt;a href=&quot;#Audio-and-Video&quot; class=&quot;headerlink&quot; title=&quot;Audio and Video&quot;&gt;&lt;/a&gt;Audio and Video&lt;/h2&gt;&lt;p&gt;Internet become a place for entertainment from sharing academic research. Better supports on video and audio are introduced in HTML5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Does not have any copy protect system, any one can download.&lt;/li&gt;
+&lt;li&gt;Digital rights management is developing in HTML5.1&lt;/li&gt;
+&lt;li&gt;current positioning of video (currentTime)&lt;/li&gt;
+&lt;li&gt;play speed (playbackRate)&lt;/li&gt;
+&lt;li&gt;download progress (seekable)&lt;/li&gt;
+&lt;li&gt;The book say no HTML5 only solution for web chat&lt;ul&gt;
+&lt;li&gt;How about web RTC?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;lazy loading&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;preload&lt;/code&gt; attribute, but some old browser does not pay attention on it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;media group&lt;ul&gt;
+&lt;li&gt;sync different video and audio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;video subtitle&lt;ul&gt;
+&lt;li&gt;WebVTT,SRT, TTML&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;There are lots of other stuff to handle, better use video player library instead of building our own.&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&quot;HTML5 - the missing manual 2nd edition&quot; part 1</title>
+    <link href="http://199911.github.io/review/2016/10/16/html5-missing-manual-1/"/>
+    <id>http://199911.github.io/review/2016/10/16/html5-missing-manual-1/</id>
+    <published>2016-10-15T16:00:00.000Z</published>
+    <updated>2016-10-21T14:14:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Part 1 focus on some updated basic markup.</p>
+<h2 id="Three-principle-of-html5"><a href="#Three-principle-of-html5" class="headerlink" title="Three principle of html5"></a>Three principle of html5</h2><ol>
+<li>don’t break the web<ul>
+<li>XHTML 2 broke the Web because it demanded an immediate, dramatic shift in the way web pages were written (and it fail)</li>
+<li>compatible, support degrade on new element</li>
+</ul>
+</li>
+<li>pave the cowpaths<ul>
+<li>embracing a widely supported but poorly designed feature</li>
+<li>standardize some common use case</li>
+</ul>
+</li>
+<li><p>be practical</p>
+<ul>
+<li>Change base on usage and requirement</li>
+</ul>
+<a id="more"></a>
+</li>
+</ol>
+<h2 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h2><p>It is used to set up quirks mode. The browsers render the page with buggy rule for to make the page behave same as some old buggy browser.</p>
+<h2 id="HTML5-loosened-rules"><a href="#HTML5-loosened-rules" class="headerlink" title="HTML5 loosened rules"></a>HTML5 loosened rules</h2><ul>
+<li>Case insensitive</li>
+<li>Ignore closing slash from a void element (empty element)</li>
+<li>Don’t need quotation mark in attributes (must have no special char (which need to be escaped))</li>
+<li>Attribute with no value is allowed (checked)<br>Suggestion:</li>
+<li>Always include <html>, <body> and <head></head></body></html></li>
+</ul>
+<h2 id="Three-tools-to-help-writing-HTML"><a href="#Three-tools-to-help-writing-HTML" class="headerlink" title="Three tools to help writing HTML"></a>Three tools to help writing HTML</h2><ul>
+<li>can i use</li>
+<li>browser usage<ul>
+<li><a href="http://gs.statcounter.com" target="_blank" rel="external">http://gs.statcounter.com</a></li>
+<li>Using google analystic the track your visitor can give more precise information</li>
+</ul>
+</li>
+<li>feature detection</li>
+</ul>
+<h2 id="Make-old-browser-support-HTML5"><a href="#Make-old-browser-support-HTML5" class="headerlink" title="Make old browser support HTML5"></a>Make old browser support HTML5</h2><ul>
+<li>Add <code>display: block;</code> to HTML5 new tag</li>
+<li>Use Google’s html5shim</li>
+</ul>
+<h2 id="Site-with-the-Semantic-elements"><a href="#Site-with-the-Semantic-elements" class="headerlink" title="Site with the Semantic elements"></a>Site with the Semantic elements</h2><ul>
+<li>Header<ul>
+<li>It may overlay with the task of <code>&lt;h1&gt;</code>, <code>&lt;header&gt;</code> is useful when there are title have sub-title, author and other meta data.</li>
+</ul>
+</li>
+<li>Sidebar<ul>
+<li>Consider sidebar as nav bar, we can put <code>&lt;aside&gt;</code> inside <code>&lt;nav&gt;</code></li>
+<li>Sidebar contains different section, we can put <code>&lt;nav&gt;</code> inside <code>&lt;aside&gt;</code>, more suitable to use when the sidebar is complex.</li>
+</ul>
+</li>
+<li><code>&lt;section&gt;</code><ul>
+<li>Small blocks of content</li>
+<li>Small contained content that can’t really be described as an article, like a customer billing record or a product listing.</li>
+<li>Groups of content</li>
+<li>A portion of a longer document</li>
+</ul>
+</li>
+<li>Collapsible boxes<ul>
+<li>Use <code>&lt;summary&gt;</code> as clickable header and <code>&lt;details&gt;</code></li>
+</ul>
+</li>
+<li>Footer<ul>
+<li>common feature<ul>
+<li>Fixed positioning</li>
+<li>A close button</li>
+<li>A partially transparent background</li>
+<li>Animation</li>
+</ul>
+</li>
+<li>We can be use a div with id to split the standard footer</li>
+<li>If there are multiple section, we can use <code>&lt;aside&gt;</code></li>
+</ul>
+</li>
+<li><code>&lt;main&gt;</code><ul>
+<li>New element introduced in HTML5.1</li>
+<li>Same level as <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code></li>
+<li>It holds the page’s full main content, it cannot be put inside any other semantic element.</li>
+</ul>
+</li>
+</ul>
+<p>Notice the scope of tag, if there is a <footer> inside <aside>, it means it is footer of the aside.</aside></footer></p>
+<h2 id="HTML5-outline-System"><a href="#HTML5-outline-System" class="headerlink" title="HTML5 outline System"></a>HTML5 outline System</h2><ul>
+<li>Search engine use this to build a better page preview</li>
+<li>Can be used as quality assurance tool</li>
+<li>Many developer ignore this</li>
+<li>In HTML 5, there can be more than one <code>&lt;h1&gt;</code>.</li>
+</ul>
+<h2 id="Text-level-semantics"><a href="#Text-level-semantics" class="headerlink" title="Text-level semantics"></a>Text-level semantics</h2><p>Besides page-level semantics mentioned before, there are 3 text-level semantics elements</p>
+<ul>
+<li><code>&lt;time&gt;</code><ul>
+<li><code>datetime</code> attribute<ul>
+<li>YYYY-MM-DD</li>
+<li>HH:MM</li>
+</ul>
+</li>
+<li><code>pubdate</code><ul>
+<li>Publish date</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>&lt;output&gt;</code><ul>
+<li>Show javascript output</li>
+</ul>
+</li>
+<li><code>&lt;mark&gt;</code><ul>
+<li>Represent a section of text that’s highlighted for reference</li>
+</ul>
+</li>
+</ul>
+<h2 id="Accessibility"><a href="#Accessibility" class="headerlink" title="Accessibility"></a>Accessibility</h2><ul>
+<li>ARIA<ul>
+<li>Accessible Rich Internet Application</li>
+<li><code>role</code> attribute</li>
+</ul>
+</li>
+<li>REFa</li>
+<li>Microformat</li>
+<li>microdata</li>
+</ul>
+<h2 id="Some-interest-new-feature-in-HTML5"><a href="#Some-interest-new-feature-in-HTML5" class="headerlink" title="Some interest new feature in HTML5"></a>Some interest new feature in HTML5</h2><ul>
+<li>‘auto-complete’ attribute in form input</li>
+<li>‘require’ and ‘optional’ attributes in form input</li>
+<li><code>&lt;datalist&gt;</code> element in form</li>
+<li><code>&lt;meter&gt;</code> and <code>progress</code> elements</li>
+<li>‘content-editable’ and ‘design mode’ attributes</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Part 1 focus on some updated basic markup.&lt;/p&gt;
+&lt;h2 id=&quot;Three-principle-of-html5&quot;&gt;&lt;a href=&quot;#Three-principle-of-html5&quot; class=&quot;headerlink&quot; title=&quot;Three principle of html5&quot;&gt;&lt;/a&gt;Three principle of html5&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;don’t break the web&lt;ul&gt;
+&lt;li&gt;XHTML 2 broke the Web because it demanded an immediate, dramatic shift in the way web pages were written (and it fail)&lt;/li&gt;
+&lt;li&gt;compatible, support degrade on new element&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;pave the cowpaths&lt;ul&gt;
+&lt;li&gt;embracing a widely supported but poorly designed feature&lt;/li&gt;
+&lt;li&gt;standardize some common use case&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;be practical&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change base on usage and requirement&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>After reading HTML and CSS Design?</title>
+    <link href="http://199911.github.io/diary/2016/10/07/after-reading-html-and-css-design/"/>
+    <id>http://199911.github.io/diary/2016/10/07/after-reading-html-and-css-design/</id>
+    <published>2016-10-06T16:00:00.000Z</published>
+    <updated>2016-10-08T09:11:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After reading ‘HTML and CSS Design’, I have a deeper understanding on HTML and CSS, but I have some new question to ask. I will jot down my question and do research on it.</p>
+<ol>
+<li>What is the different between <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code>?<ul>
+<li><a href="http://stackoverflow.com/questions/271743/whats-the-difference-between-b-and-strong-i-and-em" target="_blank" rel="external">http://stackoverflow.com/questions/271743/whats-the-difference-between-b-and-strong-i-and-em</a></li>
+</ul>
+</li>
+<li>What HTML tag should we use for button?<ul>
+<li><code>&lt;button&gt;</code></li>
+<li><code>&lt;input type=&quot;button&quot;&gt;</code></li>
+<li><code>&lt;a&gt;</code></li>
+<li><code>&lt;div&gt;</code></li>
+</ul>
+</li>
+<li>Pseudo Class vs Pseudo Element</li>
+<li><code>&lt;s&gt;</code> vs <code>&lt;del&gt;</code></li>
+<li><code>&lt;address&gt;</code> tag</li>
+<li>DOCTYPE</li>
+<li>Mandatory elements</li>
+<li>Mandatory attributes</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After reading ‘HTML and CSS Design’, I have a deeper understanding on HTML and CSS, but I have some new question to ask. I will jot down 
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集十</title>
+    <link href="http://199911.github.io/insight/2016/10/04/readings-10/"/>
+    <id>http://199911.github.io/insight/2016/10/04/readings-10/</id>
+    <published>2016-10-03T16:00:00.000Z</published>
+    <updated>2016-10-04T16:31:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="當主管卻不懂交辦，當心「猴子」爬上身"><a href="#當主管卻不懂交辦，當心「猴子」爬上身" class="headerlink" title="當主管卻不懂交辦，當心「猴子」爬上身"></a><a href="http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully" target="_blank" rel="external">當主管卻不懂交辦，當心「猴子」爬上身</a></h1><p>文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。</p>
+<p>文中仲提及一D指派工作嘅技巧:</p>
+<ul>
+<li>要清楚指出工作內容</li>
+<li>可運用數字明確指出目標，促進員工思考</li>
+<li>盡力說動部屬願意做不樂意的事<ul>
+<li>最好當然係每個人都做樂意做嘅野。但萬一冇人肯做，都要靠員工去補位</li>
+</ul>
+</li>
+<li>用正確既方法去指派工作，文中提出4種<ol>
+<li>直接告訴我你要我做什麼</li>
+<li>我希望你先考慮我的意見，再決定我要做什麼<ul>
+<li>員工可能想用新方法去解決問題</li>
+</ul>
+</li>
+<li>我想自己決定要做什麼<ul>
+<li>員工唔需要監督，係開波之前要搞清楚目標同方向</li>
+</ul>
+</li>
+<li>大家共同討論、決定之後，我就很樂意去做</li>
+</ol>
+</li>
+</ul>
+<p>仲有三個指派工作嘅大忌</p>
+<ol>
+<li>指派太多工作</li>
+<li>有多過一個人落order<ul>
+<li>會唔知做邊個task先，影響團隊信任</li>
+</ul>
+</li>
+<li>把最困難的事，交給最有能力的人<ul>
+<li>最重要都係cost and benefit</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+<h1 id="小問題，大麻煩"><a href="#小問題，大麻煩" class="headerlink" title="小問題，大麻煩"></a><a href="http://teddy-chen-tw.blogspot.hk/2016/09/blog-post_7.html" target="_blank" rel="external">小問題，大麻煩</a></h1><p>做錯一D細嘅決定係短期內冇咩影響，但細嘅錯誤會慢慢累積成大嘅錯誤，最後做成technique debt。</p>
+<p>例如之前我落左係<code>&lt;ul&gt;</code>同<code>&lt;ol&gt;</code>嘅CSS落左一個CSS reset, 搞到post content D list冇曬style。最後係post content D CSS 做左個patch。但係就有其他engineer，因為個patch override左D style，搞到個page爛左。一個簡單嘅錯誤係三日內係唔同嘅地方做成2個bug，最後變成大問題。</p>
+<p>文中提出用pair programming 同 code review 去盡早fix左D小問題，但最終都係要有資深嘅engineer去identify到個問題。</p>
+<h1 id="Choose-design-over-architecture"><a href="#Choose-design-over-architecture" class="headerlink" title="Choose design over architecture"></a><a href="https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/" target="_blank" rel="external">Choose design over architecture</a></h1><ul>
+<li>Conventional wisdom often encourages engineers to start with a big architectural overview, but this will introduce technical debt<ul>
+<li>The overview make the service complex. The complexity in one service can take down the whole project<ul>
+<li>I guess it is because the service is an essential part of the whole system. All features will depends on the complex services</li>
+</ul>
+</li>
+<li>Architectural plans will push the team forward water fall model<ul>
+<li>I guess it is because the product can only be deployed after all infrastructure is ready</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Focusing on user experience design and software design can help avoid technical debt.<ul>
+<li>Start from small user story<ul>
+<li>Even a small story can involve a lot of effort for the engineers, as there are no infrastructure can be reuse.</li>
+<li>The set of stories will help engineers figure out what infrastructure is needed and the priorities.</li>
+</ul>
+</li>
+<li>After we have the requirements provided by user stories, we can break the features into modules and organize modules into services.<ul>
+<li>SOLID principle in OOP can help us design the system</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Optimize for change<ul>
+<li>Optimized code lead to an increase in defects and reduced velocity.<ul>
+<li>Rule of 3, consider to reuse code if it appear three times</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Summary</p>
+<ul>
+<li>Get the infrastructure’s requirement using product designer’s mindset</li>
+<li>Organize the feature and model using architect mindset</li>
+</ul>
+<h1 id="Read-This-Google-Email-About-Time-Management-Strategy"><a href="#Read-This-Google-Email-About-Time-Management-Strategy" class="headerlink" title="Read This Google Email About Time Management Strategy"></a><a href="https://www.fastcompany.com/3054571/work-smart/the-better-time-management-strategy-this-googler-taught-his-coworkers" target="_blank" rel="external">Read This Google Email About Time Management Strategy</a></h1><p>The animation in video is impressive. It contains a few points:</p>
+<ul>
+<li>Meeting can have fewer people</li>
+<li>Remove unnecessary meeting</li>
+<li>Don’t put all meeting on Friday, because the energy level is low</li>
+</ul>
+<h1 id="閱讀程式碼的心理層面"><a href="#閱讀程式碼的心理層面" class="headerlink" title="閱讀程式碼的心理層面"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/497" target="_blank" rel="external">閱讀程式碼的心理層面</a></h1><h1 id="知识漩涡"><a href="#知识漩涡" class="headerlink" title="知识漩涡"></a><a href="http://insights.thoughtworkers.org/obsession-og-technology/" target="_blank" rel="external">知识漩涡</a></h1><p>太多新technology，好難追，但好多時都係大同小異。重點係理解可以通用嘅重點。文中提及分為兩種，第一種係零碎嘅資料，第二種係幫助提升理解力。後者往往比前者重要，但係要用好多心力先可以吸收。</p>
+<p>知識框架就係一種幫助理解資料嘅知識，而入邊specific 嘅 domain knowledge 就係資料。學野果時應嘅先廣後深，避免鑽得太深，明白整體之後，先揀得著最多嘅野，專心去學。如果只係不停去追新tech，冇深入了解，去到最後只係知左一堆好快outdate嘅資料，而唔係知識。</p>
+<p>小結：</p>
+<ul>
+<li>冇可能學曬所有野</li>
+<li>要先了解成個知識體系，避免鑽得太深</li>
+<li>揀最有價值嘅野深入研究</li>
+<li>對於得意但同自己發展方向冇關嘅野放係低D嘅priority，要識得放棄</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;當主管卻不懂交辦，當心「猴子」爬上身&quot;&gt;&lt;a href=&quot;#當主管卻不懂交辦，當心「猴子」爬上身&quot; class=&quot;headerlink&quot; title=&quot;當主管卻不懂交辦，當心「猴子」爬上身&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully&quot;&gt;當主管卻不懂交辦，當心「猴子」爬上身&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。&lt;/p&gt;
+&lt;p&gt;文中仲提及一D指派工作嘅技巧:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要清楚指出工作內容&lt;/li&gt;
+&lt;li&gt;可運用數字明確指出目標，促進員工思考&lt;/li&gt;
+&lt;li&gt;盡力說動部屬願意做不樂意的事&lt;ul&gt;
+&lt;li&gt;最好當然係每個人都做樂意做嘅野。但萬一冇人肯做，都要靠員工去補位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;用正確既方法去指派工作，文中提出4種&lt;ol&gt;
+&lt;li&gt;直接告訴我你要我做什麼&lt;/li&gt;
+&lt;li&gt;我希望你先考慮我的意見，再決定我要做什麼&lt;ul&gt;
+&lt;li&gt;員工可能想用新方法去解決問題&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我想自己決定要做什麼&lt;ul&gt;
+&lt;li&gt;員工唔需要監督，係開波之前要搞清楚目標同方向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;大家共同討論、決定之後，我就很樂意去做&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;仲有三個指派工作嘅大忌&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;指派太多工作&lt;/li&gt;
+&lt;li&gt;有多過一個人落order&lt;ul&gt;
+&lt;li&gt;會唔知做邊個task先，影響團隊信任&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;把最困難的事，交給最有能力的人&lt;ul&gt;
+&lt;li&gt;最重要都係cost and benefit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML and CSS part 3</title>
+    <link href="http://199911.github.io/review/2016/10/02/html-and-css-3/"/>
+    <id>http://199911.github.io/review/2016/10/02/html-and-css-3/</id>
+    <published>2016-10-01T16:00:00.000Z</published>
+    <updated>2016-10-02T13:34:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTML5-layout"><a href="#HTML5-layout" class="headerlink" title="HTML5 layout"></a>HTML5 layout</h2><h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>We can use a div with id as namespace, such as<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="header-and-footer"><a href="#header-and-footer" class="headerlink" title="header and footer"></a><code>header</code> and <code>footer</code></h3><p>These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.</p>
+<h3 id="article"><a href="#article" class="headerlink" title="article"></a><code>article</code></h3><p>It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.<br>Notice <code>article</code> can be nested inside each other, comments of comments is one of the use case.</p>
+<h3 id="aside"><a href="#aside" class="headerlink" title="aside"></a><code>aside</code></h3><p><code>aside</code> tag have 2 usage.</p>
+<ul>
+<li>If it is inside <code>article</code>, it should contain information that is related to the article.</li>
+<li>If it is outside <code>article</code>, it should contain information related to the entire page.</li>
+</ul>
+<a id="more"></a>
+<h3 id="section"><a href="#section" class="headerlink" title="section"></a><code>section</code></h3><p><code>section</code> group related content together, usually with their own heading. It may contains several <code>article</code> inside. <code>section</code> can also be used in <code>article</code> tag, if the article is long and you want to split it into separate sections.</p>
+<h3 id="hgroup"><a href="#hgroup" class="headerlink" title="hgroup"></a><code>hgroup</code></h3><p><code>hgroup</code> stand for header group. For example, you can use <code>hgroup</code> to group a title in <code>h2</code> and a subtitle in <code>h3</code> together.</p>
+<h3 id="figure"><a href="#figure" class="headerlink" title="figure"></a><code>figure</code></h3><p><code>figure</code> can be used not only in images, the examples of usage include:</p>
+<ul>
+<li>images</li>
+<li>videos</li>
+<li>graphs</li>
+<li>diagrams</li>
+<li>code samples</li>
+<li>text that supports the main body of an article</li>
+</ul>
+<h3 id="a"><a href="#a" class="headerlink" title="a"></a><code>a</code></h3><p>Before HTML5, putting block element inside <code>a</code> tag is considered incorrect. But in HTML5, place <code>a</code> element around a block level element that contains child elements is allowed.</p>
+<h3 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h3><p>Older browsers which do not support HTML5 element treat them as inline element. To support HTML5 in old browsers, we need HTML5 shiv (HTML5 shim)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;HTML5-layout&quot;&gt;&lt;a href=&quot;#HTML5-layout&quot; class=&quot;headerlink&quot; title=&quot;HTML5 layout&quot;&gt;&lt;/a&gt;HTML5 layout&lt;/h2&gt;&lt;h3 id=&quot;Namespace&quot;&gt;&lt;a href=&quot;#Namespace&quot; class=&quot;headerlink&quot; title=&quot;Namespace&quot;&gt;&lt;/a&gt;Namespace&lt;/h3&gt;&lt;p&gt;We can use a div with id as namespace, such as&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div id=&amp;quot;page&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;header-and-footer&quot;&gt;&lt;a href=&quot;#header-and-footer&quot; class=&quot;headerlink&quot; title=&quot;header and footer&quot;&gt;&lt;/a&gt;&lt;code&gt;header&lt;/code&gt; and &lt;code&gt;footer&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.&lt;/p&gt;
+&lt;h3 id=&quot;article&quot;&gt;&lt;a href=&quot;#article&quot; class=&quot;headerlink&quot; title=&quot;article&quot;&gt;&lt;/a&gt;&lt;code&gt;article&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.&lt;br&gt;Notice &lt;code&gt;article&lt;/code&gt; can be nested inside each other, comments of comments is one of the use case.&lt;/p&gt;
+&lt;h3 id=&quot;aside&quot;&gt;&lt;a href=&quot;#aside&quot; class=&quot;headerlink&quot; title=&quot;aside&quot;&gt;&lt;/a&gt;&lt;code&gt;aside&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;aside&lt;/code&gt; tag have 2 usage.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If it is inside &lt;code&gt;article&lt;/code&gt;, it should contain information that is related to the article.&lt;/li&gt;
+&lt;li&gt;If it is outside &lt;code&gt;article&lt;/code&gt;, it should contain information related to the entire page.&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML and CSS part 2</title>
+    <link href="http://199911.github.io/review/2016/10/01/html-and-css-2/"/>
+    <id>http://199911.github.io/review/2016/10/01/html-and-css-2/</id>
+    <published>2016-09-30T16:00:00.000Z</published>
+    <updated>2016-10-02T13:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
+<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
+<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
+<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
+<a id="more"></a>
+<h2 id="Brightness-vs-lightness"><a href="#Brightness-vs-lightness" class="headerlink" title="Brightness vs lightness"></a>Brightness vs lightness</h2><p>Brightness only adds black, whereas lightness offers both white and black.</p>
+<h2 id="serif-sans-serif-monospace-cursive-and-fantasy"><a href="#serif-sans-serif-monospace-cursive-and-fantasy" class="headerlink" title="serif, sans serif, monospace, cursive and fantasy"></a>serif, sans serif, monospace, cursive and fantasy</h2><p>Use serif for long text,it is easier to read. Sans serif is clearer to read, better for small text. Use monospace for code, easier to align.<br>Cursive fonts look like handwriting. Also Fantasy font is for decoration.</p>
+<h2 id="italic-vs-oblique"><a href="#italic-vs-oblique" class="headerlink" title="italic vs oblique"></a>italic vs oblique</h2><p>Italic have cursive aspect (a new font), oblique just put font at a angle.</p>
+<h2 id="Text-transform"><a href="#Text-transform" class="headerlink" title="Text transform"></a>Text transform</h2><p>There are CSS to transform text to uppercase, lowercase, or make the first character capitalize</p>
+<h2 id="line-height"><a href="#line-height" class="headerlink" title="line height"></a>line height</h2><p>When line height is larger than the font size, there is a gap above the text. The gap is named ‘leading’. In other words, line height - font size = leading.</p>
+<h2 id="letter-spacing-and-word-spacing"><a href="#letter-spacing-and-word-spacing" class="headerlink" title="letter spacing and word spacing"></a>letter spacing and word spacing</h2><p>There are CSS to control the spacing between letters and words. These are style seems does not work well in Chinese or other language using block characters.</p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical align"></a>vertical align</h2><p><code>vertical</code> align should be the most commonly misunderstood style. It is not intended to allow you to vertically align text in the middle of block level elements (but this works in table cells, such as <code>td</code> and <code>th</code>). It replaces the depreciated <code>align</code> HTML attribute. It is used in inline elements.</p>
+<h2 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h2><p>It is used in a trick to hide the text which is only available for screen reader and SEO. But in Bootstrap 3, there is a better trick with better performance.</p>
+<h2 id="Pseudo-elements"><a href="#Pseudo-elements" class="headerlink" title="Pseudo-elements"></a>Pseudo-elements</h2><ul>
+<li><code>:first-letter</code> and <code>:first-line</code>: select first letter or line in text.</li>
+<li><code>:link</code> and <code>:visited</code>: select not visited and visited <code>&lt;a&gt;</code> link.</li>
+<li><code>:active</code>: select element is being activated by a user.<ul>
+<li>pressed button</li>
+<li>clicked link.</li>
+</ul>
+</li>
+<li><code>:focus</code>: elements that can be interacted with have focus state.<ul>
+<li>from input with cursor in it</li>
+<li>It is also possible to use tab key to focus</li>
+</ul>
+</li>
+<li>When pseduo classes are used, they should appear in this order:<ol>
+<li><code>:link</code></li>
+<li><code>:visited</code></li>
+<li><code>:hover</code></li>
+<li><code>:focus</code></li>
+<li><code>:active</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="Shadow-in-CSS3"><a href="#Shadow-in-CSS3" class="headerlink" title="Shadow in CSS3"></a>Shadow in CSS3</h2><p><code>box-shadow</code> and <code>text-shadow</code> are new style in CSS3.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Doctype&quot;&gt;&lt;a href=&quot;#Doctype&quot; class=&quot;headerlink&quot; title=&quot;Doctype&quot;&gt;&lt;/a&gt;Doctype&lt;/h2&gt;&lt;p&gt;It defines which version of HTML is using, it may affect how the page is rendered.&lt;/p&gt;
+&lt;h2 id=&quot;Browser’s-bug&quot;&gt;&lt;a href=&quot;#Browser’s-bug&quot; class=&quot;headerlink&quot; title=&quot;Browser’s bug&quot;&gt;&lt;/a&gt;Browser’s bug&lt;/h2&gt;&lt;p&gt;Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.&lt;/p&gt;
+&lt;h2 id=&quot;CSS3-color-support&quot;&gt;&lt;a href=&quot;#CSS3-color-support&quot; class=&quot;headerlink&quot; title=&quot;CSS3 color support&quot;&gt;&lt;/a&gt;CSS3 color support&lt;/h2&gt;&lt;p&gt;CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.&lt;/p&gt;
+&lt;h2 id=&quot;Tips-about-reserved-background&quot;&gt;&lt;a href=&quot;#Tips-about-reserved-background&quot; class=&quot;headerlink&quot; title=&quot;Tips about reserved background&quot;&gt;&lt;/a&gt;Tips about reserved background&lt;/h2&gt;&lt;p&gt;If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML and CSS part 1</title>
+    <link href="http://199911.github.io/review/2016/09/20/html-and-css-1/"/>
+    <id>http://199911.github.io/review/2016/09/20/html-and-css-1/</id>
+    <published>2016-09-19T16:00:00.000Z</published>
+    <updated>2016-10-02T13:34:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="padding-start-vs-padding-left"><a href="#padding-start-vs-padding-left" class="headerlink" title="padding-start vs padding-left"></a>padding-start vs padding-left</h2><p>I found the default style of <code>ol</code> and <code>ul</code> in Chrome have a interesting property <code>-webkit-padding-start: 40px;</code>. I am wondering how is it different form <code>padding-left: 40px</code>. According to <a href="http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start" target="_blank" rel="external">this</a>, they are the same for the language written from left to right. If the language is written from right to left, the padding of <code>-webkit-padding-start: 40px;</code> will move to right.</p>
+<p>Note that <code>dt</code> is using margin instead of padding, because it does not need to put any bullet point into the component.</p>
+<h2 id="Image’s-alt-attribute-vs-title"><a href="#Image’s-alt-attribute-vs-title" class="headerlink" title="Image’s alt attribute vs title"></a>Image’s <code>alt</code> attribute vs <code>title</code></h2><p><code>alt</code> stands for alternative, which should be description of the image, because it will be shown when the image does not load. <code>title</code> provides extra information of the image. For more detail, we can read <a href="https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/" target="_blank" rel="external">this</a></p>
+<a id="more"></a>
+<h2 id="width-and-height-in-image-tag-vs-in-CSS"><a href="#width-and-height-in-image-tag-vs-in-CSS" class="headerlink" title="width and height in image tag vs in CSS"></a><code>width</code> and <code>height</code> in image tag vs in CSS</h2><p>According to <a href="http://stackoverflow.com/questions/640190/image-width-height-as-an-attribute-or-in-css" target="_blank" rel="external">this</a>, if the image is part of the content, we should use <code>width</code> and <code>height</code> attribute in image tag. The rule of thumb is, HTML defined the contents and CSS define the layout. For example, the background image’s size should be defined by CSS, because it is for layout and decoration.</p>
+<h2 id="align-in-image-tag-is-deprecated-in-HTML-5"><a href="#align-in-image-tag-is-deprecated-in-HTML-5" class="headerlink" title="align in image tag is deprecated in HTML 5"></a><code>align</code> in image tag is deprecated in HTML 5</h2><p>Which should be replace by <code>align</code> in CSS.<br>PS: image is <code>display: inline-block;</code> by default.</p>
+<h2 id="figure-is-a-component-of-image-with-caption"><a href="#figure-is-a-component-of-image-with-caption" class="headerlink" title="figure is a component of image with caption"></a><code>figure</code> is a component of image with caption</h2><p>The html structure likes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;</span><br><span class="line">  &lt;img src=&quot;images/otters.jpg&quot; alt=&quot;Photograph of two sea otters floating in water&quot;&gt;</span><br><span class="line">  &lt;br /&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure></p>
+<p>Notices that figcaption is HTML 5 element, which will be ignored by old browsers.<br>To have better compatibility, we can have<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="thead-tbody-and-tfoot"><a href="#thead-tbody-and-tfoot" class="headerlink" title="thead, tbody and tfoot"></a><code>thead</code>, <code>tbody</code> and <code>tfoot</code></h2><p>We can use these when the first and last rows content different content. Browser can make table header and footer sticky when the screen cannot fit the screen. It is also useful in print version when the table cannot be shown in one page.</p>
+<h2 id="Deprecated-attribute-of-table-and-form-in-HTML-5"><a href="#Deprecated-attribute-of-table-and-form-in-HTML-5" class="headerlink" title="Deprecated attribute of table and form in HTML 5"></a>Deprecated attribute of table and form in HTML 5</h2><p><code>width</code>, <code>border</code> and <code>background</code> are deprecated in HTML 5 table. <code>size</code> in HTML 5 form’s input is deprecated, but notice <code>maxlength</code> is not.<br>Notice that <code>size</code> in select element is not deprecated. It is used to define the number of item shown in multiple select.</p>
+<h2 id="Input-type"><a href="#Input-type" class="headerlink" title="Input type"></a>Input type</h2><p>There is a list of input type in form</p>
+<ul>
+<li>text</li>
+<li>password</li>
+<li>radio</li>
+<li>checkbox</li>
+<li>file</li>
+<li>submit<ul>
+<li>The <code>name</code> attribute is not necessary, the text on button is defined by the <code>value</code> attribute.</li>
+</ul>
+</li>
+<li>image</li>
+<li>hidden<br>The following is new type introduced in the HTML 5</li>
+<li>date</li>
+<li>email</li>
+<li>url</li>
+<li>search</li>
+</ul>
+<h2 id="Label-in-form"><a href="#Label-in-form" class="headerlink" title="Label in form"></a>Label in form</h2><p>The label is used to connect text description with the form input. There are two cases:</p>
+<ul>
+<li>Wrap the <code>input</code> tag and text description in <code>label</code>.</li>
+<li><code>input</code> tag and the description are separated. The value of <code>for</code> attribute in <code>label</code> is same as <code>id</code> of the corresponding <code>input</code>.</li>
+</ul>
+<p>The book also recommend where to put the text description:<br>Above or to the left of <code>input</code>:</p>
+<ul>
+<li>Text inputs</li>
+<li>Text areas</li>
+<li>Select boxes</li>
+<li>File uploads<br>To the right of <code>input</code>:</li>
+<li>Individual checkboxes</li>
+<li>Individual radio buttons</li>
+</ul>
+<h2 id="fieldset-and-legend"><a href="#fieldset-and-legend" class="headerlink" title="fieldset and legend"></a><code>fieldset</code> and <code>legend</code></h2><p><code>fieldset</code> can group the inputs and the <code>legend</code> is the description of <code>fieldset</code>.</p>
+<h2 id="div-vs-span"><a href="#div-vs-span" class="headerlink" title="div vs span"></a><code>div</code> vs <code>span</code></h2><p><code>div</code> and <code>span</code> group elements into a block or inline element.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;padding-start-vs-padding-left&quot;&gt;&lt;a href=&quot;#padding-start-vs-padding-left&quot; class=&quot;headerlink&quot; title=&quot;padding-start vs padding-left&quot;&gt;&lt;/a&gt;padding-start vs padding-left&lt;/h2&gt;&lt;p&gt;I found the default style of &lt;code&gt;ol&lt;/code&gt; and &lt;code&gt;ul&lt;/code&gt; in Chrome have a interesting property &lt;code&gt;-webkit-padding-start: 40px;&lt;/code&gt;. I am wondering how is it different form &lt;code&gt;padding-left: 40px&lt;/code&gt;. According to &lt;a href=&quot;http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start&quot;&gt;this&lt;/a&gt;, they are the same for the language written from left to right. If the language is written from right to left, the padding of &lt;code&gt;-webkit-padding-start: 40px;&lt;/code&gt; will move to right.&lt;/p&gt;
+&lt;p&gt;Note that &lt;code&gt;dt&lt;/code&gt; is using margin instead of padding, because it does not need to put any bullet point into the component.&lt;/p&gt;
+&lt;h2 id=&quot;Image’s-alt-attribute-vs-title&quot;&gt;&lt;a href=&quot;#Image’s-alt-attribute-vs-title&quot; class=&quot;headerlink&quot; title=&quot;Image’s alt attribute vs title&quot;&gt;&lt;/a&gt;Image’s &lt;code&gt;alt&lt;/code&gt; attribute vs &lt;code&gt;title&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;alt&lt;/code&gt; stands for alternative, which should be description of the image, because it will be shown when the image does not load. &lt;code&gt;title&lt;/code&gt; provides extra information of the image. For more detail, we can read &lt;a href=&quot;https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Bootstrap 3 implementation demo</title>
+    <link href="http://199911.github.io/diary/2016/09/11/bootstrap-3-implementation-demo/"/>
+    <id>http://199911.github.io/diary/2016/09/11/bootstrap-3-implementation-demo/</id>
+    <published>2016-09-10T16:00:00.000Z</published>
+    <updated>2016-09-20T15:52:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Spent almost 2 days on building this <a href="https://199911.github.io/bootstrap-3-implementation-demo/">page</a> to explain my learning and understanding on Bootstrap 3 implementation. Most of the time spent on thinking how to explain the logic in word.</p>
+<p>There are lots of improvement in my writing skills. Although lots of time spent, it does help me to have a deeper understand on the idea.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Spent almost 2 days on building this &lt;a href=&quot;https://199911.github.io/bootstrap-3-implementation-demo/&quot;&gt;page&lt;/a&gt; to explain my learning 
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Learning from Bootstrap 3</title>
+    <link href="http://199911.github.io/code/2016/09/01/bootstrap-3-learning/"/>
+    <id>http://199911.github.io/code/2016/09/01/bootstrap-3-learning/</id>
+    <published>2016-08-31T16:00:00.000Z</published>
+    <updated>2016-09-01T14:30:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Reset-script"><a href="#Reset-script" class="headerlink" title="Reset script"></a>Reset script</h2><p>Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, <code>normalize.less</code> reset the CSS.</p>
+<h2 id="HTML-accessibility"><a href="#HTML-accessibility" class="headerlink" title="HTML accessibility"></a>HTML accessibility</h2><p>Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide <code>.sr-only</code> and <code>.sr-only-focusable</code> to show content to screen reader without affecting the visual content. <code>.sr-only-focusable</code> appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like <code>aria-label</code> for accessibility.</p>
+<h2 id="LESS-function"><a href="#LESS-function" class="headerlink" title="LESS function"></a>LESS function</h2><p>In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like <code>.mixin()</code>. This may create some code like <code>.mixin { .mixin() }</code>. It looks redundant, but it is good in design, as the interface and implementation are separated.</p>
+<a id="more"></a>
+<h2 id="touch-action"><a href="#touch-action" class="headerlink" title="touch-action"></a><code>touch-action</code></h2><p>There is a CSS property named <code>touch-action</code>, which can specify the behavior. I cannot understand the description on MDN, and I think this <a href="https://www.youtube.com/watch?v=NOzQlS6utRk" target="_blank" rel="external">video</a> can help.</p>
+<h2 id="Spacing-the-items-inside-a-menu"><a href="#Spacing-the-items-inside-a-menu" class="headerlink" title="Spacing the items inside a menu"></a>Spacing the items inside a menu</h2><p>It is common to have a list of items in web. The html may looks like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>We usually want space between menu and items, also space among items. I implemented the LESS like<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.menu-item &#123;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">  &amp;:first &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Bootstrap 3 introduce another implementation to me:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.menu &#123;</span><br><span class="line">  padding-top: 20px;</span><br><span class="line">  padding-bottom: 20px;</span><br><span class="line">  .menu-item + .menu-item &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>I think this implementation is clearer, the padding of menu give space to the start and the end of menu. The <code>.menu-item + .menu-item</code> part gives space between the menu items.</p>
+<h2 id="Component-animation"><a href="#Component-animation" class="headerlink" title="Component animation"></a>Component animation</h2><p>The class is well designed. For the fade in animation, <code>.fade</code> need to be added. The animation start when <code>.in</code> is added. The written code is very elegant, but the implementation may not be very trivial. We can refer to this file.</p>
+<p>Bootstrap 3 only have fade in this pure CSS animation. Other component animation is implemented by both CSS and javascript. Need to read the javascript code to understand how to create animation.</p>
+<h2 id="Technique-to-remove-double-border"><a href="#Technique-to-remove-double-border" class="headerlink" title="Technique to remove double border"></a>Technique to remove double border</h2><p>It is common to have button with border. But when there is a list of buttons, the two borders stick together and become a think border. It looks weird. We can remove the border for adjacent button, like <code>.btn + .btn { border-left: 0 }</code>. But Bootstrap 3 have another implementation, we can shift the border by 1 pixel to make the border overlap. This method works when the border color is not transparent. If the border color have alpha value, the border between buttons will have a deeper color.</p>
+<h2 id="Component-content-and-component-part"><a href="#Component-content-and-component-part" class="headerlink" title="Component content and component part"></a>Component content and component part</h2><p>The dismissible alerts is a good example on implementation CSS component.</p>
+<p>The html of dismissible like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;alert alert-warning alert-dismissible&quot;&gt;</span><br><span class="line">  &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;</span><br><span class="line">    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;</span><br><span class="line">  &lt;/button&gt;</span><br><span class="line">  Warning! Better check yourself, you&apos;re not looking too good.</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>It makes sense that considering all elements inside are children elements. But in <code>.alert</code>, the <code>.close</code> button is not the content of <code>.alert</code>, but part of it. Bootstrap 3 move the <code>.close</code> button from the ‘content’ to the ‘<code>.alert</code> div’. <code>.alert-dismissible</code> add <code>padding-right</code> into the <code>.alert</code> div. The <code>.close</code> button is moved to the <code>padding-right</code> by <code>right: -21px</code>, so the close button do not affect the content.</p>
+<p>I am wondering why not using <code>margin-right: -21px</code>. One of the reason using <code>right</code> is keeping the ‘size’ of DOM.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Reset-script&quot;&gt;&lt;a href=&quot;#Reset-script&quot; class=&quot;headerlink&quot; title=&quot;Reset script&quot;&gt;&lt;/a&gt;Reset script&lt;/h2&gt;&lt;p&gt;Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, &lt;code&gt;normalize.less&lt;/code&gt; reset the CSS.&lt;/p&gt;
+&lt;h2 id=&quot;HTML-accessibility&quot;&gt;&lt;a href=&quot;#HTML-accessibility&quot; class=&quot;headerlink&quot; title=&quot;HTML accessibility&quot;&gt;&lt;/a&gt;HTML accessibility&lt;/h2&gt;&lt;p&gt;Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide &lt;code&gt;.sr-only&lt;/code&gt; and &lt;code&gt;.sr-only-focusable&lt;/code&gt; to show content to screen reader without affecting the visual content. &lt;code&gt;.sr-only-focusable&lt;/code&gt; appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like &lt;code&gt;aria-label&lt;/code&gt; for accessibility.&lt;/p&gt;
+&lt;h2 id=&quot;LESS-function&quot;&gt;&lt;a href=&quot;#LESS-function&quot; class=&quot;headerlink&quot; title=&quot;LESS function&quot;&gt;&lt;/a&gt;LESS function&lt;/h2&gt;&lt;p&gt;In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like &lt;code&gt;.mixin()&lt;/code&gt;. This may create some code like &lt;code&gt;.mixin { .mixin() }&lt;/code&gt;. It looks redundant, but it is good in design, as the interface and implementation are separated.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="http://199911.github.io/categories/Code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Implementation of Bootstrap 3 - mixins.less</title>
+    <link href="http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/"/>
+    <id>http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/</id>
+    <published>2016-08-27T16:00:00.000Z</published>
+    <updated>2016-10-02T11:59:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076" target="_blank" rel="external">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+<a id="more"></a>
+<h3 id="mixins-image-less"><a href="#mixins-image-less" class="headerlink" title="mixins/image.less"></a><code>mixins/image.less</code></h3><p>It has two mixins. The first one is for responsive image, which scale the image with ratio fixed.The second one <code>.img-retina(@file-1x; @file-2x; @width-1x; @height-1x)</code> is for retina image.</p>
+<h4 id="Why-we-need-special-handle-on-retina-image"><a href="#Why-we-need-special-handle-on-retina-image" class="headerlink" title="Why we need special handle on retina image?"></a>Why we need special handle on retina image?</h4><p>From this <a href="https://www.sitepoint.com/css-techniques-for-retina-displays/" target="_blank" rel="external">article</a>, the term ‘pixel’ used in images and CSS have a subtle difference. The pixel of image is the smallest physical unit in a display, but the CSS pixel is an abstract unit which is device independent. Suppose we display a 200*200 image in physical pixel. The image is small on a screen with higher dpi, because the more pixel can be shown in the same area. If the image is in CSS pixel, the image size is the same in screen with any DPI.</p>
+<p>Retina image is image with a high resolution, if we use CSS pixel, the image will be extremely large, which may break the page’s layout. Therefore we need to limit the size by parameter <code>@width-1x</code> and <code>@height-1x</code>. If the user don’t have a retina display, we don’t need to download and display the retina version of image (<code>@file-2x</code>), we can display a smaller image (<code>@file-1x</code>) with standard resolution.</p>
+<h3 id="mixins-labels-less"><a href="#mixins-labels-less" class="headerlink" title="mixins/labels.less"></a><code>mixins/labels.less</code></h3><p>It is used to create labels with different color, we can use this to create custom labels easily. Should it be components mixin?</p>
+<h3 id="mixins-reset-filter-less"><a href="#mixins-reset-filter-less" class="headerlink" title="mixins/reset-filter.less"></a><code>mixins/reset-filter.less</code></h3><p>It is used to remove the gradient background in IE 9 or below. Seem IE have some bugs on the gradient background, there are use cases on resetting the filter.</p>
+<h3 id="mixins-responsive-visibility-less"><a href="#mixins-responsive-visibility-less" class="headerlink" title="mixins/responsive-visibility.less"></a><code>mixins/responsive-visibility.less</code></h3><p>It is for the visibility of <code>.visible-{screen size}</code>. Bootstrap 3 use <code>!important</code> in display property to override the <code>display: none;</code>. It sets <code>display: table !important;</code>, <code>display: table-row !important;</code> and <code>display: table-cell !important;</code> for table, tr, th and td. For other element, <code>display: block !important;</code>. So when applying visible class on table element or non-block elements, we need to use <code>.visible-{screen size}-block</code>, <code>.visible-{screen size}-inline</code> and <code>.visible-{screen size}-inline-block</code>.</p>
+<h3 id="mixins-size-less"><a href="#mixins-size-less" class="headerlink" title="mixins/size.less"></a><code>mixins/size.less</code></h3><p>Having two mixin <code>size</code> and <code>square</code>, trivial.</p>
+<h3 id="mixins-tab-focus-less"><a href="#mixins-tab-focus-less" class="headerlink" title="mixins/tab-focus.less"></a><code>mixins/tab-focus.less</code></h3><p>Adding outline to the button when using keyboard tab to focus.</p>
+<h3 id="mixins-reset-text-less"><a href="#mixins-reset-text-less" class="headerlink" title="mixins/reset-text.less"></a><code>mixins/reset-text.less</code></h3><p>This mixin applied on tooltip and popover, because this element can be place in any place, the text style may be affect by the parent.</p>
+<h3 id="mixins-text-emphasis-less"><a href="#mixins-text-emphasis-less" class="headerlink" title="mixins/text-emphasis.less"></a><code>mixins/text-emphasis.less</code></h3><p>This mixin is a helper function to set text color and hover color. It is used in <code>.text-{primary, success ...}</code> class.</p>
+<h3 id="mixins-text-overflow-less"><a href="#mixins-text-overflow-less" class="headerlink" title="mixins/text-overflow.less"></a><code>mixins/text-overflow.less</code></h3><p>The file name explains itself. It configure <code>overflow</code>, <code>text-overflow</code> and <code>white-space</code> property</p>
+<h3 id="mixins-vendor-prefixes-less"><a href="#mixins-vendor-prefixes-less" class="headerlink" title="mixins/vendor-prefixes.less"></a><code>mixins/vendor-prefixes.less</code></h3><p>The file name explain itself, but it is deprecated as there is a grunt module <code>Autoprefixer</code>. These depends on browsers’ implementation and will be updated from time to time, don’t spend too much time on reading it.</p>
+<h2 id="Components-Mixins"><a href="#Components-Mixins" class="headerlink" title="Components Mixins"></a>Components Mixins</h2><p>For some components, the style on <code>:focus</code> and <code>:hover</code> are different. May research the user usability use case. Nothing special.</p>
+<h2 id="Skins-Mixins"><a href="#Skins-Mixins" class="headerlink" title="Skins Mixins"></a>Skins Mixins</h2><p>Mixins for <code>background-color</code> hover effect, <code>border-radius</code> and gradient background.</p>
+<h2 id="Layout-Mixins"><a href="#Layout-Mixins" class="headerlink" title="Layout Mixins"></a>Layout Mixins</h2><h3 id="mixins-clearfix-less"><a href="#mixins-clearfix-less" class="headerlink" title="mixins/clearfix.less"></a><code>mixins/clearfix.less</code></h3><p>For clearfix, we need to apply <code>clear: both;</code> in sibling element. But this mixin apply the style on <code>:after</code>, we can apply the <code>.clearfix</code> class on parent div, which is easier to maintain.</p>
+<h3 id="mixins-center-block-less"><a href="#mixins-center-block-less" class="headerlink" title="mixins/center-block.less"></a><code>mixins/center-block.less</code></h3><p>Align a block element horizontal center.</p>
+<h3 id="mixins-nav-vertical-align-less"><a href="#mixins-nav-vertical-align-less" class="headerlink" title="mixins/nav-vertical-align.less"></a><code>mixins/nav-vertical-align.less</code></h3><p>Align the element inside a nav bar by calculating margin top and bottom.</p>
+<h3 id="mixins-grid-framework-less"><a href="#mixins-grid-framework-less" class="headerlink" title="mixins/grid-framework.less"></a><code>mixins/grid-framework.less</code></h3><p>It create the column class in grid system.</p>
+<h3 id="mixins-grid-less"><a href="#mixins-grid-less" class="headerlink" title="mixins/grid.less"></a><code>mixins/grid.less</code></h3><p>Create the container, row, column push and pull class.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;mixins.less&lt;/code&gt; contains utilities, components, skins and layout ‘functions’ of LESS.&lt;/p&gt;
+&lt;h2 id=&quot;Utilities-Mixins&quot;&gt;&lt;a href=&quot;#Utilities-Mixins&quot; class=&quot;headerlink&quot; title=&quot;Utilities Mixins&quot;&gt;&lt;/a&gt;Utilities Mixins&lt;/h2&gt;&lt;h3 id=&quot;mixins-hide-text-less&quot;&gt;&lt;a href=&quot;#mixins-hide-text-less&quot; class=&quot;headerlink&quot; title=&quot;mixins/hide-text.less&quot;&gt;&lt;/a&gt;&lt;code&gt;mixins/hide-text.less&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It is used to hide the text in the dom. Why don’t we use &lt;code&gt;display: none&lt;/code&gt; or &lt;code&gt;visible: hidden&lt;/code&gt;? Because screen reader cannot read it. An &lt;a href=&quot;https://github.com/twbs/bootstrap/issues/10076&quot;&gt;issue&lt;/a&gt; on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the &lt;code&gt;.hide-text&lt;/code&gt; mixin.&lt;/p&gt;
+&lt;h3 id=&quot;mixins-opacity-less&quot;&gt;&lt;a href=&quot;#mixins-opacity-less&quot; class=&quot;headerlink&quot; title=&quot;mixins/opacity.less&quot;&gt;&lt;/a&gt;&lt;code&gt;mixins/opacity.less&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It adds IE 8 support on &lt;code&gt;opacity&lt;/code&gt;. If we don’t need to suppport IE 8, we can use the &lt;code&gt;opacify&lt;/code&gt; directly.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="http://199911.github.io/categories/Code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Implementation of Bootstrap 3 - variables.less</title>
+    <link href="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/"/>
+    <id>http://199911.github.io/code/2016/08/27/bootstrap-3-variables/</id>
+    <published>2016-08-26T16:00:00.000Z</published>
+    <updated>2016-09-01T14:30:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
+<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+<a id="more"></a>
+<h3 id="Cons-of-centralize-all-variable’s-declaration"><a href="#Cons-of-centralize-all-variable’s-declaration" class="headerlink" title="Cons of centralize all variable’s declaration"></a>Cons of centralize all variable’s declaration</h3><p>Imagine you are working on a new component, every time you need a new variable, you have to go back variables.less to add a new one. When you forget the value of a variable, you also have to go back variable.less to check the value. Lots of context switching during development.</p>
+<h3 id="Pros-of-declare-on-use"><a href="#Pros-of-declare-on-use" class="headerlink" title="Pros of declare on use"></a>Pros of declare on use</h3><p>Declare variable on use can benefit from scope and context. Suppose I am working on navigation bar and I have <code>nav-bar.less</code>. To declare the width of navigation bar, <code>@width</code> may be clear enough to be a variable’s name. Because we are in the context of navigation bar.</p>
+<p>If we put all variables in <code>variable.less</code>, we have to use <code>@nav-bar-width</code>. In <code>nav-bar.less</code>, we will see the <code>nav-bar</code> prefix repeat and repeat again. It is redundant and annoying. Why bootstrap 3 design in this way?</p>
+<h3 id="Nature-of-Bootstrap-3"><a href="#Nature-of-Bootstrap-3" class="headerlink" title="Nature of Bootstrap 3"></a>Nature of Bootstrap 3</h3><p>Bootstrap is a open source project. In the documentation, it gives guideline on the source code and encourage user to reuse the mixins. Users are encouraged configure, modify and compile Bootstrap 3 from source code.</p>
+<h4 id="variables-less-help-new-users-to-configure-Bootstrap-3-easily"><a href="#variables-less-help-new-users-to-configure-Bootstrap-3-easily" class="headerlink" title="variables.less help new users to configure Bootstrap 3 easily"></a>variables.less help new users to configure Bootstrap 3 easily</h4><p>Declare on use make use of context, and it becomes context dependent. But a new user don’t have any context. They need to go through the whole file to find out the declaration variable and what to change. It also increase the maintenance cost when the MOD spread in different part of the source code.</p>
+<p>The <code>variables.less</code> does it part to help new users. They can go through <code>variables.less</code>, figure out what can be configure. They can go deep into the implementation when they found something interesting. Users only need to change and maintain <code>variables.less</code>.</p>
+<h2 id="Insight-Team-project-vs-Open-source-project"><a href="#Insight-Team-project-vs-Open-source-project" class="headerlink" title="Insight - Team project vs Open source project"></a>Insight - Team project vs Open source project</h2><p>In a team project, the team does not change frequently. Every member have their own responsibility. Members may have to maintain set of codes in some directories. They try to prevent code conflict by reducing the number of file shared. When a member need to use the code maintained by others, they can get the context quickly by asking the person in charge. This file structure and workflow makes the team work efficiently.</p>
+<p>But for a open source project, contributors come and go. The communication cost is high. New users tend to read to code instead of finding someone to ask. Users have to maintain the whole project by themselves. Complex file structure for division of responsibility is not needed. Gathering all configuration makes the structure simpler and easier to maintain.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;code&gt;variable.less&lt;/code&gt; is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.&lt;/p&gt;
+&lt;p&gt;This design of &lt;code&gt;variable.less&lt;/code&gt; against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, &lt;code&gt;variables.less&lt;/code&gt; is a good design. Let’s discuss why this design is bad at the first glance.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Code" scheme="http://199911.github.io/categories/Code/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Review of &quot;the mythical man month&quot; chapter 3</title>
+    <link href="http://199911.github.io/review/2016/08/21/the-mythical-man-month-3/"/>
+    <id>http://199911.github.io/review/2016/08/21/the-mythical-man-month-3/</id>
+    <published>2016-08-20T16:00:00.000Z</published>
+    <updated>2016-10-02T11:59:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>We always heard a small, sharp team of first-class people is better than a big team, but it is difficult to scale. What should we do when a big product need to be built?</p>
+<h2 id="The-surgical-team"><a href="#The-surgical-team" class="headerlink" title="The surgical team"></a>The surgical team</h2><p>The book suggest a surgical team like structure to reduce the communication cost. Only one member cutting away on the problem and other teammates give support to him.</p>
+<h3 id="Surgeon"><a href="#Surgeon" class="headerlink" title="Surgeon"></a>Surgeon</h3><ul>
+<li>Chief programmer</li>
+<li>Define functional and performance specification</li>
+<li>Design, code and test program</li>
+<li>Write documentation</li>
+<li>Responsible for all codes</li>
+</ul>
+<h3 id="Copilot"><a href="#Copilot" class="headerlink" title="Copilot"></a>Copilot</h3><ul>
+<li>Able to do what ‘surgeon’ do</li>
+<li>Prevent ‘surgeon’ to make mistake<ul>
+<li>Discuss and evaluate idea and design with ‘surgeon’</li>
+<li>Reseach alternative design strategies</li>
+</ul>
+</li>
+<li>Discuss the functional interface with other teams</li>
+<li>Know all the code</li>
+<li>May write code, but he is not responsible for any part of the code</li>
+</ul>
+<a id="more"></a>
+<h3 id="Administrator"><a href="#Administrator" class="headerlink" title="Administrator"></a>Administrator</h3><ul>
+<li>Handles money, people, space, and machines</li>
+<li>Unless the project has substantial legal, contractual, reporting or financial requirements, one administrator can serve two teams</li>
+</ul>
+<h3 id="Editor"><a href="#Editor" class="headerlink" title="Editor"></a>Editor</h3><ul>
+<li>All documentation should be written by ‘surgeon’, no matter it is internal or external</li>
+<li>Editor criticize, rework surgeon’s manuscript</li>
+<li>Editor also provide reference, bibliography and having version control on documentation.</li>
+</ul>
+<h3 id="Secretaries"><a href="#Secretaries" class="headerlink" title="Secretaries"></a>Secretaries</h3><ul>
+<li>One secretary for administrator, and one for Editor</li>
+<li>Handle project correspondence and non-product files</li>
+</ul>
+<h3 id="Program-Clerk"><a href="#Program-Clerk" class="headerlink" title="Program Clerk"></a>Program Clerk</h3><ul>
+<li>Maintaining all the technical records in a programming-product library</li>
+<li>Has responsibility for both machine-readable and human-readable files</li>
+<li>Make all programming resources public</li>
+<li>Relieves programmers of clerical chores, systematize and ensures proper performance of those oft-neglected chores</li>
+</ul>
+<h3 id="Toolsmith"><a href="#Toolsmith" class="headerlink" title="Toolsmith"></a>Toolsmith</h3><ul>
+<li>Ensure the basic service available</li>
+<li>Responsible for constructing, maintaining and upgrading special tools</li>
+<li>Construct specialized utilities, catalogued procedures and macro libraries</li>
+</ul>
+<h3 id="Tester"><a href="#Tester" class="headerlink" title="Tester"></a>Tester</h3><ul>
+<li>Help design test case and prepare test data</li>
+<li>Plan testing sequence and set up the scaffolding required for component tests</li>
+</ul>
+<h3 id="Language-Lawyer"><a href="#Language-Lawyer" class="headerlink" title="Language Lawyer"></a>Language Lawyer</h3><ul>
+<li>Expert on a specific Language</li>
+<li>Find a neat and efficient way to use the language to do difficult, obscure, or tricky things</li>
+<li>Need to do two or three days studies on good technique</li>
+<li>One ‘language lawyer’ can serve two or three surgeons</li>
+</ul>
+<h2 id="How-it-works"><a href="#How-it-works" class="headerlink" title="How it works"></a>How it works</h2><ul>
+<li>Only ‘surgeon’ and ‘copilot’ take care the design, which guarantee conceptual integrity of the work</li>
+<li>There are no differences of interest, as surgeon make the final decision</li>
+</ul>
+<h2 id="Communication-Pattern"><a href="#Communication-Pattern" class="headerlink" title="Communication Pattern"></a>Communication Pattern</h2><ul>
+<li>Administrator and editor communicate with ‘surgeon’ directly</li>
+<li>Surgeon have close communicate with Copilot</li>
+<li>Programming clerk, toolsmith, tester and language lawyer communicate with surgeon and copilot</li>
+</ul>
+<h2 id="Scaling-up"><a href="#Scaling-up" class="headerlink" title="Scaling up"></a>Scaling up</h2><ul>
+<li>Scale with team as unit</li>
+<li>For a 200 people project, only need to coordinating 20 minds of surgeons.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We always heard a small, sharp team of first-class people is better than a big team, but it is difficult to scale. What should we do when a big product need to be built?&lt;/p&gt;
+&lt;h2 id=&quot;The-surgical-team&quot;&gt;&lt;a href=&quot;#The-surgical-team&quot; class=&quot;headerlink&quot; title=&quot;The surgical team&quot;&gt;&lt;/a&gt;The surgical team&lt;/h2&gt;&lt;p&gt;The book suggest a surgical team like structure to reduce the communication cost. Only one member cutting away on the problem and other teammates give support to him.&lt;/p&gt;
+&lt;h3 id=&quot;Surgeon&quot;&gt;&lt;a href=&quot;#Surgeon&quot; class=&quot;headerlink&quot; title=&quot;Surgeon&quot;&gt;&lt;/a&gt;Surgeon&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Chief programmer&lt;/li&gt;
+&lt;li&gt;Define functional and performance specification&lt;/li&gt;
+&lt;li&gt;Design, code and test program&lt;/li&gt;
+&lt;li&gt;Write documentation&lt;/li&gt;
+&lt;li&gt;Responsible for all codes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Copilot&quot;&gt;&lt;a href=&quot;#Copilot&quot; class=&quot;headerlink&quot; title=&quot;Copilot&quot;&gt;&lt;/a&gt;Copilot&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Able to do what ‘surgeon’ do&lt;/li&gt;
+&lt;li&gt;Prevent ‘surgeon’ to make mistake&lt;ul&gt;
+&lt;li&gt;Discuss and evaluate idea and design with ‘surgeon’&lt;/li&gt;
+&lt;li&gt;Reseach alternative design strategies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Discuss the functional interface with other teams&lt;/li&gt;
+&lt;li&gt;Know all the code&lt;/li&gt;
+&lt;li&gt;May write code, but he is not responsible for any part of the code&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Review of &quot;the mythical man month&quot; chapter 2</title>
+    <link href="http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/"/>
+    <id>http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/</id>
+    <published>2016-08-19T16:00:00.000Z</published>
+    <updated>2016-10-02T11:59:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Why it is difficult to estimate the time cost of a software project?</p>
+<h2 id="Five-reasons"><a href="#Five-reasons" class="headerlink" title="Five reasons"></a>Five reasons</h2><ol>
+<li>Programmers are optimist, tends to underestimate the time cost.</li>
+<li>Having assumption that man and months are interchangeable.</li>
+<li>Software managers have less inherent courage and firmness.</li>
+<li>Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.</li>
+<li>When the schedule is lagged behind, more man power is added, which make the situation delay worser.</li>
+</ol>
+<h3 id="Why-programmers-are-optimist"><a href="#Why-programmers-are-optimist" class="headerlink" title="Why programmers are optimist?"></a>Why programmers are optimist?</h3><p>The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.</p>
+<a id="more"></a>
+<h4 id="Why-we-cannot-estimated-the-time-need-to-be-debug"><a href="#Why-we-cannot-estimated-the-time-need-to-be-debug" class="headerlink" title="Why we cannot estimated the time need to be debug?"></a>Why we cannot estimated the time need to be debug?</h4><p>Before move on to the question, we need to understand the nature of programming first. Programming is more likely human creative activities, which can be divided into three stages:</p>
+<ol>
+<li>The idea</li>
+<li>The implementation</li>
+<li>The interaction</li>
+</ol>
+<p>All programmers try to make sure the idea are perfect before implementation. In reality, it is impossible. The incompleteness and inconsistencies become clearly only during implementation. It means we don’t know the bugs exist before implementation. How can we estimate the time required to fix and test the bugs?</p>
+<h4 id="It-is-very-difficult-to-have-program-without-bugs"><a href="#It-is-very-difficult-to-have-program-without-bugs" class="headerlink" title="It is very difficult to have program without bugs"></a>It is very difficult to have program without bugs</h4><p>A large programming effort consists of many tasks chained end-to-end. Even the probability of tasks to have bug is small, the probability to have whole program bug free is vanishingly small.</p>
+<h3 id="Why-man-and-months-are-not-interchangeable"><a href="#Why-man-and-months-are-not-interchangeable" class="headerlink" title="Why man and months are not interchangeable"></a>Why man and months are not interchangeable</h3><p>The task can be divided into four types.</p>
+<ol>
+<li>Tasks can be partitioned among many workers with no communication among them.<ul>
+<li>The months required is decrease logarithmically. When there are infinity many workers, the months required tend to zero.</li>
+</ul>
+</li>
+<li>Tasks cannot be partitioned because of sequential constraints.<ul>
+<li>The months required is constants, independent from the number of workers.</li>
+<li>Many software tasks have this characteristic because of the nature of debugging</li>
+</ul>
+</li>
+<li>Tasks can be partitioned but require communication like training<ul>
+<li>It is type one plus type two. The months required logarithmically decrease to a constants  when number of worker increase.</li>
+</ul>
+</li>
+<li>Tasks can be partitioned but require intercommunication<ul>
+<li>The communication cost increase with the number of workers. The months required decrease logarithmically. When the number of workers increase further, the communication cost dominated and the months require increase with the number of workers.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Software-managers-need-inherent-courage-and-firmness"><a href="#Software-managers-need-inherent-courage-and-firmness" class="headerlink" title="Software managers need inherent courage and firmness."></a>Software managers need inherent courage and firmness.</h3><p>Software project are difficult to estimate. When the project fall behind the schedule, manager need to have courage and firmness to postpone the deadline and explain this to the patron. A software project is difficult to speed up.</p>
+<h3 id="Brooks’s-Law"><a href="#Brooks’s-Law" class="headerlink" title="Brooks’s Law -"></a>Brooks’s Law -</h3><blockquote>
+<p>Adding manpower to a late software project makes it later.</p>
+</blockquote>
+<p>Software tasks are usually type four task, the communication cost will dominated after the team grow to a certain size.</p>
+<h2 id="Rule-of-thumb-for-scheduling"><a href="#Rule-of-thumb-for-scheduling" class="headerlink" title="Rule of thumb for scheduling"></a>Rule of thumb for scheduling</h2><ul>
+<li>1/6 for coding</li>
+<li>1/3 for planning</li>
+<li>1/4 for component test and early system test</li>
+<li>1/4 for system test, all components in hand</li>
+</ul>
+<p>The coding time is the easiest to estimate.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Why it is difficult to estimate the time cost of a software project?&lt;/p&gt;
+&lt;h2 id=&quot;Five-reasons&quot;&gt;&lt;a href=&quot;#Five-reasons&quot; class=&quot;headerlink&quot; title=&quot;Five reasons&quot;&gt;&lt;/a&gt;Five reasons&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Programmers are optimist, tends to underestimate the time cost.&lt;/li&gt;
+&lt;li&gt;Having assumption that man and months are interchangeable.&lt;/li&gt;
+&lt;li&gt;Software managers have less inherent courage and firmness.&lt;/li&gt;
+&lt;li&gt;Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.&lt;/li&gt;
+&lt;li&gt;When the schedule is lagged behind, more man power is added, which make the situation delay worser.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;Why-programmers-are-optimist&quot;&gt;&lt;a href=&quot;#Why-programmers-are-optimist&quot; class=&quot;headerlink&quot; title=&quot;Why programmers are optimist?&quot;&gt;&lt;/a&gt;Why programmers are optimist?&lt;/h3&gt;&lt;p&gt;The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集九</title>
+    <link href="http://199911.github.io/insight/2016/08/20/readings-9/"/>
+    <id>http://199911.github.io/insight/2016/08/20/readings-9/</id>
+    <published>2016-08-19T16:00:00.000Z</published>
+    <updated>2016-08-20T06:15:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我现在有一些工具类，我应该不应该做自己的框架？"><a href="#我现在有一些工具类，我应该不应该做自己的框架？" class="headerlink" title="我现在有一些工具类，我应该不应该做自己的框架？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html" target="_blank" rel="external">我现在有一些工具类，我应该不应该做自己的框架？</a></h1><p>如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。</p>
+<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义</a></h1><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
+<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h1><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<a id="more"></a>
+<h1 id="十年磨一剑—序"><a href="#十年磨一剑—序" class="headerlink" title="十年磨一剑—序"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="external">十年磨一剑—序</a></h1><p>引入功能強勁嘅library都可以係問題。當一個library好多功能，咁D code一定唔會簡單得去邊。萬一個library出左問題，就要花大量時間去睇code同doc。如果大部份功能都係冇use case嘅話，倒不如用一個功能簡單嘅library，甚至自己寫好過。</p>
+<p>金句一：</p>
+<blockquote>
+<p>在面对这些问题时，人们更多的时候是在寻找一个框架，即使这个框架大到你只想要一个轮子而不得不接收它的整个车子，你依然不会怀疑为什么这样做，当你终于被这个车子的其它零部件影响到你这个小小的轮子行驶，而不得不到处google爬文或分析源码，在弄得焦头烂额，筋疲力尽之时，你心里又会不会发出：这个。。。 能不能简单点的抱怨？</p>
+</blockquote>
+<p>金句二：</p>
+<blockquote>
+<p>对于一个优秀的系统架构师来说，他除了要为应对变化而施展他的艺术创作才华，很多时候他也必须分清哪些是需要变化的，哪些是可以变化的，哪些是不会变化。而要认清这些不同的变化，首先就要理解问题域的本质，例如缓存处理，为什么要缓存处理，它有什么用，在系统中处于什么样的地位，和其它模块的接口在哪里？哪些是缓存可变的，哪些是缓存不会变的，当变化时在哪里处理这个变化，对系统的其它模块的影响在哪里？只有认清这些，才会在引入某个模块时做到心中有数，避开它的负面影响。</p>
+</blockquote>
+<h1 id="一个时代的终结"><a href="#一个时代的终结" class="headerlink" title="一个时代的终结"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/02/20/1669594.html" target="_blank" rel="external">一个时代的终结</a></h1><p>係科技嘅時代，E樣野經常發生，不過科技暫時唔可以完全取代所有工作。最重要identify左邊D係機械性嘅重覆工作，邊D係有價值嘅工作。</p>
+<p>順帶一提，code generator好難去取代programmer。主要係maintenance嘅問題。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;a href=&quot;#我现在有一些工具类，我应该不应该做自己的框架？&quot; class=&quot;headerlink&quot; title=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html&quot;&gt;我现在有一些工具类，我应该不应该做自己的框架？&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。&lt;/p&gt;
+&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。&lt;/p&gt;
+&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义-续&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义-续&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义(续)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义(续)&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;用一個no width space (0xFEFF) 去indicate big endian 定係 small endian&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集八</title>
+    <link href="http://199911.github.io/insight/2016/08/07/readings-8/"/>
+    <id>http://199911.github.io/insight/2016/08/07/readings-8/</id>
+    <published>2016-08-06T16:00:00.000Z</published>
+    <updated>2016-08-20T06:03:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="勿在沙浮筑高台-再论社区风格"><a href="#勿在沙浮筑高台-再论社区风格" class="headerlink" title="勿在沙浮筑高台, 再论社区风格"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/09/26/907112.html" target="_blank" rel="external">勿在沙浮筑高台, 再论社区风格</a></h1><blockquote>
+<p>过去有前辈跟我说, 学好数学就要学好数学史, 学好哲学就要学好哲学史. 为什么? 因为这反映的是人类思维的变化与进步.</p>
+</blockquote>
+<p>相當同意，歷史可以令我地明白有咩問題要解決，同埋當時嘅問題點樣解決，後人點樣improve 個solution。單睇solution唔能夠理解解決問題嘅思路。透過了解思維嘅轉變，可以對問題有更深入嘅了解。</p>
+<h1 id="闲谈-就那么回事"><a href="#闲谈-就那么回事" class="headerlink" title="闲谈: 就那么回事"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/04/948657.html" target="_blank" rel="external">闲谈: 就那么回事</a></h1><p>當中對ORM嘅批評，可以係了解後再思考一下。</p>
+<h1 id="零碎-学习-技术明星-面向对象"><a href="#零碎-学习-技术明星-面向对象" class="headerlink" title="零碎: 学习, 技术明星, 面向对象"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/17/962869.html" target="_blank" rel="external">零碎: 学习, 技术明星, 面向对象</a></h1><p>文中討論左好多Design Pattern點拆，D logic要分到幾細，又有好多唔同嘅situation，又有唔同嘅做法。大家都想用logic同數學去建立一D規則。我覺得當中有一個盲點，就係忽略左「人」E樣野。所謂 spaghetti code 都難免係主觀嘅，個重點可能唔係D logic有幾複雜，而係「人」點樣去接收，點樣去理解D logic。每個requirement都係特別，每個 business 嘅變化都唔同，根本好難去建立一D廣乏應用嘅規則。反而用一D寫文章，communication嘅concept去寫code，似乎會更易maintain。</p>
+<a id="more"></a> 
+<h1 id="回帖整理-论团队中的设计工作"><a href="#回帖整理-论团队中的设计工作" class="headerlink" title="回帖整理: 论团队中的设计工作"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/01/06/1027999.html" target="_blank" rel="external">回帖整理: 论团队中的设计工作</a></h1><blockquote>
+<p>个人水平提高了, 带领的团队质量反而变差了. 但是很多人的认识方法是, 那是因为我还做的不够好. 其实不是这样的, 我觉得我们要反思过去快乐的日子的合理性, 并且承认它. 现在我体会到, 其实我现在做的这种框架式的, 创新型的工作, 如果想提高效率, 必须所有人都具有相当的水平, 并且愿意下力气. 任何一种过程方法, 都解决不了我的难题. 我觉得作为技术组织, 总有一天会进行更高层次的提升才能活, 而不被淘汰. 那时候, 你的团队, 如果都是人肉代码生成器的话, 他们跟的上吗?</p>
+</blockquote>
+<p>團隊平均能力好重要。寫code同係工廠做product唔同，好難做QA。寫code冇得話跟住example copy，要經過思考，對人嘅 dependency 好大。如果條 team 能力跟唔上，無論個product design得幾好，個plan draft得幾好，都係execute唔到。</p>
+<h1 id="三问TDD-单元测试总是好的吗？"><a href="#三问TDD-单元测试总是好的吗？" class="headerlink" title="三问TDD: 单元测试总是好的吗？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/03/16/1108079.html" target="_blank" rel="external">三问TDD: 单元测试总是好的吗？</a></h1><blockquote>
+<p>最初的时候我总觉得TDD最核心的是T，Test。后来才开始明白，它最核心的其实是D，Drive（我非常认同，这就是我说的测试之外的东西）。你可以把测试写的 很弱，但你一定要在此影响下把代码重构的很好。</p>
+</blockquote>
+<p>一語道破我個盲點，冇test唔緊要，最緊要D code structure靚，testable。Testable 嘅 code 多數條理分明，易讀易明，自然少bug，易maintain。重點係code structure，而唔係有冇test，為 test 而 test 係冇咩謂。</p>
+<h1 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/04/21/1164143.html" target="_blank" rel="external">闲言碎语</a></h1><p>原來.Net有樣野叫LINQ，D syntax同sql statement builder 有D似。我睇過js version嘅LINQ npm，但係好似唔係database layer，而係果好似underscore咁，process data嘅library。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;勿在沙浮筑高台-再论社区风格&quot;&gt;&lt;a href=&quot;#勿在沙浮筑高台-再论社区风格&quot; class=&quot;headerlink&quot; title=&quot;勿在沙浮筑高台, 再论社区风格&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/09/26/907112.html&quot;&gt;勿在沙浮筑高台, 再论社区风格&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;过去有前辈跟我说, 学好数学就要学好数学史, 学好哲学就要学好哲学史. 为什么? 因为这反映的是人类思维的变化与进步.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;相當同意，歷史可以令我地明白有咩問題要解決，同埋當時嘅問題點樣解決，後人點樣improve 個solution。單睇solution唔能夠理解解決問題嘅思路。透過了解思維嘅轉變，可以對問題有更深入嘅了解。&lt;/p&gt;
+&lt;h1 id=&quot;闲谈-就那么回事&quot;&gt;&lt;a href=&quot;#闲谈-就那么回事&quot; class=&quot;headerlink&quot; title=&quot;闲谈: 就那么回事&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/11/04/948657.html&quot;&gt;闲谈: 就那么回事&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;當中對ORM嘅批評，可以係了解後再思考一下。&lt;/p&gt;
+&lt;h1 id=&quot;零碎-学习-技术明星-面向对象&quot;&gt;&lt;a href=&quot;#零碎-学习-技术明星-面向对象&quot; class=&quot;headerlink&quot; title=&quot;零碎: 学习, 技术明星, 面向对象&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/11/17/962869.html&quot;&gt;零碎: 学习, 技术明星, 面向对象&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文中討論左好多Design Pattern點拆，D logic要分到幾細，又有好多唔同嘅situation，又有唔同嘅做法。大家都想用logic同數學去建立一D規則。我覺得當中有一個盲點，就係忽略左「人」E樣野。所謂 spaghetti code 都難免係主觀嘅，個重點可能唔係D logic有幾複雜，而係「人」點樣去接收，點樣去理解D logic。每個requirement都係特別，每個 business 嘅變化都唔同，根本好難去建立一D廣乏應用嘅規則。反而用一D寫文章，communication嘅concept去寫code，似乎會更易maintain。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集七</title>
+    <link href="http://199911.github.io/insight/2016/08/06/readings-7/"/>
+    <id>http://199911.github.io/insight/2016/08/06/readings-7/</id>
+    <published>2016-08-05T16:00:00.000Z</published>
+    <updated>2016-08-20T06:03:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="怪怪设计论-抽象无处不在"><a href="#怪怪设计论-抽象无处不在" class="headerlink" title="怪怪设计论: 抽象无处不在"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/09/17/894819.html" target="_blank" rel="external">怪怪设计论: 抽象无处不在</a></h1><p>文章主要帶出以下幾點：</p>
+<ol>
+<li>Abstraction 做得好唔好唔係睇同現實有幾相似，係睇有冇抽象到事物嘅必要本質，抽象出黎嘅object易唔易被處理，唔係為用理論而抽象。</li>
+<li>設計必需由數據表現形式出發，而唔係一D OO 嘅design pattern。</li>
+<li>設計時，要係現實世界同電腦系統嘅抽象中平衡<br>總括而言，軟件設計時，必需深入了解現實嘅問題，再抽象必要嘅本質，以Data為設計嘅藍圖。Implementation果時，唔可以過度重視現實世界嘅抽象而忽略電腦系統嘅抽象，因為implementation果時係要做大量嘅計算，如果個model唔適合計算，就會做成更多嘅問題。係設計對外嘅interface時，可以多運用OO嘅思想，令到其他人可以更易運用。</li>
+</ol>
+<h1 id="如何时刻保持在目标的正确轨道上"><a href="#如何时刻保持在目标的正确轨道上" class="headerlink" title="如何时刻保持在目标的正确轨道上"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html" target="_blank" rel="external">如何时刻保持在目标的正确轨道上</a></h1><p>養成習慣係堅持目標上面有好大幫助。</p>
+<a id="more"></a> 
+<h1 id="非言语沟通技巧"><a href="#非言语沟通技巧" class="headerlink" title="非言语沟通技巧"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959878.html" target="_blank" rel="external">非言语沟通技巧</a></h1><p>眼神，衣着，肢體語言，聲調，準時同笑容都係溝通嘅一種。</p>
+<h1 id="高级程序员应具有的素质"><a href="#高级程序员应具有的素质" class="headerlink" title="高级程序员应具有的素质"></a><a href="http://www.cnblogs.com/flying_bat/archive/2009/05/20/1467324.html" target="_blank" rel="external">高级程序员应具有的素质</a></h1><ol>
+<li>理解requirement</li>
+<li>掌握項目設計和流程處理方法</li>
+<li>Modularize 同 reusability</li>
+<li>評估整體項目</li>
+<li>組織管理團隊</li>
+</ol>
+<h1 id="Git-少用-Pull-多用-Fetch-和-Merge"><a href="#Git-少用-Pull-多用-Fetch-和-Merge" class="headerlink" title="Git 少用 Pull 多用 Fetch 和 Merge"></a><a href="http://www.cnblogs.com/flying_bat/p/3408634.html" target="_blank" rel="external">Git 少用 Pull 多用 Fetch 和 Merge</a></h1><p>文中提到唔用git pull，因為會update local branch。但係我地個workflow通常係一人一個branch，其實冇咩影響。</p>
+<h1 id="初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件"><a href="#初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件" class="headerlink" title="初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件"></a><a href="http://www.cnblogs.com/flying_bat/p/4172435.html" target="_blank" rel="external">初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件</a></h1><p>原來有command可以delete一個file係repo所有history，等得閒研究下。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;怪怪设计论-抽象无处不在&quot;&gt;&lt;a href=&quot;#怪怪设计论-抽象无处不在&quot; class=&quot;headerlink&quot; title=&quot;怪怪设计论: 抽象无处不在&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/09/17/894819.html&quot;&gt;怪怪设计论: 抽象无处不在&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文章主要帶出以下幾點：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Abstraction 做得好唔好唔係睇同現實有幾相似，係睇有冇抽象到事物嘅必要本質，抽象出黎嘅object易唔易被處理，唔係為用理論而抽象。&lt;/li&gt;
+&lt;li&gt;設計必需由數據表現形式出發，而唔係一D OO 嘅design pattern。&lt;/li&gt;
+&lt;li&gt;設計時，要係現實世界同電腦系統嘅抽象中平衡&lt;br&gt;總括而言，軟件設計時，必需深入了解現實嘅問題，再抽象必要嘅本質，以Data為設計嘅藍圖。Implementation果時，唔可以過度重視現實世界嘅抽象而忽略電腦系統嘅抽象，因為implementation果時係要做大量嘅計算，如果個model唔適合計算，就會做成更多嘅問題。係設計對外嘅interface時，可以多運用OO嘅思想，令到其他人可以更易運用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;如何时刻保持在目标的正确轨道上&quot;&gt;&lt;a href=&quot;#如何时刻保持在目标的正确轨道上&quot; class=&quot;headerlink&quot; title=&quot;如何时刻保持在目标的正确轨道上&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html&quot;&gt;如何时刻保持在目标的正确轨道上&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;養成習慣係堅持目標上面有好大幫助。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集六</title>
+    <link href="http://199911.github.io/insight/2016/08/05/readings-6/"/>
+    <id>http://199911.github.io/insight/2016/08/05/readings-6/</id>
+    <published>2016-08-04T16:00:00.000Z</published>
+    <updated>2016-10-02T11:59:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="无为无不为"><a href="#无为无不为" class="headerlink" title="无为无不为"></a><a href="http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html" target="_blank" rel="external">无为无不为</a></h1><p>1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。<br>2.管理唔等於控制<br>3.唔好做惡意競爭</p>
+<h1 id="优秀程序员的两大要素：懒-笨"><a href="#优秀程序员的两大要素：懒-笨" class="headerlink" title="优秀程序员的两大要素：懒 + 笨"></a><a href="http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html" target="_blank" rel="external">优秀程序员的两大要素：懒 + 笨</a></h1><p>個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做<br>1.用Automation同tool去增加productivity，而唔係死做<br>2.唔好停止學習<br>3.要批判自己嘅工作，多質疑<br>4.Debug果時要拋棄所有假設</p>
+<a id="more"></a>
+<h1 id="8-个开发更安全代码的简单规则"><a href="#8-个开发更安全代码的简单规则" class="headerlink" title="8 个开发更安全代码的简单规则"></a><a href="http://www.cnblogs.com/flying_bat/archive/2006/11/20/565636.html" target="_blank" rel="external">8 个开发更安全代码的简单规则</a></h1><p>1.寫code果個要負起責任<br>2.唔好相信User input，要sanitize同做validation<br>3.要有[威脅模型分析(<a href="https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90" target="_blank" rel="external">https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90</a>)<br>4.要留意security嘅新聞<br>5.用Fuzz testing<br>6.唔好用唔安全嘅library<br>7.要maintain舊code嘅security<br>8.可以用code分析工具</p>
+<h1 id="微软的秘密面试题"><a href="#微软的秘密面试题" class="headerlink" title="微软的秘密面试题"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/07/666449.html" target="_blank" rel="external">微软的秘密面试题</a></h1><p>PM要同邏輯強但缺乏社交技巧嘅programmer溝通，需要一D說服技巧。一D面試題目測試重點唔係智力，而係耐性同友好嘅溝通方法。</p>
+<h1 id="“千般路”与“磨豆腐”"><a href="#“千般路”与“磨豆腐”" class="headerlink" title="“千般路”与“磨豆腐”"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/08/668166.html" target="_blank" rel="external">“千般路”与“磨豆腐”</a></h1><p>每當有一D新技術出現，都好想去apply。但係要考慮到成條Team跟唔跟得上，同埋轉左新技術係咪真係有效益。好多時都係現有嘅code慢慢改善。</p>
+<h1 id="程序员的灯下黑：重知识轻技术"><a href="#程序员的灯下黑：重知识轻技术" class="headerlink" title="程序员的灯下黑：重知识轻技术"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/05/30/764637.html" target="_blank" rel="external">程序员的灯下黑：重知识轻技术</a></h1><p>知識只係技術嘅一部份，係適當嘅時候以適當嘅方式運用出來嘅知識先係技術。好多時一有新嘅technology就走去學，好似學識左就係勁。但好多時技術就係design pattern, error handling，E D 唔係咁fancy嘅技巧表現出來，E D先係扎實嘅功夫。</p>
+<h1 id="程序员的灯下黑：不要忘记你的目标"><a href="#程序员的灯下黑：不要忘记你的目标" class="headerlink" title="程序员的灯下黑：不要忘记你的目标"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785841.html" target="_blank" rel="external">程序员的灯下黑：不要忘记你的目标</a></h1><p>Programming係為左解決問題，唔係為寫而寫。寫果時一定要記住要解決嘅問題。</p>
+<h1 id="程序员的灯下黑：能认识自己吗？"><a href="#程序员的灯下黑：能认识自己吗？" class="headerlink" title="程序员的灯下黑：能认识自己吗？"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785835.html" target="_blank" rel="external">程序员的灯下黑：能认识自己吗？</a></h1><p>當覺得自己學唔到野個時，可以主動係自己用緊嘅technology同library深入了解一下。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;无为无不为&quot;&gt;&lt;a href=&quot;#无为无不为&quot; class=&quot;headerlink&quot; title=&quot;无为无不为&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html&quot;&gt;无为无不为&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。&lt;br&gt;2.管理唔等於控制&lt;br&gt;3.唔好做惡意競爭&lt;/p&gt;
+&lt;h1 id=&quot;优秀程序员的两大要素：懒-笨&quot;&gt;&lt;a href=&quot;#优秀程序员的两大要素：懒-笨&quot; class=&quot;headerlink&quot; title=&quot;优秀程序员的两大要素：懒 + 笨&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html&quot;&gt;优秀程序员的两大要素：懒 + 笨&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做&lt;br&gt;1.用Automation同tool去增加productivity，而唔係死做&lt;br&gt;2.唔好停止學習&lt;br&gt;3.要批判自己嘅工作，多質疑&lt;br&gt;4.Debug果時要拋棄所有假設&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Review of &quot;Yahoo Design Pattern Library&quot; Part I</title>
+    <link href="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/"/>
+    <id>http://199911.github.io/review/2016/07/10/yahoo-design-part-1/</id>
+    <published>2016-07-09T16:00:00.000Z</published>
+    <updated>2016-07-10T12:13:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>The library is pretty old. May be it is a good document for us to review the design of commonly used UI/X design pattern. This library explains patterns clearly. It talks about “What it solve”, “When to use”, “How it solve”, “Why we use it”.</p>
+<a id="more"></a> 
+<h2 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h2><h3 id="Grid-System"><a href="#Grid-System" class="headerlink" title="Grid System"></a>Grid System</h3><p>Grid system standardize the size of elements</p>
+<ul>
+<li>What it solve<ul>
+<li>The consistency among common page elements, page width, division of space, ad usage and code base.</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>Creating/managing a large quantity of web pages</li>
+<li>Web pages are created by different groups and individuals</li>
+</ul>
+</li>
+<li>Why use this<ul>
+<li>Templages reduces designers’ and engineers’ effort</li>
+<li>Consistency contributes to a cohesive brand and user expereience</li>
+</ul>
+</li>
+<li>Accessibility<ul>
+<li>Consistency make the position of page elements easy to predict</li>
+</ul>
+</li>
+</ul>
+<h2 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h2><h3 id="Accordion"><a href="#Accordion" class="headerlink" title="Accordion"></a>Accordion</h3><p>An accordion is a group of collapsible panels with links and selectable items inside.</p>
+<ul>
+<li>What it solve<ul>
+<li>Give user access to a large quantity of item without overwhelming them</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The space is constrained</li>
+<li>The number of options is large</li>
+<li>The list of items can be logically grouped into smaller, roughly equal sized chunks</li>
+</ul>
+</li>
+<li>How to solve<ul>
+<li>Prsent a two-tiered set of options: the top level is category, the second level is options</li>
+<li>Only expand one default panel to help user focus</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>Expand the main category</li>
+<li>Avoid nested accordion</li>
+<li>Expand all categories when javascript is disabled</li>
+<li>Use <code>height:0</code> instead of <code>display:none</code> to hide the folded accordion<ul>
+<li>For screen reader</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Alphanumeric-Filter-Links"><a href="#Alphanumeric-Filter-Links" class="headerlink" title="Alphanumeric Filter Links"></a>Alphanumeric Filter Links</h3><p>Grouped links alphabetically. Show groups in different pages.</p>
+<ul>
+<li>What it solve<ul>
+<li>Help user to find resources alphabetically within a large data set</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>When user know the first letter of result</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>The idea is to reduce the length of page</li>
+<li>I think this solution is outdated</li>
+</ul>
+</li>
+</ul>
+<h3 id="Breadcrumbs"><a href="#Breadcrumbs" class="headerlink" title="Breadcrumbs"></a>Breadcrumbs</h3><p>Displaying a horizontal list of labels that reflect the location of current page in the hierarchy of a website.</p>
+<ul>
+<li>What it solve<ul>
+<li>Help users navigate up</li>
+<li>Help users to understand where they is in relation to the rest of the site.</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The website have lots of layer</li>
+<li>Users are difficult the navigate between different layer</li>
+<li>Users get into the webpage from external resource<ul>
+<li>Such as search engine</li>
+<li>User need to get context of current page</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How to solve<ul>
+<li>Showing a horizontal tag. The tags are the page levels.</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>Don’t use “Home” for topmost page, use specific name<ul>
+<li>The user may not know what is the website about, the specific name give extra information</li>
+</ul>
+</li>
+<li>The breadcrumb label should mach the corresponding page title</li>
+</ul>
+</li>
+</ul>
+<h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><ul>
+<li>There are two kinds of pagination<ul>
+<li>Item pagination</li>
+<li>Search pagination</li>
+</ul>
+</li>
+<li>Disable the hyperlink of current page in pagination bar for accessibility</li>
+</ul>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><p>For navigating stacked panes</p>
+<h4 id="Module-Tabs"><a href="#Module-Tabs" class="headerlink" title="Module Tabs"></a>Module Tabs</h4><p>Show the content in a small “window” with multiple tabs. Update the content (switch to different pane) by javascript.</p>
+<p>Note:</p>
+<ul>
+<li>Clicking the tab should not affect other component</li>
+<li>The categories title is short and informative</li>
+<li>It is similar to accordion, but<ul>
+<li>accordion is showing options and items</li>
+<li>module tag is show information and content</li>
+</ul>
+</li>
+<li>Add <code>:active</code> on the showing tag to increase accessibility</li>
+</ul>
+<h4 id="Navigation-Tabs"><a href="#Navigation-Tabs" class="headerlink" title="Navigation Tabs"></a>Navigation Tabs</h4><ul>
+<li>What it solve<ul>
+<li>Navigate through a site to locate content and features</li>
+<li>Clearly indicate user current location in the site</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>It is Module Tabs with scope is the whole site</li>
+</ul>
+</li>
+</ul>
+<h3 id="Navigation-Bar"><a href="#Navigation-Bar" class="headerlink" title="Navigation Bar"></a>Navigation Bar</h3><p>Provides persistent navigation assistance</p>
+<h4 id="Top-Navigation-Bar"><a href="#Top-Navigation-Bar" class="headerlink" title="Top Navigation Bar"></a>Top Navigation Bar</h4><p>Similar to Navigation Tabs, but it is a bar</p>
+<ul>
+<li>Note<ul>
+<li>Navigation bar is in header</li>
+<li>We can have a second level bar under the top level navigation bar</li>
+<li>If there are second or third level bar, we can consider using left navigation bar</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>When the categories is kind of individual</li>
+</ul>
+</li>
+</ul>
+<h3 id="Left-Navigation-Bar"><a href="#Left-Navigation-Bar" class="headerlink" title="Left Navigation Bar"></a>Left Navigation Bar</h3><p>Similar to Top Navigation Bar. It is better than Top Navigation Bar when:</p>
+<ul>
+<li>There are more categories</li>
+<li>The categories title is long<ul>
+<li>There more space to show the navigation bar</li>
+</ul>
+</li>
+<li>The category labels can be an expend button or hyperlink<ul>
+<li>Make the behaviour consistent</li>
+</ul>
+</li>
+</ul>
+<h3 id="Progress-Bar"><a href="#Progress-Bar" class="headerlink" title="Progress Bar"></a>Progress Bar</h3><p>The UI is similar to Breadcrumbs, but their purpose is different</p>
+<ul>
+<li>What it solve<ul>
+<li>Tell users where they are in a multi-screen process</li>
+</ul>
+</li>
+<li>Note<ul>
+<li>The tag need to be an action</li>
+<li>Don’t use this in some common or routine missions</li>
+<li>Let user to estimate the length of flow</li>
+</ul>
+</li>
+</ul>
+<h2 id="Select"><a href="#Select" class="headerlink" title="Select"></a>Select</h2><h3 id="Autocomplete"><a href="#Autocomplete" class="headerlink" title="Autocomplete"></a>Autocomplete</h3><ul>
+<li>What it solve<ul>
+<li>Help user to enter input into a text box which could be ambiguous or hard to remember</li>
+<li>Prevent typo</li>
+</ul>
+</li>
+<li>When to use<ul>
+<li>The suggestion can be pulled from a manageable set of data</li>
+<li>The input item can be entered in multiple ways</li>
+<li>Input speed and accuracy is important</li>
+<li>The required input is not very long</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>It gives lots of suggestion on interaction, but I don’t think we need to implement it</li>
+</ul>
+</li>
+</ul>
+<h3 id="Calendar-picker"><a href="#Calendar-picker" class="headerlink" title="Calendar picker"></a>Calendar picker</h3><p>Use calendar picker library. The library can handle this for us</p>
+<h3 id="Carousel"><a href="#Carousel" class="headerlink" title="Carousel"></a>Carousel</h3><p>Provide a better object selection experience.</p>
+<ul>
+<li>When to use<ul>
+<li>Image oriented menu</li>
+</ul>
+</li>
+<li>How it solve<ul>
+<li>Provide focus</li>
+<li>User can slide</li>
+<li>Order the items</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>Need to show other options to indicate the carousel is slidable</li>
+<li>Just use a carousel plugin</li>
+</ul>
+</li>
+</ul>
+<h2 id="Rich-Interaction"><a href="#Rich-Interaction" class="headerlink" title="Rich Interaction"></a>Rich Interaction</h2><h3 id="Invitation"><a href="#Invitation" class="headerlink" title="Invitation"></a>Invitation</h3><p>Indicator there are extra feature on page element. It is useful when AJAX is not very common. I think it becomes common sense now.</p>
+<h4 id="Cursor-Invitation"><a href="#Cursor-Invitation" class="headerlink" title="Cursor Invitation"></a>Cursor Invitation</h4><p>Change the icon of pointers</p>
+<ul>
+<li>When to use<ul>
+<li>User can have interaction with some objects</li>
+<li>Difficult to provide preview</li>
+<li>Don’t need to provide preview</li>
+<li>Want to simplify the operation</li>
+</ul>
+</li>
+</ul>
+<h4 id="Drop-Invitation"><a href="#Drop-Invitation" class="headerlink" title="Drop Invitation"></a>Drop Invitation</h4><p>Indicate valid candidate drop sites.</p>
+<ul>
+<li>Note<ul>
+<li>We can have more clear instrcution by using javascript</li>
+</ul>
+</li>
+</ul>
+<h4 id="Hover-Invitation"><a href="#Hover-Invitation" class="headerlink" title="Hover Invitation"></a>Hover Invitation</h4><p>The description need to be short</p>
+<h4 id="Tool-Tip-Invitation"><a href="#Tool-Tip-Invitation" class="headerlink" title="Tool Tip Invitation"></a>Tool Tip Invitation</h4><p>Show a short description when mouse hover on the page element</p>
+<h3 id="Transition"><a href="#Transition" class="headerlink" title="Transition"></a>Transition</h3><ul>
+<li>Let users understand the system is processing</li>
+<li>Let users feel they need to wiat shorter</li>
+<li>Make the UI more natural, because thing do not disappear in real world</li>
+<li>User focus on changing element</li>
+<li>Most transition should less then 0.5 second</li>
+<li>When the change of element is not very important, we can use transition with 1 second duration</li>
+</ul>
+<h4 id="Animate-Transition"><a href="#Animate-Transition" class="headerlink" title="Animate Transition"></a>Animate Transition</h4><p>Animating the in-between positions of a moving object.</p>
+<ul>
+<li>When to use <ul>
+<li>Make the transition of hiding element more smooth</li>
+<li>Show how an element change the position</li>
+<li>Resizing element</li>
+</ul>
+</li>
+<li>Note <ul>
+<li>Don’t add animation which is not trigger by user.<ul>
+<li>It distraction the user</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Bright-transition"><a href="#Bright-transition" class="headerlink" title="Bright transition"></a>Bright transition</h4><p>Singal that a previously dimmed object is now active or avaliable.</p>
+<h4 id="Collapse-Transition"><a href="#Collapse-Transition" class="headerlink" title="Collapse Transition"></a>Collapse Transition</h4><p>Hide an object which is no logner of primary importance. </p>
+<h4 id="Cross-Fade-Transition"><a href="#Cross-Fade-Transition" class="headerlink" title="Cross Fade Transition"></a>Cross Fade Transition</h4><p>Smoothly replace an old element with new element.</p>
+<ul>
+<li>Fade out the old element and Fade in the new element</li>
+<li>User can focus on the same area, but with content updated</li>
+<li>I feel like this is outdated</li>
+</ul>
+<h4 id="Dim-Transition"><a href="#Dim-Transition" class="headerlink" title="Dim Transition"></a>Dim Transition</h4><p>Indicate an object is secondary importance, not available or currently inactive. If it will not be available or active later, hiding it may be a better option.</p>
+<h4 id="Expand-Transition"><a href="#Expand-Transition" class="headerlink" title="Expand Transition"></a>Expand Transition</h4><p>Indicate the previously collapsed object become active or available now. It can get more attention than Dim and Highlight transition.</p>
+<h4 id="Fade-In-Transition"><a href="#Fade-In-Transition" class="headerlink" title="Fade In Transition"></a>Fade In Transition</h4><p>Note </p>
+<ul>
+<li>Duration; 0.25 to 0.5</li>
+<li>If you need to show a secondary importance object, we can use fade in</li>
+<li>Useful when you don’t want the transition catch too much attention</li>
+</ul>
+<h4 id="Fade-Out-Transition"><a href="#Fade-Out-Transition" class="headerlink" title="Fade Out Transition"></a>Fade Out Transition</h4><p>It is used in self-healing Transition. The property is similar to Fade In Transition</p>
+<h4 id="Self-Healing-Transition"><a href="#Self-Healing-Transition" class="headerlink" title="Self Healing Transition"></a>Self Healing Transition</h4><p>We can use this when some object is removed and leaving a hole in the list or form. It use slide or fade out to make resize more smooth.</p>
+<h4 id="Slide-Transition"><a href="#Slide-Transition" class="headerlink" title="Slide Transition"></a>Slide Transition</h4><p>Note</p>
+<ul>
+<li>Replace popup window</li>
+<li>When the content is context dependent, use this to prevent context switch</li>
+</ul>
+<h4 id="Spotlight-Transition"><a href="#Spotlight-Transition" class="headerlink" title="Spotlight Transition"></a>Spotlight Transition</h4><ul>
+<li>Have the highlight appear instantly when the change occurs and then fade out within one second or less</li>
+<li>Useful to catch user’s attention</li>
+</ul>
+<h3 id="Drag-and-Drop"><a href="#Drag-and-Drop" class="headerlink" title="Drag and Drop"></a>Drag and Drop</h3><ul>
+<li>Useful for reorder layout without reload the page</li>
+<li>There lots of detail, but we usually use library. So we can skip it</li>
+<li>Revise <a href="https://developer.yahoo.com/ypatterns/richinteraction/dragdrop/modules.html" target="_blank" rel="external">this</a> when we need</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://developer.yahoo.com/ypatterns/" target="_blank" rel="external">Yahoo Design Pattern Library</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The library is pretty old. May be it is a good document for us to review the design of commonly used UI/X design pattern. This library explains patterns clearly. It talks about “What it solve”, “When to use”, “How it solve”, “Why we use it”.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+</feed>
