@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2016-11-19T14:17:10.000Z</updated>
+  <updated>2016-11-23T16:37:37.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,348 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</title>
+    <link href="http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/"/>
+    <id>http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/</id>
+    <published>2016-11-23T16:00:00.000Z</published>
+    <updated>2016-11-23T16:37:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This chapter give some hint on writing maintainable CSS and introduce SCSS.</p>
+<h3 id="Organize-style"><a href="#Organize-style" class="headerlink" title="Organize style"></a>Organize style</h3><ul>
+<li>Class name<ul>
+<li>Name style by purpose, not appearance</li>
+<li>Don’t use name base on position<ul>
+<li>.leftSideBar</li>
+</ul>
+</li>
+<li>Avoid cryptic names</li>
+</ul>
+</li>
+<li>Don’t repeat yourself<ul>
+<li>I think it depends on context</li>
+</ul>
+</li>
+<li>Use multiple Class<ul>
+<li>Using partial in SCSS seems a better choice</li>
+</ul>
+</li>
+<li>Group related style<ul>
+<li>apply to related parts of a page</li>
+<li>with a related purpose</li>
+</ul>
+</li>
+<li>Separate groups by comment or put it in different style sheet<ul>
+<li><code>@import</code> will delay the rendering, use css pre processor instead</li>
+</ul>
+</li>
+</ul>
+<h3 id="Reset-CSS-vs-Normalize-CSS"><a href="#Reset-CSS-vs-Normalize-CSS" class="headerlink" title="Reset CSS vs Normalize CSS"></a>Reset CSS vs Normalize CSS</h3><p>Reset style means remove all browser CSS, normalize means unify the styles. For example, reset CSS will make headlines and paragraph the same size.</p>
+<p>Reset style:</p>
+<ul>
+<li>Remove padding and margins</li>
+<li>Apply consistent font sizes</li>
+<li>Set a consistent line height</li>
+<li>Improve table border and create consistent table cells</li>
+<li>Remove borders from linked images</li>
+<li>Set consistent list indents and bullet types</li>
+<li>Remove quote marks from quoted material</li>
+</ul>
+<h3 id="Using-Descendant-Selectors"><a href="#Using-Descendant-Selectors" class="headerlink" title="Using Descendant Selectors"></a>Using Descendant Selectors</h3><ul>
+<li>Limit the scope of CSS by descendant selectors and <code>&lt;div&gt;</code>.</li>
+<li>Add class to body to identify page type and layout<ul>
+<li>Just like a “namespace”</li>
+</ul>
+</li>
+</ul>
+<h2 id="OOCSS-vs-SMACSS"><a href="#OOCSS-vs-SMACSS" class="headerlink" title="OOCSS vs SMACSS"></a>OOCSS vs SMACSS</h2><p>Other approaches on organizing CSS</p>
+<ul>
+<li>http:// coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/</li>
+<li><a href="http://smacss.com" target="_blank" rel="external">http://smacss.com</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This chapter give some hint on writing maintainable CSS and introduce SCSS.&lt;/p&gt;
+&lt;h3 id=&quot;Organize-style&quot;&gt;&lt;a href=&quot;#Organize-style&quot; class=&quot;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>&quot;CSS - the missing manual 2nd edition&quot; CSS Page Layout</title>
+    <link href="http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/"/>
+    <id>http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/</id>
+    <published>2016-11-19T16:00:00.000Z</published>
+    <updated>2016-11-20T06:32:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This chapter have enough images to help reader understand the layout. I highly recommend to learn layout by reading this chapter</p>
+<h3 id="Layout-type"><a href="#Layout-type" class="headerlink" title="Layout type"></a>Layout type</h3><ul>
+<li>Fixed width<ul>
+<li>The <code>width</code> value is a fixed numerical value</li>
+</ul>
+</li>
+<li>Fluid<ul>
+<li>The <code>width</code> is a percentage value</li>
+</ul>
+</li>
+<li>Responsive Web design (RWD)<ul>
+<li>The layout change with the screen size</li>
+<li>The layout for different screen can be “Fixed Width” and “Fluid”</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="Common-technique-for-css-layout"><a href="#Common-technique-for-css-layout" class="headerlink" title="Common technique for css layout"></a>Common technique for css layout</h3><ul>
+<li>float (for different section)</li>
+<li>absolute positioning</li>
+</ul>
+<h3 id="Why-mobile-first"><a href="#Why-mobile-first" class="headerlink" title="Why mobile first?"></a>Why mobile first?</h3><p>Limited screen size help us eliminate noise and focus on content</p>
+<h3 id="Workflow-on-design"><a href="#Workflow-on-design" class="headerlink" title="Workflow on design"></a>Workflow on design</h3><p>In short, design from the highest abstraction layer to the lowest.</p>
+<ol>
+<li>Identify the layout first<ul>
+<li>don’t spend too much time on graphic and detail</li>
+</ul>
+</li>
+<li>Identify different sections (boxes)<ul>
+<li>Notice that the HTML element will take up all width by default. The size of column should be determined in step 1.</li>
+</ul>
+</li>
+<li>Remember the background image</li>
+<li>Think about the implementation of layout</li>
+<li>Design the style of different element</li>
+<li>Determine the size of margins and padding</li>
+</ol>
+<h3 id="To-fix-items-inside-float-container-break-outside"><a href="#To-fix-items-inside-float-container-break-outside" class="headerlink" title="To fix items inside float container break outside"></a>To fix items inside float container break outside</h3><p>Four solutions:</p>
+<ul>
+<li>Add <code>clear: both;</code> element at the bottom inside the floating container</li>
+<li>Float the Item</li>
+<li>Add <code>overflow: hidden;</code><ul>
+<li>Notice that if element is absolute positioned, it will not show up. (It is hidden)</li>
+</ul>
+</li>
+<li>Use micro clear fix<ul>
+<li>Add <code>clear: both;</code> in pseudo element <code>::after</code></li>
+<li>Also <code>display: table;</code></li>
+<li>Bootstrap 3 use this technique</li>
+</ul>
+</li>
+</ul>
+<h3 id="Using-table-to-layout"><a href="#Using-table-to-layout" class="headerlink" title="Using table to layout"></a>Using table to layout</h3><p>We can use multicolumn in CSS 3 instead</p>
+<ul>
+<li>Pros<ul>
+<li>When you need to create columns with same height</li>
+</ul>
+</li>
+<li>Cons<ul>
+<li>Need to add html code</li>
+<li>difficult to change</li>
+<li>not work well in cellphone</li>
+</ul>
+</li>
+</ul>
+<h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ul>
+<li>height depends on content<ul>
+<li>difficult to create full height column<ul>
+<li>Use a wrapper to wrap the main content (should be long enough) with the columns</li>
+<li>and then add background img with the same width and repeat vertically as the column in wrapper</li>
+<li>the column have back ground , but actually it is background of the wrapper</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Float does not work with <code>position:fixed</code> or <code>position:absolute</code></li>
+</ul>
+<h3 id="Positioning-properties-left-right-top-and-bottom"><a href="#Positioning-properties-left-right-top-and-bottom" class="headerlink" title="Positioning properties (left, right, top and bottom)"></a>Positioning properties (left, right, top and bottom)</h3><ul>
+<li>Let browser calculate the size of element<ul>
+<li>Specify both left and right / top and bottom</li>
+<li>I cannot come up with use case<ul>
+<li>may be using <code>vh</code> and <code>vw</code> already serve most of our needs</li>
+<li><code>calc()</code> give us more flexibility</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Percentage values will not change the element’s size</li>
+</ul>
+<h3 id="Media-query"><a href="#Media-query" class="headerlink" title="Media query"></a>Media query</h3><p>Common usage:</p>
+<ul>
+<li>adjust column</li>
+<li>flexible width</li>
+<li>tighten up white space</li>
+<li>adjust font sizes</li>
+<li>change navigation menus<ul>
+<li>convert nav bar to dropdown in mobile device</li>
+</ul>
+</li>
+<li>hide content on handhold device</li>
+<li>use background image</li>
+</ul>
+<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a>Flexbox</h2><h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><ul>
+<li><code>flex-direction</code><ul>
+<li>usually use ‘row’ in desktop and switch to ‘column’ in mobile</li>
+</ul>
+</li>
+<li><code>justify-content</code><ul>
+<li>if flex widths is used, justify-content have no effect</li>
+</ul>
+</li>
+<li><code>align-items</code><ul>
+<li>default value: <code>stretch</code></li>
+<li>align baseline<ul>
+<li>align the first line of text</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>align-content only works when</code><ul>
+<li>flex-wrap is wrap</li>
+<li>flex container must taller than the rows of flex items</li>
+<li>default value: <code>stretch</code></li>
+</ul>
+</li>
+<li><code>order</code><ul>
+<li>Solve the CSS negative margin to change the order (they want to put main content in HTML first for SEO)</li>
+</ul>
+</li>
+<li><code>flex</code><ul>
+<li>default values:<ul>
+<li>0 1 auto</li>
+<li><ul>
+<li>1 0% (if the first value is defined)</li>
+</ul>
+</li>
+<li>what if * = 0?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Special-note"><a href="#Special-note" class="headerlink" title="Special note"></a>Special note</h3><ul>
+<li>flex containers and items are not block level element<ul>
+<li>Some properties don’t apply to them</li>
+</ul>
+</li>
+<li>flex items’ margins don’t collapse<ul>
+<li>can auto take up all space -&gt; push left / right</li>
+</ul>
+</li>
+<li>no-wrap + shrink 0 will make the item overflow<br>wrap will make the item drop (if sum of flex-basic &gt; container width)</li>
+</ul>
+<h3 id="Size-calculation"><a href="#Size-calculation" class="headerlink" title="Size calculation"></a>Size calculation</h3><ul>
+<li>space difference = absolute( container size - sum of flex-basic of all items )</li>
+<li>when flex container &gt; sum of minimum size of items<ul>
+<li>item’s size = (flex-basic) + (flex-grow/sum of flex-grow) * (space difference)</li>
+</ul>
+</li>
+<li>when flex container &lt; sum of minimum size of items<ul>
+<li>item’s size = (flex-basic) - (flex-grow/sum of flex-shrink) * (space difference)</li>
+</ul>
+</li>
+</ul>
+<h3 id="flex-basic-auto-and-flex-basic-content"><a href="#flex-basic-auto-and-flex-basic-content" class="headerlink" title="flex-basic: auto; and flex-basic: content;"></a><code>flex-basic: auto;</code> and <code>flex-basic: content;</code></h3><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank" rel="external">MDN</a>, <code>auto</code> can means “look at my width or height property” and “automatic sizing”.<br>At the end:</p>
+<ul>
+<li><code>auto</code> means “look at my width or height property”;</li>
+<li><code>content</code> keyword is introduced to trigger automatic sizing;</li>
+</ul>
+<h3 id="Jargons"><a href="#Jargons" class="headerlink" title="Jargons"></a>Jargons</h3><ul>
+<li>Float drops<ul>
+<li>When there are not enough space, the column will drops down below the other</li>
+<li>Solution: Use box-sizing to define the column size precisely</li>
+</ul>
+</li>
+<li>Frameset<ul>
+<li>fixed component in certain place</li>
+<li>keep important fixtures handy</li>
+<li>can implement with html frame</li>
+</ul>
+</li>
+<li>Breakpoint<ul>
+<li>are the screen size value which trigger style change</li>
+</ul>
+</li>
+<li>Flexible grid<ul>
+<li>Bootstrap 3’s grid system is an example</li>
+</ul>
+</li>
+</ul>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
+<li>Don’t add unnecessary div</li>
+<li>CSS built in grid layout<ul>
+<li>But it is not ready</li>
+</ul>
+</li>
+<li>There are lots of layout already, don’t need to start from zero</li>
+<li>Search engine limited the amount of html crawl, it rank the content near the beginning higher score.<ul>
+<li>I am not sure is it valid now</li>
+</ul>
+</li>
+<li>Background image cannot be outside the element</li>
+<li>CSS layout difficulty<ul>
+<li>Cannot fix the position and sizes, because user can change the screen size</li>
+</ul>
+</li>
+<li>Can use <code>media</code> attribute in link tag to determine which style sheet to download</li>
+<li>Drawback of fluid image: force user to download a bigger image</li>
+<li>Don’t add unit when the value is 0</li>
+</ul>
+<h3 id="To-read-list"><a href="#To-read-list" class="headerlink" title="To read list"></a>To read list</h3><ul>
+<li>flexbox usage<ul>
+<li><a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="external">https://philipwalton.github.io/solved-by-flexbox/</a></li>
+</ul>
+</li>
+<li>mobile first<ul>
+<li><a href="http://www.abookapart.com/products/mobile-first" target="_blank" rel="external">http://www.abookapart.com/products/mobile-first</a></li>
+<li><a href="https://www.sitepoint.com/making-case-mobile-first-designs/" target="_blank" rel="external">https://www.sitepoint.com/making-case-mobile-first-designs/</a></li>
+</ul>
+</li>
+<li>For a good explanation of why floated elements can break outside of their containing blocks<ul>
+<li>www.complexspiral.com/publications/containing-floats.</li>
+</ul>
+</li>
+<li>Create full height column (sidebar) with float<ul>
+<li>some other technique: <a href="http://css-tricks.com/fluid-width-equal-height-columns/" target="_blank" rel="external">http://css-tricks.com/fluid-width-equal-height-columns/</a></li>
+<li><a href="http://webdesign.tutsplus.com/tutorials/quick-tip-solving-the-equal-height-column-conundrum--cms-20403" target="_blank" rel="external">http://webdesign.tutsplus.com/tutorials/quick-tip-solving-the-equal-height-column-conundrum--cms-20403</a></li>
+</ul>
+</li>
+<li>Responsive image technique<ul>
+<li><a href="http://alistapart.com/article/responsive-images-in-practice" target="_blank" rel="external">http://alistapart.com/article/responsive-images-in-practice</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This chapter have enough images to help reader understand the layout. I highly recommend to learn layout by reading this chapter&lt;/p&gt;
+&lt;h3 id=&quot;Layout-type&quot;&gt;&lt;a href=&quot;#Layout-type&quot; class=&quot;headerlink&quot; title=&quot;Layout type&quot;&gt;&lt;/a&gt;Layout type&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Fixed width&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;width&lt;/code&gt; value is a fixed numerical value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fluid&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;width&lt;/code&gt; is a percentage value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Responsive Web design (RWD)&lt;ul&gt;
+&lt;li&gt;The layout change with the screen size&lt;/li&gt;
+&lt;li&gt;The layout for different screen can be “Fixed Width” and “Fluid”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&quot;CSS - the missing manual 2nd edition&quot; Applied CSS</title>
@@ -250,6 +592,27 @@
   </entry>
   
   <entry>
+    <title>High quality code is too expensive</title>
+    <link href="http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/"/>
+    <id>http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/</id>
+    <published>2016-11-01T16:00:00.000Z</published>
+    <updated>2016-11-19T14:24:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A piece of perfect code in Utopia is easy to understand, easy to maintain and able to survive under requirement changes. Can we afford high quality code in reality?</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A piece of perfect code in Utopia is easy to understand, easy to maintain and able to survive under requirement changes. Can we afford hi
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>How to pick a framework?</title>
     <link href="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/"/>
     <id>http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/</id>
@@ -291,6 +654,67 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集十</title>
+    <link href="http://199911.github.io/insight/2016/10/22/readings-11/"/>
+    <id>http://199911.github.io/insight/2016/10/22/readings-11/</id>
+    <published>2016-10-21T16:00:00.000Z</published>
+    <updated>2016-11-19T14:24:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理"><a href="#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理" class="headerlink" title="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理"></a><a href="http://www.inside.com.tw/2016/02/19/javascript-novice-advice-and-learning-resources" target="_blank" rel="external">我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理</a></h1><ul>
+<li>當睇唔明人地D code<ul>
+<li>查書<ul>
+<li>唔知要查嘅野係邊頁</li>
+<li>要先對成個知識體系有基本了解，先可以有效率咁search</li>
+</ul>
+</li>
+<li>查Google<ul>
+<li>唔知用咩keyword去search</li>
+<li>同查書一樣</li>
+</ul>
+</li>
+<li>試+靠估<ul>
+<li>可能會得出錯嘅結論，學左D錯嘅野</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>做住學<ul>
+<li>要有觀念打底先扎實<ul>
+<li>都係要了解左成個知識體系先</li>
+</ul>
+</li>
+<li>我好同意E一點，要打好底咁先學到野。因為做野果時好多時都有deadline，一定要好有效率咁學，唔係最後係壓力下，只係patch到work就算，可唔到可以reuse嘅knowledge。</li>
+</ul>
+</li>
+<li>會寫的多、看懂的少<ul>
+<li>如果你還是用一知半解的觀念去開發，你會花上大把大把的時間在除錯、鬼打牆、生悶氣、捶心肝。<ul>
+<li>其實就係leaky abstraction 嘅問題<ul>
+<li>當你要maintain D code，就算D third party library 好勁，好可靠，都要花時間去理解佢點運作。</li>
+<li>因為世上係冇完美嘅abstraction，當一遇到底層嘅問題，必需要對library有深入嘅了解先solve到。</li>
+<li>當出左事先抽時間去學，好可能會趕唔切，因為未必可以locate到個問題係邊個abstraction layer出事。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>當中推介D書遲D抽時間速睇。</li>
+</ul>
+<p><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">http://www.playpcesor.com/2016/09/lifehack-18.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot;&gt;&lt;a href=&quot;#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot; class=&quot;headerlink&quot; title=&quot;我要成為前端工程師！給 JavaScript
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>
@@ -1419,158 +1843,6 @@
     </summary>
     
       <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集九</title>
-    <link href="http://199911.github.io/insight/2016/08/20/readings-9/"/>
-    <id>http://199911.github.io/insight/2016/08/20/readings-9/</id>
-    <published>2016-08-19T16:00:00.000Z</published>
-    <updated>2016-08-20T06:15:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="我现在有一些工具类，我应该不应该做自己的框架？"><a href="#我现在有一些工具类，我应该不应该做自己的框架？" class="headerlink" title="我现在有一些工具类，我应该不应该做自己的框架？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html" target="_blank" rel="external">我现在有一些工具类，我应该不应该做自己的框架？</a></h1><p>如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。</p>
-<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义</a></h1><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
-<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h1><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
-<a id="more"></a>
-<h1 id="十年磨一剑—序"><a href="#十年磨一剑—序" class="headerlink" title="十年磨一剑—序"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="external">十年磨一剑—序</a></h1><p>引入功能強勁嘅library都可以係問題。當一個library好多功能，咁D code一定唔會簡單得去邊。萬一個library出左問題，就要花大量時間去睇code同doc。如果大部份功能都係冇use case嘅話，倒不如用一個功能簡單嘅library，甚至自己寫好過。</p>
-<p>金句一：</p>
-<blockquote>
-<p>在面对这些问题时，人们更多的时候是在寻找一个框架，即使这个框架大到你只想要一个轮子而不得不接收它的整个车子，你依然不会怀疑为什么这样做，当你终于被这个车子的其它零部件影响到你这个小小的轮子行驶，而不得不到处google爬文或分析源码，在弄得焦头烂额，筋疲力尽之时，你心里又会不会发出：这个。。。 能不能简单点的抱怨？</p>
-</blockquote>
-<p>金句二：</p>
-<blockquote>
-<p>对于一个优秀的系统架构师来说，他除了要为应对变化而施展他的艺术创作才华，很多时候他也必须分清哪些是需要变化的，哪些是可以变化的，哪些是不会变化。而要认清这些不同的变化，首先就要理解问题域的本质，例如缓存处理，为什么要缓存处理，它有什么用，在系统中处于什么样的地位，和其它模块的接口在哪里？哪些是缓存可变的，哪些是缓存不会变的，当变化时在哪里处理这个变化，对系统的其它模块的影响在哪里？只有认清这些，才会在引入某个模块时做到心中有数，避开它的负面影响。</p>
-</blockquote>
-<h1 id="一个时代的终结"><a href="#一个时代的终结" class="headerlink" title="一个时代的终结"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/02/20/1669594.html" target="_blank" rel="external">一个时代的终结</a></h1><p>係科技嘅時代，E樣野經常發生，不過科技暫時唔可以完全取代所有工作。最重要identify左邊D係機械性嘅重覆工作，邊D係有價值嘅工作。</p>
-<p>順帶一提，code generator好難去取代programmer。主要係maintenance嘅問題。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;a href=&quot;#我现在有一些工具类，我应该不应该做自己的框架？&quot; class=&quot;headerlink&quot; title=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html&quot;&gt;我现在有一些工具类，我应该不应该做自己的框架？&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。&lt;/p&gt;
-&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。&lt;/p&gt;
-&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义-续&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义-续&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义(续)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义(续)&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;用一個no width space (0xFEFF) 去indicate big endian 定係 small endian&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集八</title>
-    <link href="http://199911.github.io/insight/2016/08/07/readings-8/"/>
-    <id>http://199911.github.io/insight/2016/08/07/readings-8/</id>
-    <published>2016-08-06T16:00:00.000Z</published>
-    <updated>2016-08-20T06:03:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="勿在沙浮筑高台-再论社区风格"><a href="#勿在沙浮筑高台-再论社区风格" class="headerlink" title="勿在沙浮筑高台, 再论社区风格"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/09/26/907112.html" target="_blank" rel="external">勿在沙浮筑高台, 再论社区风格</a></h1><blockquote>
-<p>过去有前辈跟我说, 学好数学就要学好数学史, 学好哲学就要学好哲学史. 为什么? 因为这反映的是人类思维的变化与进步.</p>
-</blockquote>
-<p>相當同意，歷史可以令我地明白有咩問題要解決，同埋當時嘅問題點樣解決，後人點樣improve 個solution。單睇solution唔能夠理解解決問題嘅思路。透過了解思維嘅轉變，可以對問題有更深入嘅了解。</p>
-<h1 id="闲谈-就那么回事"><a href="#闲谈-就那么回事" class="headerlink" title="闲谈: 就那么回事"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/04/948657.html" target="_blank" rel="external">闲谈: 就那么回事</a></h1><p>當中對ORM嘅批評，可以係了解後再思考一下。</p>
-<h1 id="零碎-学习-技术明星-面向对象"><a href="#零碎-学习-技术明星-面向对象" class="headerlink" title="零碎: 学习, 技术明星, 面向对象"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/17/962869.html" target="_blank" rel="external">零碎: 学习, 技术明星, 面向对象</a></h1><p>文中討論左好多Design Pattern點拆，D logic要分到幾細，又有好多唔同嘅situation，又有唔同嘅做法。大家都想用logic同數學去建立一D規則。我覺得當中有一個盲點，就係忽略左「人」E樣野。所謂 spaghetti code 都難免係主觀嘅，個重點可能唔係D logic有幾複雜，而係「人」點樣去接收，點樣去理解D logic。每個requirement都係特別，每個 business 嘅變化都唔同，根本好難去建立一D廣乏應用嘅規則。反而用一D寫文章，communication嘅concept去寫code，似乎會更易maintain。</p>
-<a id="more"></a> 
-<h1 id="回帖整理-论团队中的设计工作"><a href="#回帖整理-论团队中的设计工作" class="headerlink" title="回帖整理: 论团队中的设计工作"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/01/06/1027999.html" target="_blank" rel="external">回帖整理: 论团队中的设计工作</a></h1><blockquote>
-<p>个人水平提高了, 带领的团队质量反而变差了. 但是很多人的认识方法是, 那是因为我还做的不够好. 其实不是这样的, 我觉得我们要反思过去快乐的日子的合理性, 并且承认它. 现在我体会到, 其实我现在做的这种框架式的, 创新型的工作, 如果想提高效率, 必须所有人都具有相当的水平, 并且愿意下力气. 任何一种过程方法, 都解决不了我的难题. 我觉得作为技术组织, 总有一天会进行更高层次的提升才能活, 而不被淘汰. 那时候, 你的团队, 如果都是人肉代码生成器的话, 他们跟的上吗?</p>
-</blockquote>
-<p>團隊平均能力好重要。寫code同係工廠做product唔同，好難做QA。寫code冇得話跟住example copy，要經過思考，對人嘅 dependency 好大。如果條 team 能力跟唔上，無論個product design得幾好，個plan draft得幾好，都係execute唔到。</p>
-<h1 id="三问TDD-单元测试总是好的吗？"><a href="#三问TDD-单元测试总是好的吗？" class="headerlink" title="三问TDD: 单元测试总是好的吗？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/03/16/1108079.html" target="_blank" rel="external">三问TDD: 单元测试总是好的吗？</a></h1><blockquote>
-<p>最初的时候我总觉得TDD最核心的是T，Test。后来才开始明白，它最核心的其实是D，Drive（我非常认同，这就是我说的测试之外的东西）。你可以把测试写的 很弱，但你一定要在此影响下把代码重构的很好。</p>
-</blockquote>
-<p>一語道破我個盲點，冇test唔緊要，最緊要D code structure靚，testable。Testable 嘅 code 多數條理分明，易讀易明，自然少bug，易maintain。重點係code structure，而唔係有冇test，為 test 而 test 係冇咩謂。</p>
-<h1 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a><a href="http://www.cnblogs.com/guaiguai/archive/2008/04/21/1164143.html" target="_blank" rel="external">闲言碎语</a></h1><p>原來.Net有樣野叫LINQ，D syntax同sql statement builder 有D似。我睇過js version嘅LINQ npm，但係好似唔係database layer，而係果好似underscore咁，process data嘅library。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;勿在沙浮筑高台-再论社区风格&quot;&gt;&lt;a href=&quot;#勿在沙浮筑高台-再论社区风格&quot; class=&quot;headerlink&quot; title=&quot;勿在沙浮筑高台, 再论社区风格&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/09/26/907112.html&quot;&gt;勿在沙浮筑高台, 再论社区风格&lt;/a&gt;&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;过去有前辈跟我说, 学好数学就要学好数学史, 学好哲学就要学好哲学史. 为什么? 因为这反映的是人类思维的变化与进步.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;相當同意，歷史可以令我地明白有咩問題要解決，同埋當時嘅問題點樣解決，後人點樣improve 個solution。單睇solution唔能夠理解解決問題嘅思路。透過了解思維嘅轉變，可以對問題有更深入嘅了解。&lt;/p&gt;
-&lt;h1 id=&quot;闲谈-就那么回事&quot;&gt;&lt;a href=&quot;#闲谈-就那么回事&quot; class=&quot;headerlink&quot; title=&quot;闲谈: 就那么回事&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/11/04/948657.html&quot;&gt;闲谈: 就那么回事&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;當中對ORM嘅批評，可以係了解後再思考一下。&lt;/p&gt;
-&lt;h1 id=&quot;零碎-学习-技术明星-面向对象&quot;&gt;&lt;a href=&quot;#零碎-学习-技术明星-面向对象&quot; class=&quot;headerlink&quot; title=&quot;零碎: 学习, 技术明星, 面向对象&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/11/17/962869.html&quot;&gt;零碎: 学习, 技术明星, 面向对象&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文中討論左好多Design Pattern點拆，D logic要分到幾細，又有好多唔同嘅situation，又有唔同嘅做法。大家都想用logic同數學去建立一D規則。我覺得當中有一個盲點，就係忽略左「人」E樣野。所謂 spaghetti code 都難免係主觀嘅，個重點可能唔係D logic有幾複雜，而係「人」點樣去接收，點樣去理解D logic。每個requirement都係特別，每個 business 嘅變化都唔同，根本好難去建立一D廣乏應用嘅規則。反而用一D寫文章，communication嘅concept去寫code，似乎會更易maintain。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集七</title>
-    <link href="http://199911.github.io/insight/2016/08/06/readings-7/"/>
-    <id>http://199911.github.io/insight/2016/08/06/readings-7/</id>
-    <published>2016-08-05T16:00:00.000Z</published>
-    <updated>2016-08-20T06:03:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="怪怪设计论-抽象无处不在"><a href="#怪怪设计论-抽象无处不在" class="headerlink" title="怪怪设计论: 抽象无处不在"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/09/17/894819.html" target="_blank" rel="external">怪怪设计论: 抽象无处不在</a></h1><p>文章主要帶出以下幾點：</p>
-<ol>
-<li>Abstraction 做得好唔好唔係睇同現實有幾相似，係睇有冇抽象到事物嘅必要本質，抽象出黎嘅object易唔易被處理，唔係為用理論而抽象。</li>
-<li>設計必需由數據表現形式出發，而唔係一D OO 嘅design pattern。</li>
-<li>設計時，要係現實世界同電腦系統嘅抽象中平衡<br>總括而言，軟件設計時，必需深入了解現實嘅問題，再抽象必要嘅本質，以Data為設計嘅藍圖。Implementation果時，唔可以過度重視現實世界嘅抽象而忽略電腦系統嘅抽象，因為implementation果時係要做大量嘅計算，如果個model唔適合計算，就會做成更多嘅問題。係設計對外嘅interface時，可以多運用OO嘅思想，令到其他人可以更易運用。</li>
-</ol>
-<h1 id="如何时刻保持在目标的正确轨道上"><a href="#如何时刻保持在目标的正确轨道上" class="headerlink" title="如何时刻保持在目标的正确轨道上"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html" target="_blank" rel="external">如何时刻保持在目标的正确轨道上</a></h1><p>養成習慣係堅持目標上面有好大幫助。</p>
-<a id="more"></a> 
-<h1 id="非言语沟通技巧"><a href="#非言语沟通技巧" class="headerlink" title="非言语沟通技巧"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959878.html" target="_blank" rel="external">非言语沟通技巧</a></h1><p>眼神，衣着，肢體語言，聲調，準時同笑容都係溝通嘅一種。</p>
-<h1 id="高级程序员应具有的素质"><a href="#高级程序员应具有的素质" class="headerlink" title="高级程序员应具有的素质"></a><a href="http://www.cnblogs.com/flying_bat/archive/2009/05/20/1467324.html" target="_blank" rel="external">高级程序员应具有的素质</a></h1><ol>
-<li>理解requirement</li>
-<li>掌握項目設計和流程處理方法</li>
-<li>Modularize 同 reusability</li>
-<li>評估整體項目</li>
-<li>組織管理團隊</li>
-</ol>
-<h1 id="Git-少用-Pull-多用-Fetch-和-Merge"><a href="#Git-少用-Pull-多用-Fetch-和-Merge" class="headerlink" title="Git 少用 Pull 多用 Fetch 和 Merge"></a><a href="http://www.cnblogs.com/flying_bat/p/3408634.html" target="_blank" rel="external">Git 少用 Pull 多用 Fetch 和 Merge</a></h1><p>文中提到唔用git pull，因為會update local branch。但係我地個workflow通常係一人一個branch，其實冇咩影響。</p>
-<h1 id="初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件"><a href="#初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件" class="headerlink" title="初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件"></a><a href="http://www.cnblogs.com/flying_bat/p/4172435.html" target="_blank" rel="external">初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件</a></h1><p>原來有command可以delete一個file係repo所有history，等得閒研究下。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;怪怪设计论-抽象无处不在&quot;&gt;&lt;a href=&quot;#怪怪设计论-抽象无处不在&quot; class=&quot;headerlink&quot; title=&quot;怪怪设计论: 抽象无处不在&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2007/09/17/894819.html&quot;&gt;怪怪设计论: 抽象无处不在&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文章主要帶出以下幾點：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Abstraction 做得好唔好唔係睇同現實有幾相似，係睇有冇抽象到事物嘅必要本質，抽象出黎嘅object易唔易被處理，唔係為用理論而抽象。&lt;/li&gt;
-&lt;li&gt;設計必需由數據表現形式出發，而唔係一D OO 嘅design pattern。&lt;/li&gt;
-&lt;li&gt;設計時，要係現實世界同電腦系統嘅抽象中平衡&lt;br&gt;總括而言，軟件設計時，必需深入了解現實嘅問題，再抽象必要嘅本質，以Data為設計嘅藍圖。Implementation果時，唔可以過度重視現實世界嘅抽象而忽略電腦系統嘅抽象，因為implementation果時係要做大量嘅計算，如果個model唔適合計算，就會做成更多嘅問題。係設計對外嘅interface時，可以多運用OO嘅思想，令到其他人可以更易運用。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;如何时刻保持在目标的正确轨道上&quot;&gt;&lt;a href=&quot;#如何时刻保持在目标的正确轨道上&quot; class=&quot;headerlink&quot; title=&quot;如何时刻保持在目标的正确轨道上&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html&quot;&gt;如何时刻保持在目标的正确轨道上&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;養成習慣係堅持目標上面有好大幫助。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集六</title>
-    <link href="http://199911.github.io/insight/2016/08/05/readings-6/"/>
-    <id>http://199911.github.io/insight/2016/08/05/readings-6/</id>
-    <published>2016-08-04T16:00:00.000Z</published>
-    <updated>2016-10-02T11:59:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="无为无不为"><a href="#无为无不为" class="headerlink" title="无为无不为"></a><a href="http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html" target="_blank" rel="external">无为无不为</a></h1><p>1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。<br>2.管理唔等於控制<br>3.唔好做惡意競爭</p>
-<h1 id="优秀程序员的两大要素：懒-笨"><a href="#优秀程序员的两大要素：懒-笨" class="headerlink" title="优秀程序员的两大要素：懒 + 笨"></a><a href="http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html" target="_blank" rel="external">优秀程序员的两大要素：懒 + 笨</a></h1><p>個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做<br>1.用Automation同tool去增加productivity，而唔係死做<br>2.唔好停止學習<br>3.要批判自己嘅工作，多質疑<br>4.Debug果時要拋棄所有假設</p>
-<a id="more"></a>
-<h1 id="8-个开发更安全代码的简单规则"><a href="#8-个开发更安全代码的简单规则" class="headerlink" title="8 个开发更安全代码的简单规则"></a><a href="http://www.cnblogs.com/flying_bat/archive/2006/11/20/565636.html" target="_blank" rel="external">8 个开发更安全代码的简单规则</a></h1><p>1.寫code果個要負起責任<br>2.唔好相信User input，要sanitize同做validation<br>3.要有[威脅模型分析(<a href="https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90" target="_blank" rel="external">https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90</a>)<br>4.要留意security嘅新聞<br>5.用Fuzz testing<br>6.唔好用唔安全嘅library<br>7.要maintain舊code嘅security<br>8.可以用code分析工具</p>
-<h1 id="微软的秘密面试题"><a href="#微软的秘密面试题" class="headerlink" title="微软的秘密面试题"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/07/666449.html" target="_blank" rel="external">微软的秘密面试题</a></h1><p>PM要同邏輯強但缺乏社交技巧嘅programmer溝通，需要一D說服技巧。一D面試題目測試重點唔係智力，而係耐性同友好嘅溝通方法。</p>
-<h1 id="“千般路”与“磨豆腐”"><a href="#“千般路”与“磨豆腐”" class="headerlink" title="“千般路”与“磨豆腐”"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/08/668166.html" target="_blank" rel="external">“千般路”与“磨豆腐”</a></h1><p>每當有一D新技術出現，都好想去apply。但係要考慮到成條Team跟唔跟得上，同埋轉左新技術係咪真係有效益。好多時都係現有嘅code慢慢改善。</p>
-<h1 id="程序员的灯下黑：重知识轻技术"><a href="#程序员的灯下黑：重知识轻技术" class="headerlink" title="程序员的灯下黑：重知识轻技术"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/05/30/764637.html" target="_blank" rel="external">程序员的灯下黑：重知识轻技术</a></h1><p>知識只係技術嘅一部份，係適當嘅時候以適當嘅方式運用出來嘅知識先係技術。好多時一有新嘅technology就走去學，好似學識左就係勁。但好多時技術就係design pattern, error handling，E D 唔係咁fancy嘅技巧表現出來，E D先係扎實嘅功夫。</p>
-<h1 id="程序员的灯下黑：不要忘记你的目标"><a href="#程序员的灯下黑：不要忘记你的目标" class="headerlink" title="程序员的灯下黑：不要忘记你的目标"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785841.html" target="_blank" rel="external">程序员的灯下黑：不要忘记你的目标</a></h1><p>Programming係為左解決問題，唔係為寫而寫。寫果時一定要記住要解決嘅問題。</p>
-<h1 id="程序员的灯下黑：能认识自己吗？"><a href="#程序员的灯下黑：能认识自己吗？" class="headerlink" title="程序员的灯下黑：能认识自己吗？"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785835.html" target="_blank" rel="external">程序员的灯下黑：能认识自己吗？</a></h1><p>當覺得自己學唔到野個時，可以主動係自己用緊嘅technology同library深入了解一下。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;无为无不为&quot;&gt;&lt;a href=&quot;#无为无不为&quot; class=&quot;headerlink&quot; title=&quot;无为无不为&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html&quot;&gt;无为无不为&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。&lt;br&gt;2.管理唔等於控制&lt;br&gt;3.唔好做惡意競爭&lt;/p&gt;
-&lt;h1 id=&quot;优秀程序员的两大要素：懒-笨&quot;&gt;&lt;a href=&quot;#优秀程序员的两大要素：懒-笨&quot; class=&quot;headerlink&quot; title=&quot;优秀程序员的两大要素：懒 + 笨&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html&quot;&gt;优秀程序员的两大要素：懒 + 笨&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做&lt;br&gt;1.用Automation同tool去增加productivity，而唔係死做&lt;br&gt;2.唔好停止學習&lt;br&gt;3.要批判自己嘅工作，多質疑&lt;br&gt;4.Debug果時要拋棄所有假設&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>

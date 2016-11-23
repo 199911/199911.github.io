@@ -59,6 +59,162 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS-missing-manual-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/11/24/CSS-missing-manual-4/" class="article-date">
+  <time datetime="2016-11-23T16:00:00.000Z" itemprop="datePublished">2016-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/11/24/CSS-missing-manual-4/">&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This chapter give some hint on writing maintainable CSS and introduce SCSS.</p>
+<h3 id="Organize-style"><a href="#Organize-style" class="headerlink" title="Organize style"></a>Organize style</h3><ul>
+<li>Class name<ul>
+<li>Name style by purpose, not appearance</li>
+<li>Don’t use name base on position<ul>
+<li>.leftSideBar</li>
+</ul>
+</li>
+<li>Avoid cryptic names</li>
+</ul>
+</li>
+<li>Don’t repeat yourself<ul>
+<li>I think it depends on context</li>
+</ul>
+</li>
+<li>Use multiple Class<ul>
+<li>Using partial in SCSS seems a better choice</li>
+</ul>
+</li>
+<li>Group related style<ul>
+<li>apply to related parts of a page</li>
+<li>with a related purpose</li>
+</ul>
+</li>
+<li>Separate groups by comment or put it in different style sheet<ul>
+<li><code>@import</code> will delay the rendering, use css pre processor instead</li>
+</ul>
+</li>
+</ul>
+<h3 id="Reset-CSS-vs-Normalize-CSS"><a href="#Reset-CSS-vs-Normalize-CSS" class="headerlink" title="Reset CSS vs Normalize CSS"></a>Reset CSS vs Normalize CSS</h3><p>Reset style means remove all browser CSS, normalize means unify the styles. For example, reset CSS will make headlines and paragraph the same size.</p>
+<p>Reset style:</p>
+<ul>
+<li>Remove padding and margins</li>
+<li>Apply consistent font sizes</li>
+<li>Set a consistent line height</li>
+<li>Improve table border and create consistent table cells</li>
+<li>Remove borders from linked images</li>
+<li>Set consistent list indents and bullet types</li>
+<li>Remove quote marks from quoted material</li>
+</ul>
+<h3 id="Using-Descendant-Selectors"><a href="#Using-Descendant-Selectors" class="headerlink" title="Using Descendant Selectors"></a>Using Descendant Selectors</h3><ul>
+<li>Limit the scope of CSS by descendant selectors and <code>&lt;div&gt;</code>.</li>
+<li>Add class to body to identify page type and layout<ul>
+<li>Just like a “namespace”</li>
+</ul>
+</li>
+</ul>
+<h2 id="OOCSS-vs-SMACSS"><a href="#OOCSS-vs-SMACSS" class="headerlink" title="OOCSS vs SMACSS"></a>OOCSS vs SMACSS</h2><p>Other approaches on organizing CSS</p>
+<ul>
+<li>http:// coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/</li>
+<li><a href="http://smacss.com" target="_blank" rel="external">http://smacss.com</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/" data-id="civpclrgs00068i65parkkfr6" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CSS-missing-manual-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/11/20/CSS-missing-manual-3/" class="article-date">
+  <time datetime="2016-11-19T16:00:00.000Z" itemprop="datePublished">2016-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/11/20/CSS-missing-manual-3/">&quot;CSS - the missing manual 2nd edition&quot; CSS Page Layout</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This chapter have enough images to help reader understand the layout. I highly recommend to learn layout by reading this chapter</p>
+<h3 id="Layout-type"><a href="#Layout-type" class="headerlink" title="Layout type"></a>Layout type</h3><ul>
+<li>Fixed width<ul>
+<li>The <code>width</code> value is a fixed numerical value</li>
+</ul>
+</li>
+<li>Fluid<ul>
+<li>The <code>width</code> is a percentage value</li>
+</ul>
+</li>
+<li>Responsive Web design (RWD)<ul>
+<li>The layout change with the screen size</li>
+<li>The layout for different screen can be “Fixed Width” and “Fluid”</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/11/20/CSS-missing-manual-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/" data-id="civpclrgp00028i65hg7dqasw" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-CSS-missing-manual-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/11/19/CSS-missing-manual-2/" class="article-date">
@@ -160,6 +316,49 @@
 
 
   
+    <article id="post-high-quality-code-is-too-expensive" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/2016/11/02/high-quality-code-is-too-expensive/" class="article-date">
+  <time datetime="2016-11-01T16:00:00.000Z" itemprop="datePublished">2016-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/diary/2016/11/02/high-quality-code-is-too-expensive/">High quality code is too expensive</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>A piece of perfect code in Utopia is easy to understand, easy to maintain and able to survive under requirement changes. Can we afford high quality code in reality?</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/" data-id="civpclrgg00008i65tr48gsq1" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-how-to-picking-a-library" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/11/02/how-to-picking-a-library/" class="article-date">
@@ -198,6 +397,89 @@
       <a data-url="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/" data-id="civ12ycia0000sg65vb9rozgo" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-readings-11" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/10/22/readings-11/" class="article-date">
+  <time datetime="2016-10-21T16:00:00.000Z" itemprop="datePublished">2016-10-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/10/22/readings-11/">文集十</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理"><a href="#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理" class="headerlink" title="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理"></a><a href="http://www.inside.com.tw/2016/02/19/javascript-novice-advice-and-learning-resources" target="_blank" rel="external">我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理</a></h1><ul>
+<li>當睇唔明人地D code<ul>
+<li>查書<ul>
+<li>唔知要查嘅野係邊頁</li>
+<li>要先對成個知識體系有基本了解，先可以有效率咁search</li>
+</ul>
+</li>
+<li>查Google<ul>
+<li>唔知用咩keyword去search</li>
+<li>同查書一樣</li>
+</ul>
+</li>
+<li>試+靠估<ul>
+<li>可能會得出錯嘅結論，學左D錯嘅野</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>做住學<ul>
+<li>要有觀念打底先扎實<ul>
+<li>都係要了解左成個知識體系先</li>
+</ul>
+</li>
+<li>我好同意E一點，要打好底咁先學到野。因為做野果時好多時都有deadline，一定要好有效率咁學，唔係最後係壓力下，只係patch到work就算，可唔到可以reuse嘅knowledge。</li>
+</ul>
+</li>
+<li>會寫的多、看懂的少<ul>
+<li>如果你還是用一知半解的觀念去開發，你會花上大把大把的時間在除錯、鬼打牆、生悶氣、捶心肝。<ul>
+<li>其實就係leaky abstraction 嘅問題<ul>
+<li>當你要maintain D code，就算D third party library 好勁，好可靠，都要花時間去理解佢點運作。</li>
+<li>因為世上係冇完美嘅abstraction，當一遇到底層嘅問題，必需要對library有深入嘅了解先solve到。</li>
+<li>當出左事先抽時間去學，好可能會趕唔切，因為未必可以locate到個問題係邊個abstraction layer出事。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>當中推介D書遲D抽時間速睇。</li>
+</ul>
+<p><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">http://www.playpcesor.com/2016/09/lifehack-18.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/10/22/readings-11/" data-id="civpclrgk00018i65zy37fwz7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/10/22/readings-11/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -402,245 +684,11 @@
 
 
   
-    <article id="post-readings-10" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/insight/2016/10/04/readings-10/" class="article-date">
-  <time datetime="2016-10-03T16:00:00.000Z" itemprop="datePublished">2016-10-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Insight/">Insight</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/insight/2016/10/04/readings-10/">文集十</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="當主管卻不懂交辦，當心「猴子」爬上身"><a href="#當主管卻不懂交辦，當心「猴子」爬上身" class="headerlink" title="當主管卻不懂交辦，當心「猴子」爬上身"></a><a href="http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully">當主管卻不懂交辦，當心「猴子」爬上身</a></h1><p>文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。</p>
-<p>文中仲提及一D指派工作嘅技巧:</p>
-<ul>
-<li>要清楚指出工作內容</li>
-<li>可運用數字明確指出目標，促進員工思考</li>
-<li>盡力說動部屬願意做不樂意的事<ul>
-<li>最好當然係每個人都做樂意做嘅野。但萬一冇人肯做，都要靠員工去補位</li>
-</ul>
-</li>
-<li>用正確既方法去指派工作，文中提出4種<ol>
-<li>直接告訴我你要我做什麼</li>
-<li>我希望你先考慮我的意見，再決定我要做什麼<ul>
-<li>員工可能想用新方法去解決問題</li>
-</ul>
-</li>
-<li>我想自己決定要做什麼<ul>
-<li>員工唔需要監督，係開波之前要搞清楚目標同方向</li>
-</ul>
-</li>
-<li>大家共同討論、決定之後，我就很樂意去做</li>
-</ol>
-</li>
-</ul>
-<p>仲有三個指派工作嘅大忌</p>
-<ol>
-<li>指派太多工作</li>
-<li>有多過一個人落order<ul>
-<li>會唔知做邊個task先，影響團隊信任</li>
-</ul>
-</li>
-<li>把最困難的事，交給最有能力的人<ul>
-<li>最重要都係cost and benefit</li>
-</ul>
-</li>
-</ol>
-        
-          <p class="article-more-link">
-            <a href="/insight/2016/10/04/readings-10/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/10/04/readings-10/" data-id="citvpderc0000h965r8wleagf" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/insight/2016/10/04/readings-10/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-html-and-css-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/10/02/html-and-css-3/" class="article-date">
-  <time datetime="2016-10-01T16:00:00.000Z" itemprop="datePublished">2016-10-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/10/02/html-and-css-3/">HTML and CSS part 3</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="HTML5-layout"><a href="#HTML5-layout" class="headerlink" title="HTML5 layout"></a>HTML5 layout</h2><h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>We can use a div with id as namespace, such as<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="header-and-footer"><a href="#header-and-footer" class="headerlink" title="header and footer"></a><code>header</code> and <code>footer</code></h3><p>These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.</p>
-<h3 id="article"><a href="#article" class="headerlink" title="article"></a><code>article</code></h3><p>It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.<br>Notice <code>article</code> can be nested inside each other, comments of comments is one of the use case.</p>
-<h3 id="aside"><a href="#aside" class="headerlink" title="aside"></a><code>aside</code></h3><p><code>aside</code> tag have 2 usage.</p>
-<ul>
-<li>If it is inside <code>article</code>, it should contain information that is related to the article.</li>
-<li>If it is outside <code>article</code>, it should contain information related to the entire page.</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/10/02/html-and-css-3/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/10/02/html-and-css-3/" data-id="citvpderm0002h965471tcdi9" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/10/02/html-and-css-3/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-html-and-css-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/10/01/html-and-css-2/" class="article-date">
-  <time datetime="2016-09-30T16:00:00.000Z" itemprop="datePublished">2016-10-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/10/01/html-and-css-2/">HTML and CSS part 2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
-<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
-<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
-<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/10/01/html-and-css-2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/10/01/html-and-css-2/" data-id="citvpdern0004h965kfqxtnps" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/10/01/html-and-css-2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-html-and-css-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/09/20/html-and-css-1/" class="article-date">
-  <time datetime="2016-09-19T16:00:00.000Z" itemprop="datePublished">2016-09-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/09/20/html-and-css-1/">HTML and CSS part 1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="padding-start-vs-padding-left"><a href="#padding-start-vs-padding-left" class="headerlink" title="padding-start vs padding-left"></a>padding-start vs padding-left</h2><p>I found the default style of <code>ol</code> and <code>ul</code> in Chrome have a interesting property <code>-webkit-padding-start: 40px;</code>. I am wondering how is it different form <code>padding-left: 40px</code>. According to <a href="http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start">this</a>, they are the same for the language written from left to right. If the language is written from right to left, the padding of <code>-webkit-padding-start: 40px;</code> will move to right.</p>
-<p>Note that <code>dt</code> is using margin instead of padding, because it does not need to put any bullet point into the component.</p>
-<h2 id="Image’s-alt-attribute-vs-title"><a href="#Image’s-alt-attribute-vs-title" class="headerlink" title="Image’s alt attribute vs title"></a>Image’s <code>alt</code> attribute vs <code>title</code></h2><p><code>alt</code> stands for alternative, which should be description of the image, because it will be shown when the image does not load. <code>title</code> provides extra information of the image. For more detail, we can read <a href="https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/">this</a></p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/09/20/html-and-css-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/09/20/html-and-css-1/" data-id="citvpderj0001h9652p6i11ob" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/09/20/html-and-css-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -679,6 +727,14 @@
       <ul>
         
           <li>
+            <a href="/review/2016/11/24/CSS-missing-manual-4/">&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</a>
+          </li>
+        
+          <li>
+            <a href="/review/2016/11/20/CSS-missing-manual-3/">&quot;CSS - the missing manual 2nd edition&quot; CSS Page Layout</a>
+          </li>
+        
+          <li>
             <a href="/review/2016/11/19/CSS-missing-manual-2/">&quot;CSS - the missing manual 2nd edition&quot; Applied CSS</a>
           </li>
         
@@ -687,15 +743,7 @@
           </li>
         
           <li>
-            <a href="/diary/2016/11/02/how-to-picking-a-library/">How to pick a framework?</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/10/21/html5-missing-manual-2/">&quot;HTML5 - the missing manual 2nd edition&quot; part 2</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/10/16/html5-missing-manual-1/">&quot;HTML5 - the missing manual 2nd edition&quot; part 1</a>
+            <a href="/diary/2016/11/02/high-quality-code-is-too-expensive/">High quality code is too expensive</a>
           </li>
         
       </ul>
