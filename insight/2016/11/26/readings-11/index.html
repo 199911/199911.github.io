@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>文集十 | Coding Sunday</title>
+  <title>文集十一 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理
 當睇唔明人地D code
@@ -30,8 +30,8 @@
 
 我好同意E一點，要打好底咁先學到">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文集十">
-<meta property="og:url" content="http://199911.github.io/insight/2016/10/22/readings-11/index.html">
+<meta property="og:title" content="文集十一">
+<meta property="og:url" content="http://199911.github.io/insight/2016/11/26/readings-11/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理
 當睇唔明人地D code
@@ -57,9 +57,9 @@
 
 
 我好同意E一點，要打好底咁先學到">
-<meta property="og:updated_time" content="2016-11-19T14:24:45.000Z">
+<meta property="og:updated_time" content="2016-11-26T10:49:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文集十">
+<meta name="twitter:title" content="文集十一">
 <meta name="twitter:description" content="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理
 當睇唔明人地D code
 查書
@@ -132,8 +132,8 @@
       <div class="outer">
         <section id="main"><article id="post-readings-11" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/insight/2016/10/22/readings-11/" class="article-date">
-  <time datetime="2016-10-21T16:00:00.000Z" itemprop="datePublished">2016-10-22</time>
+    <a href="/insight/2016/11/26/readings-11/" class="article-date">
+  <time datetime="2016-11-25T16:00:00.000Z" itemprop="datePublished">2016-11-26</time>
 </a>
     
   <div class="article-category">
@@ -148,7 +148,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      文集十
+      文集十一
     </h1>
   
 
@@ -196,14 +196,121 @@
 </li>
 <li>當中推介D書遲D抽時間速睇。</li>
 </ul>
-<p><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">http://www.playpcesor.com/2016/09/lifehack-18.html</a></p>
+<a id="more"></a>
+<h1 id="閱讀程式碼的心理層面"><a href="#閱讀程式碼的心理層面" class="headerlink" title="閱讀程式碼的心理層面"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/497" target="_blank" rel="external">閱讀程式碼的心理層面</a></h1><p>講點樣睇code，其實好多篇文都講類似嘅野</p>
+<ol>
+<li>先掌握整體結構，了解各檔案、目錄、模組嘅作用<ul>
+<li>咁先可以知道自己係邊個abstraction layer，<ul>
+<li>揾到自已想睇嘅code同skip D 唔重要嘅野</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>靠file, function 同 variable name去估D code做咩<ul>
+<li>前提都要D code都要寫得好</li>
+</ul>
+</li>
+<li>睇class 同 function declaration<ul>
+<li>Interface 係這個abstraction object 之間溝通嘅方法</li>
+<li>睇完structure，估到個大約結構可以睇下 interface 驗證自己嘅想法</li>
+</ul>
+</li>
+<li>先睇Data structure 再睇 code<ul>
+<li>Code 係用黎process data, program 就好似一條變化緊嘅data stream咁，由stream嘅源頭，姐係data structure睇會易明D。</li>
+<li>但係當D code唔係用黎handle data就唔work，例如一D dev ops 嘅code</li>
+</ul>
+</li>
+<li>睇人地嘅註解<ul>
+<li>放到咁後係當有comment 果時己經去到睇 code 嘅level，未了解structure就睇code好易睇錯野。</li>
+</ul>
+</li>
+<li>要focus，唔好心急跳黎睇<ul>
+<li>未清楚曬就skip好易中伏，到最後仲用多左時間，</li>
+</ul>
+</li>
+</ol>
+<h1 id="Reflections-of-an-“Old”-Programmer"><a href="#Reflections-of-an-“Old”-Programmer" class="headerlink" title="Reflections of an “Old” Programmer"></a><a href="http://www.bennorthrop.com/Essays/2016/reflections-of-an-old-programmer.php" target="_blank" rel="external">Reflections of an “Old” Programmer</a></h1><ul>
+<li>Knowledge decay<ul>
+<li>隨住科技嘅進步，好多舊嘅技術會慢慢fade out</li>
+</ul>
+</li>
+<li>Knowledge accumulation rate<ul>
+<li>學野嘅速度</li>
+</ul>
+</li>
+<li>Three stages<ul>
+<li>Eager apprentice<ul>
+<li>快速咁去學好多新嘅language, library 同 framework</li>
+</ul>
+</li>
+<li>Rising start<ul>
+<li>對現今流行嘅野都有掌握，開始精進</li>
+<li>開始面對轉折點<ul>
+<li>成為左senior要教新人，review人地D code，少左時間自己學野</li>
+<li>D knowledge會開始decay，出現 accumulation rate &lt; decay rate 嘅情況</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Steady veteran<ul>
+<li>要keep住用空閒時間學新野，唔係就會變返新手</li>
+<li>有人會決定轉去做management, sales, testing … etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Advice<ul>
+<li>睇長線D<ul>
+<li>㨂D有得接觸新野嘅公司，寧可低pay D<ul>
+<li>以防工作用嘅technology 第時decay曬</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>學decay level 低嘅knowledge<ul>
+<li>algorithms, application security, performance optimization, and architecture</li>
+<li>唔好不停去追新嘅libraries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="咖啡館師傅的啟示，如何正確跟他人學東西？"><a href="#咖啡館師傅的啟示，如何正確跟他人學東西？" class="headerlink" title="咖啡館師傅的啟示，如何正確跟他人學東西？"></a><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">咖啡館師傅的啟示，如何正確跟他人學東西？</a></h1><p>好多野都係context dependent，要睇情況同時機。所以學野唔係要學人地嘅經驗，唔係要學硬性嘅規則，而係學背後的邏輯、方法。咁先可以因應唔同嘅情況調整。</p>
+<h1 id="學徒之路"><a href="#學徒之路" class="headerlink" title="學徒之路"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/493" target="_blank" rel="external">學徒之路</a></h1><p>同上邊幾篇文都有D共通點</p>
+<ul>
+<li>基礎的知識、理論<ul>
+<li>Decay rate 比較低嘅knowledge</li>
+<li>可以透過書本、文件、或別人的教導獲得</li>
+</ul>
+</li>
+<li>經驗和應用類的知識<ul>
+<li>Decay rate 高</li>
+<li>好似上一篇提及嘅學習方法咁<ul>
+<li>不該全盤接受別人的想法，特別是經驗</li>
+<li>可以引以為鑑，反省自己的做法和想法</li>
+</ul>
+</li>
+<li>例子<ul>
+<li>Design Pattern</li>
+<li>Test Driven Development</li>
+<li>Agile</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>次要嘅發展方向的內容<ul>
+<li>以理論派嘅方式， 就係以研讀和理解的方式學習</li>
+</ul>
+</li>
+<li>主要嘅發展方向的內容先多花時間以實戰方式進行</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/10/22/readings-11/" data-id="civpclrgk00018i65zy37fwz7" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/11/26/readings-11/" data-id="civpclrgk00018i65zy37fwz7" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/insight/2016/10/22/readings-11/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2016/11/26/readings-11/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -212,19 +319,10 @@
     
 <nav id="article-nav">
   
-    <a href="/diary/2016/11/02/how-to-picking-a-library/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          How to pick a framework?
-        
-      </div>
-    </a>
   
-  
-    <a href="/review/2016/10/21/html5-missing-manual-2/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2016/11/24/CSS-missing-manual-4/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">&quot;HTML5 - the missing manual 2nd edition&quot; part 2</div>
+      <div class="article-nav-title">&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</div>
     </a>
   
 </nav>
@@ -284,6 +382,10 @@
       <ul>
         
           <li>
+            <a href="/insight/2016/11/26/readings-11/">文集十一</a>
+          </li>
+        
+          <li>
             <a href="/review/2016/11/24/CSS-missing-manual-4/">&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</a>
           </li>
         
@@ -297,10 +399,6 @@
         
           <li>
             <a href="/review/2016/11/12/CSS-missing-manual-1/">&quot;CSS - the missing manual 2nd edition&quot; Basic CSS</a>
-          </li>
-        
-          <li>
-            <a href="/diary/2016/11/02/high-quality-code-is-too-expensive/">High quality code is too expensive</a>
           </li>
         
       </ul>
@@ -332,7 +430,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/insight/2016/10/22/readings-11/';
+  var disqus_url = 'http://199911.github.io/insight/2016/11/26/readings-11/';
   
   (function(){
     var dsq = document.createElement('script');

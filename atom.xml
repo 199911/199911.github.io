@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2016-11-23T16:37:37.000Z</updated>
+  <updated>2016-11-26T10:49:49.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -16,13 +16,221 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>文集十一</title>
+    <link href="http://199911.github.io/insight/2016/11/26/readings-11/"/>
+    <id>http://199911.github.io/insight/2016/11/26/readings-11/</id>
+    <published>2016-11-25T16:00:00.000Z</published>
+    <updated>2016-11-26T10:49:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理"><a href="#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理" class="headerlink" title="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理"></a><a href="http://www.inside.com.tw/2016/02/19/javascript-novice-advice-and-learning-resources" target="_blank" rel="external">我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理</a></h1><ul>
+<li>當睇唔明人地D code<ul>
+<li>查書<ul>
+<li>唔知要查嘅野係邊頁</li>
+<li>要先對成個知識體系有基本了解，先可以有效率咁search</li>
+</ul>
+</li>
+<li>查Google<ul>
+<li>唔知用咩keyword去search</li>
+<li>同查書一樣</li>
+</ul>
+</li>
+<li>試+靠估<ul>
+<li>可能會得出錯嘅結論，學左D錯嘅野</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>做住學<ul>
+<li>要有觀念打底先扎實<ul>
+<li>都係要了解左成個知識體系先</li>
+</ul>
+</li>
+<li>我好同意E一點，要打好底咁先學到野。因為做野果時好多時都有deadline，一定要好有效率咁學，唔係最後係壓力下，只係patch到work就算，可唔到可以reuse嘅knowledge。</li>
+</ul>
+</li>
+<li>會寫的多、看懂的少<ul>
+<li>如果你還是用一知半解的觀念去開發，你會花上大把大把的時間在除錯、鬼打牆、生悶氣、捶心肝。<ul>
+<li>其實就係leaky abstraction 嘅問題<ul>
+<li>當你要maintain D code，就算D third party library 好勁，好可靠，都要花時間去理解佢點運作。</li>
+<li>因為世上係冇完美嘅abstraction，當一遇到底層嘅問題，必需要對library有深入嘅了解先solve到。</li>
+<li>當出左事先抽時間去學，好可能會趕唔切，因為未必可以locate到個問題係邊個abstraction layer出事。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>當中推介D書遲D抽時間速睇。</li>
+</ul>
+<a id="more"></a>
+<h1 id="閱讀程式碼的心理層面"><a href="#閱讀程式碼的心理層面" class="headerlink" title="閱讀程式碼的心理層面"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/497" target="_blank" rel="external">閱讀程式碼的心理層面</a></h1><p>講點樣睇code，其實好多篇文都講類似嘅野</p>
+<ol>
+<li>先掌握整體結構，了解各檔案、目錄、模組嘅作用<ul>
+<li>咁先可以知道自己係邊個abstraction layer，<ul>
+<li>揾到自已想睇嘅code同skip D 唔重要嘅野</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>靠file, function 同 variable name去估D code做咩<ul>
+<li>前提都要D code都要寫得好</li>
+</ul>
+</li>
+<li>睇class 同 function declaration<ul>
+<li>Interface 係這個abstraction object 之間溝通嘅方法</li>
+<li>睇完structure，估到個大約結構可以睇下 interface 驗證自己嘅想法</li>
+</ul>
+</li>
+<li>先睇Data structure 再睇 code<ul>
+<li>Code 係用黎process data, program 就好似一條變化緊嘅data stream咁，由stream嘅源頭，姐係data structure睇會易明D。</li>
+<li>但係當D code唔係用黎handle data就唔work，例如一D dev ops 嘅code</li>
+</ul>
+</li>
+<li>睇人地嘅註解<ul>
+<li>放到咁後係當有comment 果時己經去到睇 code 嘅level，未了解structure就睇code好易睇錯野。</li>
+</ul>
+</li>
+<li>要focus，唔好心急跳黎睇<ul>
+<li>未清楚曬就skip好易中伏，到最後仲用多左時間，</li>
+</ul>
+</li>
+</ol>
+<h1 id="Reflections-of-an-“Old”-Programmer"><a href="#Reflections-of-an-“Old”-Programmer" class="headerlink" title="Reflections of an “Old” Programmer"></a><a href="http://www.bennorthrop.com/Essays/2016/reflections-of-an-old-programmer.php" target="_blank" rel="external">Reflections of an “Old” Programmer</a></h1><ul>
+<li>Knowledge decay<ul>
+<li>隨住科技嘅進步，好多舊嘅技術會慢慢fade out</li>
+</ul>
+</li>
+<li>Knowledge accumulation rate<ul>
+<li>學野嘅速度</li>
+</ul>
+</li>
+<li>Three stages<ul>
+<li>Eager apprentice<ul>
+<li>快速咁去學好多新嘅language, library 同 framework</li>
+</ul>
+</li>
+<li>Rising start<ul>
+<li>對現今流行嘅野都有掌握，開始精進</li>
+<li>開始面對轉折點<ul>
+<li>成為左senior要教新人，review人地D code，少左時間自己學野</li>
+<li>D knowledge會開始decay，出現 accumulation rate &lt; decay rate 嘅情況</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Steady veteran<ul>
+<li>要keep住用空閒時間學新野，唔係就會變返新手</li>
+<li>有人會決定轉去做management, sales, testing … etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Advice<ul>
+<li>睇長線D<ul>
+<li>㨂D有得接觸新野嘅公司，寧可低pay D<ul>
+<li>以防工作用嘅technology 第時decay曬</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>學decay level 低嘅knowledge<ul>
+<li>algorithms, application security, performance optimization, and architecture</li>
+<li>唔好不停去追新嘅libraries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="咖啡館師傅的啟示，如何正確跟他人學東西？"><a href="#咖啡館師傅的啟示，如何正確跟他人學東西？" class="headerlink" title="咖啡館師傅的啟示，如何正確跟他人學東西？"></a><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">咖啡館師傅的啟示，如何正確跟他人學東西？</a></h1><p>好多野都係context dependent，要睇情況同時機。所以學野唔係要學人地嘅經驗，唔係要學硬性嘅規則，而係學背後的邏輯、方法。咁先可以因應唔同嘅情況調整。</p>
+<h1 id="學徒之路"><a href="#學徒之路" class="headerlink" title="學徒之路"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/493" target="_blank" rel="external">學徒之路</a></h1><p>同上邊幾篇文都有D共通點</p>
+<ul>
+<li>基礎的知識、理論<ul>
+<li>Decay rate 比較低嘅knowledge</li>
+<li>可以透過書本、文件、或別人的教導獲得</li>
+</ul>
+</li>
+<li>經驗和應用類的知識<ul>
+<li>Decay rate 高</li>
+<li>好似上一篇提及嘅學習方法咁<ul>
+<li>不該全盤接受別人的想法，特別是經驗</li>
+<li>可以引以為鑑，反省自己的做法和想法</li>
+</ul>
+</li>
+<li>例子<ul>
+<li>Design Pattern</li>
+<li>Test Driven Development</li>
+<li>Agile</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>次要嘅發展方向的內容<ul>
+<li>以理論派嘅方式， 就係以研讀和理解的方式學習</li>
+</ul>
+</li>
+<li>主要嘅發展方向的內容先多花時間以實戰方式進行</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot;&gt;&lt;a href=&quot;#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot; class=&quot;headerlink&quot; title=&quot;我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.inside.com.tw/2016/02/19/javascript-novice-advice-and-learning-resources&quot;&gt;我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理&lt;/a&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;當睇唔明人地D code&lt;ul&gt;
+&lt;li&gt;查書&lt;ul&gt;
+&lt;li&gt;唔知要查嘅野係邊頁&lt;/li&gt;
+&lt;li&gt;要先對成個知識體系有基本了解，先可以有效率咁search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;查Google&lt;ul&gt;
+&lt;li&gt;唔知用咩keyword去search&lt;/li&gt;
+&lt;li&gt;同查書一樣&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;試+靠估&lt;ul&gt;
+&lt;li&gt;可能會得出錯嘅結論，學左D錯嘅野&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;做住學&lt;ul&gt;
+&lt;li&gt;要有觀念打底先扎實&lt;ul&gt;
+&lt;li&gt;都係要了解左成個知識體系先&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;我好同意E一點，要打好底咁先學到野。因為做野果時好多時都有deadline，一定要好有效率咁學，唔係最後係壓力下，只係patch到work就算，可唔到可以reuse嘅knowledge。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;會寫的多、看懂的少&lt;ul&gt;
+&lt;li&gt;如果你還是用一知半解的觀念去開發，你會花上大把大把的時間在除錯、鬼打牆、生悶氣、捶心肝。&lt;ul&gt;
+&lt;li&gt;其實就係leaky abstraction 嘅問題&lt;ul&gt;
+&lt;li&gt;當你要maintain D code，就算D third party library 好勁，好可靠，都要花時間去理解佢點運作。&lt;/li&gt;
+&lt;li&gt;因為世上係冇完美嘅abstraction，當一遇到底層嘅問題，必需要對library有深入嘅了解先solve到。&lt;/li&gt;
+&lt;li&gt;當出左事先抽時間去學，好可能會趕唔切，因為未必可以locate到個問題係邊個abstraction layer出事。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;當中推介D書遲D抽時間速睇。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</title>
     <link href="http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/"/>
     <id>http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/</id>
     <published>2016-11-23T16:00:00.000Z</published>
-    <updated>2016-11-23T16:37:37.000Z</updated>
+    <updated>2016-11-23T16:43:46.000Z</updated>
     
-    <content type="html"><![CDATA[<p>This chapter give some hint on writing maintainable CSS and introduce SCSS.</p>
+    <content type="html"><![CDATA[<p>This chapter gives some hints on writing maintainable CSS and introduce SCSS.</p>
+<a id="more"></a>
 <h3 id="Organize-style"><a href="#Organize-style" class="headerlink" title="Organize style"></a>Organize style</h3><ul>
 <li>Class name<ul>
 <li>Name style by purpose, not appearance</li>
@@ -78,8 +286,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;This chapter give some hint on writing maintainable CSS and introduce SCSS.&lt;/p&gt;
-&lt;h3 id=&quot;Organize-style&quot;&gt;&lt;a href=&quot;#Organize-style&quot; class=&quot;
+      &lt;p&gt;This chapter gives some hints on writing maintainable CSS and introduce SCSS.&lt;/p&gt;
     
     </summary>
     
@@ -592,27 +799,6 @@
   </entry>
   
   <entry>
-    <title>High quality code is too expensive</title>
-    <link href="http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/"/>
-    <id>http://199911.github.io/diary/2016/11/02/high-quality-code-is-too-expensive/</id>
-    <published>2016-11-01T16:00:00.000Z</published>
-    <updated>2016-11-19T14:24:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>A piece of perfect code in Utopia is easy to understand, easy to maintain and able to survive under requirement changes. Can we afford high quality code in reality?</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;A piece of perfect code in Utopia is easy to understand, easy to maintain and able to survive under requirement changes. Can we afford hi
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>How to pick a framework?</title>
     <link href="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/"/>
     <id>http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/</id>
@@ -654,67 +840,6 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集十</title>
-    <link href="http://199911.github.io/insight/2016/10/22/readings-11/"/>
-    <id>http://199911.github.io/insight/2016/10/22/readings-11/</id>
-    <published>2016-10-21T16:00:00.000Z</published>
-    <updated>2016-11-19T14:24:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理"><a href="#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理" class="headerlink" title="我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理"></a><a href="http://www.inside.com.tw/2016/02/19/javascript-novice-advice-and-learning-resources" target="_blank" rel="external">我要成為前端工程師！給 JavaScript 新手的建議與學習資源整理</a></h1><ul>
-<li>當睇唔明人地D code<ul>
-<li>查書<ul>
-<li>唔知要查嘅野係邊頁</li>
-<li>要先對成個知識體系有基本了解，先可以有效率咁search</li>
-</ul>
-</li>
-<li>查Google<ul>
-<li>唔知用咩keyword去search</li>
-<li>同查書一樣</li>
-</ul>
-</li>
-<li>試+靠估<ul>
-<li>可能會得出錯嘅結論，學左D錯嘅野</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>做住學<ul>
-<li>要有觀念打底先扎實<ul>
-<li>都係要了解左成個知識體系先</li>
-</ul>
-</li>
-<li>我好同意E一點，要打好底咁先學到野。因為做野果時好多時都有deadline，一定要好有效率咁學，唔係最後係壓力下，只係patch到work就算，可唔到可以reuse嘅knowledge。</li>
-</ul>
-</li>
-<li>會寫的多、看懂的少<ul>
-<li>如果你還是用一知半解的觀念去開發，你會花上大把大把的時間在除錯、鬼打牆、生悶氣、捶心肝。<ul>
-<li>其實就係leaky abstraction 嘅問題<ul>
-<li>當你要maintain D code，就算D third party library 好勁，好可靠，都要花時間去理解佢點運作。</li>
-<li>因為世上係冇完美嘅abstraction，當一遇到底層嘅問題，必需要對library有深入嘅了解先solve到。</li>
-<li>當出左事先抽時間去學，好可能會趕唔切，因為未必可以locate到個問題係邊個abstraction layer出事。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>當中推介D書遲D抽時間速睇。</li>
-</ul>
-<p><a href="http://www.playpcesor.com/2016/09/lifehack-18.html" target="_blank" rel="external">http://www.playpcesor.com/2016/09/lifehack-18.html</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot;&gt;&lt;a href=&quot;#我要成為前端工程師！給-JavaScript-新手的建議與學習資源整理&quot; class=&quot;headerlink&quot; title=&quot;我要成為前端工程師！給 JavaScript
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>
@@ -1211,7 +1336,7 @@
     <link href="http://199911.github.io/insight/2016/10/04/readings-10/"/>
     <id>http://199911.github.io/insight/2016/10/04/readings-10/</id>
     <published>2016-10-03T16:00:00.000Z</published>
-    <updated>2016-10-04T16:31:20.000Z</updated>
+    <updated>2016-11-26T07:18:57.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="當主管卻不懂交辦，當心「猴子」爬上身"><a href="#當主管卻不懂交辦，當心「猴子」爬上身" class="headerlink" title="當主管卻不懂交辦，當心「猴子」爬上身"></a><a href="http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully" target="_blank" rel="external">當主管卻不懂交辦，當心「猴子」爬上身</a></h1><p>文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。</p>
 <p>文中仲提及一D指派工作嘅技巧:</p>
@@ -1295,7 +1420,7 @@
 <li>Remove unnecessary meeting</li>
 <li>Don’t put all meeting on Friday, because the energy level is low</li>
 </ul>
-<h1 id="閱讀程式碼的心理層面"><a href="#閱讀程式碼的心理層面" class="headerlink" title="閱讀程式碼的心理層面"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/497" target="_blank" rel="external">閱讀程式碼的心理層面</a></h1><h1 id="知识漩涡"><a href="#知识漩涡" class="headerlink" title="知识漩涡"></a><a href="http://insights.thoughtworkers.org/obsession-og-technology/" target="_blank" rel="external">知识漩涡</a></h1><p>太多新technology，好難追，但好多時都係大同小異。重點係理解可以通用嘅重點。文中提及分為兩種，第一種係零碎嘅資料，第二種係幫助提升理解力。後者往往比前者重要，但係要用好多心力先可以吸收。</p>
+<h1 id="知识漩涡"><a href="#知识漩涡" class="headerlink" title="知识漩涡"></a><a href="http://insights.thoughtworkers.org/obsession-og-technology/" target="_blank" rel="external">知识漩涡</a></h1><p>太多新technology，好難追，但好多時都係大同小異。重點係理解可以通用嘅重點。文中提及分為兩種，第一種係零碎嘅資料，第二種係幫助提升理解力。後者往往比前者重要，但係要用好多心力先可以吸收。</p>
 <p>知識框架就係一種幫助理解資料嘅知識，而入邊specific 嘅 domain knowledge 就係資料。學野果時應嘅先廣後深，避免鑽得太深，明白整體之後，先揀得著最多嘅野，專心去學。如果只係不停去追新tech，冇深入了解，去到最後只係知左一堆好快outdate嘅資料，而唔係知識。</p>
 <p>小結：</p>
 <ul>
@@ -1843,6 +1968,43 @@
     </summary>
     
       <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集九</title>
+    <link href="http://199911.github.io/insight/2016/08/20/readings-9/"/>
+    <id>http://199911.github.io/insight/2016/08/20/readings-9/</id>
+    <published>2016-08-19T16:00:00.000Z</published>
+    <updated>2016-08-20T06:15:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我现在有一些工具类，我应该不应该做自己的框架？"><a href="#我现在有一些工具类，我应该不应该做自己的框架？" class="headerlink" title="我现在有一些工具类，我应该不应该做自己的框架？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html" target="_blank" rel="external">我现在有一些工具类，我应该不应该做自己的框架？</a></h1><p>如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。</p>
+<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义</a></h1><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
+<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h1><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<a id="more"></a>
+<h1 id="十年磨一剑—序"><a href="#十年磨一剑—序" class="headerlink" title="十年磨一剑—序"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="external">十年磨一剑—序</a></h1><p>引入功能強勁嘅library都可以係問題。當一個library好多功能，咁D code一定唔會簡單得去邊。萬一個library出左問題，就要花大量時間去睇code同doc。如果大部份功能都係冇use case嘅話，倒不如用一個功能簡單嘅library，甚至自己寫好過。</p>
+<p>金句一：</p>
+<blockquote>
+<p>在面对这些问题时，人们更多的时候是在寻找一个框架，即使这个框架大到你只想要一个轮子而不得不接收它的整个车子，你依然不会怀疑为什么这样做，当你终于被这个车子的其它零部件影响到你这个小小的轮子行驶，而不得不到处google爬文或分析源码，在弄得焦头烂额，筋疲力尽之时，你心里又会不会发出：这个。。。 能不能简单点的抱怨？</p>
+</blockquote>
+<p>金句二：</p>
+<blockquote>
+<p>对于一个优秀的系统架构师来说，他除了要为应对变化而施展他的艺术创作才华，很多时候他也必须分清哪些是需要变化的，哪些是可以变化的，哪些是不会变化。而要认清这些不同的变化，首先就要理解问题域的本质，例如缓存处理，为什么要缓存处理，它有什么用，在系统中处于什么样的地位，和其它模块的接口在哪里？哪些是缓存可变的，哪些是缓存不会变的，当变化时在哪里处理这个变化，对系统的其它模块的影响在哪里？只有认清这些，才会在引入某个模块时做到心中有数，避开它的负面影响。</p>
+</blockquote>
+<h1 id="一个时代的终结"><a href="#一个时代的终结" class="headerlink" title="一个时代的终结"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/02/20/1669594.html" target="_blank" rel="external">一个时代的终结</a></h1><p>係科技嘅時代，E樣野經常發生，不過科技暫時唔可以完全取代所有工作。最重要identify左邊D係機械性嘅重覆工作，邊D係有價值嘅工作。</p>
+<p>順帶一提，code generator好難去取代programmer。主要係maintenance嘅問題。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;a href=&quot;#我现在有一些工具类，我应该不应该做自己的框架？&quot; class=&quot;headerlink&quot; title=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html&quot;&gt;我现在有一些工具类，我应该不应该做自己的框架？&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。&lt;/p&gt;
+&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。&lt;/p&gt;
+&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义-续&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义-续&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义(续)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义(续)&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;用一個no width space (0xFEFF) 去indicate big endian 定係 small endian&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>
