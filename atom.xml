@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2016-11-26T10:49:49.000Z</updated>
+  <updated>2016-12-05T15:32:29.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to fallback CSS file to different CDN</title>
+    <link href="http://199911.github.io/diary/2016/12/05/how-to-fallback-to-different-CDN/"/>
+    <id>http://199911.github.io/diary/2016/12/05/how-to-fallback-to-different-CDN/</id>
+    <published>2016-12-04T16:00:00.000Z</published>
+    <updated>2016-12-05T15:32:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>A user in UK report our site is broken. From the captured screen, it is easy to it is because CSS file fail to load. After testing using <a href="https://www.webpagetest.org/" target="_blank" rel="external">Webpage Test</a>, I found out the machine in London fail to get the CSS file from MAXCDN. After long comunication with the customer support of CDN and lots of black box remote testing, they confirmed it is some local network error. MaxCDN and I can do nothing but wait until ISP fix the network.</p>
+<p>I come up an idea, can we fallback to other CDN automatically if the current one is fail?</p>
+<a id="more"></a>
+<h2 id="Javascript-file-detection"><a href="#Javascript-file-detection" class="headerlink" title="Javascript file detection"></a>Javascript file detection</h2><p>Actually, it is very common in Javascript files. Many dependency management tools ,like require.js and yepnope.js, have built in CDN fallback feature for javascript. <a href="http://stackoverflow.com/questions/1014203/best-way-to-use-googles-hosted-jquery-but-fall-back-to-my-hosted-library-on-go" target="_blank" rel="external">The implementation is very simple</a>. For example, <code>!!window.jQuery</code> can be used to check jQuery is loaded or not.</p>
+<h2 id="CSS-file-detection-in-fallback-js"><a href="#CSS-file-detection-in-fallback-js" class="headerlink" title="CSS file detection in fallback.js"></a>CSS file detection in fallback.js</h2><p>CSS have nothing do with javascript, how can we detect the style is loaded or not? From the source code of <a href="https://github.com/dolox/fallback/blob/v1/fallback.js#L212" target="_blank" rel="external">fallback.js</a>, we can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheets" target="_blank" rel="external">style sheets web apis</a>. We can get every single rules in the styleSheets by javascript. In fallback.js, <code>selectorText</code> is used to detect the style sheet. Notices that it use exact string matching, for example, if you only have a rules <code>.css.is.loaded { display: none; }</code> and the checking of <code>.loaded</code> will be fail, because the value of <code>selectorText</code> is <code>.css.is.loaded</code></p>
+<h2 id="Style-Sheets-API-fallback"><a href="#Style-Sheets-API-fallback" class="headerlink" title="Style Sheets API fallback"></a>Style Sheets API fallback</h2><p><a href="http://caniuse.com/#search=stylesheets" target="_blank" rel="external">IE 11 and Edge 14 still not support style sheets api</a>, the fallback.js implementation does not works. In this <a href="http://eddmann.com/posts/providing-local-js-and-css-resources-for-cdn-fallbacks/" target="_blank" rel="external">article</a>, it suggests to have a string match which the background color style: <code>$(&#39;body&#39;).css(&#39;color&#39;) !== &#39;rgb(51, 51, 51)&#39;)</code>. It looks not very reliable, as the css need to have exactly the same format as <code>rgb(DD, DD, DD)</code>, I have check a few browser and the string format is exactly the same.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;A user in UK report our site is broken. From the captured screen, it is easy to it is because CSS file fail to load. After testing using &lt;a href=&quot;https://www.webpagetest.org/&quot;&gt;Webpage Test&lt;/a&gt;, I found out the machine in London fail to get the CSS file from MAXCDN. After long comunication with the customer support of CDN and lots of black box remote testing, they confirmed it is some local network error. MaxCDN and I can do nothing but wait until ISP fix the network.&lt;/p&gt;
+&lt;p&gt;I come up an idea, can we fallback to other CDN automatically if the current one is fail?&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>文集十一</title>
@@ -1968,43 +1995,6 @@
     </summary>
     
       <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集九</title>
-    <link href="http://199911.github.io/insight/2016/08/20/readings-9/"/>
-    <id>http://199911.github.io/insight/2016/08/20/readings-9/</id>
-    <published>2016-08-19T16:00:00.000Z</published>
-    <updated>2016-08-20T06:15:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="我现在有一些工具类，我应该不应该做自己的框架？"><a href="#我现在有一些工具类，我应该不应该做自己的框架？" class="headerlink" title="我现在有一些工具类，我应该不应该做自己的框架？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html" target="_blank" rel="external">我现在有一些工具类，我应该不应该做自己的框架？</a></h1><p>如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。</p>
-<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义</a></h1><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
-<h1 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="external">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h1><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
-<a id="more"></a>
-<h1 id="十年磨一剑—序"><a href="#十年磨一剑—序" class="headerlink" title="十年磨一剑—序"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="external">十年磨一剑—序</a></h1><p>引入功能強勁嘅library都可以係問題。當一個library好多功能，咁D code一定唔會簡單得去邊。萬一個library出左問題，就要花大量時間去睇code同doc。如果大部份功能都係冇use case嘅話，倒不如用一個功能簡單嘅library，甚至自己寫好過。</p>
-<p>金句一：</p>
-<blockquote>
-<p>在面对这些问题时，人们更多的时候是在寻找一个框架，即使这个框架大到你只想要一个轮子而不得不接收它的整个车子，你依然不会怀疑为什么这样做，当你终于被这个车子的其它零部件影响到你这个小小的轮子行驶，而不得不到处google爬文或分析源码，在弄得焦头烂额，筋疲力尽之时，你心里又会不会发出：这个。。。 能不能简单点的抱怨？</p>
-</blockquote>
-<p>金句二：</p>
-<blockquote>
-<p>对于一个优秀的系统架构师来说，他除了要为应对变化而施展他的艺术创作才华，很多时候他也必须分清哪些是需要变化的，哪些是可以变化的，哪些是不会变化。而要认清这些不同的变化，首先就要理解问题域的本质，例如缓存处理，为什么要缓存处理，它有什么用，在系统中处于什么样的地位，和其它模块的接口在哪里？哪些是缓存可变的，哪些是缓存不会变的，当变化时在哪里处理这个变化，对系统的其它模块的影响在哪里？只有认清这些，才会在引入某个模块时做到心中有数，避开它的负面影响。</p>
-</blockquote>
-<h1 id="一个时代的终结"><a href="#一个时代的终结" class="headerlink" title="一个时代的终结"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/02/20/1669594.html" target="_blank" rel="external">一个时代的终结</a></h1><p>係科技嘅時代，E樣野經常發生，不過科技暫時唔可以完全取代所有工作。最重要identify左邊D係機械性嘅重覆工作，邊D係有價值嘅工作。</p>
-<p>順帶一提，code generator好難去取代programmer。主要係maintenance嘅問題。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;a href=&quot;#我现在有一些工具类，我应该不应该做自己的框架？&quot; class=&quot;headerlink&quot; title=&quot;我现在有一些工具类，我应该不应该做自己的框架？&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html&quot;&gt;我现在有一些工具类，我应该不应该做自己的框架？&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。&lt;/p&gt;
-&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。&lt;/p&gt;
-&lt;h1 id=&quot;编码-charset-乱码-unicode-utf-8与net简单释义-续&quot;&gt;&lt;a href=&quot;#编码-charset-乱码-unicode-utf-8与net简单释义-续&quot; class=&quot;headerlink&quot; title=&quot;编码,charset,乱码,unicode,utf-8与net简单释义(续)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html&quot;&gt;编码,charset,乱码,unicode,utf-8与net简单释义(续)&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;用一個no width space (0xFEFF) 去indicate big endian 定係 small endian&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>
