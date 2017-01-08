@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2016-12-05T15:32:29.000Z</updated>
+  <updated>2017-01-08T09:44:51.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm</title>
+    <link href="http://199911.github.io/diary/2017/01/08/npm/"/>
+    <id>http://199911.github.io/diary/2017/01/08/npm/</id>
+    <published>2017-01-07T16:00:00.000Z</published>
+    <updated>2017-01-08T09:44:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Just read the <a href="https://docs.npmjs.com/getting-started" target="_blank" rel="external">“Getting Started” section</a> of npm docs.</p>
+<h2 id="Update-npm-packages"><a href="#Update-npm-packages" class="headerlink" title="Update npm packages"></a>Update npm packages</h2><p>We can use <code>npm outdated</code> to check which package is outdated and <code>npm update &lt;package name&gt;</code> to update.</p>
+<h2 id="Versioning"><a href="#Versioning" class="headerlink" title="Versioning"></a>Versioning</h2><p>The versioning number look likes “<major release="">.<minor release="">.<patch release="">“<br>Say the current version is 1.0.0:</patch></minor></major></p>
+<ul>
+<li>If a bug fix is publish, new version should be 1.0.1 (Patch release)</li>
+<li>If new features which don’t break existing features is publish, new version should be 1.1.0 (Minor release)</li>
+<li>If there is changes which break backward, new version should be 2.0.0 (Major release)</li>
+</ul>
+<p>We can close our eyes if the update is minor or patch release. If it is Major release, we need to take extra cares.</p>
+<h2 id="Host-npm-package-with-github"><a href="#Host-npm-package-with-github" class="headerlink" title="Host npm package with github"></a>Host npm package with github</h2><p>It is possible to use github to host npm package. Not sure does it works with private github repo. <a href="http://stackoverflow.com/questions/16350673/depend-on-a-branch-or-tag-using-a-git-url-in-a-package-json" target="_blank" rel="external">REF</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just read the &lt;a href=&quot;https://docs.npmjs.com/getting-started&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;“Getting Started” section&lt;/a&gt; of npm docs.&lt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>How to fallback CSS file to different CDN</title>
@@ -1913,84 +1943,6 @@
 &lt;li&gt;Know all the code&lt;/li&gt;
 &lt;li&gt;May write code, but he is not responsible for any part of the code&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Review of &quot;the mythical man month&quot; chapter 2</title>
-    <link href="http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/"/>
-    <id>http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/</id>
-    <published>2016-08-19T16:00:00.000Z</published>
-    <updated>2016-10-02T11:59:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Why it is difficult to estimate the time cost of a software project?</p>
-<h2 id="Five-reasons"><a href="#Five-reasons" class="headerlink" title="Five reasons"></a>Five reasons</h2><ol>
-<li>Programmers are optimist, tends to underestimate the time cost.</li>
-<li>Having assumption that man and months are interchangeable.</li>
-<li>Software managers have less inherent courage and firmness.</li>
-<li>Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.</li>
-<li>When the schedule is lagged behind, more man power is added, which make the situation delay worser.</li>
-</ol>
-<h3 id="Why-programmers-are-optimist"><a href="#Why-programmers-are-optimist" class="headerlink" title="Why programmers are optimist?"></a>Why programmers are optimist?</h3><p>The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.</p>
-<a id="more"></a>
-<h4 id="Why-we-cannot-estimated-the-time-need-to-be-debug"><a href="#Why-we-cannot-estimated-the-time-need-to-be-debug" class="headerlink" title="Why we cannot estimated the time need to be debug?"></a>Why we cannot estimated the time need to be debug?</h4><p>Before move on to the question, we need to understand the nature of programming first. Programming is more likely human creative activities, which can be divided into three stages:</p>
-<ol>
-<li>The idea</li>
-<li>The implementation</li>
-<li>The interaction</li>
-</ol>
-<p>All programmers try to make sure the idea are perfect before implementation. In reality, it is impossible. The incompleteness and inconsistencies become clearly only during implementation. It means we don’t know the bugs exist before implementation. How can we estimate the time required to fix and test the bugs?</p>
-<h4 id="It-is-very-difficult-to-have-program-without-bugs"><a href="#It-is-very-difficult-to-have-program-without-bugs" class="headerlink" title="It is very difficult to have program without bugs"></a>It is very difficult to have program without bugs</h4><p>A large programming effort consists of many tasks chained end-to-end. Even the probability of tasks to have bug is small, the probability to have whole program bug free is vanishingly small.</p>
-<h3 id="Why-man-and-months-are-not-interchangeable"><a href="#Why-man-and-months-are-not-interchangeable" class="headerlink" title="Why man and months are not interchangeable"></a>Why man and months are not interchangeable</h3><p>The task can be divided into four types.</p>
-<ol>
-<li>Tasks can be partitioned among many workers with no communication among them.<ul>
-<li>The months required is decrease logarithmically. When there are infinity many workers, the months required tend to zero.</li>
-</ul>
-</li>
-<li>Tasks cannot be partitioned because of sequential constraints.<ul>
-<li>The months required is constants, independent from the number of workers.</li>
-<li>Many software tasks have this characteristic because of the nature of debugging</li>
-</ul>
-</li>
-<li>Tasks can be partitioned but require communication like training<ul>
-<li>It is type one plus type two. The months required logarithmically decrease to a constants  when number of worker increase.</li>
-</ul>
-</li>
-<li>Tasks can be partitioned but require intercommunication<ul>
-<li>The communication cost increase with the number of workers. The months required decrease logarithmically. When the number of workers increase further, the communication cost dominated and the months require increase with the number of workers.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Software-managers-need-inherent-courage-and-firmness"><a href="#Software-managers-need-inherent-courage-and-firmness" class="headerlink" title="Software managers need inherent courage and firmness."></a>Software managers need inherent courage and firmness.</h3><p>Software project are difficult to estimate. When the project fall behind the schedule, manager need to have courage and firmness to postpone the deadline and explain this to the patron. A software project is difficult to speed up.</p>
-<h3 id="Brooks’s-Law"><a href="#Brooks’s-Law" class="headerlink" title="Brooks’s Law -"></a>Brooks’s Law -</h3><blockquote>
-<p>Adding manpower to a late software project makes it later.</p>
-</blockquote>
-<p>Software tasks are usually type four task, the communication cost will dominated after the team grow to a certain size.</p>
-<h2 id="Rule-of-thumb-for-scheduling"><a href="#Rule-of-thumb-for-scheduling" class="headerlink" title="Rule of thumb for scheduling"></a>Rule of thumb for scheduling</h2><ul>
-<li>1/6 for coding</li>
-<li>1/3 for planning</li>
-<li>1/4 for component test and early system test</li>
-<li>1/4 for system test, all components in hand</li>
-</ul>
-<p>The coding time is the easiest to estimate.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Why it is difficult to estimate the time cost of a software project?&lt;/p&gt;
-&lt;h2 id=&quot;Five-reasons&quot;&gt;&lt;a href=&quot;#Five-reasons&quot; class=&quot;headerlink&quot; title=&quot;Five reasons&quot;&gt;&lt;/a&gt;Five reasons&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;Programmers are optimist, tends to underestimate the time cost.&lt;/li&gt;
-&lt;li&gt;Having assumption that man and months are interchangeable.&lt;/li&gt;
-&lt;li&gt;Software managers have less inherent courage and firmness.&lt;/li&gt;
-&lt;li&gt;Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.&lt;/li&gt;
-&lt;li&gt;When the schedule is lagged behind, more man power is added, which make the situation delay worser.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;Why-programmers-are-optimist&quot;&gt;&lt;a href=&quot;#Why-programmers-are-optimist&quot; class=&quot;headerlink&quot; title=&quot;Why programmers are optimist?&quot;&gt;&lt;/a&gt;Why programmers are optimist?&lt;/h3&gt;&lt;p&gt;The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.&lt;/p&gt;
     
     </summary>
     
