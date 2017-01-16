@@ -59,6 +59,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-readings-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/02/readings-3/" class="article-date">
+  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/07/02/readings-3/">文集三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更轻量的-View-Controllers"><a href="#更轻量的-View-Controllers" class="headerlink" title="更轻量的 View Controllers"></a><a href="http://objccn.io/issue-1-1/">更轻量的 View Controllers</a></h2><p>文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。</p>
+<h2 id="MVVM-介绍"><a href="#MVVM-介绍" class="headerlink" title="MVVM 介绍"></a><a href="http://objccn.io/issue-13-1/">MVVM 介绍</a></h2><p>VM stand for View Model. The idea is to improve MVC by adding a layer (View Model) between Controller and Model.<br>View Model handles all presnetation logic, such as format data in Model for View. In MVC, we put the data formating code in Controller. MVVM make the controller slimmer.</p>
+<p>We should put all code which cannot be reused in Controller. I thought data format code usually is not reusabile, it makes sense to put the logic in Controller. When the system grow and become more complex, we can apply MVVM to break down the controller is small pieces. So the code base will be cleaner.</p>
+<p>Pros of MVVM:</p>
+<ul>
+<li>easy to migrate from MVC by adding view models<ul>
+<li>we can migrate progressively</li>
+</ul>
+</li>
+<li>view model is testable<ul>
+<li>in most cases, controller is not worth to write automated test</li>
+</ul>
+</li>
+<li>easier to bind logic, as controller is smaller</li>
+</ul>
+<p>I have no experience on MVVM. I need to find some example to support my thought</p>
+        
+          <p class="article-more-link">
+            <a href="/insight/2016/07/02/readings-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/02/readings-3/" data-id="ciqgizrv30000ld65z068p90u" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/02/readings-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-readings-2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/insight/2016/06/29/readings-2/" class="article-date">
@@ -496,53 +558,6 @@
 
 
   
-    <article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/09/optimizing-mongodb/">Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/09/optimizing-mongodb/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -586,6 +601,10 @@
       <ul>
         
           <li>
+            <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/">&quot;CSS: The Definitive Guide 3rd Edition&quot; part 1</a>
+          </li>
+        
+          <li>
             <a href="/diary/2017/01/08/npm/">npm</a>
           </li>
         
@@ -599,10 +618,6 @@
         
           <li>
             <a href="/review/2016/11/24/CSS-missing-manual-4/">&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</a>
-          </li>
-        
-          <li>
-            <a href="/review/2016/11/20/CSS-missing-manual-3/">&quot;CSS - the missing manual 2nd edition&quot; CSS Page Layout</a>
           </li>
         
       </ul>

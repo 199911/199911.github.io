@@ -3,30 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot; | Coding Sunday</title>
+  <title>&quot;CSS: The Definitive Guide 3rd Edition&quot; part 1 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
+  <meta name="description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Review of "Get off Your Horse and Stop Coding like a Cowboy"">
-<meta property="og:url" content="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/index.html">
+<meta property="og:title" content=""CSS: The Definitive Guide 3rd Edition" part 1">
+<meta property="og:url" content="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
-<meta property="og:updated_time" content="2016-07-10T12:13:07.000Z">
+<meta property="og:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta property="og:updated_time" content="2017-01-16T15:14:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Review of "Get off Your Horse and Stop Coding like a Cowboy"">
-<meta name="twitter:description" content="One man team
-Zero-Communication Overhead
-Know all aspects of codebase
-Usually have lower quality
-No peer pressure to stop doing dirty hack. Code become patchy and messy.">
+<meta name="twitter:title" content=""CSS: The Definitive Guide 3rd Edition" part 1">
+<meta name="twitter:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -73,10 +61,10 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-stop-coding-like-a-cowboy" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/05/08/stop-coding-like-a-cowboy/" class="article-date">
-  <time datetime="2016-05-07T16:00:00.000Z" itemprop="datePublished">2016-05-08</time>
+    <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" class="article-date">
+  <time datetime="2017-01-15T16:00:00.000Z" itemprop="datePublished">2017-01-16</time>
 </a>
     
   <div class="article-category">
@@ -91,7 +79,7 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
         
   
     <h1 class="article-title" itemprop="name">
-      Review of &quot;Get off Your Horse and Stop Coding like a Cowboy&quot;
+      &quot;CSS: The Definitive Guide 3rd Edition&quot; part 1
     </h1>
   
 
@@ -99,107 +87,91 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="One-man-team"><a href="#One-man-team" class="headerlink" title="One man team"></a>One man team</h2><ul>
-<li>Zero-Communication Overhead</li>
-<li>Know all aspects of codebase</li>
-<li>Usually have lower quality<ul>
-<li>No peer pressure to stop doing dirty hack. Code become patchy and messy.</li>
+        <p>This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It is pity that CSS3 is not included.</p>
+<p>This book may be a little bit outdated, but it is still worth reading if you want to have a better foundation on CSS, but you still need other books to learn CSS 3 feature which are commonly used.</p>
+<a id="more"></a>
+<h1 id="1-CSS-and-Documents"><a href="#1-CSS-and-Documents" class="headerlink" title="1 CSS and Documents"></a>1 CSS and Documents</h1><p>Replaced elements and non-replaced elements</p>
+<ul>
+<li>content is replaced or not</li>
+<li>(img is replaced), no actual content, the content is replaced by data outside HTML file</li>
+<li>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element" target="_blank" rel="external">MDN</a>, their representation is outside the scope of CSS.</li>
+</ul>
+<p>Alternate style sheet</p>
+<ul>
+<li>Example: <code>&lt;link rel=&quot;alternate stylesheet&quot; type=&quot;text/css&quot; href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;</code></li>
+<li>Fecko-based browser support alternate style sheet. browser provide options to let user select the stylesheet.</li>
+<li>Will it be downloaded even user not selected them?</li>
+<li>What is the behaviour in other browser?</li>
+</ul>
+<p>Some old browser does not support @import, which can use this ‘feature’ to hide css from old browsers</p>
+<ul>
+<li>CSS cannot have nested comment, like <code>/* /* nested comment */ */</code> is invalid</li>
+</ul>
+<h1 id="2-Selector"><a href="#2-Selector" class="headerlink" title="2 Selector"></a>2 Selector</h1><p>Pseudo-elements must be the last item in selector. <code>p:first-line em</code> is not valid, as the last item is <code>em</code> but not <code>first-line</code>. There are limited properties to be applied to <code>first-line</code> and <code>first-letter</code> pseudo-element.</p>
+<h1 id="3-Structure-and-the-Cascade"><a href="#3-Structure-and-the-Cascade" class="headerlink" title="3 Structure and the Cascade"></a>3 Structure and the Cascade</h1><ul>
+<li>Universal selector have no specificity: (0,0,0,0)<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>Attribute selector on id attribute is still consider attribute selector<ul>
+<li>It can be a temp fix on specificity war of ID<ul>
+<li><code>tr[id=&quot;totals&quot;]</code>, specificity (0,0,0,1)</li>
+<li><code>#totals</code>, specificity (0,1,0,0)</li>
 </ul>
 </li>
 </ul>
-<a id="more"></a> 
-<h2 id="Agile-Team"><a href="#Agile-Team" class="headerlink" title="Agile Team"></a>Agile Team</h2><ul>
-<li>Product Backlog (Tickets)<ul>
-<li>Feature request</li>
-<li>Describe ‘what to build’, but not ‘how to build’</li>
+</li>
+<li>Inherit value don’t have specificity, even universal selector can override<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
 </ul>
 </li>
-<li>What is Sprint?<ul>
-<li>The collection of work (tickets) to be done in a certain timeframe.</li>
-<li>The timeframe can be 1 week, 2 weeks or even 1 month.</li>
-<li>Each member was assigned some tickets.</li>
-<li>Some tickets are unassigned, members who finish their work before the end can pick them.</li>
-<li>Only deploy at the end of sprint.</li>
-<li>If member cannot finish the task, they have to communicate before the end of sprint</li>
+<li>In CSS3 inline style override all non-important style<ul>
+<li><code>!important</code> can be used to override inline style written by others</li>
+<li>In CSS 2 inline style have the same specificity as id</li>
 </ul>
 </li>
-<li>Sprint planning<ul>
-<li>Before the end of sprint, team need to pick important tasks for the next sprint</li>
-<li>Use “Story point” to measure complexity, not time<ul>
-<li>Because different engineer need different amount of time to finish it.</li>
+<li>Non-CSS style (html attribute) can be override by user or author style</li>
+</ul>
+<h2 id="Exception-of-downward-propagation"><a href="#Exception-of-downward-propagation" class="headerlink" title="Exception of downward propagation"></a>Exception of downward propagation</h2><p>There is upward propagation rule in HTML, background style in <code>body</code> element can be passed to the <code>html</code> element.<br>From <a href="http://stackoverflow.com/questions/5225237/why-does-styling-the-background-of-the-body-element-affect-the-entire-screen/5225321" target="_blank" rel="external">this</a>, if you apply the following CSS to <code>&lt;body /&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">  height: 100px;</div><div class="line">  width: 100px;</div><div class="line">  background: black</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>the whole screen will be black, unless you apply <code>html { background: white; }</code> explicitly.</p>
+<h2 id="Three-kinds-of-agent-stylesheet"><a href="#Three-kinds-of-agent-stylesheet" class="headerlink" title="Three kinds of agent stylesheet"></a>Three kinds of agent stylesheet</h2><ul>
+<li>User agent stylesheet<ul>
+<li>The browser’s default style</li>
+</ul>
+</li>
+<li>Reader stylesheet<ul>
+<li>The style configure by user</li>
+</ul>
+</li>
+<li>Author stylesheet<ul>
+<li>The style provide by the website owner</li>
+</ul>
+</li>
+<li>Priority:<ul>
+<li>author &gt; reader &gt; user agent stylesheet</li>
+<li>Seems reader does not work if we have reset script</li>
+</ul>
+</li>
+<li>But reader <code>!important</code> style override author style<ul>
+<li>Need confirm to test</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>Stand-up meetings (SCRUM Meetings)<ul>
-<li>10-15 minute</li>
-<li>Answer 3 questions:<ul>
-<li>What did you do yesterday?</li>
-<li>What are you going to work on today?</li>
-<li>Is anything preventing you from getting what you need to done?</li>
+<h2 id="Order-to-apply-CSS-on-element-with-pseudo-classes"><a href="#Order-to-apply-CSS-on-element-with-pseudo-classes" class="headerlink" title="Order to apply CSS on element with pseudo-classes"></a>Order to apply CSS on element with pseudo-classes</h2><ul>
+<li>An element can have multiple pseudo class, if apply in wrong other, some styles will never be applied</li>
+<li>The order: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code><ul>
+<li>mnemonic “LoVe - HA”</li>
 </ul>
 </li>
-<li>Another meeting may be scheduled if follow up is needed.</li>
+<li>Define all combination is also a solution</li>
 </ul>
-</li>
-<li>Task Boards<ul>
-<li>Each one have at most one task at the same time.</li>
-<li>Keep track tasks in different stagings, such as<ul>
-<li>To do</li>
-<li>In progress</li>
-<li>Finished</li>
-</ul>
-</li>
-<li>Having a real board can help in stand up meeting.</li>
-</ul>
-</li>
-<li>Headphones mean: Don’t bother me</li>
-<li>Best Practices<ul>
-<li>“The stuff that is generally accepted as a good idea in the long run, even if it is a bit of a pain to implement in the short run.”</li>
-</ul>
-</li>
-<li>Test Driven Development<ul>
-<li>More people work in the same project -&gt; # of code increase fast -&gt; software complexity grow fast -&gt; engineer don’t know the big picture in detail -&gt; new code easy to break other’s work</li>
-<li>Use test to verify the code is working</li>
-</ul>
-</li>
-<li>Continuous Integration<ul>
-<li>Run test automatically before integration.</li>
-</ul>
-</li>
-<li>Continuous Deployment<ul>
-<li>Automatically deploy to production once code is accepted</li>
-</ul>
-</li>
-<li>Pair Programming<ul>
-<li>One person code, another give alternative and suggestion.</li>
-<li>Switch position from time to time.</li>
-<li>As a junior developer, it is good to see how other code, to learn thing you don’t know.</li>
-</ul>
-</li>
-<li>Code Review<ul>
-<li>To identify issues hasn’t thought about by the person who write the code.</li>
-<li>Person who review should not involved in writing the code.</li>
-</ul>
-</li>
-<li>Code Style Guides</li>
-</ul>
-<h2 id="Some-questions-to-ask-by-developers"><a href="#Some-questions-to-ask-by-developers" class="headerlink" title="Some questions to ask by developers"></a>Some questions to ask by developers</h2><ol>
-<li>Do you use test driven development?  If so, dive in and find out more specifics of how they write tests.</li>
-<li>Do you have continuous integration or deployment setup?</li>
-<li>How do you feel about pair programming?</li>
-<li>Do you follow a certain coding style guide?</li>
-<li>How do you conduct code reviews?</li>
-</ol>
-<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p>The Story point concept assume the difficulty of a task is the same for all engineers. It ignores the fact that knowledge need to be transfer if a new engineer take over the task.</p>
-<p>Reference: <a href="http://blog.thefirehoseproject.com/posts/best-team-tactics-to-write-software/" target="_blank" rel="external">Get off Your Horse and Stop Coding like a Cowboy</a>.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/" data-id="cio5y9xiq000k1365hqpxrniq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" data-id="ciy08f4al0000pu65n2mhbwm5" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -208,19 +180,10 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
     
 <nav id="article-nav">
   
-    <a href="/review/2016/05/10/rspec-vs-test-unit/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Review of &quot;RSpec vs. Test Unit: How Test Driven Development Works&quot;
-        
-      </div>
-    </a>
   
-  
-    <a href="/diary/2016/05/07/mean-and-median/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/2017/01/08/npm/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Mean vs Median</div>
+      <div class="article-nav-title">npm</div>
     </a>
   
 </nav>
@@ -328,7 +291,7 @@ No peer pressure to stop doing dirty hack. Code become patchy and messy.">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2016/05/08/stop-coding-like-a-cowboy/';
+  var disqus_url = 'http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/';
   
   (function(){
     var dsq = document.createElement('script');
