@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="4 Values and Units
+There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.
+rgb(50%, 0%, 100%) is a valid color
+The “web-safe” colors are those colors t">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""CSS: The Definitive Guide 3rd Edition" part 2">
+<meta property="og:url" content="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="4 Values and Units
+There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.
+rgb(50%, 0%, 100%) is a valid color
+The “web-safe” colors are those colors t">
+<meta property="og:updated_time" content="2017-01-22T12:54:55.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""CSS: The Definitive Guide 3rd Edition" part 2">
+<meta name="twitter:description" content="4 Values and Units
+There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.
+rgb(50%, 0%, 100%) is a valid color
+The “web-safe” colors are those colors t">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/" class="article-date">
+  <time datetime="2017-01-21T16:00:00.000Z" itemprop="datePublished">2017-01-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &quot;CSS: The Definitive Guide 3rd Edition&quot; part 2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="4-Values-and-Units"><a href="#4-Values-and-Units" class="headerlink" title="4 Values and Units"></a>4 Values and Units</h1><ul>
+<li>There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.</li>
+<li><code>rgb(50%, 0%, 100%)</code> is a valid color</li>
+<li>The “web-safe” colors are those colors that generally avoid dithering on 256-color computer systems<ul>
+<li>Value can be express in multiple of 20%</li>
+<li>I think we don’t need to care these nowadays</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Length-units"><a href="#Length-units" class="headerlink" title="Length units"></a>Length units</h2><ul>
+<li>Valid units: <code>in</code>, <code>cm</code>, <code>mm</code>, <code>pt</code>, <code>pc</code> (picas)</li>
+<li><code>em</code> and <code>ex</code> stand for “em-height” and “x-height”<ul>
+<li>Different fonts with same <code>em</code> may have different <code>ex</code>, as the font design is different<ul>
+<li>But in practical, not all font have <code>ex</code> defined, will fallback to convention (<code>0.5 em</code> = <code>1 ex</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>1 em</code> = <code>14 px</code></li>
+<li><code>12 pt</code> = <code>1 pc</code></li>
+<li><code>72 pt</code> = <code>1 in</code> is only correct in classic mac, as the monitor have different ppi (pt per in).<ul>
+<li>Don’t assume OS can convert <code>pt</code> to accurate length on monitor, it is the reason to avoid <code>pt</code>.</li>
+</ul>
+</li>
+<li><code>in</code> is a reliable unit</li>
+<li>Absolute unit (in, cm, mm) is more useful in <code>print</code> media</li>
+<li><code>px</code> may scale when print, so it is defined as relative unit</li>
+<li><code>ex</code> is not commonly used, use <code>em</code> or <code>px</code> is better</li>
+</ul>
+<h2 id="List-of-value"><a href="#List-of-value" class="headerlink" title="List of value"></a>List of value</h2><ul>
+<li>number</li>
+<li>color</li>
+<li>uri</li>
+<li>keyword</li>
+<li>angle (deg, grad, rad)</li>
+<li>time</li>
+<li>frequency</li>
+</ul>
+<h1 id="5-Fonts"><a href="#5-Fonts" class="headerlink" title="5 Fonts"></a>5 Fonts</h1><ul>
+<li>Don’t forget provide fallback for font family</li>
+<li>Use quotation mark as font family may have special characters</li>
+<li>Fonts have variant<ul>
+<li>Example: Zurich Bold, Zurich Black, Zurich UltraBlack, Zurich Light, and Zurich Regular</li>
+<li><code>font-weight</code> is using different font variant</li>
+<li><code>font-weight</code> to font variant conversion is complex, check the book if needed.</li>
+</ul>
+</li>
+<li>lighter / bolder is relative value<ul>
+<li>Increase / decrease <code>font-weight</code> inherit by parent</li>
+</ul>
+</li>
+<li>Font size is the size of em box<ul>
+<li>From baseline to extra leading</li>
+<li>Font size is not size of any characters</li>
+</ul>
+</li>
+<li>There absolutive and relative font size value keywords<ul>
+<li>Absolute keywords: (increase or decrease by a constant factor for each keywords)</li>
+<li>Relative keywords: (larger / smaller) same factor as absolute keywords<ul>
+<li>Relative keywords in font size and weight is useful when define style of tags like <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Percentage value in font-size is effectively cumulative<ul>
+<li>PS: Round off to integer</li>
+</ul>
+</li>
+<li>Small caps font variant<ul>
+<li>Instead of upper and lowercase letters, a small-caps font employs uppercase letters of different sizes.</li>
+</ul>
+</li>
+<li><code>font-stretch</code> and <code>font-size-adjust</code> are not implemented</li>
+</ul>
+<h2 id="System-fonts"><a href="#System-fonts" class="headerlink" title="System fonts"></a>System fonts</h2><p>These are used to take the font size, family, weight, style, and variant of elements of the operating system, and apply them to an element.</p>
+<ul>
+<li>caption</li>
+<li>icon</li>
+<li>menu</li>
+<li>message-box</li>
+<li>small-caption</li>
+<li>status-bar</li>
+</ul>
+<h2 id="Font-synthesis"><a href="#Font-synthesis" class="headerlink" title="Font synthesis"></a>Font synthesis</h2><p>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis" target="_blank" rel="external">MDN</a>, <code>font-synthesis</code> control the generaton of missing typefaces</p>
+<h1 id="6-Text-Properties"><a href="#6-Text-Properties" class="headerlink" title="6 Text Properties"></a>6 Text Properties</h1><ul>
+<li><p><code>text-indent</code></p>
+<ul>
+<li>Only works on block level elements. Use padding in inline elements</li>
+<li>Percentage is relative to the parent’s width</li>
+<li>Always inherited the computed value, not declared value</li>
+</ul>
+</li>
+<li><p><code>text-align</code> can be ugly when</p>
+<ul>
+<li>the container is too narrow</li>
+<li>the word are too long (can use hyphenation)</li>
+</ul>
+</li>
+<li><p><code>line-height</code></p>
+<ul>
+<li>The line will be short when the children have a larger font size</li>
+<li>Use factors (number without value) to overcome inheritances problem<ul>
+<li>Because the value is relative to font size</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>vertical-align</code> does not work on block elements</p>
+<ul>
+<li>We can use it to align <code>inline-block</code> and <code>inline</code> elements</li>
+</ul>
+</li>
+<li><p><code>text-decoration</code> is not inherited, but the decoration is still appear in children (it is from parent, not children’s decoration)</p>
+<ul>
+<li>To remove the children’s decoration, use text-decoration: none;<ul>
+<li>In other elements, we use <code>initial</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h2><ul>
+<li>pre: keep all, no auto line wrapping (no line break unless there are new line character)</li>
+<li>pre-wrap: keep all space, and line wrap normally</li>
+<li>pre-line: collapse the space within the same line, and line wrap normally</li>
+</ul>
+<h2 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h2><p><code>direction</code> affects the writing direction of text in a block-level element, the direction of table column layout, the direction in which content horizontally overflows its element box, and the position of the last line of a fully justified element.<br>For inline elements, direction applies only if the property unicode-bidi is set to either embed or bidi-override.<br>For top to bottom language, CSS 3 have writing mode</p>
+<h1 id="7-Basic-Visual-Formatting"><a href="#7-Basic-Visual-Formatting" class="headerlink" title="7 Basic Visual Formatting"></a>7 Basic Visual Formatting</h1><ul>
+<li>margin can be negative, but size, padding and border cannot be negative</li>
+<li>The computed value of percentage size is taken as the height of the containing block-level</li>
+<li>Size <code>auto</code> is the minimum size that contain the whole content</li>
+</ul>
+<h2 id="Collapsing-margin"><a href="#Collapsing-margin" class="headerlink" title="Collapsing margin"></a>Collapsing margin</h2><p>Only vertical will collapse. not horizontal margins. For other case, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="external">MDN</a>.</p>
+<ul>
+<li>anonymous text<ul>
+<li>the texts in inline elements but don’t inside the nested inline element</li>
+</ul>
+</li>
+<li>em box</li>
+<li>inline box</li>
+<li>content area</li>
+<li>leading<ul>
+<li>height of the box = line-height (box of one line)</li>
+</ul>
+</li>
+<li>line box<ul>
+<li>shortest box bounds the highest and the lowest points of inline boxes (multi line inline box)</li>
+</ul>
+</li>
+<li>percentage value of vertical-align take value from line-height<ul>
+<li>Because vertical-align is align in line level, not block level</li>
+</ul>
+</li>
+<li>Line in the same block can have different computed value of line-height, if we use number without unit<ul>
+<li>It is computed base on height of elements in each line.</li>
+</ul>
+</li>
+<li>Characters are usually smaller than their em boxes<ul>
+<li>But cursives fonts usually have character glyphs larger than their em boxes.</li>
+</ul>
+</li>
+<li>Adding padding and borders does not affect the height of the inline box</li>
+<li>Margin top and bottom does not apply to inline non-replaced elements</li>
+<li>Inline replaced element is align to baseline<ul>
+<li>which may create a gap which is half leading</li>
+</ul>
+</li>
+<li>Computed value of display can change if an element is floated or positioned.</li>
+</ul>
+<h1 id="8-Padding-Borders-and-Margins"><a href="#8-Padding-Borders-and-Margins" class="headerlink" title="8 Padding, Borders and Margins"></a>8 Padding, Borders and Margins</h1><ul>
+<li>Percentage margin depends on parent’s width, even margin-top and margin-bottom<ul>
+<li>If margin-top and margin-bottom depends on parent’s height, there will be infinite loop</li>
+<li>The treatment of percentage values for top and bottom margins is different for positioned elements<ul>
+<li>I guess it is because the size of element does not depends on parent anymore</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Margin top and bottom does not work in inline element<ul>
+<li>Only line height, font size and vertical align can change the distance between lines</li>
+</ul>
+</li>
+<li>Default border value<ul>
+<li>border: none</li>
+<li>weight: medium</li>
+<li>color: foreground color</li>
+</ul>
+</li>
+<li>In CSS 2.1, the element’s background is the background of the content, padding, and border areas.</li>
+<li>Border cannot have percentage value</li>
+</ul>
+<h1 id="9-Colors-and-Backgrounds"><a href="#9-Colors-and-Backgrounds" class="headerlink" title="9 Colors and Backgrounds"></a>9 Colors and Backgrounds</h1><ul>
+<li><code>color</code> properties also change border color of elements if <code>border-color</code> is not set.</li>
+<li>Many form elements have border by default.</li>
+<li>Foreground color can be inherited, but not background.</li>
+<li><code>transparent</code> is a color keyword</li>
+</ul>
+<ul>
+<li>Background image with background color<ul>
+<li>Serve as fallback when image fail to load</li>
+<li>Some image have alpha value<ul>
+<li>Background image is on top of background color<ul>
+<li>Need some extra CSS to set up image overlay</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The background image-placement context in CSS 2 and 2.1 is the inner border edge</li>
+<li><code>background-attachment</code> attaches image to viewport</li>
+</ul>
+<h2 id="Class-naming"><a href="#Class-naming" class="headerlink" title="Class naming"></a>Class naming</h2><p>It’s actually better to pick class names that describe the type of information contained within, not the visual effect you’re trying to achieve. It’s preferable to pick a class name which actually mean something and, more importantly, are independent of any presentational concepts. So we don’t need to rename if we want to change the visual effect</p>
+<h1 id="10-Floating-and-Positioning"><a href="#10-Floating-and-Positioning" class="headerlink" title="10 Floating and Positioning"></a>10 Floating and Positioning</h1><h2 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h2><ul>
+<li>Float will convert the element to <code>display: block</code></li>
+<li>Negative margin can make a float element higher than parent</li>
+<li>when the element is larger than parent it will overflow</li>
+<li>An inline box that overlaps with a float has its borders, background, and content all rendered “on top” of the float.</li>
+<li>A block box that overlaps with a float has its borders and background rendered “behind” the float, whereas its content is rendered “on top” of the float.</li>
+<li>PS: the overlap behavior is independent of source order</li>
+<li>Clearance is extra spacing added above an element’s top margin to push it past any floated elements</li>
+<li>(percentage) max/min size is useful when use with float elements</li>
+</ul>
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<li>Beside overflow hidden, we can clip the content by <code>clip</code></li>
+<li>Clip can have negative value (use with overflow hidden?)<ul>
+<li>But the browser implementation is not consistent</li>
+</ul>
+</li>
+<li><code>top: auto;</code> does not align the absolute positioned block vertical center<ul>
+<li>It is used to reset the <code>top</code> property</li>
+</ul>
+</li>
+</ul>
+<h1 id="11-Table-Layout"><a href="#11-Table-Layout" class="headerlink" title="11 Table Layout"></a>11 Table Layout</h1><ul>
+<li>It is impossible to give table cell margin (browser will ignore them)</li>
+<li>The position of first table column depends on language direction</li>
+<li>The CSS specification discourages, but does not prohibit, the positioning of table cells and other internal table elements.</li>
+<li>Table header and footer will be repeated in printed version, if the whole table is not fit in one page</li>
+<li>CSS table layout pick the “row primacy” principle:<ul>
+<li>User explicitly define row, the browser find the column by calculation (we use <code>tr</code> but no <code>col</code> in table)</li>
+<li>In another words, it is row-oriented</li>
+</ul>
+</li>
+<li>Anonymous table object - table with missing cell<ul>
+<li>Browser will insert the missing cell automatically</li>
+</ul>
+</li>
+<li>Table layer<ul>
+<li>Table elements: cell, row, row groups, columns, columns, table</li>
+</ul>
+</li>
+<li>Table style will be drawn first</li>
+<li>Border spacing = cell margin</li>
+<li><code>empty-cell: hidden;</code> make browser set empty cell to <code>display: none;</code></li>
+</ul>
+<h2 id="table-layout"><a href="#table-layout" class="headerlink" title="table-layout"></a>table-layout</h2><ul>
+<li><code>auto</code>: the table size is depends on the content</li>
+<li><code>fixed</code>: the table size is defined by the first row<ul>
+<li><code>fixed</code> layout is fast to render, no need to go through all content</li>
+</ul>
+</li>
+<li>Vertical align content in table center is easy, can use vertical align directly</li>
+<li><code>vertical-align</code> will make browser ignore <code>sub</code>, <code>super</code>, <code>text-top</code>, and <code>text-bottom</code> when applied to table cells</li>
+<li>Table layout can cause text wrap problem<ul>
+<li><code>fixed</code> vs <code>auto</code>?</li>
+</ul>
+</li>
+</ul>
+<h1 id="12-List-and-Generated-Content"><a href="#12-List-and-Generated-Content" class="headerlink" title="12 List and Generated Content"></a>12 List and Generated Content</h1><p>CSS does not define the behavior of nonnumeric counting styles for negative counter</p>
+<h1 id="13-User-Interface-Styles"><a href="#13-User-Interface-Styles" class="headerlink" title="13 User Interface Styles"></a>13 User Interface Styles</h1><ul>
+<li>There are default system style:<ul>
+<li>font</li>
+<li>color</li>
+<li>cursor<ul>
+<li>can have graphic cursor</li>
+</ul>
+</li>
+<li>outline</li>
+</ul>
+</li>
+</ul>
+<h1 id="14-Non-Screen-Media"><a href="#14-Non-Screen-Media" class="headerlink" title="14 Non-Screen Media"></a>14 Non-Screen Media</h1><h2 id="Print-version"><a href="#Print-version" class="headerlink" title="Print version"></a>Print version</h2><ul>
+<li>Some suggested style to apply to printed version<ul>
+<li>Overwrite background and font color</li>
+<li>No float and no column (width: auto)</li>
+<li>Position element out side the page is not a good solution to avoid rendering<ul>
+<li>Because this produce lots of blank page in printed version</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some style for paged media<ul>
+<li><code>page-break-[before|after|inside]</code> prevent page break insert to the elements</li>
+<li><code>widow</code> and <code>orphan</code>: min number of word when having a new page</li>
+<li>There are detail page break rules explained in the book</li>
+</ul>
+</li>
+<li>running head: item appear in every page<ul>
+<li>use position fixed to implement running head</li>
+</ul>
+</li>
+</ul>
+<h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><p>Not implemented by many browser</p>
+<h2 id="Speaker"><a href="#Speaker" class="headerlink" title="Speaker"></a>Speaker</h2><p>The book mentions styles in CSS2. The CSS3 specification is not finalised.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/" data-id="ciy8o2s3z000024655yl1wqjx" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">&quot;CSS: The Definitive Guide 3rd Edition&quot; part 1</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/">&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2</a>
+          </li>
+        
+          <li>
+            <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/">&quot;CSS: The Definitive Guide 3rd Edition&quot; part 1</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/01/08/npm/">npm</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2016/12/05/how-to-fallback-to-different-CDN/">How to fallback CSS file to different CDN</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2016/11/26/readings-11/">文集十一</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

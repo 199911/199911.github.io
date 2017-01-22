@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-01-16T15:14:18.000Z</updated>
+  <updated>2017-01-22T12:54:55.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,340 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2</title>
+    <link href="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/"/>
+    <id>http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/</id>
+    <published>2017-01-21T16:00:00.000Z</published>
+    <updated>2017-01-22T12:54:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="4-Values-and-Units"><a href="#4-Values-and-Units" class="headerlink" title="4 Values and Units"></a>4 Values and Units</h1><ul>
+<li>There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.</li>
+<li><code>rgb(50%, 0%, 100%)</code> is a valid color</li>
+<li>The “web-safe” colors are those colors that generally avoid dithering on 256-color computer systems<ul>
+<li>Value can be express in multiple of 20%</li>
+<li>I think we don’t need to care these nowadays</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Length-units"><a href="#Length-units" class="headerlink" title="Length units"></a>Length units</h2><ul>
+<li>Valid units: <code>in</code>, <code>cm</code>, <code>mm</code>, <code>pt</code>, <code>pc</code> (picas)</li>
+<li><code>em</code> and <code>ex</code> stand for “em-height” and “x-height”<ul>
+<li>Different fonts with same <code>em</code> may have different <code>ex</code>, as the font design is different<ul>
+<li>But in practical, not all font have <code>ex</code> defined, will fallback to convention (<code>0.5 em</code> = <code>1 ex</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>1 em</code> = <code>14 px</code></li>
+<li><code>12 pt</code> = <code>1 pc</code></li>
+<li><code>72 pt</code> = <code>1 in</code> is only correct in classic mac, as the monitor have different ppi (pt per in).<ul>
+<li>Don’t assume OS can convert <code>pt</code> to accurate length on monitor, it is the reason to avoid <code>pt</code>.</li>
+</ul>
+</li>
+<li><code>in</code> is a reliable unit</li>
+<li>Absolute unit (in, cm, mm) is more useful in <code>print</code> media</li>
+<li><code>px</code> may scale when print, so it is defined as relative unit</li>
+<li><code>ex</code> is not commonly used, use <code>em</code> or <code>px</code> is better</li>
+</ul>
+<h2 id="List-of-value"><a href="#List-of-value" class="headerlink" title="List of value"></a>List of value</h2><ul>
+<li>number</li>
+<li>color</li>
+<li>uri</li>
+<li>keyword</li>
+<li>angle (deg, grad, rad)</li>
+<li>time</li>
+<li>frequency</li>
+</ul>
+<h1 id="5-Fonts"><a href="#5-Fonts" class="headerlink" title="5 Fonts"></a>5 Fonts</h1><ul>
+<li>Don’t forget provide fallback for font family</li>
+<li>Use quotation mark as font family may have special characters</li>
+<li>Fonts have variant<ul>
+<li>Example: Zurich Bold, Zurich Black, Zurich UltraBlack, Zurich Light, and Zurich Regular</li>
+<li><code>font-weight</code> is using different font variant</li>
+<li><code>font-weight</code> to font variant conversion is complex, check the book if needed.</li>
+</ul>
+</li>
+<li>lighter / bolder is relative value<ul>
+<li>Increase / decrease <code>font-weight</code> inherit by parent</li>
+</ul>
+</li>
+<li>Font size is the size of em box<ul>
+<li>From baseline to extra leading</li>
+<li>Font size is not size of any characters</li>
+</ul>
+</li>
+<li>There absolutive and relative font size value keywords<ul>
+<li>Absolute keywords: (increase or decrease by a constant factor for each keywords)</li>
+<li>Relative keywords: (larger / smaller) same factor as absolute keywords<ul>
+<li>Relative keywords in font size and weight is useful when define style of tags like <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Percentage value in font-size is effectively cumulative<ul>
+<li>PS: Round off to integer</li>
+</ul>
+</li>
+<li>Small caps font variant<ul>
+<li>Instead of upper and lowercase letters, a small-caps font employs uppercase letters of different sizes.</li>
+</ul>
+</li>
+<li><code>font-stretch</code> and <code>font-size-adjust</code> are not implemented</li>
+</ul>
+<h2 id="System-fonts"><a href="#System-fonts" class="headerlink" title="System fonts"></a>System fonts</h2><p>These are used to take the font size, family, weight, style, and variant of elements of the operating system, and apply them to an element.</p>
+<ul>
+<li>caption</li>
+<li>icon</li>
+<li>menu</li>
+<li>message-box</li>
+<li>small-caption</li>
+<li>status-bar</li>
+</ul>
+<h2 id="Font-synthesis"><a href="#Font-synthesis" class="headerlink" title="Font synthesis"></a>Font synthesis</h2><p>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis" target="_blank" rel="external">MDN</a>, <code>font-synthesis</code> control the generaton of missing typefaces</p>
+<h1 id="6-Text-Properties"><a href="#6-Text-Properties" class="headerlink" title="6 Text Properties"></a>6 Text Properties</h1><ul>
+<li><p><code>text-indent</code></p>
+<ul>
+<li>Only works on block level elements. Use padding in inline elements</li>
+<li>Percentage is relative to the parent’s width</li>
+<li>Always inherited the computed value, not declared value</li>
+</ul>
+</li>
+<li><p><code>text-align</code> can be ugly when</p>
+<ul>
+<li>the container is too narrow</li>
+<li>the word are too long (can use hyphenation)</li>
+</ul>
+</li>
+<li><p><code>line-height</code></p>
+<ul>
+<li>The line will be short when the children have a larger font size</li>
+<li>Use factors (number without value) to overcome inheritances problem<ul>
+<li>Because the value is relative to font size</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>vertical-align</code> does not work on block elements</p>
+<ul>
+<li>We can use it to align <code>inline-block</code> and <code>inline</code> elements</li>
+</ul>
+</li>
+<li><p><code>text-decoration</code> is not inherited, but the decoration is still appear in children (it is from parent, not children’s decoration)</p>
+<ul>
+<li>To remove the children’s decoration, use text-decoration: none;<ul>
+<li>In other elements, we use <code>initial</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h2><ul>
+<li>pre: keep all, no auto line wrapping (no line break unless there are new line character)</li>
+<li>pre-wrap: keep all space, and line wrap normally</li>
+<li>pre-line: collapse the space within the same line, and line wrap normally</li>
+</ul>
+<h2 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h2><p><code>direction</code> affects the writing direction of text in a block-level element, the direction of table column layout, the direction in which content horizontally overflows its element box, and the position of the last line of a fully justified element.<br>For inline elements, direction applies only if the property unicode-bidi is set to either embed or bidi-override.<br>For top to bottom language, CSS 3 have writing mode</p>
+<h1 id="7-Basic-Visual-Formatting"><a href="#7-Basic-Visual-Formatting" class="headerlink" title="7 Basic Visual Formatting"></a>7 Basic Visual Formatting</h1><ul>
+<li>margin can be negative, but size, padding and border cannot be negative</li>
+<li>The computed value of percentage size is taken as the height of the containing block-level</li>
+<li>Size <code>auto</code> is the minimum size that contain the whole content</li>
+</ul>
+<h2 id="Collapsing-margin"><a href="#Collapsing-margin" class="headerlink" title="Collapsing margin"></a>Collapsing margin</h2><p>Only vertical will collapse. not horizontal margins. For other case, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="external">MDN</a>.</p>
+<ul>
+<li>anonymous text<ul>
+<li>the texts in inline elements but don’t inside the nested inline element</li>
+</ul>
+</li>
+<li>em box</li>
+<li>inline box</li>
+<li>content area</li>
+<li>leading<ul>
+<li>height of the box = line-height (box of one line)</li>
+</ul>
+</li>
+<li>line box<ul>
+<li>shortest box bounds the highest and the lowest points of inline boxes (multi line inline box)</li>
+</ul>
+</li>
+<li>percentage value of vertical-align take value from line-height<ul>
+<li>Because vertical-align is align in line level, not block level</li>
+</ul>
+</li>
+<li>Line in the same block can have different computed value of line-height, if we use number without unit<ul>
+<li>It is computed base on height of elements in each line.</li>
+</ul>
+</li>
+<li>Characters are usually smaller than their em boxes<ul>
+<li>But cursives fonts usually have character glyphs larger than their em boxes.</li>
+</ul>
+</li>
+<li>Adding padding and borders does not affect the height of the inline box</li>
+<li>Margin top and bottom does not apply to inline non-replaced elements</li>
+<li>Inline replaced element is align to baseline<ul>
+<li>which may create a gap which is half leading</li>
+</ul>
+</li>
+<li>Computed value of display can change if an element is floated or positioned.</li>
+</ul>
+<h1 id="8-Padding-Borders-and-Margins"><a href="#8-Padding-Borders-and-Margins" class="headerlink" title="8 Padding, Borders and Margins"></a>8 Padding, Borders and Margins</h1><ul>
+<li>Percentage margin depends on parent’s width, even margin-top and margin-bottom<ul>
+<li>If margin-top and margin-bottom depends on parent’s height, there will be infinite loop</li>
+<li>The treatment of percentage values for top and bottom margins is different for positioned elements<ul>
+<li>I guess it is because the size of element does not depends on parent anymore</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Margin top and bottom does not work in inline element<ul>
+<li>Only line height, font size and vertical align can change the distance between lines</li>
+</ul>
+</li>
+<li>Default border value<ul>
+<li>border: none</li>
+<li>weight: medium</li>
+<li>color: foreground color</li>
+</ul>
+</li>
+<li>In CSS 2.1, the element’s background is the background of the content, padding, and border areas.</li>
+<li>Border cannot have percentage value</li>
+</ul>
+<h1 id="9-Colors-and-Backgrounds"><a href="#9-Colors-and-Backgrounds" class="headerlink" title="9 Colors and Backgrounds"></a>9 Colors and Backgrounds</h1><ul>
+<li><code>color</code> properties also change border color of elements if <code>border-color</code> is not set.</li>
+<li>Many form elements have border by default.</li>
+<li>Foreground color can be inherited, but not background.</li>
+<li><code>transparent</code> is a color keyword</li>
+</ul>
+<ul>
+<li>Background image with background color<ul>
+<li>Serve as fallback when image fail to load</li>
+<li>Some image have alpha value<ul>
+<li>Background image is on top of background color<ul>
+<li>Need some extra CSS to set up image overlay</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The background image-placement context in CSS 2 and 2.1 is the inner border edge</li>
+<li><code>background-attachment</code> attaches image to viewport</li>
+</ul>
+<h2 id="Class-naming"><a href="#Class-naming" class="headerlink" title="Class naming"></a>Class naming</h2><p>It’s actually better to pick class names that describe the type of information contained within, not the visual effect you’re trying to achieve. It’s preferable to pick a class name which actually mean something and, more importantly, are independent of any presentational concepts. So we don’t need to rename if we want to change the visual effect</p>
+<h1 id="10-Floating-and-Positioning"><a href="#10-Floating-and-Positioning" class="headerlink" title="10 Floating and Positioning"></a>10 Floating and Positioning</h1><h2 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h2><ul>
+<li>Float will convert the element to <code>display: block</code></li>
+<li>Negative margin can make a float element higher than parent</li>
+<li>when the element is larger than parent it will overflow</li>
+<li>An inline box that overlaps with a float has its borders, background, and content all rendered “on top” of the float.</li>
+<li>A block box that overlaps with a float has its borders and background rendered “behind” the float, whereas its content is rendered “on top” of the float.</li>
+<li>PS: the overlap behavior is independent of source order</li>
+<li>Clearance is extra spacing added above an element’s top margin to push it past any floated elements</li>
+<li>(percentage) max/min size is useful when use with float elements</li>
+</ul>
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<li>Beside overflow hidden, we can clip the content by <code>clip</code></li>
+<li>Clip can have negative value (use with overflow hidden?)<ul>
+<li>But the browser implementation is not consistent</li>
+</ul>
+</li>
+<li><code>top: auto;</code> does not align the absolute positioned block vertical center<ul>
+<li>It is used to reset the <code>top</code> property</li>
+</ul>
+</li>
+</ul>
+<h1 id="11-Table-Layout"><a href="#11-Table-Layout" class="headerlink" title="11 Table Layout"></a>11 Table Layout</h1><ul>
+<li>It is impossible to give table cell margin (browser will ignore them)</li>
+<li>The position of first table column depends on language direction</li>
+<li>The CSS specification discourages, but does not prohibit, the positioning of table cells and other internal table elements.</li>
+<li>Table header and footer will be repeated in printed version, if the whole table is not fit in one page</li>
+<li>CSS table layout pick the “row primacy” principle:<ul>
+<li>User explicitly define row, the browser find the column by calculation (we use <code>tr</code> but no <code>col</code> in table)</li>
+<li>In another words, it is row-oriented</li>
+</ul>
+</li>
+<li>Anonymous table object - table with missing cell<ul>
+<li>Browser will insert the missing cell automatically</li>
+</ul>
+</li>
+<li>Table layer<ul>
+<li>Table elements: cell, row, row groups, columns, columns, table</li>
+</ul>
+</li>
+<li>Table style will be drawn first</li>
+<li>Border spacing = cell margin</li>
+<li><code>empty-cell: hidden;</code> make browser set empty cell to <code>display: none;</code></li>
+</ul>
+<h2 id="table-layout"><a href="#table-layout" class="headerlink" title="table-layout"></a>table-layout</h2><ul>
+<li><code>auto</code>: the table size is depends on the content</li>
+<li><code>fixed</code>: the table size is defined by the first row<ul>
+<li><code>fixed</code> layout is fast to render, no need to go through all content</li>
+</ul>
+</li>
+<li>Vertical align content in table center is easy, can use vertical align directly</li>
+<li><code>vertical-align</code> will make browser ignore <code>sub</code>, <code>super</code>, <code>text-top</code>, and <code>text-bottom</code> when applied to table cells</li>
+<li>Table layout can cause text wrap problem<ul>
+<li><code>fixed</code> vs <code>auto</code>?</li>
+</ul>
+</li>
+</ul>
+<h1 id="12-List-and-Generated-Content"><a href="#12-List-and-Generated-Content" class="headerlink" title="12 List and Generated Content"></a>12 List and Generated Content</h1><p>CSS does not define the behavior of nonnumeric counting styles for negative counter</p>
+<h1 id="13-User-Interface-Styles"><a href="#13-User-Interface-Styles" class="headerlink" title="13 User Interface Styles"></a>13 User Interface Styles</h1><ul>
+<li>There are default system style:<ul>
+<li>font</li>
+<li>color</li>
+<li>cursor<ul>
+<li>can have graphic cursor</li>
+</ul>
+</li>
+<li>outline</li>
+</ul>
+</li>
+</ul>
+<h1 id="14-Non-Screen-Media"><a href="#14-Non-Screen-Media" class="headerlink" title="14 Non-Screen Media"></a>14 Non-Screen Media</h1><h2 id="Print-version"><a href="#Print-version" class="headerlink" title="Print version"></a>Print version</h2><ul>
+<li>Some suggested style to apply to printed version<ul>
+<li>Overwrite background and font color</li>
+<li>No float and no column (width: auto)</li>
+<li>Position element out side the page is not a good solution to avoid rendering<ul>
+<li>Because this produce lots of blank page in printed version</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some style for paged media<ul>
+<li><code>page-break-[before|after|inside]</code> prevent page break insert to the elements</li>
+<li><code>widow</code> and <code>orphan</code>: min number of word when having a new page</li>
+<li>There are detail page break rules explained in the book</li>
+</ul>
+</li>
+<li>running head: item appear in every page<ul>
+<li>use position fixed to implement running head</li>
+</ul>
+</li>
+</ul>
+<h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><p>Not implemented by many browser</p>
+<h2 id="Speaker"><a href="#Speaker" class="headerlink" title="Speaker"></a>Speaker</h2><p>The book mentions styles in CSS2. The CSS3 specification is not finalised.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;4-Values-and-Units&quot;&gt;&lt;a href=&quot;#4-Values-and-Units&quot; class=&quot;headerlink&quot; title=&quot;4 Values and Units&quot;&gt;&lt;/a&gt;4 Values and Units&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;rgb(50%, 0%, 100%)&lt;/code&gt; is a valid color&lt;/li&gt;
+&lt;li&gt;The “web-safe” colors are those colors that generally avoid dithering on 256-color computer systems&lt;ul&gt;
+&lt;li&gt;Value can be express in multiple of 20%&lt;/li&gt;
+&lt;li&gt;I think we don’t need to care these nowadays&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&quot;CSS: The Definitive Guide 3rd Edition&quot; part 1</title>
@@ -1903,38 +2237,6 @@
       &lt;p&gt;&lt;code&gt;mixins.less&lt;/code&gt; contains utilities, components, skins and layout ‘functions’ of LESS.&lt;/p&gt;
 &lt;h2 id=&quot;Utilities-Mixins&quot;&gt;&lt;a href=&quot;#Utilities-Mixins&quot; class=&quot;headerlink&quot; title=&quot;Utilities Mixins&quot;&gt;&lt;/a&gt;Utilities Mixins&lt;/h2&gt;&lt;h3 id=&quot;mixins-hide-text-less&quot;&gt;&lt;a href=&quot;#mixins-hide-text-less&quot; class=&quot;headerlink&quot; title=&quot;mixins/hide-text.less&quot;&gt;&lt;/a&gt;&lt;code&gt;mixins/hide-text.less&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It is used to hide the text in the dom. Why don’t we use &lt;code&gt;display: none&lt;/code&gt; or &lt;code&gt;visible: hidden&lt;/code&gt;? Because screen reader cannot read it. An &lt;a href=&quot;https://github.com/twbs/bootstrap/issues/10076&quot;&gt;issue&lt;/a&gt; on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the &lt;code&gt;.hide-text&lt;/code&gt; mixin.&lt;/p&gt;
 &lt;h3 id=&quot;mixins-opacity-less&quot;&gt;&lt;a href=&quot;#mixins-opacity-less&quot; class=&quot;headerlink&quot; title=&quot;mixins/opacity.less&quot;&gt;&lt;/a&gt;&lt;code&gt;mixins/opacity.less&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It adds IE 8 support on &lt;code&gt;opacity&lt;/code&gt;. If we don’t need to suppport IE 8, we can use the &lt;code&gt;opacify&lt;/code&gt; directly.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="http://199911.github.io/categories/Code/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Implementation of Bootstrap 3 - variables.less</title>
-    <link href="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/"/>
-    <id>http://199911.github.io/code/2016/08/27/bootstrap-3-variables/</id>
-    <published>2016-08-26T16:00:00.000Z</published>
-    <updated>2016-09-01T14:30:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
-<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
-<a id="more"></a>
-<h3 id="Cons-of-centralize-all-variable’s-declaration"><a href="#Cons-of-centralize-all-variable’s-declaration" class="headerlink" title="Cons of centralize all variable’s declaration"></a>Cons of centralize all variable’s declaration</h3><p>Imagine you are working on a new component, every time you need a new variable, you have to go back variables.less to add a new one. When you forget the value of a variable, you also have to go back variable.less to check the value. Lots of context switching during development.</p>
-<h3 id="Pros-of-declare-on-use"><a href="#Pros-of-declare-on-use" class="headerlink" title="Pros of declare on use"></a>Pros of declare on use</h3><p>Declare variable on use can benefit from scope and context. Suppose I am working on navigation bar and I have <code>nav-bar.less</code>. To declare the width of navigation bar, <code>@width</code> may be clear enough to be a variable’s name. Because we are in the context of navigation bar.</p>
-<p>If we put all variables in <code>variable.less</code>, we have to use <code>@nav-bar-width</code>. In <code>nav-bar.less</code>, we will see the <code>nav-bar</code> prefix repeat and repeat again. It is redundant and annoying. Why bootstrap 3 design in this way?</p>
-<h3 id="Nature-of-Bootstrap-3"><a href="#Nature-of-Bootstrap-3" class="headerlink" title="Nature of Bootstrap 3"></a>Nature of Bootstrap 3</h3><p>Bootstrap is a open source project. In the documentation, it gives guideline on the source code and encourage user to reuse the mixins. Users are encouraged configure, modify and compile Bootstrap 3 from source code.</p>
-<h4 id="variables-less-help-new-users-to-configure-Bootstrap-3-easily"><a href="#variables-less-help-new-users-to-configure-Bootstrap-3-easily" class="headerlink" title="variables.less help new users to configure Bootstrap 3 easily"></a>variables.less help new users to configure Bootstrap 3 easily</h4><p>Declare on use make use of context, and it becomes context dependent. But a new user don’t have any context. They need to go through the whole file to find out the declaration variable and what to change. It also increase the maintenance cost when the MOD spread in different part of the source code.</p>
-<p>The <code>variables.less</code> does it part to help new users. They can go through <code>variables.less</code>, figure out what can be configure. They can go deep into the implementation when they found something interesting. Users only need to change and maintain <code>variables.less</code>.</p>
-<h2 id="Insight-Team-project-vs-Open-source-project"><a href="#Insight-Team-project-vs-Open-source-project" class="headerlink" title="Insight - Team project vs Open source project"></a>Insight - Team project vs Open source project</h2><p>In a team project, the team does not change frequently. Every member have their own responsibility. Members may have to maintain set of codes in some directories. They try to prevent code conflict by reducing the number of file shared. When a member need to use the code maintained by others, they can get the context quickly by asking the person in charge. This file structure and workflow makes the team work efficiently.</p>
-<p>But for a open source project, contributors come and go. The communication cost is high. New users tend to read to code instead of finding someone to ask. Users have to maintain the whole project by themselves. Complex file structure for division of responsibility is not needed. Gathering all configuration makes the structure simpler and easier to maintain.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;variable.less&lt;/code&gt; is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.&lt;/p&gt;
-&lt;p&gt;This design of &lt;code&gt;variable.less&lt;/code&gt; against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, &lt;code&gt;variables.less&lt;/code&gt; is a good design. Let’s discuss why this design is bad at the first glance.&lt;/p&gt;
     
     </summary>
     
