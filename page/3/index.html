@@ -59,6 +59,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bootstrap-3-mixins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code/2016/08/28/bootstrap-3-mixins/" class="article-date">
+  <time datetime="2016-08-27T16:00:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code/">Code</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code/2016/08/28/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+        
+          <p class="article-more-link">
+            <a href="/code/2016/08/28/bootstrap-3-mixins/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/" data-id="ciskfic9n00015g65yxnmo5ly" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/code/2016/08/27/bootstrap-3-variables/" class="article-date">
@@ -526,58 +575,6 @@
 
 
   
-    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/07/04/singleton/" class="article-date">
-  <time datetime="2016-07-03T16:00:00.000Z" itemprop="datePublished">2016-07-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/07/04/singleton/">Review of &quot;Avoiding Singleton Abuse&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The singleton mentioned here is Singleton Design Pattern</p>
-<ul>
-<li>Private constructor</li>
-<li>Global referal to the instace</li>
-</ul>
-<h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group od global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/07/04/singleton/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="ciq9jkor500010o65vjzxadpb" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/07/04/singleton/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -621,6 +618,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/01/29/using-redux-in-backend/">Using Redux in server-side</a>
+          </li>
+        
+          <li>
             <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/">&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2</a>
           </li>
         
@@ -634,10 +635,6 @@
         
           <li>
             <a href="/diary/2016/12/05/how-to-fallback-to-different-CDN/">How to fallback CSS file to different CDN</a>
-          </li>
-        
-          <li>
-            <a href="/insight/2016/11/26/readings-11/">文集十一</a>
           </li>
         
       </ul>
