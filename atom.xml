@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-01-29T14:10:27.000Z</updated>
+  <updated>2017-02-07T15:49:50.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Udemy: 掌握 Git &amp; Github 程式時光機</title>
+    <link href="http://199911.github.io/diary/2017/02/07/udemy-git-and-github/"/>
+    <id>http://199911.github.io/diary/2017/02/07/udemy-git-and-github/</id>
+    <published>2017-02-06T16:00:00.000Z</published>
+    <updated>2017-02-07T15:49:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前係Facebook見到有couple，可以免費Take。</p>
+<p>課程用普通話，係台灣人教，內容比較基本，冇咩特別。除左tag之外，入邊D feature我平時有用開，入邊教D野太簡單，冇咩大insight。就算係tag果part，都只係一個簡單嘅overview。</p>
+<p>我睇左個course先知原來Github可以用 <code>master</code> branch做Github page，己經唔洗特別整一條 <code>gh-pages</code> branch。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前係Facebook見到有couple，可以免費Take。&lt;/p&gt;
+&lt;p&gt;課程用普通話，係台灣人教，內容比較基本，冇咩特別。除左tag之外，入邊D feature我平時有用開，入邊教D野太簡單，冇咩大insight。就算係tag果part，都只係一個簡單嘅overview
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Using Redux in server-side</title>
@@ -2196,44 +2220,6 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Learning from Bootstrap 3</title>
-    <link href="http://199911.github.io/code/2016/09/01/bootstrap-3-learning/"/>
-    <id>http://199911.github.io/code/2016/09/01/bootstrap-3-learning/</id>
-    <published>2016-08-31T16:00:00.000Z</published>
-    <updated>2016-09-01T14:30:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Reset-script"><a href="#Reset-script" class="headerlink" title="Reset script"></a>Reset script</h2><p>Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, <code>normalize.less</code> reset the CSS.</p>
-<h2 id="HTML-accessibility"><a href="#HTML-accessibility" class="headerlink" title="HTML accessibility"></a>HTML accessibility</h2><p>Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide <code>.sr-only</code> and <code>.sr-only-focusable</code> to show content to screen reader without affecting the visual content. <code>.sr-only-focusable</code> appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like <code>aria-label</code> for accessibility.</p>
-<h2 id="LESS-function"><a href="#LESS-function" class="headerlink" title="LESS function"></a>LESS function</h2><p>In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like <code>.mixin()</code>. This may create some code like <code>.mixin { .mixin() }</code>. It looks redundant, but it is good in design, as the interface and implementation are separated.</p>
-<a id="more"></a>
-<h2 id="touch-action"><a href="#touch-action" class="headerlink" title="touch-action"></a><code>touch-action</code></h2><p>There is a CSS property named <code>touch-action</code>, which can specify the behavior. I cannot understand the description on MDN, and I think this <a href="https://www.youtube.com/watch?v=NOzQlS6utRk" target="_blank" rel="external">video</a> can help.</p>
-<h2 id="Spacing-the-items-inside-a-menu"><a href="#Spacing-the-items-inside-a-menu" class="headerlink" title="Spacing the items inside a menu"></a>Spacing the items inside a menu</h2><p>It is common to have a list of items in web. The html may looks like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;menu-item&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p>We usually want space between menu and items, also space among items. I implemented the LESS like<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.menu-item &#123;</span><br><span class="line">  margin-bottom: 20px;</span><br><span class="line">  &amp;:first &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Bootstrap 3 introduce another implementation to me:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.menu &#123;</span><br><span class="line">  padding-top: 20px;</span><br><span class="line">  padding-bottom: 20px;</span><br><span class="line">  .menu-item + .menu-item &#123;</span><br><span class="line">    margin-top: 20px;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>I think this implementation is clearer, the padding of menu give space to the start and the end of menu. The <code>.menu-item + .menu-item</code> part gives space between the menu items.</p>
-<h2 id="Component-animation"><a href="#Component-animation" class="headerlink" title="Component animation"></a>Component animation</h2><p>The class is well designed. For the fade in animation, <code>.fade</code> need to be added. The animation start when <code>.in</code> is added. The written code is very elegant, but the implementation may not be very trivial. We can refer to this file.</p>
-<p>Bootstrap 3 only have fade in this pure CSS animation. Other component animation is implemented by both CSS and javascript. Need to read the javascript code to understand how to create animation.</p>
-<h2 id="Technique-to-remove-double-border"><a href="#Technique-to-remove-double-border" class="headerlink" title="Technique to remove double border"></a>Technique to remove double border</h2><p>It is common to have button with border. But when there is a list of buttons, the two borders stick together and become a think border. It looks weird. We can remove the border for adjacent button, like <code>.btn + .btn { border-left: 0 }</code>. But Bootstrap 3 have another implementation, we can shift the border by 1 pixel to make the border overlap. This method works when the border color is not transparent. If the border color have alpha value, the border between buttons will have a deeper color.</p>
-<h2 id="Component-content-and-component-part"><a href="#Component-content-and-component-part" class="headerlink" title="Component content and component part"></a>Component content and component part</h2><p>The dismissible alerts is a good example on implementation CSS component.</p>
-<p>The html of dismissible like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;alert alert-warning alert-dismissible&quot;&gt;</span><br><span class="line">  &lt;button class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;</span><br><span class="line">    &lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;</span><br><span class="line">  &lt;/button&gt;</span><br><span class="line">  Warning! Better check yourself, you&apos;re not looking too good.</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<p>It makes sense that considering all elements inside are children elements. But in <code>.alert</code>, the <code>.close</code> button is not the content of <code>.alert</code>, but part of it. Bootstrap 3 move the <code>.close</code> button from the ‘content’ to the ‘<code>.alert</code> div’. <code>.alert-dismissible</code> add <code>padding-right</code> into the <code>.alert</code> div. The <code>.close</code> button is moved to the <code>padding-right</code> by <code>right: -21px</code>, so the close button do not affect the content.</p>
-<p>I am wondering why not using <code>margin-right: -21px</code>. One of the reason using <code>right</code> is keeping the ‘size’ of DOM.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Reset-script&quot;&gt;&lt;a href=&quot;#Reset-script&quot; class=&quot;headerlink&quot; title=&quot;Reset script&quot;&gt;&lt;/a&gt;Reset script&lt;/h2&gt;&lt;p&gt;Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, &lt;code&gt;normalize.less&lt;/code&gt; reset the CSS.&lt;/p&gt;
-&lt;h2 id=&quot;HTML-accessibility&quot;&gt;&lt;a href=&quot;#HTML-accessibility&quot; class=&quot;headerlink&quot; title=&quot;HTML accessibility&quot;&gt;&lt;/a&gt;HTML accessibility&lt;/h2&gt;&lt;p&gt;Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide &lt;code&gt;.sr-only&lt;/code&gt; and &lt;code&gt;.sr-only-focusable&lt;/code&gt; to show content to screen reader without affecting the visual content. &lt;code&gt;.sr-only-focusable&lt;/code&gt; appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like &lt;code&gt;aria-label&lt;/code&gt; for accessibility.&lt;/p&gt;
-&lt;h2 id=&quot;LESS-function&quot;&gt;&lt;a href=&quot;#LESS-function&quot; class=&quot;headerlink&quot; title=&quot;LESS function&quot;&gt;&lt;/a&gt;LESS function&lt;/h2&gt;&lt;p&gt;In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like &lt;code&gt;.mixin()&lt;/code&gt;. This may create some code like &lt;code&gt;.mixin { .mixin() }&lt;/code&gt;. It looks redundant, but it is good in design, as the interface and implementation are separated.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Code" scheme="http://199911.github.io/categories/Code/"/>
     
     
   </entry>
