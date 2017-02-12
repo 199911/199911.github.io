@@ -57,20 +57,6 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://199911.github.io/diary/2017/02/08/hosting-private-npm-package-with-github/"/>
-    <id>http://199911.github.io/diary/2017/02/08/hosting-private-npm-package-with-github/</id>
-    <published>2017-02-08T14:19:59.000Z</published>
-    <updated>2017-02-08T14:19:59.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>All about css float</title>
     <link href="http://199911.github.io/review/2017/02/08/all-about-css-float/"/>
     <id>http://199911.github.io/review/2017/02/08/all-about-css-float/</id>
@@ -2170,6 +2156,65 @@
 &lt;li&gt;If it is inside &lt;code&gt;article&lt;/code&gt;, it should contain information that is related to the article.&lt;/li&gt;
 &lt;li&gt;If it is outside &lt;code&gt;article&lt;/code&gt;, it should contain information related to the entire page.&lt;/li&gt;
 &lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML and CSS part 2</title>
+    <link href="http://199911.github.io/review/2016/10/01/html-and-css-2/"/>
+    <id>http://199911.github.io/review/2016/10/01/html-and-css-2/</id>
+    <published>2016-09-30T16:00:00.000Z</published>
+    <updated>2016-10-02T13:34:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
+<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
+<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
+<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
+<a id="more"></a>
+<h2 id="Brightness-vs-lightness"><a href="#Brightness-vs-lightness" class="headerlink" title="Brightness vs lightness"></a>Brightness vs lightness</h2><p>Brightness only adds black, whereas lightness offers both white and black.</p>
+<h2 id="serif-sans-serif-monospace-cursive-and-fantasy"><a href="#serif-sans-serif-monospace-cursive-and-fantasy" class="headerlink" title="serif, sans serif, monospace, cursive and fantasy"></a>serif, sans serif, monospace, cursive and fantasy</h2><p>Use serif for long text,it is easier to read. Sans serif is clearer to read, better for small text. Use monospace for code, easier to align.<br>Cursive fonts look like handwriting. Also Fantasy font is for decoration.</p>
+<h2 id="italic-vs-oblique"><a href="#italic-vs-oblique" class="headerlink" title="italic vs oblique"></a>italic vs oblique</h2><p>Italic have cursive aspect (a new font), oblique just put font at a angle.</p>
+<h2 id="Text-transform"><a href="#Text-transform" class="headerlink" title="Text transform"></a>Text transform</h2><p>There are CSS to transform text to uppercase, lowercase, or make the first character capitalize</p>
+<h2 id="line-height"><a href="#line-height" class="headerlink" title="line height"></a>line height</h2><p>When line height is larger than the font size, there is a gap above the text. The gap is named ‘leading’. In other words, line height - font size = leading.</p>
+<h2 id="letter-spacing-and-word-spacing"><a href="#letter-spacing-and-word-spacing" class="headerlink" title="letter spacing and word spacing"></a>letter spacing and word spacing</h2><p>There are CSS to control the spacing between letters and words. These are style seems does not work well in Chinese or other language using block characters.</p>
+<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical align"></a>vertical align</h2><p><code>vertical</code> align should be the most commonly misunderstood style. It is not intended to allow you to vertically align text in the middle of block level elements (but this works in table cells, such as <code>td</code> and <code>th</code>). It replaces the depreciated <code>align</code> HTML attribute. It is used in inline elements.</p>
+<h2 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h2><p>It is used in a trick to hide the text which is only available for screen reader and SEO. But in Bootstrap 3, there is a better trick with better performance.</p>
+<h2 id="Pseudo-elements"><a href="#Pseudo-elements" class="headerlink" title="Pseudo-elements"></a>Pseudo-elements</h2><ul>
+<li><code>:first-letter</code> and <code>:first-line</code>: select first letter or line in text.</li>
+<li><code>:link</code> and <code>:visited</code>: select not visited and visited <code>&lt;a&gt;</code> link.</li>
+<li><code>:active</code>: select element is being activated by a user.<ul>
+<li>pressed button</li>
+<li>clicked link.</li>
+</ul>
+</li>
+<li><code>:focus</code>: elements that can be interacted with have focus state.<ul>
+<li>from input with cursor in it</li>
+<li>It is also possible to use tab key to focus</li>
+</ul>
+</li>
+<li>When pseduo classes are used, they should appear in this order:<ol>
+<li><code>:link</code></li>
+<li><code>:visited</code></li>
+<li><code>:hover</code></li>
+<li><code>:focus</code></li>
+<li><code>:active</code></li>
+</ol>
+</li>
+</ul>
+<h2 id="Shadow-in-CSS3"><a href="#Shadow-in-CSS3" class="headerlink" title="Shadow in CSS3"></a>Shadow in CSS3</h2><p><code>box-shadow</code> and <code>text-shadow</code> are new style in CSS3.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Doctype&quot;&gt;&lt;a href=&quot;#Doctype&quot; class=&quot;headerlink&quot; title=&quot;Doctype&quot;&gt;&lt;/a&gt;Doctype&lt;/h2&gt;&lt;p&gt;It defines which version of HTML is using, it may affect how the page is rendered.&lt;/p&gt;
+&lt;h2 id=&quot;Browser’s-bug&quot;&gt;&lt;a href=&quot;#Browser’s-bug&quot; class=&quot;headerlink&quot; title=&quot;Browser’s bug&quot;&gt;&lt;/a&gt;Browser’s bug&lt;/h2&gt;&lt;p&gt;Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.&lt;/p&gt;
+&lt;h2 id=&quot;CSS3-color-support&quot;&gt;&lt;a href=&quot;#CSS3-color-support&quot; class=&quot;headerlink&quot; title=&quot;CSS3 color support&quot;&gt;&lt;/a&gt;CSS3 color support&lt;/h2&gt;&lt;p&gt;CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.&lt;/p&gt;
+&lt;h2 id=&quot;Tips-about-reserved-background&quot;&gt;&lt;a href=&quot;#Tips-about-reserved-background&quot; class=&quot;headerlink&quot; title=&quot;Tips about reserved background&quot;&gt;&lt;/a&gt;Tips about reserved background&lt;/h2&gt;&lt;p&gt;If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.&lt;/p&gt;
     
     </summary>
     
