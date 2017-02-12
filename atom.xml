@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-02-07T15:49:50.000Z</updated>
+  <updated>2017-02-12T10:37:17.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,107 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Udemy: Introduction to CSS Development</title>
+    <link href="http://199911.github.io/diary/2017/02/12/udemy-introduction-to-css-development/"/>
+    <id>http://199911.github.io/diary/2017/02/12/udemy-introduction-to-css-development/</id>
+    <published>2017-02-11T16:00:00.000Z</published>
+    <updated>2017-02-12T10:37:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>It is a free Course. The first few section is simple and basic, you can learn those thing from lots of place. But the ‘CSS architecture’ section make this worth taking. I may write another post to talk about that part.</p>
+<h2 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h2><ul>
+<li>Horizontal margin<ul>
+<li>It does not mention any limitation on these two methods, I am quite disappointed</li>
+</ul>
+</li>
+<li>vertical-align<ul>
+<li>The table cell will fill the table by default, it is the drawback of table-cell method.</li>
+</ul>
+</li>
+<li>Clearfix<ul>
+<li>It is good. Drawback is mentioned.</li>
+<li>But it is basically the content of <a href="https://css-tricks.com/all-about-floats/" target="_blank" rel="external">All About Floats</a></li>
+<li>If you want to see live demo, you can watch the video, otherwise, the article is better.</li>
+</ul>
+</li>
+<li>Specificity<ul>
+<li>The <a href="http://specificity.keegan.st/" target="_blank" rel="external">calculator</a> may be useful</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;It is a free Course. The first few section is simple and basic, you can learn those thing from lots of place. But the ‘CSS architecture’ 
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://199911.github.io/diary/2017/02/08/hosting-private-npm-package-with-github/"/>
+    <id>http://199911.github.io/diary/2017/02/08/hosting-private-npm-package-with-github/</id>
+    <published>2017-02-08T14:19:59.000Z</published>
+    <updated>2017-02-08T14:19:59.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>All about css float</title>
+    <link href="http://199911.github.io/review/2017/02/08/all-about-css-float/"/>
+    <id>http://199911.github.io/review/2017/02/08/all-about-css-float/</id>
+    <published>2017-02-07T16:00:00.000Z</published>
+    <updated>2017-02-08T15:15:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This article explain the behaviour of CSS float property. I like this article because it compare float with other CSS layout properties, but it is an old post from 2008.</p>
+<h2 id="Auto-reflow"><a href="#Auto-reflow" class="headerlink" title="Auto reflow"></a>Auto reflow</h2><p>Float can reflow after resize (Push the adjacent element automatically). If use <code>position: absolute;</code>, the resized element may cover adjacent elements.</p>
+<h2 id="Three-clear-float-solutions"><a href="#Three-clear-float-solutions" class="headerlink" title="Three clear float solutions"></a>Three clear float solutions</h2><ul>
+<li>The Empty Div Method:<ul>
+<li>Add an empty div with <code>clear: both;</code></li>
+</ul>
+</li>
+<li>The overflow method:<ul>
+<li>If this property is set to auto or hidden on the parent element, the parent will expand to contain the floats</li>
+</ul>
+</li>
+<li>The Easy Clearing Method:<ul>
+<li>Use the following CSS (also used by bootstrap 3)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">   content: &quot;.&quot;;</div><div class="line">   visibility: hidden;</div><div class="line">   display: block;</div><div class="line">   height: 0;</div><div class="line">   clear: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Problems-with-floats"><a href="#Problems-with-floats" class="headerlink" title="Problems with floats"></a>Problems with floats</h2><ul>
+<li>Push down<ul>
+<li>The image overflow from parent and push the adjacent elements downward.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://css-tricks.com/all-about-floats/" target="_blank" rel="external">All About Floats</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This article explain the behaviour of CSS float property. I like this article because it compare float with other CSS layout properties, 
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Udemy: 掌握 Git &amp; Github 程式時光機</title>
@@ -2073,153 +2174,6 @@
     </summary>
     
       <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML and CSS part 2</title>
-    <link href="http://199911.github.io/review/2016/10/01/html-and-css-2/"/>
-    <id>http://199911.github.io/review/2016/10/01/html-and-css-2/</id>
-    <published>2016-09-30T16:00:00.000Z</published>
-    <updated>2016-10-02T13:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
-<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
-<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
-<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
-<a id="more"></a>
-<h2 id="Brightness-vs-lightness"><a href="#Brightness-vs-lightness" class="headerlink" title="Brightness vs lightness"></a>Brightness vs lightness</h2><p>Brightness only adds black, whereas lightness offers both white and black.</p>
-<h2 id="serif-sans-serif-monospace-cursive-and-fantasy"><a href="#serif-sans-serif-monospace-cursive-and-fantasy" class="headerlink" title="serif, sans serif, monospace, cursive and fantasy"></a>serif, sans serif, monospace, cursive and fantasy</h2><p>Use serif for long text,it is easier to read. Sans serif is clearer to read, better for small text. Use monospace for code, easier to align.<br>Cursive fonts look like handwriting. Also Fantasy font is for decoration.</p>
-<h2 id="italic-vs-oblique"><a href="#italic-vs-oblique" class="headerlink" title="italic vs oblique"></a>italic vs oblique</h2><p>Italic have cursive aspect (a new font), oblique just put font at a angle.</p>
-<h2 id="Text-transform"><a href="#Text-transform" class="headerlink" title="Text transform"></a>Text transform</h2><p>There are CSS to transform text to uppercase, lowercase, or make the first character capitalize</p>
-<h2 id="line-height"><a href="#line-height" class="headerlink" title="line height"></a>line height</h2><p>When line height is larger than the font size, there is a gap above the text. The gap is named ‘leading’. In other words, line height - font size = leading.</p>
-<h2 id="letter-spacing-and-word-spacing"><a href="#letter-spacing-and-word-spacing" class="headerlink" title="letter spacing and word spacing"></a>letter spacing and word spacing</h2><p>There are CSS to control the spacing between letters and words. These are style seems does not work well in Chinese or other language using block characters.</p>
-<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical align"></a>vertical align</h2><p><code>vertical</code> align should be the most commonly misunderstood style. It is not intended to allow you to vertically align text in the middle of block level elements (but this works in table cells, such as <code>td</code> and <code>th</code>). It replaces the depreciated <code>align</code> HTML attribute. It is used in inline elements.</p>
-<h2 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h2><p>It is used in a trick to hide the text which is only available for screen reader and SEO. But in Bootstrap 3, there is a better trick with better performance.</p>
-<h2 id="Pseudo-elements"><a href="#Pseudo-elements" class="headerlink" title="Pseudo-elements"></a>Pseudo-elements</h2><ul>
-<li><code>:first-letter</code> and <code>:first-line</code>: select first letter or line in text.</li>
-<li><code>:link</code> and <code>:visited</code>: select not visited and visited <code>&lt;a&gt;</code> link.</li>
-<li><code>:active</code>: select element is being activated by a user.<ul>
-<li>pressed button</li>
-<li>clicked link.</li>
-</ul>
-</li>
-<li><code>:focus</code>: elements that can be interacted with have focus state.<ul>
-<li>from input with cursor in it</li>
-<li>It is also possible to use tab key to focus</li>
-</ul>
-</li>
-<li>When pseduo classes are used, they should appear in this order:<ol>
-<li><code>:link</code></li>
-<li><code>:visited</code></li>
-<li><code>:hover</code></li>
-<li><code>:focus</code></li>
-<li><code>:active</code></li>
-</ol>
-</li>
-</ul>
-<h2 id="Shadow-in-CSS3"><a href="#Shadow-in-CSS3" class="headerlink" title="Shadow in CSS3"></a>Shadow in CSS3</h2><p><code>box-shadow</code> and <code>text-shadow</code> are new style in CSS3.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Doctype&quot;&gt;&lt;a href=&quot;#Doctype&quot; class=&quot;headerlink&quot; title=&quot;Doctype&quot;&gt;&lt;/a&gt;Doctype&lt;/h2&gt;&lt;p&gt;It defines which version of HTML is using, it may affect how the page is rendered.&lt;/p&gt;
-&lt;h2 id=&quot;Browser’s-bug&quot;&gt;&lt;a href=&quot;#Browser’s-bug&quot; class=&quot;headerlink&quot; title=&quot;Browser’s bug&quot;&gt;&lt;/a&gt;Browser’s bug&lt;/h2&gt;&lt;p&gt;Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.&lt;/p&gt;
-&lt;h2 id=&quot;CSS3-color-support&quot;&gt;&lt;a href=&quot;#CSS3-color-support&quot; class=&quot;headerlink&quot; title=&quot;CSS3 color support&quot;&gt;&lt;/a&gt;CSS3 color support&lt;/h2&gt;&lt;p&gt;CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.&lt;/p&gt;
-&lt;h2 id=&quot;Tips-about-reserved-background&quot;&gt;&lt;a href=&quot;#Tips-about-reserved-background&quot; class=&quot;headerlink&quot; title=&quot;Tips about reserved background&quot;&gt;&lt;/a&gt;Tips about reserved background&lt;/h2&gt;&lt;p&gt;If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML and CSS part 1</title>
-    <link href="http://199911.github.io/review/2016/09/20/html-and-css-1/"/>
-    <id>http://199911.github.io/review/2016/09/20/html-and-css-1/</id>
-    <published>2016-09-19T16:00:00.000Z</published>
-    <updated>2016-10-02T13:34:24.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="padding-start-vs-padding-left"><a href="#padding-start-vs-padding-left" class="headerlink" title="padding-start vs padding-left"></a>padding-start vs padding-left</h2><p>I found the default style of <code>ol</code> and <code>ul</code> in Chrome have a interesting property <code>-webkit-padding-start: 40px;</code>. I am wondering how is it different form <code>padding-left: 40px</code>. According to <a href="http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start" target="_blank" rel="external">this</a>, they are the same for the language written from left to right. If the language is written from right to left, the padding of <code>-webkit-padding-start: 40px;</code> will move to right.</p>
-<p>Note that <code>dt</code> is using margin instead of padding, because it does not need to put any bullet point into the component.</p>
-<h2 id="Image’s-alt-attribute-vs-title"><a href="#Image’s-alt-attribute-vs-title" class="headerlink" title="Image’s alt attribute vs title"></a>Image’s <code>alt</code> attribute vs <code>title</code></h2><p><code>alt</code> stands for alternative, which should be description of the image, because it will be shown when the image does not load. <code>title</code> provides extra information of the image. For more detail, we can read <a href="https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/" target="_blank" rel="external">this</a></p>
-<a id="more"></a>
-<h2 id="width-and-height-in-image-tag-vs-in-CSS"><a href="#width-and-height-in-image-tag-vs-in-CSS" class="headerlink" title="width and height in image tag vs in CSS"></a><code>width</code> and <code>height</code> in image tag vs in CSS</h2><p>According to <a href="http://stackoverflow.com/questions/640190/image-width-height-as-an-attribute-or-in-css" target="_blank" rel="external">this</a>, if the image is part of the content, we should use <code>width</code> and <code>height</code> attribute in image tag. The rule of thumb is, HTML defined the contents and CSS define the layout. For example, the background image’s size should be defined by CSS, because it is for layout and decoration.</p>
-<h2 id="align-in-image-tag-is-deprecated-in-HTML-5"><a href="#align-in-image-tag-is-deprecated-in-HTML-5" class="headerlink" title="align in image tag is deprecated in HTML 5"></a><code>align</code> in image tag is deprecated in HTML 5</h2><p>Which should be replace by <code>align</code> in CSS.<br>PS: image is <code>display: inline-block;</code> by default.</p>
-<h2 id="figure-is-a-component-of-image-with-caption"><a href="#figure-is-a-component-of-image-with-caption" class="headerlink" title="figure is a component of image with caption"></a><code>figure</code> is a component of image with caption</h2><p>The html structure likes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;</span><br><span class="line">  &lt;img src=&quot;images/otters.jpg&quot; alt=&quot;Photograph of two sea otters floating in water&quot;&gt;</span><br><span class="line">  &lt;br /&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Notices that figcaption is HTML 5 element, which will be ignored by old browsers.<br>To have better compatibility, we can have<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="thead-tbody-and-tfoot"><a href="#thead-tbody-and-tfoot" class="headerlink" title="thead, tbody and tfoot"></a><code>thead</code>, <code>tbody</code> and <code>tfoot</code></h2><p>We can use these when the first and last rows content different content. Browser can make table header and footer sticky when the screen cannot fit the screen. It is also useful in print version when the table cannot be shown in one page.</p>
-<h2 id="Deprecated-attribute-of-table-and-form-in-HTML-5"><a href="#Deprecated-attribute-of-table-and-form-in-HTML-5" class="headerlink" title="Deprecated attribute of table and form in HTML 5"></a>Deprecated attribute of table and form in HTML 5</h2><p><code>width</code>, <code>border</code> and <code>background</code> are deprecated in HTML 5 table. <code>size</code> in HTML 5 form’s input is deprecated, but notice <code>maxlength</code> is not.<br>Notice that <code>size</code> in select element is not deprecated. It is used to define the number of item shown in multiple select.</p>
-<h2 id="Input-type"><a href="#Input-type" class="headerlink" title="Input type"></a>Input type</h2><p>There is a list of input type in form</p>
-<ul>
-<li>text</li>
-<li>password</li>
-<li>radio</li>
-<li>checkbox</li>
-<li>file</li>
-<li>submit<ul>
-<li>The <code>name</code> attribute is not necessary, the text on button is defined by the <code>value</code> attribute.</li>
-</ul>
-</li>
-<li>image</li>
-<li>hidden<br>The following is new type introduced in the HTML 5</li>
-<li>date</li>
-<li>email</li>
-<li>url</li>
-<li>search</li>
-</ul>
-<h2 id="Label-in-form"><a href="#Label-in-form" class="headerlink" title="Label in form"></a>Label in form</h2><p>The label is used to connect text description with the form input. There are two cases:</p>
-<ul>
-<li>Wrap the <code>input</code> tag and text description in <code>label</code>.</li>
-<li><code>input</code> tag and the description are separated. The value of <code>for</code> attribute in <code>label</code> is same as <code>id</code> of the corresponding <code>input</code>.</li>
-</ul>
-<p>The book also recommend where to put the text description:<br>Above or to the left of <code>input</code>:</p>
-<ul>
-<li>Text inputs</li>
-<li>Text areas</li>
-<li>Select boxes</li>
-<li>File uploads<br>To the right of <code>input</code>:</li>
-<li>Individual checkboxes</li>
-<li>Individual radio buttons</li>
-</ul>
-<h2 id="fieldset-and-legend"><a href="#fieldset-and-legend" class="headerlink" title="fieldset and legend"></a><code>fieldset</code> and <code>legend</code></h2><p><code>fieldset</code> can group the inputs and the <code>legend</code> is the description of <code>fieldset</code>.</p>
-<h2 id="div-vs-span"><a href="#div-vs-span" class="headerlink" title="div vs span"></a><code>div</code> vs <code>span</code></h2><p><code>div</code> and <code>span</code> group elements into a block or inline element.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;padding-start-vs-padding-left&quot;&gt;&lt;a href=&quot;#padding-start-vs-padding-left&quot; class=&quot;headerlink&quot; title=&quot;padding-start vs padding-left&quot;&gt;&lt;/a&gt;padding-start vs padding-left&lt;/h2&gt;&lt;p&gt;I found the default style of &lt;code&gt;ol&lt;/code&gt; and &lt;code&gt;ul&lt;/code&gt; in Chrome have a interesting property &lt;code&gt;-webkit-padding-start: 40px;&lt;/code&gt;. I am wondering how is it different form &lt;code&gt;padding-left: 40px&lt;/code&gt;. According to &lt;a href=&quot;http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start&quot;&gt;this&lt;/a&gt;, they are the same for the language written from left to right. If the language is written from right to left, the padding of &lt;code&gt;-webkit-padding-start: 40px;&lt;/code&gt; will move to right.&lt;/p&gt;
-&lt;p&gt;Note that &lt;code&gt;dt&lt;/code&gt; is using margin instead of padding, because it does not need to put any bullet point into the component.&lt;/p&gt;
-&lt;h2 id=&quot;Image’s-alt-attribute-vs-title&quot;&gt;&lt;a href=&quot;#Image’s-alt-attribute-vs-title&quot; class=&quot;headerlink&quot; title=&quot;Image’s alt attribute vs title&quot;&gt;&lt;/a&gt;Image’s &lt;code&gt;alt&lt;/code&gt; attribute vs &lt;code&gt;title&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;alt&lt;/code&gt; stands for alternative, which should be description of the image, because it will be shown when the image does not load. &lt;code&gt;title&lt;/code&gt; provides extra information of the image. For more detail, we can read &lt;a href=&quot;https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Bootstrap 3 implementation demo</title>
-    <link href="http://199911.github.io/diary/2016/09/11/bootstrap-3-implementation-demo/"/>
-    <id>http://199911.github.io/diary/2016/09/11/bootstrap-3-implementation-demo/</id>
-    <published>2016-09-10T16:00:00.000Z</published>
-    <updated>2016-09-20T15:52:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Spent almost 2 days on building this <a href="https://199911.github.io/bootstrap-3-implementation-demo/">page</a> to explain my learning and understanding on Bootstrap 3 implementation. Most of the time spent on thinking how to explain the logic in word.</p>
-<p>There are lots of improvement in my writing skills. Although lots of time spent, it does help me to have a deeper understand on the idea.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Spent almost 2 days on building this &lt;a href=&quot;https://199911.github.io/bootstrap-3-implementation-demo/&quot;&gt;page&lt;/a&gt; to explain my learning 
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
     
     
   </entry>
