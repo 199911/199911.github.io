@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-02-12T10:37:17.000Z</updated>
+  <updated>2017-03-13T23:44:50.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,287 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1</title>
+    <link href="http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/"/>
+    <id>http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/</id>
+    <published>2017-03-13T16:00:00.000Z</published>
+    <updated>2017-03-13T23:44:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place</p>
+<a id="more"></a>
+<h1 id="Chapter-1-What-is-JavaScript"><a href="#Chapter-1-What-is-JavaScript" class="headerlink" title="Chapter 1: What is JavaScript?"></a>Chapter 1: What is JavaScript?</h1><ul>
+<li>ECMAScript != JavaScript<ul>
+<li>ECMAScript is part of JavaScript</li>
+<li>JavaScript include<ul>
+<li>The Core (ECMAScript)</li>
+<li>The Document Object Model</li>
+<li>The Browser Object Model</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="The-Document-Object-Model"><a href="#The-Document-Object-Model" class="headerlink" title="The Document Object Model"></a>The Document Object Model</h2><ul>
+<li>DOM provides methods and interfaces for working with the content of a web page</li>
+<li>Allow programmer change the page appearance without reload the page</li>
+<li>DOM is also implement in other language</li>
+<li>DOM levels<ul>
+<li>Level 1<ul>
+<li>DOM core: map xml based document to data structure which is easy to access<ul>
+<li>Should be DOM tree, but I don’t know does it provide extra feature</li>
+</ul>
+</li>
+<li>DOM HTML: extended DOM core by adding HTML-specific objects and method</li>
+</ul>
+</li>
+<li>Level 2<ul>
+<li>DOM View</li>
+<li>DOM Events</li>
+<li>DOM style</li>
+<li>DOM Traversal and Range</li>
+</ul>
+</li>
+<li>Level 3<ul>
+<li>DOM Load and Save</li>
+<li>DOM Validation</li>
+<li>Extended DOM core to support all XML 1.0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other DOMs<ul>
+<li>SVG</li>
+<li>MathML</li>
+<li>Synchronized Multimedia Integration Language (SMIL)</li>
+</ul>
+</li>
+</ul>
+<h2 id="The-Browser-Object-Model-BOM"><a href="#The-Browser-Object-Model-BOM" class="headerlink" title="The Browser Object Model (BOM)"></a>The Browser Object Model (BOM)</h2><ul>
+<li>BOM provides methods and interfaces for interacting with the browser<ul>
+<li>pop up new windows</li>
+<li>move, resize and close browser windows</li>
+<li><code>navigator</code> object</li>
+<li><code>location</code> object</li>
+</ul>
+</li>
+<li>It is not standardize for a long time, until HTML5</li>
+</ul>
+<h1 id="Chapter-2-JavaScript-in-HTML"><a href="#Chapter-2-JavaScript-in-HTML" class="headerlink" title="Chapter 2: JavaScript in HTML"></a>Chapter 2: JavaScript in HTML</h1><ul>
+<li>Traditionally, we put JavaScript on header<ul>
+<li>It is download and parsed before content (blocking)</li>
+<li>Use <code>async</code> and <code>defer</code> attributes in <code>&lt;script&gt;</code></li>
+</ul>
+</li>
+<li>Or put it at the end of body, so the html content is parsed first</li>
+</ul>
+<h2 id="Defer"><a href="#Defer" class="headerlink" title="Defer"></a>Defer</h2><ul>
+<li>The purpose of defer is to indicate that a script won’t be changing the structure of the page as it executes.<ul>
+<li>Even the HTML5 specific defer script will run in order, but this may not happen in real world.</li>
+<li>So keep at most one defer script</li>
+</ul>
+</li>
+<li>Script can be loaded before DOMContentLoaded</li>
+</ul>
+<h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><ul>
+<li>async, run immediately after download, can run before or after DOMContentloaded, but guaranteed before loaded</li>
+</ul>
+<h2 id="Inline-script-in-XHTML"><a href="#Inline-script-in-XHTML" class="headerlink" title="Inline script in XHTML"></a>Inline script in XHTML</h2><ul>
+<li>Less than sign make in script tag make XHTML broken, as it is consider as an open tag<ul>
+<li>Use &lt;</li>
+<li>Use CDATA section</li>
+</ul>
+</li>
+</ul>
+<h2 id="External-script-is-better"><a href="#External-script-is-better" class="headerlink" title="External script is better"></a>External script is better</h2><ul>
+<li>Maintainable</li>
+<li>Caching</li>
+<li>Future-proof<ul>
+<li>Don’t need to use the hack for XHTML</li>
+<li>Same script work in both HTML and XTHML</li>
+</ul>
+</li>
+</ul>
+<h1 id="Chapter-3-Language-Basics"><a href="#Chapter-3-Language-Basics" class="headerlink" title="Chapter 3: Language Basics"></a>Chapter 3: Language Basics</h1><ul>
+<li>variable not declared by <code>var</code> will be global</li>
+<li><code>typeof</code> null return <code>object</code></li>
+<li><code>typeof</code> regex is object (chrome 7 have a bug, which return function)</li>
+<li>variable not declared !== undefined variable<ul>
+<li>using variables not declared throw error (reference error)</li>
+</ul>
+</li>
+<li><code>typeof</code> variables not declared return undefined</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>octal number start with 0</li>
+<li>octal number is invalid in strict mode</li>
+<li>octal number can be tricky: 078-077 = 15</li>
+<li>number large than max value or small than smallest value will become (negative) infinity</li>
+<li><code>typeof</code> NaN is number</li>
+<li>NaN will make the computation return NaN</li>
+<li>NaN not equal to any value<ul>
+<li>so we have to use isNaN()</li>
+</ul>
+</li>
+</ul>
+<h2 id="Number-vs-Parser-Int"><a href="#Number-vs-Parser-Int" class="headerlink" title="Number vs Parser Int"></a>Number vs Parser Int</h2><ul>
+<li>be careful when parsing number with leading 0<ul>
+<li>number start with 0 will be consider as octal number</li>
+<li>always include 10 in second parameter</li>
+</ul>
+</li>
+</ul>
+<h2 id="Built-in-object-method"><a href="#Built-in-object-method" class="headerlink" title="Built in object method"></a>Built in object method</h2><ul>
+<li><code>null</code> and <code>undefined</code> don’t have toString()</li>
+<li><code>String()</code> alway return string, it is good when you don’t know the value whether null or undefined</li>
+<li>Can also convert to string by concatenating empty string<ul>
+<li>I think it is more straight forward.</li>
+</ul>
+</li>
+<li><code>hasOwnProperty(&#39;propertyName&#39;)</code> checks the property exist (do not check prototype)</li>
+<li><code>propertyIsEnumerable(&#39;propertyName&#39;)</code>, whether can use for-in</li>
+<li><code>toLocateString()</code> return localization string</li>
+<li><code>valueOf()</code>, <code>toString()</code> will be called if apply operator on object</li>
+</ul>
+<p><strong>Notice that BOM and DOM is not included in ES standard, they may or may not follow the ES object standard</strong></p>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li>bitwise operator<ul>
+<li>value converted to number by Number() (32 bit numbers)</li>
+</ul>
+</li>
+<li><code>arguments</code> is an array-like object, but it is not array</li>
+<li>string is not object in JavaScript, unlike other language</li>
+<li>ECMA-262 specifies that any object implementing the internal [[Call]] method should return “function” from typeof<ul>
+<li>user defined <code>call()</code> seems does not works</li>
+</ul>
+</li>
+</ul>
+<h1 id="Chapter-4-Variables-Scope-and-Memory"><a href="#Chapter-4-Variables-Scope-and-Memory" class="headerlink" title="Chapter 4: Variables, Scope, and Memory"></a>Chapter 4: Variables, Scope, and Memory</h1><ul>
+<li>In browser, global context = windows</li>
+<li>5 types of scope in browser<ul>
+<li>global, function, eval(), catch block, with block</li>
+</ul>
+</li>
+<li>browser optimized variable look up, don’t worry about access variable from different scope</li>
+<li>Circular reference no longer leak memory, in browser</li>
+<li>Garbage collect can be trigger by code in some browser, but it is not recommended</li>
+<li>Release memory by dereference them (set variable to null)</li>
+</ul>
+<h1 id="Chapter-5-Reference-Types"><a href="#Chapter-5-Reference-Types" class="headerlink" title="Chapter 5 Reference Types"></a>Chapter 5 Reference Types</h1><ul>
+<li>Function interface<ul>
+<li>The best approach is to use named arguments for those that are required arguments</li>
+<li>And an object literal to encompass multiple optional arguments.</li>
+</ul>
+</li>
+<li>Use <code>{}</code> and <code>[]</code> create object and array, the <code>Object()</code> and <code>Array()</code> constructor is not called</li>
+<li>Arrays can contain a maximum of 4,294,967,295 items.<ul>
+<li>If you try to add more than that number, an exception occurs.</li>
+<li>A long-running script error may be thrown before you reach the arrays’ maximum.</li>
+</ul>
+</li>
+<li><code>instanceof</code> assumes a single global execution context.<ul>
+<li>Different frames in a web page haves distinct global execution contexts and therefore two versions of the Array constructor.</li>
+<li>If you were to pass an array from one frame into a second frame, that array has a different constructor function than an array created natively in the second frame.</li>
+<li>To solve this problem, ECMAScript 5 introduced the Array.isArray() method</li>
+</ul>
+</li>
+<li><code>toString()</code> of date object of different browser return stings with different format</li>
+<li>use string to define regex, need to escape the slash as it is escape character in string (not regex)<ul>
+<li><code>source</code> property in regex object does not have slash</li>
+<li>Better not to use string to create REGEX</li>
+</ul>
+</li>
+<li>function constructor is not recommended, as it caused performance issue.</li>
+<li>strict mode does not support <code>callee</code> and <code>caller</code><ul>
+<li>Using <code>arguments.callee</code> can decouple recursive functions</li>
+<li><code>arguments.callee.caller</code> return parent function</li>
+</ul>
+</li>
+<li><code>length</code> property of a function is # of named arguments</li>
+<li>In strict mode, the <code>this</code> value of a function called without a context object is not coerced to window.<ul>
+<li><code>this</code> becomes undefined unless explicitly set by either attaching the function to an object or using apply() or call().</li>
+</ul>
+</li>
+<li>Primitive type cannot have custom properties<ul>
+<li>Can workaround by using constructor to create primitive type wrapper<ul>
+<li><code>var j = new Number(1234);</code></li>
+</ul>
+</li>
+<li><code>typeof</code> return Object for primitive type wrapper</li>
+</ul>
+</li>
+<li>There was method to format HTML dynamically, but it is not implemented by browsers now.</li>
+<li>Singleton object<ul>
+<li>global scope and Math</li>
+</ul>
+</li>
+<li>In strict mode, the variable created in eval() cannot be access from outside</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集十三</title>
+    <link href="http://199911.github.io/insight/2017/02/19/readings-13/"/>
+    <id>http://199911.github.io/insight/2017/02/19/readings-13/</id>
+    <published>2017-02-18T16:00:00.000Z</published>
+    <updated>2017-02-19T13:51:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="混合型的-Javascript"><a href="#混合型的-Javascript" class="headerlink" title="混合型的 Javascript"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/476" target="_blank" rel="external">混合型的 Javascript</a></h1><p>Generate javascript code from server side. The use case in example is generating database connect function. It is a quite interesting idea, but I cannot come up with any use cases.</p>
+<a id="more"></a>
+<h1 id="快樂的小成就"><a href="#快樂的小成就" class="headerlink" title="快樂的小成就"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/469" target="_blank" rel="external">快樂的小成就</a></h1><p>Quite interesting idea. The article suggest us to enjoy every little small progress. It is ok to be confident, even the how small the achievements are.</p>
+<h1 id="反思「過早最佳化是萬惡的根源」"><a href="#反思「過早最佳化是萬惡的根源」" class="headerlink" title="反思「過早最佳化是萬惡的根源」"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/472" target="_blank" rel="external">反思「過早最佳化是萬惡的根源」</a></h1><p><code>Early optimization is root of evil</code> is reasonable on performance optimization. If we put this idea into architecture and system design, it would bring some problems. Because other team mate will follow the pattern of the system. The bad design and pattern will be reproduced if we don’t fix it in early stage. Therefore, architecture and system design have to be well planned and design as soon as possible.</p>
+<h1 id="真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想"><a href="#真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想" class="headerlink" title="真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想"></a><a href="https://hk.thenewslens.com/article/61910" target="_blank" rel="external">真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想</a></h1><p>金句：</p>
+<ul>
+<li>新創公司就是要突破傳統，要選擇最激進的路。拿自己的錢出來，玩自己的公司，容易考慮太保守，失敗的機率就很大</li>
+<li>矽谷的精髓不在這些新創的技術，而是這樣一個良好的生態圈。如果我們的新創公司，需要年輕人傾家蕩產，把所有的東西和人脈一次賭出去，做決策的時候一定綁手綁腳，無法做出正確的決定。</li>
+</ul>
+<h1 id="JavaScript-Type-and-Code-Coverage-Profiling"><a href="#JavaScript-Type-and-Code-Coverage-Profiling" class="headerlink" title="JavaScript Type and Code Coverage Profiling"></a><a href="https://webkit.org/blog/3846/type-profiling-and-code-coverage-profiling-for-javascript/" target="_blank" rel="external">JavaScript Type and Code Coverage Profiling</a></h1><p>原來safari inspector 有 type 同 code coverage profiling</p>
+<p><a href="https://blog.jscrambler.com/how-captcha-works/" target="_blank" rel="external">How CAPTCHA Works</a></p>
+<p>Interesting history of CAPTCAH</p>
+<ul>
+<li>The text image is generated by machine from normal text.<ul>
+<li>Distorting text and adding background</li>
+</ul>
+</li>
+<li>There are audio version for blinds<ul>
+<li>Background noise is added</li>
+</ul>
+</li>
+<li>The second generation of Captcha ask user to recognizing image<ul>
+<li>Easier than recognizing distorted text</li>
+<li>Mobile friendly</li>
+<li>More difficult question for machine</li>
+</ul>
+</li>
+<li>new reCaptcha analysis browser history<ul>
+<li>Fallback to image / text recognition if cannot determine</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;混合型的-Javascript&quot;&gt;&lt;a href=&quot;#混合型的-Javascript&quot; class=&quot;headerlink&quot; title=&quot;混合型的 Javascript&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/476&quot;&gt;混合型的 Javascript&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Generate javascript code from server side. The use case in example is generating database connect function. It is a quite interesting idea, but I cannot come up with any use cases.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Udemy: Introduction to CSS Development</title>
@@ -52,6 +333,33 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>文集十二</title>
+    <link href="http://199911.github.io/insight/2017/02/11/readings-12/"/>
+    <id>http://199911.github.io/insight/2017/02/11/readings-12/</id>
+    <published>2017-02-10T16:00:00.000Z</published>
+    <updated>2017-02-18T17:05:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="A-Web-Dev’s-Valentine"><a href="#A-Web-Dev’s-Valentine" class="headerlink" title="A Web Dev’s Valentine"></a><a href="http://codepen.io/AllThingsSmitty/pen/pNLVWm/" target="_blank" rel="external">A Web Dev’s Valentine</a></h1><p>Create a heart with CSS and html</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.heart:before,</div><div class="line">.heart:after &#123;</div><div class="line">  background: #cd231b;</div><div class="line">  border-radius: 50px 50px 0 0;</div><div class="line">  content: &quot;&quot;;</div><div class="line">  height: 25px;</div><div class="line">  left: 15px;</div><div class="line">  position: absolute;</div><div class="line">  transform: rotate(-45deg);</div><div class="line">  transform-origin: 0 100%;</div><div class="line">  width: 15px;</div><div class="line">&#125;</div><div class="line">.heart:after &#123;</div><div class="line">  left: 0;</div><div class="line">  transform: rotate(45deg);</div><div class="line">  transform-origin: 100% 100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Dear-JavaScript-Maintainers"><a href="#Dear-JavaScript-Maintainers" class="headerlink" title="Dear JavaScript Maintainers,"></a><a href="http://thefullstack.xyz/dear-javascript-maintainers/" target="_blank" rel="external">Dear JavaScript Maintainers,</a></h1><p>MIT license stated the code is not guarenteed to work properly.</p>
+<h1 id="JavaScript-Will-Finally-Get-Proper-Asynchronous-Programming"><a href="#JavaScript-Will-Finally-Get-Proper-Asynchronous-Programming" class="headerlink" title="JavaScript Will Finally Get Proper Asynchronous Programming"></a><a href="http://thenewstack.io/async-officially-coming-javascript-year/" target="_blank" rel="external">JavaScript Will Finally Get Proper Asynchronous Programming</a></h1><p><code>async</code> will be available in ES2017. It make the javascript non blocking, even there are long running code.</p>
+<h1 id="The-end-of-the-clearfix-hack"><a href="#The-end-of-the-clearfix-hack" class="headerlink" title="The end of the clearfix hack?"></a><a href="https://www.rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/" target="_blank" rel="external">The end of the clearfix hack?</a></h1><p>We apply clearfix hack to float element container to prevent it collapse. But there a new value <code>flow-root</code> for <code>display</code> to solve this problem. We don’t need to have clearfix hack in the future.<br>FYI: <a href="http://caniuse.com/#search=flow-root" target="_blank" rel="external">Can I Use</a></p>
+<h1 id="CSS-only-3d-Macbook-Air"><a href="#CSS-only-3d-Macbook-Air" class="headerlink" title="CSS only 3d Macbook Air"></a><a href="http://codepen.io/neoberg/full/istyp/" target="_blank" rel="external">CSS only 3d Macbook Air</a></h1><p>Crazy CSS and HTML only macbook air animation</p>
+<h1 id="Hard-Reset-Using-the-CSS-Initial-Value"><a href="#Hard-Reset-Using-the-CSS-Initial-Value" class="headerlink" title="Hard Reset: Using the CSS Initial Value"></a><a href="http://thenewcode.com/1172/Hard-Reset-Using-the-CSS-Initial-Value" target="_blank" rel="external">Hard Reset: Using the CSS Initial Value</a></h1><p><code>initial</code> value reset the property to default value of user’s browser. So the normalized style will be reset too.<br><code>initial</code> does not work in all IE, even IE 11. WTF.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;A-Web-Dev’s-Valentine&quot;&gt;&lt;a href=&quot;#A-Web-Dev’s-Valentine&quot; class=&quot;headerlink&quot; title=&quot;A Web Dev’s Valentine&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://codepen
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
     
     
   </entry>
@@ -1966,259 +2274,6 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>文集十</title>
-    <link href="http://199911.github.io/insight/2016/10/04/readings-10/"/>
-    <id>http://199911.github.io/insight/2016/10/04/readings-10/</id>
-    <published>2016-10-03T16:00:00.000Z</published>
-    <updated>2016-11-26T07:18:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="當主管卻不懂交辦，當心「猴子」爬上身"><a href="#當主管卻不懂交辦，當心「猴子」爬上身" class="headerlink" title="當主管卻不懂交辦，當心「猴子」爬上身"></a><a href="http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully" target="_blank" rel="external">當主管卻不懂交辦，當心「猴子」爬上身</a></h1><p>文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。</p>
-<p>文中仲提及一D指派工作嘅技巧:</p>
-<ul>
-<li>要清楚指出工作內容</li>
-<li>可運用數字明確指出目標，促進員工思考</li>
-<li>盡力說動部屬願意做不樂意的事<ul>
-<li>最好當然係每個人都做樂意做嘅野。但萬一冇人肯做，都要靠員工去補位</li>
-</ul>
-</li>
-<li>用正確既方法去指派工作，文中提出4種<ol>
-<li>直接告訴我你要我做什麼</li>
-<li>我希望你先考慮我的意見，再決定我要做什麼<ul>
-<li>員工可能想用新方法去解決問題</li>
-</ul>
-</li>
-<li>我想自己決定要做什麼<ul>
-<li>員工唔需要監督，係開波之前要搞清楚目標同方向</li>
-</ul>
-</li>
-<li>大家共同討論、決定之後，我就很樂意去做</li>
-</ol>
-</li>
-</ul>
-<p>仲有三個指派工作嘅大忌</p>
-<ol>
-<li>指派太多工作</li>
-<li>有多過一個人落order<ul>
-<li>會唔知做邊個task先，影響團隊信任</li>
-</ul>
-</li>
-<li>把最困難的事，交給最有能力的人<ul>
-<li>最重要都係cost and benefit</li>
-</ul>
-</li>
-</ol>
-<a id="more"></a>
-<h1 id="小問題，大麻煩"><a href="#小問題，大麻煩" class="headerlink" title="小問題，大麻煩"></a><a href="http://teddy-chen-tw.blogspot.hk/2016/09/blog-post_7.html" target="_blank" rel="external">小問題，大麻煩</a></h1><p>做錯一D細嘅決定係短期內冇咩影響，但細嘅錯誤會慢慢累積成大嘅錯誤，最後做成technique debt。</p>
-<p>例如之前我落左係<code>&lt;ul&gt;</code>同<code>&lt;ol&gt;</code>嘅CSS落左一個CSS reset, 搞到post content D list冇曬style。最後係post content D CSS 做左個patch。但係就有其他engineer，因為個patch override左D style，搞到個page爛左。一個簡單嘅錯誤係三日內係唔同嘅地方做成2個bug，最後變成大問題。</p>
-<p>文中提出用pair programming 同 code review 去盡早fix左D小問題，但最終都係要有資深嘅engineer去identify到個問題。</p>
-<h1 id="Choose-design-over-architecture"><a href="#Choose-design-over-architecture" class="headerlink" title="Choose design over architecture"></a><a href="https://18f.gsa.gov/2015/11/17/choose-design-over-architecture/" target="_blank" rel="external">Choose design over architecture</a></h1><ul>
-<li>Conventional wisdom often encourages engineers to start with a big architectural overview, but this will introduce technical debt<ul>
-<li>The overview make the service complex. The complexity in one service can take down the whole project<ul>
-<li>I guess it is because the service is an essential part of the whole system. All features will depends on the complex services</li>
-</ul>
-</li>
-<li>Architectural plans will push the team forward water fall model<ul>
-<li>I guess it is because the product can only be deployed after all infrastructure is ready</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Focusing on user experience design and software design can help avoid technical debt.<ul>
-<li>Start from small user story<ul>
-<li>Even a small story can involve a lot of effort for the engineers, as there are no infrastructure can be reuse.</li>
-<li>The set of stories will help engineers figure out what infrastructure is needed and the priorities.</li>
-</ul>
-</li>
-<li>After we have the requirements provided by user stories, we can break the features into modules and organize modules into services.<ul>
-<li>SOLID principle in OOP can help us design the system</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Optimize for change<ul>
-<li>Optimized code lead to an increase in defects and reduced velocity.<ul>
-<li>Rule of 3, consider to reuse code if it appear three times</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Summary</p>
-<ul>
-<li>Get the infrastructure’s requirement using product designer’s mindset</li>
-<li>Organize the feature and model using architect mindset</li>
-</ul>
-<h1 id="Read-This-Google-Email-About-Time-Management-Strategy"><a href="#Read-This-Google-Email-About-Time-Management-Strategy" class="headerlink" title="Read This Google Email About Time Management Strategy"></a><a href="https://www.fastcompany.com/3054571/work-smart/the-better-time-management-strategy-this-googler-taught-his-coworkers" target="_blank" rel="external">Read This Google Email About Time Management Strategy</a></h1><p>The animation in video is impressive. It contains a few points:</p>
-<ul>
-<li>Meeting can have fewer people</li>
-<li>Remove unnecessary meeting</li>
-<li>Don’t put all meeting on Friday, because the energy level is low</li>
-</ul>
-<h1 id="知识漩涡"><a href="#知识漩涡" class="headerlink" title="知识漩涡"></a><a href="http://insights.thoughtworkers.org/obsession-og-technology/" target="_blank" rel="external">知识漩涡</a></h1><p>太多新technology，好難追，但好多時都係大同小異。重點係理解可以通用嘅重點。文中提及分為兩種，第一種係零碎嘅資料，第二種係幫助提升理解力。後者往往比前者重要，但係要用好多心力先可以吸收。</p>
-<p>知識框架就係一種幫助理解資料嘅知識，而入邊specific 嘅 domain knowledge 就係資料。學野果時應嘅先廣後深，避免鑽得太深，明白整體之後，先揀得著最多嘅野，專心去學。如果只係不停去追新tech，冇深入了解，去到最後只係知左一堆好快outdate嘅資料，而唔係知識。</p>
-<p>小結：</p>
-<ul>
-<li>冇可能學曬所有野</li>
-<li>要先了解成個知識體系，避免鑽得太深</li>
-<li>揀最有價值嘅野深入研究</li>
-<li>對於得意但同自己發展方向冇關嘅野放係低D嘅priority，要識得放棄</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;當主管卻不懂交辦，當心「猴子」爬上身&quot;&gt;&lt;a href=&quot;#當主管卻不懂交辦，當心「猴子」爬上身&quot; class=&quot;headerlink&quot; title=&quot;當主管卻不懂交辦，當心「猴子」爬上身&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.inside.com.tw/2014/09/17/managers-watch-the-monkeys-carefully&quot;&gt;當主管卻不懂交辦，當心「猴子」爬上身&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;文章將團隊成員分為五種不同層次，最低層次係要等人俾指示，最高就係可以獨立行動，間中做例行報告。要令員工可以獨立行動，需要時間累積信任。&lt;/p&gt;
-&lt;p&gt;文中仲提及一D指派工作嘅技巧:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;要清楚指出工作內容&lt;/li&gt;
-&lt;li&gt;可運用數字明確指出目標，促進員工思考&lt;/li&gt;
-&lt;li&gt;盡力說動部屬願意做不樂意的事&lt;ul&gt;
-&lt;li&gt;最好當然係每個人都做樂意做嘅野。但萬一冇人肯做，都要靠員工去補位&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;用正確既方法去指派工作，文中提出4種&lt;ol&gt;
-&lt;li&gt;直接告訴我你要我做什麼&lt;/li&gt;
-&lt;li&gt;我希望你先考慮我的意見，再決定我要做什麼&lt;ul&gt;
-&lt;li&gt;員工可能想用新方法去解決問題&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;我想自己決定要做什麼&lt;ul&gt;
-&lt;li&gt;員工唔需要監督，係開波之前要搞清楚目標同方向&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;大家共同討論、決定之後，我就很樂意去做&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;仲有三個指派工作嘅大忌&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;指派太多工作&lt;/li&gt;
-&lt;li&gt;有多過一個人落order&lt;ul&gt;
-&lt;li&gt;會唔知做邊個task先，影響團隊信任&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;把最困難的事，交給最有能力的人&lt;ul&gt;
-&lt;li&gt;最重要都係cost and benefit&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML and CSS part 3</title>
-    <link href="http://199911.github.io/review/2016/10/02/html-and-css-3/"/>
-    <id>http://199911.github.io/review/2016/10/02/html-and-css-3/</id>
-    <published>2016-10-01T16:00:00.000Z</published>
-    <updated>2016-10-02T13:34:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="HTML5-layout"><a href="#HTML5-layout" class="headerlink" title="HTML5 layout"></a>HTML5 layout</h2><h3 id="Namespace"><a href="#Namespace" class="headerlink" title="Namespace"></a>Namespace</h3><p>We can use a div with id as namespace, such as<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot;&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="header-and-footer"><a href="#header-and-footer" class="headerlink" title="header and footer"></a><code>header</code> and <code>footer</code></h3><p>These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.</p>
-<h3 id="article"><a href="#article" class="headerlink" title="article"></a><code>article</code></h3><p>It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.<br>Notice <code>article</code> can be nested inside each other, comments of comments is one of the use case.</p>
-<h3 id="aside"><a href="#aside" class="headerlink" title="aside"></a><code>aside</code></h3><p><code>aside</code> tag have 2 usage.</p>
-<ul>
-<li>If it is inside <code>article</code>, it should contain information that is related to the article.</li>
-<li>If it is outside <code>article</code>, it should contain information related to the entire page.</li>
-</ul>
-<a id="more"></a>
-<h3 id="section"><a href="#section" class="headerlink" title="section"></a><code>section</code></h3><p><code>section</code> group related content together, usually with their own heading. It may contains several <code>article</code> inside. <code>section</code> can also be used in <code>article</code> tag, if the article is long and you want to split it into separate sections.</p>
-<h3 id="hgroup"><a href="#hgroup" class="headerlink" title="hgroup"></a><code>hgroup</code></h3><p><code>hgroup</code> stand for header group. For example, you can use <code>hgroup</code> to group a title in <code>h2</code> and a subtitle in <code>h3</code> together.</p>
-<h3 id="figure"><a href="#figure" class="headerlink" title="figure"></a><code>figure</code></h3><p><code>figure</code> can be used not only in images, the examples of usage include:</p>
-<ul>
-<li>images</li>
-<li>videos</li>
-<li>graphs</li>
-<li>diagrams</li>
-<li>code samples</li>
-<li>text that supports the main body of an article</li>
-</ul>
-<h3 id="a"><a href="#a" class="headerlink" title="a"></a><code>a</code></h3><p>Before HTML5, putting block element inside <code>a</code> tag is considered incorrect. But in HTML5, place <code>a</code> element around a block level element that contains child elements is allowed.</p>
-<h3 id="Compatibility"><a href="#Compatibility" class="headerlink" title="Compatibility"></a>Compatibility</h3><p>Older browsers which do not support HTML5 element treat them as inline element. To support HTML5 in old browsers, we need HTML5 shiv (HTML5 shim)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;HTML5-layout&quot;&gt;&lt;a href=&quot;#HTML5-layout&quot; class=&quot;headerlink&quot; title=&quot;HTML5 layout&quot;&gt;&lt;/a&gt;HTML5 layout&lt;/h2&gt;&lt;h3 id=&quot;Namespace&quot;&gt;&lt;a href=&quot;#Namespace&quot; class=&quot;headerlink&quot; title=&quot;Namespace&quot;&gt;&lt;/a&gt;Namespace&lt;/h3&gt;&lt;p&gt;We can use a div with id as namespace, such as&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;div id=&amp;quot;page&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;lt;/div&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&quot;header-and-footer&quot;&gt;&lt;a href=&quot;#header-and-footer&quot; class=&quot;headerlink&quot; title=&quot;header and footer&quot;&gt;&lt;/a&gt;&lt;code&gt;header&lt;/code&gt; and &lt;code&gt;footer&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;These tag can be used as header or footer of the page, beside these, every section and article can have their own headers and footers.&lt;/p&gt;
-&lt;h3 id=&quot;article&quot;&gt;&lt;a href=&quot;#article&quot; class=&quot;headerlink&quot; title=&quot;article&quot;&gt;&lt;/a&gt;&lt;code&gt;article&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;It can be used to hold individual article or blog entry, a comment or forum post, or any other independent piece of content.&lt;br&gt;Notice &lt;code&gt;article&lt;/code&gt; can be nested inside each other, comments of comments is one of the use case.&lt;/p&gt;
-&lt;h3 id=&quot;aside&quot;&gt;&lt;a href=&quot;#aside&quot; class=&quot;headerlink&quot; title=&quot;aside&quot;&gt;&lt;/a&gt;&lt;code&gt;aside&lt;/code&gt;&lt;/h3&gt;&lt;p&gt;&lt;code&gt;aside&lt;/code&gt; tag have 2 usage.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;If it is inside &lt;code&gt;article&lt;/code&gt;, it should contain information that is related to the article.&lt;/li&gt;
-&lt;li&gt;If it is outside &lt;code&gt;article&lt;/code&gt;, it should contain information related to the entire page.&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML and CSS part 2</title>
-    <link href="http://199911.github.io/review/2016/10/01/html-and-css-2/"/>
-    <id>http://199911.github.io/review/2016/10/01/html-and-css-2/</id>
-    <published>2016-09-30T16:00:00.000Z</published>
-    <updated>2016-10-02T13:34:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Doctype"><a href="#Doctype" class="headerlink" title="Doctype"></a>Doctype</h2><p>It defines which version of HTML is using, it may affect how the page is rendered.</p>
-<h2 id="Browser’s-bug"><a href="#Browser’s-bug" class="headerlink" title="Browser’s bug"></a>Browser’s bug</h2><p>Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.</p>
-<h2 id="CSS3-color-support"><a href="#CSS3-color-support" class="headerlink" title="CSS3 color support"></a>CSS3 color support</h2><p>CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.</p>
-<h2 id="Tips-about-reserved-background"><a href="#Tips-about-reserved-background" class="headerlink" title="Tips about reserved background"></a>Tips about reserved background</h2><p>If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.</p>
-<a id="more"></a>
-<h2 id="Brightness-vs-lightness"><a href="#Brightness-vs-lightness" class="headerlink" title="Brightness vs lightness"></a>Brightness vs lightness</h2><p>Brightness only adds black, whereas lightness offers both white and black.</p>
-<h2 id="serif-sans-serif-monospace-cursive-and-fantasy"><a href="#serif-sans-serif-monospace-cursive-and-fantasy" class="headerlink" title="serif, sans serif, monospace, cursive and fantasy"></a>serif, sans serif, monospace, cursive and fantasy</h2><p>Use serif for long text,it is easier to read. Sans serif is clearer to read, better for small text. Use monospace for code, easier to align.<br>Cursive fonts look like handwriting. Also Fantasy font is for decoration.</p>
-<h2 id="italic-vs-oblique"><a href="#italic-vs-oblique" class="headerlink" title="italic vs oblique"></a>italic vs oblique</h2><p>Italic have cursive aspect (a new font), oblique just put font at a angle.</p>
-<h2 id="Text-transform"><a href="#Text-transform" class="headerlink" title="Text transform"></a>Text transform</h2><p>There are CSS to transform text to uppercase, lowercase, or make the first character capitalize</p>
-<h2 id="line-height"><a href="#line-height" class="headerlink" title="line height"></a>line height</h2><p>When line height is larger than the font size, there is a gap above the text. The gap is named ‘leading’. In other words, line height - font size = leading.</p>
-<h2 id="letter-spacing-and-word-spacing"><a href="#letter-spacing-and-word-spacing" class="headerlink" title="letter spacing and word spacing"></a>letter spacing and word spacing</h2><p>There are CSS to control the spacing between letters and words. These are style seems does not work well in Chinese or other language using block characters.</p>
-<h2 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical align"></a>vertical align</h2><p><code>vertical</code> align should be the most commonly misunderstood style. It is not intended to allow you to vertically align text in the middle of block level elements (but this works in table cells, such as <code>td</code> and <code>th</code>). It replaces the depreciated <code>align</code> HTML attribute. It is used in inline elements.</p>
-<h2 id="text-indent"><a href="#text-indent" class="headerlink" title="text-indent"></a>text-indent</h2><p>It is used in a trick to hide the text which is only available for screen reader and SEO. But in Bootstrap 3, there is a better trick with better performance.</p>
-<h2 id="Pseudo-elements"><a href="#Pseudo-elements" class="headerlink" title="Pseudo-elements"></a>Pseudo-elements</h2><ul>
-<li><code>:first-letter</code> and <code>:first-line</code>: select first letter or line in text.</li>
-<li><code>:link</code> and <code>:visited</code>: select not visited and visited <code>&lt;a&gt;</code> link.</li>
-<li><code>:active</code>: select element is being activated by a user.<ul>
-<li>pressed button</li>
-<li>clicked link.</li>
-</ul>
-</li>
-<li><code>:focus</code>: elements that can be interacted with have focus state.<ul>
-<li>from input with cursor in it</li>
-<li>It is also possible to use tab key to focus</li>
-</ul>
-</li>
-<li>When pseduo classes are used, they should appear in this order:<ol>
-<li><code>:link</code></li>
-<li><code>:visited</code></li>
-<li><code>:hover</code></li>
-<li><code>:focus</code></li>
-<li><code>:active</code></li>
-</ol>
-</li>
-</ul>
-<h2 id="Shadow-in-CSS3"><a href="#Shadow-in-CSS3" class="headerlink" title="Shadow in CSS3"></a>Shadow in CSS3</h2><p><code>box-shadow</code> and <code>text-shadow</code> are new style in CSS3.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Doctype&quot;&gt;&lt;a href=&quot;#Doctype&quot; class=&quot;headerlink&quot; title=&quot;Doctype&quot;&gt;&lt;/a&gt;Doctype&lt;/h2&gt;&lt;p&gt;It defines which version of HTML is using, it may affect how the page is rendered.&lt;/p&gt;
-&lt;h2 id=&quot;Browser’s-bug&quot;&gt;&lt;a href=&quot;#Browser’s-bug&quot; class=&quot;headerlink&quot; title=&quot;Browser’s bug&quot;&gt;&lt;/a&gt;Browser’s bug&lt;/h2&gt;&lt;p&gt;Bug is unavoidable in software, no exception in browsers. The bugs in browser is also called browser quirk. Such as the video bug on ipad, the mp4 video url may be put before other’s video url.&lt;/p&gt;
-&lt;h2 id=&quot;CSS3-color-support&quot;&gt;&lt;a href=&quot;#CSS3-color-support&quot; class=&quot;headerlink&quot; title=&quot;CSS3 color support&quot;&gt;&lt;/a&gt;CSS3 color support&lt;/h2&gt;&lt;p&gt;CSS3 support opacity, so we can have RGBa. A new color code HSL is supported, also HSLa.&lt;/p&gt;
-&lt;h2 id=&quot;Tips-about-reserved-background&quot;&gt;&lt;a href=&quot;#Tips-about-reserved-background&quot; class=&quot;headerlink&quot; title=&quot;Tips about reserved background&quot;&gt;&lt;/a&gt;Tips about reserved background&lt;/h2&gt;&lt;p&gt;If text has a light color on a dark background), you can increase the height between lines and the weight of the font to make it easier to read.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
     
     
   </entry>

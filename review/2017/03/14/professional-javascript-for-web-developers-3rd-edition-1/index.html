@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different b">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""Professional: JavaScript for Web Developers, Third Edition" part 1">
+<meta property="og:url" content="http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different b">
+<meta property="og:updated_time" content="2017-03-13T23:44:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""Professional: JavaScript for Web Developers, Third Edition" part 1">
+<meta name="twitter:description" content="This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different b">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-professional-javascript-for-web-developers-3rd-edition-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/" class="article-date">
+  <time datetime="2017-03-13T16:00:00.000Z" itemprop="datePublished">2017-03-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place</p>
+<a id="more"></a>
+<h1 id="Chapter-1-What-is-JavaScript"><a href="#Chapter-1-What-is-JavaScript" class="headerlink" title="Chapter 1: What is JavaScript?"></a>Chapter 1: What is JavaScript?</h1><ul>
+<li>ECMAScript != JavaScript<ul>
+<li>ECMAScript is part of JavaScript</li>
+<li>JavaScript include<ul>
+<li>The Core (ECMAScript)</li>
+<li>The Document Object Model</li>
+<li>The Browser Object Model</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="The-Document-Object-Model"><a href="#The-Document-Object-Model" class="headerlink" title="The Document Object Model"></a>The Document Object Model</h2><ul>
+<li>DOM provides methods and interfaces for working with the content of a web page</li>
+<li>Allow programmer change the page appearance without reload the page</li>
+<li>DOM is also implement in other language</li>
+<li>DOM levels<ul>
+<li>Level 1<ul>
+<li>DOM core: map xml based document to data structure which is easy to access<ul>
+<li>Should be DOM tree, but I don’t know does it provide extra feature</li>
+</ul>
+</li>
+<li>DOM HTML: extended DOM core by adding HTML-specific objects and method</li>
+</ul>
+</li>
+<li>Level 2<ul>
+<li>DOM View</li>
+<li>DOM Events</li>
+<li>DOM style</li>
+<li>DOM Traversal and Range</li>
+</ul>
+</li>
+<li>Level 3<ul>
+<li>DOM Load and Save</li>
+<li>DOM Validation</li>
+<li>Extended DOM core to support all XML 1.0</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other DOMs<ul>
+<li>SVG</li>
+<li>MathML</li>
+<li>Synchronized Multimedia Integration Language (SMIL)</li>
+</ul>
+</li>
+</ul>
+<h2 id="The-Browser-Object-Model-BOM"><a href="#The-Browser-Object-Model-BOM" class="headerlink" title="The Browser Object Model (BOM)"></a>The Browser Object Model (BOM)</h2><ul>
+<li>BOM provides methods and interfaces for interacting with the browser<ul>
+<li>pop up new windows</li>
+<li>move, resize and close browser windows</li>
+<li><code>navigator</code> object</li>
+<li><code>location</code> object</li>
+</ul>
+</li>
+<li>It is not standardize for a long time, until HTML5</li>
+</ul>
+<h1 id="Chapter-2-JavaScript-in-HTML"><a href="#Chapter-2-JavaScript-in-HTML" class="headerlink" title="Chapter 2: JavaScript in HTML"></a>Chapter 2: JavaScript in HTML</h1><ul>
+<li>Traditionally, we put JavaScript on header<ul>
+<li>It is download and parsed before content (blocking)</li>
+<li>Use <code>async</code> and <code>defer</code> attributes in <code>&lt;script&gt;</code></li>
+</ul>
+</li>
+<li>Or put it at the end of body, so the html content is parsed first</li>
+</ul>
+<h2 id="Defer"><a href="#Defer" class="headerlink" title="Defer"></a>Defer</h2><ul>
+<li>The purpose of defer is to indicate that a script won’t be changing the structure of the page as it executes.<ul>
+<li>Even the HTML5 specific defer script will run in order, but this may not happen in real world.</li>
+<li>So keep at most one defer script</li>
+</ul>
+</li>
+<li>Script can be loaded before DOMContentLoaded</li>
+</ul>
+<h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><ul>
+<li>async, run immediately after download, can run before or after DOMContentloaded, but guaranteed before loaded</li>
+</ul>
+<h2 id="Inline-script-in-XHTML"><a href="#Inline-script-in-XHTML" class="headerlink" title="Inline script in XHTML"></a>Inline script in XHTML</h2><ul>
+<li>Less than sign make in script tag make XHTML broken, as it is consider as an open tag<ul>
+<li>Use &lt;</li>
+<li>Use CDATA section</li>
+</ul>
+</li>
+</ul>
+<h2 id="External-script-is-better"><a href="#External-script-is-better" class="headerlink" title="External script is better"></a>External script is better</h2><ul>
+<li>Maintainable</li>
+<li>Caching</li>
+<li>Future-proof<ul>
+<li>Don’t need to use the hack for XHTML</li>
+<li>Same script work in both HTML and XTHML</li>
+</ul>
+</li>
+</ul>
+<h1 id="Chapter-3-Language-Basics"><a href="#Chapter-3-Language-Basics" class="headerlink" title="Chapter 3: Language Basics"></a>Chapter 3: Language Basics</h1><ul>
+<li>variable not declared by <code>var</code> will be global</li>
+<li><code>typeof</code> null return <code>object</code></li>
+<li><code>typeof</code> regex is object (chrome 7 have a bug, which return function)</li>
+<li>variable not declared !== undefined variable<ul>
+<li>using variables not declared throw error (reference error)</li>
+</ul>
+</li>
+<li><code>typeof</code> variables not declared return undefined</li>
+</ul>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
+<li>octal number start with 0</li>
+<li>octal number is invalid in strict mode</li>
+<li>octal number can be tricky: 078-077 = 15</li>
+<li>number large than max value or small than smallest value will become (negative) infinity</li>
+<li><code>typeof</code> NaN is number</li>
+<li>NaN will make the computation return NaN</li>
+<li>NaN not equal to any value<ul>
+<li>so we have to use isNaN()</li>
+</ul>
+</li>
+</ul>
+<h2 id="Number-vs-Parser-Int"><a href="#Number-vs-Parser-Int" class="headerlink" title="Number vs Parser Int"></a>Number vs Parser Int</h2><ul>
+<li>be careful when parsing number with leading 0<ul>
+<li>number start with 0 will be consider as octal number</li>
+<li>always include 10 in second parameter</li>
+</ul>
+</li>
+</ul>
+<h2 id="Built-in-object-method"><a href="#Built-in-object-method" class="headerlink" title="Built in object method"></a>Built in object method</h2><ul>
+<li><code>null</code> and <code>undefined</code> don’t have toString()</li>
+<li><code>String()</code> alway return string, it is good when you don’t know the value whether null or undefined</li>
+<li>Can also convert to string by concatenating empty string<ul>
+<li>I think it is more straight forward.</li>
+</ul>
+</li>
+<li><code>hasOwnProperty(&#39;propertyName&#39;)</code> checks the property exist (do not check prototype)</li>
+<li><code>propertyIsEnumerable(&#39;propertyName&#39;)</code>, whether can use for-in</li>
+<li><code>toLocateString()</code> return localization string</li>
+<li><code>valueOf()</code>, <code>toString()</code> will be called if apply operator on object</li>
+</ul>
+<p><strong>Notice that BOM and DOM is not included in ES standard, they may or may not follow the ES object standard</strong></p>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li>bitwise operator<ul>
+<li>value converted to number by Number() (32 bit numbers)</li>
+</ul>
+</li>
+<li><code>arguments</code> is an array-like object, but it is not array</li>
+<li>string is not object in JavaScript, unlike other language</li>
+<li>ECMA-262 specifies that any object implementing the internal [[Call]] method should return “function” from typeof<ul>
+<li>user defined <code>call()</code> seems does not works</li>
+</ul>
+</li>
+</ul>
+<h1 id="Chapter-4-Variables-Scope-and-Memory"><a href="#Chapter-4-Variables-Scope-and-Memory" class="headerlink" title="Chapter 4: Variables, Scope, and Memory"></a>Chapter 4: Variables, Scope, and Memory</h1><ul>
+<li>In browser, global context = windows</li>
+<li>5 types of scope in browser<ul>
+<li>global, function, eval(), catch block, with block</li>
+</ul>
+</li>
+<li>browser optimized variable look up, don’t worry about access variable from different scope</li>
+<li>Circular reference no longer leak memory, in browser</li>
+<li>Garbage collect can be trigger by code in some browser, but it is not recommended</li>
+<li>Release memory by dereference them (set variable to null)</li>
+</ul>
+<h1 id="Chapter-5-Reference-Types"><a href="#Chapter-5-Reference-Types" class="headerlink" title="Chapter 5 Reference Types"></a>Chapter 5 Reference Types</h1><ul>
+<li>Function interface<ul>
+<li>The best approach is to use named arguments for those that are required arguments</li>
+<li>And an object literal to encompass multiple optional arguments.</li>
+</ul>
+</li>
+<li>Use <code>{}</code> and <code>[]</code> create object and array, the <code>Object()</code> and <code>Array()</code> constructor is not called</li>
+<li>Arrays can contain a maximum of 4,294,967,295 items.<ul>
+<li>If you try to add more than that number, an exception occurs.</li>
+<li>A long-running script error may be thrown before you reach the arrays’ maximum.</li>
+</ul>
+</li>
+<li><code>instanceof</code> assumes a single global execution context.<ul>
+<li>Different frames in a web page haves distinct global execution contexts and therefore two versions of the Array constructor.</li>
+<li>If you were to pass an array from one frame into a second frame, that array has a different constructor function than an array created natively in the second frame.</li>
+<li>To solve this problem, ECMAScript 5 introduced the Array.isArray() method</li>
+</ul>
+</li>
+<li><code>toString()</code> of date object of different browser return stings with different format</li>
+<li>use string to define regex, need to escape the slash as it is escape character in string (not regex)<ul>
+<li><code>source</code> property in regex object does not have slash</li>
+<li>Better not to use string to create REGEX</li>
+</ul>
+</li>
+<li>function constructor is not recommended, as it caused performance issue.</li>
+<li>strict mode does not support <code>callee</code> and <code>caller</code><ul>
+<li>Using <code>arguments.callee</code> can decouple recursive functions</li>
+<li><code>arguments.callee.caller</code> return parent function</li>
+</ul>
+</li>
+<li><code>length</code> property of a function is # of named arguments</li>
+<li>In strict mode, the <code>this</code> value of a function called without a context object is not coerced to window.<ul>
+<li><code>this</code> becomes undefined unless explicitly set by either attaching the function to an object or using apply() or call().</li>
+</ul>
+</li>
+<li>Primitive type cannot have custom properties<ul>
+<li>Can workaround by using constructor to create primitive type wrapper<ul>
+<li><code>var j = new Number(1234);</code></li>
+</ul>
+</li>
+<li><code>typeof</code> return Object for primitive type wrapper</li>
+</ul>
+</li>
+<li>There was method to format HTML dynamically, but it is not implemented by browsers now.</li>
+<li>Singleton object<ul>
+<li>global scope and Math</li>
+</ul>
+</li>
+<li>In strict mode, the variable created in eval() cannot be access from outside</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/" data-id="cj08rb1gh0000jw65jtqn6ipf" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/insight/2017/02/19/readings-13/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文集十三</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/">&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/02/19/readings-13/">文集十三</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/02/12/udemy-introduction-to-css-development/">Udemy: Introduction to CSS Development</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/02/11/readings-12/">文集十二</a>
+          </li>
+        
+          <li>
+            <a href="/review/2017/02/08/all-about-css-float/">All about css float</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
