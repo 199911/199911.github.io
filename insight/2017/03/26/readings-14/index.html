@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Implementation of Bootstrap 3 - variables.less | Coding Sunday</title>
+  <title>文集十四 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
-This design of variable.less against the rule of thumb that variable should be declare">
+  <meta name="description" content="除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書
+CSS Custom Properties - The BasicsCSS Custom value is variable in CSS. Use CSS selector to define scope. :root means global.Can use with calc()Note: it is not">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Implementation of Bootstrap 3 - variables.less">
-<meta property="og:url" content="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/index.html">
+<meta property="og:title" content="文集十四">
+<meta property="og:url" content="http://199911.github.io/insight/2017/03/26/readings-14/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
-This design of variable.less against the rule of thumb that variable should be declare">
-<meta property="og:updated_time" content="2016-09-01T14:30:24.000Z">
+<meta property="og:description" content="除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書
+CSS Custom Properties - The BasicsCSS Custom value is variable in CSS. Use CSS selector to define scope. :root means global.Can use with calc()Note: it is not">
+<meta property="og:updated_time" content="2017-03-26T09:14:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Implementation of Bootstrap 3 - variables.less">
-<meta name="twitter:description" content="variable.less is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.
-This design of variable.less against the rule of thumb that variable should be declare">
+<meta name="twitter:title" content="文集十四">
+<meta name="twitter:description" content="除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書
+CSS Custom Properties - The BasicsCSS Custom value is variable in CSS. Use CSS selector to define scope. :root means global.Can use with calc()Note: it is not">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -64,14 +64,14 @@ This design of variable.less against the rule of thumb that variable should be d
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-readings-14" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/code/2016/08/27/bootstrap-3-variables/" class="article-date">
-  <time datetime="2016-08-26T16:00:00.000Z" itemprop="datePublished">2016-08-27</time>
+    <a href="/insight/2017/03/26/readings-14/" class="article-date">
+  <time datetime="2017-03-25T16:00:00.000Z" itemprop="datePublished">2017-03-26</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Code/">Code</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -82,7 +82,7 @@ This design of variable.less against the rule of thumb that variable should be d
         
   
     <h1 class="article-title" itemprop="name">
-      Implementation of Bootstrap 3 - variables.less
+      文集十四
     </h1>
   
 
@@ -90,24 +90,41 @@ This design of variable.less against the rule of thumb that variable should be d
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
-<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+        <p>除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書</p>
+<h2 id="CSS-Custom-Properties-The-Basics"><a href="#CSS-Custom-Properties-The-Basics" class="headerlink" title="CSS Custom Properties - The Basics"></a><a href="https://sgom.es/posts/2017-01-27-css-custom-properties-the-basics/" target="_blank" rel="external">CSS Custom Properties - The Basics</a></h2><p>CSS Custom value is variable in CSS. Use CSS selector to define scope. <code>:root</code> means global.<br>Can use with <code>calc()</code><br>Note: it is not support by most popular version of browsers.<br>Can use with JS: <code>styles.getPropertyValue(property)</code> and <code>styles.setProperty()</code></p>
+<h2 id="Window-Window-Measuring-Screen-Sizes-with-JavaScript"><a href="#Window-Window-Measuring-Screen-Sizes-with-JavaScript" class="headerlink" title="Window, Window: Measuring Screen Sizes with JavaScript"></a><a href="http://thenewcode.com/1181/Window-Window-Measuring-Screen-Sizes-with-JavaScript" target="_blank" rel="external">Window, Window: Measuring Screen Sizes with JavaScript</a></h2><ul>
+<li>The viewport is the display area of the browser<ul>
+<li>It does not include the URL bar and browser UI.</li>
+</ul>
+</li>
+<li><code>document.documentElement.clientWidth</code> not included scroll bar, but <code>window.innerWidth</code> include.<ul>
+<li>So is height</li>
+<li>Better to take max of these two value.</li>
+</ul>
+</li>
+<li>The screen is the current display the browser is in<ul>
+<li>note that many devices can have more than one screen.</li>
+</ul>
+</li>
+<li>Need to recalculate screen size when <code>resize</code> and <code>orientationchange</code> fired</li>
+</ul>
 <a id="more"></a>
-<h3 id="Cons-of-centralize-all-variable’s-declaration"><a href="#Cons-of-centralize-all-variable’s-declaration" class="headerlink" title="Cons of centralize all variable’s declaration"></a>Cons of centralize all variable’s declaration</h3><p>Imagine you are working on a new component, every time you need a new variable, you have to go back variables.less to add a new one. When you forget the value of a variable, you also have to go back variable.less to check the value. Lots of context switching during development.</p>
-<h3 id="Pros-of-declare-on-use"><a href="#Pros-of-declare-on-use" class="headerlink" title="Pros of declare on use"></a>Pros of declare on use</h3><p>Declare variable on use can benefit from scope and context. Suppose I am working on navigation bar and I have <code>nav-bar.less</code>. To declare the width of navigation bar, <code>@width</code> may be clear enough to be a variable’s name. Because we are in the context of navigation bar.</p>
-<p>If we put all variables in <code>variable.less</code>, we have to use <code>@nav-bar-width</code>. In <code>nav-bar.less</code>, we will see the <code>nav-bar</code> prefix repeat and repeat again. It is redundant and annoying. Why bootstrap 3 design in this way?</p>
-<h3 id="Nature-of-Bootstrap-3"><a href="#Nature-of-Bootstrap-3" class="headerlink" title="Nature of Bootstrap 3"></a>Nature of Bootstrap 3</h3><p>Bootstrap is a open source project. In the documentation, it gives guideline on the source code and encourage user to reuse the mixins. Users are encouraged configure, modify and compile Bootstrap 3 from source code.</p>
-<h4 id="variables-less-help-new-users-to-configure-Bootstrap-3-easily"><a href="#variables-less-help-new-users-to-configure-Bootstrap-3-easily" class="headerlink" title="variables.less help new users to configure Bootstrap 3 easily"></a>variables.less help new users to configure Bootstrap 3 easily</h4><p>Declare on use make use of context, and it becomes context dependent. But a new user don’t have any context. They need to go through the whole file to find out the declaration variable and what to change. It also increase the maintenance cost when the MOD spread in different part of the source code.</p>
-<p>The <code>variables.less</code> does it part to help new users. They can go through <code>variables.less</code>, figure out what can be configure. They can go deep into the implementation when they found something interesting. Users only need to change and maintain <code>variables.less</code>.</p>
-<h2 id="Insight-Team-project-vs-Open-source-project"><a href="#Insight-Team-project-vs-Open-source-project" class="headerlink" title="Insight - Team project vs Open source project"></a>Insight - Team project vs Open source project</h2><p>In a team project, the team does not change frequently. Every member have their own responsibility. Members may have to maintain set of codes in some directories. They try to prevent code conflict by reducing the number of file shared. When a member need to use the code maintained by others, they can get the context quickly by asking the person in charge. This file structure and workflow makes the team work efficiently.</p>
-<p>But for a open source project, contributors come and go. The communication cost is high. New users tend to read to code instead of finding someone to ask. Users have to maintain the whole project by themselves. Complex file structure for division of responsibility is not needed. Gathering all configuration makes the structure simpler and easier to maintain.</p>
+<h2 id="钝感力"><a href="#钝感力" class="headerlink" title="钝感力"></a>钝感力</h2><p>幾有意思，有部份例子唔太認同。但係不為瑣事動搖嘅能力的確係一種重要才能。</p>
+<h2 id="發掘你的太陽魔力"><a href="#發掘你的太陽魔力" class="headerlink" title="發掘你的太陽魔力"></a>發掘你的太陽魔力</h2><p>以半小說形式介紹太陽劇團嘅人員點樣保持熱情，keep住創新。</p>
+<h2 id="嗨-我是和尚。東大IT僧侶修行日記"><a href="#嗨-我是和尚。東大IT僧侶修行日記" class="headerlink" title="嗨! 我是和尚。東大IT僧侶修行日記"></a>嗨! 我是和尚。東大IT僧侶修行日記</h2><p>E 本書顛覆我對佛教嘅印象，估唔到日本嘅佛教可以咁有活力，會有人肯創新，借出佛寺搞音樂會，開上網cafe，令佛教追上時代。作者唔係佛教世家，作為一個外人進入佛教世界，特別多思考，相當有趣。文中有唔少金句。</p>
+<blockquote>
+<p>如果不是出自作者內心，已經成為其身上血肉的語言，是無法被衆人之耳聽進去的。</p>
+<p>並非「原因必然導致結果」，而是「事出必有因」</p>
+<p>對於靠著金錢的支援來建構的人生而感到安心，這種狀態其實是最危險的。假使我們難得生而為人，卻放棄生而為人應該以多面相的感性來品嘗人生，而活在金錢這種空虛的安全感之中度日，這樣的人生才叫做充滿風險的人生。<br>「我身為出家人，就必須將我的天線伸往各種不同的方向來磨練我的感性才行」<br>我們並不應該遇到任何事都直接用很正面積極去接納並且一概認為都是好的，而是要更加珍惜這種愕然的感覺，然後從正面去超越。<br>旅行的高手則是無論在哪裡都能夠找到自己的地方，當作自己的家一樣悠閒自在，一旦成了旅行達人，則會發現全世界沒有任何一個自己不可以落腳的地方。</p>
+</blockquote>
+<p>PS：原來日本政府係導入議院內閣制之前，用佛教集團本願寺做體制實驗</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/" data-id="ciskfic9q00025g657skwj2tb" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2017/03/26/readings-14/" data-id="cj0qgwbsj0000c3656mefm3cb" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2017/03/26/readings-14/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -116,19 +133,10 @@ This design of variable.less against the rule of thumb that variable should be d
     
 <nav id="article-nav">
   
-    <a href="/code/2016/08/28/bootstrap-3-mixins/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Implementation of Bootstrap 3 - mixins.less
-        
-      </div>
-    </a>
   
-  
-    <a href="/review/2016/08/21/the-mythical-man-month-3/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Review of &quot;the mythical man month&quot; chapter 3</div>
+      <div class="article-nav-title">&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 2</div>
     </a>
   
 </nav>
@@ -236,7 +244,7 @@ This design of variable.less against the rule of thumb that variable should be d
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/code/2016/08/27/bootstrap-3-variables/';
+  var disqus_url = 'http://199911.github.io/insight/2017/03/26/readings-14/';
   
   (function(){
     var dsq = document.createElement('script');

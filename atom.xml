@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-03-18T07:57:25.000Z</updated>
+  <updated>2017-03-26T09:14:20.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文集十四</title>
+    <link href="http://199911.github.io/insight/2017/03/26/readings-14/"/>
+    <id>http://199911.github.io/insight/2017/03/26/readings-14/</id>
+    <published>2017-03-25T16:00:00.000Z</published>
+    <updated>2017-03-26T09:14:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書</p>
+<h2 id="CSS-Custom-Properties-The-Basics"><a href="#CSS-Custom-Properties-The-Basics" class="headerlink" title="CSS Custom Properties - The Basics"></a><a href="https://sgom.es/posts/2017-01-27-css-custom-properties-the-basics/" target="_blank" rel="external">CSS Custom Properties - The Basics</a></h2><p>CSS Custom value is variable in CSS. Use CSS selector to define scope. <code>:root</code> means global.<br>Can use with <code>calc()</code><br>Note: it is not support by most popular version of browsers.<br>Can use with JS: <code>styles.getPropertyValue(property)</code> and <code>styles.setProperty()</code></p>
+<h2 id="Window-Window-Measuring-Screen-Sizes-with-JavaScript"><a href="#Window-Window-Measuring-Screen-Sizes-with-JavaScript" class="headerlink" title="Window, Window: Measuring Screen Sizes with JavaScript"></a><a href="http://thenewcode.com/1181/Window-Window-Measuring-Screen-Sizes-with-JavaScript" target="_blank" rel="external">Window, Window: Measuring Screen Sizes with JavaScript</a></h2><ul>
+<li>The viewport is the display area of the browser<ul>
+<li>It does not include the URL bar and browser UI.</li>
+</ul>
+</li>
+<li><code>document.documentElement.clientWidth</code> not included scroll bar, but <code>window.innerWidth</code> include.<ul>
+<li>So is height</li>
+<li>Better to take max of these two value.</li>
+</ul>
+</li>
+<li>The screen is the current display the browser is in<ul>
+<li>note that many devices can have more than one screen.</li>
+</ul>
+</li>
+<li>Need to recalculate screen size when <code>resize</code> and <code>orientationchange</code> fired</li>
+</ul>
+<a id="more"></a>
+<h2 id="钝感力"><a href="#钝感力" class="headerlink" title="钝感力"></a>钝感力</h2><p>幾有意思，有部份例子唔太認同。但係不為瑣事動搖嘅能力的確係一種重要才能。</p>
+<h2 id="發掘你的太陽魔力"><a href="#發掘你的太陽魔力" class="headerlink" title="發掘你的太陽魔力"></a>發掘你的太陽魔力</h2><p>以半小說形式介紹太陽劇團嘅人員點樣保持熱情，keep住創新。</p>
+<h2 id="嗨-我是和尚。東大IT僧侶修行日記"><a href="#嗨-我是和尚。東大IT僧侶修行日記" class="headerlink" title="嗨! 我是和尚。東大IT僧侶修行日記"></a>嗨! 我是和尚。東大IT僧侶修行日記</h2><p>E 本書顛覆我對佛教嘅印象，估唔到日本嘅佛教可以咁有活力，會有人肯創新，借出佛寺搞音樂會，開上網cafe，令佛教追上時代。作者唔係佛教世家，作為一個外人進入佛教世界，特別多思考，相當有趣。文中有唔少金句。</p>
+<blockquote>
+<p>如果不是出自作者內心，已經成為其身上血肉的語言，是無法被衆人之耳聽進去的。</p>
+<p>並非「原因必然導致結果」，而是「事出必有因」</p>
+<p>對於靠著金錢的支援來建構的人生而感到安心，這種狀態其實是最危險的。假使我們難得生而為人，卻放棄生而為人應該以多面相的感性來品嘗人生，而活在金錢這種空虛的安全感之中度日，這樣的人生才叫做充滿風險的人生。<br>「我身為出家人，就必須將我的天線伸往各種不同的方向來磨練我的感性才行」<br>我們並不應該遇到任何事都直接用很正面積極去接納並且一概認為都是好的，而是要更加珍惜這種愕然的感覺，然後從正面去超越。<br>旅行的高手則是無論在哪裡都能夠找到自己的地方，當作自己的家一樣悠閒自在，一旦成了旅行達人，則會發現全世界沒有任何一個自己不可以落腳的地方。</p>
+</blockquote>
+<p>PS：原來日本政府係導入議院內閣制之前，用佛教集團本願寺做體制實驗</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;除左technical reading之外，仲睇左幾本”一分鐘閱讀”入邊推薦嘅書&lt;/p&gt;
+&lt;h2 id=&quot;CSS-Custom-Properties-The-Basics&quot;&gt;&lt;a href=&quot;#CSS-Custom-Properties-The-Basics&quot; class=&quot;headerlink&quot; title=&quot;CSS Custom Properties - The Basics&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://sgom.es/posts/2017-01-27-css-custom-properties-the-basics/&quot;&gt;CSS Custom Properties - The Basics&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;CSS Custom value is variable in CSS. Use CSS selector to define scope. &lt;code&gt;:root&lt;/code&gt; means global.&lt;br&gt;Can use with &lt;code&gt;calc()&lt;/code&gt;&lt;br&gt;Note: it is not support by most popular version of browsers.&lt;br&gt;Can use with JS: &lt;code&gt;styles.getPropertyValue(property)&lt;/code&gt; and &lt;code&gt;styles.setProperty()&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Window-Window-Measuring-Screen-Sizes-with-JavaScript&quot;&gt;&lt;a href=&quot;#Window-Window-Measuring-Screen-Sizes-with-JavaScript&quot; class=&quot;headerlink&quot; title=&quot;Window, Window: Measuring Screen Sizes with JavaScript&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://thenewcode.com/1181/Window-Window-Measuring-Screen-Sizes-with-JavaScript&quot;&gt;Window, Window: Measuring Screen Sizes with JavaScript&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;The viewport is the display area of the browser&lt;ul&gt;
+&lt;li&gt;It does not include the URL bar and browser UI.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;document.documentElement.clientWidth&lt;/code&gt; not included scroll bar, but &lt;code&gt;window.innerWidth&lt;/code&gt; include.&lt;ul&gt;
+&lt;li&gt;So is height&lt;/li&gt;
+&lt;li&gt;Better to take max of these two value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The screen is the current display the browser is in&lt;ul&gt;
+&lt;li&gt;note that many devices can have more than one screen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Need to recalculate screen size when &lt;code&gt;resize&lt;/code&gt; and &lt;code&gt;orientationchange&lt;/code&gt; fired&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 2</title>
@@ -2507,168 +2572,6 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;There are lots of other stuff to handle, better use video player library instead of building our own.&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;HTML5 - the missing manual 2nd edition&quot; part 1</title>
-    <link href="http://199911.github.io/review/2016/10/16/html5-missing-manual-1/"/>
-    <id>http://199911.github.io/review/2016/10/16/html5-missing-manual-1/</id>
-    <published>2016-10-15T16:00:00.000Z</published>
-    <updated>2016-10-21T14:14:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Part 1 focus on some updated basic markup.</p>
-<h2 id="Three-principle-of-html5"><a href="#Three-principle-of-html5" class="headerlink" title="Three principle of html5"></a>Three principle of html5</h2><ol>
-<li>don’t break the web<ul>
-<li>XHTML 2 broke the Web because it demanded an immediate, dramatic shift in the way web pages were written (and it fail)</li>
-<li>compatible, support degrade on new element</li>
-</ul>
-</li>
-<li>pave the cowpaths<ul>
-<li>embracing a widely supported but poorly designed feature</li>
-<li>standardize some common use case</li>
-</ul>
-</li>
-<li><p>be practical</p>
-<ul>
-<li>Change base on usage and requirement</li>
-</ul>
-<a id="more"></a>
-</li>
-</ol>
-<h2 id="DOCTYPE"><a href="#DOCTYPE" class="headerlink" title="DOCTYPE"></a>DOCTYPE</h2><p>It is used to set up quirks mode. The browsers render the page with buggy rule for to make the page behave same as some old buggy browser.</p>
-<h2 id="HTML5-loosened-rules"><a href="#HTML5-loosened-rules" class="headerlink" title="HTML5 loosened rules"></a>HTML5 loosened rules</h2><ul>
-<li>Case insensitive</li>
-<li>Ignore closing slash from a void element (empty element)</li>
-<li>Don’t need quotation mark in attributes (must have no special char (which need to be escaped))</li>
-<li>Attribute with no value is allowed (checked)<br>Suggestion:</li>
-<li>Always include <html>, <body> and <head></head></body></html></li>
-</ul>
-<h2 id="Three-tools-to-help-writing-HTML"><a href="#Three-tools-to-help-writing-HTML" class="headerlink" title="Three tools to help writing HTML"></a>Three tools to help writing HTML</h2><ul>
-<li>can i use</li>
-<li>browser usage<ul>
-<li><a href="http://gs.statcounter.com" target="_blank" rel="external">http://gs.statcounter.com</a></li>
-<li>Using google analystic the track your visitor can give more precise information</li>
-</ul>
-</li>
-<li>feature detection</li>
-</ul>
-<h2 id="Make-old-browser-support-HTML5"><a href="#Make-old-browser-support-HTML5" class="headerlink" title="Make old browser support HTML5"></a>Make old browser support HTML5</h2><ul>
-<li>Add <code>display: block;</code> to HTML5 new tag</li>
-<li>Use Google’s html5shim</li>
-</ul>
-<h2 id="Site-with-the-Semantic-elements"><a href="#Site-with-the-Semantic-elements" class="headerlink" title="Site with the Semantic elements"></a>Site with the Semantic elements</h2><ul>
-<li>Header<ul>
-<li>It may overlay with the task of <code>&lt;h1&gt;</code>, <code>&lt;header&gt;</code> is useful when there are title have sub-title, author and other meta data.</li>
-</ul>
-</li>
-<li>Sidebar<ul>
-<li>Consider sidebar as nav bar, we can put <code>&lt;aside&gt;</code> inside <code>&lt;nav&gt;</code></li>
-<li>Sidebar contains different section, we can put <code>&lt;nav&gt;</code> inside <code>&lt;aside&gt;</code>, more suitable to use when the sidebar is complex.</li>
-</ul>
-</li>
-<li><code>&lt;section&gt;</code><ul>
-<li>Small blocks of content</li>
-<li>Small contained content that can’t really be described as an article, like a customer billing record or a product listing.</li>
-<li>Groups of content</li>
-<li>A portion of a longer document</li>
-</ul>
-</li>
-<li>Collapsible boxes<ul>
-<li>Use <code>&lt;summary&gt;</code> as clickable header and <code>&lt;details&gt;</code></li>
-</ul>
-</li>
-<li>Footer<ul>
-<li>common feature<ul>
-<li>Fixed positioning</li>
-<li>A close button</li>
-<li>A partially transparent background</li>
-<li>Animation</li>
-</ul>
-</li>
-<li>We can be use a div with id to split the standard footer</li>
-<li>If there are multiple section, we can use <code>&lt;aside&gt;</code></li>
-</ul>
-</li>
-<li><code>&lt;main&gt;</code><ul>
-<li>New element introduced in HTML5.1</li>
-<li>Same level as <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code></li>
-<li>It holds the page’s full main content, it cannot be put inside any other semantic element.</li>
-</ul>
-</li>
-</ul>
-<p>Notice the scope of tag, if there is a <footer> inside <aside>, it means it is footer of the aside.</aside></footer></p>
-<h2 id="HTML5-outline-System"><a href="#HTML5-outline-System" class="headerlink" title="HTML5 outline System"></a>HTML5 outline System</h2><ul>
-<li>Search engine use this to build a better page preview</li>
-<li>Can be used as quality assurance tool</li>
-<li>Many developer ignore this</li>
-<li>In HTML 5, there can be more than one <code>&lt;h1&gt;</code>.</li>
-</ul>
-<h2 id="Text-level-semantics"><a href="#Text-level-semantics" class="headerlink" title="Text-level semantics"></a>Text-level semantics</h2><p>Besides page-level semantics mentioned before, there are 3 text-level semantics elements</p>
-<ul>
-<li><code>&lt;time&gt;</code><ul>
-<li><code>datetime</code> attribute<ul>
-<li>YYYY-MM-DD</li>
-<li>HH:MM</li>
-</ul>
-</li>
-<li><code>pubdate</code><ul>
-<li>Publish date</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>&lt;output&gt;</code><ul>
-<li>Show javascript output</li>
-</ul>
-</li>
-<li><code>&lt;mark&gt;</code><ul>
-<li>Represent a section of text that’s highlighted for reference</li>
-</ul>
-</li>
-</ul>
-<h2 id="Accessibility"><a href="#Accessibility" class="headerlink" title="Accessibility"></a>Accessibility</h2><ul>
-<li>ARIA<ul>
-<li>Accessible Rich Internet Application</li>
-<li><code>role</code> attribute</li>
-</ul>
-</li>
-<li>REFa</li>
-<li>Microformat</li>
-<li>microdata</li>
-</ul>
-<h2 id="Some-interest-new-feature-in-HTML5"><a href="#Some-interest-new-feature-in-HTML5" class="headerlink" title="Some interest new feature in HTML5"></a>Some interest new feature in HTML5</h2><ul>
-<li>‘auto-complete’ attribute in form input</li>
-<li>‘require’ and ‘optional’ attributes in form input</li>
-<li><code>&lt;datalist&gt;</code> element in form</li>
-<li><code>&lt;meter&gt;</code> and <code>progress</code> elements</li>
-<li>‘content-editable’ and ‘design mode’ attributes</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Part 1 focus on some updated basic markup.&lt;/p&gt;
-&lt;h2 id=&quot;Three-principle-of-html5&quot;&gt;&lt;a href=&quot;#Three-principle-of-html5&quot; class=&quot;headerlink&quot; title=&quot;Three principle of html5&quot;&gt;&lt;/a&gt;Three principle of html5&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;don’t break the web&lt;ul&gt;
-&lt;li&gt;XHTML 2 broke the Web because it demanded an immediate, dramatic shift in the way web pages were written (and it fail)&lt;/li&gt;
-&lt;li&gt;compatible, support degrade on new element&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;pave the cowpaths&lt;ul&gt;
-&lt;li&gt;embracing a widely supported but poorly designed feature&lt;/li&gt;
-&lt;li&gt;standardize some common use case&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;be practical&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Change base on usage and requirement&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
