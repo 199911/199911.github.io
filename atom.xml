@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-03-26T09:14:20.000Z</updated>
+  <updated>2017-04-16T05:01:03.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文集十五</title>
+    <link href="http://199911.github.io/insight/2017/04/16/readings-15/"/>
+    <id>http://199911.github.io/insight/2017/04/16/readings-15/</id>
+    <published>2017-04-15T16:00:00.000Z</published>
+    <updated>2017-04-16T05:01:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Regular-Expressions-in-a-post-ES6-world"><a href="#Regular-Expressions-in-a-post-ES6-world" class="headerlink" title="Regular Expressions in a post-ES6 world"></a><a href="https://ponyfoo.com/articles/regular-expressions-post-es6" target="_blank" rel="external">Regular Expressions in a post-ES6 world</a></h2><ul>
+<li>Sticky group<ul>
+<li>I don’t use regex a lot, don’t know how much can this feature helps</li>
+</ul>
+</li>
+<li>Better support of Unicode</li>
+<li>Regex match group with key<ul>
+<li>Easier to read the regex</li>
+</ul>
+</li>
+<li>Lookbehind assertion<ul>
+<li>I don’t even know what is lookahead assertion.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Scalable-Design-Beyond-Responsive-Design"><a href="#Scalable-Design-Beyond-Responsive-Design" class="headerlink" title="Scalable Design: Beyond Responsive Design"></a><a href="https://medium.com/@julienetienne_/beyond-responsive-design-f51ee2a9bfd" target="_blank" rel="external">Scalable Design: Beyond Responsive Design</a></h2><p><code>vh</code> and <code>vw</code> units make zoom function fail (as the view port does not change)<br>The article introduce a library to solve responsive font problem: <a href="https://github.com/julienetie/mimetic" target="_blank" rel="external">https://github.com/julienetie/mimetic</a><br>Seems the requirement is to use <code>rem</code> for fonts.</p>
+<a id="more"></a>
+<h2 id="Runtime-Coverage-using-Chrome-DevTools"><a href="#Runtime-Coverage-using-Chrome-DevTools" class="headerlink" title="Runtime Coverage using Chrome DevTools"></a><a href="https://gideonpyzer.com/blog/runtime-coverage-using-chrome-devtools/" target="_blank" rel="external">Runtime Coverage using Chrome DevTools</a></h2><p>Can use code coverage as a indicator for network optimization. If the percentage of unused bytes in the code is high, it suggests that the end user is having to download a lot more than is necessary to run the app.</p>
+<h2 id="11-Ways-to-Invoke-a-Function"><a href="#11-Ways-to-Invoke-a-Function" class="headerlink" title="11 Ways to Invoke a Function"></a><a href="https://gist.github.com/myshov/05800f083a0afce56e0f782314a103eb" target="_blank" rel="external">11 Ways to Invoke a Function</a></h2><ul>
+<li>What is <code>Reflect</code>?<ul>
+<li><a href="https://www.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/" target="_blank" rel="external">https://www.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/</a></li>
+<li>A collection of js internal method.</li>
+<li>Easy to extend</li>
+<li>Better backward compatibility</li>
+</ul>
+</li>
+<li>What is <code>require(&#39;vm&#39;).Script</code><ul>
+<li>Node.js lib</li>
+</ul>
+</li>
+</ul>
+<h2 id="以Game載道"><a href="#以Game載道" class="headerlink" title="以Game載道"></a>以Game載道</h2><p>無意中係圖書館見到E本書，於是就借左黎睇。入邊最深刻就係遊戲係sell緊content同experience，同報紙雜誌一樣係一個媒體。甚至可以做到教化作用。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Regular-Expressions-in-a-post-ES6-world&quot;&gt;&lt;a href=&quot;#Regular-Expressions-in-a-post-ES6-world&quot; class=&quot;headerlink&quot; title=&quot;Regular Expressions in a post-ES6 world&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://ponyfoo.com/articles/regular-expressions-post-es6&quot;&gt;Regular Expressions in a post-ES6 world&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Sticky group&lt;ul&gt;
+&lt;li&gt;I don’t use regex a lot, don’t know how much can this feature helps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Better support of Unicode&lt;/li&gt;
+&lt;li&gt;Regex match group with key&lt;ul&gt;
+&lt;li&gt;Easier to read the regex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Lookbehind assertion&lt;ul&gt;
+&lt;li&gt;I don’t even know what is lookahead assertion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Scalable-Design-Beyond-Responsive-Design&quot;&gt;&lt;a href=&quot;#Scalable-Design-Beyond-Responsive-Design&quot; class=&quot;headerlink&quot; title=&quot;Scalable Design: Beyond Responsive Design&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://medium.com/@julienetienne_/beyond-responsive-design-f51ee2a9bfd&quot;&gt;Scalable Design: Beyond Responsive Design&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;vh&lt;/code&gt; and &lt;code&gt;vw&lt;/code&gt; units make zoom function fail (as the view port does not change)&lt;br&gt;The article introduce a library to solve responsive font problem: &lt;a href=&quot;https://github.com/julienetie/mimetic&quot;&gt;https://github.com/julienetie/mimetic&lt;/a&gt;&lt;br&gt;Seems the requirement is to use &lt;code&gt;rem&lt;/code&gt; for fonts.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>文集十四</title>
@@ -2292,291 +2359,6 @@
     </summary>
     
       <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;HTML5 - the missing manual 2nd edition&quot; part 2</title>
-    <link href="http://199911.github.io/review/2016/10/21/html5-missing-manual-2/"/>
-    <id>http://199911.github.io/review/2016/10/21/html5-missing-manual-2/</id>
-    <published>2016-10-20T16:00:00.000Z</published>
-    <updated>2016-10-21T14:14:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Audio-and-Video"><a href="#Audio-and-Video" class="headerlink" title="Audio and Video"></a>Audio and Video</h2><p>Internet become a place for entertainment from sharing academic research. Better supports on video and audio are introduced in HTML5</p>
-<ul>
-<li>Does not have any copy protect system, any one can download.</li>
-<li>Digital rights management is developing in HTML5.1</li>
-<li>current positioning of video (currentTime)</li>
-<li>play speed (playbackRate)</li>
-<li>download progress (seekable)</li>
-<li>The book say no HTML5 only solution for web chat<ul>
-<li>How about web RTC?</li>
-</ul>
-</li>
-<li>lazy loading<ul>
-<li>Use <code>preload</code> attribute, but some old browser does not pay attention on it</li>
-</ul>
-</li>
-<li>media group<ul>
-<li>sync different video and audio</li>
-</ul>
-</li>
-<li>video subtitle<ul>
-<li>WebVTT,SRT, TTML</li>
-</ul>
-</li>
-<li>There are lots of other stuff to handle, better use video player library instead of building our own.</li>
-</ul>
-<a id="more"></a>
-<h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><ul>
-<li>browser does not support rgba will not fallback to rgb automatically</li>
-<li>vendor prefix:<ul>
-<li>let developer to use new feature and give feedback</li>
-<li>tell developer the style rule may change in the future</li>
-</ul>
-</li>
-<li>‘Sliding door’ technique:<ul>
-<li>Create a resizable image by breaking it into 3 piece: left, middle and right.</li>
-<li>The middle one will repeat.</li>
-</ul>
-</li>
-<li>Transition support:<ul>
-<li>transparency</li>
-<li>shadow</li>
-<li>gradients</li>
-<li>transforms<ul>
-<li>move</li>
-<li>scale</li>
-<li>skew</li>
-<li>rotate</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Column layout<ul>
-<li>The layout used in newspaper)</li>
-<li>Properties:<ul>
-<li>count</li>
-<li>width</li>
-<li>span</li>
-<li>rule</li>
-<li>gap</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Responsive web design<ul>
-<li>Two types<ul>
-<li>fluid</li>
-<li>fixed</li>
-</ul>
-</li>
-<li>Fluid typography<ul>
-<li>Two ways to implement<ul>
-<li>percentage</li>
-<li><code>em</code> (more popular)<ul>
-<li><code>em</code> is a unit from print typography</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>calc()</code> can combine fluid and fixed design</li>
-<li>Use <code>em</code> for margin, border and padding to make the layout match the font size</li>
-<li>Handle multiple level responsive typography<ul>
-<li><code>em</code> inherit size from parent element</li>
-<li><code>rem</code> (root em) specific the absolute size</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Viewport"><a href="#Viewport" class="headerlink" title="Viewport"></a>Viewport</h3><ul>
-<li>Prevent mobile browsers not to perform their automatic viewport scaling.<ul>
-<li>I guess view desktop version will ignore the viewport tag</li>
-</ul>
-</li>
-</ul>
-<h3 id="Media-query"><a href="#Media-query" class="headerlink" title="Media query"></a>Media query</h3><ul>
-<li>width</li>
-<li>height</li>
-<li>device-height</li>
-<li>orientation</li>
-<li>device-aspect-ratio</li>
-<li>device-pixel-ratio<ul>
-<li>CSS pixel vs screen pixel</li>
-</ul>
-</li>
-<li>color<ul>
-<li>Query number of bits of color coding is used by the device</li>
-</ul>
-</li>
-</ul>
-<h3 id="Mobile-first-design"><a href="#Mobile-first-design" class="headerlink" title="Mobile first design"></a>Mobile first design</h3><ul>
-<li>default mobile, extra for desktop</li>
-<li>TODO: read<ul>
-<li><a href="https://blog.intercom.com/why-mobile-first-may-already-be-outdated/" target="_blank" rel="external">https://blog.intercom.com/why-mobile-first-may-already-be-outdated/</a></li>
-<li><a href="https://codemyviews.com/blog/mobilefirst" target="_blank" rel="external">https://codemyviews.com/blog/mobilefirst</a></li>
-</ul>
-</li>
-<li>hidden content will still be downloaded (also images!)</li>
-<li>using media attribute in link tag can replace whole css script</li>
-<li><code>media</code> also work for <code>&lt;video&gt;</code> element<ul>
-<li>load different resolution in different device</li>
-</ul>
-</li>
-</ul>
-<h2 id="Canvas"><a href="#Canvas" class="headerlink" title="Canvas"></a>Canvas</h2><ul>
-<li>require js</li>
-<li>for graphically advanced applications<ul>
-<li>games</li>
-<li>mapping tools</li>
-<li>dynamic chart</li>
-<li>current only support 2d drawing</li>
-<li>no semantics or accessibility (check the current)<ul>
-<li>seems some new rules added in 2015</li>
-</ul>
-</li>
-<li>can be used to copy image from video</li>
-<li>have fill function</li>
-</ul>
-</li>
-</ul>
-<h2 id="Webapp"><a href="#Webapp" class="headerlink" title="Webapp"></a>Webapp</h2><h3 id="Web-storage-API"><a href="#Web-storage-API" class="headerlink" title="Web storage API"></a>Web storage API</h3><ul>
-<li>may fail if open in loacl file (some browser link storage to domain name)</li>
-<li>storageChanged event<ul>
-<li>can sync different tabs</li>
-</ul>
-</li>
-</ul>
-<h3 id="File-API"><a href="#File-API" class="headerlink" title="File API"></a>File API</h3><ul>
-<li>To use the API, need to get file from<ul>
-<li>input or</li>
-<li>drag and drop</li>
-</ul>
-</li>
-<li>Can read file content</li>
-<li>Can read multiple file by adding <code>multiple</code> attribute to input element</li>
-<li>Drag and drop need the to readAsDataURL() method, also drag and drop event</li>
-</ul>
-<h3 id="IndexedDB-web-SQL-database"><a href="#IndexedDB-web-SQL-database" class="headerlink" title="IndexedDB (web SQL database)"></a>IndexedDB (web SQL database)</h3><ul>
-<li>for offline applications</li>
-<li>enhancing performance</li>
-<li>improving local storage</li>
-<li>transaction is very important in indexedDB<ul>
-<li>because the task will be interrupted easily (user close the page)</li>
-<li>can transaction have multiple operations?</li>
-</ul>
-</li>
-</ul>
-<h3 id="Running-webapp-offline"><a href="#Running-webapp-offline" class="headerlink" title="Running webapp offline"></a>Running webapp offline</h3><ul>
-<li>Use manifest file<ul>
-<li>let browser know to download the manifest file by modify the web page</li>
-<li>configure the web server to serve manifest files</li>
-<li>don’t cache the page with query string</li>
-<li>may turn off the caching for manifest files</li>
-<li>support &gt;= IE 10</li>
-<li>browser may request user’s permission to download the file</li>
-<li>update when user visit the page next time</li>
-<li>may need to clear browser cache when testing</li>
-<li>beware the space limit<ul>
-<li>mobile &lt;= 50MB</li>
-<li>desktop &lt;= 250MB</li>
-</ul>
-</li>
-<li><code>SETTINGS</code> only work in firefox</li>
-<li><code>FALLBACK</code> can be use with javascript to check browser is online or not</li>
-</ul>
-</li>
-<li>Trigger update<ul>
-<li>manifest cannot be cached</li>
-<li>manifest file need a new date (last-updated timestamp)</li>
-<li>New content in manifest<ul>
-<li>may have a line of comment to specific the version</li>
-</ul>
-</li>
-<li>Need to specific the file to download when online (cached file default not downloaded)</li>
-</ul>
-</li>
-<li>Traditional cache vs offline application (need more research)<ul>
-<li>controlled by cache-control headers and time limit vs controlled by manifest</li>
-</ul>
-</li>
-</ul>
-<h3 id="Server-sent-event"><a href="#Server-sent-event" class="headerlink" title="Server sent event"></a>Server sent event</h3><ul>
-<li>Server trigger the send data action to client</li>
-<li>one way communication</li>
-<li>IE does not support</li>
-<li>Difficult to handle in server side, need to check the web server framework support it or not</li>
-</ul>
-<h3 id="web-socket"><a href="#web-socket" class="headerlink" title="web socket"></a>web socket</h3><ul>
-<li>Two ways communication</li>
-<li>Computer network setting may block web socket<ul>
-<li>Proxy server (if any) may drop the socket connection</li>
-</ul>
-</li>
-<li>web socket server need to handle lots of complex stuff</li>
-</ul>
-<h3 id="Geolocation"><a href="#Geolocation" class="headerlink" title="Geolocation"></a>Geolocation</h3><ul>
-<li>It is not part of HTML5</li>
-<li>Require user permission</li>
-<li>may not accurate</li>
-<li>geolocation can help debugging</li>
-</ul>
-<h3 id="Web-worker"><a href="#Web-worker" class="headerlink" title="Web worker"></a>Web worker</h3><ul>
-<li>worker can only run code save in a separated file</li>
-<li>communicate with <code>postMessage()</code></li>
-<li>can we have multiple workers?</li>
-</ul>
-<h3 id="History-management"><a href="#History-management" class="headerlink" title="History management"></a>History management</h3><ul>
-<li>Sync url when updated the content with ajax</li>
-<li>Solve bookmarking the ajax page problem<ul>
-<li>The old solution is using hashbang URLs</li>
-</ul>
-</li>
-<li>Why give up hashbang solution<ul>
-<li>complex url</li>
-<li>inflexibility (cannot use hash)</li>
-<li>no SEO</li>
-<li>Cool URLs matter</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Audio-and-Video&quot;&gt;&lt;a href=&quot;#Audio-and-Video&quot; class=&quot;headerlink&quot; title=&quot;Audio and Video&quot;&gt;&lt;/a&gt;Audio and Video&lt;/h2&gt;&lt;p&gt;Internet become a place for entertainment from sharing academic research. Better supports on video and audio are introduced in HTML5&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Does not have any copy protect system, any one can download.&lt;/li&gt;
-&lt;li&gt;Digital rights management is developing in HTML5.1&lt;/li&gt;
-&lt;li&gt;current positioning of video (currentTime)&lt;/li&gt;
-&lt;li&gt;play speed (playbackRate)&lt;/li&gt;
-&lt;li&gt;download progress (seekable)&lt;/li&gt;
-&lt;li&gt;The book say no HTML5 only solution for web chat&lt;ul&gt;
-&lt;li&gt;How about web RTC?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;lazy loading&lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;preload&lt;/code&gt; attribute, but some old browser does not pay attention on it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;media group&lt;ul&gt;
-&lt;li&gt;sync different video and audio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;video subtitle&lt;ul&gt;
-&lt;li&gt;WebVTT,SRT, TTML&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;There are lots of other stuff to handle, better use video player library instead of building our own.&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
     
     
   </entry>
