@@ -3,24 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>npm | Coding Sunday</title>
+  <title>文集十六 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Just read the “Getting Started” section of npm docs.
-Update npm packagesWe can use npm outdated to check which package is outdated and npm update &amp;lt;package name&amp;gt; to update.
-VersioningThe versioni">
+  <meta name="description" content="Releasing Prettier 1.0好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。
+Sealing JavaScript Objects using Object.seal()Object.seal() is not making the object immutable, even no new proper">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm">
-<meta property="og:url" content="http://199911.github.io/diary/2017/01/08/npm/index.html">
+<meta property="og:title" content="文集十六">
+<meta property="og:url" content="http://199911.github.io/insight/2017/04/17/readings-16/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="Just read the “Getting Started” section of npm docs.
-Update npm packagesWe can use npm outdated to check which package is outdated and npm update &amp;lt;package name&amp;gt; to update.
-VersioningThe versioni">
-<meta property="og:updated_time" content="2017-01-08T09:44:51.000Z">
+<meta property="og:description" content="Releasing Prettier 1.0好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。
+Sealing JavaScript Objects using Object.seal()Object.seal() is not making the object immutable, even no new proper">
+<meta property="og:updated_time" content="2017-05-01T16:30:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="npm">
-<meta name="twitter:description" content="Just read the “Getting Started” section of npm docs.
-Update npm packagesWe can use npm outdated to check which package is outdated and npm update &amp;lt;package name&amp;gt; to update.
-VersioningThe versioni">
+<meta name="twitter:title" content="文集十六">
+<meta name="twitter:description" content="Releasing Prettier 1.0好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。
+Sealing JavaScript Objects using Object.seal()Object.seal() is not making the object immutable, even no new proper">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -67,14 +64,14 @@ VersioningThe versioni">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-npm" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-readings-16" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2017/01/08/npm/" class="article-date">
-  <time datetime="2017-01-07T16:00:00.000Z" itemprop="datePublished">2017-01-08</time>
+    <a href="/insight/2017/04/17/readings-16/" class="article-date">
+  <time datetime="2017-04-16T16:00:00.000Z" itemprop="datePublished">2017-04-17</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
   </div>
 
   </div>
@@ -85,7 +82,7 @@ VersioningThe versioni">
         
   
     <h1 class="article-title" itemprop="name">
-      npm
+      文集十六
     </h1>
   
 
@@ -93,23 +90,27 @@ VersioningThe versioni">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Just read the <a href="https://docs.npmjs.com/getting-started" target="_blank" rel="external">“Getting Started” section</a> of npm docs.</p>
-<h2 id="Update-npm-packages"><a href="#Update-npm-packages" class="headerlink" title="Update npm packages"></a>Update npm packages</h2><p>We can use <code>npm outdated</code> to check which package is outdated and <code>npm update &lt;package name&gt;</code> to update.</p>
-<h2 id="Versioning"><a href="#Versioning" class="headerlink" title="Versioning"></a>Versioning</h2><p>The versioning number look likes “<major release="">.<minor release="">.<patch release="">“<br>Say the current version is 1.0.0:</patch></minor></major></p>
+        <h2 id="Releasing-Prettier-1-0"><a href="#Releasing-Prettier-1-0" class="headerlink" title="Releasing Prettier 1.0"></a><a href="http://jlongster.com/prettier-1.0" target="_blank" rel="external">Releasing Prettier 1.0</a></h2><p>好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。</p>
+<h2 id="Sealing-JavaScript-Objects-using-Object-seal"><a href="#Sealing-JavaScript-Objects-using-Object-seal" class="headerlink" title="Sealing JavaScript Objects using Object.seal()"></a><a href="https://techshard.com/2017/04/16/sealing-javascript-objects-using-object-seal/" target="_blank" rel="external">Sealing JavaScript Objects using Object.seal()</a></h2><p><code>Object.seal()</code> is not making the object immutable, even no new properties can be added, properties can be updated.<br>We can use <code>Object.freeze()</code>, but notice the nested object inside is not frozen.</p>
+<h2 id="Debugging-Tips-and-Tricks"><a href="#Debugging-Tips-and-Tricks" class="headerlink" title="Debugging Tips and Tricks"></a><a href="https://css-tricks.com/debugging-tips-tricks/" target="_blank" rel="external">Debugging Tips and Tricks</a></h2><p>Very useful</p>
 <ul>
-<li>If a bug fix is publish, new version should be 1.0.1 (Patch release)</li>
-<li>If new features which don’t break existing features is publish, new version should be 1.1.0 (Minor release)</li>
-<li>If there is changes which break backward, new version should be 2.0.0 (Major release)</li>
+<li>Calling <code>debugger;</code> in code will pause the code execution</li>
+<li><code>console.dir()</code> can log and interactive list</li>
+<li>Responsive image linter: <a href="https://github.com/ausi/respimagelint" target="_blank" rel="external">https://github.com/ausi/respimagelint</a></li>
+<li>Accessibility extension: <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="external">https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd</a></li>
+<li>Dev tips: <a href="https://umaar.com/dev-tips/" target="_blank" rel="external">https://umaar.com/dev-tips/</a></li>
+<li>Mobile browser console: <a href="http://eruda.liriliri.io/" target="_blank" rel="external">http://eruda.liriliri.io/</a></li>
 </ul>
-<p>We can close our eyes if the update is minor or patch release. If it is Major release, we need to take extra cares.</p>
-<h2 id="Host-npm-package-with-github"><a href="#Host-npm-package-with-github" class="headerlink" title="Host npm package with github"></a>Host npm package with github</h2><p>It is possible to use github to host npm package. Not sure does it works with private github repo. <a href="http://stackoverflow.com/questions/16350673/depend-on-a-branch-or-tag-using-a-git-url-in-a-package-json" target="_blank" rel="external">REF</a></p>
+<h2 id="How-to-Safely-Enable-WordPress-SVG-Support"><a href="#How-to-Safely-Enable-WordPress-SVG-Support" class="headerlink" title="How to Safely Enable WordPress SVG Support"></a><a href="https://kinsta.com/blog/wordpress-svg/" target="_blank" rel="external">How to Safely Enable WordPress SVG Support</a></h2><p>Svg is an XML file, content need to be sanitized to prevent security problems.</p>
+<h2 id="Release-Notes-for-Safari-Technology-Preview-27"><a href="#Release-Notes-for-Safari-Technology-Preview-27" class="headerlink" title="Release Notes for Safari Technology Preview 27"></a><a href="https://webkit.org/blog/7497/release-notes-for-safari-technology-preview-27/" target="_blank" rel="external">Release Notes for Safari Technology Preview 27</a></h2><p>Unprefixed intrinsic sizing keyword, <code>max-content</code>, <code>min-content</code>, but this value does not support in IE. Still cannot be used in production</p>
+<h2 id="Between-the-Lines"><a href="#Between-the-Lines" class="headerlink" title="Between the Lines"></a><a href="https://css-tricks.com/between-the-lines/" target="_blank" rel="external">Between the Lines</a></h2><p>Use <code>calc()</code> with linear interpolation to make smooth responsive design. Very good effect if use with <code>rem</code></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2017/01/08/npm/" data-id="cixoh0wk70000ei654903th7r" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2017/04/17/readings-16/" data-id="cj26cd0ub0000e465vdljybth" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2017/01/08/npm/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/insight/2017/04/17/readings-16/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -118,19 +119,10 @@ VersioningThe versioni">
     
 <nav id="article-nav">
   
-    <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          &quot;CSS: The Definitive Guide 3rd Edition&quot; part 1
-        
-      </div>
-    </a>
   
-  
-    <a href="/diary/2016/12/05/how-to-fallback-to-different-CDN/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/insight/2017/04/16/readings-15/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">How to fallback CSS file to different CDN</div>
+      <div class="article-nav-title">文集十五</div>
     </a>
   
 </nav>
@@ -238,7 +230,7 @@ VersioningThe versioni">
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/diary/2017/01/08/npm/';
+  var disqus_url = 'http://199911.github.io/insight/2017/04/17/readings-16/';
   
   (function(){
     var dsq = document.createElement('script');

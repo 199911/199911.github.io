@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-04-16T05:01:03.000Z</updated>
+  <updated>2017-05-01T16:30:01.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文集十六</title>
+    <link href="http://199911.github.io/insight/2017/04/17/readings-16/"/>
+    <id>http://199911.github.io/insight/2017/04/17/readings-16/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-05-01T16:30:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Releasing-Prettier-1-0"><a href="#Releasing-Prettier-1-0" class="headerlink" title="Releasing Prettier 1.0"></a><a href="http://jlongster.com/prettier-1.0" target="_blank" rel="external">Releasing Prettier 1.0</a></h2><p>好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。</p>
+<h2 id="Sealing-JavaScript-Objects-using-Object-seal"><a href="#Sealing-JavaScript-Objects-using-Object-seal" class="headerlink" title="Sealing JavaScript Objects using Object.seal()"></a><a href="https://techshard.com/2017/04/16/sealing-javascript-objects-using-object-seal/" target="_blank" rel="external">Sealing JavaScript Objects using Object.seal()</a></h2><p><code>Object.seal()</code> is not making the object immutable, even no new properties can be added, properties can be updated.<br>We can use <code>Object.freeze()</code>, but notice the nested object inside is not frozen.</p>
+<h2 id="Debugging-Tips-and-Tricks"><a href="#Debugging-Tips-and-Tricks" class="headerlink" title="Debugging Tips and Tricks"></a><a href="https://css-tricks.com/debugging-tips-tricks/" target="_blank" rel="external">Debugging Tips and Tricks</a></h2><p>Very useful</p>
+<ul>
+<li>Calling <code>debugger;</code> in code will pause the code execution</li>
+<li><code>console.dir()</code> can log and interactive list</li>
+<li>Responsive image linter: <a href="https://github.com/ausi/respimagelint" target="_blank" rel="external">https://github.com/ausi/respimagelint</a></li>
+<li>Accessibility extension: <a href="https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd" target="_blank" rel="external">https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd</a></li>
+<li>Dev tips: <a href="https://umaar.com/dev-tips/" target="_blank" rel="external">https://umaar.com/dev-tips/</a></li>
+<li>Mobile browser console: <a href="http://eruda.liriliri.io/" target="_blank" rel="external">http://eruda.liriliri.io/</a></li>
+</ul>
+<h2 id="How-to-Safely-Enable-WordPress-SVG-Support"><a href="#How-to-Safely-Enable-WordPress-SVG-Support" class="headerlink" title="How to Safely Enable WordPress SVG Support"></a><a href="https://kinsta.com/blog/wordpress-svg/" target="_blank" rel="external">How to Safely Enable WordPress SVG Support</a></h2><p>Svg is an XML file, content need to be sanitized to prevent security problems.</p>
+<h2 id="Release-Notes-for-Safari-Technology-Preview-27"><a href="#Release-Notes-for-Safari-Technology-Preview-27" class="headerlink" title="Release Notes for Safari Technology Preview 27"></a><a href="https://webkit.org/blog/7497/release-notes-for-safari-technology-preview-27/" target="_blank" rel="external">Release Notes for Safari Technology Preview 27</a></h2><p>Unprefixed intrinsic sizing keyword, <code>max-content</code>, <code>min-content</code>, but this value does not support in IE. Still cannot be used in production</p>
+<h2 id="Between-the-Lines"><a href="#Between-the-Lines" class="headerlink" title="Between the Lines"></a><a href="https://css-tricks.com/between-the-lines/" target="_blank" rel="external">Between the Lines</a></h2><p>Use <code>calc()</code> with linear interpolation to make smooth responsive design. Very good effect if use with <code>rem</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Releasing-Prettier-1-0&quot;&gt;&lt;a href=&quot;#Releasing-Prettier-1-0&quot; class=&quot;headerlink&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jlon
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>文集十五</title>
@@ -2313,52 +2347,6 @@
     </summary>
     
       <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>How to pick a framework?</title>
-    <link href="http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/"/>
-    <id>http://199911.github.io/diary/2016/11/02/how-to-picking-a-library/</id>
-    <published>2016-11-01T16:00:00.000Z</published>
-    <updated>2016-11-02T15:28:11.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>I am working on building an auto-scaling docker cluster for our testing environment. I have no idea on the machine cluster, auto-scaling api and deployment framework, but I have to make decision on which framework to use and build the system. It is a challenge for me. There are lots of failure and lots of learning.</p>
-<a id="more"></a>
-<h2 id="Failure-one-Know-the-feature-but-does-not-understand-how-they-solve-the-problem"><a href="#Failure-one-Know-the-feature-but-does-not-understand-how-they-solve-the-problem" class="headerlink" title="Failure one: Know the feature, but does not understand how they solve the problem."></a>Failure one: Know the feature, but does not understand how they solve the problem.</h2><p>Schedule is tight, I don’t have time to learn everything from zero. I start from reading article comparing ECS, kubernetes and mesos, after skiming through the introduction in their official pages. But start fast does not mean good progress, I cannot make decision after reading several articles, because I don’t know which feature is important and which is matter to me.</p>
-<p>At that time, I want to get hands on experience so I can understand the framework in a better way. These will take more time on learning unrelated stuff, such as setting up and configuring the framework. In the worst case, we may found the framework we spent lots of time on it does not suit our need!</p>
-<p>It will be great if we understand how the framework works without trying it. It seems impossible. But if we can focus on testing the feature we need, we already save lots of effort. To do this, we must have a good understanding on the problems framework going to use. We don’t need to understand every details, but at least having an overview of the problems.</p>
-<p>A good framework solve a problem in an easy way. To pick a framework, we must understand the problems and how the framework solve them.</p>
-<h2 id="Failure-two-Without-refine-the-requirement"><a href="#Failure-two-Without-refine-the-requirement" class="headerlink" title="Failure two: Without refine the requirement"></a>Failure two: Without refine the requirement</h2><p>There is no silver bullet. There does not exist a single framework good at solving all kinds of problems. Every framework have their feature and design. It is really difficult to compare them, as the pros and cons are difficult to quantize the pros and cons of the features.</p>
-<p>To find out the best framework which match our need, we need a marking scheme. The marking scheme can be a list of requirement.</p>
-<p>Listing requirements is a really simple step, we always think we have know what we need, we understand the problem we have to solve. Write down the requirement is often skipped as it is too simple. But in most case, it is not as simple as you think.</p>
-<p>No matter how simple the problem is, never skip the step writing down the requirement. Read every single words in your requirement. Think carefully to clarify every ambiguous word in the requirement. Evil is in the detail, every ambiguity mislead you to the wrong decision.</p>
-<h2 id="Failure-three-Dig-too-deep-into-the-API-which-most-of-them-are-not-useful"><a href="#Failure-three-Dig-too-deep-into-the-API-which-most-of-them-are-not-useful" class="headerlink" title="Failure three: Dig too deep into the API ( which most of them are not useful )"></a>Failure three: Dig too deep into the API ( which most of them are not useful )</h2><p>Understanding what feature does a it provided is an important step when picking a framework, but reading the API documentation is not a good way to do it.</p>
-<p>I read the ECS API documentation and understand how to use the service. But at the end, I still miss some APIs I need. Even I read the APIs, I still don’t know how to use it, because I cannot remember every details important to me. The time spent on reading the API documentation is kind of wasted, because I have to read it again after I understand every detail of the problem I am going to solve.</p>
-<h2 id="Workflow-on-choosing-a-suitable-framework"><a href="#Workflow-on-choosing-a-suitable-framework" class="headerlink" title="Workflow on choosing a suitable framework"></a>Workflow on choosing a suitable framework</h2><h3 id="Step-1-Understand-the-problem"><a href="#Step-1-Understand-the-problem" class="headerlink" title="Step 1. Understand the problem"></a>Step 1. Understand the problem</h3><p>This is the most important step, we have to make sure we understanding the problem completely. Any ambiguous will lead us to make a wrong decision later. When we discover the mistake during implementation, the effort to fix it is doubled or even more.</p>
-<p>To understand a new problem, I suggest</p>
-<ul>
-<li>Learn the related knowledge about this kind of problem</li>
-<li>Search how others break it down into smaller problems</li>
-<li>Search how others solve the problems<br>These help use to understand the structure of the problems, give us some direction to learn the frameworks.</li>
-</ul>
-<h3 id="Step-2-List-the-use-cases"><a href="#Step-2-List-the-use-cases" class="headerlink" title="Step 2. List the use cases"></a>Step 2. List the use cases</h3><p>This step is important for us to understand the requirements. Idea in our head is incomplete and inconsistent. Writing down the user stories can reveal the flaw of our idea. You may found the solution in your mind is missing some component to solve the problem. These missing puzzles will be a hint to pick a suitable framework.</p>
-<h3 id="Step-3-Draft-the-requirement-from-the-use-cases"><a href="#Step-3-Draft-the-requirement-from-the-use-cases" class="headerlink" title="Step 3. Draft the requirement from the use cases"></a>Step 3. Draft the requirement from the use cases</h3><p>After step 1 and 2, we have a well understanding of the problem. We should not miss any important points now. We can list the requirement from the use case easily. In this step, we should prioritize the requirements.</p>
-<p>There may have no framework to help us solve all problems easily, we may need to write some code or having some workaround. The priority help us to identify the importance of different features of framework, which help us a lot on quantizing the value of frameworks.</p>
-<h3 id="Step-4-Check-the-documentation-of-framework"><a href="#Step-4-Check-the-documentation-of-framework" class="headerlink" title="Step 4. Check the documentation of framework"></a>Step 4. Check the documentation of framework</h3><p>After we got marking scheme, we can start grading the framework. We can search the documentation and the API by our requirements. If the time is enough, don’t miss the APIs which are not directly related to your requirement. It may inspire us to have a more efficient solution or a simpler way to solve the problem.</p>
-<p>Tips: We can google the pros and cons of frameworks in this step, we should now able to understand the technical article and identify the article is related to our problem or not.</p>
-<h3 id="Step-5-Go-back-to-step-3-until-you-can-decide-which-framework-to-use"><a href="#Step-5-Go-back-to-step-3-until-you-can-decide-which-framework-to-use" class="headerlink" title="Step 5. Go back to step 3 until you can decide which framework to use"></a>Step 5. Go back to step 3 until you can decide which framework to use</h3><p>If you have any new idea, don’t hesitate to go back to step 3. The requirements may not perfect, we can update it when we find a better way to solve the problems. Repeating the steps of requirement refinement and framework research can give us more confidence on our decision, also lower the chance we missed something during planning.</p>
-<h3 id="Step-6-Work-on-the-technical-specification-and-then-implement-the-solution"><a href="#Step-6-Work-on-the-technical-specification-and-then-implement-the-solution" class="headerlink" title="Step 6. Work on the technical specification and then implement the solution"></a>Step 6. Work on the technical specification and then implement the solution</h3><p>After the research, we understand our problems and tools. We know what feature is going to be implement, which API we are going to use. We can predict behavior of the system implemented from user stories. In this stage, there should be no big surprise.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;I am working on building an auto-scaling docker cluster for our testing environment. I have no idea on the machine cluster, auto-scaling api and deployment framework, but I have to make decision on which framework to use and build the system. It is a challenge for me. There are lots of failure and lots of learning.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
     
     
   </entry>
