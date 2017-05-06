@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>簡評三 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="更轻量的 View Controllers文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。
+MVVM 介绍VM stand for View Model. The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="簡評三">
+<meta property="og:url" content="http://199911.github.io/insight/2016/07/02/commentaries-3/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="更轻量的 View Controllers文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。
+MVVM 介绍VM stand for View Model. The">
+<meta property="og:updated_time" content="2017-05-06T09:39:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="簡評三">
+<meta name="twitter:description" content="更轻量的 View Controllers文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。
+MVVM 介绍VM stand for View Model. The">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-commentaries-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/02/commentaries-3/" class="article-date">
+  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      簡評三
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更轻量的-View-Controllers"><a href="#更轻量的-View-Controllers" class="headerlink" title="更轻量的 View Controllers"></a><a href="http://objccn.io/issue-1-1/" target="_blank" rel="external">更轻量的 View Controllers</a></h2><p>文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。</p>
+<h2 id="MVVM-介绍"><a href="#MVVM-介绍" class="headerlink" title="MVVM 介绍"></a><a href="http://objccn.io/issue-13-1/" target="_blank" rel="external">MVVM 介绍</a></h2><p>VM stand for View Model. The idea is to improve MVC by adding a layer (View Model) between Controller and Model.<br>View Model handles all presnetation logic, such as format data in Model for View. In MVC, we put the data formating code in Controller. MVVM make the controller slimmer.</p>
+<p>We should put all code which cannot be reused in Controller. I thought data format code usually is not reusabile, it makes sense to put the logic in Controller. When the system grow and become more complex, we can apply MVVM to break down the controller is small pieces. So the code base will be cleaner.</p>
+<p>Pros of MVVM:</p>
+<ul>
+<li>easy to migrate from MVC by adding view models<ul>
+<li>we can migrate progressively</li>
+</ul>
+</li>
+<li>view model is testable<ul>
+<li>in most cases, controller is not worth to write automated test</li>
+</ul>
+</li>
+<li>easier to bind logic, as controller is smaller</li>
+</ul>
+<p>I have no experience on MVVM. I need to find some example to support my thought</p>
+<a id="more"></a>
+<h2 id="子类"><a href="#子类" class="headerlink" title="子类"></a><a href="http://objccn.io/issue-13-4/" target="_blank" rel="external">子类</a></h2><p>If two class have few common method, we should not use sub-class pattern. If two class have the same interface, but different implementation, there are better design pattern than sub-class. In weak typing language, we can use duck typing directly.</p>
+<p>Objective C is a strong typing language. The article provide 4 design patterns:</p>
+<h3 id="Delegate"><a href="#Delegate" class="headerlink" title="Delegate"></a>Delegate</h3><p>A delegate object is injected, which is a specific implementation of the method. What we need to do is only keep the same function interface.</p>
+<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>We provide an interface to let user configurate the implementation. It is perfect for the language with first class function. We only need to pass the implementation, instead of implementation lots of sub class.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// Suppose we have a class &quot;MessageSender&quot; to send a message to different channel</div><div class="line">var sender = new MessageSender();</div><div class="line">// We don&apos;t need to create a set of subclass &quot;SlackSender&quot;, &quot;MessagerSender&quot; and &quot;WhatsAppSender&quot;</div><div class="line">// We only need to pass the implementation to the object like this:</div><div class="line">sender.config(function sendToSlack()&#123;</div><div class="line">    ...</div><div class="line">&#125;)</div><div class="line">sender.config(function sendToMessager()&#123;</div><div class="line">    ...</div><div class="line">&#125;)</div><div class="line">sender.config(function sendToWhatsApp()&#123;</div><div class="line">    ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="Categories-and-Combinations"><a href="#Categories-and-Combinations" class="headerlink" title="Categories and Combinations"></a>Categories and Combinations</h3><p>I think these two patterns are specific for Objective C. In most of the modern language, we have duck typing. We can replace these pattern with duck typing.</p>
+<h2 id="Objective-C之优雅的命名"><a href="#Objective-C之优雅的命名" class="headerlink" title="Objective-C之优雅的命名"></a><a href="http://blog.xcodev.com/posts/objective-c-naming/" target="_blank" rel="external">Objective-C之优雅的命名</a></h2><p>It give some guideline on naming functions and variables.</p>
+<ul>
+<li>No short form unless it is common term<ul>
+<li>URL, HTTP is acceptable</li>
+<li>Need to have a consensus on “Common Terms” with in a team</li>
+</ul>
+</li>
+<li>Use <code>Will</code>, <code>Did</code> and <code>Should</code> prefix for naming function with specific purpose<ul>
+<li><code>Will</code> is the hook run before some action, such as <code>WillSendMessage = function(){...}</code>.</li>
+<li><code>Did</code> is the hook run after some action, such as <code>DidSendMessage = function(){...}</code>.</li>
+<li><code>Should</code> determine whether some action should be perform or not. It always return a boolean. Such as <code>ShouldSendMessage = function(context){...}</code></li>
+</ul>
+</li>
+<li>Put data description before data type<ul>
+<li><code>titleLabel</code> is better than <code>labelTitle</code></li>
+</ul>
+</li>
+</ul>
+<p>I don’t argee with the <code>Get</code> function prefix part outside the context of Objective C.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Class foo &#123;</div><div class="line">    function get_value($query, &amp;$value)&#123;</div><div class="line">        ...</div><div class="line">        $value = &quot;some value&quot;;</div><div class="line">        return $is_success;</div><div class="line">    &#125;</div><div class="line">    function value()&#123;</div><div class="line">        ...</div><div class="line">        return &quot;some value&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p><code>get_value()</code> put the return value into input parameter by reference. <code>value()</code> return the value directly.<br>There are three drawbacks:</p>
+<ul>
+<li><code>get_value</code> have 2 entry point<ul>
+<li>Try to avoid function’s “side effect” by avoid using pass by reference</li>
+<li>Function should return value using <code>return</code>, it make the code easier to understand</li>
+<li>If we want to detect error, we should use <code>throw</code> instead of <code>return</code> some falsy value.</li>
+</ul>
+</li>
+<li>It is confusing to determine <code>value</code> is a function or object field<ul>
+<li>This may be ok for Objective C, as function calling and data accessing have different syntax<br>I prefer to use <code>get_value()</code> for object function and <code>value</code> for object data.</li>
+</ul>
+</li>
+</ul>
+<h2 id="iOS-APP-架构漫谈"><a href="#iOS-APP-架构漫谈" class="headerlink" title="iOS APP 架构漫谈"></a><a href="http://studentdeng.github.io/blog/2014/08/29/ios-architecture/" target="_blank" rel="external">iOS APP 架构漫谈</a></h2><p>“How to manage the information flow” is the problem front-end architecture pattern want to solve. I can see the shawdon of MVC and redux from the examples.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/02/commentaries-3/" data-id="cj2d7myok000lw265h8al0dzp" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/02/commentaries-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/insight/2016/07/03/commentaries-4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          簡評四
+        
+      </div>
+    </a>
+  
+  
+    <a href="/insight/2016/06/29/commentaries-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">簡評二</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Insight/">Insight</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Rust/">Rust</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/book/2017/05/06/book-review-1/">讀後感一</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/04/17/commentaries-17/">簡評十六</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/04/17/commentaries-16/">簡評十六</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/04/16/commentaries-15/">簡評十五</a>
+          </li>
+        
+          <li>
+            <a href="/insight/2017/03/26/commentaries-14/">簡評十四</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/insight/2016/07/02/commentaries-3/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
