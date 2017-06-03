@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-05-06T11:53:03.000Z</updated>
+  <updated>2017-06-03T10:04:10.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,219 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>讀後感三</title>
+    <link href="http://199911.github.io/book/2017/06/03/book-review-3/"/>
+    <id>http://199911.github.io/book/2017/06/03/book-review-3/</id>
+    <published>2017-06-02T16:00:00.000Z</published>
+    <updated>2017-06-03T10:04:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="反脆弱"><a href="#反脆弱" class="headerlink" title="反脆弱"></a>反脆弱</h1><ul>
+<li>重覆嘅生活會帶來慢性壓力</li>
+<li>系統個體脆弱，可以為成個系統帶來反脆弱嘅特性<ul>
+<li>因為其他人從錯誤中學習，為成個系統帶黎進步</li>
+<li>重點在錯誤要受控，不能毀滅成個系統</li>
+</ul>
+</li>
+<li>不要對小資訊過份敏感</li>
+<li>書中認為大量資訊會令人受到雜訊影響，做出錯誤決定<ul>
+<li>我認為只要用統計學嘅方法就可以過濾雜訊</li>
+</ul>
+</li>
+<li>誤將觸媒當成起因<ul>
+<li>研究邊一條草壓死駱駝係冇用，因為重點唔係條草到</li>
+<li>將重點放係如何接受風險，唔係預測風險</li>
+</ul>
+</li>
+<li>有脆弱性嘅系統，好易因為一次錯誤而令你個嘅optimatization賺嘅野冇曬</li>
+<li>係好多領域，中庸之道唔係最好選擇<ul>
+<li>同時投資2個極端更安全</li>
+</ul>
+</li>
+<li>選擇權係反脆弱重要嘅一環</li>
+<li>選擇權多，需要嘅知識比較少</li>
+<li>作者認為選擇權比知識重要</li>
+<li>「整件事需要完全不費吹灰之力，才值得去做。」<ul>
+<li>E個話有D意思，係擴闊領域果時好有用，因為係以最少effort學到最多野</li>
+<li>但係專精一件事上，難免要難花費唔少精神先可以有少少成果</li>
+</ul>
+</li>
+<li>有時候唔應該太過執著理論同原因，跟據現實嘅feedback，直接tune個策略更加有用<ul>
+<li>理論唔係完全冇用，可以當做一個abstraction，以誤差做代價去簡化事情</li>
+</ul>
+</li>
+<li>人跟據脆弱性，易唔係機率做決定<ul>
+<li>特別係當其中一個帶黎嘅後果遠大於另一面嘅時候</li>
+<li>某一D情況下，跟據expected value去做決定係違反人性</li>
+</ul>
+</li>
+<li>電子交易脆弱，因為所有系統用類似嘅algo，一有錯誤會propagate出去</li>
+<li>估計脆弱性，要考慮假設錯誤對系統嘅影響</li>
+<li>有D咩唔好做同要做D咩一樣重要<ul>
+<li>要為自己冇做嘅事驕傲</li>
+</ul>
+</li>
+<li>舊技術唔一定比新技術差，因為未有足夠嘅時間去淘汰較差嘅新技術<ul>
+<li>要留意新舊技術嘅共通點，唔好單單睇佢地嘅差異</li>
+</ul>
+</li>
+</ul>
+<h1 id="Digital-design-theory-Readings-from-the-field"><a href="#Digital-design-theory-Readings-from-the-field" class="headerlink" title="Digital design theory - Readings from the field"></a>Digital design theory - Readings from the field</h1><ul>
+<li>集合左1960到易家嘅一D designer寫嘅文章</li>
+<li>睇到電腦出現對design industry嘅影響</li>
+<li>1960 - 1970<ul>
+<li>電腦岩岩出現。Designer開始提出要standardize design，利用電腦去改進</li>
+</ul>
+</li>
+<li>1970 - 1980<ul>
+<li>電腦開始普及，設計唔再俾大公司壟斷</li>
+<li>開始提出Designer要識用computer science，唔係單單只係design。電腦係新一代designer唔可以缺少嘅工具</li>
+<li>Mac出現，graphical computer令到電腦唔再單單係一樣工具，己經係一個medium。Designer 開始要design電腦show出來嘅野，唔單單係用電腦去整product，開始有UI/UX 嘅concept出現</li>
+</ul>
+</li>
+<li>2000 ~ Present<ul>
+<li>開始用biology嘅角度比轉網絡，例如ecosystem,生態等</li>
+<li>網絡開始轉變，由以往pubisher到custom嘅單向資訊傳輸變成用戶間雙向嘅interactive</li>
+<li>Design嘅心態轉變，focus係用戶點樣interact</li>
+</ul>
+</li>
+<li>文中提到一間叫LettError嘅design公司，佢地有一個font嘅得意idea<ul>
+<li>隻font係dynamic，會收集唔同嘅數據，跟據唔同嘅環境轉變。例如天氣潮濕可以整濛隻字，好以化開咁。又可以嘅據唔同嘅背景去微調D字，扮D字print係唔同紙質嘅效果</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;反脆弱&quot;&gt;&lt;a href=&quot;#反脆弱&quot; class=&quot;headerlink&quot; title=&quot;反脆弱&quot;&gt;&lt;/a&gt;反脆弱&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;重覆嘅生活會帶來慢性壓力&lt;/li&gt;
+&lt;li&gt;系統個體脆弱，可以為成個系統帶來反脆弱嘅特性&lt;ul&gt;
+&lt;li&gt;因為其他人從錯
+    
+    </summary>
+    
+      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>讀後感二</title>
+    <link href="http://199911.github.io/book/2017/05/27/book-review-2/"/>
+    <id>http://199911.github.io/book/2017/05/27/book-review-2/</id>
+    <published>2017-05-26T16:00:00.000Z</published>
+    <updated>2017-05-27T13:37:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一人一故事-新聞人的心聲細語"><a href="#一人一故事-新聞人的心聲細語" class="headerlink" title="一人一故事 新聞人的心聲細語"></a>一人一故事 新聞人的心聲細語</h2><p>記者嘅工作唔係一成不變，有好多唔同嘅挑戰。有唔少記者都感嘆自己做得唔夠，唔係就可以帶來多D改變。</p>
+<a id="more"></a>
+<h2 id="蘇菲的世界（下）"><a href="#蘇菲的世界（下）" class="headerlink" title="蘇菲的世界（下）"></a>蘇菲的世界（下）</h2><p>披住小說皮嘅哲學史Sum up，簡單介紹由古至今西方哲學思想</p>
+<ul>
+<li>洛克 (經驗主義)<ul>
+<li>事物分為能客觀測量嘅主要性質同只能主觀感受嘅次要性質</li>
+</ul>
+</li>
+<li>柏克萊 (經驗主義)<ul>
+<li>質疑物質嘅真實性</li>
+<li>人的感受只係出自於「靈」，並唔係真實存在</li>
+</ul>
+</li>
+<li>啟蒙運動<ul>
+<li>反抗權威</li>
+<li>理性主義</li>
+<li>文化上的樂觀態度</li>
+<li>回歸自然</li>
+<li>自然宗教<ul>
+<li>自然神論<ul>
+<li>神在創造世界後就唔再干涉</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>人權</li>
+</ul>
+</li>
+<li>康德<ul>
+<li>感官和理性互相影響</li>
+<li>實踐的設准<ul>
+<li>無法證明的假設，但為了實踐而假設為真</li>
+</ul>
+</li>
+<li>道德係天生，先於經驗，但並非基於理性</li>
+</ul>
+</li>
+<li>浪漫主義<ul>
+<li>普世浪漫主義<ul>
+<li>世界精神<ul>
+<li>世界為一個完整有機體</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>民族浪漫主義<ul>
+<li>重點在人民嘅歷史，語言同文化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>黑格爾<ul>
+<li>冇永恆的真理，哲學唯一可倚賴嘅固定點就係歷史</li>
+<li>理性係漸進式</li>
+<li>歷史嘅進程係「正反合」</li>
+<li>人並唔係絕對自由，受到生存嘅歷史環境影響</li>
+</ul>
+</li>
+<li>齊克果<ul>
+<li>反對黑格爾嘅觀點忽視左個人</li>
+<li>認為真理係個人的，係人所關心嘅事物</li>
+<li>人嘅存在有三個階段<ul>
+<li>美感階段</li>
+<li>道德階段</li>
+<li>宗教階段</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>馬克思<ul>
+<li>認為政治，哲學等上層構造基於物質，經濟等社會基礎</li>
+<li>每個歷史，必有階級鬥爭，只有革命先可以有改變</li>
+<li>職業係人重要嘅一部份</li>
+</ul>
+</li>
+<li>達爾文主義<ul>
+<li>演化論</li>
+</ul>
+</li>
+<li>佛洛伊德<ul>
+<li>人的行為唔一定出於理性，會受到本能影響</li>
+<li>影響超現實主義</li>
+</ul>
+</li>
+<li>存在主義<ul>
+<li>沙特<ul>
+<li>人要為自己嘅決定負責，係自由嘅詛咒</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>荒謬主義<ul>
+<li>以荒謬反諷，引起人對現實嘅反思</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一人一故事-新聞人的心聲細語&quot;&gt;&lt;a href=&quot;#一人一故事-新聞人的心聲細語&quot; class=&quot;headerlink&quot; title=&quot;一人一故事 新聞人的心聲細語&quot;&gt;&lt;/a&gt;一人一故事 新聞人的心聲細語&lt;/h2&gt;&lt;p&gt;記者嘅工作唔係一成不變，有好多唔同嘅挑戰。有唔少記者都感嘆自己做得唔夠，唔係就可以帶來多D改變。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>讀後感一</title>
@@ -131,14 +344,16 @@
   </entry>
   
   <entry>
-    <title>簡評十六</title>
+    <title>簡評十七</title>
     <link href="http://199911.github.io/insight/2017/04/17/commentaries-17/"/>
     <id>http://199911.github.io/insight/2017/04/17/commentaries-17/</id>
     <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-05-20T03:17:09.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
 <h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
+<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
+<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
 ]]></content>
     
     <summary type="html">
@@ -1880,348 +2095,6 @@
     </summary>
     
       <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;CSS - the missing manual 2nd edition&quot; CSS Advanced CSS</title>
-    <link href="http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/"/>
-    <id>http://199911.github.io/review/2016/11/24/CSS-missing-manual-4/</id>
-    <published>2016-11-23T16:00:00.000Z</published>
-    <updated>2016-11-23T16:43:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This chapter gives some hints on writing maintainable CSS and introduce SCSS.</p>
-<a id="more"></a>
-<h3 id="Organize-style"><a href="#Organize-style" class="headerlink" title="Organize style"></a>Organize style</h3><ul>
-<li>Class name<ul>
-<li>Name style by purpose, not appearance</li>
-<li>Don’t use name base on position<ul>
-<li>.leftSideBar</li>
-</ul>
-</li>
-<li>Avoid cryptic names</li>
-</ul>
-</li>
-<li>Don’t repeat yourself<ul>
-<li>I think it depends on context</li>
-</ul>
-</li>
-<li>Use multiple Class<ul>
-<li>Using partial in SCSS seems a better choice</li>
-</ul>
-</li>
-<li>Group related style<ul>
-<li>apply to related parts of a page</li>
-<li>with a related purpose</li>
-</ul>
-</li>
-<li>Separate groups by comment or put it in different style sheet<ul>
-<li><code>@import</code> will delay the rendering, use css pre processor instead</li>
-</ul>
-</li>
-</ul>
-<h3 id="Reset-CSS-vs-Normalize-CSS"><a href="#Reset-CSS-vs-Normalize-CSS" class="headerlink" title="Reset CSS vs Normalize CSS"></a>Reset CSS vs Normalize CSS</h3><p>Reset style means remove all browser CSS, normalize means unify the styles. For example, reset CSS will make headlines and paragraph the same size.</p>
-<p>Reset style:</p>
-<ul>
-<li>Remove padding and margins</li>
-<li>Apply consistent font sizes</li>
-<li>Set a consistent line height</li>
-<li>Improve table border and create consistent table cells</li>
-<li>Remove borders from linked images</li>
-<li>Set consistent list indents and bullet types</li>
-<li>Remove quote marks from quoted material</li>
-</ul>
-<h3 id="Using-Descendant-Selectors"><a href="#Using-Descendant-Selectors" class="headerlink" title="Using Descendant Selectors"></a>Using Descendant Selectors</h3><ul>
-<li>Limit the scope of CSS by descendant selectors and <code>&lt;div&gt;</code>.</li>
-<li>Add class to body to identify page type and layout<ul>
-<li>Just like a “namespace”</li>
-</ul>
-</li>
-</ul>
-<h2 id="OOCSS-vs-SMACSS"><a href="#OOCSS-vs-SMACSS" class="headerlink" title="OOCSS vs SMACSS"></a>OOCSS vs SMACSS</h2><p>Other approaches on organizing CSS</p>
-<ul>
-<li>http:// coding.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/</li>
-<li><a href="http://smacss.com" target="_blank" rel="external">http://smacss.com</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This chapter gives some hints on writing maintainable CSS and introduce SCSS.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;CSS - the missing manual 2nd edition&quot; CSS Page Layout</title>
-    <link href="http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/"/>
-    <id>http://199911.github.io/review/2016/11/20/CSS-missing-manual-3/</id>
-    <published>2016-11-19T16:00:00.000Z</published>
-    <updated>2016-11-20T06:32:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This chapter have enough images to help reader understand the layout. I highly recommend to learn layout by reading this chapter</p>
-<h3 id="Layout-type"><a href="#Layout-type" class="headerlink" title="Layout type"></a>Layout type</h3><ul>
-<li>Fixed width<ul>
-<li>The <code>width</code> value is a fixed numerical value</li>
-</ul>
-</li>
-<li>Fluid<ul>
-<li>The <code>width</code> is a percentage value</li>
-</ul>
-</li>
-<li>Responsive Web design (RWD)<ul>
-<li>The layout change with the screen size</li>
-<li>The layout for different screen can be “Fixed Width” and “Fluid”</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-<h3 id="Common-technique-for-css-layout"><a href="#Common-technique-for-css-layout" class="headerlink" title="Common technique for css layout"></a>Common technique for css layout</h3><ul>
-<li>float (for different section)</li>
-<li>absolute positioning</li>
-</ul>
-<h3 id="Why-mobile-first"><a href="#Why-mobile-first" class="headerlink" title="Why mobile first?"></a>Why mobile first?</h3><p>Limited screen size help us eliminate noise and focus on content</p>
-<h3 id="Workflow-on-design"><a href="#Workflow-on-design" class="headerlink" title="Workflow on design"></a>Workflow on design</h3><p>In short, design from the highest abstraction layer to the lowest.</p>
-<ol>
-<li>Identify the layout first<ul>
-<li>don’t spend too much time on graphic and detail</li>
-</ul>
-</li>
-<li>Identify different sections (boxes)<ul>
-<li>Notice that the HTML element will take up all width by default. The size of column should be determined in step 1.</li>
-</ul>
-</li>
-<li>Remember the background image</li>
-<li>Think about the implementation of layout</li>
-<li>Design the style of different element</li>
-<li>Determine the size of margins and padding</li>
-</ol>
-<h3 id="To-fix-items-inside-float-container-break-outside"><a href="#To-fix-items-inside-float-container-break-outside" class="headerlink" title="To fix items inside float container break outside"></a>To fix items inside float container break outside</h3><p>Four solutions:</p>
-<ul>
-<li>Add <code>clear: both;</code> element at the bottom inside the floating container</li>
-<li>Float the Item</li>
-<li>Add <code>overflow: hidden;</code><ul>
-<li>Notice that if element is absolute positioned, it will not show up. (It is hidden)</li>
-</ul>
-</li>
-<li>Use micro clear fix<ul>
-<li>Add <code>clear: both;</code> in pseudo element <code>::after</code></li>
-<li>Also <code>display: table;</code></li>
-<li>Bootstrap 3 use this technique</li>
-</ul>
-</li>
-</ul>
-<h3 id="Using-table-to-layout"><a href="#Using-table-to-layout" class="headerlink" title="Using table to layout"></a>Using table to layout</h3><p>We can use multicolumn in CSS 3 instead</p>
-<ul>
-<li>Pros<ul>
-<li>When you need to create columns with same height</li>
-</ul>
-</li>
-<li>Cons<ul>
-<li>Need to add html code</li>
-<li>difficult to change</li>
-<li>not work well in cellphone</li>
-</ul>
-</li>
-</ul>
-<h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ul>
-<li>height depends on content<ul>
-<li>difficult to create full height column<ul>
-<li>Use a wrapper to wrap the main content (should be long enough) with the columns</li>
-<li>and then add background img with the same width and repeat vertically as the column in wrapper</li>
-<li>the column have back ground , but actually it is background of the wrapper</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Float does not work with <code>position:fixed</code> or <code>position:absolute</code></li>
-</ul>
-<h3 id="Positioning-properties-left-right-top-and-bottom"><a href="#Positioning-properties-left-right-top-and-bottom" class="headerlink" title="Positioning properties (left, right, top and bottom)"></a>Positioning properties (left, right, top and bottom)</h3><ul>
-<li>Let browser calculate the size of element<ul>
-<li>Specify both left and right / top and bottom</li>
-<li>I cannot come up with use case<ul>
-<li>may be using <code>vh</code> and <code>vw</code> already serve most of our needs</li>
-<li><code>calc()</code> give us more flexibility</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Percentage values will not change the element’s size</li>
-</ul>
-<h3 id="Media-query"><a href="#Media-query" class="headerlink" title="Media query"></a>Media query</h3><p>Common usage:</p>
-<ul>
-<li>adjust column</li>
-<li>flexible width</li>
-<li>tighten up white space</li>
-<li>adjust font sizes</li>
-<li>change navigation menus<ul>
-<li>convert nav bar to dropdown in mobile device</li>
-</ul>
-</li>
-<li>hide content on handhold device</li>
-<li>use background image</li>
-</ul>
-<h2 id="Flexbox"><a href="#Flexbox" class="headerlink" title="Flexbox"></a>Flexbox</h2><h3 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h3><ul>
-<li><code>flex-direction</code><ul>
-<li>usually use ‘row’ in desktop and switch to ‘column’ in mobile</li>
-</ul>
-</li>
-<li><code>justify-content</code><ul>
-<li>if flex widths is used, justify-content have no effect</li>
-</ul>
-</li>
-<li><code>align-items</code><ul>
-<li>default value: <code>stretch</code></li>
-<li>align baseline<ul>
-<li>align the first line of text</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>align-content only works when</code><ul>
-<li>flex-wrap is wrap</li>
-<li>flex container must taller than the rows of flex items</li>
-<li>default value: <code>stretch</code></li>
-</ul>
-</li>
-<li><code>order</code><ul>
-<li>Solve the CSS negative margin to change the order (they want to put main content in HTML first for SEO)</li>
-</ul>
-</li>
-<li><code>flex</code><ul>
-<li>default values:<ul>
-<li>0 1 auto</li>
-<li><ul>
-<li>1 0% (if the first value is defined)</li>
-</ul>
-</li>
-<li>what if * = 0?</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Special-note"><a href="#Special-note" class="headerlink" title="Special note"></a>Special note</h3><ul>
-<li>flex containers and items are not block level element<ul>
-<li>Some properties don’t apply to them</li>
-</ul>
-</li>
-<li>flex items’ margins don’t collapse<ul>
-<li>can auto take up all space -&gt; push left / right</li>
-</ul>
-</li>
-<li>no-wrap + shrink 0 will make the item overflow<br>wrap will make the item drop (if sum of flex-basic &gt; container width)</li>
-</ul>
-<h3 id="Size-calculation"><a href="#Size-calculation" class="headerlink" title="Size calculation"></a>Size calculation</h3><ul>
-<li>space difference = absolute( container size - sum of flex-basic of all items )</li>
-<li>when flex container &gt; sum of minimum size of items<ul>
-<li>item’s size = (flex-basic) + (flex-grow/sum of flex-grow) * (space difference)</li>
-</ul>
-</li>
-<li>when flex container &lt; sum of minimum size of items<ul>
-<li>item’s size = (flex-basic) - (flex-grow/sum of flex-shrink) * (space difference)</li>
-</ul>
-</li>
-</ul>
-<h3 id="flex-basic-auto-and-flex-basic-content"><a href="#flex-basic-auto-and-flex-basic-content" class="headerlink" title="flex-basic: auto; and flex-basic: content;"></a><code>flex-basic: auto;</code> and <code>flex-basic: content;</code></h3><p>According to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis" target="_blank" rel="external">MDN</a>, <code>auto</code> can means “look at my width or height property” and “automatic sizing”.<br>At the end:</p>
-<ul>
-<li><code>auto</code> means “look at my width or height property”;</li>
-<li><code>content</code> keyword is introduced to trigger automatic sizing;</li>
-</ul>
-<h3 id="Jargons"><a href="#Jargons" class="headerlink" title="Jargons"></a>Jargons</h3><ul>
-<li>Float drops<ul>
-<li>When there are not enough space, the column will drops down below the other</li>
-<li>Solution: Use box-sizing to define the column size precisely</li>
-</ul>
-</li>
-<li>Frameset<ul>
-<li>fixed component in certain place</li>
-<li>keep important fixtures handy</li>
-<li>can implement with html frame</li>
-</ul>
-</li>
-<li>Breakpoint<ul>
-<li>are the screen size value which trigger style change</li>
-</ul>
-</li>
-<li>Flexible grid<ul>
-<li>Bootstrap 3’s grid system is an example</li>
-</ul>
-</li>
-</ul>
-<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ul>
-<li>Don’t add unnecessary div</li>
-<li>CSS built in grid layout<ul>
-<li>But it is not ready</li>
-</ul>
-</li>
-<li>There are lots of layout already, don’t need to start from zero</li>
-<li>Search engine limited the amount of html crawl, it rank the content near the beginning higher score.<ul>
-<li>I am not sure is it valid now</li>
-</ul>
-</li>
-<li>Background image cannot be outside the element</li>
-<li>CSS layout difficulty<ul>
-<li>Cannot fix the position and sizes, because user can change the screen size</li>
-</ul>
-</li>
-<li>Can use <code>media</code> attribute in link tag to determine which style sheet to download</li>
-<li>Drawback of fluid image: force user to download a bigger image</li>
-<li>Don’t add unit when the value is 0</li>
-</ul>
-<h3 id="To-read-list"><a href="#To-read-list" class="headerlink" title="To read list"></a>To read list</h3><ul>
-<li>flexbox usage<ul>
-<li><a href="https://philipwalton.github.io/solved-by-flexbox/" target="_blank" rel="external">https://philipwalton.github.io/solved-by-flexbox/</a></li>
-</ul>
-</li>
-<li>mobile first<ul>
-<li><a href="http://www.abookapart.com/products/mobile-first" target="_blank" rel="external">http://www.abookapart.com/products/mobile-first</a></li>
-<li><a href="https://www.sitepoint.com/making-case-mobile-first-designs/" target="_blank" rel="external">https://www.sitepoint.com/making-case-mobile-first-designs/</a></li>
-</ul>
-</li>
-<li>For a good explanation of why floated elements can break outside of their containing blocks<ul>
-<li>www.complexspiral.com/publications/containing-floats.</li>
-</ul>
-</li>
-<li>Create full height column (sidebar) with float<ul>
-<li>some other technique: <a href="http://css-tricks.com/fluid-width-equal-height-columns/" target="_blank" rel="external">http://css-tricks.com/fluid-width-equal-height-columns/</a></li>
-<li><a href="http://webdesign.tutsplus.com/tutorials/quick-tip-solving-the-equal-height-column-conundrum--cms-20403" target="_blank" rel="external">http://webdesign.tutsplus.com/tutorials/quick-tip-solving-the-equal-height-column-conundrum--cms-20403</a></li>
-</ul>
-</li>
-<li>Responsive image technique<ul>
-<li><a href="http://alistapart.com/article/responsive-images-in-practice" target="_blank" rel="external">http://alistapart.com/article/responsive-images-in-practice</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This chapter have enough images to help reader understand the layout. I highly recommend to learn layout by reading this chapter&lt;/p&gt;
-&lt;h3 id=&quot;Layout-type&quot;&gt;&lt;a href=&quot;#Layout-type&quot; class=&quot;headerlink&quot; title=&quot;Layout type&quot;&gt;&lt;/a&gt;Layout type&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Fixed width&lt;ul&gt;
-&lt;li&gt;The &lt;code&gt;width&lt;/code&gt; value is a fixed numerical value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Fluid&lt;ul&gt;
-&lt;li&gt;The &lt;code&gt;width&lt;/code&gt; is a percentage value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Responsive Web design (RWD)&lt;ul&gt;
-&lt;li&gt;The layout change with the screen size&lt;/li&gt;
-&lt;li&gt;The layout for different screen can be “Fixed Width” and “Fluid”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
     
     
   </entry>
