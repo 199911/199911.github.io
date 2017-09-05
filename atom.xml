@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-07-16T04:29:53.000Z</updated>
+  <updated>2017-09-05T15:33:23.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -16,11 +16,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Move-back-to-blogging</title>
+    <link href="http://199911.github.io/diary/2017/09/05/my-facebook-page/"/>
+    <id>http://199911.github.io/diary/2017/09/05/my-facebook-page/</id>
+    <published>2017-09-04T16:00:00.000Z</published>
+    <updated>2017-09-05T15:33:23.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>In the last two months, I create a facebook page and share technical article with my own comment<br>in Catonese. Trying to have more interaction with others, because it is very difficult to get<br>readers on my blog.</p>
+<p>After two month of trial, I decide to move back to blogging. Maintaining a facebook page is very<br>difficult, many post got less than 10 view. Number or read is even less. I don’t have much time to<br>maintain the page and acquire readers. Without enough number of readers, it is not likely to  get<br>feedback from others.</p>
+<a id="more"></a>
+<p>Besides facebook page, I also try to publish posts on Medium. My posts does not get lots of<br>attention, but I feel like it is the right way. I will try to get my post publish on some<br>publication with large amount of follower.</p>
+<p>To get feedback, may be it better to push articles to some experts. But I have to get the contact of<br>experts first…</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In the last two months, I create a facebook page and share technical article with my own comment&lt;br&gt;in Catonese. Trying to have more interaction with others, because it is very difficult to get&lt;br&gt;readers on my blog.&lt;/p&gt;
+&lt;p&gt;After two month of trial, I decide to move back to blogging. Maintaining a facebook page is very&lt;br&gt;difficult, many post got less than 10 view. Number or read is even less. I don’t have much time to&lt;br&gt;maintain the page and acquire readers. Without enough number of readers, it is not likely to  get&lt;br&gt;feedback from others.&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>讀後感四</title>
     <link href="http://199911.github.io/book/2017/07/15/book-review-4/"/>
     <id>http://199911.github.io/book/2017/07/15/book-review-4/</id>
     <published>2017-07-14T16:00:00.000Z</published>
-    <updated>2017-07-16T04:29:53.000Z</updated>
+    <updated>2017-09-05T15:33:42.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Declaring-a-breakdown"><a href="#Declaring-a-breakdown" class="headerlink" title="Declaring a breakdown"></a>Declaring a breakdown</h1><p>本書重新define一D觀念，去幫助人地創做未來。每個chapter都有一個叫generative practices嘅section，俾你係日常生活練習D新concept</p>
 <h2 id="Part-I-Getting-start"><a href="#Part-I-Getting-start" class="headerlink" title="Part I: Getting start"></a>Part I: Getting start</h2><h3 id="The-Centrality-of-Conversation"><a href="#The-Centrality-of-Conversation" class="headerlink" title="The Centrality of Conversation"></a>The Centrality of Conversation</h3><ul>
@@ -48,6 +74,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h3 id="Transparency"><a href="#Transparency" class="headerlink" title="Transparency"></a>Transparency</h3><ul>
 <li>What we see is we are looking for<ul>
 <li>Sounds like confirmation bias</li>
@@ -222,7 +249,32 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Declaring-a-breakdown&quot;&gt;&lt;a href=&quot;#Declaring-a-breakdown&quot; class=&quot;headerlink&quot; title=&quot;Declaring a breakdown&quot;&gt;&lt;/a&gt;Declaring a breakdown&lt;/
+      &lt;h1 id=&quot;Declaring-a-breakdown&quot;&gt;&lt;a href=&quot;#Declaring-a-breakdown&quot; class=&quot;headerlink&quot; title=&quot;Declaring a breakdown&quot;&gt;&lt;/a&gt;Declaring a breakdown&lt;/h1&gt;&lt;p&gt;本書重新define一D觀念，去幫助人地創做未來。每個chapter都有一個叫generative practices嘅section，俾你係日常生活練習D新concept&lt;/p&gt;
+&lt;h2 id=&quot;Part-I-Getting-start&quot;&gt;&lt;a href=&quot;#Part-I-Getting-start&quot; class=&quot;headerlink&quot; title=&quot;Part I: Getting start&quot;&gt;&lt;/a&gt;Part I: Getting start&lt;/h2&gt;&lt;h3 id=&quot;The-Centrality-of-Conversation&quot;&gt;&lt;a href=&quot;#The-Centrality-of-Conversation&quot; class=&quot;headerlink&quot; title=&quot;The Centrality of Conversation&quot;&gt;&lt;/a&gt;The Centrality of Conversation&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;What is conversation&lt;ul&gt;
+&lt;li&gt;create action, meaning, listening, moods and emotions and future&lt;/li&gt;
+&lt;li&gt;also include moods and body langage&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;3 types of conversation&lt;ul&gt;
+&lt;li&gt;generative: create action, outcomes of action, possibilities, commitments, identities, etc&lt;ul&gt;
+&lt;li&gt;It is the most important type of conversation in leadership&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;descriptive&lt;/li&gt;
+&lt;li&gt;speculative: intent to explore possibilities&lt;/li&gt;
+&lt;li&gt;active: create a mood for action and keep promise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Generative Practices&lt;ul&gt;
+&lt;li&gt;Aware ‘word spoken’ != ‘idea heard’ in daily conversation&lt;/li&gt;
+&lt;li&gt;Observe how one’s experience and culture affect ‘word heard’&lt;/li&gt;
+&lt;li&gt;Aware how conversation provoke emotions&lt;/li&gt;
+&lt;li&gt;Observe how conversation with emotion affect others&lt;/li&gt;
+&lt;li&gt;Observe how conversation create future&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -236,7 +288,7 @@
     <link href="http://199911.github.io/book/2017/06/03/book-review-3/"/>
     <id>http://199911.github.io/book/2017/06/03/book-review-3/</id>
     <published>2017-06-02T16:00:00.000Z</published>
-    <updated>2017-06-03T10:04:10.000Z</updated>
+    <updated>2017-09-05T15:33:51.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="反脆弱"><a href="#反脆弱" class="headerlink" title="反脆弱"></a>反脆弱</h1><ul>
 <li>重覆嘅生活會帶來慢性壓力</li>
@@ -288,6 +340,7 @@
 </ul>
 </li>
 </ul>
+<a id="more"></a>
 <h1 id="Digital-design-theory-Readings-from-the-field"><a href="#Digital-design-theory-Readings-from-the-field" class="headerlink" title="Digital design theory - Readings from the field"></a>Digital design theory - Readings from the field</h1><ul>
 <li>集合左1960到易家嘅一D designer寫嘅文章</li>
 <li>睇到電腦出現對design industry嘅影響</li>
@@ -319,7 +372,53 @@
       &lt;h1 id=&quot;反脆弱&quot;&gt;&lt;a href=&quot;#反脆弱&quot; class=&quot;headerlink&quot; title=&quot;反脆弱&quot;&gt;&lt;/a&gt;反脆弱&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;重覆嘅生活會帶來慢性壓力&lt;/li&gt;
 &lt;li&gt;系統個體脆弱，可以為成個系統帶來反脆弱嘅特性&lt;ul&gt;
-&lt;li&gt;因為其他人從錯
+&lt;li&gt;因為其他人從錯誤中學習，為成個系統帶黎進步&lt;/li&gt;
+&lt;li&gt;重點在錯誤要受控，不能毀滅成個系統&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不要對小資訊過份敏感&lt;/li&gt;
+&lt;li&gt;書中認為大量資訊會令人受到雜訊影響，做出錯誤決定&lt;ul&gt;
+&lt;li&gt;我認為只要用統計學嘅方法就可以過濾雜訊&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;誤將觸媒當成起因&lt;ul&gt;
+&lt;li&gt;研究邊一條草壓死駱駝係冇用，因為重點唔係條草到&lt;/li&gt;
+&lt;li&gt;將重點放係如何接受風險，唔係預測風險&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有脆弱性嘅系統，好易因為一次錯誤而令你個嘅optimatization賺嘅野冇曬&lt;/li&gt;
+&lt;li&gt;係好多領域，中庸之道唔係最好選擇&lt;ul&gt;
+&lt;li&gt;同時投資2個極端更安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;選擇權係反脆弱重要嘅一環&lt;/li&gt;
+&lt;li&gt;選擇權多，需要嘅知識比較少&lt;/li&gt;
+&lt;li&gt;作者認為選擇權比知識重要&lt;/li&gt;
+&lt;li&gt;「整件事需要完全不費吹灰之力，才值得去做。」&lt;ul&gt;
+&lt;li&gt;E個話有D意思，係擴闊領域果時好有用，因為係以最少effort學到最多野&lt;/li&gt;
+&lt;li&gt;但係專精一件事上，難免要難花費唔少精神先可以有少少成果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;有時候唔應該太過執著理論同原因，跟據現實嘅feedback，直接tune個策略更加有用&lt;ul&gt;
+&lt;li&gt;理論唔係完全冇用，可以當做一個abstraction，以誤差做代價去簡化事情&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;人跟據脆弱性，易唔係機率做決定&lt;ul&gt;
+&lt;li&gt;特別係當其中一個帶黎嘅後果遠大於另一面嘅時候&lt;/li&gt;
+&lt;li&gt;某一D情況下，跟據expected value去做決定係違反人性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;電子交易脆弱，因為所有系統用類似嘅algo，一有錯誤會propagate出去&lt;/li&gt;
+&lt;li&gt;估計脆弱性，要考慮假設錯誤對系統嘅影響&lt;/li&gt;
+&lt;li&gt;有D咩唔好做同要做D咩一樣重要&lt;ul&gt;
+&lt;li&gt;要為自己冇做嘅事驕傲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;舊技術唔一定比新技術差，因為未有足夠嘅時間去淘汰較差嘅新技術&lt;ul&gt;
+&lt;li&gt;要留意新舊技術嘅共通點，唔好單單睇佢地嘅差異&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -560,6 +659,30 @@
   </entry>
   
   <entry>
+    <title>簡評十七</title>
+    <link href="http://199911.github.io/insight/2017/04/17/commentaries-17/"/>
+    <id>http://199911.github.io/insight/2017/04/17/commentaries-17/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-05-20T03:17:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
+<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
+<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
+<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
+    
+    </summary>
+    
+      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>簡評十六</title>
     <link href="http://199911.github.io/insight/2017/04/17/commentaries-16/"/>
     <id>http://199911.github.io/insight/2017/04/17/commentaries-16/</id>
@@ -585,30 +708,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Releasing-Prettier-1-0&quot;&gt;&lt;a href=&quot;#Releasing-Prettier-1-0&quot; class=&quot;headerlink&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jlon
-    
-    </summary>
-    
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十七</title>
-    <link href="http://199911.github.io/insight/2017/04/17/commentaries-17/"/>
-    <id>http://199911.github.io/insight/2017/04/17/commentaries-17/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-05-20T03:17:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
-<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
-<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
-<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
     
     </summary>
     
@@ -2073,33 +2172,6 @@
     <summary type="html">
     
       &lt;p&gt;Just read the &lt;a href=&quot;https://docs.npmjs.com/getting-started&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;“Getting Started” section&lt;/a&gt; of npm docs.&lt;
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>How to fallback CSS file to different CDN</title>
-    <link href="http://199911.github.io/diary/2016/12/05/how-to-fallback-to-different-CDN/"/>
-    <id>http://199911.github.io/diary/2016/12/05/how-to-fallback-to-different-CDN/</id>
-    <published>2016-12-04T16:00:00.000Z</published>
-    <updated>2016-12-05T15:32:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>A user in UK report our site is broken. From the captured screen, it is easy to it is because CSS file fail to load. After testing using <a href="https://www.webpagetest.org/" target="_blank" rel="external">Webpage Test</a>, I found out the machine in London fail to get the CSS file from MAXCDN. After long comunication with the customer support of CDN and lots of black box remote testing, they confirmed it is some local network error. MaxCDN and I can do nothing but wait until ISP fix the network.</p>
-<p>I come up an idea, can we fallback to other CDN automatically if the current one is fail?</p>
-<a id="more"></a>
-<h2 id="Javascript-file-detection"><a href="#Javascript-file-detection" class="headerlink" title="Javascript file detection"></a>Javascript file detection</h2><p>Actually, it is very common in Javascript files. Many dependency management tools ,like require.js and yepnope.js, have built in CDN fallback feature for javascript. <a href="http://stackoverflow.com/questions/1014203/best-way-to-use-googles-hosted-jquery-but-fall-back-to-my-hosted-library-on-go" target="_blank" rel="external">The implementation is very simple</a>. For example, <code>!!window.jQuery</code> can be used to check jQuery is loaded or not.</p>
-<h2 id="CSS-file-detection-in-fallback-js"><a href="#CSS-file-detection-in-fallback-js" class="headerlink" title="CSS file detection in fallback.js"></a>CSS file detection in fallback.js</h2><p>CSS have nothing do with javascript, how can we detect the style is loaded or not? From the source code of <a href="https://github.com/dolox/fallback/blob/v1/fallback.js#L212" target="_blank" rel="external">fallback.js</a>, we can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheets" target="_blank" rel="external">style sheets web apis</a>. We can get every single rules in the styleSheets by javascript. In fallback.js, <code>selectorText</code> is used to detect the style sheet. Notices that it use exact string matching, for example, if you only have a rules <code>.css.is.loaded { display: none; }</code> and the checking of <code>.loaded</code> will be fail, because the value of <code>selectorText</code> is <code>.css.is.loaded</code></p>
-<h2 id="Style-Sheets-API-fallback"><a href="#Style-Sheets-API-fallback" class="headerlink" title="Style Sheets API fallback"></a>Style Sheets API fallback</h2><p><a href="http://caniuse.com/#search=stylesheets" target="_blank" rel="external">IE 11 and Edge 14 still not support style sheets api</a>, the fallback.js implementation does not works. In this <a href="http://eddmann.com/posts/providing-local-js-and-css-resources-for-cdn-fallbacks/" target="_blank" rel="external">article</a>, it suggests to have a string match which the background color style: <code>$(&#39;body&#39;).css(&#39;color&#39;) !== &#39;rgb(51, 51, 51)&#39;)</code>. It looks not very reliable, as the css need to have exactly the same format as <code>rgb(DD, DD, DD)</code>, I have check a few browser and the string format is exactly the same.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;A user in UK report our site is broken. From the captured screen, it is easy to it is because CSS file fail to load. After testing using &lt;a href=&quot;https://www.webpagetest.org/&quot;&gt;Webpage Test&lt;/a&gt;, I found out the machine in London fail to get the CSS file from MAXCDN. After long comunication with the customer support of CDN and lots of black box remote testing, they confirmed it is some local network error. MaxCDN and I can do nothing but wait until ISP fix the network.&lt;/p&gt;
-&lt;p&gt;I come up an idea, can we fallback to other CDN automatically if the current one is fail?&lt;/p&gt;
     
     </summary>
     
