@@ -59,6 +59,114 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-commentaries-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/07/02/commentaries-3/" class="article-date">
+  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/07/02/commentaries-3/">簡評三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更轻量的-View-Controllers"><a href="#更轻量的-View-Controllers" class="headerlink" title="更轻量的 View Controllers"></a><a href="http://objccn.io/issue-1-1/">更轻量的 View Controllers</a></h2><p>文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。</p>
+<h2 id="MVVM-介绍"><a href="#MVVM-介绍" class="headerlink" title="MVVM 介绍"></a><a href="http://objccn.io/issue-13-1/">MVVM 介绍</a></h2><p>VM stand for View Model. The idea is to improve MVC by adding a layer (View Model) between Controller and Model.<br>View Model handles all presnetation logic, such as format data in Model for View. In MVC, we put the data formating code in Controller. MVVM make the controller slimmer.</p>
+<p>We should put all code which cannot be reused in Controller. I thought data format code usually is not reusabile, it makes sense to put the logic in Controller. When the system grow and become more complex, we can apply MVVM to break down the controller is small pieces. So the code base will be cleaner.</p>
+<p>Pros of MVVM:</p>
+<ul>
+<li>easy to migrate from MVC by adding view models<ul>
+<li>we can migrate progressively</li>
+</ul>
+</li>
+<li>view model is testable<ul>
+<li>in most cases, controller is not worth to write automated test</li>
+</ul>
+</li>
+<li>easier to bind logic, as controller is smaller</li>
+</ul>
+<p>I have no experience on MVVM. I need to find some example to support my thought</p>
+        
+          <p class="article-more-link">
+            <a href="/insight/2016/07/02/commentaries-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/07/02/commentaries-3/" data-id="cj2d7myok000lw265h8al0dzp" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/07/02/commentaries-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/insight/2016/06/29/commentaries-2/" class="article-date">
+  <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Insight/">Insight</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/insight/2016/06/29/commentaries-2/">簡評二</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-flow"><a href="#git-flow" class="headerlink" title="git-flow"></a><a href="http://danielkummer.github.io/git-flow-cheatsheet/index.zh_TW.html" target="_blank" rel="external">git-flow</a></h2><p>提供一個git work flow 嘅abstraction，唔洗打一堆git command 先開到新branch。但係個design係俾每人fork一個repo嘅use case，到我地公司大家share 一個 repo個情況唔同，好似唔係幾岩用。</p>
+<h2 id="制作一个苦力"><a href="#制作一个苦力" class="headerlink" title="制作一个苦力"></a><a href="https://github.com/nixzhu/dev-blog/blob/master/2016-06-29-coolie.md" target="_blank" rel="external">制作一个苦力</a></h2><p>用swift寫一個JSON parse，想學寫compiler果時可以睇返。</p>
+<h2 id="MAC下常用软件推荐"><a href="#MAC下常用软件推荐" class="headerlink" title="MAC下常用软件推荐"></a><a href="http://miao.hu/2012/02/26/osx-exp-share/" target="_blank" rel="external">MAC下常用软件推荐</a></h2><p>一堆mac app。有用開Slack, GifGrabber(Giphy Capture), Dash, HomeBrew, iTerm2, Sublime Text 3, Seqel Pro 同 Caffeine。試用緊OmniFocus, Alfred, RescueTime 同 ClipMenu。</p>
+<h2 id="使用Vagrant練習環境佈署"><a href="#使用Vagrant練習環境佈署" class="headerlink" title="使用Vagrant練習環境佈署"></a><a href="http://gogojimmy.net/2013/05/26/vagrant-tutorial/" target="_blank" rel="external">使用Vagrant練習環境佈署</a></h2><p>個concept 同docker大同小異，可以簡單咁係development environment build infrastructure。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/insight/2016/06/29/commentaries-2/" data-id="cj2d7myoi000jw265eyl6c2gs" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/insight/2016/06/29/commentaries-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-objc-interface-design" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/06/26/objc-interface-design/" class="article-date">
@@ -203,61 +311,6 @@
 
 
   
-    <article id="post-high-output-management-summary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/16/high-output-management-summary/" class="article-date">
-  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="優化流程"><a href="#優化流程" class="headerlink" title="優化流程"></a>優化流程</h2><p>第一步係揾出bottleneck，bottleneck可能係：</p>
-<ul>
-<li>人員數目</li>
-<li>開發時間</li>
-<li>產品功能</li>
-<li>測試時間</li>
-<li>技術實現方案<br>之後可以針對問題去改善流程。</li>
-</ul>
-<h2 id="監察指標"><a href="#監察指標" class="headerlink" title="監察指標"></a>監察指標</h2><p>如果冇左監察，好難去揾出bottleneck係邊度。但原文冇詳細解釋。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/16/high-output-management-summary/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/16/high-output-management-summary/" data-id="ciph53q1c0000sp6551z4uugl" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/16/high-output-management-summary/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-tech-talk-key-points" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/06/16/tech-talk-key-points/" class="article-date">
@@ -354,14 +407,14 @@
 
 
   
-    <article id="post-learning-a-programming-language" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-high-output-management-summary" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/diary/2016/06/10/learning-a-programming-language/" class="article-date">
-  <time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished">2016-06-10</time>
+    <a href="/review/2016/06/16/high-output-management-summary/" class="article-date">
+  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+    <a class="article-category-link" href="/categories/Review/">Review</a>
   </div>
 
   </div>
@@ -372,7 +425,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/06/10/learning-a-programming-language/">Learning a programming language</a>
+      <a class="article-title" href="/review/2016/06/16/high-output-management-summary/">&quot;寫給程序員的管理入門課程 -《格鲁夫給經理人的第一課》&quot;感想</a>
     </h1>
   
 
@@ -380,18 +433,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.</p>
+        <h2 id="優化流程"><a href="#優化流程" class="headerlink" title="優化流程"></a>優化流程</h2><p>第一步係揾出bottleneck，bottleneck可能係：</p>
+<ul>
+<li>人員數目</li>
+<li>開發時間</li>
+<li>產品功能</li>
+<li>測試時間</li>
+<li>技術實現方案<br>之後可以針對問題去改善流程。</li>
+</ul>
+<h2 id="監察指標"><a href="#監察指標" class="headerlink" title="監察指標"></a>監察指標</h2><p>如果冇左監察，好難去揾出bottleneck係邊度。但原文冇詳細解釋。</p>
         
           <p class="article-more-link">
-            <a href="/diary/2016/06/10/learning-a-programming-language/#more">Read More</a>
+            <a href="/review/2016/06/16/high-output-management-summary/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/" data-id="cip8je3yv00006c65k17wlyg8" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/16/high-output-management-summary/" data-id="ciph53q1c0000sp6551z4uugl" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/2016/06/16/high-output-management-summary/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -450,14 +511,14 @@
 
 
   
-    <article id="post-optimizing-mongodb" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-learning-a-programming-language" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2016/06/09/optimizing-mongodb/" class="article-date">
-  <time datetime="2016-06-08T16:00:00.000Z" itemprop="datePublished">2016-06-09</time>
+    <a href="/diary/2016/06/10/learning-a-programming-language/" class="article-date">
+  <time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished">2016-06-10</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
   </div>
 
   </div>
@@ -468,7 +529,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/09/optimizing-mongodb/">Review of &quot;Optimizing MongoDB: Lessons Learned at Localytics&quot;</a>
+      <a class="article-title" href="/diary/2016/06/10/learning-a-programming-language/">Learning a programming language</a>
     </h1>
   
 
@@ -476,65 +537,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This article is talking about how to optimizing MongoDB. I don’t understand what it says becuase I am not familiar with MongoDB. It shows that optimizing is inevitably involve the implementation of an abstraction layer. It is hard to learn, but it is rewarding.</p>
+        <p>I realize I learn a programming language in an inefficient way. I can learn how to write code quickly, but it is difficult to write elegant code.</p>
         
           <p class="article-more-link">
-            <a href="/review/2016/06/09/optimizing-mongodb/#more">Read More</a>
+            <a href="/diary/2016/06/10/learning-a-programming-language/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/" data-id="cip8je3yv00006c65k17wlyg8" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-restapi-is-a-lie" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/06/restapi-is-a-lie/" class="article-date">
-  <time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/06/restapi-is-a-lie/">review of &quot;RESTful APIs, the big lie&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Someone think RESTful api is bad and give 5 points, but I think it does not make sense.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/06/restapi-is-a-lie/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -587,6 +601,14 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/09/30/ey-leave-500/">Elizabeth離開500 Startups</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/09/cangjie/">倉頡輸入法</a>
+          </li>
+        
+          <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
           </li>
         
@@ -596,14 +618,6 @@
         
           <li>
             <a href="/book/2017/06/03/book-review-3/">讀後感三</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/05/27/book-review-2/">讀後感二</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/05/06/book-review-1/">讀後感一</a>
           </li>
         
       </ul>

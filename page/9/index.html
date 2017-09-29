@@ -59,6 +59,132 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-how-much-quality-can-we-afford" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/02/how-much-quality-can-we-afford/" class="article-date">
+  <time datetime="2016-05-02T14:47:44.000Z" itemprop="datePublished">2016-05-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/02/how-much-quality-can-we-afford/">Review of &quot;How much quality can we afford?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Strive a balance between development speed and reusability.</p>
+<h2 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h2><p>I only pick the points I think it is correct here.</p>
+<ul>
+<li>The cost is development time</li>
+<li>Good quality mean<ul>
+<li>Free of bugs</li>
+<li>Few feature make for reusability</li>
+<li>Maintainable</li>
+<li>Knife through butter testing (Easy to test)</li>
+</ul>
+</li>
+<li>Minimal<ul>
+<li>No unuse feature</li>
+<li>No half baked ideas</li>
+</ul>
+</li>
+<li>Reusable code take more cost<ul>
+<li>About 3 times more, it mean we have to use it 4 times to recover the cost</li>
+</ul>
+</li>
+<li>Lean and Agile does not mean low quality</li>
+<li>Make defect prevention cheap by<ul>
+<li>Continuous integration</li>
+<li>Virgin install</li>
+<li>Test Driven Development</li>
+<li>Acceptance Test Driven Development</li>
+<li>Lightweight code-reviews</li>
+<li>Pair programming</li>
+<li>Static analysis tools </li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/02/how-much-quality-can-we-afford/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/02/how-much-quality-can-we-afford/" data-id="cio5y9xi100091365ttlcyz2y" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/02/how-much-quality-can-we-afford/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-chroot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/2016/04/23/chroot/" class="article-date">
+  <time datetime="2016-04-23T05:47:59.000Z" itemprop="datePublished">2016-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/diary/2016/04/23/chroot/">What is chroot jail?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Where-do-I-heard-about-chroot-jail"><a href="#Where-do-I-heard-about-chroot-jail" class="headerlink" title="Where do I heard about chroot jail?"></a>Where do I heard about chroot jail?</h2><p>I make a <a href="https://github.com/199911/git-on-slack" target="_blank" rel="external">slack command</a> to run git command on my EC2 server. So I can deploy by typing <code>git pull</code> in my own slack channel. When I share this on my facebook wall, Bill tell me there may be security problem. <code>git diff</code> can be used to read the content ouside the git repo, such as <code>git diff ./empty.txt /etc/passwd</code>. He suggest me to use chroot jail to protect my server.</p>
+<h2 id="What-is-chroot-jail"><a href="#What-is-chroot-jail" class="headerlink" title="What is chroot jail?"></a>What is chroot jail?</h2><p><code>chroot</code> is an system command to change the apparent directory of an environment. Application inside the environment have no access to the files and directories outside. The environment just like a jail, so it is called chroot jail.</p>
+<h2 id="Do-I-use-chroot-jail"><a href="#Do-I-use-chroot-jail" class="headerlink" title="Do I use chroot jail?"></a>Do I use chroot jail?</h2><p>No, because I have dockerized my slack command server. The docker container only have access to my git repos, but not system files. In worst case, hackers can only break my web server, but not my EC2.</p>
+<p>Also, there are <a href="https://web.archive.org/web/20160127150916/http://www.bpfh.net/simes/computing/chroot-break.html" target="_blank" rel="external">some ways</a> to break the jail. Using chroot has much more things to handle, so I sticky with docker.</p>
+<h2 id="Do-docker-using-chroot-jail"><a href="#Do-docker-using-chroot-jail" class="headerlink" title="Do docker using chroot jail?"></a>Do docker using chroot jail?</h2><p>Docker is using namespace instead of chroot jail.</p>
+<h2 id="How-does-namespace-different-from-chroot-jail"><a href="#How-does-namespace-different-from-chroot-jail" class="headerlink" title="How does namespace different from chroot jail?"></a>How does namespace different from chroot jail?</h2><p>According to <a href="https://www.quora.com/How-are-Linux-namespaces-different-from-the-chroot-environment" target="_blank" rel="external">this article</a>, namespace can isolate the whole system, while chroot can only isolate the file system. Namespace is a more complete and secure.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/2016/04/23/chroot/" data-id="cio5y9xho000413659zsonq15" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/2016/04/23/chroot/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-functional-utility" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/diary/2016/04/18/functional-utility/" class="article-date">
@@ -157,6 +283,14 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/09/30/ey-leave-500/">Elizabeth離開500 Startups</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/09/cangjie/">倉頡輸入法</a>
+          </li>
+        
+          <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
           </li>
         
@@ -166,14 +300,6 @@
         
           <li>
             <a href="/book/2017/06/03/book-review-3/">讀後感三</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/05/27/book-review-2/">讀後感二</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/05/06/book-review-1/">讀後感一</a>
           </li>
         
       </ul>
