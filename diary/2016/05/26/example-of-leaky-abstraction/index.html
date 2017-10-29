@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="Everytime we abstract a layer, some detail will be hidden. When there is some error or bug inside the abstraction layer, only the engineer understand the implementation of abstracted layer can fix it.">
-<meta property="og:updated_time" content="2016-06-04T03:08:42.000Z">
+<meta property="og:updated_time" content="2016-06-09T06:03:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Example of leaky abstraction">
 <meta name="twitter:description" content="Everytime we abstract a layer, some detail will be hidden. When there is some error or bug inside the abstraction layer, only the engineer understand the implementation of abstracted layer can fix it.">
@@ -46,6 +46,8 @@
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
         
       </nav>
       <nav id="sub-nav">
@@ -90,12 +92,12 @@
         <p>Everytime we abstract a layer, some detail will be hidden. When there is some error or bug inside the abstraction layer, only the engineer understand the implementation of abstracted layer can fix it.</p>
 <p>Leaky abstraction is a necessary evil, here is some of my own experience.</p>
 <h2 id="Github-API-and-npm-‘request’-module"><a href="#Github-API-and-npm-‘request’-module" class="headerlink" title="Github API and npm ‘request’ module"></a>Github API and npm ‘request’ module</h2><p>I use npm ‘request’ module to query pull request of a private repo. I use the correct authetication method, but still fail to get data from the API.</p>
-<p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</span><br><span class="line">  &apos;auth&apos;: &#123;</span><br><span class="line">    &apos;user&apos;: &apos;username&apos;,</span><br><span class="line">    &apos;pass&apos;: &apos;password&apos;,</span><br><span class="line">    &apos;sendImmediately&apos;: false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</div><div class="line">  &apos;auth&apos;: &#123;</div><div class="line">    &apos;user&apos;: &apos;username&apos;,</div><div class="line">    &apos;pass&apos;: &apos;password&apos;,</div><div class="line">    &apos;sendImmediately&apos;: false</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <a id="more"></a> 
 <h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><p>Set <code>sendImmediately</code> to <code>true</code>. </p>
 <p>If <code>sendImmediately</code> is <code>false</code>, the first will not have the authentication data. Only if the server reply a <code>401</code> response, another request with authentication data will be made. But Github API return <code>404</code> instead of <code>401</code> for the unauthenticated request, so it does not work.</p>
 <p>This bug can only be solved by the engineer who understand the <code>sendImmediately</code> option and the behaviour of Github API. By the way, unit test cannot catch this problem, as every individual parts are correct.</p>
-<h2 id="Passing-console-log-into-callback-does-not-work"><a href="#Passing-console-log-into-callback-does-not-work" class="headerlink" title="Passing console.log into callback does not work"></a>Passing <code>console.log</code> into callback does not work</h2><p>Sometime we want to test the return value of an asynchronus function, say <code>async(callback)</code>. We try to use <code>console.log</code> to echo the result directly. We may write some thing like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">async(console.log)</span><br></pre></td></tr></table></figure></p>
+<h2 id="Passing-console-log-into-callback-does-not-work"><a href="#Passing-console-log-into-callback-does-not-work" class="headerlink" title="Passing console.log into callback does not work"></a>Passing <code>console.log</code> into callback does not work</h2><p>Sometime we want to test the return value of an asynchronus function, say <code>async(callback)</code>. We try to use <code>console.log</code> to echo the result directly. We may write some thing like this<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">async(console.log)</div></pre></td></tr></table></figure></p>
 <p>We expect it will output the result of async function, but it print nothing.</p>
 <h3 id="Use-async-console-log-bind-console"><a href="#Use-async-console-log-bind-console" class="headerlink" title="Use async(console.log.bind(console))"></a>Use <code>async(console.log.bind(console))</code></h3><p>In the implementation of <code>console.log</code>, <code>this</code> is used. So when we pass the <code>log</code> function to other callback, the <code>console</code> scope is lost, so the function does not work. The solution is to <code>bind</code> the <code>console</code> to the function. Only the engineer understand the implementation of <code>console.log</code> and properties of javascript can understand this problem.</p>
 <h2 id="Call-for-example"><a href="#Call-for-example" class="headerlink" title="Call for example"></a>Call for example</h2><p>If you have similar experience, please put the problem and solution in the comment and share with us. :D</p>
@@ -103,7 +105,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="ciooiggey0000o465bof8q2j0" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="cj9clrinr000vqf653d1p5m7s" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -186,6 +188,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -199,10 +205,6 @@
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -228,6 +230,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

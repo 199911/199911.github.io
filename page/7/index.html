@@ -43,6 +43,8 @@
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
@@ -94,9 +96,200 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/" data-id="cip8je3yv00006c65k17wlyg8" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/" data-id="cj9clrio50016qf654bqepdha" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/06/10/learning-a-programming-language/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/rust/2016/06/10/day2/" class="article-date">
+  <time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished">2016-06-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Rust/">Rust</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/rust/2016/06/10/day2/">Rust - Day 2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Rust support pattern matching, it save programmer lots of effort and make the code elegant</p>
+<h2 id="Switch-case-and-Pattern-matching"><a href="#Switch-case-and-Pattern-matching" class="headerlink" title="Switch-case and Pattern matching"></a>Switch-case and Pattern matching</h2><p>Rust do not have “switch case” pattern, but we don’t need a long chain of “else if”. Rust using pattern matching instead.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">match ch &#123;</div><div class="line">    &apos;a&apos; =&gt; return 0,</div><div class="line">    &apos;b&apos; =&gt; return 1,</div><div class="line">    &apos;c&apos; =&gt; return 2,</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>It is good to skip the <code>break</code> in other language, but the advantage is not only saving keystrokes. </p>
+        
+          <p class="article-more-link">
+            <a href="/rust/2016/06/10/day2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/rust/2016/06/10/day2/" data-id="cj9clrise0050qf65ahe0xzjo" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/rust/2016/06/10/day2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-what-are-the-programming-mistakes-most-inexperienced-programmers-make" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" class="article-date">
+  <time datetime="2016-06-09T06:03:34.000Z" itemprop="datePublished">2016-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/">Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><h3 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer 1"></a>Answer 1</h3><ul>
+<li>Deploy experimental feature on Friday, it crashes the whole system<ul>
+<li>Never put yourself in a position to make mistake<ul>
+<li>TDD</li>
+</ul>
+</li>
+<li>Not a good idea to deploy big stuff on Friday</li>
+<li>Think about the risk before deploy</li>
+<li>Confirm after deploy asap</li>
+<li>Don’t be afraid to move fast and break things<ul>
+<li>Mistake make you grow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Short summary</p>
+<p>We did everything he mentioned besides TDD, just keep it as a reminder.</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" data-id="cj9clrisb004wqf659f91q920" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-how-much-quality-can-we-afford" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/09/how-much-quality-can-we-afford/" class="article-date">
+  <time datetime="2016-06-09T06:03:33.000Z" itemprop="datePublished">2016-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/09/how-much-quality-can-we-afford/">Review of &quot;How much quality can we afford?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Strive a balance between development speed and reusability.</p>
+<h2 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h2><p>I only pick the points I think it is correct here.</p>
+<ul>
+<li>The cost is development time</li>
+<li>Good quality mean<ul>
+<li>Free of bugs</li>
+<li>Few feature make for reusability</li>
+<li>Maintainable</li>
+<li>Knife through butter testing (Easy to test)</li>
+</ul>
+</li>
+<li>Minimal<ul>
+<li>No unuse feature</li>
+<li>No half baked ideas</li>
+</ul>
+</li>
+<li>Reusable code take more cost<ul>
+<li>About 3 times more, it mean we have to use it 4 times to recover the cost</li>
+</ul>
+</li>
+<li>Lean and Agile does not mean low quality</li>
+<li>Make defect prevention cheap by<ul>
+<li>Continuous integration</li>
+<li>Virgin install</li>
+<li>Test Driven Development</li>
+<li>Acceptance Test Driven Development</li>
+<li>Lightweight code-reviews</li>
+<li>Pair programming</li>
+<li>Static analysis tools </li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/06/09/how-much-quality-can-we-afford/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/09/how-much-quality-can-we-afford/" data-id="cj9clriqs003eqf652doemjy8" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/09/how-much-quality-can-we-afford/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -141,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cip8je3yz00016c65ta66rvxq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/09/optimizing-mongodb/" data-id="cj9clrirm0042qf65a0aw9j6q" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/06/09/optimizing-mongodb/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -188,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cip49nany00008465f3bspnd7" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/" data-id="cj9clrirr0048qf65z5mgaccw" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/06/06/restapi-is-a-lie/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -243,7 +436,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/" data-id="cip0js68a00002865hdxv2he7" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/" data-id="cj9clris5004oqf65a6wm8i8m" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/06/04/the-mythical-man-month-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -290,7 +483,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/rust/2016/05/30/day1/" data-id="ciozssuip0001t8656fcabuqk" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/rust/2016/05/30/day1/" data-id="cj9clrisc004yqf65a7neluz2" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/rust/2016/05/30/day1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -330,7 +523,7 @@
       
         <p>I will pick some special rules and some rules i don’t think it is useful here</p>
 <h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Rule-3-4-Define-all-the-properties-of-an-object-in-one-place"><a href="#Rule-3-4-Define-all-the-properties-of-an-object-in-one-place" class="headerlink" title="Rule 3.4: Define all the properties of an object in one place."></a>Rule 3.4: Define all the properties of an object in one place.</h3><p>It is my common mistake. Don’t add properties to object once it defined. It is easy for other to miss the properties.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function getKey(k) &#123;</span><br><span class="line">  return `a key named $&#123;k&#125;`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// bad</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">obj[getKey(&apos;enabled&apos;)] = true;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">  [getKey(&apos;enabled&apos;)]: true,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function getKey(k) &#123;</div><div class="line">  return `a key named $&#123;k&#125;`;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// bad</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">&#125;;</div><div class="line">obj[getKey(&apos;enabled&apos;)] = true;</div><div class="line"></div><div class="line">// good</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">  [getKey(&apos;enabled&apos;)]: true,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
         
           <p class="article-more-link">
             <a href="/review/2016/05/29/airbnb-javascript-style/#more">Read More</a>
@@ -339,7 +532,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/" data-id="ciozssuil0000t865n4dp2yw1" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/" data-id="cj9clriqo0038qf65izidff4b" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -380,7 +573,7 @@
         <p>Everytime we abstract a layer, some detail will be hidden. When there is some error or bug inside the abstraction layer, only the engineer understand the implementation of abstracted layer can fix it.</p>
 <p>Leaky abstraction is a necessary evil, here is some of my own experience.</p>
 <h2 id="Github-API-and-npm-‘request’-module"><a href="#Github-API-and-npm-‘request’-module" class="headerlink" title="Github API and npm ‘request’ module"></a>Github API and npm ‘request’ module</h2><p>I use npm ‘request’ module to query pull request of a private repo. I use the correct authetication method, but still fail to get data from the API.</p>
-<p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</span><br><span class="line">  &apos;auth&apos;: &#123;</span><br><span class="line">    &apos;user&apos;: &apos;username&apos;,</span><br><span class="line">    &apos;pass&apos;: &apos;password&apos;,</span><br><span class="line">    &apos;sendImmediately&apos;: false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</div><div class="line">  &apos;auth&apos;: &#123;</div><div class="line">    &apos;user&apos;: &apos;username&apos;,</div><div class="line">    &apos;pass&apos;: &apos;password&apos;,</div><div class="line">    &apos;sendImmediately&apos;: false</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
         
           <p class="article-more-link">
             <a href="/diary/2016/05/26/example-of-leaky-abstraction/#more">Read More</a>
@@ -389,172 +582,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="ciooiggey0000o465bof8q2j0" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="cj9clrinr000vqf653d1p5m7s" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
-  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
-<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/05/23/this-call-apply-in-javascipt/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-skills-for-hackathon" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/2016/05/23/skills-for-hackathon/" class="article-date">
-  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/05/23/skills-for-hackathon/">Skills for hackathon</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After joining angelhack, I identify some useful skill sets for hackathon.</p>
-<h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><p>The mission of developer in hackathon is to make software for presentation. </p>
-<ul>
-<li>UI and UX is everything, developer should put most effort on it</li>
-<li>Hardcode everything<ul>
-<li>If it can save development time</li>
-<li>If it can make the presentation more smooth<ul>
-<li>If the computation is slow, just hardcode it to make it fast.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Forget everything about backend<ul>
-<li>Because it cannot be ‘seen’ by judges</li>
-</ul>
-</li>
-<li>Learn to use prototype tool and API before hackathon<ul>
-<li>This help us build good looking and ‘functional’ prototype.</li>
-</ul>
-</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/diary/2016/05/23/skills-for-hackathon/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/" data-id="ciojxp75w00000t65awilmczr" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/2016/05/23/skills-for-hackathon/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-software-as-a-slide" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/2016/05/22/software-as-a-slide/" class="article-date">
-  <time datetime="2016-05-21T16:00:00.000Z" itemprop="datePublished">2016-05-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/05/22/software-as-a-slide/">SaaS - Software as a slide</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日係參加嘅Angelhack同我想像中嘅Hackathon有好大出入。比起Hackathon，大部份嘅參加者更加似係參加緊Startup比賽。</p>
-<h2 id="Hackathon-v-s-Startup-比賽"><a href="#Hackathon-v-s-Startup-比賽" class="headerlink" title="Hackathon v.s. Startup 比賽"></a>Hackathon v.s. Startup 比賽</h2><p>我本來諗住Hackathon係大家有一D有趣嘅問題或諗法，之後一齊討論下可以點樣用technology去解決，之後會起一個prototype出黎做demo。但係唔少人都係business background。佢地D idea都好正路同普通嘅Business idea，參加都主要係揾人幫手implement個prototype。當我地 pitch 完個idea之後，人地第一時間問點賺錢同埋有咩business model。</p>
-        
-          <p class="article-more-link">
-            <a href="/diary/2016/05/22/software-as-a-slide/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/22/software-as-a-slide/" data-id="cioisqrv100010x65pmkevk4z" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/2016/05/22/software-as-a-slide/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -607,6 +637,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -620,10 +654,6 @@
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -649,6 +679,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

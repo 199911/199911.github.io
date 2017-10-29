@@ -43,6 +43,8 @@
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
@@ -58,6 +60,55 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-bootstrap-3-mixins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code/2016/08/28/bootstrap-3-mixins/" class="article-date">
+  <time datetime="2016-08-27T16:00:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code/">Code</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code/2016/08/28/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+        
+          <p class="article-more-link">
+            <a href="/code/2016/08/28/bootstrap-3-mixins/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/" data-id="cj9clrin4000gqf65itctyef0" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code/2016/08/28/bootstrap-3-mixins/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -95,7 +146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/" data-id="ciskfic9q00025g657skwj2tb" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/" data-id="cj9clrina000lqf65yh0gnj98" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/code/2016/08/27/bootstrap-3-variables/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -161,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/08/21/the-mythical-man-month-3/" data-id="ciscxnp9300013865tdyvj97g" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/08/21/the-mythical-man-month-3/" data-id="cj9clris7004sqf6569c8z1cp" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/08/21/the-mythical-man-month-3/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -210,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/08/20/commentaries-9/" data-id="cj2d7myow000xw265rbcrqioh" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/08/20/commentaries-9/" data-id="cj9clriqf002yqf65yqup5m96" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/insight/2016/08/20/commentaries-9/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -265,7 +316,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/" data-id="cis4iy6z80000rd65vbxivue0" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/" data-id="cj9clris6004qqf65zm6nzr5n" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/08/20/the-mythical-man-month-2/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -317,7 +368,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/08/07/commentaries-8/" data-id="cj2d7myou000vw2653yp7spfq" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/08/07/commentaries-8/" data-id="cj9clriqd002wqf65j1hbxr3r" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/insight/2016/08/07/commentaries-8/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -370,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/08/06/commentaries-7/" data-id="cj2d7myor000rw2650nld8alv" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/08/06/commentaries-7/" data-id="cj9clriqb002uqf65lj3jwgi2" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/insight/2016/08/06/commentaries-7/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -418,9 +469,56 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/08/05/commentaries-6/" data-id="cj2d7myos000tw265ip2l7flw" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/08/05/commentaries-6/" data-id="cj9clriq9002sqf65uq3sdiza" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/insight/2016/08/05/commentaries-6/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-yahoo-design-part-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/07/10/yahoo-design-part-1/" class="article-date">
+  <time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished">2016-07-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/07/10/yahoo-design-part-1/">Review of &quot;Yahoo Design Pattern Library&quot; Part I</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The library is pretty old. May be it is a good document for us to review the design of commonly used UI/X design pattern. This library explains patterns clearly. It talks about “What it solve”, “When to use”, “How it solve”, “Why we use it”.</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/07/10/yahoo-design-part-1/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/" data-id="cj9clrisf0053qf65j5xsul10" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -467,108 +565,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/insight/2016/07/10/commentaries-5/" data-id="cj2d7myop000pw265b5xtbhnd" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/insight/2016/07/10/commentaries-5/" data-id="cj9clriq6002qqf659y2xmw7m" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/insight/2016/07/10/commentaries-5/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-yahoo-design-part-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/07/10/yahoo-design-part-1/" class="article-date">
-  <time datetime="2016-07-09T16:00:00.000Z" itemprop="datePublished">2016-07-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/07/10/yahoo-design-part-1/">Review of &quot;Yahoo Design Pattern Library&quot; Part I</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The library is pretty old. May be it is a good document for us to review the design of commonly used UI/X design pattern. This library explains patterns clearly. It talks about “What it solve”, “When to use”, “How it solve”, “Why we use it”.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/07/10/yahoo-design-part-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/" data-id="ciqgizrvj0004ld65q9580thw" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/07/10/yahoo-design-part-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/07/04/singleton/" class="article-date">
-  <time datetime="2016-07-03T16:00:00.000Z" itemprop="datePublished">2016-07-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/07/04/singleton/">Review of &quot;Avoiding Singleton Abuse&quot;</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The singleton mentioned here is Singleton Design Pattern</p>
-<ul>
-<li>Private constructor</li>
-<li>Global referal to the instace</li>
-</ul>
-<h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group od global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/07/04/singleton/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="ciq9jkor500010o65vjzxadpb" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/07/04/singleton/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -621,6 +620,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -634,10 +637,6 @@
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -663,6 +662,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

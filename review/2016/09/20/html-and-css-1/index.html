@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://199911.github.io/review/2016/09/20/html-and-css-1/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="padding-start vs padding-leftI found the default style of ol and ul in Chrome have a interesting property -webkit-padding-start: 40px;. I am wondering how is it different form padding-left: 40px. Acco">
-<meta property="og:updated_time" content="2016-10-02T13:34:24.000Z">
+<meta property="og:updated_time" content="2016-10-07T14:24:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML and CSS part 1">
 <meta name="twitter:description" content="padding-start vs padding-leftI found the default style of ol and ul in Chrome have a interesting property -webkit-padding-start: 40px;. I am wondering how is it different form padding-left: 40px. Acco">
@@ -46,6 +46,8 @@
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
         
       </nav>
       <nav id="sub-nav">
@@ -93,8 +95,8 @@
 <a id="more"></a>
 <h2 id="width-and-height-in-image-tag-vs-in-CSS"><a href="#width-and-height-in-image-tag-vs-in-CSS" class="headerlink" title="width and height in image tag vs in CSS"></a><code>width</code> and <code>height</code> in image tag vs in CSS</h2><p>According to <a href="http://stackoverflow.com/questions/640190/image-width-height-as-an-attribute-or-in-css" target="_blank" rel="external">this</a>, if the image is part of the content, we should use <code>width</code> and <code>height</code> attribute in image tag. The rule of thumb is, HTML defined the contents and CSS define the layout. For example, the background image’s size should be defined by CSS, because it is for layout and decoration.</p>
 <h2 id="align-in-image-tag-is-deprecated-in-HTML-5"><a href="#align-in-image-tag-is-deprecated-in-HTML-5" class="headerlink" title="align in image tag is deprecated in HTML 5"></a><code>align</code> in image tag is deprecated in HTML 5</h2><p>Which should be replace by <code>align</code> in CSS.<br>PS: image is <code>display: inline-block;</code> by default.</p>
-<h2 id="figure-is-a-component-of-image-with-caption"><a href="#figure-is-a-component-of-image-with-caption" class="headerlink" title="figure is a component of image with caption"></a><code>figure</code> is a component of image with caption</h2><p>The html structure likes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;figure&gt;</span><br><span class="line">  &lt;img src=&quot;images/otters.jpg&quot; alt=&quot;Photograph of two sea otters floating in water&quot;&gt;</span><br><span class="line">  &lt;br /&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/figure&gt;</span><br></pre></td></tr></table></figure></p>
-<p>Notices that figcaption is HTML 5 element, which will be ignored by old browsers.<br>To have better compatibility, we can have<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;</span><br><span class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="figure-is-a-component-of-image-with-caption"><a href="#figure-is-a-component-of-image-with-caption" class="headerlink" title="figure is a component of image with caption"></a><code>figure</code> is a component of image with caption</h2><p>The html structure likes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">  &lt;img src=&quot;images/otters.jpg&quot; alt=&quot;Photograph of two sea otters floating in water&quot;&gt;</div><div class="line">  &lt;br /&gt;</div><div class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</div><div class="line">&lt;/figure&gt;</div></pre></td></tr></table></figure></p>
+<p>Notices that figcaption is HTML 5 element, which will be ignored by old browsers.<br>To have better compatibility, we can have<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;</div><div class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="thead-tbody-and-tfoot"><a href="#thead-tbody-and-tfoot" class="headerlink" title="thead, tbody and tfoot"></a><code>thead</code>, <code>tbody</code> and <code>tfoot</code></h2><p>We can use these when the first and last rows content different content. Browser can make table header and footer sticky when the screen cannot fit the screen. It is also useful in print version when the table cannot be shown in one page.</p>
 <h2 id="Deprecated-attribute-of-table-and-form-in-HTML-5"><a href="#Deprecated-attribute-of-table-and-form-in-HTML-5" class="headerlink" title="Deprecated attribute of table and form in HTML 5"></a>Deprecated attribute of table and form in HTML 5</h2><p><code>width</code>, <code>border</code> and <code>background</code> are deprecated in HTML 5 table. <code>size</code> in HTML 5 form’s input is deprecated, but notice <code>maxlength</code> is not.<br>Notice that <code>size</code> in select element is not deprecated. It is used to define the number of item shown in multiple select.</p>
 <h2 id="Input-type"><a href="#Input-type" class="headerlink" title="Input type"></a>Input type</h2><p>There is a list of input type in form</p>
@@ -135,7 +137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/09/20/html-and-css-1/" data-id="citvpderj0001h9652p6i11ob" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/09/20/html-and-css-1/" data-id="cj9clrir3003oqf65jpi8euew" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/09/20/html-and-css-1/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -218,6 +220,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -231,10 +237,6 @@
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -260,6 +262,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

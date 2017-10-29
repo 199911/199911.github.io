@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個funct">
-<meta property="og:updated_time" content="2016-06-04T03:08:02.000Z">
+<meta property="og:updated_time" content="2016-06-09T06:03:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javascript 中嘅 this, call 同 apply">
 <meta name="twitter:description" content="Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個funct">
@@ -46,6 +46,8 @@
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
         
       </nav>
       <nav id="sub-nav">
@@ -91,7 +93,7 @@
 <p>以上2個特點加埋一齊就會出現一D麻煩。</p>
 <a id="more"></a> 
 <p>例如callback function入邊個<code>this</code>有時會唔小心指左去第2個scope。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.name = &apos;my app&apos;</span><br><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback( this, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">app.getUsers(function countUser(data)&#123;</span><br><span class="line">  console.log(&apos;There are &apos; + data.length + &apos; users using &apos; + this.name);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">app.name = &apos;my app&apos;</div><div class="line">app.getUsers = function( callback )&#123;</div><div class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</div><div class="line">    callback &amp;&amp; callback( this, data );</div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">app.getUsers(function countUser(data)&#123;</div><div class="line">  console.log(&apos;There are &apos; + data.length + &apos; users using &apos; + this.name);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>以上果段code個this就會指左去jQuery個scope。當callback function入邊有用到<code>this</code>果時，咁就會有D unexpected behaviour出現。以上例子中嘅<code>this.name</code>會指左去<code>$.name</code>，而唔係<code>app.name</code>。</p>
 <p>有D人可能會諗</p>
 <blockquote>
@@ -103,7 +105,7 @@
 <li>abstract唔到個function interface做一個API<br> 其實一個function已經係一個abstraction，當個user 入個callback去call你個function，佢suppose唔洗知你個function點implement。以上文為例，人地跟本唔知你用jQuery咁樣implement，唔知道用<code>this</code>會有bug。咁樣寫getUsers係做唔到一個public api。</li>
 </ol>
 <p>咁點樣寫先啱？個問題主要係function個scope冇清淅define，只要我地用一D native javascript function指定返個<code>this</code>就得。例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">app.getUsers = function( callback )&#123;</span><br><span class="line">  var self = this;</span><br><span class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</span><br><span class="line">    callback &amp;&amp; callback.call( self, data );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">app.getUsers = function( callback )&#123;</div><div class="line">  var self = this;</div><div class="line">  $.get( &apos;/users/&apos;, function( data )&#123;</div><div class="line">    callback &amp;&amp; callback.call( self, data );</div><div class="line">  &#125;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p><code>callback.call( self, data )</code> 第一個argument就係指定左個<code>this</code>係做<code>self</code>，姐係call緊<code>self.callback(data)</code>。<br>又或者可以用<code>callback.apply( self, [data] )</code>，姐係call緊<code>self.callback(data[0], data[1], data[2] ...)</code>。<br>都可以用<code>(callback.bind(self))(data)</code>，<code>bind</code>都係指定個this，但係佢唔會直接行個function，而係return一個bind左scope嘅function。</p>
 <h2 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h2><ul>
 <li>當implement callback pattern，要記住留意this嘅binding。</li>
@@ -121,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="ciok5dfge0000xa65s477rm4u" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/" data-id="cj9clris8004uqf65tz97k73x" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -204,6 +206,10 @@
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -217,10 +223,6 @@
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -246,6 +248,8 @@
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

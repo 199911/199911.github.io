@@ -13,7 +13,7 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="I will pick some special rules and some rules i don’t think it is useful here
 ObjectsRule 3.4: Define all the properties of an object in one place.It is my common mistake. Don’t add properties to obje">
-<meta property="og:updated_time" content="2016-06-04T03:08:17.000Z">
+<meta property="og:updated_time" content="2016-06-09T06:03:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Airbnb javascript style guide">
 <meta name="twitter:description" content="I will pick some special rules and some rules i don’t think it is useful here
@@ -49,6 +49,8 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
           <a class="main-nav-link" href="/">Home</a>
         
           <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
         
       </nav>
       <nav id="sub-nav">
@@ -92,10 +94,10 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
       
         <p>I will pick some special rules and some rules i don’t think it is useful here</p>
 <h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Rule-3-4-Define-all-the-properties-of-an-object-in-one-place"><a href="#Rule-3-4-Define-all-the-properties-of-an-object-in-one-place" class="headerlink" title="Rule 3.4: Define all the properties of an object in one place."></a>Rule 3.4: Define all the properties of an object in one place.</h3><p>It is my common mistake. Don’t add properties to object once it defined. It is easy for other to miss the properties.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function getKey(k) &#123;</span><br><span class="line">  return `a key named $&#123;k&#125;`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// bad</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">obj[getKey(&apos;enabled&apos;)] = true;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">  [getKey(&apos;enabled&apos;)]: true,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function getKey(k) &#123;</div><div class="line">  return `a key named $&#123;k&#125;`;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// bad</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">&#125;;</div><div class="line">obj[getKey(&apos;enabled&apos;)] = true;</div><div class="line"></div><div class="line">// good</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">  [getKey(&apos;enabled&apos;)]: true,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <a id="more"></a> 
 <h3 id="Rule-3-8-Only-quote-properties-that-are-invalid-identifiers"><a href="#Rule-3-8-Only-quote-properties-that-are-invalid-identifiers" class="headerlink" title="Rule 3.8: Only quote properties that are invalid identifiers."></a>Rule 3.8: Only quote properties that are invalid identifiers.</h3><p>Airbnb think it is easier to read, improves syntax highlighting, and it is also more easily optimized by many JS engines.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">const bad = &#123;</span><br><span class="line">  &apos;foo&apos;: 3,</span><br><span class="line">  &apos;bar&apos;: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const good = &#123;</span><br><span class="line">  foo: 3,</span><br><span class="line">  bar: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// bad</div><div class="line">const bad = &#123;</div><div class="line">  &apos;foo&apos;: 3,</div><div class="line">  &apos;bar&apos;: 4,</div><div class="line">  &apos;data-blah&apos;: 5,</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// good</div><div class="line">const good = &#123;</div><div class="line">  foo: 3,</div><div class="line">  bar: 4,</div><div class="line">  &apos;data-blah&apos;: 5,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>This rule is more useful for client side javascript, beacuse server side javascript do not need to be minifed. For consistency of among object properties and between server side and client side code, I perfer to abolish this rule.</p>
 <h3 id="Rule-6-1-Use-single-quotes-for-strings"><a href="#Rule-6-1-Use-single-quotes-for-strings" class="headerlink" title="Rule 6.1 Use single quotes for strings"></a>Rule 6.1 Use single quotes for strings</h3><p>It is useful when we use double quote in json string and html.</p>
 <h3 id="Rule-7-1-Use-function-declarations-instead-of-function-expressions"><a href="#Rule-7-1-Use-function-declarations-instead-of-function-expressions" class="headerlink" title="Rule 7.1 Use function declarations instead of function expressions."></a>Rule 7.1 Use function declarations instead of function expressions.</h3><p>It is becuase function declarations are named, so they’re easier to identify in call stacks. A useful debuggin skill when dealing with callback.</p>
@@ -122,7 +124,7 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/" data-id="ciozssuil0000t865n4dp2yw1" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/" data-id="cj9clriqo0038qf65izidff4b" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -205,6 +207,10 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -218,10 +224,6 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -247,6 +249,8 @@ ObjectsRule 3.4: Define all the properties of an object in one place.It is my co
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

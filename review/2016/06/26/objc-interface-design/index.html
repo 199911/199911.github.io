@@ -50,6 +50,8 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
@@ -99,7 +101,7 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
 <li>唔好expose不必要嘅function</li>
 <li>要包好個object，隐藏implementation嘅detail</li>
 </ul>
-<p>文中提出一個例子。解釋obejct method要簡單。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@interface Sark : NSObject</span><br><span class="line">- (instancetype)init;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age;</span><br><span class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age friends:(NSArray *)friends;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
+<p>文中提出一個例子。解釋obejct method要簡單。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@interface Sark : NSObject</div><div class="line">- (instancetype)init;</div><div class="line">- (instancetype)initWithName:(NSString *)name;</div><div class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex;</div><div class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age;</div><div class="line">- (instancetype)initWithName:(NSString *)name sex:(NSString *)sex age:(NSInteger)age friends:(NSArray *)friends;</div><div class="line">@end</div></pre></td></tr></table></figure></p>
 <p>其實E個係java一個叫telecope constructor嘅anti-pattern，只要轉用builder pattern就可以解決</p>
 <p>文中指出，可以用class method 去取代一D不必要嘅instance method。簡單去諗，只要個class冇多過一個instance，咁其實可以直接用class method。但係有一個pattern 叫 singleton，都係一個class得一個instance，咁幾時用class，幾時用singleton？</p>
 <h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><p><a href="http://blog.sunnyxx.com/2014/04/13/objc_dig_interface/" target="_blank" rel="external">http://blog.sunnyxx.com/2014/04/13/objc_dig_interface/</a><br><a href="http://www.captaindebug.com/2011/05/telescoping-constructor-antipattern.html#.V2_1hpN97Vo" target="_blank" rel="external">http://www.captaindebug.com/2011/05/telescoping-constructor-antipattern.html#.V2_1hpN97Vo</a><br><a href="https://kodelog.wordpress.com/tag/telescopic-constructor-pattern/" target="_blank" rel="external">https://kodelog.wordpress.com/tag/telescopic-constructor-pattern/</a></p>
@@ -107,7 +109,7 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/26/objc-interface-design/" data-id="ciq3gbvjx0000uw65ii3tw8bh" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/06/26/objc-interface-design/" data-id="cj9clrirn0044qf65jj9jobaf" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/06/26/objc-interface-design/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -190,6 +192,10 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -203,10 +209,6 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -232,6 +234,8 @@ Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object functi
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     

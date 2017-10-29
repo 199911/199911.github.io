@@ -62,6 +62,8 @@ Singleton is global variableThe singleton instance can be access in every where.
         
           <a class="main-nav-link" href="/archives">Archives</a>
         
+          <a class="main-nav-link" href="/about">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
@@ -110,10 +112,10 @@ Singleton is global variableThe singleton instance can be access in every where.
 <h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group od global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
 <a id="more"></a> 
 <h3 id="Why-global-variable-is-evil"><a href="#Why-global-variable-is-evil" class="headerlink" title="Why global variable is evil?"></a>Why global variable is evil?</h3><p>The root of the problem is, the dependencies of modules on global variable is not clear. It makes the module difficult to understand and test.</p>
-<p>For example,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo()&#123;</span><br><span class="line">    global $bar;</span><br><span class="line">    // or</span><br><span class="line">    $bar = Singleton::get_instance()-&gt;bar;</span><br><span class="line">    return ($bar &gt; 10);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>For example,<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function foo()&#123;</div><div class="line">    global $bar;</div><div class="line">    // or</div><div class="line">    $bar = Singleton::get_instance()-&gt;bar;</div><div class="line">    return ($bar &gt; 10);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>If we run <code>foo()</code>, it can return <code>true</code> or <code>false</code>. As <code>foo()</code> depends on $bar implicitly, we have no idea why the behaviour changed, until we read the source code. This means <code>foo()</code> fail to abstract the detail of implementation.</p>
 <h3 id="How-Singleton-solve-the-implicitly-dependency"><a href="#How-Singleton-solve-the-implicitly-dependency" class="headerlink" title="How Singleton solve the implicitly dependency?"></a>How Singleton solve the implicitly dependency?</h3><p>Singleton instance is similar to global variable, but it can solve the implicitly dependency casued by gloabl variable. What we need is “Dependency Injection”. It means we do not depend on the method directly in the implementation, but we pass the dependency using parameters.</p>
-<p>Let’s rewrite <code>foo()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo($singleton)&#123;</span><br><span class="line">    $bar = $singleton-&gt;bar;</span><br><span class="line">    return ($bar &gt; 10);</span><br><span class="line">&#125;</span><br><span class="line">// We call foo() like this</span><br><span class="line">foo(Singleton::get_instance());</span><br></pre></td></tr></table></figure></p>
+<p>Let’s rewrite <code>foo()</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function foo($singleton)&#123;</div><div class="line">    $bar = $singleton-&gt;bar;</div><div class="line">    return ($bar &gt; 10);</div><div class="line">&#125;</div><div class="line">// We call foo() like this</div><div class="line">foo(Singleton::get_instance());</div></pre></td></tr></table></figure></p>
 <p>Everytime, we call <code>foo()</code>, we know which module it depends on. We can test the function easily by changing the dependency to a mock instance.</p>
 <p>In another aspect, read-only global variable do no harm. If the Singleton’s fields are constant, and methods have no side effect, feel free to use Singleton. But in these case, static class or namespace may be a better choice.</p>
 <p>To sum up, advantage of Singleton pattern faciliate dependency injection.</p>
@@ -125,7 +127,7 @@ Singleton is global variableThe singleton instance can be access in every where.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="ciq9jkor500010o65vjzxadpb" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="cj9clris0004gqf65fsxeqv41" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/2016/07/04/singleton/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -136,11 +138,11 @@ Singleton is global variableThe singleton instance can be access in every where.
     
 <nav id="article-nav">
   
-    <a href="/review/2016/07/10/yahoo-design-part-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/insight/2016/07/10/commentaries-5/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Review of &quot;Yahoo Design Pattern Library&quot; Part I
+          簡評五
         
       </div>
     </a>
@@ -208,6 +210,10 @@ Singleton is global variableThe singleton instance can be access in every where.
       <ul>
         
           <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
             <a href="/book/2017/10/01/book-review-5/">讀後感五</a>
           </li>
         
@@ -221,10 +227,6 @@ Singleton is global variableThe singleton instance can be access in every where.
         
           <li>
             <a href="/diary/2017/09/05/my-facebook-page/">Move-back-to-blogging</a>
-          </li>
-        
-          <li>
-            <a href="/book/2017/07/15/book-review-4/">讀後感四</a>
           </li>
         
       </ul>
@@ -250,6 +252,8 @@ Singleton is global variableThe singleton instance can be access in every where.
     <a href="/" class="mobile-nav-link">Home</a>
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
   
 </nav>
     
