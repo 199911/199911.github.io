@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot; | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TL;DRAnswer 1
+Deploy experimental feature on Friday, it crashes the whole system
+Never put yourself in a position to make mistake
+TDD
+
+
+Not a good idea to deploy big stuff on Friday
+Think about the ri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Review of "What are the programming mistakes most inexperienced programmers make?"">
+<meta property="og:url" content="http://199911.github.io/commentary/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="TL;DRAnswer 1
+Deploy experimental feature on Friday, it crashes the whole system
+Never put yourself in a position to make mistake
+TDD
+
+
+Not a good idea to deploy big stuff on Friday
+Think about the ri">
+<meta property="og:updated_time" content="2017-10-29T11:47:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Review of "What are the programming mistakes most inexperienced programmers make?"">
+<meta name="twitter:description" content="TL;DRAnswer 1
+Deploy experimental feature on Friday, it crashes the whole system
+Never put yourself in a position to make mistake
+TDD
+
+
+Not a good idea to deploy big stuff on Friday
+Think about the ri">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-what-are-the-programming-mistakes-most-inexperienced-programmers-make" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" class="article-date">
+  <time datetime="2016-06-09T06:03:34.000Z" itemprop="datePublished">2016-06-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Review of &quot;What are the programming mistakes most inexperienced programmers make?&quot;
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><h3 id="Answer-1"><a href="#Answer-1" class="headerlink" title="Answer 1"></a>Answer 1</h3><ul>
+<li>Deploy experimental feature on Friday, it crashes the whole system<ul>
+<li>Never put yourself in a position to make mistake<ul>
+<li>TDD</li>
+</ul>
+</li>
+<li>Not a good idea to deploy big stuff on Friday</li>
+<li>Think about the risk before deploy</li>
+<li>Confirm after deploy asap</li>
+<li>Don’t be afraid to move fast and break things<ul>
+<li>Mistake make you grow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Short summary</p>
+<p>We did everything he mentioned besides TDD, just keep it as a reminder.</p>
+<a id="more"></a>
+<h3 id="Answer-2"><a href="#Answer-2" class="headerlink" title="Answer 2"></a>Answer 2</h3><ul>
+<li>Early optimization is bad<ul>
+<li>Lower readability</li>
+</ul>
+</li>
+<li>Readablility &gt; Performance (in most cases)<ul>
+<li>only tune performance on bottleneck</li>
+<li>compiler is smart enough to optimize</li>
+<li>Note: firmware have performance &gt; readability</li>
+</ul>
+</li>
+</ul>
+<p>Short summary</p>
+<p>I argee the points. Premature optimization is bad, but sometime it is hard to determine what is premature optimization. We should have Readablility &gt; Performance unless we are doing very low level stuff.</p>
+<h3 id="Answer-3"><a href="#Answer-3" class="headerlink" title="Answer 3"></a>Answer 3</h3><ul>
+<li>Ask for code review, read code of great engineer</li>
+</ul>
+<h3 id="Answer-4"><a href="#Answer-4" class="headerlink" title="Answer 4"></a>Answer 4</h3><ul>
+<li>Abuse OOP, don’t forget single responsibility</li>
+<li>over-complicated</li>
+<li>over-simplifying</li>
+<li>extreme failure test<ul>
+<li>shutdown and turn on the database</li>
+<li>flush all the cache</li>
+</ul>
+</li>
+</ul>
+<h3 id="Answer-5"><a href="#Answer-5" class="headerlink" title="Answer 5"></a>Answer 5</h3><ul>
+<li>Reinvent the wheel</li>
+<li>Code before think</li>
+<li>Use the wrong tool, simply because it is popular</li>
+</ul>
+<h3 id="Answer-6"><a href="#Answer-6" class="headerlink" title="Answer 6"></a>Answer 6</h3><ul>
+<li>Infatuated with the process of building the product<ul>
+<li>Get things done, engineer are solving problems</li>
+</ul>
+</li>
+<li>Ingore code written by others</li>
+</ul>
+<h3 id="Answer-7"><a href="#Answer-7" class="headerlink" title="Answer 7"></a>Answer 7</h3><ul>
+<li>Someone make his AWS key public…<ul>
+<li>Luckily, Amazon recover the cost</li>
+</ul>
+</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>Read others code to learn</li>
+<li>Study TDD</li>
+<li>Focus on problem solving</li>
+<li>Code before think</li>
+<li>Think about risk before deploy</li>
+</ul>
+<p>Reference: <a href="https://www.quora.com/What-are-the-programming-mistakes-most-inexperienced-programmers-make" target="_blank" rel="external">What are the programming mistakes most inexperienced programmers make?</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/" data-id="cj9covap8003c6m65if9oftn8" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/code-review/2016/06/10/day2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Rust - Day 2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/commentary/2016/06/09/how-much-quality-can-we-afford/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Review of &quot;How much quality can we afford?</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/knowledge/2017/10/29/hackathon/">黑客松技巧</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
+            <a href="/book-review/2017/10/01/book-review-5/">讀後感五</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/30/ey-leave-500/">Elizabeth離開500 Startups</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/09/cangjie/">倉頡輸入法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/commentary/2016/06/09/what-are-the-programming-mistakes-most-inexperienced-programmers-make/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

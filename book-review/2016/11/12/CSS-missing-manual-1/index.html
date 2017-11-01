@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&quot;CSS - the missing manual 2nd edition&quot; Basic CSS | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.
+But this only">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""CSS - the missing manual 2nd edition" Basic CSS">
+<meta property="og:url" content="http://199911.github.io/book-review/2016/11/12/CSS-missing-manual-1/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.
+But this only">
+<meta property="og:updated_time" content="2017-10-29T11:34:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""CSS - the missing manual 2nd edition" Basic CSS">
+<meta name="twitter:description" content="This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.
+But this only">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-CSS-missing-manual-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/book-review/2016/11/12/CSS-missing-manual-1/" class="article-date">
+  <time datetime="2016-11-11T16:00:00.000Z" itemprop="datePublished">2016-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Book-Review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &quot;CSS - the missing manual 2nd edition&quot; Basic CSS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This book is very good for learning CSS. It has 4 sections, start from the basic knowledge to advanced technique. It also provide some exercises for user to get some hand on experience.</p>
+<p>But this only have few picture and lots of text, it is quite boring to read.</p>
+<ol>
+<li>Basic CSS</li>
+<li>Applied CSS</li>
+<li>Page Layout CSS</li>
+<li>Advanced CSS</li>
+</ol>
+<a id="more"></a>
+<h2 id="Basic-CSS"><a href="#Basic-CSS" class="headerlink" title="Basic CSS"></a>Basic CSS</h2><h3 id="Know-what-browser-to-support"><a href="#Know-what-browser-to-support" class="headerlink" title="Know what browser to support"></a>Know what browser to support</h3><p>Browsers are also software product. They have bugs and feature not support. We may need to have work around on browser quirk. Market share of browser can help us to determine which browser and what version to support.:</p>
+<ul>
+<li><a href="http://www.netmarketshare.com/browser-market-share.aspx" target="_blank" rel="external">http://www.netmarketshare.com/browser-market-share.aspx</a></li>
+<li><a href="http://gs.statcounter.com" target="_blank" rel="external">http://gs.statcounter.com</a></li>
+<li><a href="https://developer.microsoft.com/en-us/microsoft-edge/ie6countdown/" target="_blank" rel="external">https://developer.microsoft.com/en-us/microsoft-edge/ie6countdown/</a></li>
+</ul>
+<h3 id="Some-tips-on-HTML"><a href="#Some-tips-on-HTML" class="headerlink" title="Some tips on HTML"></a>Some tips on HTML</h3><p>We can solve problem in many ways. But using some well known technique help other understand your code and help us avoid bugs. Here are some tips:</p>
+<ul>
+<li>Stop using <code>&lt;font&gt;</code>.</li>
+<li>Don’t use <code>&lt;table&gt;</code> for layout.</li>
+<li>Don’t use <code>&lt;br&gt;</code> for spacing, use margin or padding.</li>
+<li>Don’t overuse <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code></li>
+<li>Don’t forget Doctype!<ul>
+<li>No doctype will fallback to old browser mode, which may make the page render in a strange way.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Some-mistakes-in-the-book"><a href="#Some-mistakes-in-the-book" class="headerlink" title="Some mistakes in the book"></a>Some mistakes in the book</h3><p>The book mention that there will be no CSS4, because CSS3 will only updating CSS3 modules. Actually w3c is release CSS4 on 2011</p>
+<h3 id="Jargon-of-CSS"><a href="#Jargon-of-CSS" class="headerlink" title="Jargon of CSS"></a>Jargon of CSS</h3><p>A CSS rule have:</p>
+<ul>
+<li>selector<ul>
+<li>type (element) selector</li>
+<li>class selector</li>
+<li>id selector</li>
+</ul>
+</li>
+<li>declaration block<ul>
+<li>declaration<ul>
+<li>property</li>
+<li>value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="CSS-Inheritance"><a href="#CSS-Inheritance" class="headerlink" title="CSS Inheritance"></a>CSS Inheritance</h3><ul>
+<li>Positioning style is not Inherit</li>
+<li>Browser built in style may override the Inheritance</li>
+</ul>
+<h3 id="External-CSS-vs-Internal-CSS"><a href="#External-CSS-vs-Internal-CSS" class="headerlink" title="External CSS vs Internal CSS"></a>External CSS vs Internal CSS</h3><p>External CSS will be cached by browsers, need use force reload to view the changes ( cmd/ctrl + shift + R ). It is quite inconvenient during development. The cache may mislead us to think our CSS is wrong. One way to avoid it is to develop with internal CSS, move it to external later</p>
+<p>Some developer use external script for general style and internal script for page customization. Make sure internal script is load after the external one if you do this.</p>
+<h3 id="Avoid-ID-selector"><a href="#Avoid-ID-selector" class="headerlink" title="Avoid ID selector"></a>Avoid ID selector</h3><p>ID selectors have the highest specificity, stop using it in CSS to avoid specificity wars.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/book-review/2016/11/12/CSS-missing-manual-1/" data-id="cj9covak400006m65uvxfc7cz" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/book-review/2016/11/12/CSS-missing-manual-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/book-review/2016/11/19/CSS-missing-manual-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          &quot;CSS - the missing manual 2nd edition&quot; Applied CSS
+        
+      </div>
+    </a>
+  
+  
+    <a href="/diary/2016/11/02/how-to-picking-a-library/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">How to pick a framework?</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/knowledge/2017/10/29/hackathon/">黑客松技巧</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/10/29/refactor-blog-content/">Refactor Blog Content</a>
+          </li>
+        
+          <li>
+            <a href="/book-review/2017/10/01/book-review-5/">讀後感五</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/30/ey-leave-500/">Elizabeth離開500 Startups</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2017/09/09/cangjie/">倉頡輸入法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/book-review/2016/11/12/CSS-missing-manual-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

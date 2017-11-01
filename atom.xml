@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-10-29T11:14:58.000Z</updated>
+  <updated>2017-11-01T14:52:53.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑客松技巧</title>
+    <link href="http://199911.github.io/knowledge/2017/10/29/hackathon/"/>
+    <id>http://199911.github.io/knowledge/2017/10/29/hackathon/</id>
+    <published>2017-10-28T16:00:00.000Z</published>
+    <updated>2017-11-01T14:52:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hackathon大約分兩種，一種係Slideshow presentation比賽，另一種係Mockup presentation比賽。</p>
+<a id="more"></a>
+<h2 id="Slideshow-presentation比賽"><a href="#Slideshow-presentation比賽" class="headerlink" title="Slideshow presentation比賽"></a>Slideshow presentation比賽</h2><p>如果個Hackathon係少於24小時，咁多數係Slideshow presentation，因為冇咩可能夠時間build到一個prototype出黎。大部份嘅Hackathon都係多過24小時，但係香港係有D 24小時以內嘅slideshow比賽扮hackathon。</p>
+<h2 id="Mockup-presentation比賽"><a href="#Mockup-presentation比賽" class="headerlink" title="Mockup presentation比賽"></a>Mockup presentation比賽</h2><p>除非比賽前一早諗好個idea，form好team，就算俾夠你48小時，都好難build到個prototype出黎。好多時都係build一個可以郁嘅mock up用黎做presentation。個Focus都係個product idea同UI/UX，個mock up大約show到個flow就得</p>
+<h2 id="相關嘅skills"><a href="#相關嘅skills" class="headerlink" title="相關嘅skills"></a>相關嘅skills</h2><ul>
+<li>熟唔同嘅library，唔洗深入，demo到就得</li>
+<li>最好熟一D可以快速set up嘅framework, plug and play就得<ul>
+<li><a href="https://github.com/sahat/hackathon-starter#features" target="_blank" rel="external">A kickstarter for Node.js web applications</a></li>
+</ul>
+</li>
+<li>Hardcode 所有野，千析唔好諗住整backend<ul>
+<li>如果個idea係唔洗backend就更加好</li>
+</ul>
+</li>
+<li>UI/UX 要簡單易用，唔係pitch果時，單單講點用已經用左好多時間</li>
+<li>諗Idea唔好由technical嘅角度出發，Hackathon係product比賽，唔係programming比賽<ul>
+<li>諗User有咩問題解決，之後諗點樣用3rd library/service去完成。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hackathon大約分兩種，一種係Slideshow presentation比賽，另一種係Mockup presentation比賽。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Refactor Blog Content</title>
@@ -38,8 +78,8 @@
   
   <entry>
     <title>讀後感五</title>
-    <link href="http://199911.github.io/book/2017/10/01/book-review-5/"/>
-    <id>http://199911.github.io/book/2017/10/01/book-review-5/</id>
+    <link href="http://199911.github.io/book-review/2017/10/01/book-review-5/"/>
+    <id>http://199911.github.io/book-review/2017/10/01/book-review-5/</id>
     <published>2017-09-30T16:00:00.000Z</published>
     <updated>2017-10-01T09:23:58.000Z</updated>
     
@@ -473,8 +513,8 @@
   
   <entry>
     <title>讀後感四</title>
-    <link href="http://199911.github.io/book/2017/07/15/book-review-4/"/>
-    <id>http://199911.github.io/book/2017/07/15/book-review-4/</id>
+    <link href="http://199911.github.io/book-review/2017/07/15/book-review-4/"/>
+    <id>http://199911.github.io/book-review/2017/07/15/book-review-4/</id>
     <published>2017-07-14T16:00:00.000Z</published>
     <updated>2017-09-05T15:33:42.000Z</updated>
     
@@ -715,8 +755,8 @@
   
   <entry>
     <title>讀後感三</title>
-    <link href="http://199911.github.io/book/2017/06/03/book-review-3/"/>
-    <id>http://199911.github.io/book/2017/06/03/book-review-3/</id>
+    <link href="http://199911.github.io/book-review/2017/06/03/book-review-3/"/>
+    <id>http://199911.github.io/book-review/2017/06/03/book-review-3/</id>
     <published>2017-06-02T16:00:00.000Z</published>
     <updated>2017-09-05T15:33:51.000Z</updated>
     
@@ -859,8 +899,8 @@
   
   <entry>
     <title>讀後感二</title>
-    <link href="http://199911.github.io/book/2017/05/27/book-review-2/"/>
-    <id>http://199911.github.io/book/2017/05/27/book-review-2/</id>
+    <link href="http://199911.github.io/book-review/2017/05/27/book-review-2/"/>
+    <id>http://199911.github.io/book-review/2017/05/27/book-review-2/</id>
     <published>2017-05-26T16:00:00.000Z</published>
     <updated>2017-05-27T13:37:17.000Z</updated>
     
@@ -975,8 +1015,8 @@
   
   <entry>
     <title>讀後感一</title>
-    <link href="http://199911.github.io/book/2017/05/06/book-review-1/"/>
-    <id>http://199911.github.io/book/2017/05/06/book-review-1/</id>
+    <link href="http://199911.github.io/book-review/2017/05/06/book-review-1/"/>
+    <id>http://199911.github.io/book-review/2017/05/06/book-review-1/</id>
     <published>2017-05-05T16:00:00.000Z</published>
     <updated>2017-05-06T11:53:03.000Z</updated>
     
@@ -1090,10 +1130,10 @@
   
   <entry>
     <title>簡評十六</title>
-    <link href="http://199911.github.io/insight/2017/04/17/commentaries-16/"/>
-    <id>http://199911.github.io/insight/2017/04/17/commentaries-16/</id>
+    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-16/"/>
+    <id>http://199911.github.io/commentary/2017/04/17/commentaries-16/</id>
     <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-10-29T11:47:59.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Releasing-Prettier-1-0"><a href="#Releasing-Prettier-1-0" class="headerlink" title="Releasing Prettier 1.0"></a><a href="http://jlongster.com/prettier-1.0" target="_blank" rel="external">Releasing Prettier 1.0</a></h2><p>好似幾方面，冇學過compiler，唔識implement AST。原來compiler D theory 可以咁apply。</p>
 <h2 id="Sealing-JavaScript-Objects-using-Object-seal"><a href="#Sealing-JavaScript-Objects-using-Object-seal" class="headerlink" title="Sealing JavaScript Objects using Object.seal()"></a><a href="https://techshard.com/2017/04/16/sealing-javascript-objects-using-object-seal/" target="_blank" rel="external">Sealing JavaScript Objects using Object.seal()</a></h2><p><code>Object.seal()</code> is not making the object immutable, even no new properties can be added, properties can be updated.<br>We can use <code>Object.freeze()</code>, but notice the nested object inside is not frozen.</p>
@@ -1117,17 +1157,17 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
   
   <entry>
     <title>簡評十七</title>
-    <link href="http://199911.github.io/insight/2017/04/17/commentaries-17/"/>
-    <id>http://199911.github.io/insight/2017/04/17/commentaries-17/</id>
+    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
+    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
     <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-05-20T03:17:09.000Z</updated>
+    <updated>2017-10-29T11:47:59.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
 <h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
@@ -1141,17 +1181,17 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
   
   <entry>
     <title>簡評十五</title>
-    <link href="http://199911.github.io/insight/2017/04/16/commentaries-15/"/>
-    <id>http://199911.github.io/insight/2017/04/16/commentaries-15/</id>
+    <link href="http://199911.github.io/commentary/2017/04/16/commentaries-15/"/>
+    <id>http://199911.github.io/commentary/2017/04/16/commentaries-15/</id>
     <published>2017-04-15T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-10-29T11:48:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Regular-Expressions-in-a-post-ES6-world"><a href="#Regular-Expressions-in-a-post-ES6-world" class="headerlink" title="Regular Expressions in a post-ES6 world"></a><a href="https://ponyfoo.com/articles/regular-expressions-post-es6" target="_blank" rel="external">Regular Expressions in a post-ES6 world</a></h2><ul>
 <li>Sticky group<ul>
@@ -1208,17 +1248,17 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
   
   <entry>
     <title>簡評十四</title>
-    <link href="http://199911.github.io/insight/2017/03/26/commentaries-14/"/>
-    <id>http://199911.github.io/insight/2017/03/26/commentaries-14/</id>
+    <link href="http://199911.github.io/commentary/2017/03/26/commentaries-14/"/>
+    <id>http://199911.github.io/commentary/2017/03/26/commentaries-14/</id>
     <published>2017-03-25T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-10-29T11:48:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="CSS-Custom-Properties-The-Basics"><a href="#CSS-Custom-Properties-The-Basics" class="headerlink" title="CSS Custom Properties - The Basics"></a><a href="https://sgom.es/posts/2017-01-27-css-custom-properties-the-basics/" target="_blank" rel="external">CSS Custom Properties - The Basics</a></h2><p>CSS Custom value is variable in CSS. Use CSS selector to define scope. <code>:root</code> means global.<br>Can use with <code>calc()</code><br>Note: it is not support by most popular version of browsers.<br>Can use with JS: <code>styles.getPropertyValue(property)</code> and <code>styles.setProperty()</code></p>
 <h2 id="Window-Window-Measuring-Screen-Sizes-with-JavaScript"><a href="#Window-Window-Measuring-Screen-Sizes-with-JavaScript" class="headerlink" title="Window, Window: Measuring Screen Sizes with JavaScript"></a><a href="http://thenewcode.com/1181/Window-Window-Measuring-Screen-Sizes-with-JavaScript" target="_blank" rel="external">Window, Window: Measuring Screen Sizes with JavaScript</a></h2><ul>
@@ -1245,17 +1285,17 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
   
   <entry>
     <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 2</title>
-    <link href="http://199911.github.io/review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/"/>
-    <id>http://199911.github.io/review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/</id>
+    <link href="http://199911.github.io/book-review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/"/>
+    <id>http://199911.github.io/book-review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/</id>
     <published>2017-03-17T16:00:00.000Z</published>
-    <updated>2017-03-26T09:13:05.000Z</updated>
+    <updated>2017-10-29T11:34:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>In chapter 6, the book demonstrate how to control JavaScript object’s property with its internal value. I think immuntable.js may make sure this techniques in implementation.<br>In chapter 7, is show some interest property in function object, but it is not accessible in strict mode, it is not very useful.<br>In chapter 9, this book explain how user agent evolve, and meaning of each component. It is quite interesting.</p>
 <a id="more"></a>
@@ -1685,17 +1725,17 @@
     
     </summary>
     
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
     
     
   </entry>
   
   <entry>
     <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1</title>
-    <link href="http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/"/>
-    <id>http://199911.github.io/review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/</id>
+    <link href="http://199911.github.io/book-review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/"/>
+    <id>http://199911.github.io/book-review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/</id>
     <published>2017-03-13T16:00:00.000Z</published>
-    <updated>2017-03-18T06:50:36.000Z</updated>
+    <updated>2017-10-29T11:34:13.000Z</updated>
     
     <content type="html"><![CDATA[<p>This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place</p>
 <a id="more"></a>
@@ -1914,17 +1954,17 @@
     
     </summary>
     
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
+      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
     
     
   </entry>
   
   <entry>
     <title>簡評十三</title>
-    <link href="http://199911.github.io/insight/2017/02/19/commentaries-13/"/>
-    <id>http://199911.github.io/insight/2017/02/19/commentaries-13/</id>
+    <link href="http://199911.github.io/commentary/2017/02/19/commentaries-13/"/>
+    <id>http://199911.github.io/commentary/2017/02/19/commentaries-13/</id>
     <published>2017-02-18T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-10-29T11:48:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="混合型的-Javascript"><a href="#混合型的-Javascript" class="headerlink" title="混合型的 Javascript"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/476" target="_blank" rel="external">混合型的 Javascript</a></h1><p>Generate javascript code from server side. The use case in example is generating database connect function. It is a quite interesting idea, but I cannot come up with any use cases.</p>
 <a id="more"></a>
@@ -1966,7 +2006,7 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
@@ -2014,10 +2054,10 @@
   
   <entry>
     <title>簡評十二</title>
-    <link href="http://199911.github.io/insight/2017/02/11/commentaries-12/"/>
-    <id>http://199911.github.io/insight/2017/02/11/commentaries-12/</id>
+    <link href="http://199911.github.io/commentary/2017/02/11/commentaries-12/"/>
+    <id>http://199911.github.io/commentary/2017/02/11/commentaries-12/</id>
     <published>2017-02-10T16:00:00.000Z</published>
-    <updated>2017-05-06T09:39:47.000Z</updated>
+    <updated>2017-10-29T11:48:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="A-Web-Dev’s-Valentine"><a href="#A-Web-Dev’s-Valentine" class="headerlink" title="A Web Dev’s Valentine"></a><a href="http://codepen.io/AllThingsSmitty/pen/pNLVWm/" target="_blank" rel="external">A Web Dev’s Valentine</a></h1><p>Create a heart with CSS and html</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.heart:before,</div><div class="line">.heart:after &#123;</div><div class="line">  background: #cd231b;</div><div class="line">  border-radius: 50px 50px 0 0;</div><div class="line">  content: &quot;&quot;;</div><div class="line">  height: 25px;</div><div class="line">  left: 15px;</div><div class="line">  position: absolute;</div><div class="line">  transform: rotate(-45deg);</div><div class="line">  transform-origin: 0 100%;</div><div class="line">  width: 15px;</div><div class="line">&#125;</div><div class="line">.heart:after &#123;</div><div class="line">  left: 0;</div><div class="line">  transform: rotate(45deg);</div><div class="line">  transform-origin: 100% 100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -2034,17 +2074,17 @@
     
     </summary>
     
-      <category term="Insight" scheme="http://199911.github.io/categories/Insight/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
   
   <entry>
     <title>All about css float</title>
-    <link href="http://199911.github.io/review/2017/02/08/all-about-css-float/"/>
-    <id>http://199911.github.io/review/2017/02/08/all-about-css-float/</id>
+    <link href="http://199911.github.io/commentary/2017/02/08/all-about-css-float/"/>
+    <id>http://199911.github.io/commentary/2017/02/08/all-about-css-float/</id>
     <published>2017-02-07T16:00:00.000Z</published>
-    <updated>2017-02-08T15:15:07.000Z</updated>
+    <updated>2017-10-29T11:47:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>This article explain the behaviour of CSS float property. I like this article because it compare float with other CSS layout properties, but it is an old post from 2008.</p>
 <h2 id="Auto-reflow"><a href="#Auto-reflow" class="headerlink" title="Auto reflow"></a>Auto reflow</h2><p>Float can reflow after resize (Push the adjacent element automatically). If use <code>position: absolute;</code>, the resized element may cover adjacent elements.</p>
@@ -2080,31 +2120,7 @@
     
     </summary>
     
-      <category term="Review" scheme="http://199911.github.io/categories/Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Udemy: 掌握 Git &amp; Github 程式時光機</title>
-    <link href="http://199911.github.io/diary/2017/02/07/udemy-git-and-github/"/>
-    <id>http://199911.github.io/diary/2017/02/07/udemy-git-and-github/</id>
-    <published>2017-02-06T16:00:00.000Z</published>
-    <updated>2017-02-08T14:19:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>之前係Facebook見到有couple，可以免費Take。</p>
-<p>課程用普通話，係台灣人教，內容比較基本，冇咩特別。除左tag之外，入邊D feature我平時有用開，入邊教D野太簡單，冇咩大insight。就算係tag果part，都只係一個簡單嘅overview。</p>
-<p>我睇左個course先知原來Github可以用 <code>master</code> branch做Github page，己經唔洗特別整一條 <code>gh-pages</code> branch。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前係Facebook見到有couple，可以免費Take。&lt;/p&gt;
-&lt;p&gt;課程用普通話，係台灣人教，內容比較基本，冇咩特別。除左tag之外，入邊D feature我平時有用開，入邊教D野太簡單，冇咩大insight。就算係tag果part，都只係一個簡單嘅overview
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
