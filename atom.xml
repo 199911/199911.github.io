@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-11-01T14:52:53.000Z</updated>
+  <updated>2017-11-03T08:34:13.000Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -16,14 +16,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>黑客松技巧</title>
+    <title>Code reuse</title>
+    <link href="http://199911.github.io/knowledge/2017/11/03/code-reuse/"/>
+    <id>http://199911.github.io/knowledge/2017/11/03/code-reuse/</id>
+    <published>2017-11-02T16:00:00.000Z</published>
+    <updated>2017-11-03T08:34:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>To boost programmer’s productivity, we reuse codes. But it is not always a good idea have code reuse</p>
+<a id="more"></a>
+<h2 id="Reused-code-must-have-clear-responsibility"><a href="#Reused-code-must-have-clear-responsibility" class="headerlink" title="Reused code must have clear responsibility"></a>Reused code must have clear responsibility</h2><p>The usage of the code may be well defined and having documentaion on the abstraction layers. It is dangerous if other using the code without understanding it. The code may be used in some tricky or unexecpted ways and cause bug difficult to fix.</p>
+<h2 id="Reused-code-should-not-be-too-complex"><a href="#Reused-code-should-not-be-too-complex" class="headerlink" title="Reused code should not be too complex"></a>Reused code should not be too complex</h2><p>If the feature of the reused code is too complex, productivity may not be improved. Learning how to re-use code take time. If the code is too complex, it will take programmer lots of time to understand how to reuse codes.</p>
+<h2 id="Reused-code-must-be-well-tested-at-least-testable"><a href="#Reused-code-must-be-well-tested-at-least-testable" class="headerlink" title="Reused code must be well tested, at least testable"></a>Reused code must be well tested, at least testable</h2><p>The cost on refactoring or fixing reused code is very high. It is because everytime the reused code update, we have to test all components depends on it. After that, we have to clean up workarounds and hotfixes in components. That’s why before reusing code, we have to test and build automated test if possible.</p>
+<h2 id="Consider-factor-out-codes-when-it-is-reused-three-times-or-more"><a href="#Consider-factor-out-codes-when-it-is-reused-three-times-or-more" class="headerlink" title="Consider factor out codes when it is reused three times or more"></a>Consider factor out codes when it is reused three times or more</h2><p>In most cases, some works need to be done before reuse. Such as testing, update the function interface for different scenarios, documentation, etc. If we make all code reusable, it will become over-engineering. There is a rule of thumb that only generalize the code which is used at least three times. TODO: add reference</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="external">十年磨一剑—序</a>: Spent too much time on studying a powerful but complex log system</p>
+<p><a href="https://www.allankellyassociates.co.uk/archives/772/reuse-myth-can-you-afford-reusable-code/" target="_blank" rel="external">Reuse Myth - can you afford reusable code?</a>: Code reuse can be expensive</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;To boost programmer’s productivity, we reuse codes. But it is not always a good idea have code reuse&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Skills for hackathon</title>
     <link href="http://199911.github.io/knowledge/2017/10/29/hackathon/"/>
     <id>http://199911.github.io/knowledge/2017/10/29/hackathon/</id>
     <published>2017-10-28T16:00:00.000Z</published>
-    <updated>2017-11-01T14:52:53.000Z</updated>
+    <updated>2017-11-03T08:33:57.000Z</updated>
     
     <content type="html"><![CDATA[<p>Hackathon大約分兩種，一種係Slideshow presentation比賽，另一種係Mockup presentation比賽。</p>
-<a id="more"></a>
 <h2 id="Slideshow-presentation比賽"><a href="#Slideshow-presentation比賽" class="headerlink" title="Slideshow presentation比賽"></a>Slideshow presentation比賽</h2><p>如果個Hackathon係少於24小時，咁多數係Slideshow presentation，因為冇咩可能夠時間build到一個prototype出黎。大部份嘅Hackathon都係多過24小時，但係香港係有D 24小時以內嘅slideshow比賽扮hackathon。</p>
 <h2 id="Mockup-presentation比賽"><a href="#Mockup-presentation比賽" class="headerlink" title="Mockup presentation比賽"></a>Mockup presentation比賽</h2><p>除非比賽前一早諗好個idea，form好team，就算俾夠你48小時，都好難build到個prototype出黎。好多時都係build一個可以郁嘅mock up用黎做presentation。個Focus都係個product idea同UI/UX，個mock up大約show到個flow就得</p>
 <h2 id="相關嘅skills"><a href="#相關嘅skills" class="headerlink" title="相關嘅skills"></a>相關嘅skills</h2><ul>
@@ -47,6 +74,7 @@
     <summary type="html">
     
       &lt;p&gt;Hackathon大約分兩種，一種係Slideshow presentation比賽，另一種係Mockup presentation比賽。&lt;/p&gt;
+&lt;h2 id=&quot;Slideshow-presentation比賽&quot;&gt;&lt;a href=&quot;#Slideshow-presentat
     
     </summary>
     
@@ -1018,9 +1046,10 @@
     <link href="http://199911.github.io/book-review/2017/05/06/book-review-1/"/>
     <id>http://199911.github.io/book-review/2017/05/06/book-review-1/</id>
     <published>2017-05-05T16:00:00.000Z</published>
-    <updated>2017-05-06T11:53:03.000Z</updated>
+    <updated>2017-11-03T08:34:22.000Z</updated>
     
     <content type="html"><![CDATA[<p>決定將非technical嘅書嘅讀後感放係同一個cat到</p>
+<h2 id="以Game載道"><a href="#以Game載道" class="headerlink" title="以Game載道"></a>以Game載道</h2><p>無意中係圖書館見到E本書，於是就借左黎睇。入邊最深刻就係遊戲係sell緊content同experience，同報紙雜誌一樣係一個媒體。甚至可以做到教化作用。</p>
 <h2 id="钝感力"><a href="#钝感力" class="headerlink" title="钝感力"></a>钝感力</h2><p>幾有意思，有部份例子唔太認同。但係不為瑣事動搖嘅能力的確係一種重要才能。</p>
 <h2 id="發掘你的太陽魔力"><a href="#發掘你的太陽魔力" class="headerlink" title="發掘你的太陽魔力"></a>發掘你的太陽魔力</h2><p>以半小說形式介紹太陽劇團嘅人員點樣保持熱情，keep住創新。</p>
 <a id="more"></a>
@@ -1118,6 +1147,7 @@
     <summary type="html">
     
       &lt;p&gt;決定將非technical嘅書嘅讀後感放係同一個cat到&lt;/p&gt;
+&lt;h2 id=&quot;以Game載道&quot;&gt;&lt;a href=&quot;#以Game載道&quot; class=&quot;headerlink&quot; title=&quot;以Game載道&quot;&gt;&lt;/a&gt;以Game載道&lt;/h2&gt;&lt;p&gt;無意中係圖書館見到E本書，於是就借左黎睇。入邊最深刻就係遊戲係sell緊content同experience，同報紙雜誌一樣係一個媒體。甚至可以做到教化作用。&lt;/p&gt;
 &lt;h2 id=&quot;钝感力&quot;&gt;&lt;a href=&quot;#钝感力&quot; class=&quot;headerlink&quot; title=&quot;钝感力&quot;&gt;&lt;/a&gt;钝感力&lt;/h2&gt;&lt;p&gt;幾有意思，有部份例子唔太認同。但係不為瑣事動搖嘅能力的確係一種重要才能。&lt;/p&gt;
 &lt;h2 id=&quot;發掘你的太陽魔力&quot;&gt;&lt;a href=&quot;#發掘你的太陽魔力&quot; class=&quot;headerlink&quot; title=&quot;發掘你的太陽魔力&quot;&gt;&lt;/a&gt;發掘你的太陽魔力&lt;/h2&gt;&lt;p&gt;以半小說形式介紹太陽劇團嘅人員點樣保持熱情，keep住創新。&lt;/p&gt;
     
@@ -1191,7 +1221,7 @@
     <link href="http://199911.github.io/commentary/2017/04/16/commentaries-15/"/>
     <id>http://199911.github.io/commentary/2017/04/16/commentaries-15/</id>
     <published>2017-04-15T16:00:00.000Z</published>
-    <updated>2017-10-29T11:48:00.000Z</updated>
+    <updated>2017-11-03T08:34:22.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Regular-Expressions-in-a-post-ES6-world"><a href="#Regular-Expressions-in-a-post-ES6-world" class="headerlink" title="Regular Expressions in a post-ES6 world"></a><a href="https://ponyfoo.com/articles/regular-expressions-post-es6" target="_blank" rel="external">Regular Expressions in a post-ES6 world</a></h2><ul>
 <li>Sticky group<ul>
@@ -1224,7 +1254,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="以Game載道"><a href="#以Game載道" class="headerlink" title="以Game載道"></a>以Game載道</h2><p>無意中係圖書館見到E本書，於是就借左黎睇。入邊最深刻就係遊戲係sell緊content同experience，同報紙雜誌一樣係一個媒體。甚至可以做到教化作用。</p>
 ]]></content>
     
     <summary type="html">
@@ -2071,52 +2100,6 @@
     <summary type="html">
     
       &lt;h1 id=&quot;A-Web-Dev’s-Valentine&quot;&gt;&lt;a href=&quot;#A-Web-Dev’s-Valentine&quot; class=&quot;headerlink&quot; title=&quot;A Web Dev’s Valentine&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://codepen
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>All about css float</title>
-    <link href="http://199911.github.io/commentary/2017/02/08/all-about-css-float/"/>
-    <id>http://199911.github.io/commentary/2017/02/08/all-about-css-float/</id>
-    <published>2017-02-07T16:00:00.000Z</published>
-    <updated>2017-10-29T11:47:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This article explain the behaviour of CSS float property. I like this article because it compare float with other CSS layout properties, but it is an old post from 2008.</p>
-<h2 id="Auto-reflow"><a href="#Auto-reflow" class="headerlink" title="Auto reflow"></a>Auto reflow</h2><p>Float can reflow after resize (Push the adjacent element automatically). If use <code>position: absolute;</code>, the resized element may cover adjacent elements.</p>
-<h2 id="Three-clear-float-solutions"><a href="#Three-clear-float-solutions" class="headerlink" title="Three clear float solutions"></a>Three clear float solutions</h2><ul>
-<li>The Empty Div Method:<ul>
-<li>Add an empty div with <code>clear: both;</code></li>
-</ul>
-</li>
-<li>The overflow method:<ul>
-<li>If this property is set to auto or hidden on the parent element, the parent will expand to contain the floats</li>
-</ul>
-</li>
-<li>The Easy Clearing Method:<ul>
-<li>Use the following CSS (also used by bootstrap 3)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.clearfix:after &#123;</div><div class="line">   content: &quot;.&quot;;</div><div class="line">   visibility: hidden;</div><div class="line">   display: block;</div><div class="line">   height: 0;</div><div class="line">   clear: both;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Problems-with-floats"><a href="#Problems-with-floats" class="headerlink" title="Problems with floats"></a>Problems with floats</h2><ul>
-<li>Push down<ul>
-<li>The image overflow from parent and push the adjacent elements downward.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://css-tricks.com/all-about-floats/" target="_blank" rel="external">All About Floats</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This article explain the behaviour of CSS float property. I like this article because it compare float with other CSS layout properties, 
     
     </summary>
     
