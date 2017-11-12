@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-11-03T08:34:13.000Z</updated>
+  <updated>2017-11-12T10:10:16.279Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,254 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PYCON 2017: Python Logging in Production</title>
+    <link href="http://199911.github.io/diary/2017/11/12/python-loggin-in-production/"/>
+    <id>http://199911.github.io/diary/2017/11/12/python-loggin-in-production/</id>
+    <published>2017-11-11T16:00:00.000Z</published>
+    <updated>2017-11-12T10:10:16.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>It is the only talk I have jot notes</p>
+<h2 id="Why-we-need-to-log-everything"><a href="#Why-we-need-to-log-everything" class="headerlink" title="Why we need to log everything?"></a>Why we need to log everything?</h2><p>Log is the final fallback of any unexpected requirements:</p>
+<ul>
+<li>Provide support for new business decide which does not know when develop the system</li>
+<li>Audit</li>
+</ul>
+<h2 id="Log-system-structure"><a href="#Log-system-structure" class="headerlink" title="Log system structure"></a>Log system structure</h2><ul>
+<li>Loggers<ul>
+<li>Filter</li>
+<li>Handlers<ul>
+<li>Filter</li>
+<li>Formatter</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h2><ul>
+<li>Logger<ul>
+<li>A channel of a set of log events</li>
+<li>Classified by the nature of log events</li>
+<li>Examples<ul>
+<li>Database related logger</li>
+<li>Feature related logger</li>
+<li>Web access logger</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Filter<ul>
+<li>Filter out unwant events<ul>
+<li>log levels (usually 5 levels) are handled here</li>
+</ul>
+</li>
+<li>Sanitize data<ul>
+<li>Remove sensitive data (e.g. Password)</li>
+<li>Mask personal data (Email, phone etc)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Handler<ul>
+<li>Dispatch logging event to different destination</li>
+<li>Can integrate bug tracker inside logger</li>
+<li>Types<ul>
+<li>Log file</li>
+<li>External log services<ul>
+<li>Papertrail, Bugsnag, Slack etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Formatter<ul>
+<li>The function which transform log events into different format<ul>
+<li>JSON, XML, TXT etc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>strcuture</p>
+<p>config over code</p>
+<p>can check slow query</p>
+<p>Integrate bug tracker inside logger</p>
+<p>logs and reporting</p>
+<ul>
+<li>log important data change</li>
+<li>log request/response</li>
+<li>define a fixed format or logs</li>
+</ul>
+<ul>
+<li>should have no side effect</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;It is the only talk I have jot notes&lt;/p&gt;
+&lt;h2 id=&quot;Why-we-need-to-log-everything&quot;&gt;&lt;a href=&quot;#Why-we-need-to-log-everything&quot; class=&quot;headerlink&quot; title=&quot;Why we need to log everything?&quot;&gt;&lt;/a&gt;Why we need to log everything?&lt;/h2&gt;&lt;p&gt;Log is the final fallback of any unexpected requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide support for new business decide which does not know when develop the system&lt;/li&gt;
+&lt;li&gt;Audit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Log-system-structure&quot;&gt;&lt;a href=&quot;#Log-system-structure&quot; class=&quot;headerlink&quot; title=&quot;Log system structure&quot;&gt;&lt;/a&gt;Log system structure&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Loggers&lt;ul&gt;
+&lt;li&gt;Filter&lt;/li&gt;
+&lt;li&gt;Handlers&lt;ul&gt;
+&lt;li&gt;Filter&lt;/li&gt;
+&lt;li&gt;Formatter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>簡評十八</title>
+    <link href="http://199911.github.io/commentary/2017/11/12/commentaries-19/"/>
+    <id>http://199911.github.io/commentary/2017/11/12/commentaries-19/</id>
+    <published>2017-11-11T16:00:00.000Z</published>
+    <updated>2017-11-12T10:26:14.825Z</updated>
+    
+    <content type="html"><![CDATA[<p>以下係share左去facebook嘅article，係自己個blog 留個copy, 沉澱一下。</p>
+<h2 id="Something-Slightly-Less-Terrible"><a href="#Something-Slightly-Less-Terrible" class="headerlink" title="Something Slightly Less Terrible"></a><a href="https://www.objc.io/issues/20-interviews/loren-brichter/" target="_blank" rel="external">Something Slightly Less Terrible</a></h2><p>Software product個nature好dynamic，冇所謂嘅perfect嘅code。唔同嘅technology，framework都係trade off。追求Technology本身冇咩意義，最重要係個product解決到問題，可以keep住maintain同run落去。</p>
+<h2 id="DevOps-is-a-culture-not-a-role"><a href="#DevOps-is-a-culture-not-a-role" class="headerlink" title="DevOps is a culture, not a role!"></a><a href="https://dev.jlelse.eu/devops-is-a-culture-not-a-role-be1bed149b0" target="_blank" rel="external">DevOps is a culture, not a role!</a></h2><p>DevOps係一個culture，想做到development同operation嘅合作更緊密，提升efficiency。一講到合作，就要求團隊信任。合作同信任唔係話你開一個DevOps嘅位就解決到，係要成個團隊有咁嘅mindset先做到。</p>
+<h2 id="The-Case-of-the-Stolen-Source-Code"><a href="#The-Case-of-the-Stolen-Source-Code" class="headerlink" title="The Case of the Stolen Source Code"></a><a href="https://panic.com/blog/stolen-source-code" target="_blank" rel="external">The Case of the Stolen Source Code</a></h2><p>Product嘅source code俾人偷左，但係公司唔擔心個product俾人clone一個free version出黎。因為好嘅product唔係一件貨，而係一個service。好嘅product唔會單單俾一個clone打低，個product會keep住tune，隨住時代改變。對一間做product嘅公司黎講，精粹係做product嘅team，而唔係做出黎嘅product。</p>
+<a id="more"></a>
+<h2 id="The-5-Laws-of-Software-Estimates"><a href="#The-5-Laws-of-Software-Estimates" class="headerlink" title="The 5 Laws of Software Estimates"></a><a href="https://ardalis.com/5-laws-of-software-estimates" target="_blank" rel="external">The 5 Laws of Software Estimates</a></h2><h3 id="唔可以忽略Estimate係要用時間"><a href="#唔可以忽略Estimate係要用時間" class="headerlink" title="唔可以忽略Estimate係要用時間"></a>唔可以忽略Estimate係要用時間</h3><p>但係點樣estimate，幾時estimate，有好多準備同調節嘅空間。文中以kanban做例子，不過要留意人地嘅應用場景係大project，一個周期係半個同一個月，參與其中個人數比較多。個methodology未必個個地方岩用。</p>
+<h3 id="Estimated-出黎嘅cost係因做嘅人而異"><a href="#Estimated-出黎嘅cost係因做嘅人而異" class="headerlink" title="Estimated 出黎嘅cost係因做嘅人而異"></a>Estimated 出黎嘅cost係因做嘅人而異</h3><p>每個人嘅skill，經驗，同個對個project嘅脈絡嘅了解程度都唔同， estimate出黎嘅時間都唔同，好難由人地幫你去estimate，每個人都要學習去estimate自己要幾多時間去完成個task，文中suggest用planning poker去做estimation</p>
+<h3 id="Estimation-9成都唔準"><a href="#Estimation-9成都唔準" class="headerlink" title="Estimation 9成都唔準"></a>Estimation 9成都唔準</h3><p>其實同天文台預測天氣一樣，無論幾細嘅誤差，經過時間嘅累積，最後會對結果有好大嘅影響。因此要拆細D task，令到個scope細D，個預測就會準D。</p>
+<h3 id="要經常review-對個task嘅-estimation"><a href="#要經常review-對個task嘅-estimation" class="headerlink" title="要經常review 對個task嘅 estimation"></a>要經常review 對個task嘅 estimation</h3><p>由於預測好難準，當一有問題會做成delay嘅時候，要盡早update個estimation，重新計劃。通當做到一半嘅時候，因為對個task嘅<br>了解比開始做之前多左，預測會準好多。唔好limit住自己係開波之前要有一個好準嘅estimation，要保持住彈性，有必要嘅話，可以隨時update個estimation。</p>
+<h3 id="Estimation係難，係唔準，係要用唔小時間，但唔可以避免"><a href="#Estimation係難，係唔準，係要用唔小時間，但唔可以避免" class="headerlink" title="Estimation係難，係唔準，係要用唔小時間，但唔可以避免"></a>Estimation係難，係唔準，係要用唔小時間，但唔可以避免</h3><p>做team project，要同其他人去協調，好難避免唔去分工。一分工，就要安排人手。個task要安排幾多人手？要assign俾邊個去做？要做到E D決定，始終要有個estimation。</p>
+<p>個人黎講，estimation要做，但係唔應該花太多時間，反正都唔準，遲下都要重新估計。只要有個大約，可以排到先後次序，有個計劃就得。而當同其他人合作嘅時候，文中提到agile嘅practise都唔錯。</p>
+<h2 id="Whiteboard-Interviews-Suck-Get-Good-at-Them-Anyway"><a href="#Whiteboard-Interviews-Suck-Get-Good-at-Them-Anyway" class="headerlink" title="Whiteboard Interviews Suck, Get Good at Them Anyway"></a><a href="https://www.alexkras.com/whiteboard-interviews-suck-get-good-at-them-anyway" target="_blank" rel="external">Whiteboard Interviews Suck, Get Good at Them Anyway</a></h2><p>Whiteboard interview 嘅問題同工作唔大關係，但係D問題guarentee interviewee 水平唔會太差，係一個保底策略</p>
+<h2 id="How-to-Read-Code"><a href="#How-to-Read-Code" class="headerlink" title="How to Read Code"></a><a href="https://spin.atomicobject.com/2017/06/01/how-to-read-code/" target="_blank" rel="external">How to Read Code</a></h2><ol>
+<li>先睇main function<ul>
+<li>寫得好嘅 main function 可以睇到成個program 嘅overview</li>
+<li>明左成個program 嘅structure可以幫助理解細D嘅component</li>
+</ul>
+</li>
+<li>㨂重要嘅code去睇<ul>
+<li>通常睇code都係有個目標，例如想查其個feature係點implement，要debug。</li>
+<li>要時時刻刻記住個目標，skip曬冇關嘅code</li>
+<li>睇左main function明左個program structure後，要揾出邊D code同個目標有關應該易好多</li>
+</ul>
+</li>
+<li>小心理解program入邊嘅comment 同 variable name<br>當D code睇唔明嘅時候，可以留意下D comment 同variable name。好嘅code嘅comment 同 variable name都係有意思，細心思考可以得到一D貼士。<br>但係要小心，comment 可能冇update到，同D logic唔match。要記住comment始終係輔助，要以code為主</li>
+<li>睇Git history 同 GitHub pull request<br>做完以上3點，都睇唔明嘅時候，可以試下問人。如果有用version control，例如git嘅話，可以用git blame <file path="">同 git log -p <file path=""> 去查下段code係邊個寫嘅，就揾到人問。<br>如果有用類似Github嘅version control service，可以睇返以前個pull request，睇返當時D人嘅discussion，可以得到有個D code嘅context<br>其實以上嘅skill work唔work，好睇D code寫得好唔好。如果D code寫到亂七八糟，用咩skill都好難睇得明。一條team嘅productivity，長遠黎講唔係depends on D code 出得有幾快，唔係depends on 用嘅technology有幾新，而係D code寫睇易唔易睇，易唔易maintain</file></file></li>
+</ol>
+<h2 id="Frustration-Detection"><a href="#Frustration-Detection" class="headerlink" title="Frustration Detection"></a><a href="https://blog.bugsnag.com/detecting-user-frustration/" target="_blank" rel="external">Frustration Detection</a></h2><p>UX差好多時唔係一個software bug，單從code嘅層面係detect唔到，因此要主動去check。</p>
+<ol>
+<li>Check 個page 用左幾耐去load</li>
+<li>Check user 有冇不斷refresh個page<ul>
+<li>要特別check埋hotkey(F5 / cmd + r)</li>
+</ul>
+</li>
+<li>Check user有冇狂㩒隻mouse<ul>
+<li>好可能係個網頁冇反應，或者有D button錯誤地disable左</li>
+</ul>
+</li>
+</ol>
+<h2 id="Stuff-at-the-Top-of-an-SVG"><a href="#Stuff-at-the-Top-of-an-SVG" class="headerlink" title="Stuff at the Top of an SVG"></a><a href="https://medium.com/@pnowelldesign/stuff-at-the-top-of-an-svg-f3ad198eb54e" target="_blank" rel="external">Stuff at the Top of an SVG</a></h2><p>篇文分析左svg嘅content,同埋邊D tag可以remove。</p>
+<h2 id="面对-bug-的正确姿势"><a href="#面对-bug-的正确姿势" class="headerlink" title="面对 bug 的正确姿势"></a><a href="http://www.10tiao.com/html/210/201705/2653788647/1.html" target="_blank" rel="external">面对 bug 的正确姿势</a></h2><p>係一個soft d嘅角度睇bug嘅處理手法</p>
+<ul>
+<li>管理層要在乎code quality<ul>
+<li>如果唔俾足夠嘅資源俾developer，慢慢就會形成一種「交貨」嘅文化。冇人會想負責任，唔會主動fix bug，畢竟bug fixing好多時都係吃力不討好嘅工作。</li>
+</ul>
+</li>
+<li>Bug fixing task集中係一個人身上<ul>
+<li>如果單睇做task嘅performance去assign task，所有難嘅task都會去曬rockstar engineer身上。而其他人就冇機會透過D難嘅task去進步，咩都靠曬rockstar engineer，做成一個single point of failure</li>
+<li>要解決E個問題，似乎可以透過build up sharing 嘅culture，嘗試去sychronize成條team嘅knowledge</li>
+</ul>
+</li>
+<li>以獎勵fix bug嘅系統好易俾人利用<ul>
+<li>變相獎勵多bug嘅team</li>
+<li>自己製做bug去fix<br>Maintain住code quality嘅好處唔明顯，好多人都以為個system做到野就得。文中有一句話形容得好貼切。<blockquote>
+<p>Code quality好都唔保證個future development會快，又唔保證唔會有新嘅bug。但係code quality差，development就一定快唔到。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以下係share左去facebook嘅article，係自己個blog 留個copy, 沉澱一下。&lt;/p&gt;
+&lt;h2 id=&quot;Something-Slightly-Less-Terrible&quot;&gt;&lt;a href=&quot;#Something-Slightly-Less-Terrible&quot; class=&quot;headerlink&quot; title=&quot;Something Slightly Less Terrible&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.objc.io/issues/20-interviews/loren-brichter/&quot;&gt;Something Slightly Less Terrible&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Software product個nature好dynamic，冇所謂嘅perfect嘅code。唔同嘅technology，framework都係trade off。追求Technology本身冇咩意義，最重要係個product解決到問題，可以keep住maintain同run落去。&lt;/p&gt;
+&lt;h2 id=&quot;DevOps-is-a-culture-not-a-role&quot;&gt;&lt;a href=&quot;#DevOps-is-a-culture-not-a-role&quot; class=&quot;headerlink&quot; title=&quot;DevOps is a culture, not a role!&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://dev.jlelse.eu/devops-is-a-culture-not-a-role-be1bed149b0&quot;&gt;DevOps is a culture, not a role!&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;DevOps係一個culture，想做到development同operation嘅合作更緊密，提升efficiency。一講到合作，就要求團隊信任。合作同信任唔係話你開一個DevOps嘅位就解決到，係要成個團隊有咁嘅mindset先做到。&lt;/p&gt;
+&lt;h2 id=&quot;The-Case-of-the-Stolen-Source-Code&quot;&gt;&lt;a href=&quot;#The-Case-of-the-Stolen-Source-Code&quot; class=&quot;headerlink&quot; title=&quot;The Case of the Stolen Source Code&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://panic.com/blog/stolen-source-code&quot;&gt;The Case of the Stolen Source Code&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Product嘅source code俾人偷左，但係公司唔擔心個product俾人clone一個free version出黎。因為好嘅product唔係一件貨，而係一個service。好嘅product唔會單單俾一個clone打低，個product會keep住tune，隨住時代改變。對一間做product嘅公司黎講，精粹係做product嘅team，而唔係做出黎嘅product。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>簡評十八</title>
+    <link href="http://199911.github.io/commentary/2017/11/04/commentaries-18/"/>
+    <id>http://199911.github.io/commentary/2017/11/04/commentaries-18/</id>
+    <published>2017-11-03T16:00:00.000Z</published>
+    <updated>2017-11-12T10:10:16.264Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Listen-up-intern"><a href="#Listen-up-intern" class="headerlink" title="Listen up intern"></a><a href="https://www.facebook.com/gary/videos/10154185928643350/" target="_blank" rel="external">Listen up intern</a></h2><ul>
+<li>It is impossible to learn everything in the industries in just a few months</li>
+<li>Get overview on the industry</li>
+<li>Focus on building connection instead</li>
+<li>Find people to learn from, attach to that people</li>
+</ul>
+<a id="more"></a>
+<h2 id="I-had-a-black-dog-his-name-was-depression"><a href="#I-had-a-black-dog-his-name-was-depression" class="headerlink" title="I had a black dog, his name was depression"></a><a href="https://www.youtube.com/watch?v=fhIKFHSqWd4" target="_blank" rel="external">I had a black dog, his name was depression</a></h2><ul>
+<li>Express emotion</li>
+<li>Write emotion dairy</li>
+<li>Exercise</li>
+</ul>
+<h2 id="Should-you-put-tape-over-your-webcam"><a href="#Should-you-put-tape-over-your-webcam" class="headerlink" title="Should you put tape over your webcam?"></a><a href="https://www.facebook.com/circuitbreaker/videos/1891509821141838/" target="_blank" rel="external">Should you put tape over your webcam?</a></h2><p>New Web technology allow browser access web camera, which make hacker easier to hack the web camera. Microphone is also dangerous.</p>
+<h2 id="What-makes-us-feel-good-about-our-work"><a href="#What-makes-us-feel-good-about-our-work" class="headerlink" title="What makes us feel good about our work?"></a><a href="https://www.ted.com/talks/dan_ariely_what_makes_us_feel_good_about_our_work" target="_blank" rel="external">What makes us feel good about our work?</a></h2><ul>
+<li>Meaningless job crush the internal joy on doing tasks</li>
+<li>Management need to let employees feel the job’s meaning, not utilize them as a tool by money</li>
+<li>Adding motivation is not difficult</li>
+<li>Elimatinating motivation is incrediblely easy</li>
+<li>People like things which they put effort on it</li>
+<li>Pre-industrial revolution<ul>
+<li>Meaning &gt; Efficency</li>
+</ul>
+</li>
+<li>Knowledge economy<ul>
+<li>Meaning &gt; Efficency</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Listen-up-intern&quot;&gt;&lt;a href=&quot;#Listen-up-intern&quot; class=&quot;headerlink&quot; title=&quot;Listen up intern&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.facebook.com/gary/videos/10154185928643350/&quot;&gt;Listen up intern&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;It is impossible to learn everything in the industries in just a few months&lt;/li&gt;
+&lt;li&gt;Get overview on the industry&lt;/li&gt;
+&lt;li&gt;Focus on building connection instead&lt;/li&gt;
+&lt;li&gt;Find people to learn from, attach to that people&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Code reuse</title>
@@ -1159,6 +1407,30 @@
   </entry>
   
   <entry>
+    <title>簡評十七</title>
+    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
+    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-10-29T11:47:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
+<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
+<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
+<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>簡評十六</title>
     <link href="http://199911.github.io/commentary/2017/04/17/commentaries-16/"/>
     <id>http://199911.github.io/commentary/2017/04/17/commentaries-16/</id>
@@ -1184,30 +1456,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Releasing-Prettier-1-0&quot;&gt;&lt;a href=&quot;#Releasing-Prettier-1-0&quot; class=&quot;headerlink&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jlon
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十七</title>
-    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
-    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-10-29T11:47:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
-<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
-<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
-<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
     
     </summary>
     
@@ -1984,126 +2232,6 @@
     </summary>
     
       <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十三</title>
-    <link href="http://199911.github.io/commentary/2017/02/19/commentaries-13/"/>
-    <id>http://199911.github.io/commentary/2017/02/19/commentaries-13/</id>
-    <published>2017-02-18T16:00:00.000Z</published>
-    <updated>2017-10-29T11:48:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="混合型的-Javascript"><a href="#混合型的-Javascript" class="headerlink" title="混合型的 Javascript"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/476" target="_blank" rel="external">混合型的 Javascript</a></h1><p>Generate javascript code from server side. The use case in example is generating database connect function. It is a quite interesting idea, but I cannot come up with any use cases.</p>
-<a id="more"></a>
-<h1 id="快樂的小成就"><a href="#快樂的小成就" class="headerlink" title="快樂的小成就"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/469" target="_blank" rel="external">快樂的小成就</a></h1><p>Quite interesting idea. The article suggest us to enjoy every little small progress. It is ok to be confident, even the how small the achievements are.</p>
-<h1 id="反思「過早最佳化是萬惡的根源」"><a href="#反思「過早最佳化是萬惡的根源」" class="headerlink" title="反思「過早最佳化是萬惡的根源」"></a><a href="http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/472" target="_blank" rel="external">反思「過早最佳化是萬惡的根源」</a></h1><p><code>Early optimization is root of evil</code> is reasonable on performance optimization. If we put this idea into architecture and system design, it would bring some problems. Because other team mate will follow the pattern of the system. The bad design and pattern will be reproduced if we don’t fix it in early stage. Therefore, architecture and system design have to be well planned and design as soon as possible.</p>
-<h1 id="真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想"><a href="#真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想" class="headerlink" title="真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想"></a><a href="https://hk.thenewslens.com/article/61910" target="_blank" rel="external">真正的「矽谷精神」是讓年輕人不需要賭身家，就有資源實現自己的技術和理想</a></h1><p>金句：</p>
-<ul>
-<li>新創公司就是要突破傳統，要選擇最激進的路。拿自己的錢出來，玩自己的公司，容易考慮太保守，失敗的機率就很大</li>
-<li>矽谷的精髓不在這些新創的技術，而是這樣一個良好的生態圈。如果我們的新創公司，需要年輕人傾家蕩產，把所有的東西和人脈一次賭出去，做決策的時候一定綁手綁腳，無法做出正確的決定。</li>
-</ul>
-<h1 id="JavaScript-Type-and-Code-Coverage-Profiling"><a href="#JavaScript-Type-and-Code-Coverage-Profiling" class="headerlink" title="JavaScript Type and Code Coverage Profiling"></a><a href="https://webkit.org/blog/3846/type-profiling-and-code-coverage-profiling-for-javascript/" target="_blank" rel="external">JavaScript Type and Code Coverage Profiling</a></h1><p>原來safari inspector 有 type 同 code coverage profiling</p>
-<p><a href="https://blog.jscrambler.com/how-captcha-works/" target="_blank" rel="external">How CAPTCHA Works</a></p>
-<p>Interesting history of CAPTCAH</p>
-<ul>
-<li>The text image is generated by machine from normal text.<ul>
-<li>Distorting text and adding background</li>
-</ul>
-</li>
-<li>There are audio version for blinds<ul>
-<li>Background noise is added</li>
-</ul>
-</li>
-<li>The second generation of Captcha ask user to recognizing image<ul>
-<li>Easier than recognizing distorted text</li>
-<li>Mobile friendly</li>
-<li>More difficult question for machine</li>
-</ul>
-</li>
-<li>new reCaptcha analysis browser history<ul>
-<li>Fallback to image / text recognition if cannot determine</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;混合型的-Javascript&quot;&gt;&lt;a href=&quot;#混合型的-Javascript&quot; class=&quot;headerlink&quot; title=&quot;混合型的 Javascript&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.codemud.net/~thinker/GinGin_CGI.py/show_id_doc/476&quot;&gt;混合型的 Javascript&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;Generate javascript code from server side. The use case in example is generating database connect function. It is a quite interesting idea, but I cannot come up with any use cases.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Udemy: Introduction to CSS Development</title>
-    <link href="http://199911.github.io/diary/2017/02/12/udemy-introduction-to-css-development/"/>
-    <id>http://199911.github.io/diary/2017/02/12/udemy-introduction-to-css-development/</id>
-    <published>2017-02-11T16:00:00.000Z</published>
-    <updated>2017-02-12T10:37:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>It is a free Course. The first few section is simple and basic, you can learn those thing from lots of place. But the ‘CSS architecture’ section make this worth taking. I may write another post to talk about that part.</p>
-<h2 id="Points"><a href="#Points" class="headerlink" title="Points"></a>Points</h2><ul>
-<li>Horizontal margin<ul>
-<li>It does not mention any limitation on these two methods, I am quite disappointed</li>
-</ul>
-</li>
-<li>vertical-align<ul>
-<li>The table cell will fill the table by default, it is the drawback of table-cell method.</li>
-</ul>
-</li>
-<li>Clearfix<ul>
-<li>It is good. Drawback is mentioned.</li>
-<li>But it is basically the content of <a href="https://css-tricks.com/all-about-floats/" target="_blank" rel="external">All About Floats</a></li>
-<li>If you want to see live demo, you can watch the video, otherwise, the article is better.</li>
-</ul>
-</li>
-<li>Specificity<ul>
-<li>The <a href="http://specificity.keegan.st/" target="_blank" rel="external">calculator</a> may be useful</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;It is a free Course. The first few section is simple and basic, you can learn those thing from lots of place. But the ‘CSS architecture’ 
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十二</title>
-    <link href="http://199911.github.io/commentary/2017/02/11/commentaries-12/"/>
-    <id>http://199911.github.io/commentary/2017/02/11/commentaries-12/</id>
-    <published>2017-02-10T16:00:00.000Z</published>
-    <updated>2017-10-29T11:48:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="A-Web-Dev’s-Valentine"><a href="#A-Web-Dev’s-Valentine" class="headerlink" title="A Web Dev’s Valentine"></a><a href="http://codepen.io/AllThingsSmitty/pen/pNLVWm/" target="_blank" rel="external">A Web Dev’s Valentine</a></h1><p>Create a heart with CSS and html</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">.heart:before,</div><div class="line">.heart:after &#123;</div><div class="line">  background: #cd231b;</div><div class="line">  border-radius: 50px 50px 0 0;</div><div class="line">  content: &quot;&quot;;</div><div class="line">  height: 25px;</div><div class="line">  left: 15px;</div><div class="line">  position: absolute;</div><div class="line">  transform: rotate(-45deg);</div><div class="line">  transform-origin: 0 100%;</div><div class="line">  width: 15px;</div><div class="line">&#125;</div><div class="line">.heart:after &#123;</div><div class="line">  left: 0;</div><div class="line">  transform: rotate(45deg);</div><div class="line">  transform-origin: 100% 100%;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="Dear-JavaScript-Maintainers"><a href="#Dear-JavaScript-Maintainers" class="headerlink" title="Dear JavaScript Maintainers,"></a><a href="http://thefullstack.xyz/dear-javascript-maintainers/" target="_blank" rel="external">Dear JavaScript Maintainers,</a></h1><p>MIT license stated the code is not guarenteed to work properly.</p>
-<h1 id="JavaScript-Will-Finally-Get-Proper-Asynchronous-Programming"><a href="#JavaScript-Will-Finally-Get-Proper-Asynchronous-Programming" class="headerlink" title="JavaScript Will Finally Get Proper Asynchronous Programming"></a><a href="http://thenewstack.io/async-officially-coming-javascript-year/" target="_blank" rel="external">JavaScript Will Finally Get Proper Asynchronous Programming</a></h1><p><code>async</code> will be available in ES2017. It make the javascript non blocking, even there are long running code.</p>
-<h1 id="The-end-of-the-clearfix-hack"><a href="#The-end-of-the-clearfix-hack" class="headerlink" title="The end of the clearfix hack?"></a><a href="https://www.rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/" target="_blank" rel="external">The end of the clearfix hack?</a></h1><p>We apply clearfix hack to float element container to prevent it collapse. But there a new value <code>flow-root</code> for <code>display</code> to solve this problem. We don’t need to have clearfix hack in the future.<br>FYI: <a href="http://caniuse.com/#search=flow-root" target="_blank" rel="external">Can I Use</a></p>
-<h1 id="CSS-only-3d-Macbook-Air"><a href="#CSS-only-3d-Macbook-Air" class="headerlink" title="CSS only 3d Macbook Air"></a><a href="http://codepen.io/neoberg/full/istyp/" target="_blank" rel="external">CSS only 3d Macbook Air</a></h1><p>Crazy CSS and HTML only macbook air animation</p>
-<h1 id="Hard-Reset-Using-the-CSS-Initial-Value"><a href="#Hard-Reset-Using-the-CSS-Initial-Value" class="headerlink" title="Hard Reset: Using the CSS Initial Value"></a><a href="http://thenewcode.com/1172/Hard-Reset-Using-the-CSS-Initial-Value" target="_blank" rel="external">Hard Reset: Using the CSS Initial Value</a></h1><p><code>initial</code> value reset the property to default value of user’s browser. So the normalized style will be reset too.<br><code>initial</code> does not work in all IE, even IE 11. WTF.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;A-Web-Dev’s-Valentine&quot;&gt;&lt;a href=&quot;#A-Web-Dev’s-Valentine&quot; class=&quot;headerlink&quot; title=&quot;A Web Dev’s Valentine&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://codepen
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
     
     
   </entry>
