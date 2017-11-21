@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-11-12T10:10:16.279Z</updated>
+  <updated>2017-11-21T14:17:00.849Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,144 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>簡評二十</title>
+    <link href="http://199911.github.io/commentary/2017/11/18/commentaries-20/"/>
+    <id>http://199911.github.io/commentary/2017/11/18/commentaries-20/</id>
+    <published>2017-11-17T16:00:00.000Z</published>
+    <updated>2017-11-21T14:17:00.849Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="The-Startup-The-Burnout"><a href="#The-Startup-The-Burnout" class="headerlink" title="The Startup, The Burnout"></a><a href="https://techcrunch.com/2015/12/22/the-startup-the-burnout/" target="_blank" rel="external">The Startup, The Burnout</a></h2><p>This article gives some tips on how to handle brunout</p>
+<ul>
+<li>Burnout is a quiet killer, need some effort to identify<ul>
+<li>Use mood and sleep log to keep track</li>
+</ul>
+</li>
+<li>Interrupt negative think pattern<ul>
+<li>Watching movie</li>
+<li>Running</li>
+<li>Reading</li>
+<li>Taking hot bath</li>
+</ul>
+</li>
+<li>Monotony cause burnout<ul>
+<li>Break the habit to introduces changes to life</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="How-I-cured-my-tech-fatigue-by-ditching-feeds"><a href="#How-I-cured-my-tech-fatigue-by-ditching-feeds" class="headerlink" title="How I cured my tech fatigue by ditching feeds"></a><a href="https://techcrunch.com/2017/10/28/how-i-cured-my-tech-fatigue-by-ditching-feeds/" target="_blank" rel="external">How I cured my tech fatigue by ditching feeds</a></h2><p>If you feel tried, just don’t force yourself to read and learn.</p>
+<ul>
+<li>Remove fb app, save time to read book focusly</li>
+<li>Don’t put too much attention on thing not related to you</li>
+<li>Pay attention to surrounding first, put the phone content to second, you can use books, movie or other stuff for that</li>
+</ul>
+<h2 id="NPM-package-newest-and-greatest-version"><a href="#NPM-package-newest-and-greatest-version" class="headerlink" title="NPM package newest and greatest version"></a><a href="https://github.com/tjunnone/npm-check-updates/issues/390" target="_blank" rel="external">NPM package newest and greatest version</a></h2><ul>
+<li>Greatest is the highest version number available numerically.</li>
+<li>Newest is the version number that was last published.<ul>
+<li>It is possible for package authors to publish smaller version numbers later<ul>
+<li>Use case, fixing bugs in old version:<ul>
+<li>3.0 -&gt; 4.0 have breaking changes</li>
+<li>Bug report in 3.0, need to publish an 3.1 version</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="How-do-we-identify-movable-object-in-old-animation"><a href="#How-do-we-identify-movable-object-in-old-animation" class="headerlink" title="How do we identify movable object in old animation"></a><a href="https://www.facebook.com/GameSpot/videos/10159589981865436/" target="_blank" rel="external">How do we identify movable object in old animation</a></h2><p>由於會郁嘅野要畫好多張frame，所以上色會求奇D，因此會覺得同個background格格不入。</p>
+<h2 id="Pantone"><a href="#Pantone" class="headerlink" title="Pantone"></a><a href="https://zh.wikipedia.org/wiki/%E5%BD%A9%E9%80%9A" target="_blank" rel="external">Pantone</a></h2><p>業界色彩嘅standard。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;The-Startup-The-Burnout&quot;&gt;&lt;a href=&quot;#The-Startup-The-Burnout&quot; class=&quot;headerlink&quot; title=&quot;The Startup, The Burnout&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://techcrunch.com/2015/12/22/the-startup-the-burnout/&quot;&gt;The Startup, The Burnout&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This article gives some tips on how to handle brunout&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Burnout is a quiet killer, need some effort to identify&lt;ul&gt;
+&lt;li&gt;Use mood and sleep log to keep track&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Interrupt negative think pattern&lt;ul&gt;
+&lt;li&gt;Watching movie&lt;/li&gt;
+&lt;li&gt;Running&lt;/li&gt;
+&lt;li&gt;Reading&lt;/li&gt;
+&lt;li&gt;Taking hot bath&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Monotony cause burnout&lt;ul&gt;
+&lt;li&gt;Break the habit to introduces changes to life&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Career Path</title>
+    <link href="http://199911.github.io/knowledge/2017/11/12/career-path/"/>
+    <id>http://199911.github.io/knowledge/2017/11/12/career-path/</id>
+    <published>2017-11-11T16:00:00.000Z</published>
+    <updated>2017-11-12T11:21:23.761Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>Keep screen shot or prototype on the features built</li>
+<li>Full-stack<ul>
+<li>Cover more topics, event non technical<ul>
+<li>Backend<ul>
+<li>Business logic</li>
+<li>API design</li>
+</ul>
+</li>
+<li>DevOps<ul>
+<li>Automation</li>
+<li>Cloud Service</li>
+</ul>
+</li>
+<li>Web frontend</li>
+<li>Android/iOS App</li>
+<li>UI/UX design</li>
+<li>Requirement collection</li>
+<li>Project management</li>
+</ul>
+</li>
+<li>Work in small company allow you to get experience on different topic</li>
+<li>Easy to find job / change field</li>
+</ul>
+</li>
+<li>Specialist<ul>
+<li>Focus on a few topic or specific area<ul>
+<li>Large scale</li>
+<li>Business domain knowledge</li>
+</ul>
+</li>
+<li>Big company have resources to let you drill deeper in a topic</li>
+<li>More difficult to find job</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;Keep screen shot or prototype on the features built&lt;/li&gt;
+&lt;li&gt;Full-stack&lt;ul&gt;
+&lt;li&gt;Cover more topics, event non technical&lt;ul&gt;
+&lt;li&gt;Back
+    
+    </summary>
+    
+      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>PYCON 2017: Python Logging in Production</title>
@@ -128,11 +266,11 @@
   </entry>
   
   <entry>
-    <title>簡評十八</title>
+    <title>簡評十九</title>
     <link href="http://199911.github.io/commentary/2017/11/12/commentaries-19/"/>
     <id>http://199911.github.io/commentary/2017/11/12/commentaries-19/</id>
     <published>2017-11-11T16:00:00.000Z</published>
-    <updated>2017-11-12T10:26:14.825Z</updated>
+    <updated>2017-11-12T11:20:15.574Z</updated>
     
     <content type="html"><![CDATA[<p>以下係share左去facebook嘅article，係自己個blog 留個copy, 沉澱一下。</p>
 <h2 id="Something-Slightly-Less-Terrible"><a href="#Something-Slightly-Less-Terrible" class="headerlink" title="Something Slightly Less Terrible"></a><a href="https://www.objc.io/issues/20-interviews/loren-brichter/" target="_blank" rel="external">Something Slightly Less Terrible</a></h2><p>Software product個nature好dynamic，冇所謂嘅perfect嘅code。唔同嘅technology，framework都係trade off。追求Technology本身冇咩意義，最重要係個product解決到問題，可以keep住maintain同run落去。</p>
@@ -206,6 +344,81 @@
     </summary>
     
       <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Interview</title>
+    <link href="http://199911.github.io/knowledge/2017/11/12/interview/"/>
+    <id>http://199911.github.io/knowledge/2017/11/12/interview/</id>
+    <published>2017-11-11T16:00:00.000Z</published>
+    <updated>2017-11-12T11:02:07.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>Usually have 3 rounds of interview for engineers</p>
+<h2 id="Round-zero"><a href="#Round-zero" class="headerlink" title="Round zero"></a>Round zero</h2><ul>
+<li>If apply job through agents, they will call you before contact companies</li>
+<li>Similar to first round interview</li>
+<li>Agent will tell you what companies are hiring, but the job description don’t have much detail<ul>
+<li>Should ask the interviewer in first round</li>
+</ul>
+</li>
+<li>Agent usually ask your current salary and expected salary</li>
+</ul>
+<h2 id="First-round"><a href="#First-round" class="headerlink" title="First round"></a>First round</h2><ul>
+<li>Phone interview / On site short chat<ol>
+<li>Self introduction<ul>
+<li>What did you do in current job?</li>
+<li>Why do you want to leave?</li>
+<li>What do you expect in next job?</li>
+<li>Expected salary</li>
+</ul>
+</li>
+<li>Company introduction<ul>
+<li>Introduce the business of the company</li>
+<li>What kind of people they looking for</li>
+<li>The duty of the position</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Ask interviewer how long does the whole process takes<ul>
+<li>How many rounds?</li>
+<li>Will there be code test?</li>
+<li>Easier to schedule multiple job application</li>
+</ul>
+</li>
+<li>Should stop here if not interest in the position</li>
+</ul>
+<h2 id="Second-round"><a href="#Second-round" class="headerlink" title="Second round"></a>Second round</h2><ul>
+<li>Take home code test</li>
+<li>Ask<ul>
+<li>Deadline</li>
+<li>How long does it takes</li>
+<li>What is the requirement</li>
+</ul>
+</li>
+</ul>
+<h2 id="Third-round"><a href="#Third-round" class="headerlink" title="Third round"></a>Third round</h2><ul>
+<li>Usually it is the final round</li>
+<li>Likely to give offer if you have the final round of interview</li>
+<li>Give feedback on code test<ul>
+<li>Some reply in the email</li>
+</ul>
+</li>
+<li>Meet the team lead</li>
+<li>Don’t give reply immediate, give yourself enough time to do Pros and Cons</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Usually have 3 rounds of interview for engineers&lt;/p&gt;
+&lt;h2 id=&quot;Round-zero&quot;&gt;&lt;a href=&quot;#Round-zero&quot; class=&quot;headerlink&quot; title=&quot;Round zero&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
     
     
   </entry>
@@ -292,6 +505,27 @@
   </entry>
   
   <entry>
+    <title>Refactor Blog Content</title>
+    <link href="http://199911.github.io/diary/2017/10/29/refactor-blog-content/"/>
+    <id>http://199911.github.io/diary/2017/10/29/refactor-blog-content/</id>
+    <published>2017-10-28T16:00:00.000Z</published>
+    <updated>2017-10-29T11:14:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I write. Prevent wasting time on writing article which is not useful. I will organize the blog posts to new category these day and remove content will is not useful.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I 
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Skills for hackathon</title>
     <link href="http://199911.github.io/knowledge/2017/10/29/hackathon/"/>
     <id>http://199911.github.io/knowledge/2017/10/29/hackathon/</id>
@@ -327,27 +561,6 @@
     </summary>
     
       <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Refactor Blog Content</title>
-    <link href="http://199911.github.io/diary/2017/10/29/refactor-blog-content/"/>
-    <id>http://199911.github.io/diary/2017/10/29/refactor-blog-content/</id>
-    <published>2017-10-28T16:00:00.000Z</published>
-    <updated>2017-10-29T11:14:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I write. Prevent wasting time on writing article which is not useful. I will organize the blog posts to new category these day and remove content will is not useful.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I 
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
     
     
   </entry>
@@ -732,7 +945,7 @@
     <link href="http://199911.github.io/diary/2017/09/09/cangjie/"/>
     <id>http://199911.github.io/diary/2017/09/09/cangjie/</id>
     <published>2017-09-08T16:00:00.000Z</published>
-    <updated>2017-09-09T14:17:34.000Z</updated>
+    <updated>2017-11-12T15:23:07.458Z</updated>
     
     <content type="html"><![CDATA[<p>之前一直用速成，轉左用Mac之後開始打倉頡，因為Mac好user friendly，唔洗打曬全部碼就出<br>到字。我ED半桶水嘅人好易上手，打頭2個碼好多時出就到我想要嘅字。</p>
 <p>但係有D平時少字用嘅字就唔識打，要花好多時間去選字，所以都係用少少時間學返好。</p>
@@ -743,7 +956,7 @@
 <li>總結每個字碼代表嘅筆劃</li>
 <li>總結取碼規則<br>一野就連結左我打咁耐速成嘅經驗，仲指出左我缺少左嘅倉頡知識，令我可以快速補完唔識嘅野。</li>
 </ol>
-<h2 id="輔助字形表"><a href="#輔助字形表" class="headerlink" title="輔助字形表"></a>輔助字形表</h2><p>有D筆劃好複雜，好易會唔記得或者記錯對應嘅字碼。<a href="http://www.hkpe.net/cj/cjtable.htm" target="_blank" rel="external">E個表</a>就可以做一個<br>reminder。睇完之後，我強力推薦<a href="https://www.ifreesite.com/typing/cangjie-2.htm" target="_blank" rel="external">E個網</a>入邊嘅輔助字形練習。</p>
+<h2 id="輔助字形表"><a href="#輔助字形表" class="headerlink" title="輔助字形表"></a>輔助字形表</h2><p>有D筆劃好複雜，好易會唔記得或者記錯對應嘅字碼。<a href="https://zh.wikibooks.org/zh-hk/%E5%80%89%E9%A0%A1%E8%BC%B8%E5%85%A5%E6%B3%95/%E8%BC%94%E5%8A%A9%E5%AD%97%E5%BD%A2" target="_blank" rel="external">E個表</a>就可以做一個<br>reminder。睇完之後，我強力推薦<a href="https://www.ifreesite.com/typing/cangjie-2.htm" target="_blank" rel="external">E個網</a>入邊嘅輔助字形練習。</p>
 <h2 id="倉頡字典"><a href="#倉頡字典" class="headerlink" title="倉頡字典"></a>倉頡字典</h2><p>有唔識打嘅字，係查字典之前，可以亂打試下。遇到唔識取嘅字碼，可以用「重」字碼代替。「重」字碼就好以regex嘅星號咁，<br>代表任何字碼。係Mac入邊，仲會列出推薦字表入邊嘅字嘅完整倉頡碼，可以唔洗查字典。</p>
 <p>如果真係要查嘅話，我會用<a href="http://input.foruto.com/cccls/cjzd.html" target="_blank" rel="external">E個</a>，因為有D字佢會show埋佢點樣取碼，<br>幫助理解，唔洗死記。</p>
 <h2 id="唔同嘅倉頡version"><a href="#唔同嘅倉頡version" class="headerlink" title="唔同嘅倉頡version"></a>唔同嘅倉頡version</h2><p>有D字係唔同version嘅倉頡有唔同打法，例如係個「函」字，係舊版係「弓山水」，新版係「山弓水」。但係mac幫我地handle左，2個打法都出到個「函」字。</p>
@@ -1407,30 +1620,6 @@
   </entry>
   
   <entry>
-    <title>簡評十七</title>
-    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
-    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-10-29T11:47:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
-<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
-<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
-<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>簡評十六</title>
     <link href="http://199911.github.io/commentary/2017/04/17/commentaries-16/"/>
     <id>http://199911.github.io/commentary/2017/04/17/commentaries-16/</id>
@@ -1456,6 +1645,30 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Releasing-Prettier-1-0&quot;&gt;&lt;a href=&quot;#Releasing-Prettier-1-0&quot; class=&quot;headerlink&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jlon
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>簡評十七</title>
+    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
+    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-10-29T11:47:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
+<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
+<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
+<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
     
     </summary>
     
@@ -1526,712 +1739,6 @@
     </summary>
     
       <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十四</title>
-    <link href="http://199911.github.io/commentary/2017/03/26/commentaries-14/"/>
-    <id>http://199911.github.io/commentary/2017/03/26/commentaries-14/</id>
-    <published>2017-03-25T16:00:00.000Z</published>
-    <updated>2017-10-29T11:48:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="CSS-Custom-Properties-The-Basics"><a href="#CSS-Custom-Properties-The-Basics" class="headerlink" title="CSS Custom Properties - The Basics"></a><a href="https://sgom.es/posts/2017-01-27-css-custom-properties-the-basics/" target="_blank" rel="external">CSS Custom Properties - The Basics</a></h2><p>CSS Custom value is variable in CSS. Use CSS selector to define scope. <code>:root</code> means global.<br>Can use with <code>calc()</code><br>Note: it is not support by most popular version of browsers.<br>Can use with JS: <code>styles.getPropertyValue(property)</code> and <code>styles.setProperty()</code></p>
-<h2 id="Window-Window-Measuring-Screen-Sizes-with-JavaScript"><a href="#Window-Window-Measuring-Screen-Sizes-with-JavaScript" class="headerlink" title="Window, Window: Measuring Screen Sizes with JavaScript"></a><a href="http://thenewcode.com/1181/Window-Window-Measuring-Screen-Sizes-with-JavaScript" target="_blank" rel="external">Window, Window: Measuring Screen Sizes with JavaScript</a></h2><ul>
-<li>The viewport is the display area of the browser<ul>
-<li>It does not include the URL bar and browser UI.</li>
-</ul>
-</li>
-<li><code>document.documentElement.clientWidth</code> not included scroll bar, but <code>window.innerWidth</code> include.<ul>
-<li>So is height</li>
-<li>Better to take max of these two value.</li>
-</ul>
-</li>
-<li>The screen is the current display the browser is in<ul>
-<li>note that many devices can have more than one screen.</li>
-</ul>
-</li>
-<li>Need to recalculate screen size when <code>resize</code> and <code>orientationchange</code> fired</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;CSS-Custom-Properties-The-Basics&quot;&gt;&lt;a href=&quot;#CSS-Custom-Properties-The-Basics&quot; class=&quot;headerlink&quot; title=&quot;CSS Custom Properties - The 
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 2</title>
-    <link href="http://199911.github.io/book-review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/"/>
-    <id>http://199911.github.io/book-review/2017/03/18/professional-javascript-for-web-developers-3rd-edition-2/</id>
-    <published>2017-03-17T16:00:00.000Z</published>
-    <updated>2017-10-29T11:34:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>In chapter 6, the book demonstrate how to control JavaScript object’s property with its internal value. I think immuntable.js may make sure this techniques in implementation.<br>In chapter 7, is show some interest property in function object, but it is not accessible in strict mode, it is not very useful.<br>In chapter 9, this book explain how user agent evolve, and meaning of each component. It is quite interesting.</p>
-<a id="more"></a>
-<h1 id="Chapter-6-Object-Oriented-Programming"><a href="#Chapter-6-Object-Oriented-Programming" class="headerlink" title="Chapter 6: Object-Oriented Programming"></a>Chapter 6: Object-Oriented Programming</h1><h2 id="Internal-values-of-property-of-objects"><a href="#Internal-values-of-property-of-objects" class="headerlink" title="Internal values of property of objects"></a>Internal values of property of objects</h2><p><code>Object.defineProperty()</code> and <code>Object.defineProperties()</code> can change the internal value</p>
-<ul>
-<li>data attribute<ul>
-<li>configurable</li>
-<li>enumerable</li>
-<li>writable</li>
-<li>value</li>
-</ul>
-</li>
-<li>accessor attribute<ul>
-<li>configurable</li>
-<li>enumerable</li>
-<li>get</li>
-<li>set</li>
-</ul>
-</li>
-</ul>
-<h2 id="Other-Information"><a href="#Other-Information" class="headerlink" title="Other Information"></a>Other Information</h2><ul>
-<li><code>instanceof</code> check prototype chain</li>
-<li>constructor will create a new context, changing the <code>this</code> value</li>
-</ul>
-<h2 id="Class-Inheritance"><a href="#Class-Inheritance" class="headerlink" title="Class Inheritance"></a>Class Inheritance</h2><p>The books spent lots of time to talk about implementation of class inheritance in JavaScript. I skipped it as ES6 have support <code>class</code>. What is the es5 equivalent of es6 class may be an interesting question.</p>
-<ul>
-<li>Prototype share all functions<ul>
-<li>But access time is long</li>
-</ul>
-</li>
-<li>In ECMAScript spec, prototype is internal object, but many browsers implement <code>__proto__</code><ul>
-<li>Standard way to get prototype is <code>getPrototypeOf</code></li>
-</ul>
-</li>
-<li><code>in</code> operator<ul>
-<li><code>(name in object)</code> return true if the object have an index <code>name</code><ul>
-<li>no matter it is a instance property or prototype property</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>All native object use prototype</li>
-<li>Prototype and constructor can be different</li>
-<li>Drawback of prototype, can change inheritance during execution</li>
-<li>Although possible, it is not recommended to modify native object prototypes in a production environment.</li>
-<li>Share data value (especially array and object) in prototype can cause tricky bugs<ul>
-<li>One solution is use constructor for data property, prototype for function property<ul>
-<li>I think we should stick to es6 class if possible, it is over-complicated to implement class in es5</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>return</code> statement in constructor can override the value return by constructor by default</li>
-</ul>
-<h1 id="Chapter-7-Function-Expressions"><a href="#Chapter-7-Function-Expressions" class="headerlink" title="Chapter 7: Function Expressions"></a>Chapter 7: Function Expressions</h1><ul>
-<li>Recursion<ul>
-<li>callee vs function f() and f = function()<ul>
-<li>callee is not available in strict mode</li>
-<li>anonymous function fail if the function varaible changed<ul>
-<li>as the recursion coerced to the variable</li>
-</ul>
-</li>
-<li>Use named function in recursion</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Anonymous function != closure<ul>
-<li>Closures are functions that have access to variables from another function’s scope.</li>
-</ul>
-</li>
-<li>Closures carry with them the containing function’s scope<ul>
-<li>They take up more memory than other functions.</li>
-<li>It’s recommended you use them only when absolutely necessary.</li>
-<li>Beware which context do <code>this</code> refer to</li>
-</ul>
-</li>
-<li>Can use closure to mimic block scope<ul>
-<li><code>let</code> keyword in es6 create variable in block scope</li>
-</ul>
-</li>
-</ul>
-<h1 id="Chapter-8-The-Browser-Object-Model"><a href="#Chapter-8-The-Browser-Object-Model" class="headerlink" title="Chapter 8: The Browser Object Model"></a>Chapter 8: The Browser Object Model</h1><h2 id="window-and-frame"><a href="#window-and-frame" class="headerlink" title="window and frame"></a>window and frame</h2><ul>
-<li><code>window</code> in BOM is global in ECMAScript</li>
-<li>All frames have its own <code>window</code><ul>
-<li>It means there are multiple global object, one object for one frame</li>
-</ul>
-</li>
-<li><code>window.frames</code> store all <code>window</code> object for frames in this frame</li>
-<li><code>window</code> is current frame</li>
-<li>The <code>window.top</code> object always points to the very top (outermost) frame, which is the browser window itself.</li>
-<li>Root’s <code>window.parent</code> is itself</li>
-<li><code>screenLeft</code> and <code>screenTop</code> give frame position information</li>
-<li><p><code>window.self</code> = <code>window</code></p>
-</li>
-<li><p>Cross browser window position detection</p>
-<ul>
-<li>Check both screenLeft and screenX</li>
-<li>Is it standardized now?</li>
-</ul>
-</li>
-<li>Window size<ul>
-<li><code>window.innerWidth</code> and <code>document.body.clientWidth</code></li>
-<li>Is it standardized now?</li>
-</ul>
-</li>
-</ul>
-<h2 id="Pop-up-window"><a href="#Pop-up-window" class="headerlink" title="Pop up window"></a>Pop up window</h2><ul>
-<li><code>window.open()</code> can change the content of iframe.</li>
-<li>special windows’ name <code>_self</code>, <code>_parent</code>, <code>_top</code>, or <code>_blank</code>.</li>
-<li>Also have lots of setting to control pop up window</li>
-<li><code>open()</code> return <code>null</code> if it is blocked by build-in pop up blocker</li>
-</ul>
-<h2 id="Set-time-out"><a href="#Set-time-out" class="headerlink" title="Set time out"></a>Set time out</h2><ul>
-<li>Can accept string input instead of function<ul>
-<li>but it is not recommended, because there are performance penalty</li>
-</ul>
-</li>
-<li><code>this</code> in timeout callback refer to <code>window</code><ul>
-<li>if <code>bind()</code> is not called</li>
-</ul>
-</li>
-</ul>
-<h2 id="Location-object"><a href="#Location-object" class="headerlink" title="Location object"></a>Location object</h2><ul>
-<li><code>assign()</code> process the new url and add to history<ul>
-<li>equivalent assign url to <code>window.location</code> and <code>location.href</code></li>
-</ul>
-</li>
-<li>If you don’t want to update history, use <code>replace()</code></li>
-<li><code>reload()</code> may load the page from browser cache<ul>
-<li>use <code>reload(true)</code> to force browser to get a new page</li>
-</ul>
-</li>
-</ul>
-<h2 id="Navigator-object"><a href="#Navigator-object" class="headerlink" title="Navigator object"></a>Navigator object</h2><ul>
-<li>usually for client detection</li>
-<li><code>appcodename</code> always return <code>mozilla</code></li>
-<li>Can detect plugin like flash shockwave</li>
-<li><code>registerContentHandler()</code> and <code>registerProtocolHandler()</code><ul>
-<li>Don’t know what is it</li>
-</ul>
-</li>
-</ul>
-<h2 id="screen-object"><a href="#screen-object" class="headerlink" title="screen object"></a><code>screen</code> object</h2><p>Is it standard? From MDN, seems in working draft</p>
-<h2 id="history-object"><a href="#history-object" class="headerlink" title="history object"></a><code>history</code> object</h2><p>It will refresh page, how web app work?</p>
-<ul>
-<li><code>go()</code><ul>
-<li>integer / url string</li>
-</ul>
-</li>
-<li><code>back()</code></li>
-<li><code>forward()</code></li>
-</ul>
-<h1 id="Chapter-9-Client-Detection"><a href="#Chapter-9-Client-Detection" class="headerlink" title="Chapter 9: Client Detection"></a>Chapter 9: Client Detection</h1><ul>
-<li>Capability detection<ul>
-<li>Use JavaScripts to check<ul>
-<li>Make sure method exist and make sure the method is a function.</li>
-<li>But IE 8 have buggy <code>typeof</code>, sometimes return object instead of function</li>
-<li>We can use double NOT operator to produce a Boolean result<ul>
-<li>Which is more optimal to store and access</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Quirks Detection<ul>
-<li>Detect browser bugs</li>
-</ul>
-</li>
-<li>User-Agent Detection<ul>
-<li>Identifying the rendering engine<ul>
-<li>The exact name and version of a browser isn’t as important as the rendering engine being used.</li>
-</ul>
-</li>
-<li>Detect platform is also useful<ul>
-<li>Notice that game systems have web browser now</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Capability detection &gt; Quirks Detection &gt; User-Agent Detection</li>
-</ul>
-<h1 id="Chapter-10-The-Document-Object-Model"><a href="#Chapter-10-The-Document-Object-Model" class="headerlink" title="Chapter 10: The Document Object Model"></a>Chapter 10: The Document Object Model</h1><ul>
-<li>12 types of node, all of which inherit from a base type.<ul>
-<li>Node.ELEMENT_NODE (1)</li>
-<li>Node.ATTRIBUTE_NODE (2)</li>
-<li>Node.TEXT_NODE (3)</li>
-<li>Node.CDATA_SECTION_NODE (4)</li>
-<li>Node.ENTITY_REFERENCE_NODE (5)</li>
-<li>Node.ENTITY_NODE (6)</li>
-<li>Node.PROCESSING_INSTRUCTION_NODE (7)</li>
-<li>Node.COMMENT_NODE (8)</li>
-<li>Node.DOCUMENT_NODE (9)</li>
-<li>Node.DOCUMENT_TYPE_NODE (10)</li>
-<li>Node.DOCUMENT_FRAGMENT_NODE (11)</li>
-<li>Node.NOTATION_NODE (12)</li>
-<li>Not all types are supported</li>
-</ul>
-</li>
-</ul>
-<h2 id="node-interface"><a href="#node-interface" class="headerlink" title="node interface"></a><code>node</code> interface</h2><ul>
-<li>Basic properties<ul>
-<li>nodeName is tag name</li>
-<li>nodeValue is null (if element)</li>
-</ul>
-</li>
-<li>Node relationship<ul>
-<li>childNodes contain NodeList<ul>
-<li>NodeList is an array like object, but not instance of Array)</li>
-</ul>
-</li>
-<li>Node list is living, any change reflect directly</li>
-<li>Related properties<ul>
-<li><code>parentNode</code></li>
-<li><code>previousSibling</code></li>
-<li><code>nextSibling</code></li>
-<li><code>firstChild</code></li>
-<li><code>lastChild</code></li>
-<li><code>hasChildNodes()</code></li>
-</ul>
-</li>
-<li>One final relationship is shared by every node.<ul>
-<li>The <code>ownerDocument</code> property is a pointer to the document node that represents the entire document.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Manipulating Nodes<ul>
-<li>DOM node exist at most one location in a document</li>
-<li><code>appendChild()</code>, which adds a node to the end of the childNodes list<ul>
-<li>It does not create new node, it move node.</li>
-</ul>
-</li>
-<li><code>insertBefore()</code></li>
-<li><code>replaceChild()</code></li>
-<li><code>removeChild()</code></li>
-<li><code>cloneNode()</code><ul>
-<li>It only copy attributes and, optionally, child nodes.</li>
-<li>Event handlers are not cloned</li>
-</ul>
-</li>
-<li><code>normalize()</code><ul>
-<li>Merge text node and remove empty text node</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Document-node"><a href="#Document-node" class="headerlink" title="Document node"></a>Document node</h2><ul>
-<li>Can be accessed by <code>window.document</code></li>
-<li><code>nodeType</code> is 9.</li>
-<li><code>nodeName</code> is “#document”.</li>
-<li><code>parentNode</code> is null.</li>
-<li><code>ownerDocument</code> is null.</li>
-<li><code>document.documentElement</code>, which always points to the <html> element in an HTML page.</html></li>
-<li><code>document.body</code></li>
-<li><code>document.doctype</code><ul>
-<li>Inconsistent browser support</li>
-</ul>
-</li>
-<li>Useful properties<ul>
-<li><code>title</code>, <code>URL</code>, <code>domain</code>, and <code>referrer</code></li>
-<li>The ability to set document.domain is useful when there is a frame or iframe on the page from a different subdomain.<ul>
-<li>Pages from different subdomains can’t communicate with one another via JavaScript because of cross-domain security restrictions.<ul>
-<li>By setting document.domain in each page to the same value, the pages can access JavaScript objects from each other.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>document.getElementById()</code></li>
-<li><code>document.getElementsByTagName()</code><ul>
-<li>Tag names are case insensitive for html, but sensitive for xml and xhtml</li>
-</ul>
-</li>
-<li>Special collections<ul>
-<li><code>document.anchors</code></li>
-<li><code>document.applets</code></li>
-<li><code>document.forms</code></li>
-<li><code>document.images</code></li>
-<li><code>document.links</code></li>
-</ul>
-</li>
-<li>DOM Conformance Detection<ul>
-<li><code>document.implementation.hasFeature()</code><ul>
-<li>Browser vendor may not implement the feature correctly</li>
-<li>This is not very reliable</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code>document.write()</code><ul>
-<li>Write content to document directly</li>
-</ul>
-</li>
-</ul>
-<h2 id="Inline-script-injection"><a href="#Inline-script-injection" class="headerlink" title="Inline script injection"></a>Inline script injection</h2><p>Beware cannot have string contains <code>&#39;&lt;/script&gt;&#39;</code>, it will be parsed as close tag of javascript. We need to escape <code>/</code>, like <code>&#39;&lt;\/script&gt;&#39;</code></p>
-<p>Document writing is not supported in strict XHTML documents. For pages that are served with the application/xml+xhtml content type, these methods will not work.</p>
-<h2 id="Element-node"><a href="#Element-node" class="headerlink" title="Element node"></a>Element node</h2><ul>
-<li><code>nodeType</code> is 1.</li>
-<li><code>nodeName</code> is the element’s tag name.</li>
-<li><code>nodeValue</code> is null.</li>
-<li><code>parentNode</code> may be a Document or Element.</li>
-<li><code>nodeName</code> is always in uppercase</li>
-<li>Standard attributes<ul>
-<li><code>id</code>, <code>title</code>, <code>lang</code>, <code>dir</code>, <code>className</code><ul>
-<li><code>dir</code> is the direction of language, can be <code>ltr</code> or <code>rtl</code></li>
-<li><code>className</code> is <code>class</code> attributes in HTML<ul>
-<li><code>class</code> is not used in JavaScript because it is reserved word</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>There are lots of subtype for element node, each represent a HTML tag</li>
-<li><code>style</code> object is not living (change not directly reflect)</li>
-<li><code>element.attributes</code> is living</li>
-<li><code>NameNodeMap</code> type<ul>
-<li><code>getNamedItem(name)</code> — Returns the node whose <code>nodeName</code> property is equal to <code>name</code>.</li>
-<li><code>removeNamedItem(</code>name<code>)</code> — Removes the node whose <code>nodeName</code> property is equal to name from the list.</li>
-<li><code>setNamedItem(node)</code> — Adds the <code>node</code> to the list, indexing it by its <code>nodeName</code> property.</li>
-<li><code>item(pos)</code> — Returns the node in the numerical position <code>pos</code>.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Text-node"><a href="#Text-node" class="headerlink" title="Text node"></a>Text node</h2><ul>
-<li><code>nodeType</code> is 3.</li>
-<li><code>nodeName</code> is “#text”.</li>
-<li><code>nodeValue</code> is text contained in the node.</li>
-<li>Child nodes are not supported.<ul>
-<li><code>appendData(text)</code> — Appends text to the end of the node.</li>
-<li><code>deleteData(offset, count)</code> — Deletes count number of characters starting at position offset.</li>
-<li><code>insertData(offset, text)</code> — Inserts text at position offset.</li>
-<li><code>replaceData(offset, count, text)</code> — Replaces the text starting at offset through offset + count with text.</li>
-<li><code>splitText(offset)</code> — Splits the text node into two text nodes separated at position offset.</li>
-<li><code>substringData(offset, count)</code> — Extracts a string from the text beginning at position offset and continuing until offset + count.</li>
-</ul>
-</li>
-<li>length property return the length of text</li>
-<li>The special characters add to text node by method is automatically escaped</li>
-<li><code>parentNode.normalize()</code> merge the adjacent children or remove empty text node</li>
-</ul>
-<h2 id="Comment-node"><a href="#Comment-node" class="headerlink" title="Comment node"></a>Comment node</h2><ul>
-<li><code>nodeType</code> is 8.</li>
-<li><code>nodeName</code> is “#comment”.</li>
-<li><code>nodeValue</code> is the content of the comment.</li>
-<li><code>parentNode</code> is a Document or Element.</li>
-<li>Child nodes are not supported.</li>
-<li>Inherit from text node, having the methods.</li>
-<li>can access text by <code>node.data</code></li>
-<li>Browsers don’t recognize comments that exist after the closing  tag.</li>
-</ul>
-<h2 id="CDATASection"><a href="#CDATASection" class="headerlink" title="CDATASection"></a>CDATASection</h2><p>CDATA sections are specific to XML-based documents</p>
-<ul>
-<li><code>nodeType</code> is 4.</li>
-<li><code>nodeName</code> is “#cdata-section”.</li>
-<li><code>nodeValue</code> is the contents of the CDATA section.</li>
-<li><code>parentNode</code> is a Document or Element.</li>
-<li>Child nodes are not supported.</li>
-<li>Also inherit form text node</li>
-<li>CDATA sections are valid only in XML documents<ul>
-<li>So most browsers will incorrectly parse a CDATA section into either a Comment or an Element.</li>
-</ul>
-</li>
-</ul>
-<h2 id="DocumentType"><a href="#DocumentType" class="headerlink" title="DocumentType"></a>DocumentType</h2><ul>
-<li><code>nodeType</code> is 10.</li>
-<li><code>nodeName</code> is the name of the doctype.</li>
-<li><code>nodeValue</code> is null.</li>
-<li><code>parentNode</code> is a Document.</li>
-<li>Child nodes are not supported.</li>
-<li>Cannot be create by code in DOM level 1<ul>
-<li>Only the <code>name</code> property is useful in html and xhtml, <code>entities</code> and <code>notations</code> are empty</li>
-</ul>
-</li>
-</ul>
-<h2 id="The-DocumentFragment-Type"><a href="#The-DocumentFragment-Type" class="headerlink" title="The DocumentFragment Type"></a>The DocumentFragment Type</h2><ul>
-<li><code>nodeType</code> is 11.</li>
-<li><code>nodeName</code> is “#document-fragment”.</li>
-<li><code>nodeValue</code> is null.</li>
-<li><code>parentNode</code> is null.</li>
-<li>No representation in markup</li>
-<li>Cannot be add to document directly</li>
-<li>For render performance<ul>
-<li>Can create a document fragment with multiple element to prevent live update of each insertion<ul>
-<li>In another word, we can achieve batch update with doucment fragment</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Attr-type"><a href="#Attr-type" class="headerlink" title="Attr type"></a>Attr type</h2><ul>
-<li><code>nodeType</code> is 11.</li>
-<li><code>nodeName</code> is the attribute name.</li>
-<li><code>nodeValue</code> is the attribute value.</li>
-<li><code>parentNode</code> is null.</li>
-<li>Child nodes are not supported in HTML.<ul>
-<li>Child nodes may be Text or EntityReference in XML.</li>
-</ul>
-</li>
-<li>Exist in an element’s attributes property.<ul>
-<li>But not considered part of the DOM document tree</li>
-<li>There are three properties on an Attr object:<ul>
-<li><code>name</code>, which is the attribute name (same as nodeName)</li>
-<li><code>value</code>, which is the attribute value (same as nodeValue)</li>
-<li><code>specified</code> always return <code>true</code></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>From <a href="https://developer.mozilla.org/en-US/docs/Web/API/Attr" target="_blank" rel="external">MDN</a>, attribute node no longer inherit from node in DOM 4<br>-The <code>getAttribute()</code>, <code>setAttribute()</code>, and <code>removeAttribute()</code> methods are preferable over manipulating attribute nodes.<ul>
-<li>Custom properties does not show up in object, need to use <code>getAttribute()</code></li>
-<li>Attribute names get normalized to lowercase when set using <code>setAttribute()</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="Manipulating-Tables"><a href="#Manipulating-Tables" class="headerlink" title="Manipulating Tables"></a>Manipulating Tables</h2><p>There are methods to make create table element easier</p>
-<h2 id="Element-Traversal"><a href="#Element-Traversal" class="headerlink" title="Element Traversal"></a>Element Traversal</h2><p>There are new properties and methods to help us access sibling, children elements and number of children elements (not include comment and text node)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;In chapter 6, the book demonstrate how to control JavaScript object’s property with its internal value. I think immuntable.js may make sure this techniques in implementation.&lt;br&gt;In chapter 7, is show some interest property in function object, but it is not accessible in strict mode, it is not very useful.&lt;br&gt;In chapter 9, this book explain how user agent evolve, and meaning of each component. It is quite interesting.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>&quot;Professional: JavaScript for Web Developers, Third Edition&quot; part 1</title>
-    <link href="http://199911.github.io/book-review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/"/>
-    <id>http://199911.github.io/book-review/2017/03/14/professional-javascript-for-web-developers-3rd-edition-1/</id>
-    <published>2017-03-13T16:00:00.000Z</published>
-    <updated>2017-10-29T11:34:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place</p>
-<a id="more"></a>
-<h1 id="Chapter-1-What-is-JavaScript"><a href="#Chapter-1-What-is-JavaScript" class="headerlink" title="Chapter 1: What is JavaScript?"></a>Chapter 1: What is JavaScript?</h1><ul>
-<li>ECMAScript != JavaScript<ul>
-<li>ECMAScript is part of JavaScript</li>
-<li>JavaScript include<ul>
-<li>The Core (ECMAScript)</li>
-<li>The Document Object Model</li>
-<li>The Browser Object Model</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="The-Document-Object-Model"><a href="#The-Document-Object-Model" class="headerlink" title="The Document Object Model"></a>The Document Object Model</h2><ul>
-<li>DOM provides methods and interfaces for working with the content of a web page</li>
-<li>Allow programmer change the page appearance without reload the page</li>
-<li>DOM is also implement in other language</li>
-<li>DOM levels<ul>
-<li>Level 1<ul>
-<li>DOM core: map xml based document to data structure which is easy to access<ul>
-<li>Should be DOM tree, but I don’t know does it provide extra feature</li>
-</ul>
-</li>
-<li>DOM HTML: extended DOM core by adding HTML-specific objects and method</li>
-</ul>
-</li>
-<li>Level 2<ul>
-<li>DOM View</li>
-<li>DOM Events</li>
-<li>DOM style</li>
-<li>DOM Traversal and Range</li>
-</ul>
-</li>
-<li>Level 3<ul>
-<li>DOM Load and Save</li>
-<li>DOM Validation</li>
-<li>Extended DOM core to support all XML 1.0</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Other DOMs<ul>
-<li>SVG</li>
-<li>MathML</li>
-<li>Synchronized Multimedia Integration Language (SMIL)</li>
-</ul>
-</li>
-</ul>
-<h2 id="The-Browser-Object-Model-BOM"><a href="#The-Browser-Object-Model-BOM" class="headerlink" title="The Browser Object Model (BOM)"></a>The Browser Object Model (BOM)</h2><ul>
-<li>BOM provides methods and interfaces for interacting with the browser<ul>
-<li>pop up new windows</li>
-<li>move, resize and close browser windows</li>
-<li><code>navigator</code> object</li>
-<li><code>location</code> object</li>
-</ul>
-</li>
-<li>It is not standardize for a long time, until HTML5</li>
-</ul>
-<h1 id="Chapter-2-JavaScript-in-HTML"><a href="#Chapter-2-JavaScript-in-HTML" class="headerlink" title="Chapter 2: JavaScript in HTML"></a>Chapter 2: JavaScript in HTML</h1><ul>
-<li>Traditionally, we put JavaScript on header<ul>
-<li>It is download and parsed before content (blocking)</li>
-<li>Use <code>async</code> and <code>defer</code> attributes in <code>&lt;script&gt;</code></li>
-</ul>
-</li>
-<li>Or put it at the end of body, so the html content is parsed first</li>
-</ul>
-<h2 id="Defer"><a href="#Defer" class="headerlink" title="Defer"></a>Defer</h2><ul>
-<li>The purpose of defer is to indicate that a script won’t be changing the structure of the page as it executes.<ul>
-<li>Even the HTML5 specific defer script will run in order, but this may not happen in real world.</li>
-<li>So keep at most one defer script</li>
-</ul>
-</li>
-<li>Script can be loaded before DOMContentLoaded</li>
-</ul>
-<h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><ul>
-<li>async, run immediately after download, can run before or after DOMContentloaded, but guaranteed before loaded</li>
-</ul>
-<h2 id="Inline-script-in-XHTML"><a href="#Inline-script-in-XHTML" class="headerlink" title="Inline script in XHTML"></a>Inline script in XHTML</h2><ul>
-<li>Less than sign make in script tag make XHTML broken, as it is consider as an open tag<ul>
-<li>Use &lt;</li>
-<li>Use CDATA section</li>
-</ul>
-</li>
-</ul>
-<h2 id="External-script-is-better"><a href="#External-script-is-better" class="headerlink" title="External script is better"></a>External script is better</h2><ul>
-<li>Maintainable</li>
-<li>Caching</li>
-<li>Future-proof<ul>
-<li>Don’t need to use the hack for XHTML</li>
-<li>Same script work in both HTML and XTHML</li>
-</ul>
-</li>
-</ul>
-<h1 id="Chapter-3-Language-Basics"><a href="#Chapter-3-Language-Basics" class="headerlink" title="Chapter 3: Language Basics"></a>Chapter 3: Language Basics</h1><ul>
-<li>variable not declared by <code>var</code> will be global</li>
-<li><code>typeof</code> null return <code>object</code></li>
-<li><code>typeof</code> regex is object (chrome 7 have a bug, which return function)</li>
-<li>variable not declared !== undefined variable<ul>
-<li>using variables not declared throw error (reference error)</li>
-</ul>
-</li>
-<li><code>typeof</code> variables not declared return undefined</li>
-</ul>
-<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><ul>
-<li>octal number start with 0</li>
-<li>octal number is invalid in strict mode</li>
-<li>octal number can be tricky: 078-077 = 15</li>
-<li>number large than max value or small than smallest value will become (negative) infinity</li>
-<li><code>typeof</code> NaN is number</li>
-<li>NaN will make the computation return NaN</li>
-<li>NaN not equal to any value<ul>
-<li>so we have to use isNaN()</li>
-</ul>
-</li>
-</ul>
-<h2 id="Number-vs-Parser-Int"><a href="#Number-vs-Parser-Int" class="headerlink" title="Number vs Parser Int"></a>Number vs Parser Int</h2><ul>
-<li>be careful when parsing number with leading 0<ul>
-<li>number start with 0 will be consider as octal number</li>
-<li>always include 10 in second parameter</li>
-</ul>
-</li>
-</ul>
-<h2 id="Built-in-object-method"><a href="#Built-in-object-method" class="headerlink" title="Built in object method"></a>Built in object method</h2><ul>
-<li><code>null</code> and <code>undefined</code> don’t have toString()</li>
-<li><code>String()</code> alway return string, it is good when you don’t know the value whether null or undefined</li>
-<li>Can also convert to string by concatenating empty string<ul>
-<li>I think it is more straight forward.</li>
-</ul>
-</li>
-<li><code>hasOwnProperty(&#39;propertyName&#39;)</code> checks the property exist (do not check prototype)</li>
-<li><code>propertyIsEnumerable(&#39;propertyName&#39;)</code>, whether can use for-in</li>
-<li><code>toLocateString()</code> return localization string</li>
-<li><code>valueOf()</code>, <code>toString()</code> will be called if apply operator on object</li>
-</ul>
-<p><strong>Notice that BOM and DOM is not included in ES standard, they may or may not follow the ES object standard</strong></p>
-<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
-<li>bitwise operator<ul>
-<li>value converted to number by Number() (32 bit numbers)</li>
-</ul>
-</li>
-<li><code>arguments</code> is an array-like object, but it is not array</li>
-<li>string is not object in JavaScript, unlike other language</li>
-<li>ECMA-262 specifies that any object implementing the internal [[Call]] method should return “function” from typeof<ul>
-<li>user defined <code>call()</code> seems does not works</li>
-</ul>
-</li>
-</ul>
-<h1 id="Chapter-4-Variables-Scope-and-Memory"><a href="#Chapter-4-Variables-Scope-and-Memory" class="headerlink" title="Chapter 4: Variables, Scope, and Memory"></a>Chapter 4: Variables, Scope, and Memory</h1><ul>
-<li>In browser, global context = windows</li>
-<li>5 types of scope in browser<ul>
-<li>global, function, eval(), catch block, with block</li>
-</ul>
-</li>
-<li>browser optimized variable look up, don’t worry about access variable from different scope</li>
-<li>Circular reference no longer leak memory, in browser</li>
-<li>Garbage collect can be trigger by code in some browser, but it is not recommended</li>
-<li>Release memory by dereference them (set variable to null)</li>
-</ul>
-<h1 id="Chapter-5-Reference-Types"><a href="#Chapter-5-Reference-Types" class="headerlink" title="Chapter 5 Reference Types"></a>Chapter 5 Reference Types</h1><ul>
-<li>Function interface<ul>
-<li>The best approach is to use named arguments for those that are required arguments</li>
-<li>And an object literal to encompass multiple optional arguments.</li>
-</ul>
-</li>
-<li>Use <code>{}</code> and <code>[]</code> create object and array, the <code>Object()</code> and <code>Array()</code> constructor is not called</li>
-<li>Arrays can contain a maximum of 4,294,967,295 items.<ul>
-<li>If you try to add more than that number, an exception occurs.</li>
-<li>A long-running script error may be thrown before you reach the arrays’ maximum.</li>
-</ul>
-</li>
-<li><code>instanceof</code> assumes a single global execution context.<ul>
-<li>Different frames in a web page haves distinct global execution contexts and therefore two versions of the Array constructor.</li>
-<li>If you were to pass an array from one frame into a second frame, that array has a different constructor function than an array created natively in the second frame.</li>
-<li>To solve this problem, ECMAScript 5 introduced the Array.isArray() method</li>
-</ul>
-</li>
-<li><code>toString()</code> of date object of different browser return stings with different format</li>
-<li>use string to define regex, need to escape the slash as it is escape character in string (not regex)<ul>
-<li><code>source</code> property in regex object does not have slash</li>
-<li>Better not to use string to create REGEX</li>
-</ul>
-</li>
-<li>function constructor is not recommended, as it caused performance issue.</li>
-<li>strict mode does not support <code>callee</code> and <code>caller</code><ul>
-<li>Using <code>arguments.callee</code> can decouple recursive functions</li>
-<li><code>arguments.callee.caller</code> return parent function</li>
-</ul>
-</li>
-<li><code>length</code> property of a function is # of named arguments</li>
-<li>In strict mode, the <code>this</code> value of a function called without a context object is not coerced to window.<ul>
-<li><code>this</code> becomes undefined unless explicitly set by either attaching the function to an object or using apply() or call().</li>
-</ul>
-</li>
-<li>Primitive type cannot have custom properties<ul>
-<li>Can workaround by using constructor to create primitive type wrapper<ul>
-<li><code>var j = new Number(1234);</code></li>
-</ul>
-</li>
-<li><code>typeof</code> return Object for primitive type wrapper</li>
-</ul>
-</li>
-<li>There was method to format HTML dynamically, but it is not implemented by browsers now.</li>
-<li>Singleton object<ul>
-<li>global scope and Math</li>
-</ul>
-</li>
-<li>In strict mode, the variable created in eval() cannot be access from outside</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;This books is published on 2012, some information is outdated. But it is still a good start to get deeper understand on javascript, not only the language itself, also the implementation in different browsers. The book spent certain pages to explain the workaround in IE, we can just skip them. This book skips some JavaScript specification which does not implemented by any browser (at that time). We may need to get up-to-date information from other place&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Book Review" scheme="http://199911.github.io/categories/Book-Review/"/>
     
     
   </entry>
