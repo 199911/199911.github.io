@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://199911.github.io/"/>
-  <updated>2017-11-21T14:17:00.849Z</updated>
+  <updated>2017-11-28T14:42:28.592Z</updated>
   <id>http://199911.github.io/</id>
   
   <author>
@@ -14,6 +14,175 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>簡評二十一</title>
+    <link href="http://199911.github.io/commentary/2017/11/28/commentaries-21/"/>
+    <id>http://199911.github.io/commentary/2017/11/28/commentaries-21/</id>
+    <published>2017-11-27T16:00:00.000Z</published>
+    <updated>2017-11-28T14:42:28.592Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Scrum-does-not-work-here-in-Asia"><a href="#Scrum-does-not-work-here-in-Asia" class="headerlink" title="Scrum does not work here in Asia"></a><a href="https://enterprisepathtoagility.com/scrum-does-not-work-here-in-asia-72d7bccccb4d" target="_blank" rel="external">Scrum does not work here in Asia</a></h2><p>4 main reasons make scrum does not work in Asia</p>
+<ul>
+<li>Believe everything in life should have a hierarchy<ul>
+<li>staffs need to speak out, don’t just follow the instruction</li>
+<li>People with higher position override the decision of “product owner”</li>
+<li>I feel like introduce the concept 向上管理 may help the problem<ul>
+<li>Management is communication, it Should bi-direction</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Keep things in harmony<ul>
+<li>Make review difficult to work</li>
+<li>Hard to have transparency</li>
+</ul>
+</li>
+<li>Different education system, different school of thoughts<ul>
+<li>Not safe to make mistake</li>
+<li>Scrum require self organisation</li>
+</ul>
+</li>
+<li>Asia have lots of outsource project<ul>
+<li>Less resource on training</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="Google的績效考核OKR與傳統的KPI制度有何不同？"><a href="#Google的績效考核OKR與傳統的KPI制度有何不同？" class="headerlink" title="Google的績效考核OKR與傳統的KPI制度有何不同？"></a><a href="http://www.p-age.com.tw/post/94043128597/%E5%A4%8F%E6%9D%BE%E6%98%8E%E7%9A%84npdp%E7%94%A2%E5%93%81%E7%B6%93%E7%90%86%E8%A7%80%E9%BB%9E-google%E7%9A%84%E7%B8%BE%E6%95%88%E8%80%83%E6%A0%B8okr%E8%88%87%E5%82%B3%E7%B5%B1%E7%9A%84kpi%E5%88%B6%E5%BA%A6%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C" target="_blank" rel="external">Google的績效考核OKR與傳統的KPI制度有何不同？</a></h2><ul>
+<li>Objective<ul>
+<li>OKR<ul>
+<li>主要強調的是對於項目的推進 (以事為主體)<ul>
+<li>為了更有效率的完成目標任務</li>
+<li>依據項目進展來考核</li>
+</ul>
+</li>
+<li>要求的是如何更有效率的完成一個有野心的項目</li>
+</ul>
+</li>
+<li>KPI<ul>
+<li>主要強調的是對人事的高效組織 (以人為主體)</li>
+<li>強調的是如何保質保量的完成預定目標</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OKR 主要流程<ol>
+<li>定立明確項目目標</li>
+<li>對關鍵性結果進行可量化的定義，並且明確達成目標的/未完成目標的措施</li>
+<li>共同努力達成目標</li>
+<li>根據項目進展進行評估</li>
+<li>Go back to 1</li>
+</ol>
+</li>
+<li>KPI 主要流程<ol>
+<li>進行人事組織</li>
+<li>確定影響結果的關鍵性因素，並且確立 KPI</li>
+<li>對關鍵績效指標進行檢測，並且進行實時監督</li>
+<li>對有錯誤行為的人進行監督，更甚者開除</li>
+</ol>
+</li>
+<li>OKR 操作細節<ul>
+<li>OKR評分都公開<ul>
+<li>一般的分值為0.6至0.7，如果獲得1分，可能是目標制定得太簡單</li>
+<li>如果低於0.4，員工可能就要反省自己哪裏做錯了</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OKR better than KPI? No!<ul>
+<li>兩者所解決的問題實際上是不同的，他們所強調的角度也是不同的<ul>
+<li>不是所有的職位都能適合 OKR ，也不是所有的職位都適合 KPI</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何讓團隊自動自發回報進度？"><a href="#如何讓團隊自動自發回報進度？" class="headerlink" title="如何讓團隊自動自發回報進度？"></a><a href="https://www.projectup.net/article/view/id/14683" target="_blank" rel="external">如何讓團隊自動自發回報進度？</a></h2><ul>
+<li>Problems<ol>
+<li>做得快冇著數</li>
+<li>Deadline 越黎越緊</li>
+<li>怕因為做得快，PM會亂改</li>
+<li>怕因為問進度而影響人際關係</li>
+<li>進度唔好，怕公佈壞消息</li>
+</ol>
+</li>
+<li>Solutions<ol>
+<li>plan嘅時候要考慮點樣回報進度</li>
+<li>大家按照標準工作</li>
+<li>Visualize task done</li>
+<li>要考慮競爭對團對嘅影響<ul>
+<li>避免用專案進度資訊來評斷員工個人績效</li>
+<li>KPI會被濫用</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="On-Node-js-Go-and-concurrency"><a href="#On-Node-js-Go-and-concurrency" class="headerlink" title="On Node.js, Go and concurrency"></a><a href="https://edneypitta.com/on-node-go-concurrency/" target="_blank" rel="external">On Node.js, Go and concurrency</a></h2><ol>
+<li>Briefly introduce golang’s concurrency model</li>
+<li>Node js popular may not because of the concurrency model</li>
+<li>The reference mentioned in article may be good when need to learn go</li>
+</ol>
+<h2 id="Testing-and-Checking-Refined"><a href="#Testing-and-Checking-Refined" class="headerlink" title="Testing and Checking Refined"></a><a href="http://www.satisfice.com/blog/archives/856" target="_blank" rel="external">Testing and Checking Refined</a></h2><p>The word “testing” is vague.<br>Testing can beg  “machine checking”: check the software behave correctly.<br>Testing can also be “experiment”: study, questioning, modeling, it is iterations. More about how to improve the product.</p>
+<h2 id="我看绩效考核"><a href="#我看绩效考核" class="headerlink" title="我看绩效考核"></a><a href="https://coolshell.cn/articles/17972.html" target="_blank" rel="external">我看绩效考核</a></h2><ul>
+<li>目標同績效唔係用黎考核人，而係用黎提高組織效率<ul>
+<li>績效分應該係俾product，department同code，唔係俾人</li>
+</ul>
+</li>
+<li>績效考核係對事唔對人</li>
+<li>人係有狀態波動，任何時候都不應該輕易否定人<ul>
+<li>人係active agent，好難預測</li>
+</ul>
+</li>
+<li>價值觀係重要，但考核價值觀係非常危險<ul>
+<li>唔少人因價值觀被迫害</li>
+</ul>
+</li>
+<li>OKR 要透明，去避免D目標被人distort</li>
+<li>每個人都有適合自己嘅環境，揾到適合自己嘅環境先係關鍵<ul>
+<li>與其在意人地對自己嘅評價，倒不如揾適合自己嘅環境</li>
+</ul>
+</li>
+<li>一個特定環境嘅考核唔代表D咩，唔可以用ED野去否定一個人</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Scrum-does-not-work-here-in-Asia&quot;&gt;&lt;a href=&quot;#Scrum-does-not-work-here-in-Asia&quot; class=&quot;headerlink&quot; title=&quot;Scrum does not work here in Asia&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://enterprisepathtoagility.com/scrum-does-not-work-here-in-asia-72d7bccccb4d&quot;&gt;Scrum does not work here in Asia&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;4 main reasons make scrum does not work in Asia&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Believe everything in life should have a hierarchy&lt;ul&gt;
+&lt;li&gt;staffs need to speak out, don’t just follow the instruction&lt;/li&gt;
+&lt;li&gt;People with higher position override the decision of “product owner”&lt;/li&gt;
+&lt;li&gt;I feel like introduce the concept 向上管理 may help the problem&lt;ul&gt;
+&lt;li&gt;Management is communication, it Should bi-direction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Keep things in harmony&lt;ul&gt;
+&lt;li&gt;Make review difficult to work&lt;/li&gt;
+&lt;li&gt;Hard to have transparency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Different education system, different school of thoughts&lt;ul&gt;
+&lt;li&gt;Not safe to make mistake&lt;/li&gt;
+&lt;li&gt;Scrum require self organisation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Asia have lots of outsource project&lt;ul&gt;
+&lt;li&gt;Less resource on training&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>簡評二十</title>
@@ -94,14 +263,100 @@
   </entry>
   
   <entry>
+    <title>Interview</title>
+    <link href="http://199911.github.io/knowledge/2017/11/12/interview/"/>
+    <id>http://199911.github.io/knowledge/2017/11/12/interview/</id>
+    <published>2017-11-11T16:00:00.000Z</published>
+    <updated>2017-11-12T11:02:07.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>Usually have 3 rounds of interview for engineers</p>
+<h2 id="Round-zero"><a href="#Round-zero" class="headerlink" title="Round zero"></a>Round zero</h2><ul>
+<li>If apply job through agents, they will call you before contact companies</li>
+<li>Similar to first round interview</li>
+<li>Agent will tell you what companies are hiring, but the job description don’t have much detail<ul>
+<li>Should ask the interviewer in first round</li>
+</ul>
+</li>
+<li>Agent usually ask your current salary and expected salary</li>
+</ul>
+<h2 id="First-round"><a href="#First-round" class="headerlink" title="First round"></a>First round</h2><ul>
+<li>Phone interview / On site short chat<ol>
+<li>Self introduction<ul>
+<li>What did you do in current job?</li>
+<li>Why do you want to leave?</li>
+<li>What do you expect in next job?</li>
+<li>Expected salary</li>
+</ul>
+</li>
+<li>Company introduction<ul>
+<li>Introduce the business of the company</li>
+<li>What kind of people they looking for</li>
+<li>The duty of the position</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Ask interviewer how long does the whole process takes<ul>
+<li>How many rounds?</li>
+<li>Will there be code test?</li>
+<li>Easier to schedule multiple job application</li>
+</ul>
+</li>
+<li>Should stop here if not interest in the position</li>
+</ul>
+<h2 id="Second-round"><a href="#Second-round" class="headerlink" title="Second round"></a>Second round</h2><ul>
+<li>Take home code test</li>
+<li>Ask<ul>
+<li>Deadline</li>
+<li>How long does it takes</li>
+<li>What is the requirement</li>
+</ul>
+</li>
+</ul>
+<h2 id="Third-round"><a href="#Third-round" class="headerlink" title="Third round"></a>Third round</h2><ul>
+<li>Usually it is the final round</li>
+<li>Likely to give offer if you have the final round of interview</li>
+<li>Give feedback on code test<ul>
+<li>Some reply in the email</li>
+</ul>
+</li>
+<li>Meet the team lead</li>
+<li>Don’t give reply immediate, give yourself enough time to do Pros and Cons</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Usually have 3 rounds of interview for engineers&lt;/p&gt;
+&lt;h2 id=&quot;Round-zero&quot;&gt;&lt;a href=&quot;#Round-zero&quot; class=&quot;headerlink&quot; title=&quot;Round zero&quot;&gt;&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Career Path</title>
     <link href="http://199911.github.io/knowledge/2017/11/12/career-path/"/>
     <id>http://199911.github.io/knowledge/2017/11/12/career-path/</id>
     <published>2017-11-11T16:00:00.000Z</published>
-    <updated>2017-11-12T11:21:23.761Z</updated>
+    <updated>2017-11-21T16:29:23.069Z</updated>
     
-    <content type="html"><![CDATA[<ul>
+    <content type="html"><![CDATA[<h2 id="Front-end-software-engineer"><a href="#Front-end-software-engineer" class="headerlink" title="Front end software engineer"></a>Front end software engineer</h2><ul>
 <li>Keep screen shot or prototype on the features built</li>
+<li>Good front end engineer have their own design<ul>
+<li>Good technical skills<ul>
+<li>Don’t only focus on skills, also how to create good product</li>
+</ul>
+</li>
+<li>Can design product with good UI/UX</li>
+<li>Design product which is beautiful and feasible to build</li>
+</ul>
+</li>
+</ul>
+<h2 id="Full-stack-vs-specialist"><a href="#Full-stack-vs-specialist" class="headerlink" title="Full stack vs specialist"></a>Full stack vs specialist</h2><ul>
 <li>Full-stack<ul>
 <li>Cover more topics, event non technical<ul>
 <li>Backend<ul>
@@ -136,15 +391,31 @@
 </ul>
 </li>
 </ul>
+<h2 id="Engineer-with-sense-of-data"><a href="#Engineer-with-sense-of-data" class="headerlink" title="Engineer with sense of data"></a>Engineer with sense of data</h2><ul>
+<li>Understand domain knowledge and product<ul>
+<li>Design the system for data in mind<ul>
+<li>Understand what need to be collect</li>
+<li>Know how to collect data</li>
+<li>Know what kind of report need to be generate</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Design data infrastructure base on the report need to be generate<ul>
+<li>Real time analysis vs Batch processing</li>
+<li>Data volumn vs Database / Data analytic framework</li>
+</ul>
+</li>
+<li>Roles of non-data engineers<ul>
+<li>Implement tracking correctly and accurately</li>
+</ul>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;Keep screen shot or prototype on the features built&lt;/li&gt;
-&lt;li&gt;Full-stack&lt;ul&gt;
-&lt;li&gt;Cover more topics, event non technical&lt;ul&gt;
-&lt;li&gt;Back
+      &lt;h2 id=&quot;Front-end-software-engineer&quot;&gt;&lt;a href=&quot;#Front-end-software-engineer&quot; class=&quot;headerlink&quot; title=&quot;Front end software engineer&quot;&gt;&lt;/a&gt;Front
     
     </summary>
     
@@ -349,81 +620,6 @@
   </entry>
   
   <entry>
-    <title>Interview</title>
-    <link href="http://199911.github.io/knowledge/2017/11/12/interview/"/>
-    <id>http://199911.github.io/knowledge/2017/11/12/interview/</id>
-    <published>2017-11-11T16:00:00.000Z</published>
-    <updated>2017-11-12T11:02:07.817Z</updated>
-    
-    <content type="html"><![CDATA[<p>Usually have 3 rounds of interview for engineers</p>
-<h2 id="Round-zero"><a href="#Round-zero" class="headerlink" title="Round zero"></a>Round zero</h2><ul>
-<li>If apply job through agents, they will call you before contact companies</li>
-<li>Similar to first round interview</li>
-<li>Agent will tell you what companies are hiring, but the job description don’t have much detail<ul>
-<li>Should ask the interviewer in first round</li>
-</ul>
-</li>
-<li>Agent usually ask your current salary and expected salary</li>
-</ul>
-<h2 id="First-round"><a href="#First-round" class="headerlink" title="First round"></a>First round</h2><ul>
-<li>Phone interview / On site short chat<ol>
-<li>Self introduction<ul>
-<li>What did you do in current job?</li>
-<li>Why do you want to leave?</li>
-<li>What do you expect in next job?</li>
-<li>Expected salary</li>
-</ul>
-</li>
-<li>Company introduction<ul>
-<li>Introduce the business of the company</li>
-<li>What kind of people they looking for</li>
-<li>The duty of the position</li>
-</ul>
-</li>
-</ol>
-</li>
-<li>Ask interviewer how long does the whole process takes<ul>
-<li>How many rounds?</li>
-<li>Will there be code test?</li>
-<li>Easier to schedule multiple job application</li>
-</ul>
-</li>
-<li>Should stop here if not interest in the position</li>
-</ul>
-<h2 id="Second-round"><a href="#Second-round" class="headerlink" title="Second round"></a>Second round</h2><ul>
-<li>Take home code test</li>
-<li>Ask<ul>
-<li>Deadline</li>
-<li>How long does it takes</li>
-<li>What is the requirement</li>
-</ul>
-</li>
-</ul>
-<h2 id="Third-round"><a href="#Third-round" class="headerlink" title="Third round"></a>Third round</h2><ul>
-<li>Usually it is the final round</li>
-<li>Likely to give offer if you have the final round of interview</li>
-<li>Give feedback on code test<ul>
-<li>Some reply in the email</li>
-</ul>
-</li>
-<li>Meet the team lead</li>
-<li>Don’t give reply immediate, give yourself enough time to do Pros and Cons</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Usually have 3 rounds of interview for engineers&lt;/p&gt;
-&lt;h2 id=&quot;Round-zero&quot;&gt;&lt;a href=&quot;#Round-zero&quot; class=&quot;headerlink&quot; title=&quot;Round zero&quot;&gt;&lt;/a&gt;
-    
-    </summary>
-    
-      <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>簡評十八</title>
     <link href="http://199911.github.io/commentary/2017/11/04/commentaries-18/"/>
     <id>http://199911.github.io/commentary/2017/11/04/commentaries-18/</id>
@@ -505,27 +701,6 @@
   </entry>
   
   <entry>
-    <title>Refactor Blog Content</title>
-    <link href="http://199911.github.io/diary/2017/10/29/refactor-blog-content/"/>
-    <id>http://199911.github.io/diary/2017/10/29/refactor-blog-content/</id>
-    <published>2017-10-28T16:00:00.000Z</published>
-    <updated>2017-10-29T11:14:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I write. Prevent wasting time on writing article which is not useful. I will organize the blog posts to new category these day and remove content will is not useful.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I 
-    
-    </summary>
-    
-      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Skills for hackathon</title>
     <link href="http://199911.github.io/knowledge/2017/10/29/hackathon/"/>
     <id>http://199911.github.io/knowledge/2017/10/29/hackathon/</id>
@@ -561,6 +736,27 @@
     </summary>
     
       <category term="Knowledge" scheme="http://199911.github.io/categories/Knowledge/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Refactor Blog Content</title>
+    <link href="http://199911.github.io/diary/2017/10/29/refactor-blog-content/"/>
+    <id>http://199911.github.io/diary/2017/10/29/refactor-blog-content/</id>
+    <published>2017-10-28T16:00:00.000Z</published>
+    <updated>2017-10-29T11:14:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I write. Prevent wasting time on writing article which is not useful. I will organize the blog posts to new category these day and remove content will is not useful.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just quit my job and I have more time on organize when I learnt these day. I set up an objective of the blog, to remind me what should I 
+    
+    </summary>
+    
+      <category term="Diary" scheme="http://199911.github.io/categories/Diary/"/>
     
     
   </entry>
@@ -1620,6 +1816,30 @@
   </entry>
   
   <entry>
+    <title>簡評十七</title>
+    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
+    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
+    <published>2017-04-16T16:00:00.000Z</published>
+    <updated>2017-10-29T11:47:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
+<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
+<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
+<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
+    
+    </summary>
+    
+      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>簡評十六</title>
     <link href="http://199911.github.io/commentary/2017/04/17/commentaries-16/"/>
     <id>http://199911.github.io/commentary/2017/04/17/commentaries-16/</id>
@@ -1645,96 +1865,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Releasing-Prettier-1-0&quot;&gt;&lt;a href=&quot;#Releasing-Prettier-1-0&quot; class=&quot;headerlink&quot; title=&quot;Releasing Prettier 1.0&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://jlon
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十七</title>
-    <link href="http://199911.github.io/commentary/2017/04/17/commentaries-17/"/>
-    <id>http://199911.github.io/commentary/2017/04/17/commentaries-17/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2017-10-29T11:47:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Google’s-real-Kubernetes-magic-is-all-about-community-not-code"><a href="#Google’s-real-Kubernetes-magic-is-all-about-community-not-code" class="headerlink" title="Google’s real Kubernetes magic is all about community, not code"></a><a href="http://www.techrepublic.com/article/googles-real-kubernetes-magic-is-all-about-community-not-code/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">Google’s real Kubernetes magic is all about community, not code</a></h2><p>When come to real world situation, the team’s average quality is much more important than individual’s. This is an good example. When there is a good community, there will be more resources to help the project. More effective than spending all effort in increasing code quality.</p>
-<h2 id="Optimising-GIFs-for-the-Web"><a href="#Optimising-GIFs-for-the-Web" class="headerlink" title="Optimising GIFs for the Web"></a><a href="https://bitsofco.de/optimising-gifs/" target="_blank" rel="external">Optimising GIFs for the Web</a></h2><p>Gif can have larger file size the HTML5 video</p>
-<h2 id="The-Partnership-Fallacy"><a href="#The-Partnership-Fallacy" class="headerlink" title="The Partnership Fallacy"></a><a href="http://www.barnetttalks.com/2017/04/the-partnership-fallacy.html?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">The Partnership Fallacy</a></h2><p>We partner up hoping to improve our weaknesses, only to divide labor and so make our weaknesses even worse.</p>
-<p>Effective leaders understand how organizations learn, so they avoid the partnership fallacy.</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Google’s-real-Kubernetes-magic-is-all-about-community-not-code&quot;&gt;&lt;a href=&quot;#Google’s-real-Kubernetes-magic-is-all-about-community-not-
-    
-    </summary>
-    
-      <category term="Commentary" scheme="http://199911.github.io/categories/Commentary/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>簡評十五</title>
-    <link href="http://199911.github.io/commentary/2017/04/16/commentaries-15/"/>
-    <id>http://199911.github.io/commentary/2017/04/16/commentaries-15/</id>
-    <published>2017-04-15T16:00:00.000Z</published>
-    <updated>2017-11-03T08:34:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Regular-Expressions-in-a-post-ES6-world"><a href="#Regular-Expressions-in-a-post-ES6-world" class="headerlink" title="Regular Expressions in a post-ES6 world"></a><a href="https://ponyfoo.com/articles/regular-expressions-post-es6" target="_blank" rel="external">Regular Expressions in a post-ES6 world</a></h2><ul>
-<li>Sticky group<ul>
-<li>I don’t use regex a lot, don’t know how much can this feature helps</li>
-</ul>
-</li>
-<li>Better support of Unicode</li>
-<li>Regex match group with key<ul>
-<li>Easier to read the regex</li>
-</ul>
-</li>
-<li>Lookbehind assertion<ul>
-<li>I don’t even know what is lookahead assertion.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Scalable-Design-Beyond-Responsive-Design"><a href="#Scalable-Design-Beyond-Responsive-Design" class="headerlink" title="Scalable Design: Beyond Responsive Design"></a><a href="https://medium.com/@julienetienne_/beyond-responsive-design-f51ee2a9bfd" target="_blank" rel="external">Scalable Design: Beyond Responsive Design</a></h2><p><code>vh</code> and <code>vw</code> units make zoom function fail (as the view port does not change)<br>The article introduce a library to solve responsive font problem: <a href="https://github.com/julienetie/mimetic" target="_blank" rel="external">https://github.com/julienetie/mimetic</a><br>Seems the requirement is to use <code>rem</code> for fonts.</p>
-<a id="more"></a>
-<h2 id="Runtime-Coverage-using-Chrome-DevTools"><a href="#Runtime-Coverage-using-Chrome-DevTools" class="headerlink" title="Runtime Coverage using Chrome DevTools"></a><a href="https://gideonpyzer.com/blog/runtime-coverage-using-chrome-devtools/" target="_blank" rel="external">Runtime Coverage using Chrome DevTools</a></h2><p>Can use code coverage as a indicator for network optimization. If the percentage of unused bytes in the code is high, it suggests that the end user is having to download a lot more than is necessary to run the app.</p>
-<h2 id="11-Ways-to-Invoke-a-Function"><a href="#11-Ways-to-Invoke-a-Function" class="headerlink" title="11 Ways to Invoke a Function"></a><a href="https://gist.github.com/myshov/05800f083a0afce56e0f782314a103eb" target="_blank" rel="external">11 Ways to Invoke a Function</a></h2><ul>
-<li>What is <code>Reflect</code>?<ul>
-<li><a href="https://www.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/" target="_blank" rel="external">https://www.keithcirkel.co.uk/metaprogramming-in-es6-part-2-reflect/</a></li>
-<li>A collection of js internal method.</li>
-<li>Easy to extend</li>
-<li>Better backward compatibility</li>
-</ul>
-</li>
-<li>What is <code>require(&#39;vm&#39;).Script</code><ul>
-<li>Node.js lib</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Regular-Expressions-in-a-post-ES6-world&quot;&gt;&lt;a href=&quot;#Regular-Expressions-in-a-post-ES6-world&quot; class=&quot;headerlink&quot; title=&quot;Regular Expressions in a post-ES6 world&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://ponyfoo.com/articles/regular-expressions-post-es6&quot;&gt;Regular Expressions in a post-ES6 world&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Sticky group&lt;ul&gt;
-&lt;li&gt;I don’t use regex a lot, don’t know how much can this feature helps&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Better support of Unicode&lt;/li&gt;
-&lt;li&gt;Regex match group with key&lt;ul&gt;
-&lt;li&gt;Easier to read the regex&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lookbehind assertion&lt;ul&gt;
-&lt;li&gt;I don’t even know what is lookahead assertion.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;Scalable-Design-Beyond-Responsive-Design&quot;&gt;&lt;a href=&quot;#Scalable-Design-Beyond-Responsive-Design&quot; class=&quot;headerlink&quot; title=&quot;Scalable Design: Beyond Responsive Design&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://medium.com/@julienetienne_/beyond-responsive-design-f51ee2a9bfd&quot;&gt;Scalable Design: Beyond Responsive Design&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;vh&lt;/code&gt; and &lt;code&gt;vw&lt;/code&gt; units make zoom function fail (as the view port does not change)&lt;br&gt;The article introduce a library to solve responsive font problem: &lt;a href=&quot;https://github.com/julienetie/mimetic&quot;&gt;https://github.com/julienetie/mimetic&lt;/a&gt;&lt;br&gt;Seems the requirement is to use &lt;code&gt;rem&lt;/code&gt; for fonts.&lt;/p&gt;
     
     </summary>
     

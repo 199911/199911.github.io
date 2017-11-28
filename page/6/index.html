@@ -61,6 +61,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/2016/08/27/bootstrap-3-variables/" class="article-date">
+  <time datetime="2016-08-26T16:00:00.000Z" itemprop="datePublished">2016-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/2016/08/27/bootstrap-3-variables/">Implementation of Bootstrap 3 - variables.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
+<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/2016/08/27/bootstrap-3-variables/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/2016/08/27/bootstrap-3-variables/" data-id="cj9covamw00156m656piq7jpl" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/2016/08/27/bootstrap-3-variables/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-the-mythical-man-month-3" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/book-review/2016/08/21/the-mythical-man-month-3/" class="article-date">
@@ -532,55 +580,6 @@
 
 
   
-    <article id="post-commentaries-4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/2016/07/03/commentaries-4/" class="article-date">
-  <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/2016/07/03/commentaries-4/">簡評四</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
-<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
-<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/2016/07/03/commentaries-4/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/2016/07/03/commentaries-4/" data-id="cj9covao600266m65or5xflj2" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/2016/07/03/commentaries-4/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -624,7 +623,15 @@
       <ul>
         
           <li>
+            <a href="/commentary/2017/11/28/commentaries-21/">簡評二十一</a>
+          </li>
+        
+          <li>
             <a href="/commentary/2017/11/18/commentaries-20/">簡評二十</a>
+          </li>
+        
+          <li>
+            <a href="/knowledge/2017/11/12/interview/">Interview</a>
           </li>
         
           <li>
@@ -633,14 +640,6 @@
         
           <li>
             <a href="/diary/2017/11/12/python-loggin-in-production/">PYCON 2017: Python Logging in Production</a>
-          </li>
-        
-          <li>
-            <a href="/commentary/2017/11/12/commentaries-19/">簡評十九</a>
-          </li>
-        
-          <li>
-            <a href="/knowledge/2017/11/12/interview/">Interview</a>
           </li>
         
       </ul>
