@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&#34;CSS: The Definitive Guide 3rd Edition&#34; part 1 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""CSS: The Definitive Guide 3rd Edition" part 1">
+<meta property="og:url" content="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta property="og:updated_time" content="2017-11-12T10:10:16.248Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""CSS: The Definitive Guide 3rd Edition" part 1">
+<meta name="twitter:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" class="article-date">
+  <time datetime="2017-01-15T16:00:00.000Z" itemprop="datePublished">2017-01-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Book-Review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#34;CSS: The Definitive Guide 3rd Edition&#34; part 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It is pity that CSS3 is not included.</p>
+<p>This book may be a little bit outdated, but it is still worth reading if you want to have a better foundation on CSS, but you still need other books to learn CSS 3 feature which are commonly used.</p>
+<a id="more"></a>
+<h1 id="1-CSS-and-Documents"><a href="#1-CSS-and-Documents" class="headerlink" title="1 CSS and Documents"></a>1 CSS and Documents</h1><p>Replaced elements and non-replaced elements</p>
+<ul>
+<li>content is replaced or not</li>
+<li>(img is replaced), no actual content, the content is replaced by data outside HTML file</li>
+<li>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element" target="_blank" rel="external">MDN</a>, their representation is outside the scope of CSS.</li>
+</ul>
+<p>Alternate style sheet</p>
+<ul>
+<li>Example: <code>&lt;link rel=&quot;alternate stylesheet&quot; type=&quot;text/css&quot; href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;</code></li>
+<li>Fecko-based browser support alternate style sheet. browser provide options to let user select the stylesheet.</li>
+<li>Will it be downloaded even user not selected them?</li>
+<li>What is the behaviour in other browser?</li>
+</ul>
+<p>Some old browser does not support @import, which can use this ‘feature’ to hide css from old browsers</p>
+<ul>
+<li>CSS cannot have nested comment, like <code>/* /* nested comment */ */</code> is invalid</li>
+</ul>
+<h1 id="2-Selector"><a href="#2-Selector" class="headerlink" title="2 Selector"></a>2 Selector</h1><p>Pseudo-elements must be the last item in selector. <code>p:first-line em</code> is not valid, as the last item is <code>em</code> but not <code>first-line</code>. There are limited properties to be applied to <code>first-line</code> and <code>first-letter</code> pseudo-element.</p>
+<h1 id="3-Structure-and-the-Cascade"><a href="#3-Structure-and-the-Cascade" class="headerlink" title="3 Structure and the Cascade"></a>3 Structure and the Cascade</h1><ul>
+<li>Universal selector have no specificity: (0,0,0,0)<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>Attribute selector on id attribute is still consider attribute selector<ul>
+<li>It can be a temp fix on specificity war of ID<ul>
+<li><code>tr[id=&quot;totals&quot;]</code>, specificity (0,0,0,1)</li>
+<li><code>#totals</code>, specificity (0,1,0,0)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inherit value don’t have specificity, even universal selector can override<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>In CSS3 inline style override all non-important style<ul>
+<li><code>!important</code> can be used to override inline style written by others</li>
+<li>In CSS 2 inline style have the same specificity as id</li>
+</ul>
+</li>
+<li>Non-CSS style (html attribute) can be override by user or author style</li>
+</ul>
+<h2 id="Exception-of-downward-propagation"><a href="#Exception-of-downward-propagation" class="headerlink" title="Exception of downward propagation"></a>Exception of downward propagation</h2><p>There is upward propagation rule in HTML, background style in <code>body</code> element can be passed to the <code>html</code> element.<br>From <a href="http://stackoverflow.com/questions/5225237/why-does-styling-the-background-of-the-body-element-affect-the-entire-screen/5225321" target="_blank" rel="external">this</a>, if you apply the following CSS to <code>&lt;body /&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">body &#123;</div><div class="line">  height: 100px;</div><div class="line">  width: 100px;</div><div class="line">  background: black</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>the whole screen will be black, unless you apply <code>html { background: white; }</code> explicitly.</p>
+<h2 id="Three-kinds-of-agent-stylesheet"><a href="#Three-kinds-of-agent-stylesheet" class="headerlink" title="Three kinds of agent stylesheet"></a>Three kinds of agent stylesheet</h2><ul>
+<li>User agent stylesheet<ul>
+<li>The browser’s default style</li>
+</ul>
+</li>
+<li>Reader stylesheet<ul>
+<li>The style configure by user</li>
+</ul>
+</li>
+<li>Author stylesheet<ul>
+<li>The style provide by the website owner</li>
+</ul>
+</li>
+<li>Priority:<ul>
+<li>author &gt; reader &gt; user agent stylesheet</li>
+<li>Seems reader does not work if we have reset script</li>
+</ul>
+</li>
+<li>But reader <code>!important</code> style override author style<ul>
+<li>Need confirm to test</li>
+</ul>
+</li>
+</ul>
+<h2 id="Order-to-apply-CSS-on-element-with-pseudo-classes"><a href="#Order-to-apply-CSS-on-element-with-pseudo-classes" class="headerlink" title="Order to apply CSS on element with pseudo-classes"></a>Order to apply CSS on element with pseudo-classes</h2><ul>
+<li>An element can have multiple pseudo class, if apply in wrong other, some styles will never be applied</li>
+<li>The order: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code><ul>
+<li>mnemonic “LoVe - HA”</li>
+</ul>
+</li>
+<li>Define all combination is also a solution</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" data-id="cjcdhdmmo001hje65o6szvre7" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          &#34;CSS: The Definitive Guide 3rd Edition&#34; part 2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/diary/2017/01/08/npm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">npm</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 16.67px;">Book review</a> <a href="/tags/Communication/" style="font-size: 10px;">Communication</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 13.33px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/diary/2018/01/13/13-jan-2018/">13 Jan 2018</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2018/01/10/10-jan-2018/">10 Jan 2018</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/01/10/deployment-strategies/">Six Strategies for Application Deployment</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/01/10/the-clean-code-talks-unit-testing/">The Clean Code Talks -- Unit Testing</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2018/01/08/8-jan-2018/">8 Jan 2018</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

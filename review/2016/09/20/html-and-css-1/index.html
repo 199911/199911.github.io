@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTML and CSS part 1 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="padding-start vs padding-leftI found the default style of ol and ul in Chrome have a interesting property -webkit-padding-start: 40px;. I am wondering how is it different form padding-left: 40px. Acco">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML and CSS part 1">
+<meta property="og:url" content="http://199911.github.io/review/2016/09/20/html-and-css-1/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="padding-start vs padding-leftI found the default style of ol and ul in Chrome have a interesting property -webkit-padding-start: 40px;. I am wondering how is it different form padding-left: 40px. Acco">
+<meta property="og:updated_time" content="2017-11-12T10:10:16.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML and CSS part 1">
+<meta name="twitter:description" content="padding-start vs padding-leftI found the default style of ol and ul in Chrome have a interesting property -webkit-padding-start: 40px;. I am wondering how is it different form padding-left: 40px. Acco">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-html-and-css-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/09/20/html-and-css-1/" class="article-date">
+  <time datetime="2016-09-19T16:00:00.000Z" itemprop="datePublished">2016-09-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Book-Review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML and CSS part 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="padding-start-vs-padding-left"><a href="#padding-start-vs-padding-left" class="headerlink" title="padding-start vs padding-left"></a>padding-start vs padding-left</h2><p>I found the default style of <code>ol</code> and <code>ul</code> in Chrome have a interesting property <code>-webkit-padding-start: 40px;</code>. I am wondering how is it different form <code>padding-left: 40px</code>. According to <a href="http://stackoverflow.com/questions/19582969/what-is-the-difference-between-padding-left-and-padding-start" target="_blank" rel="external">this</a>, they are the same for the language written from left to right. If the language is written from right to left, the padding of <code>-webkit-padding-start: 40px;</code> will move to right.</p>
+<p>Note that <code>dt</code> is using margin instead of padding, because it does not need to put any bullet point into the component.</p>
+<h2 id="Image’s-alt-attribute-vs-title"><a href="#Image’s-alt-attribute-vs-title" class="headerlink" title="Image’s alt attribute vs title"></a>Image’s <code>alt</code> attribute vs <code>title</code></h2><p><code>alt</code> stands for alternative, which should be description of the image, because it will be shown when the image does not load. <code>title</code> provides extra information of the image. For more detail, we can read <a href="https://www.searchenginejournal.com/image-alt-text-vs-image-title-whats-the-difference/" target="_blank" rel="external">this</a></p>
+<a id="more"></a>
+<h2 id="width-and-height-in-image-tag-vs-in-CSS"><a href="#width-and-height-in-image-tag-vs-in-CSS" class="headerlink" title="width and height in image tag vs in CSS"></a><code>width</code> and <code>height</code> in image tag vs in CSS</h2><p>According to <a href="http://stackoverflow.com/questions/640190/image-width-height-as-an-attribute-or-in-css" target="_blank" rel="external">this</a>, if the image is part of the content, we should use <code>width</code> and <code>height</code> attribute in image tag. The rule of thumb is, HTML defined the contents and CSS define the layout. For example, the background image’s size should be defined by CSS, because it is for layout and decoration.</p>
+<h2 id="align-in-image-tag-is-deprecated-in-HTML-5"><a href="#align-in-image-tag-is-deprecated-in-HTML-5" class="headerlink" title="align in image tag is deprecated in HTML 5"></a><code>align</code> in image tag is deprecated in HTML 5</h2><p>Which should be replace by <code>align</code> in CSS.<br>PS: image is <code>display: inline-block;</code> by default.</p>
+<h2 id="figure-is-a-component-of-image-with-caption"><a href="#figure-is-a-component-of-image-with-caption" class="headerlink" title="figure is a component of image with caption"></a><code>figure</code> is a component of image with caption</h2><p>The html structure likes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;figure&gt;</div><div class="line">  &lt;img src=&quot;images/otters.jpg&quot; alt=&quot;Photograph of two sea otters floating in water&quot;&gt;</div><div class="line">  &lt;br /&gt;</div><div class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</div><div class="line">&lt;/figure&gt;</div></pre></td></tr></table></figure></p>
+<p>Notices that figcaption is HTML 5 element, which will be ignored by old browsers.<br>To have better compatibility, we can have<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;p&gt;</div><div class="line">  &lt;figcaption&gt;Sea otters hold hands when they sleep so they don&apos;t drift away from each other.&lt;/figcaption&gt;</div><div class="line">&lt;/p&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="thead-tbody-and-tfoot"><a href="#thead-tbody-and-tfoot" class="headerlink" title="thead, tbody and tfoot"></a><code>thead</code>, <code>tbody</code> and <code>tfoot</code></h2><p>We can use these when the first and last rows content different content. Browser can make table header and footer sticky when the screen cannot fit the screen. It is also useful in print version when the table cannot be shown in one page.</p>
+<h2 id="Deprecated-attribute-of-table-and-form-in-HTML-5"><a href="#Deprecated-attribute-of-table-and-form-in-HTML-5" class="headerlink" title="Deprecated attribute of table and form in HTML 5"></a>Deprecated attribute of table and form in HTML 5</h2><p><code>width</code>, <code>border</code> and <code>background</code> are deprecated in HTML 5 table. <code>size</code> in HTML 5 form’s input is deprecated, but notice <code>maxlength</code> is not.<br>Notice that <code>size</code> in select element is not deprecated. It is used to define the number of item shown in multiple select.</p>
+<h2 id="Input-type"><a href="#Input-type" class="headerlink" title="Input type"></a>Input type</h2><p>There is a list of input type in form</p>
+<ul>
+<li>text</li>
+<li>password</li>
+<li>radio</li>
+<li>checkbox</li>
+<li>file</li>
+<li>submit<ul>
+<li>The <code>name</code> attribute is not necessary, the text on button is defined by the <code>value</code> attribute.</li>
+</ul>
+</li>
+<li>image</li>
+<li>hidden<br>The following is new type introduced in the HTML 5</li>
+<li>date</li>
+<li>email</li>
+<li>url</li>
+<li>search</li>
+</ul>
+<h2 id="Label-in-form"><a href="#Label-in-form" class="headerlink" title="Label in form"></a>Label in form</h2><p>The label is used to connect text description with the form input. There are two cases:</p>
+<ul>
+<li>Wrap the <code>input</code> tag and text description in <code>label</code>.</li>
+<li><code>input</code> tag and the description are separated. The value of <code>for</code> attribute in <code>label</code> is same as <code>id</code> of the corresponding <code>input</code>.</li>
+</ul>
+<p>The book also recommend where to put the text description:<br>Above or to the left of <code>input</code>:</p>
+<ul>
+<li>Text inputs</li>
+<li>Text areas</li>
+<li>Select boxes</li>
+<li>File uploads<br>To the right of <code>input</code>:</li>
+<li>Individual checkboxes</li>
+<li>Individual radio buttons</li>
+</ul>
+<h2 id="fieldset-and-legend"><a href="#fieldset-and-legend" class="headerlink" title="fieldset and legend"></a><code>fieldset</code> and <code>legend</code></h2><p><code>fieldset</code> can group the inputs and the <code>legend</code> is the description of <code>fieldset</code>.</p>
+<h2 id="div-vs-span"><a href="#div-vs-span" class="headerlink" title="div vs span"></a><code>div</code> vs <code>span</code></h2><p><code>div</code> and <code>span</code> group elements into a block or inline element.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/09/20/html-and-css-1/" data-id="cjcdhdmmz001xje6541hnu8n3" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/09/20/html-and-css-1/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/review/2016/10/01/html-and-css-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          HTML and CSS part 2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/diary/2016/09/11/bootstrap-3-implementation-demo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Bootstrap 3 implementation demo</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 16.67px;">Book review</a> <a href="/tags/Communication/" style="font-size: 10px;">Communication</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 13.33px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/diary/2018/01/13/13-jan-2018/">13 Jan 2018</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2018/01/10/10-jan-2018/">10 Jan 2018</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/01/10/deployment-strategies/">Six Strategies for Application Deployment</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/01/10/the-clean-code-talks-unit-testing/">The Clean Code Talks -- Unit Testing</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2018/01/08/8-jan-2018/">8 Jan 2018</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2016/09/20/html-and-css-1/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
