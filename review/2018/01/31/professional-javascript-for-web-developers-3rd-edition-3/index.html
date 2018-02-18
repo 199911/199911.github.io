@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>&#34;Professional: JavaScript for Web Developers, Third Edition&#34; part 3 | Coding Sunday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Chapter 11: DOM Extensions
+HTML5 represents a radical departure from the tradition of HTML.
+In all previous HTML specifications focus purely on the markup of the language and defer JavaScript bindings">
+<meta property="og:type" content="article">
+<meta property="og:title" content=""Professional: JavaScript for Web Developers, Third Edition" part 3">
+<meta property="og:url" content="http://199911.github.io/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/index.html">
+<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:description" content="Chapter 11: DOM Extensions
+HTML5 represents a radical departure from the tradition of HTML.
+In all previous HTML specifications focus purely on the markup of the language and defer JavaScript bindings">
+<meta property="og:updated_time" content="2018-01-31T13:17:50.738Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=""Professional: JavaScript for Web Developers, Third Edition" part 3">
+<meta name="twitter:description" content="Chapter 11: DOM Extensions
+HTML5 represents a radical departure from the tradition of HTML.
+In all previous HTML specifications focus purely on the markup of the language and defer JavaScript bindings">
+  
+    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Coding Sunday</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-professional-javascript-for-web-developers-3rd-edition-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/" class="article-date">
+  <time datetime="2018-01-31T13:17:50.737Z" itemprop="datePublished">2018-01-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#34;Professional: JavaScript for Web Developers, Third Edition&#34; part 3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Chapter-11-DOM-Extensions"><a href="#Chapter-11-DOM-Extensions" class="headerlink" title="Chapter 11: DOM Extensions"></a>Chapter 11: DOM Extensions</h1><ul>
+<li>HTML5 represents a radical departure from the tradition of HTML.<ul>
+<li>In all previous HTML specifications focus purely on the markup of the language and defer JavaScript bindings to the DOM specification.</li>
+<li>The HTML5 specification contains a large amount of JavaScript APIs designed for use with the markup additions.<ul>
+<li>Part of these APIs overlap with the DOM and define DOM extensions that browsers should provide.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The class attribute have increasing usage, for both css and js, so new api is created<br>getElementsByClassName</li>
+</ul>
+<p>DOMTokenList new type make adding classname easier, there is a new attr <code>element.classList</code></p>
+<p><code>document.activeElement</code> is the current focusing element.<br>first load -&gt; document body, before load -&gt; null<br>!= null is does not mean there are focus, use <code>document.hasFocus()</code></p>
+<p><code>document.readyState</code> and onload handler<br><code>document.compatMode</code><br><code>document.head</code> is added in HTML5</p>
+<p><code>document.charset</code> and <code>document.defaultCharset</code><br>custom data attr, <code>element.dataset</code>, which is a DOMStringMap</p>
+<p>Markup insertion with better performance. <code>element.innerHTML</code><br>Cannot insert <code>&lt;script&gt;</code><br><code>element.outerHTML</code></p>
+<p><code>insertAdjacentHTML()</code><br>“beforebegin” — Insert just before the element as a previous sibling.<br>“afterbegin” — Insert just inside of the element as a new child or series of children before the first child.<br>“beforeend” — Insert just inside of the element as a new child or series of children after the last child.<br>“afterend” — Insert just after the element as a next sibling.</p>
+<p>You can force a particular document mode by using the X-UA-Compatible HTTP header or by using the <meta> tag equivalent:</p>
+<p><meta http-equiv="X-UA-Compatible" content="IE=IEVersion"><br>You are not required to have an X-UA-Compatible field set on pages. By default, the browser uses the doctype to determine if the document mode should be the best available standards mode or quirks mode.</p>
+<p>DOM Level 3 compareDocumentPosition() method<br>MASK RELATIONSHIP BETWEEN NODES<br>1 Disconnected (The passed-in node is not in the document.)<br>2 Precedes (The passed-in node appears in the DOM tree prior to the reference node.)<br>4 Follows (The passed-in node appears in the DOM tree after the reference node.)<br>8 Contains (The passed-in node is an ancestor of the reference node.)<br>16 Is contained by (The passed-in node is a descendant of the reference node.)</p>
+<p>node.innerText - it is all text inside the node and its children. We can update this prop. The string will be called HTML encode automatically</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent" target="_blank" rel="external">https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent</a><br>textContent vs innerText</p>
+<p>node.outerText (replace the node completely), can i use have no data<br>support by all:<br><code>scrollIntoView()</code><br>only work in chrome and safari:<br><code>scrollIntoViewIfNeeded(alignCenter)</code><br><code>scrollByLines(lineCount)</code><br><code>scrollByPages(pageCount)</code></p>
+<h1 id="Dom-level-2-and-3"><a href="#Dom-level-2-and-3" class="headerlink" title="Dom level 2 and 3"></a>Dom level 2 and 3</h1><p>better DOM summary</p>
+<p>You can explicitly create a prefix for an XML namespace using xmlns</p>
+<p>The Node type evolves in DOM Level 2 to include the following namespace-specific properties:</p>
+<p>localName — The node name without the namespace prefix.(for xhtml?)<br>namespaceURI — The namespace URI of the node or null if not specified. (value of xmln)<br>prefix — The namespace prefix or null if not specified.</p>
+<p>DOM Level 3 goes one step further and introduces the following methods to work with namespaces:</p>
+<p>isDefaultNamespace(namespaceURI) — Returns true when the specified namespaceURI is the default namespace for the node.<br>lookupNamespaceURI(prefix) — Returns the namespace URI for the given prefix.<br>lookupPrefix(namespaceURI) — Returns the prefix for the given namespaceURI.</p>
+<p>Dom 2 core add lots of method with namespace</p>
+<p>The DocumentType type adds three new properties: publicId, systemId, and internalSubset.</p>
+<p> importNode(). The purpose of this method is to take a node from a different document and import it into a new document so that it can be added into the document structure.</p>
+<p> DOM Level 2 Views adds a property called defaultView, which is a pointer to the window (or frame) that owns the given document.</p>
+<p>  document.implementation object specified in the DOM Level 2 Core in the form of two new methods: createDocumentType() and createDocument().</p>
+<p>  The sole non–namespace-related change to the Node type is the addition of the isSupported() method.</p>
+<p>  DOM Level 3 introduces two methods to help compare nodes: isSameNode() and isEqualNode().</p>
+<p>  Two nodes are equal when they are of the same type and have properties that are equal (nodeName, nodeValue, and so on), and their attributes and childNodes properties are equivalent (containing equivalent values in the same positions).</p>
+<p>  SameNode means same reference</p>
+<p>  node.setUserData() and node.getUserData()<br>  The handler function for setUserData() is called whenever the node with the data is cloned, removed, renamed, or imported into another document and gives you the opportunity to determine what should happen to the user data in each of those cases.</p>
+<p>  frames have a new property in DOM Level 2 HTML called contentDocument.<br>  This property contains a pointer to the document object representing the contents of the frame.<br>Access to the document object of a frame or iframe is limited based on cross-domain security restrictions.</p>
+<p>The style object is an instance of CSSStyleDeclaration and contains all stylistic information specified by the HTML style attribute but no information about styles that have cascaded from either included or inline style sheets<br>Since CSS property names use dash case (using dashes to separate words, such as background-image), the names must be converted into camel case in order to be used in JavaScript.</p>
+<p>The one CSS property that doesn’t translate directly is float. Since float is a reserved word in JavaScript, it can’t be used as a property name. The DOM Level 2 Style specification states that the corresponding property on the style object should be cssFloat,</p>
+<ul>
+<li>Always include unit</li>
+</ul>
+<p>CSS property<br>cssText — As described previously, provides access to the CSS code of the style attribute.<br>length — The number of CSS properties applied to the element.<br>parentRule — The CSSRule object representing the CSS information. The CSSRule type is discussed in a later section.<br>getPropertyCSSValue(propertyName) — Returns a CSSValue object containing the value of the given property.<br>getPropertyPriority(propertyName) — Returns “important” if the given property is set using !important; otherwise it returns an empty string.<br>getPropertyValue(propertyName) — Returns the string value of the given property.<br>item(index) — Returns the name of the CSS property at the given position.<br>removeProperty(propertyName) — Removes the given property from the style.<br>setProperty(propertyName, value, priority) — Sets the given property to the given value with a priority (either “important” or an empty string).</p>
+<p>The cssText property allows access to the CSS code of the style. When used in read mode, cssText returns the browser’s internal representation of the CSS code in the style attribute. When used in write mode, the value assigned to cssText overwrites the entire value of the style attribute, meaning that all previous style information specified using the attribute is lost. (fastest way to make mulitple changes)<br>length is used with item()</p>
+<p>The getPropertyValue() method always retrieves the string representation of the CSS property value. If you need more information, getPropertyCSSValue() returns a CSSValue object that has two properties: cssText and cssValueType. The cssText property is the same as the value returned from getPropertyValue(). The cssValueType property is a numeric constant indicating the type of value being represented: 0 for an inherited value, 1 for a primitive value, 2 for a list, or 3 for a custom value</p>
+<p>getComputedStyle(). This method accepts two arguments: the element to get the computed style for and a pseudo-element string (such as “:after”). The second argument can be null if no pseudo-element information is necessary.</p>
+<ul>
+<li>the manner in which values are represented can differ in different browser.</li>
+</ul>
+<p>The important thing to remember about computed styles in all browsers is that they are read-only</p>
+<p>Stylesheets</p>
+<p>disabled — A Boolean value indicating if the style sheet is disabled. This property is read/write, so setting its value to true will disable a style sheet.<br>href — The URL of the style sheet if it is included using <link>; otherwise, this is null.<br>media — A collection of media types supported by this style sheet. The collection has a length property and item() method, as with all DOM collections. Like other DOM collections, you can use bracket notation to access specific items in the collection. An empty list indicates that the style sheet should be used for all media. In Internet Explorer 8 and earlier, media is a string reflecting the media attribute of the <link> or <style> element.<br>ownerNode — Pointer to the node that owns the style sheet, which is either a <link> or a <style> element in HTML (it can be a processing instruction in XML). This property is null if a style sheet is included in another style sheet using @import. Internet Explorer 8 and earlier do not support this property.<br>parentStyleSheet — When a style sheet is included via @import, this is a pointer to the style sheet that imported it.<br>title — The value of the title attribute on the ownerNode.<br>type — A string indicating the type of style sheet. For CSS style sheets, this is “text/css”.<br>With the exception of disabled, the rest of these properties are read-only. The CSSStyleSheet type supports all of these properties and the following properties and methods:</p>
+<p>cssRules — A collection of rules contained in the style sheet. Internet Explorer 8 and earlier don’t support this property but have a comparable property called rules. Internet Explorer 9 supports both cssRules and rules.<br>ownerRule — If the style sheet was included using @import, this is a pointer to the rule representing the import; otherwise, this is null. Internet Explorer does not support this property.<br>deleteRule(index) — Deletes the rule at the given location in the cssRules collection. Internet Explorer 8 and earlier does not support this method, but it does have a similar method called removeRule(). Internet Explorer 9 supports both deleteRule() and removeRule().<br>insertRule(rule, index) — Inserts the given string rule at the position specified in the cssRules collection. Internet Explorer 8 and earlier do not support this method but have a similar method called addRule(). Internet Explorer 9 supports both insertRule() and addRule().</p>
+<p>CSS Rules</p>
+<p>cssText — Returns the text for the entire rule. This text may be different from the actual text in the style sheet because of the way that browsers handle style sheets internally; Safari always converts everything to all lowercase. This property is not supported in Internet Explorer.<br>parentRule — If this rule is imported, this is the import rule; otherwise, this is null. This property is not supported in Internet Explorer.<br>parentStyleSheet — The style sheet that this rule is a part of. This property is not supported in Internet Explorer.<br>selectorText — Returns the selector text for the rule. This text may be different from the actual text in the style sheet because of the way that browsers handle style sheets internally. This property is read-only in Firefox, Safari, Chrome, and Internet Explorer (where it throws an error). Opera allows selectorText to be changed.<br>style — A CSSStyleDeclaration object that allows the setting and getting of specific style values for the rule.<br>type — A constant indicating the type of rule. For style rules, this is always 1. This property is not supported in Internet Explorer.</p>
+<p>Offset Dimensions</p>
+<p>An element’s visual space on the page is made up of its height and width, including all padding, scrollbars, and borders (but not including margins).<br>offsetHeight — The amount of vertical space, in pixels, taken up by the element, including its height, the height of a horizontal scrollbar (if visible), the top border height, and the bottom border height.<br>offsetLeft — The number of pixels between the element’s outside left border and the containing element’s inside left border.<br>offsetTop — The number of pixels between the element’s outside top border and the containing element’s inside top border.<br>offsetWidth — The amount of horizontal space taken up by the element, including its width, the width of a vertical scrollbar (if visible), the left border width, and the right border width.</p>
+<p>client dimensions<br>padding + content size<br>clientWidth and clientHeight</p>
+<p>Scroll dimensions<br>scrollHeight — The total height of the content if there were no scrollbars present.<br>scrollLeft — The number of pixels that are hidden to the left of the content area. This property can be set to change the scroll position of the element.<br>scrollTop — The number of pixels that are hidden in the top of the content area. This property can be set to change the scroll position of the element.<br>scrollWidth — The total width of the content if there were no scrollbars present.</p>
+<p>The relationship between scrollWidth and scrollHeight to clientWidth and clientHeight is not clear when it comes to documents that do not scroll. Inspecting these properties on document.documentElement leads to inconsistent results across browsers, as described here:</p>
+<p>Firefox keeps the properties equal, but the size is related to the actual size of the document content, not the size of the viewport.<br>(some equal to view port and some equal to document content)</p>
+<p>The scrollLeft and scrollTop properties can be used either to determine the current scroll settings on an element or to set them.( scroll to top by setting scrollTop to 0)</p>
+<p>TRAVERSALS</p>
+<p>Both NodeIterator and TreeWalker perform  defaultCharset</p>
+<p>NodeIterator<br>root — The node in the tree that you want to start searching from.<br>whatToShow — A numerical code indicating which nodes should be visited.<br>filter — A NodeFilter object or a function indicating whether a particular node should be accepted or rejected.<br>entityReferenceExpansion — A Boolean value indicating whether entity references should be expanded. This has no effect in HTML pages, because entity references are never expanded.<br>The whatToShow argument is a bitmask that determines which nodes to visit by applying one or more filters. Possible values for this argument are included as constants on the NodeFilter type as follows:</p>
+<p>NodeFilter.SHOW_ALL — Show all node types.<br>NodeFilter.SHOW_ELEMENT — Show element nodes.<br>NodeFilter.SHOW_ATTRIBUTE — Show attribute nodes. This can’t actually be used because of the DOM structure.<br>NodeFilter.SHOW_TEXT — Show text nodes.<br>NodeFilter.SHOW_CDATA_SECTION — Show CData section nodes. This is not used in HTML pages.<br>NodeFilter.SHOW_ENTITY_REFERENCE — Show entity reference nodes. This is not used in HTML pages.<br>NodeFilter.SHOW_ENTITY — Show entity nodes. This is not used in HTML pages.<br>NodeFilter.SHOW_PROCESSING_INSTRUCTION — Show PI nodes. This is not used in HTML pages.<br>NodeFilter.SHOW_COMMENT — Show comment nodes.<br>NodeFilter.SHOW_DOCUMENT — Show document nodes.<br>NodeFilter.SHOW_DOCUMENT_TYPE — Show document type nodes.<br>NodeFilter.SHOW_DOCUMENT_FRAGMENT — Show document fragment nodes. This is not used in HTML pages.<br>NodeFilter.SHOW_NOTATION — Show notation nodes. This is not used in HTML pages.<br>With the exception of NodeFilter.SHOW_ALL, you can combine multiple options using the bitwise OR operator</p>
+<p> A NodeFilter object has only one method, acceptNode(), which returns NodeFilter.FILTER_ACCEPT if the given node should be visited or NodeFilter.FILTER_SKIP if the given node should not be visited.</p>
+<p> The two primary methods of NodeIterator are nextNode() and previousNode(). return null if reach the end</p>
+<p>TreeWalker<br>including nextNode() and previousNode(), and adds the following methods to traverse a DOM structure in different directions:</p>
+<p>parentNode() — Travels to the current node’s parent.<br>firstChild() — Travels to the first child of the current node.<br>lastChild() — Travels to the last child of the current node.<br>nextSibling() — Travels to the next sibling of the current node.<br>previousSibling() — Travels to the previous sibling of the current node.</p>
+<p>RANGE<br><code>document.createRange();</code><br>startContainer — The node within which the range starts (the parent of the first node in the selection).<br>startOffset — The offset within the startContainer where the range starts. If startContainer is a text node, comment node, or CData node, the startOffset is the number of characters skipped before the range starts; otherwise, the offset is the index of the first child node in the range.<br>endContainer — The node within which the range ends (the parent of the last node in the selection).<br>endOffset — The offset within the endContainer where the range ends (follows the same rules as startOffset).<br>commonAncestorContainer — The deepest node in the document that has both startContainer and endContainer as descendants.<br>selectNode()<br>selectNodeContents()</p>
+<p>setStartBefore(refNode) — Sets the starting point of the range to begin before refNode, so refNode is the first node in the selection. The startContainer property is set to refNode.parentNode, and the startOffset property is set to the index of refNode within its parent’s childNodes collection.<br>setStartAfter(refNode) — Sets the starting point of the range to begin after refNode, so refNode is not part of the selection; rather, its next sibling is the first node in the selection. The startContainer property is set to refNode.parentNode, and the startOffset property is set to the index of refNode within its parent’s childNodes collection plus one.<br>setEndBefore(refNode) — Sets the ending point of the range to begin before refNode, so refNode is not part of the selection; its previous sibling is the last node in the selection. The endContainer property is set to refNode.parentNode, and the endOffset property is set to the index of refNode within its parent’s childNodes collection.<br>setEndAfter(refNode) — Sets the ending point of the range to begin before refNode, so refNode is the last node in the selection. The endContainer property is set to refNode.parentNode, and the endOffset property is set to the index of refNode within its parent’s childNodes collection plus one.<br>setStart() and setEnd()</p>
+<p>range can be a not well formed html, but it is not very useful<br>deleteContents()<br>extractContents()<br>appendChild()<br> cloneContents()<br> insertNode()</p>
+<p>When a range isn’t selecting any part of a document, it is said to be collapsed.</p>
+<p>Comparing DOM Ranges<br><code>compareBoundaryPoints()</code><br>Range.START_TO_START (0) — Compares the starting point of the first range to the starting point of the second.<br>Range.START_TO_END (1) — Compares the starting point of the first range to the end point of the second.<br>Range.END_TO_END (2) — Compares the end point of the first range to the end point of the second.<br>Range.END_TO_START (3) — Compares the end point of the first range to the starting point of the second.</p>
+<p>range.cloneRange();</p>
+<p>After calling detach(), the range can be safely dereferenced (call detach before dereference)</p>
+<h1 id="13-Event"><a href="#13-Event" class="headerlink" title="13 Event"></a>13 Event</h1><p>DOM 2 capture (top down) -&gt; bubble (bottom up)</p>
+<p>Better to limit the number of event handler</p>
+<p>The HTML inline event handler have local variable <code>event</code>, <code>this</code> refer to event’s target element (bubbling?)</p>
+<p>If the element is a form input element, then the scope chain also contains an entry for the parent form element</p>
+<p>Timing issue: user interact with the button before handler ready<br>extra <a href="http://www.jibbering.com/faq/names/event_handler.html">http://www.jibbering.com/faq/names/event_handler.html</a></p>
+<p>DOM 0 handler, assign function to the attr like <code>onClick</code>, the <code>this</code> is bound to the element (how about we call bind explicitly?)</p>
+<ul>
+<li>it is dangerous, as different browser may resolve the variable from different object.</li>
+</ul>
+<p>remove the attr by setting it to null</p>
+<p>DOM Level 2 Events define two methods to deal with the assignment and removal of event handlers: addEventListener() and removeEventListener(). the third parameters indicate whether to call the event handler during the capture phase (true) or during the bubble phase (false).</p>
+<p>(capture vs bubble? which one is better?)</p>
+<p>Event handlers added via addEventListener() can be removed only by using removeEventListener() and passing in the same arguments as were used when the handler was added. This means that anonymous functions added using addEventListener() cannot be removed<br>(all event go to this handler, use switch block to handle)<br>(DOM 2 support multiple handler?)</p>
+<p>The event object contains properties and methods related to the specific event that caused its creation.<br>All event should have:</p>
+<ul>
+<li>bubbles</li>
+<li>cancelable</li>
+<li>currentTarget (the element whose event handler is currently handling the event)</li>
+<li>defaultPrevented (added in DOM 3, mean preventDefault is called)</li>
+<li>detail?</li>
+<li>eventPhase (1: capturing phase, 2: at target, 3: for bubbling)</li>
+<li>preventDefault() (works only if cancelable is true)</li>
+<li>stopImmediatePropagation() (Cancels any further event capturing or event bubbling and prevent other handlers from being called (Added in DOM 3))</li>
+<li>stopPropagation() (works if bubbles is true, Cancels any further event capturing or event bubbling)</li>
+<li>target</li>
+<li>trusted (true mean event is generated by browser, false mean generated by developer)<br>(preventDefault() vs stopImmediatePropagation()?)</li>
+</ul>
+<h2 id="preventDefault"><a href="#preventDefault" class="headerlink" title="preventDefault()"></a>preventDefault()</h2><p>Prevent default BROWSER behavior, like clicking hyperlinks.</p>
+<p>at target can be capturing phase and bubbling phase, but the eventPhase is equal to 2<br><code>event</code> object will be destroyed after all event handlers are executed. (how about we set it to global variable)</p>
+<h2 id="event-types"><a href="#event-types" class="headerlink" title="event types"></a>event types</h2><ul>
+<li>User interface events</li>
+<li>Focus events</li>
+<li>Wheel events</li>
+<li>Text events</li>
+<li>Keyboard events</li>
+<li>Composition events</li>
+<li>Mutation events</li>
+<li>Mutation name events<br>HTML 5 have another set of events</li>
+</ul>
+<h3 id="UI-events"><a href="#UI-events" class="headerlink" title="UI events"></a>UI events</h3><ul>
+<li>DOMActivate: deprecated in DOM 3</li>
+<li>load (DOM 2)<ul>
+<li>window: page completely loaded</li>
+<li>frameset: all frame loaded</li>
+<li>other: completely loaded</li>
+</ul>
+</li>
+<li>unload (how to trigger?)  (DOM 2)</li>
+<li>abort (how to trigger?)  (DOM 2)<ul>
+<li>Fires on an <object> element if it is not fully loaded before the user stops the download process.</li>
+</ul>
+</li>
+<li>error: (ch 17) (DOM 2)<ul>
+<li>window: where there are JS error</li>
+<li>frameset: one or more frame not loaded</li>
+<li>img: image fail to load</li>
+<li>other: fail to load</li>
+</ul>
+</li>
+<li>select (DOM 2)<ul>
+<li>Fires when the user selects one or more characters in a text box (either <input> or <textarea>).</li>
+<li>Event in form</li>
+</ul>
+</li>
+<li>resize (DOM 2)<ul>
+<li>window or frame resided</li>
+</ul>
+</li>
+<li>scroll (DOM 2)<ul>
+<li>Fire on any element with scrollbar when user scrollbars</li>
+<li>body container the page’s scrollbar</li>
+</ul>
+</li>
+</ul>
+</style></p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/" data-id="cjdsv7g72000ghi652bh5ew4g" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/review/2018/02/03/catch-attention-during-presentation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          三個方法令Presentation氣氛十足
+        
+      </div>
+    </a>
+  
+  
+    <a href="/review/2018/01/28/tuesdays-with-morrie/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">最後14堂星期二的課</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 17.5px;">Book review</a> <a href="/tags/Communication/" style="font-size: 12.5px;">Communication</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Productivity/" style="font-size: 10px;">Productivity</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 15px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/2018/02/18/why-null-references-are-a-bad-idea/">Why NULL references are a bad idea</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/02/18/evaluate-sustainability-open-source-project/">How to evaluate the sustainability of an open source project</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/02/03/manage-time-effectively/">10 ways to have a better conversation</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/02/03/catch-attention-during-presentation/">三個方法令Presentation氣氛十足</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/">&#34;Professional: JavaScript for Web Developers, Third Edition&#34; part 3</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/2018/01/31/professional-javascript-for-web-developers-3rd-edition-3/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
