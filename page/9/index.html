@@ -61,6 +61,105 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-airbnb-javascript-style" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/05/29/airbnb-javascript-style/" class="article-date">
+  <time datetime="2016-05-28T16:00:00.000Z" itemprop="datePublished">2016-05-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/05/29/airbnb-javascript-style/">Airbnb javascript style guide</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I will pick some special rules and some rules i don’t think it is useful here</p>
+<h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Rule-3-4-Define-all-the-properties-of-an-object-in-one-place"><a href="#Rule-3-4-Define-all-the-properties-of-an-object-in-one-place" class="headerlink" title="Rule 3.4: Define all the properties of an object in one place."></a>Rule 3.4: Define all the properties of an object in one place.</h3><p>It is my common mistake. Don’t add properties to object once it defined. It is easy for other to miss the properties.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function getKey(k) &#123;</div><div class="line">  return `a key named $&#123;k&#125;`;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// bad</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">&#125;;</div><div class="line">obj[getKey(&apos;enabled&apos;)] = true;</div><div class="line"></div><div class="line">// good</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">  [getKey(&apos;enabled&apos;)]: true,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/05/29/airbnb-javascript-style/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/" data-id="cjcdhdmmm001eje65glgsscp8" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/05/29/airbnb-javascript-style/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Article-review/">Article review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-this-call-apply-in-javascipt" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/2016/05/23/this-call-apply-in-javascipt/" class="article-date">
+  <time datetime="2016-05-22T16:00:00.000Z" itemprop="datePublished">2016-05-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/2016/05/23/this-call-apply-in-javascipt/">Javascript 中嘅 this, call 同 apply</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript lexical functional scope,姐係variable嘅lifespan係一個個function咁計，每當有一個新function，就有一個新嘅scope。<br>另一個javascript嘅特點係first-class function姐係function可以係一個variable type，個function可以pass入第2個function，或姐一個function return另一個function.E一個特點令javascript好多時都會用到callback function E個pattern.</p>
+<p>以上2個特點加埋一齊就會出現一D麻煩。</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/2016/05/23/this-call-apply-in-javascipt/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/2016/05/23/this-call-apply-in-javascipt/" data-id="cj9covap500386m65m6pr3ni0" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/2016/05/23/this-call-apply-in-javascipt/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-learn-to-code-and-be-self-reliant" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/05/15/learn-to-code-and-be-self-reliant/" class="article-date">
@@ -528,6 +627,14 @@
       <ul>
         
           <li>
+            <a href="/commentary/2018/04/16/commentaries-25/">簡評二十五</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/2018/04/15/commentaries-24/">簡評二十四</a>
+          </li>
+        
+          <li>
             <a href="/commentary/2018/04/12/commentaries-23/">簡評二十三</a>
           </li>
         
@@ -537,14 +644,6 @@
         
           <li>
             <a href="/knowledge/2018/04/08/pick-up-new-project/">Pick up new project</a>
-          </li>
-        
-          <li>
-            <a href="/review/2018/04/05/the-art-of-procrastination/">拖拖拉拉，人生照樣精采：史丹佛教授給拖拉人的成功提案</a>
-          </li>
-        
-          <li>
-            <a href="/commentary/2018/03/25/commentaries-22/">簡評二十二</a>
           </li>
         
       </ul>
