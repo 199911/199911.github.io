@@ -9,6 +9,7 @@
 <meta property="og:title" content="Coding Sunday">
 <meta property="og:url" content="http://199911.github.io/index.html">
 <meta property="og:site_name" content="Coding Sunday">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Coding Sunday">
   
@@ -53,7 +54,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
       </div>
     </div>
   </div>
@@ -87,99 +88,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="API-Design-Principles"><a href="#API-Design-Principles" class="headerlink" title="API Design Principles"></a><a href="http://wiki.qt.io/API-Design-Principles" target="_blank" rel="external">API Design Principles</a></h2><p>This article talks about the API design principle of library Qt. But it is highly related to C++. It is difficult for me to understand it now.</p>
-<h2 id="RSS-不是臉書演算法解藥，我們真正需要的是垂直閱讀與實踐"><a href="#RSS-不是臉書演算法解藥，我們真正需要的是垂直閱讀與實踐" class="headerlink" title="RSS 不是臉書演算法解藥，我們真正需要的是垂直閱讀與實踐"></a><a href="https://www.playpcesor.com/2018/04/rss-facebook.html" target="_blank" rel="external">RSS 不是臉書演算法解藥，我們真正需要的是垂直閱讀與實踐</a></h2><p>資訊爆炸，要認清自己目標，有意識filter走資訊唔睇，咁先至唔係過勞。同時剩睇唔練，深化唔到，睇幾多都冇用。</p>
-<h2 id="愈追求完美，離完美愈遠"><a href="#愈追求完美，離完美愈遠" class="headerlink" title="愈追求完美，離完美愈遠"></a><a href="https://www.hbrtaiwan.com/article_content_AR0007833.html" target="_blank" rel="external">愈追求完美，離完美愈遠</a></h2><p>要訂立實際可行的目標</p>
-<h2 id="努力就能賺大錢？英國學者：別傻了，還不如幫有錢人遛狗"><a href="#努力就能賺大錢？英國學者：別傻了，還不如幫有錢人遛狗" class="headerlink" title="努力就能賺大錢？英國學者：別傻了，還不如幫有錢人遛狗"></a><a href="https://hk.thenewslens.com/article/17797" target="_blank" rel="external">努力就能賺大錢？英國學者：別傻了，還不如幫有錢人遛狗</a></h2><p>現代人的薪水定義已經無法用名望、努力以及貢獻度來看</p>
-<h2 id="別懷疑，上班第一天，你就要設定離職日期"><a href="#別懷疑，上班第一天，你就要設定離職日期" class="headerlink" title="別懷疑，上班第一天，你就要設定離職日期"></a><a href="http://www.cheers.com.tw/article/article.action?id=5088773" target="_blank" rel="external">別懷疑，上班第一天，你就要設定離職日期</a></h2><ul>
-<li>你進這家公司圖的是什麼<ul>
-<li>金錢</li>
-<li>專業技能</li>
-<li>履歷鍍金</li>
-</ul>
-</li>
-<li>給自己時間壓力</li>
-<li>有助於適應能力變強，人脈增廣，不捲入派系</li>
-</ul>
-<h2 id="你可以沒有熱情，但不應該自我設限"><a href="#你可以沒有熱情，但不應該自我設限" class="headerlink" title="你可以沒有熱情，但不應該自我設限"></a><a href="https://www.facebook.com/PivotSoftwareEngineer/posts/504816063266922" target="_blank" rel="external">你可以沒有熱情，但不應該自我設限</a></h2><p>過濾新技術:</p>
-<ul>
-<li>這個技術解決了甚麼痛點？</li>
-<li>跟同類型技術相比，有甚麼優缺點？</li>
-<li>能解決我目前會碰到的問題嗎？還是帶來更多技術債？<br>通常這樣的過濾花不到你十分鐘，看個Demo、幾行程式碼、Benchmark，大概就可以略知一二了</li>
-</ul>
-<p>三種技術</p>
-<ul>
-<li>Design Pattern / Coding Style：這種比較抽象高大上，不是很好理解但是念通了對自己程式設計功力會大幅提升</li>
-<li>公用函式庫 / 框架：實戰的時候可以省掉很多手工，無聊可以看看原碼看人家怎麼實作的，萬一哪天想勤快一點自幹也知道該從何下手</li>
-<li>流程自動化 / 優化：看團隊看個人看需求，當用則用，最高原則是你是用這些來幫你省事而不是自添麻煩的</li>
-</ul>
-<h2 id="Why-You-Must-Always-Follow-Test-to-Break-Principles"><a href="#Why-You-Must-Always-Follow-Test-to-Break-Principles" class="headerlink" title="Why You Must Always Follow Test to Break Principles"></a><a href="https://dev.to/robdwaller/why-you-must-always-follow-test-to-break-principles-55nd" target="_blank" rel="external">Why You Must Always Follow Test to Break Principles</a></h2><p>除左test正常用法，仲要記住Test marginal case 同 exceptional case</p>
-<h2 id="Docker-Volumes-An-Introduction"><a href="#Docker-Volumes-An-Introduction" class="headerlink" title="Docker Volumes: An Introduction"></a><a href="https://dev.to/stephenafamo/docker-volumes-an-introduction-3m9m" target="_blank" rel="external">Docker Volumes: An Introduction</a></h2><p>Why docker volumes is better than bind mount</p>
-<ul>
-<li>Volumes are easier to back up or migrate than bind mounts.</li>
-<li>You can manage volumes using Docker CLI commands or the Docker API.</li>
-<li>Volumes work on both Linux and Windows containers.</li>
-<li>Volumes can be more safely shared among multiple containers.</li>
-<li>Volume drivers allow you to store volumes on remote hosts or cloud providers, to encrypt the contents of volumes, or to add other functionality.</li>
-<li>A new volume’s contents can be pre-populated by a container.</li>
-</ul>
-<h2 id="Should-you-trust-your-first-impression"><a href="#Should-you-trust-your-first-impression" class="headerlink" title="Should you trust your first impression?"></a><a href="https://ed.ted.com/lessons/should-you-trust-your-first-impression-peter-mende-siedlecki" target="_blank" rel="external">Should you trust your first impression?</a></h2><ul>
-<li>Usually negative impression outweight positive one</li>
-<li>But when come to judgement of ability, positve impression outweight negative one</li>
-<li>Untypical behaviour bring much more impression on common behaviour</li>
-</ul>
-<h2 id="What-is-the-tragedy-of-the-commons"><a href="#What-is-the-tragedy-of-the-commons" class="headerlink" title="What is the tragedy of the commons?"></a><a href="https://ed.ted.com/lessons/what-is-the-tragedy-of-the-commons-nicholas-amendolare" target="_blank" rel="external">What is the tragedy of the commons?</a></h2><ul>
-<li>Individual have motivation to gain short term interest but harmful to public in long terms.</li>
-<li>It ends up everyone suffers</li>
-<li>Solution: social contracts</li>
-</ul>
-<h2 id="Why-It’s-Good-to-Embrace-Negative-Feelings"><a href="#Why-It’s-Good-to-Embrace-Negative-Feelings" class="headerlink" title="Why It’s Good to Embrace Negative Feelings"></a><a href="https://www.facebook.com/TED/videos/10159946160830652/" target="_blank" rel="external">Why It’s Good to Embrace Negative Feelings</a></h2><p>When we push aside normal emotions to embrace false positivity, we lose our capacity to develop skills to deal with the world as it is, not as we wish it to be.</p>
-<h2 id="How-To-Avoid-Embarrassing-Yourself-In-An-Argument"><a href="#How-To-Avoid-Embarrassing-Yourself-In-An-Argument" class="headerlink" title="How To Avoid Embarrassing Yourself In An Argument"></a><a href="https://www.facebook.com/bigGoldfishbowl/videos/1880903541954137/" target="_blank" rel="external">How To Avoid Embarrassing Yourself In An Argument</a></h2><ul>
-<li>Realize what is going on before too late</li>
-<li>There are word indicate other are going to attack you<ul>
-<li>Passive attack: use words to indicate you did sth wrong implicitly</li>
-<li>“So you are saying” trap<ul>
-<li>引你講D你唔係咁諗嘅野，之後attack</li>
-<li>over simplify and mischaracterize what you are saying</li>
-<li>solution:<ul>
-<li>Just repeat what you are saying, don’t simplify it</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>“Assuming the sale” technique<ul>
-<li>Solution:<ul>
-<li>identify the hidden assumption</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>The smash technique<ul>
-<li>Attacker keep asking a series of questions</li>
-<li>同時講2樣野，當你答漏左其中一樣，就會俾人以為你承認左其中一樣</li>
-<li>Solution:<ul>
-<li>slow down the conversation, listen each question with patient and carefully</li>
-<li>handle one question one time</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Tips to debate with attackers<ul>
-<li><strong> Don’t need to change others mind in arguement </strong></li>
-<li>Don’t strawmen attacker’s idea even they do it to you</li>
-<li>Need to make sure they can understand you visual imagery<ul>
-<li>想像到個畫面可以令人更易理解</li>
-</ul>
-</li>
-<li>Show them already agree with you</li>
-<li>Addressing the emotional concern</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Why-incompetent-people-think-they’re-amazing"><a href="#Why-incompetent-people-think-they’re-amazing" class="headerlink" title="Why incompetent people think they’re amazing"></a><a href="https://ed.ted.com/lessons/why-incompetent-people-think-they-re-amazing-david-dunning" target="_blank" rel="external">Why incompetent people think they’re amazing</a></h2><p>Dunning-Kruger Effect<br>人會高估自己，好多時係因為連客觀評估自己嘅能力都冇<br>相反，expert以為其他人都知好多野<br>因為圈子入邊都係能力相近嘅人</p>
-
+        <h2 id="API-Design-Principles"><a href="#API-Design-Principles" class="headerlink" title="API Design Principles"></a><a href="http://wiki.qt.io/API-Design-Principles" target="_blank" rel="noopener">API Design Principles</a></h2><p>This article talks about the API design principle of library Qt. But it is highly related to C++. It is difficult for me to understand it now.</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/2018/04/16/commentaries-25/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -221,141 +135,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="「更上一層樓」的末班車"><a href="#「更上一層樓」的末班車" class="headerlink" title="「更上一層樓」的末班車"></a><a href="https://4think.net/%E3%80%8C%E6%9B%B4%E4%B8%8A%E4%B8%80%E5%B1%A4%E6%A8%93%E3%80%8D%E7%9A%84%E6%9C%AB%E7%8F%AD%E8%BB%8A/" target="_blank" rel="external">「更上一層樓」的末班車</a></h2><p>居安思危。係一切順利嘅時候，要特別多花資源去研究新方向。新方向往往係要努力一段長時間先有效果，等到走下坡先開始就黎唔切。</p>
-<!--  -->
-<h2 id="吃再多苦，也不會成為人上人！"><a href="#吃再多苦，也不會成為人上人！" class="headerlink" title="吃再多苦，也不會成為人上人！"></a><a href="http://www.cmoney.tw/notes/note-detail.aspx?nid=17665" target="_blank" rel="external">吃再多苦，也不會成為人上人！</a></h2><ul>
-<li>要有談判的能力、反抗和敢於衝突的魄力</li>
-<li>發揮自己嘅長處，用團隊合作去互補缺點</li>
-</ul>
-<h2 id="從台灣窮小子到矽谷創業家：貧窮的創辦人，為什麼難以成功？"><a href="#從台灣窮小子到矽谷創業家：貧窮的創辦人，為什麼難以成功？" class="headerlink" title="從台灣窮小子到矽谷創業家：貧窮的創辦人，為什麼難以成功？"></a><a href="https://www.inside.com.tw/2016/01/30/privilege-and-inequality-in-silicon-valley" target="_blank" rel="external">從台灣窮小子到矽谷創業家：貧窮的創辦人，為什麼難以成功？</a></h2><ul>
-<li>心態上嘅不平等<ul>
-<li>最小化衝突，因為一旦搞砸了就得花很多錢</li>
-<li>寧願用時間換取金錢</li>
-</ul>
-</li>
-</ul>
-<h2 id="IT’S-NOT-A-PROMOTION-IT’S-A-CAREER-CHANGE"><a href="#IT’S-NOT-A-PROMOTION-IT’S-A-CAREER-CHANGE" class="headerlink" title="IT’S NOT A PROMOTION - IT’S A CAREER CHANGE"></a><a href="http://fractio.nl/2014/09/19/not-a-promotion-a-career-change/?utm_source=wanqu.co&amp;utm_campaign=Wanqu+Daily&amp;utm_medium=rss" target="_blank" rel="external">IT’S NOT A PROMOTION - IT’S A CAREER CHANGE</a></h2><p>升做Manager唔係升職，而係「轉職」。因為management成個skill set係好唔同。而Engineer好多時會睇輕左management E D soft skills。</p>
-<h2 id="Type-Terms"><a href="#Type-Terms" class="headerlink" title="Type Terms"></a><a href="https://www.supremo.tv/typeterms/" target="_blank" rel="external">Type Terms</a></h2><p>A very nice website to introduce terms in typographic to beginners</p>
-<h2 id="最小必要知識架構術"><a href="#最小必要知識架構術" class="headerlink" title="最小必要知識架構術"></a><a href="https://softnshare.wordpress.com/2017/07/29/thesecretexpertwonttellyou/" target="_blank" rel="external">最小必要知識架構術</a></h2><p>一個快速學習嘅framework</p>
-<ol>
-<li>翻譯你的「學習目標」成為具體「學習任務」<ul>
-<li>把大目標分解成若階段性的小目標<ul>
-<li>相互獨立，完全窮盡</li>
-<li>可以調整學習計劃</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>找出「最小可行知識」<ul>
-<li>Proritize 目標，可以直接skip唔重要嘅學習任務</li>
-<li>Google study course嘅Syllabus，可以大約知道個overview</li>
-</ul>
-</li>
-<li>把你新學到的知識找方法分享給別人聽<ul>
-<li>費曼技巧<ul>
-<li>用laymen term去簡單解釋學返黎嘅knowledge</li>
-<li>無法簡單地向人解釋清楚，姐係未學識</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Do-the-right-thing-Wait-to-get-fired"><a href="#Do-the-right-thing-Wait-to-get-fired" class="headerlink" title="Do the right thing, Wait to get fired"></a><a href="https://brendansterne.com/2013/07/11/do-the-right-thing-wait-to-get-fired/" target="_blank" rel="external">Do the right thing, Wait to get fired</a></h2><p>Do the right thing, Wait to get fired. 如果冇俾人炒，姐係做得岩。如果俾人炒左，代表佢係一個唔適合佢嘅地方做野。無論結果係點，對佢都有好處。</p>
-<p>聽落好自負，覺得自己岩曬，但我覺得E個唔係佢想表達嘅野。佢想講嘅係要勇於承擔，敢去take risk，唔好人地話要做咩就做咩，咁先會有進步。</p>
-<p>PS: 此policy要搭每日反省去使用</p>
-<h2 id="Fine-Tuning-Your-GitHub-Flow"><a href="#Fine-Tuning-Your-GitHub-Flow" class="headerlink" title="Fine Tuning Your GitHub Flow"></a><a href="https://www.slideshare.net/stoe288/fine-tuning-your-github-flow" target="_blank" rel="external">Fine Tuning Your GitHub Flow</a></h2><p>冇咩特別，不過有句金句</p>
-<ul>
-<li>organization distance between to developer correlate to delay and bugs</li>
-</ul>
-<h2 id="Test-Stability-How-We-Make-UI-Tests-Stable"><a href="#Test-Stability-How-We-Make-UI-Tests-Stable" class="headerlink" title="Test Stability - How We Make UI Tests Stable"></a><a href="https://engineering.linkedin.com/blog/2015/12/test-stability---how-we-make-ui-tests-stable" target="_blank" rel="external">Test Stability - How We Make UI Tests Stable</a></h2><p>This article is about how Linkedin make there tests stable</p>
-<ul>
-<li>Remove flaky tests</li>
-<li>Make flasky tests stable</li>
-</ul>
-<h3 id="Cause-of-Flaky-test"><a href="#Cause-of-Flaky-test" class="headerlink" title="Cause of Flaky test"></a>Cause of Flaky test</h3><ul>
-<li>Flaky test environment<ul>
-<li>Any dependencies break will break the test</li>
-<li>Use mock server to reduce dependencies</li>
-<li>Use a fixture server is even better</li>
-</ul>
-</li>
-<li>Flaky test framework<ul>
-<li>There are some problem on their test framework</li>
-<li>They fork an inhouse version and fix the issue</li>
-</ul>
-</li>
-<li>Flaky test<ul>
-<li>Don’t test trival calls</li>
-<li>Test need to be maintainable and refactorable</li>
-<li>Test must be reliable<ul>
-<li>Can add reliable wait for async action / data</li>
-</ul>
-</li>
-<li>Mock time consuming procedures</li>
-</ul>
-</li>
-</ul>
-<h3 id="Trunk-guardian"><a href="#Trunk-guardian" class="headerlink" title="Trunk guardian"></a>Trunk guardian</h3><p>A solution that protect code base blocked by flaky tests</p>
-<ul>
-<li>Investigate fail test, disable it if the test does not make sense</li>
-<li>If the test randomly fail on the same commit, disable it</li>
-</ul>
-<h2 id="利用動畫創造易用性：動畫的-UX-規範"><a href="#利用動畫創造易用性：動畫的-UX-規範" class="headerlink" title="利用動畫創造易用性：動畫的 UX 規範"></a><a href="https://intersection.tw/%E5%88%A9%E7%94%A8%E5%8B%95%E7%95%AB%E5%89%B5%E9%80%A0%E6%98%93%E7%94%A8%E6%80%A7-%E5%8B%95%E7%95%AB%E7%9A%84-ux-%E5%AE%A3%E8%A8%80-20b6c6475682" target="_blank" rel="external">利用動畫創造易用性：動畫的 UX 規範</a></h2><p>E篇文講左animation 增加usability嘅原理。由於我對UI唔熟，最好都係唔sum up，睇返原文。</p>
-<h2 id="撈得掂的都有這幾種特質"><a href="#撈得掂的都有這幾種特質" class="headerlink" title="撈得掂的都有這幾種特質"></a><a href="https://oldjimpacific.blogspot.hk/2017/10/blog-post.html" target="_blank" rel="external">撈得掂的都有這幾種特質</a></h2><ol>
-<li>有好奇心</li>
-<li>對不確定性保持樂觀，勇放嘗試</li>
-<li>不甘於平庸</li>
-<li>目標要設得很高，不過對現狀要踏實</li>
-<li>不要被短期選擇而左右</li>
-</ol>
-<h2 id="7-Rules-for-Creating-Gorgeous-UI"><a href="#7-Rules-for-Creating-Gorgeous-UI" class="headerlink" title="7 Rules for Creating Gorgeous UI"></a><a href="https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda" target="_blank" rel="external">7 Rules for Creating Gorgeous UI</a></h2><ul>
-<li>Light comes from the sky</li>
-<li>Black and white first<ul>
-<li>Designing in grayscale before adding color simplifies the most complex element of visual design– and forces you to focus on spacing and laying out elements.</li>
-</ul>
-</li>
-<li>Double your whitespace</li>
-<li>Learn the methods of overlaying text on images<ul>
-<li>Tips<ul>
-<li>Image should be dark</li>
-<li>Text has to be white</li>
-<li>Test it at every screen/window size</li>
-</ul>
-</li>
-<li>Methods<ul>
-<li>Overlay the whole image</li>
-<li>Text-in-a-box</li>
-<li>Blur the image</li>
-<li>Floor fade<ul>
-<li>subtly fades towards black at the bottom, and then there’s white text written over it</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Make text pop and un-pop<ul>
-<li>Use style to increase/decrease visibility of the text</li>
-</ul>
-</li>
-<li>Only use good fonts</li>
-<li>Steal like an artist<ul>
-<li>Listed some website for learning from other’s design work</li>
-</ul>
-</li>
-</ul>
-<h2 id="Think-beyond-programming，創造獨特價值"><a href="#Think-beyond-programming，創造獨特價值" class="headerlink" title="Think beyond programming，創造獨特價值"></a><a href="https://www.facebook.com/pcyeh.NTU/posts/2164529113572775" target="_blank" rel="external">Think beyond programming，創造獨特價值</a></h2><p>文中指出，越黎越多人讀CS，職位開始飽和，而且programming skill開始變得common，未需要有其他行業嘅domain knowledge先可以保持競爭力。</p>
-<ul>
-<li>Programminng skills 其實唔係咁易master，真係咁易common?</li>
-<li>本身CS grad可以熟咩domain？</li>
-</ul>
-<h2 id="Smart-cities-are-boring-Give-us-responsive-cities"><a href="#Smart-cities-are-boring-Give-us-responsive-cities" class="headerlink" title="Smart cities are boring. Give us responsive cities."></a><a href="https://techcrunch.com/2017/10/14/smart-cities-are-boring-give-us-responsive-cities/" target="_blank" rel="external">Smart cities are boring. Give us responsive cities.</a></h2><p>好多城市係由死左好多年嘅人規劃。果時設計出黎嘅城市未必岩現代人嘅生活方式。</p>
-<h2 id="直击阿里全球运行指挥中心双11的隐形战场"><a href="#直击阿里全球运行指挥中心双11的隐形战场" class="headerlink" title="直击阿里全球运行指挥中心双11的隐形战场"></a><a href="https://mp.weixin.qq.com/s/62Nz_SkvrkpoB46_BU5sfQ" target="_blank" rel="external">直击阿里全球运行指挥中心双11的隐形战场</a></h2><p>阿里巴巴嘅DevOps</p>
-<ul>
-<li>故障用可量化數據分級，就可以自動化</li>
-<li>用algo分析時序數據，提升命中率</li>
-</ul>
-
+        <h2 id="「更上一層樓」的末班車"><a href="#「更上一層樓」的末班車" class="headerlink" title="「更上一層樓」的末班車"></a><a href="https://4think.net/%E3%80%8C%E6%9B%B4%E4%B8%8A%E4%B8%80%E5%B1%A4%E6%A8%93%E3%80%8D%E7%9A%84%E6%9C%AB%E7%8F%AD%E8%BB%8A/" target="_blank" rel="noopener">「更上一層樓」的末班車</a></h2><p>居安思危。係一切順利嘅時候，要特別多花資源去研究新方向。新方向往往係要努力一段長時間先有效果，等到走下坡先開始就黎唔切。</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/2018/04/15/commentaries-24/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
