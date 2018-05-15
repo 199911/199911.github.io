@@ -5,17 +5,18 @@
   
   <title>簡評四 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。 适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+  <meta name="description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
+<meta name="keywords" content="Objective C,Scrum,Soft skill,Data">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評四">
 <meta property="og:url" content="http://199911.github.io/commentary/2016/07/03/commentaries-4/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。 适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+<meta property="og:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2017-10-29T11:47:59.000Z">
+<meta property="og:updated_time" content="2018-05-15T15:40:07.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評四">
-<meta name="twitter:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。 适合码农工作时玩的游戏：ScrumScrum簡單黎講係一套framewor">
+<meta name="twitter:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -90,11 +91,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/" target="_blank" rel="external">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
-<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/" target="_blank" rel="external">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
-<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/" target="_blank" rel="external">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
+        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/" target="_blank" rel="noopener">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
+<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton</p>
+<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/" target="_blank" rel="noopener">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
+<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/" target="_blank" rel="noopener">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
 <a id="more"></a>
-<h2 id="我所理解的执行力"><a href="#我所理解的执行力" class="headerlink" title="我所理解的执行力"></a><a href="http://blog.devtang.com/2015/08/15/talk-about-execution/" target="_blank" rel="external">我所理解的执行力</a></h2><p>我覺得可以歸納做2點：</p>
+<h2 id="我所理解的执行力"><a href="#我所理解的执行力" class="headerlink" title="我所理解的执行力"></a><a href="http://blog.devtang.com/2015/08/15/talk-about-execution/" target="_blank" rel="noopener">我所理解的执行力</a></h2><p>我覺得可以歸納做2點：</p>
 <ul>
 <li>堅持解決問題<ul>
 <li>有時候問題嘅根原唔係咁明顯，往往要花好多時間同精力先解決到，好多時都需要堅持。但係有可以簡單解決嘅技巧，當然要運用。</li>
@@ -105,11 +107,29 @@
 </ul>
 </li>
 </ul>
-<h2 id="数据的秘密（上）-为什么要关注数据"><a href="#数据的秘密（上）-为什么要关注数据" class="headerlink" title="数据的秘密（上）- 为什么要关注数据"></a><a href="http://blog.devtang.com/2015/09/02/why-we-need-monitor-data/" target="_blank" rel="external">数据的秘密（上）- 为什么要关注数据</a></h2><p>Data 己經講同爛。簡單黎講，Data係一種唔可以缺少嘅System Feedback。冇左Data，好難去 debug, optimize 同做 tuning</p>
-<h2 id="数据的秘密（下）-如何分析数据"><a href="#数据的秘密（下）-如何分析数据" class="headerlink" title="数据的秘密（下）- 如何分析数据"></a><a href="http://blog.devtang.com/2015/09/03/how-to-monitor-data/" target="_blank" rel="external">数据的秘密（下）- 如何分析数据</a></h2><p>比較有意思嘅一點係，Data 要易睇同易分析。好多時係data extract insight，要日復日嘅觀察同多方面嘅分析。如果每日都要搞一大輪野先睇到，好容易會miss左D野。</p>
-<h2 id="应该如何管理密码-我的密码管理心得"><a href="#应该如何管理密码-我的密码管理心得" class="headerlink" title="应该如何管理密码 - 我的密码管理心得"></a><a href="http://blog.devtang.com/2016/04/07/my-password-management-way/" target="_blank" rel="external">应该如何管理密码 - 我的密码管理心得</a></h2><p>唔重要嘅account可以直接用third party tool去管理，避免repeated password attack。可以用facebook/google login就用。</p>
-<h2 id="Javscript-library-detector"><a href="#Javscript-library-detector" class="headerlink" title="Javscript library detector"></a><a href="https://github.com/johnmichel/Library-Detector-for-Chrome" target="_blank" rel="external">Javscript library detector</a></h2><p>如題。對分析人地唧網站好有用。</p>
-<h2 id="《引爆点》读书心得"><a href="#《引爆点》读书心得" class="headerlink" title="《引爆点》读书心得"></a><a href="http://blog.devtang.com/2015/03/01/tipping-point/" target="_blank" rel="external">《引爆点》读书心得</a></h2><p>流行理論可以分做三個因素。</p>
+<h3 id="15-May-2018-1"><a href="#15-May-2018-1" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
+<li>文中講嘅識補位有4點<ul>
+<li>指導一些能力不足嘅新人</li>
+<li>做一些未明確指定嘅工作</li>
+<li>調查一些意外發生的原因</li>
+<li>完成一些别人忽視的工作</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据的秘密（上）-为什么要关注数据-数据的秘密（下）-如何分析数据"><a href="#数据的秘密（上）-为什么要关注数据-数据的秘密（下）-如何分析数据" class="headerlink" title="数据的秘密（上）- 为什么要关注数据 数据的秘密（下）- 如何分析数据"></a><a href="http://blog.devtang.com/2015/09/02/why-we-need-monitor-data/" target="_blank" rel="noopener">数据的秘密（上）- 为什么要关注数据</a> <a href="http://blog.devtang.com/2015/09/03/how-to-monitor-data/" target="_blank" rel="noopener">数据的秘密（下）- 如何分析数据</a></h2><p>Data 己經講同爛。簡單黎講，Data係一種唔可以缺少嘅System Feedback。冇左Data，好難去 debug, optimize 同做 tuning</p>
+<p>比較有意思嘅一點係，Data 要易睇同易分析。好多時係data extract insight，要日復日嘅觀察同多方面嘅分析。如果每日都要搞一大輪野先睇到，好容易會miss左D野。</p>
+<h3 id="15-May-2018-2"><a href="#15-May-2018-2" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
+<li>Monitor both server and user data</li>
+</ul>
+<p>佢所講嘅道理我都明白，反而係佢講果D事例，有時間值得慢慢研究</p>
+<ul>
+<li>稻盛和夫用數據挽救左日航</li>
+<li>林彪係1948年嘅遼西，透過戰爭嘅日常數據，估到敵方野戰司令部嘅位置，贏得戰事</li>
+</ul>
+<h2 id="应该如何管理密码-我的密码管理心得"><a href="#应该如何管理密码-我的密码管理心得" class="headerlink" title="应该如何管理密码 - 我的密码管理心得"></a><a href="http://blog.devtang.com/2016/04/07/my-password-management-way/" target="_blank" rel="noopener">应该如何管理密码 - 我的密码管理心得</a></h2><p>唔重要嘅account可以直接用third party tool去管理，避免repeated password attack。可以用facebook/google login就用。</p>
+<h3 id="15-May-2018-3"><a href="#15-May-2018-3" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>我都subscribe左1Passwrd</p>
+<h2 id="Javscript-library-detector"><a href="#Javscript-library-detector" class="headerlink" title="Javscript library detector"></a><a href="https://github.com/johnmichel/Library-Detector-for-Chrome" target="_blank" rel="noopener">Javscript library detector</a></h2><p>如題。對分析人地唧網站好有用。</p>
+<h2 id="《引爆点》读书心得"><a href="#《引爆点》读书心得" class="headerlink" title="《引爆点》读书心得"></a><a href="http://blog.devtang.com/2015/03/01/tipping-point/" target="_blank" rel="noopener">《引爆点》读书心得</a></h2><p>流行理論可以分做三個因素。</p>
 <h3 id="內部因素"><a href="#內部因素" class="headerlink" title="內部因素"></a>內部因素</h3><p>件野本身要好。「好」嘅定義可以係得意，幫到用戶解決問題</p>
 <h3 id="可控因素"><a href="#可控因素" class="headerlink" title="可控因素"></a>可控因素</h3><p>要先揾到關鍵人物做用戶，等佢地幫你宣傳。可以分為内行，聯系人員同推銷員。文中冇解釋，搞到我有D想睇。</p>
 <h3 id="不可控因素"><a href="#不可控因素" class="headerlink" title="不可控因素"></a>不可控因素</h3><p>環境因素。如時機，行業發展。</p>
@@ -122,6 +142,8 @@
         <a href="http://199911.github.io/commentary/2016/07/03/commentaries-4/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Scrum/">Scrum</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Soft-skill/">Soft skill</a></li></ul>
+
     </footer>
   </div>
   
@@ -182,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Soft-skill/">Soft skill</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -192,7 +214,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 17.5px;">Book review</a> <a href="/tags/Communication/" style="font-size: 12.5px;">Communication</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Productivity/" style="font-size: 10px;">Productivity</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 15px;">Video review</a>
+      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 17.5px;">Book review</a> <a href="/tags/Communication/" style="font-size: 12.5px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Design-pattern/" style="font-size: 10px;">Design pattern</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Management/" style="font-size: 10px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 12.5px;">Objective C</a> <a href="/tags/Productivity/" style="font-size: 10px;">Productivity</a> <a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/Soft-skill/" style="font-size: 12.5px;">Soft skill</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 15px;">Video review</a>
     </div>
   </div>
 
