@@ -6,13 +6,14 @@
   <title>簡評九 | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="我现在有一些工具类，我应该不应该做自己的框架？如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。 15 May 2018 Framework：易setup，生態圈多數會有多D tools，可以增加productivity Library：彈性，易migrate同upgrade，如果design得好，component r">
+<meta name="keywords" content="Learning skills,Architecture">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評九">
 <meta property="og:url" content="http://199911.github.io/commentary/2016/08/20/commentaries-9/index.html">
 <meta property="og:site_name" content="Coding Sunday">
 <meta property="og:description" content="我现在有一些工具类，我应该不应该做自己的框架？如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。 15 May 2018 Framework：易setup，生態圈多數會有多D tools，可以增加productivity Library：彈性，易migrate同upgrade，如果design得好，component r">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-05-15T16:16:52.370Z">
+<meta property="og:updated_time" content="2018-05-21T04:38:25.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評九">
 <meta name="twitter:description" content="我现在有一些工具类，我应该不应该做自己的框架？如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。 15 May 2018 Framework：易setup，生態圈多數會有多D tools，可以增加productivity Library：彈性，易migrate同upgrade，如果design得好，component r">
@@ -95,8 +96,8 @@
 <li>Framework：易setup，生態圈多數會有多D tools，可以增加productivity</li>
 <li>Library：彈性，易migrate同upgrade，如果design得好，component reusability仲大</li>
 </ul>
-<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义</a></h2><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
-<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h2><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义 编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义</a> <a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h2><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。<br>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>唔洗重睇，<a href="https://dmitripavlutin.com/what-every-javascript-developer-should-know-about-unicode/" target="_blank" rel="noopener">What every JavaScript developer should know about Unicode</a> 寫得更好。</p>
 <a id="more"></a>
 <h2 id="十年磨一剑—序"><a href="#十年磨一剑—序" class="headerlink" title="十年磨一剑—序"></a><a href="http://www.cnblogs.com/tsoukw/archive/2010/01/04/1638948.html" target="_blank" rel="noopener">十年磨一剑—序</a></h2><p>引入功能強勁嘅library都可以係問題。當一個library好多功能，咁D code一定唔會簡單得去邊。萬一個library出左問題，就要花大量時間去睇code同doc。如果大部份功能都係冇use case嘅話，倒不如用一個功能簡單嘅library，甚至自己寫好過。</p>
 <p>金句一：</p>
@@ -131,6 +132,8 @@
         <a href="http://199911.github.io/commentary/2016/08/20/commentaries-9/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li></ul>
+
     </footer>
   </div>
   
@@ -191,7 +194,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Soft-skill/">Soft skill</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -201,7 +204,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 17.5px;">Book review</a> <a href="/tags/Communication/" style="font-size: 12.5px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Design-pattern/" style="font-size: 10px;">Design pattern</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Management/" style="font-size: 10px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 12.5px;">Objective C</a> <a href="/tags/Productivity/" style="font-size: 10px;">Productivity</a> <a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/Soft-skill/" style="font-size: 12.5px;">Soft skill</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 15px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 12.86px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 18.57px;">Book review</a> <a href="/tags/CSS/" style="font-size: 14.29px;">CSS</a> <a href="/tags/Communication/" style="font-size: 12.86px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-pattern/" style="font-size: 12.86px;">Design pattern</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 12.86px;">Learning skills</a> <a href="/tags/Management/" style="font-size: 15.71px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 11.43px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Productivity/" style="font-size: 11.43px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/Security/" style="font-size: 11.43px;">Security</a> <a href="/tags/Startup/" style="font-size: 10px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11.43px;">Tools</a> <a href="/tags/Video-review/" style="font-size: 17.14px;">Video review</a>
     </div>
   </div>
 
@@ -223,6 +226,10 @@
       <ul>
         
           <li>
+            <a href="/commentary/2018/05/20/commentaries-30/">簡評三十</a>
+          </li>
+        
+          <li>
             <a href="/review/2018/05/06/talent-is-overrated/">Talent is Overrated: What Really Separates World-Class Performers from Everybody Else</a>
           </li>
         
@@ -236,10 +243,6 @@
         
           <li>
             <a href="/review/2018/05/01/hammock-driven-development/">10 ways to have a better conversation</a>
-          </li>
-        
-          <li>
-            <a href="/commentary/2018/04/30/commentaries-28/">簡評二十八</a>
           </li>
         
       </ul>

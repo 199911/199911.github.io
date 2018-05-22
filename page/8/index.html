@@ -62,6 +62,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bootstrap-3-mixins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/08/28/bootstrap-3-mixins/" class="article-date">
+  <time datetime="2016-08-27T16:00:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code-Review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/08/28/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/08/28/bootstrap-3-mixins/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/08/28/bootstrap-3-mixins/" data-id="cjcdhdmku0009je65lvfjlgez" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/08/28/bootstrap-3-mixins/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/2016/08/27/bootstrap-3-variables/" class="article-date">
@@ -262,8 +311,8 @@
 <li>Framework：易setup，生態圈多數會有多D tools，可以增加productivity</li>
 <li>Library：彈性，易migrate同upgrade，如果design得好，component reusability仲大</li>
 </ul>
-<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义</a></h2><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。</p>
-<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h2><p>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义 编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义</a> <a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h2><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。<br>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>唔洗重睇，<a href="https://dmitripavlutin.com/what-every-javascript-developer-should-know-about-unicode/" target="_blank" rel="noopener">What every JavaScript developer should know about Unicode</a> 寫得更好。</p>
         
           <p class="article-more-link">
             <a href="/commentary/2016/08/20/commentaries-9/#more">Read More</a>
@@ -277,6 +326,8 @@
         <a href="http://199911.github.io/commentary/2016/08/20/commentaries-9/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li></ul>
+
     </footer>
   </div>
   
@@ -360,6 +411,8 @@
         <a href="http://199911.github.io/commentary/2016/08/07/commentaries-8/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Testing/">Testing</a></li></ul>
+
     </footer>
   </div>
   
@@ -410,7 +463,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="如何时刻保持在目标的正确轨道上"><a href="#如何时刻保持在目标的正确轨道上" class="headerlink" title="如何时刻保持在目标的正确轨道上"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html" target="_blank" rel="noopener">如何时刻保持在目标的正确轨道上</a></h2><p>養成習慣係堅持目標上面有好大幫助。</p>
         
           <p class="article-more-link">
             <a href="/commentary/2016/08/06/commentaries-7/#more">Read More</a>
@@ -424,6 +476,8 @@
         <a href="http://199911.github.io/commentary/2016/08/06/commentaries-7/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Communication/">Communication</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
     </footer>
   </div>
   
@@ -458,6 +512,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="无为无不为"><a href="#无为无不为" class="headerlink" title="无为无不为"></a><a href="http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html" target="_blank" rel="noopener">无为无不为</a></h2><p>1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。<br>2.管理唔等於控制<br>3.唔好做惡意競爭</p>
+<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><ul>
+<li>每個task無論難易，都係完成團體目標唔可以缺少嘅一部份<ul>
+<li>唔可以忽視隊友係簡單嘅task上面嘅貢獻</li>
+<li>一D簡單嘅task可以起關鍵作用，唔可以因為事小就唔理</li>
+<li>要留意返簡單嘅task同low priorty嘅task</li>
+</ul>
+</li>
+<li>現實中無人可以隨心所欲，只可以誘導事情往自己心想嘅方向發展</li>
+</ul>
 <h2 id="优秀程序员的两大要素：懒-笨"><a href="#优秀程序员的两大要素：懒-笨" class="headerlink" title="优秀程序员的两大要素：懒 + 笨"></a><a href="http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html" target="_blank" rel="noopener">优秀程序员的两大要素：懒 + 笨</a></h2><p>個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做<br>1.用Automation同tool去增加productivity，而唔係死做<br>2.唔好停止學習<br>3.要批判自己嘅工作，多質疑<br>4.Debug果時要拋棄所有假設</p>
 <h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>拋棄所有假設知易行難。一心急就make好多assumption，想快D debug好個program，最後冇系統咁去揾出問題，反而仲花得更多時間。我需要更好好鍛練嘅心理質素。</p>
         
@@ -473,7 +536,7 @@
         <a href="http://199911.github.io/commentary/2016/08/05/commentaries-6/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Soft-skill/">Soft skill</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Management/">Management</a></li></ul>
 
     </footer>
   </div>
@@ -581,60 +644,6 @@
 
 
   
-    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/07/04/singleton/" class="article-date">
-  <time datetime="2016-07-03T16:00:00.000Z" itemprop="datePublished">2016-07-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/07/04/singleton/">Avoiding Singleton Abuse</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The singleton mentioned here is Singleton Design Pattern</p>
-<ul>
-<li>Private constructor</li>
-<li>Global referal to the instace</li>
-</ul>
-<h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group of global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/07/04/singleton/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/07/04/singleton/" data-id="cjcdhdmnb002kje65qx59y9zw" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/07/04/singleton/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Article-review/">Article review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -660,7 +669,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scrum/">Scrum</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Soft-skill/">Soft skill</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -670,7 +679,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 17.5px;">Book review</a> <a href="/tags/Communication/" style="font-size: 12.5px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Design-pattern/" style="font-size: 10px;">Design pattern</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/Management/" style="font-size: 10px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 12.5px;">Objective C</a> <a href="/tags/Productivity/" style="font-size: 10px;">Productivity</a> <a href="/tags/Scrum/" style="font-size: 10px;">Scrum</a> <a href="/tags/Soft-skill/" style="font-size: 12.5px;">Soft skill</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Video-review/" style="font-size: 15px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 12.86px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 20px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 18.57px;">Book review</a> <a href="/tags/CSS/" style="font-size: 14.29px;">CSS</a> <a href="/tags/Communication/" style="font-size: 12.86px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-pattern/" style="font-size: 12.86px;">Design pattern</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 12.86px;">Learning skills</a> <a href="/tags/Management/" style="font-size: 15.71px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 11.43px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Productivity/" style="font-size: 11.43px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/Security/" style="font-size: 11.43px;">Security</a> <a href="/tags/Startup/" style="font-size: 10px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11.43px;">Tools</a> <a href="/tags/Video-review/" style="font-size: 17.14px;">Video review</a>
     </div>
   </div>
 
@@ -692,6 +701,10 @@
       <ul>
         
           <li>
+            <a href="/commentary/2018/05/20/commentaries-30/">簡評三十</a>
+          </li>
+        
+          <li>
             <a href="/review/2018/05/06/talent-is-overrated/">Talent is Overrated: What Really Separates World-Class Performers from Everybody Else</a>
           </li>
         
@@ -705,10 +718,6 @@
         
           <li>
             <a href="/review/2018/05/01/hammock-driven-development/">10 ways to have a better conversation</a>
-          </li>
-        
-          <li>
-            <a href="/commentary/2018/04/30/commentaries-28/">簡評二十八</a>
           </li>
         
       </ul>
