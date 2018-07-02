@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>斷舍離 正能量翻倍的生活整理術 | Coding Sunday</title>
+  <title>Code smells | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="唔單只係講要扔野，當中有一D人生哲學值得學習">
-<meta name="keywords" content="Book review">
+  <meta name="description" content="Adding a new feature require changes of different module in different placeIt shows the code structure is bad, modules required to change is coupled.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="斷舍離 正能量翻倍的生活整理術">
-<meta property="og:url" content="http://199911.github.io/review/2018/01/01/danshari/index.html">
+<meta property="og:title" content="Code smells">
+<meta property="og:url" content="http://199911.github.io/knowledge/2018/07/02/code-smell/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="唔單只係講要扔野，當中有一D人生哲學值得學習">
-<meta property="og:locale" content="review">
-<meta property="og:updated_time" content="2018-06-09T12:21:20.817Z">
+<meta property="og:description" content="Adding a new feature require changes of different module in different placeIt shows the code structure is bad, modules required to change is coupled.">
+<meta property="og:locale" content="knowledge">
+<meta property="og:updated_time" content="2018-07-02T14:40:30.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="斷舍離 正能量翻倍的生活整理術">
-<meta name="twitter:description" content="唔單只係講要扔野，當中有一D人生哲學值得學習">
+<meta name="twitter:title" content="Code smells">
+<meta name="twitter:description" content="Adding a new feature require changes of different module in different placeIt shows the code structure is bad, modules required to change is coupled.">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -65,14 +64,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-danshari" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-code-smell" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2018/01/01/danshari/" class="article-date">
-  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">2018-01-01</time>
+    <a href="/knowledge/2018/07/02/code-smell/" class="article-date">
+  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/Knowledge/">Knowledge</a>
   </div>
 
   </div>
@@ -83,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      斷舍離 正能量翻倍的生活整理術
+      Code smells
     </h1>
   
 
@@ -91,105 +90,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>唔單只係講要扔野，當中有一D人生哲學值得學習</p>
-<a id="more"></a>
-<h2 id="認真思考自己和物品之間的關係"><a href="#認真思考自己和物品之間的關係" class="headerlink" title="認真思考自己和物品之間的關係"></a>認真思考自己和物品之間的關係</h2><ul>
-<li>人係空間嘅主體，要快速判斷物品昰否必需品</li>
-<li>嚴格挑選物品，唔好隨便買野</li>
-<li>物盡其用，將可以丢嘅野減至最低限度</li>
-<li>習慣一見到問題就解決，唔好等到D野亂曬先執</li>
-<li>應該防止自己買或得到無用嘅野，而唔係阻止自己扔野<ul>
-<li>唔好扔野係舊時資源缺乏的價值觀</li>
-</ul>
-</li>
-<li>貴嘅野都可以扔，管理同佔用空間嘅成本好可能高過件野價值本身</li>
-<li>人地送嘅野都可以扔<ul>
-<li>重點係情意，件野本身可以唔留</li>
-</ul>
-</li>
-</ul>
-<h2 id="丢掉無用之物，只保留必需，合適同令人舒適嘅野"><a href="#丢掉無用之物，只保留必需，合適同令人舒適嘅野" class="headerlink" title="丢掉無用之物，只保留必需，合適同令人舒適嘅野"></a>丢掉無用之物，只保留必需，合適同令人舒適嘅野</h2><ul>
-<li>用自己精心細選嘅野包圍自己，可以令心情變好</li>
-<li>留低嘅野，必需要係有美好回憶，可以令你快樂</li>
-<li>如何扔野<ul>
-<li>由簡單嘅地方開始</li>
-<li>做estimation</li>
-<li>拆task</li>
-</ul>
-</li>
-<li>要對丢棄嘅物品有歉意同感謝嘅態度</li>
-<li>爛左嘅野，一係下定決心整返好，一係扔左佢</li>
-<li>設定一個總量限制，一但超過限制，就應該進行clean up嘅動作<ul>
-<li>空間<ul>
-<li>睇唔到嘅儲存空間：70%</li>
-<li>睇得到嘅儲存空間：50%</li>
-<li>用黎展示嘅空間：10%</li>
-</ul>
-</li>
-<li>時間<ul>
-<li>一兩年冇着嘅衫</li>
-<li>好幾年冇睇過嘅書</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>將住處附近整條街當做自己嘅屋企<ul>
-<li>有咩野冇，可以落街買，唔洗下下儲係屋企</li>
-</ul>
-</li>
-<li>如果做唔到決定，可以問自己以下問題<ul>
-<li>如果出國住，會唔會勞師動眾帶過去？</li>
-<li>如果放火燒曬佢，會唔會覺得好輕鬆</li>
-<li>有冇想帶入棺材嘅嘅？</li>
-<li>死後，有冇令人引以自豪嘅野？</li>
-</ul>
-</li>
-<li>收納唔係為左儲存，而係為左更易攞出黎用</li>
-</ul>
-<h2 id="解放被囚的心靈"><a href="#解放被囚的心靈" class="headerlink" title="解放被囚的心靈"></a>解放被囚的心靈</h2><ul>
-<li>要了解自己，先可以辨別D野對自己係咪必需，係咪合適</li>
-<li>發現自己嘅自卑感<ul>
-<li>人會用物品去掩飾心中嘅自卑<ul>
-<li>唔捨得掉書可能係對缺乏知識嘅自卑表現</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>發現自己嘅嘅寂寞同不安<ul>
-<li>心靈空虛時，會對物品有依賴</li>
-</ul>
-</li>
-</ul>
+        <h2 id="Adding-a-new-feature-require-changes-of-different-module-in-different-place"><a href="#Adding-a-new-feature-require-changes-of-different-module-in-different-place" class="headerlink" title="Adding a new feature require changes of different module in different place"></a>Adding a new feature require changes of different module in different place</h2><p>It shows the code structure is bad, modules required to change is coupled.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2018/01/01/danshari/" data-id="cjiof8thg00008e65ho83nsj5" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/knowledge/2018/07/02/code-smell/" data-id="cjj4gpper0002ru65ny4klkxr" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2018/01/01/danshari/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/knowledge/2018/07/02/code-smell/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Book-review/">Book review</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/review/2018/01/01/living-without-money/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/knowledge/2018/07/02/meeting/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          無窮奶奶的富足人生
+          Meeting technique
         
       </div>
     </a>
   
   
-    <a href="/review/2018/01/01/advantage-of-introverts/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/commentary/2018/07/02/commentaries-31/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">內向者的優勢：安靜的人如何展現你的存在，並讓別人聽你的</div>
+      <div class="article-nav-title">簡評三十一</div>
     </a>
   
 </nav>
@@ -250,7 +179,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
     </div>
   </div>
 
@@ -263,23 +192,23 @@
       <ul>
         
           <li>
-            <a href="/review/2018/06/04/dont-believe-everything-you-think/">別掉入思考的陷阱</a>
+            <a href="/knowledge/2018/07/02/meeting/">Meeting technique</a>
           </li>
         
           <li>
-            <a href="/commentary/2018/06/03/commentaries-30/">簡評三十</a>
+            <a href="/knowledge/2018/07/02/code-smell/">Code smells</a>
           </li>
         
           <li>
-            <a href="/review/2018/05/06/talent-is-overrated/">Talent is Overrated: What Really Separates World-Class Performers from Everybody Else</a>
+            <a href="/commentary/2018/07/02/commentaries-31/">簡評三十一</a>
           </li>
         
           <li>
-            <a href="/review/2018/05/04/how-to-win-friends-and-influence-people/">How to Win Friends and Influence People</a>
+            <a href="/knowledge/2018/07/02/cloud-infrastructure/">Cloud infrastructure</a>
           </li>
         
           <li>
-            <a href="/commentary/2018/05/02/commentaries-29/">簡評二十九</a>
+            <a href="/review/2018/06/09/danshari/">斷舍離 正能量翻倍的生活整理術</a>
           </li>
         
       </ul>
@@ -313,7 +242,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2018/01/01/danshari/';
+  var disqus_url = 'http://199911.github.io/knowledge/2018/07/02/code-smell/';
   
   (function(){
     var dsq = document.createElement('script');
