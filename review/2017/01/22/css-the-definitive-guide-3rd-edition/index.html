@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>&#34;CSS: The Definitive Guide 3rd Edition&#34; part 2 | Coding Sunday</title>
+  <title>CSS: The Definitive Guide 3rd Edition | Coding Sunday</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="4 Values and Units There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers. rgb(50%, 0%, 100%) is a valid color The “web-safe” colors are those colors t">
+  <meta name="description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta name="keywords" content="Book review">
 <meta property="og:type" content="article">
-<meta property="og:title" content="&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2">
-<meta property="og:url" content="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/index.html">
+<meta property="og:title" content="CSS: The Definitive Guide 3rd Edition">
+<meta property="og:url" content="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition/index.html">
 <meta property="og:site_name" content="Coding Sunday">
-<meta property="og:description" content="4 Values and Units There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers. rgb(50%, 0%, 100%) is a valid color The “web-safe” colors are those colors t">
+<meta property="og:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
 <meta property="og:locale" content="review">
-<meta property="og:updated_time" content="2017-11-12T10:10:16.249Z">
+<meta property="og:updated_time" content="2018-07-21T17:53:44.585Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="&quot;CSS: The Definitive Guide 3rd Edition&quot; part 2">
-<meta name="twitter:description" content="4 Values and Units There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers. rgb(50%, 0%, 100%) is a valid color The “web-safe” colors are those colors t">
+<meta name="twitter:title" content="CSS: The Definitive Guide 3rd Edition">
+<meta name="twitter:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
   
     <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
   
@@ -64,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition-2" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/" class="article-date">
+    <a href="/review/2017/01/22/css-the-definitive-guide-3rd-edition/" class="article-date">
   <time datetime="2017-01-21T16:00:00.000Z" itemprop="datePublished">2017-01-22</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Book-Review/">Book Review</a>
+    <a class="article-category-link" href="/categories/Review/">Review</a>
   </div>
 
   </div>
@@ -82,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      &#34;CSS: The Definitive Guide 3rd Edition&#34; part 2
+      CSS: The Definitive Guide 3rd Edition
     </h1>
   
 
@@ -90,7 +91,85 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="4-Values-and-Units"><a href="#4-Values-and-Units" class="headerlink" title="4 Values and Units"></a>4 Values and Units</h1><ul>
+        <p>This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It is pity that CSS3 is not included.</p>
+<p>This book may be a little bit outdated, but it is still worth reading if you want to have a better foundation on CSS, but you still need other books to learn CSS 3 feature which are commonly used.</p>
+<a id="more"></a>
+<h2 id="1-CSS-and-Documents"><a href="#1-CSS-and-Documents" class="headerlink" title="1 CSS and Documents"></a>1 CSS and Documents</h2><p>Replaced elements and non-replaced elements</p>
+<ul>
+<li>content is replaced or not</li>
+<li>(img is replaced), no actual content, the content is replaced by data outside HTML file</li>
+<li>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element" target="_blank" rel="noopener">MDN</a>, their representation is outside the scope of CSS.</li>
+</ul>
+<p>Alternate style sheet</p>
+<ul>
+<li>Example: <code>&lt;link rel=&quot;alternate stylesheet&quot; type=&quot;text/css&quot; href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;</code></li>
+<li>Fecko-based browser support alternate style sheet. browser provide options to let user select the stylesheet.</li>
+<li>Will it be downloaded even user not selected them?</li>
+<li>What is the behaviour in other browser?</li>
+</ul>
+<p>Some old browser does not support @import, which can use this ‘feature’ to hide css from old browsers</p>
+<ul>
+<li>CSS cannot have nested comment, like <code>/* /* nested comment */ */</code> is invalid</li>
+</ul>
+<h2 id="2-Selector"><a href="#2-Selector" class="headerlink" title="2 Selector"></a>2 Selector</h2><p>Pseudo-elements must be the last item in selector. <code>p:first-line em</code> is not valid, as the last item is <code>em</code> but not <code>first-line</code>. There are limited properties to be applied to <code>first-line</code> and <code>first-letter</code> pseudo-element.</p>
+<h2 id="3-Structure-and-the-Cascade"><a href="#3-Structure-and-the-Cascade" class="headerlink" title="3 Structure and the Cascade"></a>3 Structure and the Cascade</h2><ul>
+<li>Universal selector have no specificity: (0,0,0,0)<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>Attribute selector on id attribute is still consider attribute selector<ul>
+<li>It can be a temp fix on specificity war of ID<ul>
+<li><code>tr[id=&quot;totals&quot;]</code>, specificity (0,0,0,1)</li>
+<li><code>#totals</code>, specificity (0,1,0,0)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inherit value don’t have specificity, even universal selector can override<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>In CSS3 inline style override all non-important style<ul>
+<li><code>!important</code> can be used to override inline style written by others</li>
+<li>In CSS 2 inline style have the same specificity as id</li>
+</ul>
+</li>
+<li>Non-CSS style (html attribute) can be override by user or author style</li>
+</ul>
+<h3 id="Exception-of-downward-propagation"><a href="#Exception-of-downward-propagation" class="headerlink" title="Exception of downward propagation"></a>Exception of downward propagation</h3><p>There is upward propagation rule in HTML, background style in <code>body</code> element can be passed to the <code>html</code> element.<br>From <a href="http://stackoverflow.com/questions/5225237/why-does-styling-the-background-of-the-body-element-affect-the-entire-screen/5225321" target="_blank" rel="noopener">this</a>, if you apply the following CSS to <code>&lt;body /&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background: black</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>the whole screen will be black, unless you apply <code>html { background: white; }</code> explicitly.</p>
+<h3 id="Three-kinds-of-agent-stylesheet"><a href="#Three-kinds-of-agent-stylesheet" class="headerlink" title="Three kinds of agent stylesheet"></a>Three kinds of agent stylesheet</h3><ul>
+<li>User agent stylesheet<ul>
+<li>The browser’s default style</li>
+</ul>
+</li>
+<li>Reader stylesheet<ul>
+<li>The style configure by user</li>
+</ul>
+</li>
+<li>Author stylesheet<ul>
+<li>The style provide by the website owner</li>
+</ul>
+</li>
+<li>Priority:<ul>
+<li>author &gt; reader &gt; user agent stylesheet</li>
+<li>Seems reader does not work if we have reset script</li>
+</ul>
+</li>
+<li>But reader <code>!important</code> style override author style<ul>
+<li>Need confirm to test</li>
+</ul>
+</li>
+</ul>
+<h3 id="Order-to-apply-CSS-on-element-with-pseudo-classes"><a href="#Order-to-apply-CSS-on-element-with-pseudo-classes" class="headerlink" title="Order to apply CSS on element with pseudo-classes"></a>Order to apply CSS on element with pseudo-classes</h3><ul>
+<li>An element can have multiple pseudo class, if apply in wrong other, some styles will never be applied</li>
+<li>The order: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code><ul>
+<li>mnemonic “LoVe - HA”</li>
+</ul>
+</li>
+<li>Define all combination is also a solution</li>
+</ul>
+<h2 id="4-Values-and-Units"><a href="#4-Values-and-Units" class="headerlink" title="4 Values and Units"></a>4 Values and Units</h2><ul>
 <li>There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.</li>
 <li><code>rgb(50%, 0%, 100%)</code> is a valid color</li>
 <li>The “web-safe” colors are those colors that generally avoid dithering on 256-color computer systems<ul>
@@ -99,8 +178,8 @@
 </ul>
 </li>
 </ul>
-<a id="more"></a>
-<h2 id="Length-units"><a href="#Length-units" class="headerlink" title="Length units"></a>Length units</h2><ul>
+<!-- more -->
+<h3 id="Length-units"><a href="#Length-units" class="headerlink" title="Length units"></a>Length units</h3><ul>
 <li>Valid units: <code>in</code>, <code>cm</code>, <code>mm</code>, <code>pt</code>, <code>pc</code> (picas)</li>
 <li><code>em</code> and <code>ex</code> stand for “em-height” and “x-height”<ul>
 <li>Different fonts with same <code>em</code> may have different <code>ex</code>, as the font design is different<ul>
@@ -120,7 +199,7 @@
 <li><code>px</code> may scale when print, so it is defined as relative unit</li>
 <li><code>ex</code> is not commonly used, use <code>em</code> or <code>px</code> is better</li>
 </ul>
-<h2 id="List-of-value"><a href="#List-of-value" class="headerlink" title="List of value"></a>List of value</h2><ul>
+<h3 id="List-of-value"><a href="#List-of-value" class="headerlink" title="List of value"></a>List of value</h3><ul>
 <li>number</li>
 <li>color</li>
 <li>uri</li>
@@ -129,7 +208,7 @@
 <li>time</li>
 <li>frequency</li>
 </ul>
-<h1 id="5-Fonts"><a href="#5-Fonts" class="headerlink" title="5 Fonts"></a>5 Fonts</h1><ul>
+<h2 id="5-Fonts"><a href="#5-Fonts" class="headerlink" title="5 Fonts"></a>5 Fonts</h2><ul>
 <li>Don’t forget provide fallback for font family</li>
 <li>Use quotation mark as font family may have special characters</li>
 <li>Fonts have variant<ul>
@@ -165,7 +244,7 @@
 </li>
 <li><code>font-stretch</code> and <code>font-size-adjust</code> are not implemented</li>
 </ul>
-<h2 id="System-fonts"><a href="#System-fonts" class="headerlink" title="System fonts"></a>System fonts</h2><p>These are used to take the font size, family, weight, style, and variant of elements of the operating system, and apply them to an element.</p>
+<h3 id="System-fonts"><a href="#System-fonts" class="headerlink" title="System fonts"></a>System fonts</h3><p>These are used to take the font size, family, weight, style, and variant of elements of the operating system, and apply them to an element.</p>
 <ul>
 <li>caption</li>
 <li>icon</li>
@@ -174,8 +253,8 @@
 <li>small-caption</li>
 <li>status-bar</li>
 </ul>
-<h2 id="Font-synthesis"><a href="#Font-synthesis" class="headerlink" title="Font synthesis"></a>Font synthesis</h2><p>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis" target="_blank" rel="external">MDN</a>, <code>font-synthesis</code> control the generaton of missing typefaces</p>
-<h1 id="6-Text-Properties"><a href="#6-Text-Properties" class="headerlink" title="6 Text Properties"></a>6 Text Properties</h1><ul>
+<h3 id="Font-synthesis"><a href="#Font-synthesis" class="headerlink" title="Font synthesis"></a>Font synthesis</h3><p>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis" target="_blank" rel="noopener">MDN</a>, <code>font-synthesis</code> control the generaton of missing typefaces</p>
+<h2 id="6-Text-Properties"><a href="#6-Text-Properties" class="headerlink" title="6 Text Properties"></a>6 Text Properties</h2><ul>
 <li><p><code>text-indent</code></p>
 <ul>
 <li>Only works on block level elements. Use padding in inline elements</li>
@@ -212,18 +291,18 @@
 </ul>
 </li>
 </ul>
-<h2 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h2><ul>
+<h3 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h3><ul>
 <li>pre: keep all, no auto line wrapping (no line break unless there are new line character)</li>
 <li>pre-wrap: keep all space, and line wrap normally</li>
 <li>pre-line: collapse the space within the same line, and line wrap normally</li>
 </ul>
-<h2 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h2><p><code>direction</code> affects the writing direction of text in a block-level element, the direction of table column layout, the direction in which content horizontally overflows its element box, and the position of the last line of a fully justified element.<br>For inline elements, direction applies only if the property unicode-bidi is set to either embed or bidi-override.<br>For top to bottom language, CSS 3 have writing mode</p>
-<h1 id="7-Basic-Visual-Formatting"><a href="#7-Basic-Visual-Formatting" class="headerlink" title="7 Basic Visual Formatting"></a>7 Basic Visual Formatting</h1><ul>
+<h3 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h3><p><code>direction</code> affects the writing direction of text in a block-level element, the direction of table column layout, the direction in which content horizontally overflows its element box, and the position of the last line of a fully justified element.<br>For inline elements, direction applies only if the property unicode-bidi is set to either embed or bidi-override.<br>For top to bottom language, CSS 3 have writing mode</p>
+<h2 id="7-Basic-Visual-Formatting"><a href="#7-Basic-Visual-Formatting" class="headerlink" title="7 Basic Visual Formatting"></a>7 Basic Visual Formatting</h2><ul>
 <li>margin can be negative, but size, padding and border cannot be negative</li>
 <li>The computed value of percentage size is taken as the height of the containing block-level</li>
 <li>Size <code>auto</code> is the minimum size that contain the whole content</li>
 </ul>
-<h2 id="Collapsing-margin"><a href="#Collapsing-margin" class="headerlink" title="Collapsing margin"></a>Collapsing margin</h2><p>Only vertical will collapse. not horizontal margins. For other case, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="external">MDN</a>.</p>
+<h3 id="Collapsing-margin"><a href="#Collapsing-margin" class="headerlink" title="Collapsing margin"></a>Collapsing margin</h3><p>Only vertical will collapse. not horizontal margins. For other case, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">MDN</a>.</p>
 <ul>
 <li>anonymous text<ul>
 <li>the texts in inline elements but don’t inside the nested inline element</li>
@@ -260,7 +339,7 @@
 </li>
 <li>Computed value of display can change if an element is floated or positioned.</li>
 </ul>
-<h1 id="8-Padding-Borders-and-Margins"><a href="#8-Padding-Borders-and-Margins" class="headerlink" title="8 Padding, Borders and Margins"></a>8 Padding, Borders and Margins</h1><ul>
+<h2 id="8-Padding-Borders-and-Margins"><a href="#8-Padding-Borders-and-Margins" class="headerlink" title="8 Padding, Borders and Margins"></a>8 Padding, Borders and Margins</h2><ul>
 <li>Percentage margin depends on parent’s width, even margin-top and margin-bottom<ul>
 <li>If margin-top and margin-bottom depends on parent’s height, there will be infinite loop</li>
 <li>The treatment of percentage values for top and bottom margins is different for positioned elements<ul>
@@ -282,7 +361,7 @@
 <li>In CSS 2.1, the element’s background is the background of the content, padding, and border areas.</li>
 <li>Border cannot have percentage value</li>
 </ul>
-<h1 id="9-Colors-and-Backgrounds"><a href="#9-Colors-and-Backgrounds" class="headerlink" title="9 Colors and Backgrounds"></a>9 Colors and Backgrounds</h1><ul>
+<h2 id="9-Colors-and-Backgrounds"><a href="#9-Colors-and-Backgrounds" class="headerlink" title="9 Colors and Backgrounds"></a>9 Colors and Backgrounds</h2><ul>
 <li><code>color</code> properties also change border color of elements if <code>border-color</code> is not set.</li>
 <li>Many form elements have border by default.</li>
 <li>Foreground color can be inherited, but not background.</li>
@@ -303,8 +382,8 @@
 <li>The background image-placement context in CSS 2 and 2.1 is the inner border edge</li>
 <li><code>background-attachment</code> attaches image to viewport</li>
 </ul>
-<h2 id="Class-naming"><a href="#Class-naming" class="headerlink" title="Class naming"></a>Class naming</h2><p>It’s actually better to pick class names that describe the type of information contained within, not the visual effect you’re trying to achieve. It’s preferable to pick a class name which actually mean something and, more importantly, are independent of any presentational concepts. So we don’t need to rename if we want to change the visual effect</p>
-<h1 id="10-Floating-and-Positioning"><a href="#10-Floating-and-Positioning" class="headerlink" title="10 Floating and Positioning"></a>10 Floating and Positioning</h1><h2 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h2><ul>
+<h3 id="Class-naming"><a href="#Class-naming" class="headerlink" title="Class naming"></a>Class naming</h3><p>It’s actually better to pick class names that describe the type of information contained within, not the visual effect you’re trying to achieve. It’s preferable to pick a class name which actually mean something and, more importantly, are independent of any presentational concepts. So we don’t need to rename if we want to change the visual effect</p>
+<h2 id="10-Floating-and-Positioning"><a href="#10-Floating-and-Positioning" class="headerlink" title="10 Floating and Positioning"></a>10 Floating and Positioning</h2><h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ul>
 <li>Float will convert the element to <code>display: block</code></li>
 <li>Negative margin can make a float element higher than parent</li>
 <li>when the element is larger than parent it will overflow</li>
@@ -314,7 +393,7 @@
 <li>Clearance is extra spacing added above an element’s top margin to push it past any floated elements</li>
 <li>(percentage) max/min size is useful when use with float elements</li>
 </ul>
-<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><ul>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><ul>
 <li>Beside overflow hidden, we can clip the content by <code>clip</code></li>
 <li>Clip can have negative value (use with overflow hidden?)<ul>
 <li>But the browser implementation is not consistent</li>
@@ -325,7 +404,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="11-Table-Layout"><a href="#11-Table-Layout" class="headerlink" title="11 Table Layout"></a>11 Table Layout</h1><ul>
+<h2 id="11-Table-Layout"><a href="#11-Table-Layout" class="headerlink" title="11 Table Layout"></a>11 Table Layout</h2><ul>
 <li>It is impossible to give table cell margin (browser will ignore them)</li>
 <li>The position of first table column depends on language direction</li>
 <li>The CSS specification discourages, but does not prohibit, the positioning of table cells and other internal table elements.</li>
@@ -347,7 +426,7 @@
 <li>Border spacing = cell margin</li>
 <li><code>empty-cell: hidden;</code> make browser set empty cell to <code>display: none;</code></li>
 </ul>
-<h2 id="table-layout"><a href="#table-layout" class="headerlink" title="table-layout"></a>table-layout</h2><ul>
+<h3 id="table-layout"><a href="#table-layout" class="headerlink" title="table-layout"></a>table-layout</h3><ul>
 <li><code>auto</code>: the table size is depends on the content</li>
 <li><code>fixed</code>: the table size is defined by the first row<ul>
 <li><code>fixed</code> layout is fast to render, no need to go through all content</li>
@@ -360,8 +439,8 @@
 </ul>
 </li>
 </ul>
-<h1 id="12-List-and-Generated-Content"><a href="#12-List-and-Generated-Content" class="headerlink" title="12 List and Generated Content"></a>12 List and Generated Content</h1><p>CSS does not define the behavior of nonnumeric counting styles for negative counter</p>
-<h1 id="13-User-Interface-Styles"><a href="#13-User-Interface-Styles" class="headerlink" title="13 User Interface Styles"></a>13 User Interface Styles</h1><ul>
+<h2 id="12-List-and-Generated-Content"><a href="#12-List-and-Generated-Content" class="headerlink" title="12 List and Generated Content"></a>12 List and Generated Content</h2><p>CSS does not define the behavior of nonnumeric counting styles for negative counter</p>
+<h2 id="13-User-Interface-Styles"><a href="#13-User-Interface-Styles" class="headerlink" title="13 User Interface Styles"></a>13 User Interface Styles</h2><ul>
 <li>There are default system style:<ul>
 <li>font</li>
 <li>color</li>
@@ -373,7 +452,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="14-Non-Screen-Media"><a href="#14-Non-Screen-Media" class="headerlink" title="14 Non-Screen Media"></a>14 Non-Screen Media</h1><h2 id="Print-version"><a href="#Print-version" class="headerlink" title="Print version"></a>Print version</h2><ul>
+<h2 id="14-Non-Screen-Media"><a href="#14-Non-Screen-Media" class="headerlink" title="14 Non-Screen Media"></a>14 Non-Screen Media</h2><h3 id="Print-version"><a href="#Print-version" class="headerlink" title="Print version"></a>Print version</h3><ul>
 <li>Some suggested style to apply to printed version<ul>
 <li>Overwrite background and font color</li>
 <li>No float and no column (width: auto)</li>
@@ -394,36 +473,38 @@
 </ul>
 </li>
 </ul>
-<h2 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h2><p>Not implemented by many browser</p>
-<h2 id="Speaker"><a href="#Speaker" class="headerlink" title="Speaker"></a>Speaker</h2><p>The book mentions styles in CSS2. The CSS3 specification is not finalised.</p>
+<h3 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h3><p>Not implemented by many browser</p>
+<h3 id="Speaker"><a href="#Speaker" class="headerlink" title="Speaker"></a>Speaker</h3><p>The book mentions styles in CSS2. The CSS3 specification is not finalised.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/" data-id="cjcdhdmmr001lje65nq0dq7z6" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition/" data-id="cjjyfjesi0006h565xvcxrgxj" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Book-review/">Book review</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/review/2017/02/08/all-about-css-float/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/diary/2017/01/29/using-redux-in-backend/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          All about css float
+          Using Redux in server-side
         
       </div>
     </a>
   
   
-    <a href="/review/2017/01/16/css-the-definitive-guide-3rd-edition-1/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/2017/01/08/npm/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">&#34;CSS: The Definitive Guide 3rd Edition&#34; part 1</div>
+      <div class="article-nav-title">npm</div>
     </a>
   
 </nav>
@@ -475,7 +556,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 15px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 18.33px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/Communication/" style="font-size: 13.33px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-pattern/" style="font-size: 13.33px;">Design pattern</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 16.67px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 15px;">Learning skills</a> <a href="/tags/Management/" style="font-size: 16.67px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 11.67px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Productivity/" style="font-size: 13.33px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10px;">SVG</a> <a href="/tags/Security/" style="font-size: 11.67px;">Security</a> <a href="/tags/Startup/" style="font-size: 10px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11.67px;">Tools</a> <a href="/tags/Video-review/" style="font-size: 16.67px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 14.29px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 18.57px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 14.29px;">CSS</a> <a href="/tags/Communication/" style="font-size: 12.86px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-pattern/" style="font-size: 12.86px;">Design pattern</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 14.29px;">Learning skills</a> <a href="/tags/Management/" style="font-size: 15.71px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 11.43px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Productivity/" style="font-size: 12.86px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10px;">SVG</a> <a href="/tags/Security/" style="font-size: 11.43px;">Security</a> <a href="/tags/Startup/" style="font-size: 10px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11.43px;">Tools</a> <a href="/tags/Video-review/" style="font-size: 15.71px;">Video review</a>
     </div>
   </div>
 
@@ -484,7 +565,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -497,23 +578,23 @@
       <ul>
         
           <li>
+            <a href="/knowledge/2018/07/23/design-pattern/">Design pattern</a>
+          </li>
+        
+          <li>
+            <a href="/diary/2018/07/15/bug-caused-by-duck-typing/">Bug caused by duck typing</a>
+          </li>
+        
+          <li>
             <a href="/commentary/2018/07/15/commentaries-32/">簡評三十二</a>
           </li>
         
           <li>
+            <a href="/commentary/2018/07/15/commentaries-33/">簡評三十三</a>
+          </li>
+        
+          <li>
             <a href="/review/2018/07/09/bu-jiaolv-xue-mingxiang/">不焦慮 學冥想</a>
-          </li>
-        
-          <li>
-            <a href="/review/2018/07/08/59s-think-a-little-change-a-lot/">怪咖心理學(2)：59秒啟動正能量</a>
-          </li>
-        
-          <li>
-            <a href="/knowledge/2018/07/02/meeting/">Meeting technique</a>
-          </li>
-        
-          <li>
-            <a href="/knowledge/2018/07/02/code-smell/">Code smells</a>
           </li>
         
       </ul>
@@ -547,7 +628,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition-2/';
+  var disqus_url = 'http://199911.github.io/review/2017/01/22/css-the-definitive-guide-3rd-edition/';
   
   (function(){
     var dsq = document.createElement('script');
