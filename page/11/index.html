@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Coding Sunday</title>
+  <title>Do the right thing, Wait to get fired</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Coding Sunday">
+<meta property="og:title" content="Do the right thing, Wait to get fired">
 <meta property="og:url" content="http://199911.github.io/page/11/index.html">
-<meta property="og:site_name" content="Coding Sunday">
+<meta property="og:site_name" content="Do the right thing, Wait to get fired">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coding Sunday">
+<meta name="twitter:title" content="Do the right thing, Wait to get fired">
   
-    <link rel="alternate" href="/atom.xml" title="Coding Sunday" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Do the right thing, Wait to get fired" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -32,7 +32,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Coding Sunday</a>
+        <a href="/" id="logo">Do the right thing, Wait to get fired</a>
       </h1>
       
     </div>
@@ -61,6 +61,71 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-commentaries-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/2016/07/02/commentaries-3/" class="article-date">
+  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/2016/07/02/commentaries-3/">簡評三</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更轻量的-View-Controllers"><a href="#更轻量的-View-Controllers" class="headerlink" title="更轻量的 View Controllers"></a><a href="http://objccn.io/issue-1-1/" target="_blank" rel="noopener">更轻量的 View Controllers</a></h2><p>文中帶出 MVCS 嘅 concept 去改MVC，S可以係 Store 或 Service 嘅簡寫，都係指同一樣野。其實就係將 Model 嘅 database 或 network logic 放去 Store/Service object，令個Controller 可以精簡一D。</p>
+<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>例子係Objective C，唔係咁岩睇。拆database logic做一個driver class係普通野，篇文冇必要再睇。</p>
+<h2 id="MVVM-介绍"><a href="#MVVM-介绍" class="headerlink" title="MVVM 介绍"></a><a href="http://objccn.io/issue-13-1/" target="_blank" rel="noopener">MVVM 介绍</a></h2><p>VM stand for View Model. The idea is to improve MVC by adding a layer (View Model) between Controller and Model.<br>View Model handles all presnetation logic, such as format data in Model for View. In MVC, we put the data formating code in Controller. MVVM make the controller slimmer.</p>
+<p>We should put all code which cannot be reused in Controller. I thought data format code usually is not reusabile, it makes sense to put the logic in Controller. When the system grow and become more complex, we can apply MVVM to break down the controller is small pieces. So the code base will be cleaner.</p>
+<p>Pros of MVVM:</p>
+<ul>
+<li>easy to migrate from MVC by adding view models<ul>
+<li>we can migrate progressively</li>
+</ul>
+</li>
+<li>view model is testable<ul>
+<li>in most cases, controller is not worth to write automated test</li>
+</ul>
+</li>
+<li>easier to bind logic, as controller is smaller</li>
+</ul>
+<p>I have no experience on MVVM. I need to find some example to support my thought</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/2016/07/02/commentaries-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/2016/07/02/commentaries-3/" data-id="cj9covao400246m65x8twero5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/2016/07/02/commentaries-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective C</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-objc-interface-design" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -152,60 +217,6 @@
         <a href="http://199911.github.io/diary/2016/06/24/observer-pattern-and-mvc/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-tech-talk-key-points" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/2016/06/16/tech-talk-key-points/" class="article-date">
-  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/2016/06/16/tech-talk-key-points/">Key points on giving a tech talk</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>There are three common problems in a tech talk</p>
-<ul>
-<li>Time management</li>
-<li>Too much tech content</li>
-<li>Lack of practice</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/review/2016/06/16/tech-talk-key-points/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/2016/06/16/tech-talk-key-points/" data-id="cjcdhdmne002sje65o2oq4jph" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/2016/06/16/tech-talk-key-points/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Article-review/">Article review</a></li></ul>
-
     </footer>
   </div>
   
@@ -307,6 +318,60 @@
         <a href="http://199911.github.io/diary/2016/06/16/git-clone-depth/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-tech-talk-key-points" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/2016/06/16/tech-talk-key-points/" class="article-date">
+  <time datetime="2016-06-15T16:00:00.000Z" itemprop="datePublished">2016-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/2016/06/16/tech-talk-key-points/">Key points on giving a tech talk</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>There are three common problems in a tech talk</p>
+<ul>
+<li>Time management</li>
+<li>Too much tech content</li>
+<li>Lack of practice</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/review/2016/06/16/tech-talk-key-points/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/2016/06/16/tech-talk-key-points/" data-id="cjcdhdmne002sje65o2oq4jph" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/2016/06/16/tech-talk-key-points/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Article-review/">Article review</a></li></ul>
+
     </footer>
   </div>
   
@@ -516,56 +581,6 @@
 
 
   
-    <article id="post-example-of-leaky-abstraction" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/2016/05/26/example-of-leaky-abstraction/" class="article-date">
-  <time datetime="2016-05-25T16:00:00.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/diary/2016/05/26/example-of-leaky-abstraction/">Example of leaky abstraction</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Everytime we abstract a layer, some detail will be hidden. When there is some error or bug inside the abstraction layer, only the engineer understand the implementation of abstracted layer can fix it.</p>
-<p>Leaky abstraction is a necessary evil, here is some of my own experience.</p>
-<h2 id="Github-API-and-npm-‘request’-module"><a href="#Github-API-and-npm-‘request’-module" class="headerlink" title="Github API and npm ‘request’ module"></a>Github API and npm ‘request’ module</h2><p>I use npm ‘request’ module to query pull request of a private repo. I use the correct authetication method, but still fail to get data from the API.</p>
-<p>Here is the code copy from the example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">request.get(&apos;http://some.server.com/&apos;, &#123;</span><br><span class="line">  &apos;auth&apos;: &#123;</span><br><span class="line">    &apos;user&apos;: &apos;username&apos;,</span><br><span class="line">    &apos;pass&apos;: &apos;password&apos;,</span><br><span class="line">    &apos;sendImmediately&apos;: false</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/diary/2016/05/26/example-of-leaky-abstraction/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/" data-id="cjjyfjete000kh565b6txu7do" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/2016/05/26/example-of-leaky-abstraction/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -591,7 +606,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVG/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPS/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVG/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI-UX/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -601,7 +616,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile/" style="font-size: 10px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 14.29px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 18.57px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 14.29px;">CSS</a> <a href="/tags/Communication/" style="font-size: 12.86px;">Communication</a> <a href="/tags/Data/" style="font-size: 10px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-pattern/" style="font-size: 12.86px;">Design pattern</a> <a href="/tags/Git/" style="font-size: 10px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 10px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 17.14px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 14.29px;">Learning skills</a> <a href="/tags/Management/" style="font-size: 15.71px;">Management</a> <a href="/tags/Objective-C/" style="font-size: 11.43px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Productivity/" style="font-size: 12.86px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10px;">SVG</a> <a href="/tags/Security/" style="font-size: 11.43px;">Security</a> <a href="/tags/Startup/" style="font-size: 10px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 10px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11.43px;">Tools</a> <a href="/tags/Video-review/" style="font-size: 15.71px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 13px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 15px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 13px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 14px;">Communication</a> <a href="/tags/Data/" style="font-size: 12px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 13px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 12px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 17px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 14px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/Management/" style="font-size: 16px;">Management</a> <a href="/tags/Network/" style="font-size: 11px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 12px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 10px;">Opensource</a> <a href="/tags/Philosophy/" style="font-size: 13px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 14px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 11px;">SVG</a> <a href="/tags/Security/" style="font-size: 11px;">Security</a> <a href="/tags/Startup/" style="font-size: 13px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 14px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 11px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18px;">Video review</a>
     </div>
   </div>
 
@@ -623,6 +638,14 @@
       <ul>
         
           <li>
+            <a href="/review/2018/07/29/quirkology-3/">怪咖心理學（３）：明明沒有，為什麼看得見？當超自然現象遇上心理學</a>
+          </li>
+        
+          <li>
+            <a href="/review/2018/07/29/think-like-a-layman-execute-like-a-expert/">像外行一樣思考 像專家一樣實踐</a>
+          </li>
+        
+          <li>
             <a href="/knowledge/2018/07/23/design-pattern/">Design pattern</a>
           </li>
         
@@ -632,14 +655,6 @@
         
           <li>
             <a href="/commentary/2018/07/15/commentaries-32/">簡評三十二</a>
-          </li>
-        
-          <li>
-            <a href="/commentary/2018/07/15/commentaries-33/">簡評三十三</a>
-          </li>
-        
-          <li>
-            <a href="/review/2018/07/09/bu-jiaolv-xue-mingxiang/">不焦慮 學冥想</a>
           </li>
         
       </ul>
