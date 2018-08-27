@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>簡評三十二 | Do the right thing, Wait to get fired</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Reduced Test CasesThis article is focus on reduced test case for web page, but the principle can be apply to other area.  A reduced test case is a demo/example page you create which reproduces the pro">
+<meta name="keywords" content="Video review,Javascript,Learning skills,Startup,Git,Testing,Philosophy,Network,Design Pattern,GPS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="簡評三十二">
+<meta property="og:url" content="http://199911.github.io/commentary/commentaries-32/index.html">
+<meta property="og:site_name" content="Do the right thing, Wait to get fired">
+<meta property="og:description" content="Reduced Test CasesThis article is focus on reduced test case for web page, but the principle can be apply to other area.  A reduced test case is a demo/example page you create which reproduces the pro">
+<meta property="og:locale" content="commentary">
+<meta property="og:updated_time" content="2018-07-23T15:54:28.792Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="簡評三十二">
+<meta name="twitter:description" content="Reduced Test CasesThis article is focus on reduced test case for web page, but the principle can be apply to other area.  A reduced test case is a demo/example page you create which reproduces the pro">
+  
+    <link rel="alternate" href="/atom.xml" title="Do the right thing, Wait to get fired" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Do the right thing, Wait to get fired</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-commentaries-32" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-32/" class="article-date">
+  <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      簡評三十二
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Reduced-Test-Cases"><a href="#Reduced-Test-Cases" class="headerlink" title="Reduced Test Cases"></a><a href="https://css-tricks.com/reduced-test-cases/" target="_blank" rel="noopener">Reduced Test Cases</a></h2><p>This article is focus on reduced test case for web page, but the principle can be apply to other area.</p>
+<ul>
+<li>A reduced test case is a demo/example page you create which reproduces the problem you are having with the least amount of code possible<ul>
+<li>Help isolate the problem</li>
+<li>Easier for others to help you</li>
+</ul>
+</li>
+<li>How to set up a reduced test case<ul>
+<li>Make it static<ul>
+<li>mock the dependencies (data, function call, 3rd party api, etc)</li>
+</ul>
+</li>
+<li>Make it isolated<ul>
+<li>Move the related codes to a separated project/repo</li>
+</ul>
+</li>
+<li>Remove the code not related to the problem</li>
+<li>Document it</li>
+</ul>
+</li>
+<li>You need to know the core problem, before asking for help</li>
+</ul>
+<a id="more"></a>
+<h2 id="Maintaning-more-than-65535-connections-on-single-IP"><a href="#Maintaning-more-than-65535-connections-on-single-IP" class="headerlink" title="Maintaning more than 65535 connections on single IP"></a><a href="https://stackoverflow.com/questions/36172875/maintaning-more-than-65535-connections-on-single-ip" target="_blank" rel="noopener">Maintaning more than 65535 connections on single IP</a></h2><p>之前對socket有一個誤解：部機最多有65535個port，每一個connection要用一個port，咁一個server點同時handle到10k嘅connections?<br>解說：個server application只需要用一個port黎listen client，無論有幾多個connection連過黎，都只需要用一個port。反之，一個server每連出去外面一個application，就要用一個port，因此一部機最多連去65535部機。</p>
+<h2 id="What-are-the-main-uses-of-Command-design-pattern"><a href="#What-are-the-main-uses-of-Command-design-pattern" class="headerlink" title="What are the main uses of Command design pattern?"></a><a href="https://www.quora.com/What-are-the-main-uses-of-Command-design-pattern" target="_blank" rel="noopener">What are the main uses of Command design pattern?</a></h2><p>Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：</p>
+<ul>
+<li>GUI<ul>
+<li>因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC pattern</li>
+</ul>
+</li>
+<li>Marco recording<ul>
+<li>因為要record同replay行過嘅步驟，decouple左之後，只需要儲低個request object就做到</li>
+</ul>
+</li>
+<li>Multi-step undo<ul>
+<li>Similar to Marco recording</li>
+</ul>
+</li>
+<li>Networking<ul>
+<li>Remote execute嘅情況，request generate object 同 execute object唔係同一部機上邊，焗住要decouple</li>
+</ul>
+</li>
+<li>Progress bar<ul>
+<li>Decouple左個execution做一個個step之後，我地track住個request object，就可以知道個progress</li>
+</ul>
+</li>
+<li>Transaction<ul>
+<li>Similar to multi-step undo</li>
+</ul>
+</li>
+</ul>
+<h2 id="The-flag-g-of-JavaScript’s-regular-expressions"><a href="#The-flag-g-of-JavaScript’s-regular-expressions" class="headerlink" title="The flag /g of JavaScript’s regular expressions"></a><a href="http://2ality.com/2013/08/regexp-g.html" target="_blank" rel="noopener">The flag /g of JavaScript’s regular expressions</a></h2><p>之前中左一個伏，一個有<code>g</code> flag 嘅 regex，重覆execute會有唔同嘅behaviour。睇完篇文先知有<code>g</code> flag嘅regex係stateful，有一個叫lastIndex嘅internal state。如果冇reset 到，可能會係match第2條string時出現unexpected results。</p>
+<p>個regex無端端有個internal state，以乎係一個javascript嘅bad design</p>
+<h2 id="GPS是如何運作的？而它為什麼可以免費使用呢？-中文CC字幕"><a href="#GPS是如何運作的？而它為什麼可以免費使用呢？-中文CC字幕" class="headerlink" title="GPS是如何運作的？而它為什麼可以免費使用呢？ (中文CC字幕)"></a><a href="https://www.youtube.com/watch?v=ODuKHIpuv3Q" target="_blank" rel="noopener">GPS是如何運作的？而它為什麼可以免費使用呢？ (中文CC字幕)</a></h2><ul>
+<li>GPS 免費，但其他美國政府用好多錢去maintain<ul>
+<li>但係美國有能力disable 任何party嘅GPS，所以各國都有研發自己嘅GPS system</li>
+</ul>
+</li>
+<li>24 個 GPS衛星保證全球任何地方都連到4個GPS</li>
+</ul>
+<h2 id="The-Feynman-Technique"><a href="#The-Feynman-Technique" class="headerlink" title="The Feynman Technique"></a><a href="https://www.youtube.com/watch?v=tkm0TNFzIeg" target="_blank" rel="noopener">The Feynman Technique</a></h2><ul>
+<li>Learn a overview of a topic</li>
+<li>Try to write a tutorial to teach other the topic<ul>
+<li>You can know what you understood and what you don’t</li>
+</ul>
+</li>
+<li>Go back to learn what you don’t understand</li>
+<li>Try to simplify your tutorial, explain the idea in a simple way or use some analogy</li>
+</ul>
+<h2 id="罗辑思维-198-你是巨婴吗"><a href="#罗辑思维-198-你是巨婴吗" class="headerlink" title="罗辑思维 198 你是巨婴吗"></a><a href="https://www.youtube.com/watch?v=feg7fBTDAIQ" target="_blank" rel="noopener">罗辑思维 198 你是巨婴吗</a></h2><ul>
+<li>巨婴：人嘅心理結構同反應模式停留係嬰兒早期</li>
+<li>三大特點<ul>
+<li>病態共生<ul>
+<li>唔健康嘅家庭關係<ul>
+<li>裙腳仔<ul>
+<li>母子過份依賴</li>
+</ul>
+</li>
+<li>婆媳矛盾<ul>
+<li>奶奶唔習慣母子依賴嘅關係被打破，遷怒於媳婦</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>不斷一代接一代循環<ul>
+<li>上一代嘅「婆媳矛盾」+「父親角色嘅缺失」，令子女唔知道正常嘅家庭關係</li>
+<li>「婆媳矛盾」，令婚後妻子縛往丈夫，丈夫唔識處理家庭關係而逃避</li>
+<li>妻子把重心放係孩子嘅身上，做成「病態共生」，父親逃避問題，做成「父親角色嘅缺失」</li>
+<li>孩子婚後，由於家庭核心係孩子身上，妻子唔習慣媳婦搶走孩子，做成新一代「婆媳矛盾」</li>
+<li>循環</li>
+</ul>
+</li>
+<li>正常嘅家庭關係<ul>
+<li>父婦係家庭嘅核心，子女只係住二十年嘅房客</li>
+</ul>
+</li>
+<li>人與人之間冇清晰嘅界限<ul>
+<li>一個人嘅事就係大家嘅事，變左人人都差隻腳埋黎，好難解決問題</li>
+<li>中國文化中，跨越陌生人嘅邊界，係釋放善意嘅表現<ul>
+<li>係現代社會唔係一個正常雖行為</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>全能自戀 &amp; 偏執分裂<ul>
+<li>要現實以佢地嘅想像中嘅方法運行<ul>
+<li>現實不似預期，就會崩潰，覺得係有人搞事，揾攻擊對象，就算成件事唔關佢事都好</li>
+<li>要求人要有完美表現</li>
+</ul>
+</li>
+<li>認為非黑即白，世界冇灰度</li>
+<li>得個諗字，缺乏行動力</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Why-your-tech-company-needs-to-go-‘tech-light’"><a href="#Why-your-tech-company-needs-to-go-‘tech-light’" class="headerlink" title="Why your tech company needs to go ‘tech-light’"></a><a href="https://www.linkedin.com/pulse/why-your-tech-company-needs-go-tech-light-marcela-sapone/" target="_blank" rel="noopener">Why your tech company needs to go ‘tech-light’</a></h2><p>用得太多工具，會被工具困住左個思維。有時候改變一下平日習慣嘅workflow，反思一下，可能會發現一D提升效率嘅方法。</p>
+<h2 id="Understanding-your-Circle-of-Competence-How-Warren-Buffett-Avoids-Problems"><a href="#Understanding-your-Circle-of-Competence-How-Warren-Buffett-Avoids-Problems" class="headerlink" title="Understanding your Circle of Competence: How Warren Buffett Avoids Problems"></a><a href="https://fs.blog/2013/12/mental-model-circle-of-competence" target="_blank" rel="noopener">Understanding your Circle of Competence: How Warren Buffett Avoids Problems</a></h2><ul>
+<li>知道自己擅長嘅領域<ul>
+<li>avoid problems</li>
+<li>identify opportunities for improvement</li>
+<li>learn from others</li>
+</ul>
+</li>
+<li>有時候知識面唔夠廣唔係壞事，但要知道自己嘅circle of competence<ul>
+<li>反而可以幫助自己專注係擅長嘅項目</li>
+</ul>
+</li>
+</ul>
+<h2 id="Differences-between-git-submodule-and-subtree"><a href="#Differences-between-git-submodule-and-subtree" class="headerlink" title="Differences between git submodule and subtree"></a><a href="https://stackoverflow.com/questions/31769820/differences-between-git-submodule-and-subtree" target="_blank" rel="noopener">Differences between git submodule and subtree</a></h2><ul>
+<li>Submodule<ul>
+<li>is a “link”</li>
+<li>component based development</li>
+</ul>
+</li>
+<li>Subtree<ul>
+<li>is a copy</li>
+<li>system based development</li>
+<li>develop on both project and subproject</li>
+</ul>
+</li>
+</ul>
+<h2 id="关于Git的主要维护者滨野纯的访谈"><a href="#关于Git的主要维护者滨野纯的访谈" class="headerlink" title="关于Git的主要维护者滨野纯的访谈"></a><a href="https://linux.cn/article-2052-1.html" target="_blank" rel="noopener">关于Git的主要维护者滨野纯的访谈</a></h2><ul>
+<li>Linus 的管理才能<ul>
+<li>Project maintainer 有一半嘅工作係say no<ul>
+<li>要解釋係因為commit唔得，而唔係因為能力唔得</li>
+<li>重視每個contributer</li>
+<li>要令對方覺得工作冇白費，唔好打擊對方嘅熱情</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Great programmer<ul>
+<li>持之以恆做某件事</li>
+<li>擁有良好嘅直覺同品味<ul>
+<li>對新問題，就覺沒有完整解決問題，都可以用直覺提出正確解決問題嘅思路同方向</li>
+</ul>
+</li>
+<li>溝通能力<ul>
+<li>要能夠解釋「我的目標係咩」，同得出目標嘅思維過程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自我反省<ul>
+<li>練習lightening talk，係短時間內清楚提出自己嘅諗法</li>
+<li>Reject pull request嘅技巧值得學習</li>
+</ul>
+</li>
+</ul>
+<h2 id="人生中最重要的5個思考題"><a href="#人生中最重要的5個思考題" class="headerlink" title="人生中最重要的5個思考題"></a><a href="https://4think.net/%E4%BA%BA%E7%94%9F%E4%B8%AD%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%845%E5%80%8B%E5%95%8F%E9%A1%8C/" target="_blank" rel="noopener">人生中最重要的5個思考題</a></h2><ul>
+<li>「等等，你說什麼？」（Wait, What?）<ul>
+<li>一種自然的方式去引導對方更詳細的表達，讓對方把還沒說的、埋在較深處的資訊給說出來</li>
+<li>能減少溝通中的誤解，讓你聽見他人腦中的真實想法</li>
+</ul>
+</li>
+<li>「我想知道……？」（I wonder…?）<ul>
+<li>加強好奇心</li>
+</ul>
+</li>
+<li>「至少，我們是不是能夠……？」（Couldn’t we at least…?）<ul>
+<li>「至少，我們是不是能夠同意……？」<ul>
+<li>化解衝突，引導衝突的雙方達成共識</li>
+<li>人們常會不自覺的把事情往極端的情況想，用E個問題去達成最低限度嘅妥協</li>
+</ul>
+</li>
+<li>「至少，我們是不是能夠……？」<ul>
+<li>一步步帶他們嘗試新事物，幫忙克服恐懼</li>
+<li>引導人的思緒遠離極端情況，回到自己能做出行動的最低限度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>「我可以幫什麼忙？」（What can I help?）<ul>
+<li>讓自己變得謙卑</li>
+<li>我們常誤以為自己能比對方更清楚他/她自己想要什麼</li>
+</ul>
+</li>
+<li>「真正重要的是什麼？」（What truly matters?）<ul>
+<li>人們很容易被瑣事擋住了真正重要的事情</li>
+<li>許多人覺得生活過得很迷茫、漂浮不定，其實歸根究底，就是因為沒想清楚什麼才是真正重要的</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-32/" data-id="cjjmomg680000sg6550w61zib" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-32/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gps/">GPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/startup/">Startup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">Testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/diary/bug-caused-by-duck-typing/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Bug caused by duck typing
+        
+      </div>
+    </a>
+  
+  
+    <a href="/review/不焦慮-學冥想/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">不焦慮 學冥想</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/agile/" style="font-size: 12.73px;">Agile</a> <a href="/tags/architecture/" style="font-size: 15.45px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 12.73px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10.91px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 11.82px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 12.73px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 17.27px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 13.64px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 16.36px;">Management</a> <a href="/tags/network/" style="font-size: 10.91px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 10.91px;">Opensource</a> <a href="/tags/philosophy/" style="font-size: 13.64px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 14.55px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 10.91px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/像心理學家一樣思考-立即扭轉劣勢的77個思考技巧/">像心理學家一樣思考：立即扭轉劣勢的77個思考技巧</a>
+          </li>
+        
+          <li>
+            <a href="/review/eyes-wide-open-how-to-make-smart-decisions-in-a-confusing-world/">老虎、蛇和牧羊人的背後：如何在大數據時代破解網路騙局與專家迷思，善用個人力量做出聰明決定</a>
+          </li>
+        
+          <li>
+            <a href="/review/人生潛規則-20幾歲就該知道/">人生潛規則，20幾歲就該知道</a>
+          </li>
+        
+          <li>
+            <a href="/review/domain-driven-design-tackling-complexity-in-the-heart-of-software/">Domain-Driven Design - Tackling Complexity in the Heart of Software</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/commentaries-34/">簡評三十四</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/commentary/commentaries-32/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

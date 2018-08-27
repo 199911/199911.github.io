@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>CSS: The Definitive Guide 3rd Edition | Do the right thing, Wait to get fired</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta name="keywords" content="Book review">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS: The Definitive Guide 3rd Edition">
+<meta property="og:url" content="http://199911.github.io/review/css-the-definitive-guide-3rd-edition/index.html">
+<meta property="og:site_name" content="Do the right thing, Wait to get fired">
+<meta property="og:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+<meta property="og:locale" content="review">
+<meta property="og:updated_time" content="2018-07-21T17:53:44.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS: The Definitive Guide 3rd Edition">
+<meta name="twitter:description" content="This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It i">
+  
+    <link rel="alternate" href="/atom.xml" title="Do the right thing, Wait to get fired" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Do the right thing, Wait to get fired</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-the-definitive-guide-3rd-edition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/css-the-definitive-guide-3rd-edition/" class="article-date">
+  <time datetime="2017-01-21T16:00:00.000Z" itemprop="datePublished">2017-01-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CSS: The Definitive Guide 3rd Edition
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This book have lots of details. Mention the support of some very old browser, like IE 6 and IE 7. It also explain how the CSS algorithm runs, like calculation of line height, size of content box. It is pity that CSS3 is not included.</p>
+<p>This book may be a little bit outdated, but it is still worth reading if you want to have a better foundation on CSS, but you still need other books to learn CSS 3 feature which are commonly used.</p>
+<a id="more"></a>
+<h2 id="1-CSS-and-Documents"><a href="#1-CSS-and-Documents" class="headerlink" title="1 CSS and Documents"></a>1 CSS and Documents</h2><p>Replaced elements and non-replaced elements</p>
+<ul>
+<li>content is replaced or not</li>
+<li>(img is replaced), no actual content, the content is replaced by data outside HTML file</li>
+<li>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element" target="_blank" rel="noopener">MDN</a>, their representation is outside the scope of CSS.</li>
+</ul>
+<p>Alternate style sheet</p>
+<ul>
+<li>Example: <code>&lt;link rel=&quot;alternate stylesheet&quot; type=&quot;text/css&quot; href=&quot;bigtext.css&quot; title=&quot;Big Text&quot; /&gt;</code></li>
+<li>Fecko-based browser support alternate style sheet. browser provide options to let user select the stylesheet.</li>
+<li>Will it be downloaded even user not selected them?</li>
+<li>What is the behaviour in other browser?</li>
+</ul>
+<p>Some old browser does not support @import, which can use this ‘feature’ to hide css from old browsers</p>
+<ul>
+<li>CSS cannot have nested comment, like <code>/* /* nested comment */ */</code> is invalid</li>
+</ul>
+<h2 id="2-Selector"><a href="#2-Selector" class="headerlink" title="2 Selector"></a>2 Selector</h2><p>Pseudo-elements must be the last item in selector. <code>p:first-line em</code> is not valid, as the last item is <code>em</code> but not <code>first-line</code>. There are limited properties to be applied to <code>first-line</code> and <code>first-letter</code> pseudo-element.</p>
+<h2 id="3-Structure-and-the-Cascade"><a href="#3-Structure-and-the-Cascade" class="headerlink" title="3 Structure and the Cascade"></a>3 Structure and the Cascade</h2><ul>
+<li>Universal selector have no specificity: (0,0,0,0)<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>Attribute selector on id attribute is still consider attribute selector<ul>
+<li>It can be a temp fix on specificity war of ID<ul>
+<li><code>tr[id=&quot;totals&quot;]</code>, specificity (0,0,0,1)</li>
+<li><code>#totals</code>, specificity (0,1,0,0)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inherit value don’t have specificity, even universal selector can override<ul>
+<li><strong> Universal selector will break inheritance </strong></li>
+</ul>
+</li>
+<li>In CSS3 inline style override all non-important style<ul>
+<li><code>!important</code> can be used to override inline style written by others</li>
+<li>In CSS 2 inline style have the same specificity as id</li>
+</ul>
+</li>
+<li>Non-CSS style (html attribute) can be override by user or author style</li>
+</ul>
+<h3 id="Exception-of-downward-propagation"><a href="#Exception-of-downward-propagation" class="headerlink" title="Exception of downward propagation"></a>Exception of downward propagation</h3><p>There is upward propagation rule in HTML, background style in <code>body</code> element can be passed to the <code>html</code> element.<br>From <a href="http://stackoverflow.com/questions/5225237/why-does-styling-the-background-of-the-body-element-affect-the-entire-screen/5225321" target="_blank" rel="noopener">this</a>, if you apply the following CSS to <code>&lt;body /&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  height: 100px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  background: black</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>the whole screen will be black, unless you apply <code>html { background: white; }</code> explicitly.</p>
+<h3 id="Three-kinds-of-agent-stylesheet"><a href="#Three-kinds-of-agent-stylesheet" class="headerlink" title="Three kinds of agent stylesheet"></a>Three kinds of agent stylesheet</h3><ul>
+<li>User agent stylesheet<ul>
+<li>The browser’s default style</li>
+</ul>
+</li>
+<li>Reader stylesheet<ul>
+<li>The style configure by user</li>
+</ul>
+</li>
+<li>Author stylesheet<ul>
+<li>The style provide by the website owner</li>
+</ul>
+</li>
+<li>Priority:<ul>
+<li>author &gt; reader &gt; user agent stylesheet</li>
+<li>Seems reader does not work if we have reset script</li>
+</ul>
+</li>
+<li>But reader <code>!important</code> style override author style<ul>
+<li>Need confirm to test</li>
+</ul>
+</li>
+</ul>
+<h3 id="Order-to-apply-CSS-on-element-with-pseudo-classes"><a href="#Order-to-apply-CSS-on-element-with-pseudo-classes" class="headerlink" title="Order to apply CSS on element with pseudo-classes"></a>Order to apply CSS on element with pseudo-classes</h3><ul>
+<li>An element can have multiple pseudo class, if apply in wrong other, some styles will never be applied</li>
+<li>The order: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code><ul>
+<li>mnemonic “LoVe - HA”</li>
+</ul>
+</li>
+<li>Define all combination is also a solution</li>
+</ul>
+<h2 id="4-Values-and-Units"><a href="#4-Values-and-Units" class="headerlink" title="4 Values and Units"></a>4 Values and Units</h2><ul>
+<li>There are only 17 defined color in css 2.1, but CSS 3 have 140 color, which recongized by most browsers.</li>
+<li><code>rgb(50%, 0%, 100%)</code> is a valid color</li>
+<li>The “web-safe” colors are those colors that generally avoid dithering on 256-color computer systems<ul>
+<li>Value can be express in multiple of 20%</li>
+<li>I think we don’t need to care these nowadays</li>
+</ul>
+</li>
+</ul>
+<!-- more -->
+<h3 id="Length-units"><a href="#Length-units" class="headerlink" title="Length units"></a>Length units</h3><ul>
+<li>Valid units: <code>in</code>, <code>cm</code>, <code>mm</code>, <code>pt</code>, <code>pc</code> (picas)</li>
+<li><code>em</code> and <code>ex</code> stand for “em-height” and “x-height”<ul>
+<li>Different fonts with same <code>em</code> may have different <code>ex</code>, as the font design is different<ul>
+<li>But in practical, not all font have <code>ex</code> defined, will fallback to convention (<code>0.5 em</code> = <code>1 ex</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>1 em</code> = <code>14 px</code></li>
+<li><code>12 pt</code> = <code>1 pc</code></li>
+<li><code>72 pt</code> = <code>1 in</code> is only correct in classic mac, as the monitor have different ppi (pt per in).<ul>
+<li>Don’t assume OS can convert <code>pt</code> to accurate length on monitor, it is the reason to avoid <code>pt</code>.</li>
+</ul>
+</li>
+<li><code>in</code> is a reliable unit</li>
+<li>Absolute unit (in, cm, mm) is more useful in <code>print</code> media</li>
+<li><code>px</code> may scale when print, so it is defined as relative unit</li>
+<li><code>ex</code> is not commonly used, use <code>em</code> or <code>px</code> is better</li>
+</ul>
+<h3 id="List-of-value"><a href="#List-of-value" class="headerlink" title="List of value"></a>List of value</h3><ul>
+<li>number</li>
+<li>color</li>
+<li>uri</li>
+<li>keyword</li>
+<li>angle (deg, grad, rad)</li>
+<li>time</li>
+<li>frequency</li>
+</ul>
+<h2 id="5-Fonts"><a href="#5-Fonts" class="headerlink" title="5 Fonts"></a>5 Fonts</h2><ul>
+<li>Don’t forget provide fallback for font family</li>
+<li>Use quotation mark as font family may have special characters</li>
+<li>Fonts have variant<ul>
+<li>Example: Zurich Bold, Zurich Black, Zurich UltraBlack, Zurich Light, and Zurich Regular</li>
+<li><code>font-weight</code> is using different font variant</li>
+<li><code>font-weight</code> to font variant conversion is complex, check the book if needed.</li>
+</ul>
+</li>
+<li>lighter / bolder is relative value<ul>
+<li>Increase / decrease <code>font-weight</code> inherit by parent</li>
+</ul>
+</li>
+<li>Font size is the size of em box<ul>
+<li>From baseline to extra leading</li>
+<li>Font size is not size of any characters</li>
+</ul>
+</li>
+<li>There absolutive and relative font size value keywords<ul>
+<li>Absolute keywords: (increase or decrease by a constant factor for each keywords)</li>
+<li>Relative keywords: (larger / smaller) same factor as absolute keywords<ul>
+<li>Relative keywords in font size and weight is useful when define style of tags like <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Percentage value in font-size is effectively cumulative<ul>
+<li>PS: Round off to integer</li>
+</ul>
+</li>
+<li>Small caps font variant<ul>
+<li>Instead of upper and lowercase letters, a small-caps font employs uppercase letters of different sizes.</li>
+</ul>
+</li>
+<li><code>font-stretch</code> and <code>font-size-adjust</code> are not implemented</li>
+</ul>
+<h3 id="System-fonts"><a href="#System-fonts" class="headerlink" title="System fonts"></a>System fonts</h3><p>These are used to take the font size, family, weight, style, and variant of elements of the operating system, and apply them to an element.</p>
+<ul>
+<li>caption</li>
+<li>icon</li>
+<li>menu</li>
+<li>message-box</li>
+<li>small-caption</li>
+<li>status-bar</li>
+</ul>
+<h3 id="Font-synthesis"><a href="#Font-synthesis" class="headerlink" title="Font synthesis"></a>Font synthesis</h3><p>From <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-synthesis" target="_blank" rel="noopener">MDN</a>, <code>font-synthesis</code> control the generaton of missing typefaces</p>
+<h2 id="6-Text-Properties"><a href="#6-Text-Properties" class="headerlink" title="6 Text Properties"></a>6 Text Properties</h2><ul>
+<li><p><code>text-indent</code></p>
+<ul>
+<li>Only works on block level elements. Use padding in inline elements</li>
+<li>Percentage is relative to the parent’s width</li>
+<li>Always inherited the computed value, not declared value</li>
+</ul>
+</li>
+<li><p><code>text-align</code> can be ugly when</p>
+<ul>
+<li>the container is too narrow</li>
+<li>the word are too long (can use hyphenation)</li>
+</ul>
+</li>
+<li><p><code>line-height</code></p>
+<ul>
+<li>The line will be short when the children have a larger font size</li>
+<li>Use factors (number without value) to overcome inheritances problem<ul>
+<li>Because the value is relative to font size</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>vertical-align</code> does not work on block elements</p>
+<ul>
+<li>We can use it to align <code>inline-block</code> and <code>inline</code> elements</li>
+</ul>
+</li>
+<li><p><code>text-decoration</code> is not inherited, but the decoration is still appear in children (it is from parent, not children’s decoration)</p>
+<ul>
+<li>To remove the children’s decoration, use text-decoration: none;<ul>
+<li>In other elements, we use <code>initial</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="White-space"><a href="#White-space" class="headerlink" title="White space"></a>White space</h3><ul>
+<li>pre: keep all, no auto line wrapping (no line break unless there are new line character)</li>
+<li>pre-wrap: keep all space, and line wrap normally</li>
+<li>pre-line: collapse the space within the same line, and line wrap normally</li>
+</ul>
+<h3 id="Text-direction"><a href="#Text-direction" class="headerlink" title="Text direction"></a>Text direction</h3><p><code>direction</code> affects the writing direction of text in a block-level element, the direction of table column layout, the direction in which content horizontally overflows its element box, and the position of the last line of a fully justified element.<br>For inline elements, direction applies only if the property unicode-bidi is set to either embed or bidi-override.<br>For top to bottom language, CSS 3 have writing mode</p>
+<h2 id="7-Basic-Visual-Formatting"><a href="#7-Basic-Visual-Formatting" class="headerlink" title="7 Basic Visual Formatting"></a>7 Basic Visual Formatting</h2><ul>
+<li>margin can be negative, but size, padding and border cannot be negative</li>
+<li>The computed value of percentage size is taken as the height of the containing block-level</li>
+<li>Size <code>auto</code> is the minimum size that contain the whole content</li>
+</ul>
+<h3 id="Collapsing-margin"><a href="#Collapsing-margin" class="headerlink" title="Collapsing margin"></a>Collapsing margin</h3><p>Only vertical will collapse. not horizontal margins. For other case, refer to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">MDN</a>.</p>
+<ul>
+<li>anonymous text<ul>
+<li>the texts in inline elements but don’t inside the nested inline element</li>
+</ul>
+</li>
+<li>em box</li>
+<li>inline box</li>
+<li>content area</li>
+<li>leading<ul>
+<li>height of the box = line-height (box of one line)</li>
+</ul>
+</li>
+<li>line box<ul>
+<li>shortest box bounds the highest and the lowest points of inline boxes (multi line inline box)</li>
+</ul>
+</li>
+<li>percentage value of vertical-align take value from line-height<ul>
+<li>Because vertical-align is align in line level, not block level</li>
+</ul>
+</li>
+<li>Line in the same block can have different computed value of line-height, if we use number without unit<ul>
+<li>It is computed base on height of elements in each line.</li>
+</ul>
+</li>
+<li>Characters are usually smaller than their em boxes<ul>
+<li>But cursives fonts usually have character glyphs larger than their em boxes.</li>
+</ul>
+</li>
+<li>Adding padding and borders does not affect the height of the inline box</li>
+<li>Margin top and bottom does not apply to inline non-replaced elements</li>
+<li>Inline replaced element is align to baseline<ul>
+<li>which may create a gap which is half leading</li>
+</ul>
+</li>
+<li>Computed value of display can change if an element is floated or positioned.</li>
+</ul>
+<h2 id="8-Padding-Borders-and-Margins"><a href="#8-Padding-Borders-and-Margins" class="headerlink" title="8 Padding, Borders and Margins"></a>8 Padding, Borders and Margins</h2><ul>
+<li>Percentage margin depends on parent’s width, even margin-top and margin-bottom<ul>
+<li>If margin-top and margin-bottom depends on parent’s height, there will be infinite loop</li>
+<li>The treatment of percentage values for top and bottom margins is different for positioned elements<ul>
+<li>I guess it is because the size of element does not depends on parent anymore</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Margin top and bottom does not work in inline element<ul>
+<li>Only line height, font size and vertical align can change the distance between lines</li>
+</ul>
+</li>
+<li>Default border value<ul>
+<li>border: none</li>
+<li>weight: medium</li>
+<li>color: foreground color</li>
+</ul>
+</li>
+<li>In CSS 2.1, the element’s background is the background of the content, padding, and border areas.</li>
+<li>Border cannot have percentage value</li>
+</ul>
+<h2 id="9-Colors-and-Backgrounds"><a href="#9-Colors-and-Backgrounds" class="headerlink" title="9 Colors and Backgrounds"></a>9 Colors and Backgrounds</h2><ul>
+<li><code>color</code> properties also change border color of elements if <code>border-color</code> is not set.</li>
+<li>Many form elements have border by default.</li>
+<li>Foreground color can be inherited, but not background.</li>
+<li><code>transparent</code> is a color keyword</li>
+</ul>
+<ul>
+<li>Background image with background color<ul>
+<li>Serve as fallback when image fail to load</li>
+<li>Some image have alpha value<ul>
+<li>Background image is on top of background color<ul>
+<li>Need some extra CSS to set up image overlay</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The background image-placement context in CSS 2 and 2.1 is the inner border edge</li>
+<li><code>background-attachment</code> attaches image to viewport</li>
+</ul>
+<h3 id="Class-naming"><a href="#Class-naming" class="headerlink" title="Class naming"></a>Class naming</h3><p>It’s actually better to pick class names that describe the type of information contained within, not the visual effect you’re trying to achieve. It’s preferable to pick a class name which actually mean something and, more importantly, are independent of any presentational concepts. So we don’t need to rename if we want to change the visual effect</p>
+<h2 id="10-Floating-and-Positioning"><a href="#10-Floating-and-Positioning" class="headerlink" title="10 Floating and Positioning"></a>10 Floating and Positioning</h2><h3 id="Float"><a href="#Float" class="headerlink" title="Float"></a>Float</h3><ul>
+<li>Float will convert the element to <code>display: block</code></li>
+<li>Negative margin can make a float element higher than parent</li>
+<li>when the element is larger than parent it will overflow</li>
+<li>An inline box that overlaps with a float has its borders, background, and content all rendered “on top” of the float.</li>
+<li>A block box that overlaps with a float has its borders and background rendered “behind” the float, whereas its content is rendered “on top” of the float.</li>
+<li>PS: the overlap behavior is independent of source order</li>
+<li>Clearance is extra spacing added above an element’s top margin to push it past any floated elements</li>
+<li>(percentage) max/min size is useful when use with float elements</li>
+</ul>
+<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><ul>
+<li>Beside overflow hidden, we can clip the content by <code>clip</code></li>
+<li>Clip can have negative value (use with overflow hidden?)<ul>
+<li>But the browser implementation is not consistent</li>
+</ul>
+</li>
+<li><code>top: auto;</code> does not align the absolute positioned block vertical center<ul>
+<li>It is used to reset the <code>top</code> property</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-Table-Layout"><a href="#11-Table-Layout" class="headerlink" title="11 Table Layout"></a>11 Table Layout</h2><ul>
+<li>It is impossible to give table cell margin (browser will ignore them)</li>
+<li>The position of first table column depends on language direction</li>
+<li>The CSS specification discourages, but does not prohibit, the positioning of table cells and other internal table elements.</li>
+<li>Table header and footer will be repeated in printed version, if the whole table is not fit in one page</li>
+<li>CSS table layout pick the “row primacy” principle:<ul>
+<li>User explicitly define row, the browser find the column by calculation (we use <code>tr</code> but no <code>col</code> in table)</li>
+<li>In another words, it is row-oriented</li>
+</ul>
+</li>
+<li>Anonymous table object - table with missing cell<ul>
+<li>Browser will insert the missing cell automatically</li>
+</ul>
+</li>
+<li>Table layer<ul>
+<li>Table elements: cell, row, row groups, columns, columns, table</li>
+</ul>
+</li>
+<li>Table style will be drawn first</li>
+<li>Border spacing = cell margin</li>
+<li><code>empty-cell: hidden;</code> make browser set empty cell to <code>display: none;</code></li>
+</ul>
+<h3 id="table-layout"><a href="#table-layout" class="headerlink" title="table-layout"></a>table-layout</h3><ul>
+<li><code>auto</code>: the table size is depends on the content</li>
+<li><code>fixed</code>: the table size is defined by the first row<ul>
+<li><code>fixed</code> layout is fast to render, no need to go through all content</li>
+</ul>
+</li>
+<li>Vertical align content in table center is easy, can use vertical align directly</li>
+<li><code>vertical-align</code> will make browser ignore <code>sub</code>, <code>super</code>, <code>text-top</code>, and <code>text-bottom</code> when applied to table cells</li>
+<li>Table layout can cause text wrap problem<ul>
+<li><code>fixed</code> vs <code>auto</code>?</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-List-and-Generated-Content"><a href="#12-List-and-Generated-Content" class="headerlink" title="12 List and Generated Content"></a>12 List and Generated Content</h2><p>CSS does not define the behavior of nonnumeric counting styles for negative counter</p>
+<h2 id="13-User-Interface-Styles"><a href="#13-User-Interface-Styles" class="headerlink" title="13 User Interface Styles"></a>13 User Interface Styles</h2><ul>
+<li>There are default system style:<ul>
+<li>font</li>
+<li>color</li>
+<li>cursor<ul>
+<li>can have graphic cursor</li>
+</ul>
+</li>
+<li>outline</li>
+</ul>
+</li>
+</ul>
+<h2 id="14-Non-Screen-Media"><a href="#14-Non-Screen-Media" class="headerlink" title="14 Non-Screen Media"></a>14 Non-Screen Media</h2><h3 id="Print-version"><a href="#Print-version" class="headerlink" title="Print version"></a>Print version</h3><ul>
+<li>Some suggested style to apply to printed version<ul>
+<li>Overwrite background and font color</li>
+<li>No float and no column (width: auto)</li>
+<li>Position element out side the page is not a good solution to avoid rendering<ul>
+<li>Because this produce lots of blank page in printed version</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some style for paged media<ul>
+<li><code>page-break-[before|after|inside]</code> prevent page break insert to the elements</li>
+<li><code>widow</code> and <code>orphan</code>: min number of word when having a new page</li>
+<li>There are detail page break rules explained in the book</li>
+</ul>
+</li>
+<li>running head: item appear in every page<ul>
+<li>use position fixed to implement running head</li>
+</ul>
+</li>
+</ul>
+<h3 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h3><p>Not implemented by many browser</p>
+<h3 id="Speaker"><a href="#Speaker" class="headerlink" title="Speaker"></a>Speaker</h3><p>The book mentions styles in CSS2. The CSS3 specification is not finalised.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/css-the-definitive-guide-3rd-edition/" data-id="cjjyfjesi0006h565xvcxrgxj" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/css-the-definitive-guide-3rd-edition/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/diary/using-redux-in-backend/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Using Redux in server-side
+        
+      </div>
+    </a>
+  
+  
+    <a href="/diary/npm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">npm</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/agile/" style="font-size: 12.73px;">Agile</a> <a href="/tags/architecture/" style="font-size: 15.45px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 12.73px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10.91px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 11.82px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 12.73px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 17.27px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 13.64px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 16.36px;">Management</a> <a href="/tags/network/" style="font-size: 10.91px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 10.91px;">Opensource</a> <a href="/tags/philosophy/" style="font-size: 13.64px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 14.55px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 10.91px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/像心理學家一樣思考-立即扭轉劣勢的77個思考技巧/">像心理學家一樣思考：立即扭轉劣勢的77個思考技巧</a>
+          </li>
+        
+          <li>
+            <a href="/review/eyes-wide-open-how-to-make-smart-decisions-in-a-confusing-world/">老虎、蛇和牧羊人的背後：如何在大數據時代破解網路騙局與專家迷思，善用個人力量做出聰明決定</a>
+          </li>
+        
+          <li>
+            <a href="/review/人生潛規則-20幾歲就該知道/">人生潛規則，20幾歲就該知道</a>
+          </li>
+        
+          <li>
+            <a href="/review/domain-driven-design-tackling-complexity-in-the-heart-of-software/">Domain-Driven Design - Tackling Complexity in the Heart of Software</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/commentaries-34/">簡評三十四</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/review/css-the-definitive-guide-3rd-edition/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
