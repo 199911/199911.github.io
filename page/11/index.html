@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Do the right thing, Wait to get fired</title>
+  <title>Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Do the right thing, Wait to get fired">
+<meta property="og:title" content="Change, Adapt, Survival">
 <meta property="og:url" content="http://199911.github.io/page/11/index.html">
-<meta property="og:site_name" content="Do the right thing, Wait to get fired">
+<meta property="og:site_name" content="Change, Adapt, Survival">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Do the right thing, Wait to get fired">
+<meta name="twitter:title" content="Change, Adapt, Survival">
   
-    <link rel="alternate" href="/atom.xml" title="Do the right thing, Wait to get fired" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -32,7 +32,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Do the right thing, Wait to get fired</a>
+        <a href="/" id="logo">Change, Adapt, Survival</a>
       </h1>
       
     </div>
@@ -61,6 +61,413 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-bootstrap-3-learning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/bootstrap-3-learning/" class="article-date">
+  <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">2016-09-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code-review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/bootstrap-3-learning/">Learning from Bootstrap 3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Reset-script"><a href="#Reset-script" class="headerlink" title="Reset script"></a>Reset script</h2><p>Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, <code>normalize.less</code> reset the CSS.</p>
+<h2 id="HTML-accessibility"><a href="#HTML-accessibility" class="headerlink" title="HTML accessibility"></a>HTML accessibility</h2><p>Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide <code>.sr-only</code> and <code>.sr-only-focusable</code> to show content to screen reader without affecting the visual content. <code>.sr-only-focusable</code> appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like <code>aria-label</code> for accessibility.</p>
+<h2 id="LESS-function"><a href="#LESS-function" class="headerlink" title="LESS function"></a>LESS function</h2><p>In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like <code>.mixin()</code>. This may create some code like <code>.mixin { .mixin() }</code>. It looks redundant, but it is good in design, as the interface and implementation are separated.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/bootstrap-3-learning/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/bootstrap-3-learning/" data-id="cjcdhdmko0004je659bqnzh2w" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/bootstrap-3-learning/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bootstrap-3-mixins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/bootstrap-3-mixins/" class="article-date">
+  <time datetime="2016-08-27T16:00:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code-review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/bootstrap-3-mixins/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/bootstrap-3-mixins/" data-id="cjcdhdmku0009je65lvfjlgez" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/bootstrap-3-mixins/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/bootstrap-3-variables/" class="article-date">
+  <time datetime="2016-08-26T16:00:00.000Z" itemprop="datePublished">2016-08-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code-review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/bootstrap-3-variables/">Implementation of Bootstrap 3 - variables.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>variable.less</code> is the first files to be imported in the entry point of Bootstrap 3 LESS. It declare all variables.</p>
+<p>This design of <code>variable.less</code> against the rule of thumb that variable should be declare on use. But after considering the design principle of Bootstrap 3, <code>variables.less</code> is a good design. Let’s discuss why this design is bad at the first glance.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/bootstrap-3-variables/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/bootstrap-3-variables/" data-id="cjcdhdmkv000cje65m7kjsvjh" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/bootstrap-3-variables/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-the-mythical-man-month-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/book-review/the-mythical-man-month-3/" class="article-date">
+  <time datetime="2016-08-20T16:00:00.000Z" itemprop="datePublished">2016-08-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/book-review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/book-review/the-mythical-man-month-3/">Review of &#34;the mythical man month&#34; chapter 3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>We always heard a small, sharp team of first-class people is better than a big team, but it is difficult to scale. What should we do when a big product need to be built?</p>
+<h2 id="The-surgical-team"><a href="#The-surgical-team" class="headerlink" title="The surgical team"></a>The surgical team</h2><p>The book suggest a surgical team like structure to reduce the communication cost. Only one member cutting away on the problem and other teammates give support to him.</p>
+<h3 id="Surgeon"><a href="#Surgeon" class="headerlink" title="Surgeon"></a>Surgeon</h3><ul>
+<li>Chief programmer</li>
+<li>Define functional and performance specification</li>
+<li>Design, code and test program</li>
+<li>Write documentation</li>
+<li>Responsible for all codes</li>
+</ul>
+<h3 id="Copilot"><a href="#Copilot" class="headerlink" title="Copilot"></a>Copilot</h3><ul>
+<li>Able to do what ‘surgeon’ do</li>
+<li>Prevent ‘surgeon’ to make mistake<ul>
+<li>Discuss and evaluate idea and design with ‘surgeon’</li>
+<li>Reseach alternative design strategies</li>
+</ul>
+</li>
+<li>Discuss the functional interface with other teams</li>
+<li>Know all the code</li>
+<li>May write code, but he is not responsible for any part of the code</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/book-review/the-mythical-man-month-3/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/book-review/the-mythical-man-month-3/" data-id="cjcdhdmnj0033je65hq7rfdal" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/book-review/the-mythical-man-month-3/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-the-mythical-man-month-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/book-review/the-mythical-man-month-2/" class="article-date">
+  <time datetime="2016-08-19T16:00:00.000Z" itemprop="datePublished">2016-08-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/book-review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/book-review/the-mythical-man-month-2/">Review of &#34;the mythical man month&#34; chapter 2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Why it is difficult to estimate the time cost of a software project?</p>
+<h2 id="Five-reasons"><a href="#Five-reasons" class="headerlink" title="Five reasons"></a>Five reasons</h2><ol>
+<li>Programmers are optimist, tends to underestimate the time cost.</li>
+<li>Having assumption that man and months are interchangeable.</li>
+<li>Software managers have less inherent courage and firmness.</li>
+<li>Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.</li>
+<li>When the schedule is lagged behind, more man power is added, which make the situation delay worser.</li>
+</ol>
+<h3 id="Why-programmers-are-optimist"><a href="#Why-programmers-are-optimist" class="headerlink" title="Why programmers are optimist?"></a>Why programmers are optimist?</h3><p>The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.</p>
+        
+          <p class="article-more-link">
+            <a href="/book-review/the-mythical-man-month-2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/book-review/the-mythical-man-month-2/" data-id="cjcdhdmni0031je654z7zr6ij" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/book-review/the-mythical-man-month-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-9" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-9/" class="article-date">
+  <time datetime="2016-08-19T16:00:00.000Z" itemprop="datePublished">2016-08-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-9/">簡評九</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="我现在有一些工具类，我应该不应该做自己的框架？"><a href="#我现在有一些工具类，我应该不应该做自己的框架？" class="headerlink" title="我现在有一些工具类，我应该不应该做自己的框架？"></a><a href="http://www.cnblogs.com/guaiguai/archive/2011/01/28/1946977.html" target="_blank" rel="noopener">我现在有一些工具类，我应该不应该做自己的框架？</a></h2><p>如果有唔可以拋棄嘅assumption，咁就可以design做一個framework，否則應該design做一個library。</p>
+<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
+<li>Framework：易setup，生態圈多數會有多D tools，可以增加productivity</li>
+<li>Library：彈性，易migrate同upgrade，如果design得好，component reusability仲大</li>
+</ul>
+<h2 id="编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续"><a href="#编码-charset-乱码-unicode-utf-8与net简单释义-编码-charset-乱码-unicode-utf-8与net简单释义-续" class="headerlink" title="编码,charset,乱码,unicode,utf-8与net简单释义 编码,charset,乱码,unicode,utf-8与net简单释义(续)"></a><a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449588.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义</a> <a href="http://www.cnblogs.com/tsoukw/archive/2006/07/13/449861.html" target="_blank" rel="noopener">编码,charset,乱码,unicode,utf-8与net简单释义(续)</a></h2><p>係variable length嘅string encoding，係用prefix決定之後讀幾多多個byte。<br>用一個no width space (0xFEFF) 去indicate big endian 定係 small endian</p>
+<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>唔洗重睇，<a href="https://dmitripavlutin.com/what-every-javascript-developer-should-know-about-unicode/" target="_blank" rel="noopener">What every JavaScript developer should know about Unicode</a> 寫得更好。</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-9/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-9/" data-id="cj9covaoj002g6m65nm9arjk9" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-9/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-8" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-8/" class="article-date">
+  <time datetime="2016-08-06T16:00:00.000Z" itemprop="datePublished">2016-08-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-8/">簡評八</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="勿在沙浮筑高台-再论社区风格"><a href="#勿在沙浮筑高台-再论社区风格" class="headerlink" title="勿在沙浮筑高台, 再论社区风格"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/09/26/907112.html" target="_blank" rel="noopener">勿在沙浮筑高台, 再论社区风格</a></h2><blockquote>
+<p>过去有前辈跟我说, 学好数学就要学好数学史, 学好哲学就要学好哲学史. 为什么? 因为这反映的是人类思维的变化与进步.</p>
+</blockquote>
+<p>相當同意，歷史可以令我地明白有咩問題要解決，同埋當時嘅問題點樣解決，後人點樣improve 個solution。單睇solution唔能夠理解解決問題嘅思路。透過了解思維嘅轉變，可以對問題有更深入嘅了解。</p>
+<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>係學webpack 同 React-redux嘅時間，UMD 同 MVC 嘅演變歷史對我有好大嘅幫助，易上手好多。篇文係俾作者用黎發洩對討論區風氣嘅不滿，冇必要重讀。</p>
+<h2 id="闲谈-就那么回事"><a href="#闲谈-就那么回事" class="headerlink" title="闲谈: 就那么回事"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/04/948657.html" target="_blank" rel="noopener">闲谈: 就那么回事</a></h2><p>當中對ORM嘅批評，可以係了解後再思考一下。</p>
+<h3 id="15-May-2018-1"><a href="#15-May-2018-1" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>文中對ORM嘅分析唔多，重點如下，唔洗重讀：</p>
+<ul>
+<li>簡單將database logic 包做Object，由於太過generate，未必solve到OO真正想solve嘅問題</li>
+<li>ORM嘅能力較弱，當中logic比較複雜時，往往唔可以用ORM黎解決，都係要自己寫query</li>
+</ul>
+<h2 id="零碎-学习-技术明星-面向对象"><a href="#零碎-学习-技术明星-面向对象" class="headerlink" title="零碎: 学习, 技术明星, 面向对象"></a><a href="http://www.cnblogs.com/guaiguai/archive/2007/11/17/962869.html" target="_blank" rel="noopener">零碎: 学习, 技术明星, 面向对象</a></h2><p>文中討論左好多Design Pattern點拆，D logic要分到幾細，又有好多唔同嘅situation，又有唔同嘅做法。大家都想用logic同數學去建立一D規則。我覺得當中有一個盲點，就係忽略左「人」E樣野。所謂 spaghetti code 都難免係主觀嘅，個重點可能唔係D logic有幾複雜，而係「人」點樣去接收，點樣去理解D logic。每個requirement都係特別，每個 business 嘅變化都唔同，根本好難去建立一D廣乏應用嘅規則。反而用一D寫文章，communication嘅concept去寫code，似乎會更易maintain。</p>
+<h3 id="15-May-2018-2"><a href="#15-May-2018-2" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
+<li>追technology可以係好花時間，作用又唔大，應該將時間放係：<ul>
+<li>深入鑽研，理解出黎一D更精煉嘅principle</li>
+<li>強化學習能力</li>
+</ul>
+</li>
+<li>寫code嘅原則<ul>
+<li>唔應該諗太長遠嘅野，個problem 更易solve<ul>
+<li>諗太多reusability同extensibility好易會over engineering</li>
+</ul>
+</li>
+<li>當一D sub-problem己經完成，用sub-problem嘅solution嘅interface去solve個大problem<ul>
+<li>Train abstraction嘅能力</li>
+<li>寫spec同pseudocode咁去練好似仲更加有效</li>
+</ul>
+</li>
+<li>Encapsulate左唔變嘅野，剩返D野係成日會變嘅野，比起要直接封裝changes容易得多</li>
+<li>拆出黎嘅sub problem大小要適中<ul>
+<li>更易identify patterns</li>
+<li>同architecture嘅layering 差唔多concept</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-8/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-8/" data-id="cj9covaog002e6m654os898qc" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-8/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">Testing</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-commentaries-7" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -239,352 +646,6 @@
 
 
   
-    <article id="post-singleton" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/singleton/" class="article-date">
-  <time datetime="2016-07-03T16:00:00.000Z" itemprop="datePublished">2016-07-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/singleton/">Avoiding Singleton Abuse</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The singleton mentioned here is Singleton Design Pattern</p>
-<ul>
-<li>Private constructor</li>
-<li>Global referal to the instace</li>
-</ul>
-<h3 id="Singleton-is-global-variable"><a href="#Singleton-is-global-variable" class="headerlink" title="Singleton is global variable"></a>Singleton is global variable</h3><p>The singleton instance can be access in every where. Actually, singleton instance is a group of global variables and methods. If we use singleton instance incorrectly, it will bring the problems from global vairables.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/singleton/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/singleton/" data-id="cjcdhdmnb002kje65qx59y9zw" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/singleton/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article-review/">Article review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-4" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-4/" class="article-date">
-  <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-4/">簡評四</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/" target="_blank" rel="noopener">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
-<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton</p>
-<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/" target="_blank" rel="noopener">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
-<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/" target="_blank" rel="noopener">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-4/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-4/" data-id="cj9covao600266m65or5xflj2" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-4/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">Objective C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-3" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-3/" class="article-date">
-  <time datetime="2016-07-01T16:00:00.000Z" itemprop="datePublished">2016-07-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-3/">[封存]簡評三</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Sort from highest value</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-3/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-3/" data-id="cj9covao400246m65x8twero5" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-3/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">Objective C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-2/" class="article-date">
-  <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-2/">[封存]簡評二</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Sorted article value</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-2/" data-id="cjlc7yfrh000g9x65oqw0ibbn" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-objc-interface-design" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/objc-interface-design/" class="article-date">
-  <time datetime="2016-06-25T16:00:00.000Z" itemprop="datePublished">2016-06-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/objc-interface-design/">&#34;objc@interface的设计哲学与设计技巧&#34;感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者係文中比較java同objective C 嘅 OO。Objective C 嘅pattern係比較嚴格，可以由當中學到一D OOP嘅good practise.</p>
-<p>Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object function，作者係文中提及點樣可以做到E幾個keyword嘅效果。由於Objective C 歷史較長，佢冇E D keyword唔係因為佢design得唔好，可能係調返轉，果D keyword係由Objective C 啟發出來。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/objc-interface-design/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/objc-interface-design/" data-id="cjh7w8w5w000345650g1p4u3t" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/objc-interface-design/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">Objective C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-observer-pattern-and-mvc" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/diary/observer-pattern-and-mvc/" class="article-date">
-  <time datetime="2016-06-23T16:00:00.000Z" itemprop="datePublished">2016-06-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/diary/observer-pattern-and-mvc/">Observer pattern and MVC</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>@thwonghenry refactor the javascript of an inhouse plugin and I am the one who review his code. He apply the observer pattern and we have some discussion on it.</p>
-        
-          <p class="article-more-link">
-            <a href="/diary/observer-pattern-and-mvc/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/diary/observer-pattern-and-mvc/" data-id="cjjyfjetr000wh565grflprq8" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/diary/observer-pattern-and-mvc/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-1/" class="article-date">
-  <time datetime="2016-06-18T16:00:00.000Z" itemprop="datePublished">2016-06-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-1/">[封存]簡評一</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日睇左一堆文，冇咩心機每篇都仔細去諗，寫一份感想。但係又有好多零碎嘅 insight，因些放曬係度，等得閒果時再睇返。<br>Sorted article value</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-1/" data-id="cjlc7yfre000f9x65poo5g2lo" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -629,7 +690,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -642,23 +703,23 @@
       <ul>
         
           <li>
-            <a href="/review/像心理學家一樣思考-立即扭轉劣勢的77個思考技巧/">像心理學家一樣思考：立即扭轉劣勢的77個思考技巧</a>
+            <a href="/review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
           </li>
         
           <li>
-            <a href="/review/eyes-wide-open-how-to-make-smart-decisions-in-a-confusing-world/">老虎、蛇和牧羊人的背後：如何在大數據時代破解網路騙局與專家迷思，善用個人力量做出聰明決定</a>
+            <a href="/review/the-power-of-less/">少做一點不會死!</a>
           </li>
         
           <li>
-            <a href="/review/人生潛規則-20幾歲就該知道/">人生潛規則，20幾歲就該知道</a>
+            <a href="/commentary/commentaries-37/">簡評三十六</a>
           </li>
         
           <li>
-            <a href="/review/domain-driven-design-tackling-complexity-in-the-heart-of-software/">Domain-Driven Design - Tackling Complexity in the Heart of Software</a>
+            <a href="/review/好員工才難帶/">好員工才難帶</a>
           </li>
         
           <li>
-            <a href="/commentary/commentaries-34/">簡評三十四</a>
+            <a href="/review/freakonomics/">蘋果橘子經濟學</a>
           </li>
         
       </ul>
