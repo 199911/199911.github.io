@@ -3,20 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>The Clean Code Talks -- Unit Testing | Change, Adapt, Survival</title>
+  <title>Archives: 2018 | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="The Clean Code Talks – Unit TestingWriting testable code is more important than writing good tests If the code is difficult to overwrite, then it will be difficult to test  Main method in procedural p">
-<meta name="keywords" content="Video review">
-<meta property="og:type" content="article">
-<meta property="og:title" content="The Clean Code Talks -- Unit Testing">
-<meta property="og:url" content="http://199911.github.io/Review/the-clean-code-talks-unit-testing/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Change, Adapt, Survival">
+<meta property="og:url" content="http://199911.github.io/archives/2018/page/7/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:description" content="The Clean Code Talks – Unit TestingWriting testable code is more important than writing good tests If the code is difficult to overwrite, then it will be difficult to test  Main method in procedural p">
-<meta property="og:locale" content="review">
-<meta property="og:updated_time" content="2018-01-11T11:29:14.956Z">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Clean Code Talks -- Unit Testing">
-<meta name="twitter:description" content="The Clean Code Talks – Unit TestingWriting testable code is more important than writing good tests If the code is difficult to overwrite, then it will be difficult to test  Main method in procedural p">
+<meta name="twitter:title" content="Change, Adapt, Survival">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -65,170 +60,46 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-the-clean-code-talks-unit-testing" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Review/the-clean-code-talks-unit-testing/" class="article-date">
-  <time datetime="2018-01-09T16:00:00.000Z" itemprop="datePublished">2018-01-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      The Clean Code Talks -- Unit Testing
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/Review/advantage-of-introverts/" class="archive-article-date">
+  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">Jan 1</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/Review/advantage-of-introverts/">內向者的優勢：安靜的人如何展現你的存在，並讓別人聽你的</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="The-Clean-Code-Talks-–-Unit-Testing"><a href="#The-Clean-Code-Talks-–-Unit-Testing" class="headerlink" title="The Clean Code Talks – Unit Testing"></a><a href="https://www.youtube.com/watch?v=wEhu57pih5w" target="_blank" rel="external">The Clean Code Talks – Unit Testing</a></h1><h2 id="Writing-testable-code-is-more-important-than-writing-good-tests"><a href="#Writing-testable-code-is-more-important-than-writing-good-tests" class="headerlink" title="Writing testable code is more important than writing good tests"></a>Writing testable code is more important than writing good tests</h2><ul>
-<li><p>If the code is difficult to overwrite, then it will be difficult to test</p>
-<ol>
-<li>Main method in procedural program or static method in object oriented code is difficult to test<ul>
-<li>The dependency in main program cannot be mock</li>
-</ul>
-</li>
-<li>Deep inheritance<ul>
-<li>The parent class cannot be mock, need to test all inheritance<br>Purely procedural is hard to test, because it is difficult to isolate the logic. Procedual code difficult to overwrite.<br>E.g main method is difficult to test</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>Unit test should be done by the same developer</p>
-<ul>
-<li>Test engineer is difficult to write good test on untestable code</li>
-<li>Developer cannot get feedback on untestable code if they don’t write tests</li>
-</ul>
-</li>
-<li>Writing testable code &gt; writing good test</li>
-</ul>
-<a id="more"></a>
-<h2 id="Different-test-level"><a href="#Different-test-level" class="headerlink" title="Different test level"></a>Different test level</h2><ul>
-<li>Scenario test<ul>
-<li>Simulate what user does</li>
-<li>Whole system is involved in every tests.</li>
-<li>Pros:<ul>
-<li>It test exactly how user use the system</li>
-<li>High coverage with few tests, as whole system is involved</li>
-</ul>
-</li>
-<li>Cons:<ul>
-<li>Don’t know which part is buggy when test failed</li>
-<li>Difficult to reproduce failures</li>
-<li>Difficult to get corner case</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Functional test<ul>
-<li>Test a sub-system with simulators for external dependecies</li>
-<li>Focus on class-interaction</li>
-<li>Pros:<ul>
-<li>Tests are short enough to run before developers submit code</li>
-<li>Can simulate condition not possible in scenario tests</li>
-</ul>
-</li>
-<li>Cons:<ul>
-<li>Still need debugger to figure what went wrong</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Unit tests<ul>
-<li>Test indiviual classes in isolation</li>
-<li><h1 id="of-line-of-unit-test-of-line-of-code"><a href="#of-line-of-unit-test-of-line-of-code" class="headerlink" title="of line of unit test ~= # of line of code"></a>of line of unit test ~= # of line of code</h1></li>
-<li>Pros:<ul>
-<li>Can simulate all error conditions</li>
-<li>Can run after each file modification</li>
-<li>Test can figure out what went wrong</li>
-</ul>
-</li>
-<li>Cons:<ul>
-<li>Need to write a lot of unit tests</li>
-<li>Cannot make sure class interaction ok</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>All this levels are important. *</li>
-<li>Unit Test is for finding bugs, not for proving it works *</li>
-</ul>
-<h2 id="Dependnecy-injection"><a href="#Dependnecy-injection" class="headerlink" title="Dependnecy injection"></a>Dependnecy injection</h2><ul>
-<li>Dependency create a seam between classes and it depending classes, so we can replace the dependency with mock object ro trusted (tested) object easily.</li>
-<li>Test driver should set up and control all components in the object graph.</li>
-</ul>
-<h2 id="Some-tips"><a href="#Some-tips" class="headerlink" title="Some tips"></a>Some tips</h2><ul>
-<li><code>new()</code> is static and causes direct binding, don’t put logic in it<ul>
-<li>Get depending object in constuctor only</li>
-</ul>
-</li>
-</ul>
-<p>PS: <a href="http://teddy-chen-tw.blogspot.hk/2012/01/3polymorphism.html" target="_blank" rel="external">Polymorphism</a>: 一個訊息嘅意義由接收者去解釋，唔係由發出者去決定。換上唔同嘅接收者，就可以改變system behaviour。有polymorphism，就可以換一D mock object做testing</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/Review/the-clean-code-talks-unit-testing/" data-id="cjcdhdmlx0017je65zhur7m40" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/Review/the-clean-code-talks-unit-testing/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/Review/quirkology/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          怪咖心理學：史上最搞怪的心理學實驗，讓你徹底看穿人心
-        
-      </div>
-    </a>
-  
-  
-    <a href="/Review/deployment-strategies/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Six Strategies for Application Deployment</div>
-    </a>
-  
-</nav>
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Testing -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4208803683107796"
-     data-ad-slot="4489226860"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>  
-  
 </article>
+  
+  
+    </div></section>
+  
 
 
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/archives/2018/page/6/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2018/page/5/">5</a><a class="page-number" href="/archives/2018/page/6/">6</a><span class="page-number current">7</span>
+  </nav>
+
 </section>
         
           <aside id="sidebar">
@@ -329,13 +200,11 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/Review/the-clean-code-talks-unit-testing/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

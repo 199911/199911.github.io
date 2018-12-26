@@ -5,18 +5,18 @@
   
   <title>簡評四 | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
-<meta name="keywords" content="Objective C,Data,Management,Agile">
+  <meta name="description" content="无为无不为1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。2.管理唔等於控制3.唔好做惡意競爭 19 May 2018 每個task無論難易，都係完成團體目標唔可以缺少嘅一部份 唔可以忽視隊友係簡單嘅task上面嘅貢獻 一D簡單嘅task可以起關鍵作用，唔可以因為事小就唔理 要留意返簡單嘅task同low priorty嘅task   現實中無人可以隨心所欲，只可以誘導事情往">
+<meta name="keywords" content="Management,Learning skills,Git,Testing">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評四">
-<meta property="og:url" content="http://199911.github.io/commentary/commentaries-4/index.html">
+<meta property="og:url" content="http://199911.github.io/Commentary/commentaries-4/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
+<meta property="og:description" content="无为无不为1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。2.管理唔等於控制3.唔好做惡意競爭 19 May 2018 每個task無論難易，都係完成團體目標唔可以缺少嘅一部份 唔可以忽視隊友係簡單嘅task上面嘅貢獻 一D簡單嘅task可以起關鍵作用，唔可以因為事小就唔理 要留意返簡單嘅task同low priorty嘅task   現實中無人可以隨心所欲，只可以誘導事情往">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-11-07T15:49:55.324Z">
+<meta property="og:updated_time" content="2018-12-25T17:10:32.072Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評四">
-<meta name="twitter:description" content="避免滥用单例解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data 15 May 2018世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton 写给那些傻傻的，想做服务器开发的应届生中心思想係多反省，多質疑，唔好">
+<meta name="twitter:description" content="无为无不为1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。2.管理唔等於控制3.唔好做惡意競爭 19 May 2018 每個task無論難易，都係完成團體目標唔可以缺少嘅一部份 唔可以忽視隊友係簡單嘅task上面嘅貢獻 一D簡單嘅task可以起關鍵作用，唔可以因為事小就唔理 要留意返簡單嘅task同low priorty嘅task   現實中無人可以隨心所欲，只可以誘導事情往">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -67,12 +67,12 @@
       <div class="outer">
         <section id="main"><article id="post-commentaries-4" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/commentary/commentaries-4/" class="article-date">
-  <time datetime="2016-07-02T16:00:00.000Z" itemprop="datePublished">2016-07-03</time>
+    <a href="/Commentary/commentaries-4/" class="article-date">
+  <time datetime="2016-08-05T16:00:00.000Z" itemprop="datePublished">2016-08-06</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+    <a class="article-category-link" href="/categories/Commentary/">Commentary</a>
   </div>
 
   </div>
@@ -91,59 +91,56 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="避免滥用单例"><a href="#避免滥用单例" class="headerlink" title="避免滥用单例"></a><a href="http://objccn.io/issue-13-2/" target="_blank" rel="noopener">避免滥用单例</a></h2><p>解釋 Singleton Pattern 嘅問題。當中提到一個幾特別嘅 automated test 嘅bug。如果D Test用唔同次序行，個結果會唔同，原因係Singleton cache左D data</p>
-<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>世事難料，好難make sure我地只需要一個Object，冇咩必要用singleton</p>
-<h2 id="写给那些傻傻的，想做服务器开发的应届生"><a href="#写给那些傻傻的，想做服务器开发的应届生" class="headerlink" title="写给那些傻傻的，想做服务器开发的应届生"></a><a href="http://blog.devtang.com/2015/10/07/why-fresh-wants-to-do-server-dev/" target="_blank" rel="noopener">写给那些傻傻的，想做服务器开发的应届生</a></h2><p>中心思想係多反省，多質疑，唔好人云亦云。要了解唔同工作職位嘅性質。</p>
-<h2 id="适合码农工作时玩的游戏：Scrum"><a href="#适合码农工作时玩的游戏：Scrum" class="headerlink" title="适合码农工作时玩的游戏：Scrum"></a><a href="http://blog.devtang.com/2014/09/13/scrum-introduction/" target="_blank" rel="noopener">适合码农工作时玩的游戏：Scrum</a></h2><p>Scrum簡單黎講係一套framework俾全隊人參與決策，鼓勵提出意見，快速 Review 同做 Tuning。</p>
+        <h2 id="无为无不为"><a href="#无为无不为" class="headerlink" title="无为无不为"></a><a href="http://www.cnblogs.com/flying_bat/archive/2004/10/30/58575.html" target="_blank" rel="noopener">无为无不为</a></h2><p>1.管理人員唔等於高人一等，只係代表佢地比較擅長協調同激發其他人潛能。<br>2.管理唔等於控制<br>3.唔好做惡意競爭</p>
+<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><ul>
+<li>每個task無論難易，都係完成團體目標唔可以缺少嘅一部份<ul>
+<li>唔可以忽視隊友係簡單嘅task上面嘅貢獻</li>
+<li>一D簡單嘅task可以起關鍵作用，唔可以因為事小就唔理</li>
+<li>要留意返簡單嘅task同low priorty嘅task</li>
+</ul>
+</li>
+<li>現實中無人可以隨心所欲，只可以誘導事情往自己心想嘅方向發展</li>
+</ul>
 <a id="more"></a>
-<h2 id="我所理解的执行力"><a href="#我所理解的执行力" class="headerlink" title="我所理解的执行力"></a><a href="http://blog.devtang.com/2015/08/15/talk-about-execution/" target="_blank" rel="noopener">我所理解的执行力</a></h2><p>我覺得可以歸納做2點：</p>
-<ul>
-<li>堅持解決問題<ul>
-<li>有時候問題嘅根原唔係咁明顯，往往要花好多時間同精力先解決到，好多時都需要堅持。但係有可以簡單解決嘅技巧，當然要運用。</li>
-</ul>
-</li>
-<li>識補位<ul>
-<li>現實中嘅工作係團隊合作，當隊友有D咩甩漏，一定要補位，諗方法去解決。而要做到E樣野，就要有唔同方面嘅知識同經驗。</li>
-</ul>
-</li>
-</ul>
-<h3 id="15-May-2018-1"><a href="#15-May-2018-1" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
-<li>文中講嘅識補位有4點<ul>
-<li>指導一些能力不足嘅新人</li>
-<li>做一些未明確指定嘅工作</li>
-<li>調查一些意外發生的原因</li>
-<li>完成一些别人忽視的工作</li>
-</ul>
-</li>
-</ul>
-<h2 id="数据的秘密（上）-为什么要关注数据-数据的秘密（下）-如何分析数据"><a href="#数据的秘密（上）-为什么要关注数据-数据的秘密（下）-如何分析数据" class="headerlink" title="数据的秘密（上）- 为什么要关注数据 数据的秘密（下）- 如何分析数据"></a><a href="http://blog.devtang.com/2015/09/02/why-we-need-monitor-data/" target="_blank" rel="noopener">数据的秘密（上）- 为什么要关注数据</a> <a href="http://blog.devtang.com/2015/09/03/how-to-monitor-data/" target="_blank" rel="noopener">数据的秘密（下）- 如何分析数据</a></h2><p>Data 己經講同爛。簡單黎講，Data係一種唔可以缺少嘅System Feedback。冇左Data，好難去 debug, optimize 同做 tuning</p>
-<p>比較有意思嘅一點係，Data 要易睇同易分析。好多時係data extract insight，要日復日嘅觀察同多方面嘅分析。如果每日都要搞一大輪野先睇到，好容易會miss左D野。</p>
-<h3 id="15-May-2018-2"><a href="#15-May-2018-2" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><ul>
-<li>Monitor both server and user data</li>
-</ul>
-<p>佢所講嘅道理我都明白，反而係佢講果D事例，有時間值得慢慢研究</p>
-<ul>
-<li>稻盛和夫用數據挽救左日航</li>
-<li>林彪係1948年嘅遼西，透過戰爭嘅日常數據，估到敵方野戰司令部嘅位置，贏得戰事</li>
-</ul>
-<h2 id="应该如何管理密码-我的密码管理心得"><a href="#应该如何管理密码-我的密码管理心得" class="headerlink" title="应该如何管理密码 - 我的密码管理心得"></a><a href="http://blog.devtang.com/2016/04/07/my-password-management-way/" target="_blank" rel="noopener">应该如何管理密码 - 我的密码管理心得</a></h2><p>唔重要嘅account可以直接用third party tool去管理，避免repeated password attack。可以用facebook/google login就用。</p>
-<h3 id="15-May-2018-3"><a href="#15-May-2018-3" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>我都subscribe左1Passwrd</p>
-<h2 id="Javscript-library-detector"><a href="#Javscript-library-detector" class="headerlink" title="Javscript library detector"></a><a href="https://github.com/johnmichel/Library-Detector-for-Chrome" target="_blank" rel="noopener">Javscript library detector</a></h2><p>如題。對分析人地唧網站好有用。</p>
-<h3 id="19-May-2018"><a href="#19-May-2018" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>Don’t need to re-read</p>
-<h2 id="《引爆点》读书心得"><a href="#《引爆点》读书心得" class="headerlink" title="《引爆点》读书心得"></a><a href="http://blog.devtang.com/2015/03/01/tipping-point/" target="_blank" rel="noopener">《引爆点》读书心得</a></h2><p>流行理論可以分做三個因素。</p>
-<h3 id="內部因素"><a href="#內部因素" class="headerlink" title="內部因素"></a>內部因素</h3><p>件野本身要好。「好」嘅定義可以係得意，幫到用戶解決問題</p>
-<h3 id="可控因素"><a href="#可控因素" class="headerlink" title="可控因素"></a>可控因素</h3><p>要先揾到關鍵人物做用戶，等佢地幫你宣傳。可以分為内行，聯系人員同推銷員。文中冇解釋，搞到我有D想睇。</p>
-<h3 id="不可控因素"><a href="#不可控因素" class="headerlink" title="不可控因素"></a>不可控因素</h3><p>環境因素。如時機，行業發展。</p>
+<h2 id="优秀程序员的两大要素：懒-笨"><a href="#优秀程序员的两大要素：懒-笨" class="headerlink" title="优秀程序员的两大要素：懒 + 笨"></a><a href="http://www.cnblogs.com/flying_bat/archive/2005/10/30/264978.html" target="_blank" rel="noopener">优秀程序员的两大要素：懒 + 笨</a></h2><p>個topic用左2個負面嘅字去吸引注意，但實際上可以歸納做<br>1.用Automation同tool去增加productivity，而唔係死做<br>2.唔好停止學習<br>3.要批判自己嘅工作，多質疑<br>4.Debug果時要拋棄所有假設</p>
+<h3 id="15-May-2018"><a href="#15-May-2018" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>拋棄所有假設知易行難。一心急就make好多assumption，想快D debug好個program，最後冇系統咁去揾出問題，反而仲花得更多時間。我需要更好好鍛練嘅心理質素。</p>
+<h3 id="19-May-2018-1"><a href="#19-May-2018-1" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>補充第七點，由於attacker可以攻擊任何code，所以考慮security果時唔可以單單睇新嘅code，要revisit返舊嘅code</p>
+<h2 id="程序员的灯下黑：不要忘记你的目标"><a href="#程序员的灯下黑：不要忘记你的目标" class="headerlink" title="程序员的灯下黑：不要忘记你的目标"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785841.html" target="_blank" rel="noopener">程序员的灯下黑：不要忘记你的目标</a></h2><p>Programming係為左解決問題，唔係為寫而寫。寫果時一定要記住要解決嘅問題。</p>
+<h3 id="15-May-2018-1"><a href="#15-May-2018-1" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>Don’t need to re-read</p>
+<h3 id="21-Oct-2018"><a href="#21-Oct-2018" class="headerlink" title="21 Oct 2018"></a>21 Oct 2018</h3><p>Testing 好講對production嘅熟悉程度。寫automated test，需要好好同tester溝通，先寫到冇咁flaky嘅test</p>
+<h1 id="以下無需重讀"><a href="#以下無需重讀" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="8-个开发更安全代码的简单规则"><a href="#8-个开发更安全代码的简单规则" class="headerlink" title="8 个开发更安全代码的简单规则"></a><a href="http://www.cnblogs.com/flying_bat/archive/2006/11/20/565636.html" target="_blank" rel="noopener">8 个开发更安全代码的简单规则</a></h2><ol>
+<li>寫code果個要負起責任</li>
+<li>唔好相信User input，要sanitize同做validation</li>
+<li>要有<a href="https://zh.wikipedia.org/wiki/%E5%A8%81%E8%84%85%E6%A8%A1%E5%9E%8B%E5%88%86%E6%9E%90" target="_blank" rel="noopener">威脅模型分析</a></li>
+<li>要留意security嘅新聞</li>
+<li>用Fuzz testing</li>
+<li>唔好用唔安全嘅library</li>
+<li>要maintain舊code嘅security</li>
+<li>可以用code分析工具</li>
+</ol>
+<h2 id="“千般路”与“磨豆腐”"><a href="#“千般路”与“磨豆腐”" class="headerlink" title="“千般路”与“磨豆腐”"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/08/668166.html" target="_blank" rel="noopener">“千般路”与“磨豆腐”</a></h2><p>每當有一D新技術出現，都好想去apply。但係要考慮到成條Team跟唔跟得上，同埋轉左新技術係咪真係有效益。好多時都係現有嘅code慢慢改善。</p>
+<h3 id="15-May-2018-2"><a href="#15-May-2018-2" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>新技術為解決問題，用左都增加唔到productivity，不如唔學。但如果公司太廢，用唔到好嘅新技術，轉工。</p>
+<h2 id="程序员的灯下黑：重知识轻技术"><a href="#程序员的灯下黑：重知识轻技术" class="headerlink" title="程序员的灯下黑：重知识轻技术"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/05/30/764637.html" target="_blank" rel="noopener">程序员的灯下黑：重知识轻技术</a></h2><p>知識只係技術嘅一部份，係適當嘅時候以適當嘅方式運用出來嘅知識先係技術。好多時一有新嘅technology就走去學，好似學識左就係勁。但好多時技術就係design pattern, error handling，E D 唔係咁fancy嘅技巧表現出來，E D先係扎實嘅功夫。</p>
+<h3 id="15-May-2018-3"><a href="#15-May-2018-3" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>Product &gt; Technology<br>Don’t need to re-read</p>
+<h3 id="21-Oct-2018-1"><a href="#21-Oct-2018-1" class="headerlink" title="21 Oct 2018"></a>21 Oct 2018</h3><p>靠住搞技術，冇將工作做好，就係失敗</p>
+<h2 id="程序员的灯下黑：能认识自己吗？"><a href="#程序员的灯下黑：能认识自己吗？" class="headerlink" title="程序员的灯下黑：能认识自己吗？"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/06/16/785835.html" target="_blank" rel="noopener">程序员的灯下黑：能认识自己吗？</a></h2><p>當覺得自己學唔到野個時，可以主動係自己用緊嘅technology同library深入了解一下。</p>
+<h3 id="15-May-2018-4"><a href="#15-May-2018-4" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>Don’t need to re-read</p>
+<h2 id="微软的秘密面试题"><a href="#微软的秘密面试题" class="headerlink" title="微软的秘密面试题"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/03/07/666449.html" target="_blank" rel="noopener">微软的秘密面试题</a></h2><p>PM要同邏輯強但缺乏社交技巧嘅programmer溝通，需要一D說服技巧。一D面試題目測試重點唔係智力，而係耐性同友好嘅溝通方法。</p>
+<h3 id="15-May-2018-5"><a href="#15-May-2018-5" class="headerlink" title="15 May 2018"></a>15 May 2018</h3><p>有一D有趣嘅問題，除此之外冇咩重讀嘅價值</p>
+<h1 id="以下無需重讀-1"><a href="#以下無需重讀-1" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="Git-少用-Pull-多用-Fetch-和-Merge"><a href="#Git-少用-Pull-多用-Fetch-和-Merge" class="headerlink" title="Git 少用 Pull 多用 Fetch 和 Merge"></a><a href="http://www.cnblogs.com/flying_bat/p/3408634.html" target="_blank" rel="noopener">Git 少用 Pull 多用 Fetch 和 Merge</a></h2><p>文中提到唔用git pull，因為會update local branch。但係我地個workflow通常係一人一個branch，其實冇咩影響。</p>
+<h3 id="19-May-2018-2"><a href="#19-May-2018-2" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>個idea值得學習，但E篇文寫得唔到，最好揾過另一篇睇</p>
+<h2 id="初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件"><a href="#初次使用-git-的“核弹级选项”：filter-branch-从仓库中删除文件" class="headerlink" title="初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件"></a><a href="http://www.cnblogs.com/flying_bat/p/4172435.html" target="_blank" rel="noopener">初次使用 git 的“核弹级选项”：filter-branch 从仓库中删除文件</a></h2><p>原來有command可以delete一個file係repo所有history，等得閒研究下。</p>
+<h3 id="19-May-2018-3"><a href="#19-May-2018-3" class="headerlink" title="19 May 2018"></a>19 May 2018</h3><p>Github 個 tutorial寫得仲好，唔洗睇E篇文</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-4/" data-id="cj9covao600266m65or5xflj2" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/Commentary/commentaries-4/" data-id="cj9covao600266m65or5xflj2" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/commentary/commentaries-4/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/Commentary/commentaries-4/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">Objective C</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Testing/">Testing</a></li></ul>
 
     </footer>
   </div>
@@ -151,19 +148,19 @@
     
 <nav id="article-nav">
   
-    <a href="/review/singleton/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Commentary/commentaries-6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Avoiding Singleton Abuse
+          簡評六
         
       </div>
     </a>
   
   
-    <a href="/commentary/commentaries-3/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Commentary/commentaries-3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">[封存]簡評三</div>
+      <div class="article-nav-title">簡評三</div>
     </a>
   
 </nav>
@@ -195,7 +192,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
     </div>
   </div>
 
@@ -205,7 +202,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPS/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parser/">Parser</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVG/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI-UX/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -215,7 +212,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/agile/" style="font-size: 12.73px;">Agile</a> <a href="/tags/architecture/" style="font-size: 15.45px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 12.73px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10.91px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 11.82px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 12.73px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 17.27px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 13.64px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 16.36px;">Management</a> <a href="/tags/network/" style="font-size: 10.91px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 10.91px;">Opensource</a> <a href="/tags/philosophy/" style="font-size: 13.64px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 14.55px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 10.91px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 13px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 15px;">Communication</a> <a href="/tags/Data/" style="font-size: 12px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 13px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 11px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 16px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 13px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17px;">Management</a> <a href="/tags/Network/" style="font-size: 11px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 12px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 12px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 11px;">SVG</a> <a href="/tags/Security/" style="font-size: 11px;">Security</a> <a href="/tags/Startup/" style="font-size: 13px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 15px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 11px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18px;">Video review</a>
     </div>
   </div>
 
@@ -237,23 +234,23 @@
       <ul>
         
           <li>
-            <a href="/review/重遇未知的自己/">重遇未知的自己</a>
+            <a href="/Review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/Diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
           </li>
         
           <li>
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/Review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
           </li>
         
           <li>
-            <a href="/review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
+            <a href="/Review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
           </li>
         
           <li>
-            <a href="/review/the-power-of-less/">少做一點不會死!</a>
+            <a href="/Review/the-power-of-less/">少做一點不會死!</a>
           </li>
         
       </ul>
@@ -287,7 +284,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/commentary/commentaries-4/';
+  var disqus_url = 'http://199911.github.io/Commentary/commentaries-4/';
   
   (function(){
     var dsq = document.createElement('script');
