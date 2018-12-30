@@ -5,17 +5,18 @@
   
   <title>簡評二十七 | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A quick look at the git object storeCan read git doc to know more about git’s internal  git is a key value object store. With file as value, and file’s SHA1 hash as key. git use first two charactors a">
+  <meta name="description" content="提問的智慧篇文講點係hacker community問問題，䓢中風格係一針見血，保持禮貌，同埋問左蠢問題預左(要習慣)被人串。當中比較特別嘅point：  描述問題症狀而非猜測 告訴黑客們你認為問題是怎樣造成的並沒什麼幫助。（如果你的推斷如此有效，還用向別人求助嗎？）   描述目標而不是過程 如果你想弄清楚如何做某事（而不是報告一個Bug），在開頭就描述你的目標，然後才陳述重現你所卡住的特定步驟。">
+<meta name="keywords" content="Video review,Communication,Productivity,Javascript,Architecture">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評二十七">
 <meta property="og:url" content="http://199911.github.io/Commentary/commentaries-27/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:description" content="A quick look at the git object storeCan read git doc to know more about git’s internal  git is a key value object store. With file as value, and file’s SHA1 hash as key. git use first two charactors a">
+<meta property="og:description" content="提問的智慧篇文講點係hacker community問問題，䓢中風格係一針見血，保持禮貌，同埋問左蠢問題預左(要習慣)被人串。當中比較特別嘅point：  描述問題症狀而非猜測 告訴黑客們你認為問題是怎樣造成的並沒什麼幫助。（如果你的推斷如此有效，還用向別人求助嗎？）   描述目標而不是過程 如果你想弄清楚如何做某事（而不是報告一個Bug），在開頭就描述你的目標，然後才陳述重現你所卡住的特定步驟。">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-04-27T14:38:16.194Z">
+<meta property="og:updated_time" content="2018-12-27T12:50:24.714Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評二十七">
-<meta name="twitter:description" content="A quick look at the git object storeCan read git doc to know more about git’s internal  git is a key value object store. With file as value, and file’s SHA1 hash as key. git use first two charactors a">
+<meta name="twitter:description" content="提問的智慧篇文講點係hacker community問問題，䓢中風格係一針見血，保持禮貌，同埋問左蠢問題預左(要習慣)被人串。當中比較特別嘅point：  描述問題症狀而非猜測 告訴黑客們你認為問題是怎樣造成的並沒什麼幫助。（如果你的推斷如此有效，還用向別人求助嗎？）   描述目標而不是過程 如果你想弄清楚如何做某事（而不是報告一個Bug），在開頭就描述你的目標，然後才陳述重現你所卡住的特定步驟。">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -67,7 +68,7 @@
         <section id="main"><article id="post-commentaries-27" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/Commentary/commentaries-27/" class="article-date">
-  <time datetime="2018-04-26T16:00:00.000Z" itemprop="datePublished">2018-04-27</time>
+  <time datetime="2018-07-30T16:00:00.000Z" itemprop="datePublished">2018-07-31</time>
 </a>
     
   <div class="article-category">
@@ -90,73 +91,263 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="A-quick-look-at-the-git-object-store"><a href="#A-quick-look-at-the-git-object-store" class="headerlink" title="A quick look at the git object store"></a><a href="https://dev.to/imjacobclark/a-quick-look-at-the-git-object-store-290j" target="_blank" rel="noopener">A quick look at the git object store</a></h2><p>Can read git doc to know more about git’s internal</p>
+        <h2 id="提問的智慧"><a href="#提問的智慧" class="headerlink" title="提問的智慧"></a><a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way" target="_blank" rel="noopener">提問的智慧</a></h2><p>篇文講點係hacker community問問題，䓢中風格係一針見血，保持禮貌，同埋問左蠢問題預左(要習慣)被人串。<br>當中比較特別嘅point：</p>
 <ul>
-<li>git is a key value object store. With file as value, and file’s SHA1 hash as key.</li>
-<li>git use first two charactors as directory for the key value store</li>
-<li>Commit hash is the key of the commit object</li>
-<li>A commit object contain meta data of commit and the files and directories object created in this commit</li>
-<li>Branch is a pointer to a commit</li>
+<li>描述問題症狀而非猜測<ul>
+<li>告訴黑客們你認為問題是怎樣造成的並沒什麼幫助。（如果你的推斷如此有效，還用向別人求助嗎？）</li>
+</ul>
+</li>
+<li>描述目標而不是過程<ul>
+<li>如果你想弄清楚如何做某事（而不是報告一個Bug），在開頭就描述你的目標，然後才陳述重現你所卡住的特定步驟。</li>
+</ul>
+</li>
 </ul>
 <a id="more"></a>
-<h2 id="Burnout-What-Happens-When-You-Take-On-Too-Much"><a href="#Burnout-What-Happens-When-You-Take-On-Too-Much" class="headerlink" title="Burnout: What Happens When You Take On Too Much"></a><a href="https://dev.to/mary_grace/burnout-what-happens-when-you-take-on-too-much-74d" target="_blank" rel="noopener">Burnout: What Happens When You Take On Too Much</a></h2><p>Talk about how to handle burnou</p>
-<h3 id="Handle-burnout"><a href="#Handle-burnout" class="headerlink" title="Handle burnout"></a>Handle burnout</h3><ul>
-<li>Schedule Time Off<ul>
-<li>need to actually disconnect, such as disable notification or turn on do not disturb</li>
-</ul>
-</li>
-<li>Make a List of Things that are your “Oxygen”<ul>
-<li>Choose things that you know without a shadow of a doubt will leave you energized</li>
-</ul>
-</li>
-</ul>
-<h3 id="For-manager-to-handle-teammate-burnout"><a href="#For-manager-to-handle-teammate-burnout" class="headerlink" title="For manager to handle teammate burnout"></a>For manager to handle teammate burnout</h3><ul>
-<li>Schedule Bi-monthly 1:1s<ul>
-<li>Check in how employee feel<ul>
-<li>Is there too much work load?</li>
-<li>Are there things they’d like to work in near future</li>
-<li>What projects would they like to be involved in going forward?</li>
-<li>How do they feel about the team structure? The company?</li>
-</ul>
-</li>
-<li>Encourage Vacation / Time Off</li>
+<h2 id="How-do-source-maps-work"><a href="#How-do-source-maps-work" class="headerlink" title="How do source maps work?"></a><a href="http://www.mattzeunert.com/2016/02/14/how-do-source-maps-work.html" target="_blank" rel="noopener">How do source maps work?</a></h2><p>E篇文講左source map點運作，包括file structure，VLQ encoding，點interpret source map。最後仲解釋左debugger點解set唔到break point係某幾行minify左嘅code。</p>
+<h2 id="職場搶救句點大作戰：跟主管聊天的三大妙招，讓對話毫不冷場！"><a href="#職場搶救句點大作戰：跟主管聊天的三大妙招，讓對話毫不冷場！" class="headerlink" title="職場搶救句點大作戰：跟主管聊天的三大妙招，讓對話毫不冷場！"></a><a href="https://buzzorange.com/techorange/2017/12/28/communicate-trick/" target="_blank" rel="noopener">職場搶救句點大作戰：跟主管聊天的三大妙招，讓對話毫不冷場！</a></h2><ul>
+<li>當人地無端端提到同E家話題唔關事嘅野，代表對方想講果個話題</li>
+<li>如果人地講緊嘅話題你唔識都唔緊要，最緊要係表現出熱情</li>
+<li>等人地將佢想講嘅野講完，之後先問你想知嘅野</li>
+<li>每次搞烏龍，記得最後一定要讓你的苦主「物超所值」<ul>
+<li>唔好怕俾人佔便宜</li>
 </ul>
 </li>
 </ul>
-<h2 id="9-Promising-Promise-Tips"><a href="#9-Promising-Promise-Tips" class="headerlink" title="9 Promising Promise Tips"></a><a href="https://dev.to/kepta/promising-promise-tips--c8f" target="_blank" rel="noopener">9 Promising Promise Tips</a></h2><p>Simple but easy to read basic tutorial on Promise</p>
-<h2 id="HTML-CSS-我心目中的「完美按鈕」"><a href="#HTML-CSS-我心目中的「完美按鈕」" class="headerlink" title="[HTML/CSS] 我心目中的「完美按鈕」"></a><a href="https://medium.com/@_ktu/html-css-%E6%88%91%E5%BF%83%E7%9B%AE%E4%B8%AD%E7%9A%84-%E5%AE%8C%E7%BE%8E%E6%8C%89%E9%88%95-83ff9cc57764" target="_blank" rel="noopener">[HTML/CSS] 我心目中的「完美按鈕」</a></h2><p>整個button好似好簡單，但係實際上可以引出engineer同designer合作上嘅溝通問題。文中仲列出左比較好implement嘅button係點樣</p>
+<h2 id="On-Abstraction-Zach-Tellman"><a href="#On-Abstraction-Zach-Tellman" class="headerlink" title="On Abstraction - Zach Tellman"></a><a href="https://www.youtube.com/watch?v=x9pxbnFC4aQ" target="_blank" rel="noopener">On Abstraction - Zach Tellman</a></h2><p>A very nice talk on high level idea with interesting real world example. But there is no code, it is pretty abstract. I like the clock story of John Harrison, which explain the importance of context of a system.</p>
 <ul>
-<li>固定寬度以及限制文字數目</li>
-<li>字體或是內容可依照螢幕寬度改變</li>
-<li>寬度以及排版可照樣板寬度調整，但是又保有自我煞車的機制</li>
-<li>就算有斷句的狀況下也可以保持置中</li>
-</ul>
-<h2 id="Avoid-Burnout-and-Get-Back-to-the-Basics"><a href="#Avoid-Burnout-and-Get-Back-to-the-Basics" class="headerlink" title="Avoid Burnout and Get Back to the Basics"></a><a href="https://dev.to/restoreddev/avoid-burnout-and-get-back-to-the-basics-4j46" target="_blank" rel="noopener">Avoid Burnout and Get Back to the Basics</a></h2><ul>
-<li>Do Not Try to Learn Every New Programming Language</li>
-<li>Focus on Writing Good Tests and Secure Software</li>
-</ul>
-<h2 id="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"><a href="#线上抓娃娃机的架构设计及实现，看这一篇文章就够了" class="headerlink" title="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"></a><a href="https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&amp;mid=2247487567&amp;idx=1&amp;sn=13f3842928f075bcdf47ff6b88605f1e&amp;chksm=96c9a62fa1be2f39b9194a6f9a797f8deb79bdea5e10f3c2a12b4791493e7cf561030fde148c#rd" target="_blank" rel="noopener">线上抓娃娃机的架构设计及实现，看这一篇文章就够了</a></h2><ul>
-<li>Low latency is difficult, use some tricks make the requirement simpler but still having good UX<ul>
-<li>Only need to ensure low latency for player, not a must for audience</li>
+<li>“Experience and good taste” is not a good answer<ul>
+<li>We have to make the standard and judgement objective and measurable</li>
 </ul>
 </li>
-<li>Explain their design on protocol<ul>
-<li>TCP on web but streaming is UDP</li>
-<li>Drop frame with timeout mechanism</li>
+<li>Abstraction &amp; Invariant &amp; Assumption<ul>
+<li>Abstractions maps the internal model onto external semantics</li>
+<li>Invariant constrain the internal model<ul>
+<li>limit / simplify the model</li>
 </ul>
 </li>
-<li>Explain their infra<ul>
-<li>Load balancing</li>
-<li>Evaluate network quality from time to time<ul>
-<li>To determine the cluster position</li>
+<li>Assumption<ul>
+<li>Models (implicitly) assume everything they omitted are either constant or irrelevant</li>
+<li>We can consider invariant is an assumption always true</li>
+<li>If assumptions fail together, they belong together</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>How to pick encoding</li>
+<li>The quality of system affected by the context (environment), which may make assumptions we made invalid.</li>
+<li>Deductive reasoning vs inductive reasoning<ul>
+<li>Deductive reasoning try to model the real world by observation<ul>
+<li>High cost and brittle in software world</li>
 </ul>
-<h2 id="Riemann’s-paradox-pi-infinity-minus-infinity"><a href="#Riemann’s-paradox-pi-infinity-minus-infinity" class="headerlink" title="Riemann’s paradox: pi = infinity minus infinity"></a><a href="https://ed.ted.com/featured/JLpGMgtS" target="_blank" rel="noopener">Riemann’s paradox: pi = infinity minus infinity</a></h2><p>透過rearrange infinite sequence嘅次序，就可以改變個sequence嘅sum</p>
-<h2 id="The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing"><a href="#The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing" class="headerlink" title="The 100% correct way to structure a React app (or why there’s no such thing)"></a><a href="https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed" target="_blank" rel="noopener">The 100% correct way to structure a React app (or why there’s no such thing)</a></h2><p>篇文講左點樣organize react app嘅directory structure。由於有講organize嘅principle，仲有example。所以幾值得深入研究。有時間再睇。</p>
+</li>
+<li>Inductive reasoning use model to draw analogies between different parts of the environment<ul>
+<li>Most software relies on it</li>
+<li>The analogies is the abstraction, where we ignore some details in analogies</li>
+<li>We need inductive reasoning because we cannot have perfect internal models in software engineering<ul>
+<li>Change is the only constant</li>
+</ul>
+</li>
+<li>It is not perfect, but we only need to success often enough</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When assumption does not works<ul>
+<li>We can set up conventions</li>
+<li>Conventions limit use cases, make the flawed system can be used in most situations</li>
+</ul>
+</li>
+<li>Over-engineer &amp; Under-engineer<ul>
+<li>Over-engineer = the model makes too few assumption, the system could have the same effect with less effort</li>
+<li>Under-engineer = the model ignore too much<ul>
+<li>We can make our model larger</li>
+<li>Replace our model</li>
+<li>Narrow our intended use case</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Principled system<ul>
+<li>Hieracrchies</li>
+<li>Brittle</li>
+<li>Predictable</li>
+<li>Difficult to make changes</li>
+</ul>
+</li>
+<li>Adaptable system<ul>
+<li>No rules and pattern</li>
+<li>Flexible</li>
+<li>Unpredictable</li>
+<li>Redundent</li>
+</ul>
+</li>
+<li>We can layer principle and adaptable system<ul>
+<li>Adaptable components in principled framework</li>
+<li>Principled components in adaptable framework</li>
+</ul>
+</li>
+<li>Complex adaptive system<ul>
+<li>Principled components in adaptable framework</li>
+<li>Adaptable framework reduce the changes in environment</li>
+<li>We can update and replace the component easily</li>
+<li>If components are too small<ul>
+<li>Need to write ots of adaptable glue code</li>
+</ul>
+</li>
+<li>If components are too large<ul>
+<li>Increase the cost to replace code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Components<ul>
+<li>Principled components are smaller, faster and can be understood incrementally</li>
+<li>Use principled components where possible</li>
+<li>Use adaptable components where necessary</li>
+</ul>
+</li>
+</ul>
+<h2 id="Flow-the-secret-to-happiness"><a href="#Flow-the-secret-to-happiness" class="headerlink" title="Flow, the secret to happiness"></a><a href="https://www.ted.com/talks/mihaly_csikszentmihalyi_on_flow" target="_blank" rel="noopener">Flow, the secret to happiness</a></h2><ul>
+<li>Money cannot make us happy</li>
+<li>Looks to those who find pleasure and lasting satisfaction in activities that bring about a state of <code>flow</code>.</li>
+<li>What is flow?<ul>
+<li>Nervous system is unable to process more than approximately 110bits of information per second</li>
+<li>When focus on a task that is difficult enough<ul>
+<li>we cannot feel anything other than what we are doing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How does it feel to be in flow?<ul>
+<li>Completely involved in what you are doing<ul>
+<li>focused, concentrated</li>
+</ul>
+</li>
+<li>A sense of ecstasy<ul>
+<li>of being outside everyday reality,</li>
+</ul>
+</li>
+<li>Greater inner clarity<ul>
+<li>knowing what needs to be done and how well we are doing,</li>
+</ul>
+</li>
+<li>Knowing that the activity is doable<ul>
+<li>that our skills are adequate to the task,</li>
+</ul>
+</li>
+<li>A sense of serenity<ul>
+<li>no worries about oneself and a feeling of growing beyond the boundaries of the ego,</li>
+</ul>
+</li>
+<li>Timelessness<ul>
+<li>thoroughly focused on the present, hours seem to pass by in minutes, and</li>
+</ul>
+</li>
+<li>Intrinsic motivation<ul>
+<li>whatever produces flow becomes its own reward.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何知道是該辭職的時候了？"><a href="#如何知道是該辭職的時候了？" class="headerlink" title="如何知道是該辭職的時候了？"></a><a href="https://softnshare.com/2016/10/25/howtoknowwhentoquit/" target="_blank" rel="noopener">如何知道是該辭職的時候了？</a></h2><ul>
+<li>不公正的報酬</li>
+<li>受到不好的對待，低估或是不受尊重</li>
+<li>與你的經理和同事無法共事</li>
+<li>不能適應公司文化</li>
+<li>不同意公司的基本策略或實踐並且以目前的職位無法改變它們<ul>
+<li>無謂浪費時間，揾個適合嘅地放成長好過</li>
+</ul>
+</li>
+<li><em>當你發現你在一個工作上的學習逐漸減少到達高原停滯狀態，也該考慮離開</em></li>
+</ul>
+<h2 id="Are-You-Productive-Enough"><a href="#Are-You-Productive-Enough" class="headerlink" title="Are You Productive Enough?"></a><a href="https://hbr.org/2018/07/are-you-productive-enough" target="_blank" rel="noopener">Are You Productive Enough?</a></h2><ul>
+<li>This article raise 3 questions for you to review your productivity</li>
+<li>Productive: “Achieving or producing a significant amount of result.”</li>
+<li>Enough: “As much or as many as required.”</li>
+<li>Q1: Am I meeting expectations?<ul>
+<li>Productive enough if you meet the expectation.<ul>
+<li>What if the expectation keep changing?</li>
+</ul>
+</li>
+<li>If no, go to next question</li>
+</ul>
+</li>
+<li>Q2: Are these expectations my own, and not required by others?<ul>
+<li>Having high expectation on yourself is ok</li>
+<li>But don’t need to push too hard on yourself<ul>
+<li>Cannot meet high standard does not mean you are not productive enough</li>
+</ul>
+</li>
+<li>If no, go to next question</li>
+</ul>
+</li>
+<li>Q3: Am I owning my time management and using productivity resources?<ul>
+<li>You need to<ul>
+<li>manage your time</li>
+<li>set boundaries</li>
+<li>be focus</li>
+</ul>
+</li>
+<li>Make sure of productivity tools to achieve efficiency</li>
+<li>If you do these and still cannot make the target, you are productive enough<ul>
+<li><em>negotiating expectations</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何從一般水平的工程師轉變為10倍影響力的工程師"><a href="#如何從一般水平的工程師轉變為10倍影響力的工程師" class="headerlink" title="如何從一般水平的工程師轉變為10倍影響力的工程師"></a><a href="https://softnshare.com/2017/02/21/how-to-become-a-10x-engineer/" target="_blank" rel="noopener">如何從一般水平的工程師轉變為10倍影響力的工程師</a></h2><ul>
+<li>技術能力 != 影響力<ul>
+<li>團隊能力遠大於個人技術能力</li>
+</ul>
+</li>
+<li>Focus如何解決用戶問題，而唔單係技術問題</li>
+<li>精通讓你的影響力複合成長的技能<ul>
+<li>找到比較便宜的方法來驗證假設</li>
+<li>完成並出貨你可交付的成果<ul>
+<li>真係有deliver出黎嘅code</li>
+</ul>
+</li>
+<li>深入了解你所從事的業務領域<ul>
+<li>與你的用戶（購買者、使用者、業務部門、銷售團隊或內部團隊）溝通</li>
+<li>用更好更有效嘅方法去解決問題</li>
+</ul>
+</li>
+<li>prioritize 高槓桿工作</li>
+<li>做你擅長嘅野</li>
+<li>成為更好的溝通者<ul>
+<li>確保訊息可靠和無摩擦的溝通渠道</li>
+</ul>
+</li>
+<li>轉到具有較強工程文化的公司或團隊</li>
+</ul>
+</li>
+</ul>
+<h2 id="【投稿】離職前一定要做的七件事，全部做到你就能勇敢離開尋找新出路"><a href="#【投稿】離職前一定要做的七件事，全部做到你就能勇敢離開尋找新出路" class="headerlink" title="【投稿】離職前一定要做的七件事，全部做到你就能勇敢離開尋找新出路"></a><a href="https://buzzorange.com/techorange/2016/12/23/what-things-you-should-do-before-resign/" target="_blank" rel="noopener">【投稿】離職前一定要做的七件事，全部做到你就能勇敢離開尋找新出路</a></h2><p>Just a todo list</p>
+<ul>
+<li>交接工作</li>
+<li>勞健保、休假兌換、公司欠款釐清</li>
+<li>釐清與公司的財務狀況<ul>
+<li>還野，claim錢</li>
+</ul>
+</li>
+<li>拒絕簽署不合理文件<ul>
+<li>但若有公司要求簽署「不可向公司索取應得的款項」或「不可散播對公司、股東或董事不利之言論」等比較不合理的項目，都可以直接跟公司提出來，或表達不願簽署等</li>
+</ul>
+</li>
+<li>好好道別</li>
+</ul>
+<h2 id="【你住哪裡？】心理師：你住的地方，已經悄悄透露你的個性"><a href="#【你住哪裡？】心理師：你住的地方，已經悄悄透露你的個性" class="headerlink" title="【你住哪裡？】心理師：你住的地方，已經悄悄透露你的個性"></a><a href="https://buzzorange.com/vidaorange/2018/07/13/psychologygeo/" target="_blank" rel="noopener">【你住哪裡？】心理師：你住的地方，已經悄悄透露你的個性</a></h2><ul>
+<li>地域心理學<ul>
+<li>我們所處的空間狀態，地域、社區或是城市樣貌，如何影響著我們的心理現象，包含情緒、決策、思維與行為（人格或個性）<ul>
+<li>風俗民情影響</li>
+<li>氣候或是自然環境影響</li>
+<li>區域中人與人的互動</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -166,6 +357,8 @@
         <a href="http://199911.github.io/Commentary/commentaries-27/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Communication/">Communication</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+
     </footer>
   </div>
   
@@ -182,9 +375,9 @@
     </a>
   
   
-    <a href="/Commentary/commentaries-26/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Review/quirkology-3/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">簡評二十六</div>
+      <div class="article-nav-title">怪咖心理學（３）：明明沒有，為什麼看得見？當超自然現象遇上心理學</div>
     </a>
   
 </nav>
@@ -236,7 +429,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile/" style="font-size: 13px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 15px;">Communication</a> <a href="/tags/Data/" style="font-size: 12px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 13px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 11px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 16px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 13px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17px;">Management</a> <a href="/tags/Network/" style="font-size: 11px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 12px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 12px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 11px;">SVG</a> <a href="/tags/Security/" style="font-size: 11px;">Security</a> <a href="/tags/Startup/" style="font-size: 13px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 15px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 11px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 11.82px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/Data/" style="font-size: 11.82px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 10px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 13.64px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13.64px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17.27px;">Management</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10.91px;">SVG</a> <a href="/tags/Security/" style="font-size: 10.91px;">Security</a> <a href="/tags/Startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/Tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18.18px;">Video review</a>
     </div>
   </div>
 
@@ -258,6 +451,10 @@
       <ul>
         
           <li>
+            <a href="/Commentary/commentaries-33/">簡評三十三</a>
+          </li>
+        
+          <li>
             <a href="/Review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
@@ -266,15 +463,11 @@
           </li>
         
           <li>
+            <a href="/Commentary/commentaries-32/">簡評三十二</a>
+          </li>
+        
+          <li>
             <a href="/Review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
-          </li>
-        
-          <li>
-            <a href="/Review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
-          </li>
-        
-          <li>
-            <a href="/Review/the-power-of-less/">少做一點不會死!</a>
           </li>
         
       </ul>

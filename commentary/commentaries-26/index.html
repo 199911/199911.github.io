@@ -5,17 +5,18 @@
   
   <title>簡評二十六 | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="So You Want To Be a Senior Developer?This article list some characteristic of senior developer:  A senior front-end developer has experience A senior front-end developer has a track record of good jud">
+  <meta name="description" content="What are the main uses of Command design pattern?Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：  GUI 因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC">
+<meta name="keywords" content="Video review,Javascript,Design pattern,Learning skills,Startup,Git,Philosophy,GPS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評二十六">
 <meta property="og:url" content="http://199911.github.io/Commentary/commentaries-26/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:description" content="So You Want To Be a Senior Developer?This article list some characteristic of senior developer:  A senior front-end developer has experience A senior front-end developer has a track record of good jud">
+<meta property="og:description" content="What are the main uses of Command design pattern?Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：  GUI 因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-05-22T02:55:11.751Z">
+<meta property="og:updated_time" content="2018-12-27T12:48:56.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評二十六">
-<meta name="twitter:description" content="So You Want To Be a Senior Developer?This article list some characteristic of senior developer:  A senior front-end developer has experience A senior front-end developer has a track record of good jud">
+<meta name="twitter:description" content="What are the main uses of Command design pattern?Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：  GUI 因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -67,7 +68,7 @@
         <section id="main"><article id="post-commentaries-26" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/Commentary/commentaries-26/" class="article-date">
-  <time datetime="2018-04-21T16:00:00.000Z" itemprop="datePublished">2018-04-22</time>
+  <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
 </a>
     
   <div class="article-category">
@@ -90,160 +91,190 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="So-You-Want-To-Be-a-Senior-Developer"><a href="#So-You-Want-To-Be-a-Senior-Developer" class="headerlink" title="So You Want To Be a Senior Developer?"></a><a href="https://css-tricks.com/want-senior-developer/" target="_blank" rel="noopener">So You Want To Be a Senior Developer?</a></h2><p>This article list some characteristic of senior developer:</p>
+        <h2 id="What-are-the-main-uses-of-Command-design-pattern"><a href="#What-are-the-main-uses-of-Command-design-pattern" class="headerlink" title="What are the main uses of Command design pattern?"></a><a href="https://www.quora.com/What-are-the-main-uses-of-Command-design-pattern" target="_blank" rel="noopener">What are the main uses of Command design pattern?</a></h2><p>Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：</p>
 <ul>
-<li>A senior front-end developer has experience</li>
-<li>A senior front-end developer has a track record of good judgment</li>
-<li>A senior developer has positive impact beyond the code</li>
-<li>A senior developer is helpful, not all-knowing</li>
-<li>A senior front-end developer is a force multiplier</li>
+<li>GUI<ul>
+<li>因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC pattern</li>
 </ul>
-<h2 id="13-EXAMPLES-TO-USE-CURLY-BRACES-IN-LINUX"><a href="#13-EXAMPLES-TO-USE-CURLY-BRACES-IN-LINUX" class="headerlink" title="13 EXAMPLES TO USE CURLY BRACES IN LINUX"></a><a href="https://www.linuxnix.com/12-examples-flower-brackets-linux/" target="_blank" rel="noopener">13 EXAMPLES TO USE CURLY BRACES IN LINUX</a></h2><p>13個example 都係講緊一種用法，就係用<code>{}</code>去gen數字。<br><code>{a..b..c}</code> 其實就等於js嘅<br><code>for (let i = a; i &lt;= b; i += c)</code></p>
-<h3 id="21-May-2018"><a href="#21-May-2018" class="headerlink" title="21 May 2018"></a>21 May 2018</h3><p>Don’t need to re-watch</p>
+</li>
+<li>Marco recording<ul>
+<li>因為要record同replay行過嘅步驟，decouple左之後，只需要儲低個request object就做到</li>
+</ul>
+</li>
+<li>Multi-step undo<ul>
+<li>Similar to Marco recording</li>
+</ul>
+</li>
+<li>Networking<ul>
+<li>Remote execute嘅情況，request generate object 同 execute object唔係同一部機上邊，焗住要decouple</li>
+</ul>
+</li>
+<li>Progress bar<ul>
+<li>Decouple左個execution做一個個step之後，我地track住個request object，就可以知道個progress</li>
+</ul>
+</li>
+<li>Transaction<ul>
+<li>Similar to multi-step undo</li>
+</ul>
+</li>
+</ul>
 <a id="more"></a>
-<h2 id="The-Thinking-Behind-Micro-interaction"><a href="#The-Thinking-Behind-Micro-interaction" class="headerlink" title="The Thinking Behind Micro-interaction"></a><a href="https://design-nation.icons8.com/the-thinking-behind-micro-interaction-b6e9f7010491" target="_blank" rel="noopener">The Thinking Behind Micro-interaction</a></h2><p>Micro-interaction design flow</p>
-<ol>
-<li>Hand sketch and map out the transitions of the interaction</li>
-<li>Understand the core concept behind this design</li>
-<li>Try to use simple and intuitive interaction rather than complex interaction</li>
-<li>Staggered time in a single screen</li>
-<li>Logic between screens</li>
-</ol>
-<h2 id="新創公司如何建立優質的工程師到職流程"><a href="#新創公司如何建立優質的工程師到職流程" class="headerlink" title="新創公司如何建立優質的工程師到職流程"></a><a href="https://softnshare.com/2016/08/08/designengineeronboardprocess/" target="_blank" rel="noopener">新創公司如何建立優質的工程師到職流程</a></h2><p>篇文講左Quora嘅onboarding design。「sink or swim」就咁講好似好型，但實際上係on9嘅。盡快培養新員工嘅實力長遠黎講係好有用。</p>
-<ul>
-<li>點解要有onboarding<ul>
-<li>有D人俾少少指引就好productive</li>
-<li>俾左train都係唔掂，好可能係員工能力唔夠，盡早identify不良員工</li>
-<li>冇training會令員工遲左成為戰鬥力</li>
-<li>令新員工有較少壓力</li>
+<h2 id="The-flag-g-of-JavaScript’s-regular-expressions"><a href="#The-flag-g-of-JavaScript’s-regular-expressions" class="headerlink" title="The flag /g of JavaScript’s regular expressions"></a><a href="http://2ality.com/2013/08/regexp-g.html" target="_blank" rel="noopener">The flag /g of JavaScript’s regular expressions</a></h2><p>之前中左一個伏，一個有<code>g</code> flag 嘅 regex，重覆execute會有唔同嘅behaviour。睇完篇文先知有<code>g</code> flag嘅regex係stateful，有一個叫lastIndex嘅internal state。如果冇reset 到，可能會係match第2條string時出現unexpected results。</p>
+<p>個regex無端端有個internal state，以乎係一個javascript嘅bad design</p>
+<h2 id="GPS是如何運作的？而它為什麼可以免費使用呢？-中文CC字幕"><a href="#GPS是如何運作的？而它為什麼可以免費使用呢？-中文CC字幕" class="headerlink" title="GPS是如何運作的？而它為什麼可以免費使用呢？ (中文CC字幕)"></a><a href="https://www.youtube.com/watch?v=ODuKHIpuv3Q" target="_blank" rel="noopener">GPS是如何運作的？而它為什麼可以免費使用呢？ (中文CC字幕)</a></h2><ul>
+<li>GPS 免費，但其他美國政府用好多錢去maintain<ul>
+<li>但係美國有能力disable 任何party嘅GPS，所以各國都有研發自己嘅GPS system</li>
 </ul>
 </li>
-<li>Onboarding design嘅理念<ul>
-<li>加速提升新進員工生產力</li>
-<li>傳遞新創公司的文化與價值觀</li>
-<li>讓新進員工廣泛接觸成功所需的基礎</li>
-<li>運用社交讓新進人員融入團隊</li>
+<li>24 個 GPS衛星保證全球任何地方都連到4個GPS</li>
+</ul>
+<h2 id="The-Feynman-Technique"><a href="#The-Feynman-Technique" class="headerlink" title="The Feynman Technique"></a><a href="https://www.youtube.com/watch?v=tkm0TNFzIeg" target="_blank" rel="noopener">The Feynman Technique</a></h2><ul>
+<li>Learn a overview of a topic</li>
+<li>Try to write a tutorial to teach other the topic<ul>
+<li>You can know what you understood and what you don’t</li>
 </ul>
 </li>
-<li>Onboarding 措施<ul>
-<li>Assign mentor<ul>
-<li>Mentor係頭果幾星期會冇左25%或更多生產力</li>
+<li>Go back to learn what you don’t understand</li>
+<li>Try to simplify your tutorial, explain the idea in a simple way or use some analogy</li>
+</ul>
+<h2 id="罗辑思维-198-你是巨婴吗"><a href="#罗辑思维-198-你是巨婴吗" class="headerlink" title="罗辑思维 198 你是巨婴吗"></a><a href="https://www.youtube.com/watch?v=feg7fBTDAIQ" target="_blank" rel="noopener">罗辑思维 198 你是巨婴吗</a></h2><ul>
+<li>巨婴：人嘅心理結構同反應模式停留係嬰兒早期</li>
+<li>三大特點<ul>
+<li>病態共生<ul>
+<li>唔健康嘅家庭關係<ul>
+<li>裙腳仔<ul>
+<li>母子過份依賴</li>
 </ul>
 </li>
-<li>First day tasks<ul>
-<li>Set up dev env</li>
-<li>Do simple code change</li>
-<li>Run test</li>
-<li>Push a commit</li>
-</ul>
-</li>
-<li>First week task<ul>
-<li>Assign a simple bug fix, feature or experiment</li>
-<li>Assign the task that mentor require one day to finish, to make sure mentee can finish it within a week</li>
-</ul>
-</li>
-<li>Tutorial<ul>
-<li>解釋codebase</li>
-<li>解釋git (git flow?)</li>
-<li>解釋testing expectation</li>
-<li>Introduce debugging &amp; profiling tools</li>
-</ul>
-</li>
-<li>Codelabs<ul>
-<li>說明公司內產品的抽象層(abstractions)和輔助工具(tools)<ul>
-<li>說明為何一個核心抽象層(abstractions)如何被設計出來， 展示要如何使用它， 演練程式基底(codebase)相關的部分</li>
+<li>婆媳矛盾<ul>
+<li>奶奶唔習慣母子依賴嘅關係被打破，遷怒於媳婦</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>介紹新人給工作夥伴</li>
+<li>不斷一代接一代循環<ul>
+<li>上一代嘅「婆媳矛盾」+「父親角色嘅缺失」，令子女唔知道正常嘅家庭關係</li>
+<li>「婆媳矛盾」，令婚後妻子縛往丈夫，丈夫唔識處理家庭關係而逃避</li>
+<li>妻子把重心放係孩子嘅身上，做成「病態共生」，父親逃避問題，做成「父親角色嘅缺失」</li>
+<li>孩子婚後，由於家庭核心係孩子身上，妻子唔習慣媳婦搶走孩子，做成新一代「婆媳矛盾」</li>
+<li>循環</li>
+</ul>
+</li>
+<li>正常嘅家庭關係<ul>
+<li>父婦係家庭嘅核心，子女只係住二十年嘅房客</li>
+</ul>
+</li>
+<li>人與人之間冇清晰嘅界限<ul>
+<li>一個人嘅事就係大家嘅事，變左人人都差隻腳埋黎，好難解決問題</li>
+<li>中國文化中，跨越陌生人嘅邊界，係釋放善意嘅表現<ul>
+<li>係現代社會唔係一個正常雖行為</li>
 </ul>
 </li>
 </ul>
-<h2 id="與設計架構當朋友"><a href="#與設計架構當朋友" class="headerlink" title="與設計架構當朋友"></a><a href="https://www.slideshare.net/kylinfish/ss-80020439" target="_blank" rel="noopener">與設計架構當朋友</a></h2><p>架構設計最重要係有冇令人信服嘅理由</p>
-<ul>
-<li>Pixnet嘅架構設計<ol>
-<li>架構先決<ul>
-<li>流程唔可以無視人員，只睇技術</li>
-<li>技術會影響公司文化，business嘅擴展</li>
+</li>
 </ul>
 </li>
-<li>冇完美架構，只有最適架構<ul>
-<li>要睇context</li>
-<li>唔能夠指出架構嘅決陷，代表未掌握</li>
+<li>全能自戀 &amp; 偏執分裂<ul>
+<li>要現實以佢地嘅想像中嘅方法運行<ul>
+<li>現實不似預期，就會崩潰，覺得係有人搞事，揾攻擊對象，就算成件事唔關佢事都好</li>
+<li>要求人要有完美表現</li>
 </ul>
 </li>
-<li>架構係演進的，預想但唔好過早調優</li>
-</ol>
-</li>
-<li>技術選型嘅三個角度<ul>
-<li>Cost</li>
-<li>Flexibility</li>
-<li>Time to market</li>
-</ul>
-</li>
-<li>Low Cost + flexible<ul>
-<li>Premature debt</li>
-</ul>
-</li>
-<li>Low cost + short time to market<ul>
-<li>Difficult to maintain</li>
-<li>No HA</li>
-<li>No scalability</li>
-</ul>
-</li>
-<li>Flexible + short time to market<ul>
-<li>Business debt (燒錢)</li>
-</ul>
-</li>
-<li>Conclusion<ul>
-<li>思考各種可能性</li>
-<li>同其他人做善意嘅思考衝撞</li>
-<li>Plan for (sudden) requirement change</li>
-<li>No perfect architecture，唔好對自己嘅架構冇信心，重點係要知道自己點解咁設計</li>
+<li>認為非黑即白，世界冇灰度</li>
+<li>得個諗字，缺乏行動力</li>
 </ul>
 </li>
 </ul>
-<h2 id="https-techcrunch-com-2016-05-28-what-ux-designers-can-learn-from-1990s-japanese-video-games"><a href="#https-techcrunch-com-2016-05-28-what-ux-designers-can-learn-from-1990s-japanese-video-games" class="headerlink" title="https://techcrunch.com/2016/05/28/what-ux-designers-can-learn-from-1990s-japanese-video-games/"></a><a href="https://techcrunch.com/2016/05/28/what-ux-designers-can-learn-from-1990s-japanese-video-games/" target="_blank" rel="noopener">https://techcrunch.com/2016/05/28/what-ux-designers-can-learn-from-1990s-japanese-video-games/</a></h2><p>對比90年代嘅game同易家嘅app嘅UX design</p>
-<h2 id="Productivity-advice-for-the-weird"><a href="#Productivity-advice-for-the-weird" class="headerlink" title="Productivity advice for the weird"></a><a href="https://www.iwillteachyoutoberich.com/blog/productivity-advice-for-the-weird/" target="_blank" rel="noopener">Productivity advice for the weird</a></h2><p>Productivity 可以分做3個tier，由最重要嘅Fundamentals，到Psychology，最後嘅Details。大部份嘅productivity技巧都係最頂層嘅Details，都只係錦上添花。反而最平凡嘅Fundamentals先係起最關鍵作用</p>
-<h3 id="Fundamental"><a href="#Fundamental" class="headerlink" title="Fundamental"></a>Fundamental</h3><ul>
-<li>8 hours of sleep. Every. Night.</li>
-<li>Clear you apartment: A place for everything, and everything in its place!</li>
-<li>Have a consistent meal plan, and stick to it</li>
-<li>Optimize calendar</li>
+</li>
 </ul>
-<h3 id="Psychology"><a href="#Psychology" class="headerlink" title="Psychology"></a>Psychology</h3><ul>
-<li>Set clear boundaries<ul>
-<li>唔好負擔太多野</li>
+<h2 id="Why-your-tech-company-needs-to-go-‘tech-light’"><a href="#Why-your-tech-company-needs-to-go-‘tech-light’" class="headerlink" title="Why your tech company needs to go ‘tech-light’"></a><a href="https://www.linkedin.com/pulse/why-your-tech-company-needs-go-tech-light-marcela-sapone/" target="_blank" rel="noopener">Why your tech company needs to go ‘tech-light’</a></h2><p>用得太多工具，會被工具困住左個思維。有時候改變一下平日習慣嘅workflow，反思一下，可能會發現一D提升效率嘅方法。</p>
+<h2 id="Understanding-your-Circle-of-Competence-How-Warren-Buffett-Avoids-Problems"><a href="#Understanding-your-Circle-of-Competence-How-Warren-Buffett-Avoids-Problems" class="headerlink" title="Understanding your Circle of Competence: How Warren Buffett Avoids Problems"></a><a href="https://fs.blog/2013/12/mental-model-circle-of-competence" target="_blank" rel="noopener">Understanding your Circle of Competence: How Warren Buffett Avoids Problems</a></h2><ul>
+<li>知道自己擅長嘅領域<ul>
+<li>avoid problems</li>
+<li>identify opportunities for improvement</li>
+<li>learn from others</li>
 </ul>
 </li>
-<li>Be unapologetic with what you need</li>
-<li>Be positive and resilient</li>
-</ul>
-<h3 id="Detail"><a href="#Detail" class="headerlink" title="Detail"></a>Detail</h3><p>Should spend less than 10% time on it</p>
-<ul>
-<li>If you can fix something with money, fix it with money</li>
-<li>Automate your repetitive tasks</li>
-<li>Use systems to help you be proactive about things you want to do</li>
-</ul>
-<h2 id="專案經理該在45歲前思索的4個職涯方向"><a href="#專案經理該在45歲前思索的4個職涯方向" class="headerlink" title="專案經理該在45歲前思索的4個職涯方向"></a><a href="https://www.projectup.net/article/view/id/13823" target="_blank" rel="noopener">專案經理該在45歲前思索的4個職涯方向</a></h2><ol>
-<li>負責大型甚至巨型的案子</li>
-<li>成為高階主管的幕僚</li>
-<li>往業務端走，負責市場與品牌規劃</li>
-<li>自己創業</li>
-</ol>
-<h2 id="Do-Responsive-Sites-Have-to-Be-so-Tall-on-Mobile"><a href="#Do-Responsive-Sites-Have-to-Be-so-Tall-on-Mobile" class="headerlink" title="Do Responsive Sites Have to Be so Tall on Mobile?"></a><a href="https://www.viget.com/articles/do-responsive-sites-have-to-be-so-tall-on-mobile/" target="_blank" rel="noopener">Do Responsive Sites Have to Be so Tall on Mobile?</a></h2><p>Responsive 唔係就咁define 個grid system就算，有D位要redesign個layout，避免個page太長。</p>
-<h2 id="What-Can-You-Remove-From-Your-Product"><a href="#What-Can-You-Remove-From-Your-Product" class="headerlink" title="What Can You Remove From Your Product?"></a><a href="http://tomtunguz.com/perfection-nothing-to-take-away/" target="_blank" rel="noopener">What Can You Remove From Your Product?</a></h2><p>Perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.</p>
-<ul>
-<li>Product debt<ul>
-<li>Introduce complexity to the product, which require engineer, designer and QA to handle it</li>
-<li>User need to handle an extra complexity too</li>
-<li>Similar to “Carrying cost” in tranditional industries</li>
+<li>有時候知識面唔夠廣唔係壞事，但要知道自己嘅circle of competence<ul>
+<li>反而可以幫助自己專注係擅長嘅項目</li>
 </ul>
 </li>
 </ul>
-<h2 id="唐納·川普-是美國總統-更是談判高手"><a href="#唐納·川普-是美國總統-更是談判高手" class="headerlink" title="唐納·川普, 是美國總統, 更是談判高手"></a><a href="https://luogicshow.wordpress.com/2017/11/08/%E5%94%90%E7%B4%8D%C2%B7%E5%B7%9D%E6%99%AE-%E6%98%AF%E7%BE%8E%E5%9C%8B%E7%B8%BD%E7%B5%B1-%E6%9B%B4%E6%98%AF%E8%AB%87%E5%88%A4%E9%AB%98%E6%89%8B/" target="_blank" rel="noopener">唐納·川普, 是美國總統, 更是談判高手</a></h2><p>Bargining technique, worth re-read again</p>
-<h2 id="The-Magpie-Developer"><a href="#The-Magpie-Developer" class="headerlink" title="The Magpie Developer"></a><a href="https://blog.codinghorror.com/the-magpie-developer/" target="_blank" rel="noopener">The Magpie Developer</a></h2><p>Don’t be distracted by shiny new toys and playthings. User don’t care what technology you use</p>
+<h2 id="Differences-between-git-submodule-and-subtree"><a href="#Differences-between-git-submodule-and-subtree" class="headerlink" title="Differences between git submodule and subtree"></a><a href="https://stackoverflow.com/questions/31769820/differences-between-git-submodule-and-subtree" target="_blank" rel="noopener">Differences between git submodule and subtree</a></h2><ul>
+<li>Submodule<ul>
+<li>is a “link”</li>
+<li>component based development</li>
+</ul>
+</li>
+<li>Subtree<ul>
+<li>is a copy</li>
+<li>system based development</li>
+<li>develop on both project and subproject</li>
+</ul>
+</li>
+</ul>
+<h2 id="关于Git的主要维护者滨野纯的访谈"><a href="#关于Git的主要维护者滨野纯的访谈" class="headerlink" title="关于Git的主要维护者滨野纯的访谈"></a><a href="https://linux.cn/article-2052-1.html" target="_blank" rel="noopener">关于Git的主要维护者滨野纯的访谈</a></h2><ul>
+<li>Linus 的管理才能<ul>
+<li>Project maintainer 有一半嘅工作係say no<ul>
+<li>要解釋係因為commit唔得，而唔係因為能力唔得</li>
+<li>重視每個contributer</li>
+<li>要令對方覺得工作冇白費，唔好打擊對方嘅熱情</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Great programmer<ul>
+<li>持之以恆做某件事</li>
+<li>擁有良好嘅直覺同品味<ul>
+<li>對新問題，就覺沒有完整解決問題，都可以用直覺提出正確解決問題嘅思路同方向</li>
+</ul>
+</li>
+<li>溝通能力<ul>
+<li>要能夠解釋「我的目標係咩」，同得出目標嘅思維過程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自我反省<ul>
+<li>練習lightening talk，係短時間內清楚提出自己嘅諗法</li>
+<li>Reject pull request嘅技巧值得學習</li>
+</ul>
+</li>
+</ul>
+<h2 id="人生中最重要的5個思考題"><a href="#人生中最重要的5個思考題" class="headerlink" title="人生中最重要的5個思考題"></a><a href="https://4think.net/%E4%BA%BA%E7%94%9F%E4%B8%AD%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%845%E5%80%8B%E5%95%8F%E9%A1%8C/" target="_blank" rel="noopener">人生中最重要的5個思考題</a></h2><ul>
+<li>「等等，你說什麼？」（Wait, What?）<ul>
+<li>一種自然的方式去引導對方更詳細的表達，讓對方把還沒說的、埋在較深處的資訊給說出來</li>
+<li>能減少溝通中的誤解，讓你聽見他人腦中的真實想法</li>
+</ul>
+</li>
+<li>「我想知道……？」（I wonder…?）<ul>
+<li>加強好奇心</li>
+</ul>
+</li>
+<li>「至少，我們是不是能夠……？」（Couldn’t we at least…?）<ul>
+<li>「至少，我們是不是能夠同意……？」<ul>
+<li>化解衝突，引導衝突的雙方達成共識</li>
+<li>人們常會不自覺的把事情往極端的情況想，用E個問題去達成最低限度嘅妥協</li>
+</ul>
+</li>
+<li>「至少，我們是不是能夠……？」<ul>
+<li>一步步帶他們嘗試新事物，幫忙克服恐懼</li>
+<li>引導人的思緒遠離極端情況，回到自己能做出行動的最低限度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>「我可以幫什麼忙？」（What can I help?）<ul>
+<li>讓自己變得謙卑</li>
+<li>我們常誤以為自己能比對方更清楚他/她自己想要什麼</li>
+</ul>
+</li>
+<li>「真正重要的是什麼？」（What truly matters?）<ul>
+<li>人們很容易被瑣事擋住了真正重要的事情</li>
+<li>許多人覺得生活過得很迷茫、漂浮不定，其實歸根究底，就是因為沒想清楚什麼才是真正重要的</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -253,25 +284,27 @@
         <a href="http://199911.github.io/Commentary/commentaries-26/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GPS/">GPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Startup/">Startup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/Commentary/commentaries-27/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/Commentary/commentaries-25/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          簡評二十七
+          簡評二十五
         
       </div>
     </a>
   
   
-    <a href="/Commentary/commentaries-25/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Diary/bug-caused-by-duck-typing/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">簡評二十五</div>
+      <div class="article-nav-title">Bug caused by duck typing</div>
     </a>
   
 </nav>
@@ -323,7 +356,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile/" style="font-size: 13px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 12px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 15px;">Communication</a> <a href="/tags/Data/" style="font-size: 12px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 13px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 11px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 14px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 16px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 13px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17px;">Management</a> <a href="/tags/Network/" style="font-size: 11px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 12px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 12px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 11px;">SVG</a> <a href="/tags/Security/" style="font-size: 11px;">Security</a> <a href="/tags/Startup/" style="font-size: 13px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 15px;">Testing</a> <a href="/tags/Tools/" style="font-size: 11px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 11px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18px;">Video review</a>
+      <a href="/tags/Agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 11.82px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/Data/" style="font-size: 11.82px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 10px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 13.64px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13.64px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17.27px;">Management</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10.91px;">SVG</a> <a href="/tags/Security/" style="font-size: 10.91px;">Security</a> <a href="/tags/Startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/Tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18.18px;">Video review</a>
     </div>
   </div>
 
@@ -345,6 +378,10 @@
       <ul>
         
           <li>
+            <a href="/Commentary/commentaries-33/">簡評三十三</a>
+          </li>
+        
+          <li>
             <a href="/Review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
@@ -353,15 +390,11 @@
           </li>
         
           <li>
+            <a href="/Commentary/commentaries-32/">簡評三十二</a>
+          </li>
+        
+          <li>
             <a href="/Review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
-          </li>
-        
-          <li>
-            <a href="/Review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
-          </li>
-        
-          <li>
-            <a href="/Review/the-power-of-less/">少做一點不會死!</a>
           </li>
         
       </ul>
