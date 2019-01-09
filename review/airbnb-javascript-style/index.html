@@ -9,7 +9,7 @@
 <meta name="keywords" content="Article review">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Airbnb javascript style guide">
-<meta property="og:url" content="http://199911.github.io/Review/airbnb-javascript-style/index.html">
+<meta property="og:url" content="http://199911.github.io/review/airbnb-javascript-style/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
 <meta property="og:description" content="I will pick some special rules and some rules i don’t think it is useful here ObjectsRule 3.4: Define all the properties of an object in one place.It is my common mistake. Don’t add properties to obje">
 <meta property="og:locale" content="review">
@@ -67,12 +67,12 @@
       <div class="outer">
         <section id="main"><article id="post-airbnb-javascript-style" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/Review/airbnb-javascript-style/" class="article-date">
+    <a href="/review/airbnb-javascript-style/" class="article-date">
   <time datetime="2016-05-28T16:00:00.000Z" itemprop="datePublished">2016-05-29</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Review/">Review</a>
+    <a class="article-category-link" href="/categories/review/">Review</a>
   </div>
 
   </div>
@@ -93,10 +93,10 @@
       
         <p>I will pick some special rules and some rules i don’t think it is useful here</p>
 <h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><h3 id="Rule-3-4-Define-all-the-properties-of-an-object-in-one-place"><a href="#Rule-3-4-Define-all-the-properties-of-an-object-in-one-place" class="headerlink" title="Rule 3.4: Define all the properties of an object in one place."></a>Rule 3.4: Define all the properties of an object in one place.</h3><p>It is my common mistake. Don’t add properties to object once it defined. It is easy for other to miss the properties.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function getKey(k) &#123;</div><div class="line">  return `a key named $&#123;k&#125;`;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// bad</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">&#125;;</div><div class="line">obj[getKey(&apos;enabled&apos;)] = true;</div><div class="line"></div><div class="line">// good</div><div class="line">const obj = &#123;</div><div class="line">  id: 5,</div><div class="line">  name: &apos;San Francisco&apos;,</div><div class="line">  [getKey(&apos;enabled&apos;)]: true,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function getKey(k) &#123;</span><br><span class="line">  return `a key named $&#123;k&#125;`;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// bad</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">&#125;;</span><br><span class="line">obj[getKey(&apos;enabled&apos;)] = true;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const obj = &#123;</span><br><span class="line">  id: 5,</span><br><span class="line">  name: &apos;San Francisco&apos;,</span><br><span class="line">  [getKey(&apos;enabled&apos;)]: true,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="Rule-3-8-Only-quote-properties-that-are-invalid-identifiers"><a href="#Rule-3-8-Only-quote-properties-that-are-invalid-identifiers" class="headerlink" title="Rule 3.8: Only quote properties that are invalid identifiers."></a>Rule 3.8: Only quote properties that are invalid identifiers.</h3><p>Airbnb think it is easier to read, improves syntax highlighting, and it is also more easily optimized by many JS engines.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">// bad</div><div class="line">const bad = &#123;</div><div class="line">  &apos;foo&apos;: 3,</div><div class="line">  &apos;bar&apos;: 4,</div><div class="line">  &apos;data-blah&apos;: 5,</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// good</div><div class="line">const good = &#123;</div><div class="line">  foo: 3,</div><div class="line">  bar: 4,</div><div class="line">  &apos;data-blah&apos;: 5,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// bad</span><br><span class="line">const bad = &#123;</span><br><span class="line">  &apos;foo&apos;: 3,</span><br><span class="line">  &apos;bar&apos;: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">const good = &#123;</span><br><span class="line">  foo: 3,</span><br><span class="line">  bar: 4,</span><br><span class="line">  &apos;data-blah&apos;: 5,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>This rule is more useful for client side javascript, beacuse server side javascript do not need to be minifed. For consistency of among object properties and between server side and client side code, I perfer to abolish this rule.</p>
 <h3 id="Rule-6-1-Use-single-quotes-for-strings"><a href="#Rule-6-1-Use-single-quotes-for-strings" class="headerlink" title="Rule 6.1 Use single quotes for strings"></a>Rule 6.1 Use single quotes for strings</h3><p>It is useful when we use double quote in json string and html.</p>
 <h3 id="Rule-7-1-Use-function-declarations-instead-of-function-expressions"><a href="#Rule-7-1-Use-function-declarations-instead-of-function-expressions" class="headerlink" title="Rule 7.1 Use function declarations instead of function expressions."></a>Rule 7.1 Use function declarations instead of function expressions.</h3><p>It is becuase function declarations are named, so they’re easier to identify in call stacks. A useful debuggin skill when dealing with callback.</p>
@@ -117,18 +117,18 @@
 <h3 id="Rule-15-5-Use-braces-to-create-blocks-in-case-and-default-clauses-that-contain-lexical-declarations"><a href="#Rule-15-5-Use-braces-to-create-blocks-in-case-and-default-clauses-that-contain-lexical-declarations" class="headerlink" title="Rule 15.5 Use braces to create blocks in case and default clauses that contain lexical declarations"></a>Rule 15.5 Use braces to create blocks in case and default clauses that contain lexical declarations</h3><p>To prevent variable in different case mess up.</p>
 <h3 id="Rule-18-1-Use-soft-tabs-set-to-2-spaces"><a href="#Rule-18-1-Use-soft-tabs-set-to-2-spaces" class="headerlink" title="Rule 18.1 Use soft tabs set to 2 spaces."></a>Rule 18.1 Use soft tabs set to 2 spaces.</h3><p>I perfer to use 4 spaces, 2 spaces is too tight.</p>
 <h3 id="Rule-22-5-Don’t-save-references-to-this-Use-arrow-functions-or-Function-bind"><a href="#Rule-22-5-Don’t-save-references-to-this-Use-arrow-functions-or-Function-bind" class="headerlink" title="Rule 22.5 Don’t save references to this. Use arrow functions or Function#bind."></a>Rule 22.5 Don’t save references to this. Use arrow functions or Function#bind.</h3><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="external">Airbnb JavaScript Style Guide</a></li>
+<li><a href="https://github.com/airbnb/javascript" target="_blank" rel="noopener">Airbnb JavaScript Style Guide</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/Review/airbnb-javascript-style/" data-id="cjcdhdmmm001eje65glgsscp8" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/airbnb-javascript-style/" data-id="cjqpaz1xk005zbs65lzhhaqij" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/Review/airbnb-javascript-style/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/airbnb-javascript-style/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Article-review/">Article review</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article-review/">Article review</a></li></ul>
 
     </footer>
   </div>
@@ -136,7 +136,7 @@
     
 <nav id="article-nav">
   
-    <a href="/Book-Review/the-mythical-man-month-1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/book-review/the-mythical-man-month-1/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -146,7 +146,7 @@
     </a>
   
   
-    <a href="/Diary/example-of-leaky-abstraction/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/diary/example-of-leaky-abstraction/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Example of leaky abstraction</div>
     </a>
@@ -180,7 +180,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Book-Review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code-Review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Review/">Review</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
     </div>
   </div>
 
@@ -190,7 +190,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-Pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GPS/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Objective-C/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Parser/">Parser</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ReCAPTCHA/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SVG/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TV-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI-UX/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Video-review/">Video review</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parser/">Parser</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
     </div>
   </div>
 
@@ -200,7 +200,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/Architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/Article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/Book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/CSS/" style="font-size: 11.82px;">CSS</a> <a href="/tags/Cache/" style="font-size: 10px;">Cache</a> <a href="/tags/Communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/Data/" style="font-size: 11.82px;">Data</a> <a href="/tags/Debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/Design-Pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/Design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/Docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/Fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/Food/" style="font-size: 10px;">Food</a> <a href="/tags/GPS/" style="font-size: 10px;">GPS</a> <a href="/tags/Git/" style="font-size: 13.64px;">Git</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Health/" style="font-size: 13.64px;">Health</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/Learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/Local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Management/" style="font-size: 17.27px;">Management</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Objective-C/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/Opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/Parser/" style="font-size: 10px;">Parser</a> <a href="/tags/Philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/Productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/ReCAPTCHA/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/Regex/" style="font-size: 10px;">Regex</a> <a href="/tags/SVG/" style="font-size: 10.91px;">SVG</a> <a href="/tags/Security/" style="font-size: 10.91px;">Security</a> <a href="/tags/Startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TV-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/Testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/Tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/UI-UX/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/Versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/Video-review/" style="font-size: 18.18px;">Video review</a>
+      <a href="/tags/agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 11.82px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 13.64px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 13.64px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 17.27px;">Management</a> <a href="/tags/network/" style="font-size: 10px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/parser/" style="font-size: 10px;">Parser</a> <a href="/tags/philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
     </div>
   </div>
 
@@ -222,23 +222,23 @@
       <ul>
         
           <li>
-            <a href="/Commentary/commentaries-33/">簡評三十三</a>
+            <a href="/commentary/commentaries-33/">簡評三十三</a>
           </li>
         
           <li>
-            <a href="/Review/重遇未知的自己/">重遇未知的自己</a>
+            <a href="/review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/Diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
           </li>
         
           <li>
-            <a href="/Commentary/commentaries-32/">簡評三十二</a>
+            <a href="/commentary/commentaries-32/">簡評三十二</a>
           </li>
         
           <li>
-            <a href="/Review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
           </li>
         
       </ul>
@@ -272,7 +272,7 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
-  var disqus_url = 'http://199911.github.io/Review/airbnb-javascript-style/';
+  var disqus_url = 'http://199911.github.io/review/airbnb-javascript-style/';
   
   (function(){
     var dsq = document.createElement('script');
