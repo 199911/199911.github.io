@@ -88,158 +88,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="使用CSS-offset-path让元素沿着不规则路径运动"><a href="#使用CSS-offset-path让元素沿着不规则路径运动" class="headerlink" title="使用CSS offset-path让元素沿着不规则路径运动"></a><a href="http://www.zhangxinxu.com/wordpress/2017/03/offset-path-css-animation/" target="_blank" rel="noopener">使用CSS offset-path让元素沿着不规则路径运动</a></h2><p>用一個叫offset-path嘅css property去做到element按不規則嘅path去移動。條path似乎係SVG嘅path</p>
-<!--  -->
-<h2 id="Base64-Encoding-amp-Performance-Part-1-What’s-Up-with-Base64"><a href="#Base64-Encoding-amp-Performance-Part-1-What’s-Up-with-Base64" class="headerlink" title="Base64 Encoding &amp; Performance, Part 1: What’s Up with Base64?"></a><a href="https://csswizardry.com/2017/02/base64-encoding-and-performance/" target="_blank" rel="noopener">Base64 Encoding &amp; Performance, Part 1: What’s Up with Base64?</a></h2><p>有時諗住將D file encode做base64 embed入CSS會減低network connection overhead，但係唔一定好</p>
+        <h2 id="Base64-Encoding-amp-Performance-Part-1-What’s-Up-with-Base64"><a href="#Base64-Encoding-amp-Performance-Part-1-What’s-Up-with-Base64" class="headerlink" title="Base64 Encoding &amp; Performance, Part 1: What’s Up with Base64?"></a><a href="https://csswizardry.com/2017/02/base64-encoding-and-performance/" target="_blank" rel="noopener">Base64 Encoding &amp; Performance, Part 1: What’s Up with Base64?</a></h2><p>有時諗住將D file encode做base64 embed入CSS會減低network connection overhead，但係唔一定好</p>
 <ul>
 <li>base64 encoding會增加file size</li>
 <li>embed base64 入 frequently change 嘅CSS會搞到D file cache唔到</li>
 </ul>
-<h2 id="What-every-JavaScript-developer-should-know-about-Unicode"><a href="#What-every-JavaScript-developer-should-know-about-Unicode" class="headerlink" title="What every JavaScript developer should know about Unicode"></a><a href="https://dmitripavlutin.com/what-every-javascript-developer-should-know-about-unicode/" target="_blank" rel="noopener">What every JavaScript developer should know about Unicode</a></h2><ul>
-<li>Unicode provides a unique number for every character<ul>
-<li>Abstract character (or character) is a unit of information used for the organization, control or representation of textual data.</li>
-<li>Code point is a number assigned to a single character.<ul>
-<li>the range U+0000 to U+10FFFF</li>
-</ul>
-</li>
-<li>Plane is a range of 65,536 (or 1000016) contiguous Unicode code points from U+n0000 up to U+nFFFF, where n can take values from 016 to 1016.<ul>
-<li>There are 17 plane</li>
-<li>last 2 plane for private use</li>
-</ul>
-</li>
-<li>Code unit is a bit sequence used to encode each character within a given encoding form.<ul>
-<li>Computer use this to store</li>
-<li>Encoding like UTF-8 UTF-16 UTF-32 translate abstract character to code units</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>UTF-16<ul>
-<li>當16bit唔夠store個charactor果時，就會折開2個code units (Surrogate pair)</li>
-</ul>
-</li>
-<li>A grapheme, or symbol, is a minimally distinctive unit of writing in the context of a particular writing system.<ul>
-<li>姐係一粒我地睇到個字，可能由幾個code unit組成</li>
-<li>Combining mark is a character that applies to the precedent base character to create a grapheme.<ul>
-<li>字+combining mark會係個字上面加decoration，係由多個code unit組成一個graphme嘅例子</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Unicode in js<ul>
-<li>JS 係用UTF-16，所以有時一粒字，但length可以係2。</li>
-<li>Most of the JavaScript string methods are not Unicode-aware</li>
-<li>Escape unicode<ul>
-<li>\x<hex></hex></li>
-<li>\u<0000-ffff><ul>
-<li>at most 2 bytes only</li>
-</ul>
-</0000-ffff></li>
-<li>\u{1F639}<ul>
-<li>introduced in es2015</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>String comparsion<ul>
-<li>同一隻字(glyph)，係可以由唔同嘅code units 組成<ul>
-<li><code>ç</code> vs <code>c\u0327a</code></li>
-<li>可以用normalization 解決E個問題</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="谷歌是如何构建Web框架的"><a href="#谷歌是如何构建Web框架的" class="headerlink" title="谷歌是如何构建Web框架的"></a><a href="http://www.infoq.com/cn/news/2017/08/How-Google-build-Web-framework" target="_blank" rel="noopener">谷歌是如何构建Web框架的</a></h2><ul>
-<li>Google share one repo for all project<ul>
-<li>no versioning problem (all component use the same version)</li>
-<li>if you code break other teams’ code, you can fix the problem in other teams’ code, as they are in the same repo</li>
-</ul>
-</li>
-<li>Use code to refactor code when there is big update</li>
-</ul>
-<h2 id="Best-Practices-for-Long-Scrolling"><a href="#Best-Practices-for-Long-Scrolling" class="headerlink" title="Best Practices for Long Scrolling"></a><a href="https://theblog.adobe.com/best-practices-for-long-scrolling/" target="_blank" rel="noopener">Best Practices for Long Scrolling</a></h2><p>A guide for long scrolling UX, also mentioned long scrolling on E-Commerce and Parallax</p>
-<ul>
-<li>When To Use Long Scrolling?<ul>
-<li>for storytelling (creates a linear structure)</li>
-<li>for continuous and lengthy content, such as a long article or a multi-step tutorial (avoid break the content to serveral pages)</li>
-</ul>
-</li>
-<li>10 rules for good long scroll UX<ul>
-<li>Encourage Users To Scroll<ul>
-<li>By telling them what is this page about</li>
-</ul>
-</li>
-<li>Keep Navigation Options Persistent<ul>
-<li>Sticky menu</li>
-<li>mobile menu may not always be sticky, as screen is small</li>
-</ul>
-</li>
-<li>Make Sure the “Back” Button Works Properly<ul>
-<li>Back return user to the position the user scrolled, don’t require them to scroll again</li>
-</ul>
-</li>
-<li>Change URL Based on Scroll Position</li>
-<li>Consider Jump-To Options<ul>
-<li>Provide jump to section feature</li>
-</ul>
-</li>
-<li>Provide Visual Feedback When Loading New Content</li>
-<li>Don’t Hijack Scrolling<ul>
-<li>If all content on this page is tied to scrolling, the visitor is forced to browse the page at a slow pace.</li>
-</ul>
-</li>
-<li>Optimize Page-Loading Time</li>
-<li>Consider How Much Resources Your Page Consumes<ul>
-<li>Can use lazy load to resolve the problem</li>
-</ul>
-</li>
-<li>Consider User Behavior on the Page</li>
-</ul>
-</li>
-</ul>
-<h2 id="Security-101-for-SaaS-startups"><a href="#Security-101-for-SaaS-startups" class="headerlink" title="Security 101 for SaaS startups"></a><a href="https://github.com/forter/security-101-for-saas-startups" target="_blank" rel="noopener">Security 101 for SaaS startups</a></h2><p>A nice tutorial for start up founder/engineer on security. The tutorial told you what do you need to prepare in different stage of start up. It also have a list of security risks.</p>
-<h2 id="The-Cost-Of-JavaScript"><a href="#The-Cost-Of-JavaScript" class="headerlink" title="The Cost Of JavaScript"></a><a href="https://medium.com/dev-channel/the-cost-of-javascript-84009f51e99e" target="_blank" rel="noopener">The Cost Of JavaScript</a></h2><ul>
-<li>Load 1 byte javascript 嘅時間同 load 1 byte image 嘅時間長，因為js要 parse 同 execute</li>
-<li>“Time to interactive” 係一個好嘅indicator<ul>
-<li>reduce time to interactive<ul>
-<li>progressive bootstrap</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="CPU-Flame-Graphs"><a href="#CPU-Flame-Graphs" class="headerlink" title="CPU Flame Graphs"></a><a href="http://www.brendangregg.com/FlameGraphs/cpuflamegraphs.html" target="_blank" rel="noopener">CPU Flame Graphs</a></h2><p>Flame graph 係透過sampling call stack去generate出黎</p>
-<ul>
-<li>The y-axis shows stack depth</li>
-<li>The top box shows the function that was on-CPU</li>
-<li>The x-axis does not show the passing of time from left to right</li>
-<li>個box 闊，姐係execute嘅時間耐</li>
-</ul>
-<h2 id="Tap-vs-Click-Death-by-Ignorance"><a href="#Tap-vs-Click-Death-by-Ignorance" class="headerlink" title="Tap vs. Click: Death by Ignorance"></a><a href="https://coderwall.com/p/bdxjzg/tap-vs-click-death-by-ignorance" target="_blank" rel="noopener">Tap vs. Click: Death by Ignorance</a></h2><p>Mobile browser為左相容冇handle touch event嘅web page，會係touch event之後fire一個click event。但係有2個問題。</p>
-<ul>
-<li>Click event 會有D delay</li>
-<li>Event target係由一D複雜嘅heuristics去決定，touch 同 event 嘅 event target可能唔同<br>點解唔統一click 同 touch event？好似係因為有patent嘅問題。</li>
-</ul>
-<h2 id="Medium’s-CSS-is-actually-pretty-fucking-good"><a href="#Medium’s-CSS-is-actually-pretty-fucking-good" class="headerlink" title="Medium’s CSS is actually pretty fucking good."></a><a href="https://medium.com/@fat/mediums-css-is-actually-pretty-fucking-good-b8e2a6c78b06" target="_blank" rel="noopener">Medium’s CSS is actually pretty fucking good.</a></h2><p>篇文講左佢地點樣tune Medium嘅CSS</p>
-<ol>
-<li>Extract image from style sheet and lazyload them in a separated, data-url file</li>
-<li>Use icon font</li>
-<li>Set up z-index scale</li>
-<li>Style guide</li>
-<li>Design for future<ul>
-<li>Introduce new CSS variable, mixin, and classname semantics to avoid run-on classnames and improve readability</li>
-<li>Add tooling around CSS performance — to make it easier to track style changes and regressions over time</li>
-</ul>
-</li>
-<li>Improve semantics on css class name<ul>
-<li>Add prefix to distinguish css for js, style and utility</li>
-</ul>
-</li>
-</ol>
-
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-20/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">

@@ -5,17 +5,17 @@
   
   <title>簡評二十一 | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="別被自己的 CDN 背叛：來用 Subresource IntegritySubresource Integrity 提供browser一個verify 由第三方提供嘅javascript認證功能。如果個file係傳輸過程俾人惡意修改，透過checksum可以發現。 但係要用E個feature，有好多野要先準備好。  Inegrity check fail之後嘅fallback scripts 係">
+  <meta name="description" content="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。Separation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="簡評二十一">
 <meta property="og:url" content="http://199911.github.io/commentary/commentaries-21/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:description" content="別被自己的 CDN 背叛：來用 Subresource IntegritySubresource Integrity 提供browser一個verify 由第三方提供嘅javascript認證功能。如果個file係傳輸過程俾人惡意修改，透過checksum可以發現。 但係要用E個feature，有好多野要先準備好。  Inegrity check fail之後嘅fallback scripts 係">
+<meta property="og:description" content="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。Separation">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-12-27T12:42:16.934Z">
+<meta property="og:updated_time" content="2019-01-13T15:29:20.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評二十一">
-<meta name="twitter:description" content="別被自己的 CDN 背叛：來用 Subresource IntegritySubresource Integrity 提供browser一個verify 由第三方提供嘅javascript認證功能。如果個file係傳輸過程俾人惡意修改，透過checksum可以發現。 但係要用E個feature，有好多野要先準備好。  Inegrity check fail之後嘅fallback scripts 係">
+<meta name="twitter:description" content="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。Separation">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -90,68 +90,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="別被自己的-CDN-背叛：來用-Subresource-Integrity"><a href="#別被自己的-CDN-背叛：來用-Subresource-Integrity" class="headerlink" title="別被自己的 CDN 背叛：來用 Subresource Integrity"></a><a href="https://blog.mozilla.com.tw/posts/8023/subresource-integrity" target="_blank" rel="noopener">別被自己的 CDN 背叛：來用 Subresource Integrity</a></h2><p>Subresource Integrity 提供browser一個verify 由第三方提供嘅javascript認證功能。如果個file係傳輸過程俾人惡意修改，透過checksum可以發現。</p>
-<p>但係要用E個feature，有好多野要先準備好。</p>
-<ul>
-<li>Inegrity check fail之後嘅fallback scripts</li>
-<li>係CI/CD flow calculate file嘅checksum</li>
-<li>係HTML上面嘅hash要update，仲有CDN cache嘅野要handle</li>
-</ul>
+        <h2 id="A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going"><a href="#A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going" class="headerlink" title="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going"></a><a href="https://levelup.gitconnected.com/a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04" target="_blank" rel="noopener">A Brief History of CSS-in-JS: How We Got Here and Where We’re Going</a></h2><p>以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？<br>主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。<br>Separation of conern 嘅改變做就左CSS in JS.</p>
 <a id="more"></a>
-<h2 id="How-to-Write-an-Engineering-Blog"><a href="#How-to-Write-an-Engineering-Blog" class="headerlink" title="How to Write an Engineering Blog"></a><a href="https://medium.com/collaborne-engineering/how-to-write-an-engineering-blog-4e20280c0aa6" target="_blank" rel="noopener">How to Write an Engineering Blog</a></h2><p>講一間公司應該係佢地嘅engineering blog寫D咩</p>
-<ul>
-<li>Separate the engineering blog from product blog</li>
-<li>Development嘅時候已經要諗定有咩可以share</li>
-<li>Minimize writing time<ul>
-<li>Not require proofread before publish</li>
-<li>Can write other’s idea, especially they don’t gave time to write about it</li>
-<li>Use free Flicker image to illustrate the post</li>
-</ul>
-</li>
-<li>Write with a narrow focus on a topic of wide interest</li>
-<li>Use keyword-rich titles</li>
-</ul>
-<h2 id="Using-a-logbook-to-improve-your-programming"><a href="#Using-a-logbook-to-improve-your-programming" class="headerlink" title="Using a logbook to improve your programming"></a><a href="https://routley.io/tech/2017/11/23/logbook.html" target="_blank" rel="noopener">Using a logbook to improve your programming</a></h2><p>Log低每一個做左嘅task，之後可以review</p>
-<ol>
-<li>Consider the problem you’re attempting to solve</li>
-<li>Describe your method for solving it</li>
-<li>Describe the process of carrying out the method</li>
-<li>Record what happened, and ask how it could be improved<br>入邊提到一本叫How to solve it嘅書係有CS版，有時間揾黎睇下</li>
-</ol>
-<h2 id="Fresh-Work-80-15-5"><a href="#Fresh-Work-80-15-5" class="headerlink" title="Fresh Work: 80/15/5"></a><a href="https://www.facebook.com/notes/kent-beck/fresh-work-80155/1186004658099063" target="_blank" rel="noopener">Fresh Work: 80/15/5</a></h2><ul>
-<li>80% of your time goes to low-risk/reasonable-reward work</li>
-<li>15% of your time goes to related high-risk/high-reward work</li>
-<li>5% of your time goes to satisfying your own curiosity</li>
-</ul>
-<p>當新人可以take over你80%嘅 low risk work，咁之前投資嘅15% high risk work就會變成你易家嘅80%<br>而最尾果5%(2 hours per week)，有低機會變成你下一份80%，或者俾到你一個全新嘅方向</p>
-<h2 id="A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going"><a href="#A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going" class="headerlink" title="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going"></a><a href="https://levelup.gitconnected.com/a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04" target="_blank" rel="noopener">A Brief History of CSS-in-JS: How We Got Here and Where We’re Going</a></h2><p>以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？<br>主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。<br>Separation of conern 嘅改變做就左CSS in JS.</p>
-<h2 id="Exceptions-Why-throw-early-Why-catch-late"><a href="#Exceptions-Why-throw-early-Why-catch-late" class="headerlink" title="Exceptions: Why throw early? Why catch late?"></a><a href="https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late" target="_blank" rel="noopener">Exceptions: Why throw early? Why catch late?</a></h2><ul>
-<li>Software layering provide key context on how you handle expection</li>
-<li>Throw exception at the point where error occurs</li>
-<li>Rethrow exeception when you cannot handle the error, but you should add more information that would save a developer having to work through all the layers to understand the problem.</li>
-<li>Catch and handle the error when you can make the finial decision</li>
-<li>Prefer throw exception than return error</li>
-</ul>
-<h2 id="What-is-the-difference-between-“-”-and-“-”-in-Bash"><a href="#What-is-the-difference-between-“-”-and-“-”-in-Bash" class="headerlink" title="What is the difference between “$@” and “$*” in Bash?"></a><a href="https://stackoverflow.com/questions/3008695/what-is-the-difference-between-and-in-bash" target="_blank" rel="noopener">What is the difference between “$@” and “$*” in Bash?</a></h2><p>bash script入邊嘅$@係’array’ of argument，而$*就係成條嘅argument string</p>
-<h2 id="Improving-Scroll-Performance-with-Passive-Event-Listeners"><a href="#Improving-Scroll-Performance-with-Passive-Event-Listeners" class="headerlink" title="Improving Scroll Performance with Passive Event Listeners"></a><a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners" target="_blank" rel="noopener">Improving Scroll Performance with Passive Event Listeners</a></h2><ul>
-<li>Scroll jank: Laggy scroll</li>
-<li>Browser don’t know whether event handlers will cancel scrolls, so it always wait the handler finish before scroll, causing scroll jank</li>
-<li>Passive event listeners means the handlers will not cancel scrolls, so browser does not wait the handler finish</li>
-</ul>
-<h2 id="大公司里怎样开发和部署前端代码？"><a href="#大公司里怎样开发和部署前端代码？" class="headerlink" title="大公司里怎样开发和部署前端代码？"></a><a href="https://github.com/fouber/blog/issues/6" target="_blank" rel="noopener">大公司里怎样开发和部署前端代码？</a></h2><ul>
-<li>No cache -&gt; 304 server side cache -&gt; local cache</li>
-<li>Client don’t know whether assets updated, as it use local cache and do not communicate with server<ul>
-<li>add query parmeter after assets’ path (<code>?v=1.0.0</code>)</li>
-</ul>
-</li>
-<li>有時有D file內容冇變，將version換做content hash</li>
-<li>當有用CDN時，<ul>
-<li>update page先：如果有user係deploy期間訪問，始終會cache左舊嘅file</li>
-<li>update asset先：冇cache嘅user係舊page攞左新assets</li>
-<li>Solution係將hash加入file path，同時host新舊version嘅assets，但係記住要update assets先</li>
-</ul>
-</li>
-</ul>
 <h2 id="Please-Stop-Using-Local-Storage"><a href="#Please-Stop-Using-Local-Storage" class="headerlink" title="Please Stop Using Local Storage"></a><a href="https://dev.to/rdegges/please-stop-using-local-storage-1i04" target="_blank" rel="noopener">Please Stop Using Local Storage</a></h2><ul>
 <li>The article list some advantage of local storage and session storage, I am not list it here</li>
 <li>Drawback of local storage<ul>
@@ -177,6 +117,67 @@
 </ul>
 </li>
 </ul>
+<h1 id="以下無需重讀"><a href="#以下無需重讀" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="Fresh-Work-80-15-5"><a href="#Fresh-Work-80-15-5" class="headerlink" title="Fresh Work: 80/15/5"></a><a href="https://www.facebook.com/notes/kent-beck/fresh-work-80155/1186004658099063" target="_blank" rel="noopener">Fresh Work: 80/15/5</a></h2><ul>
+<li>80% of your time goes to low-risk/reasonable-reward work</li>
+<li>15% of your time goes to related high-risk/high-reward work</li>
+<li>5% of your time goes to satisfying your own curiosity</li>
+</ul>
+<p>當新人可以take over你80%嘅 low risk work，咁之前投資嘅15% high risk work就會變成你易家嘅80%<br>而最尾果5%(2 hours per week)，有低機會變成你下一份80%，或者俾到你一個全新嘅方向</p>
+<h2 id="大公司里怎样开发和部署前端代码？"><a href="#大公司里怎样开发和部署前端代码？" class="headerlink" title="大公司里怎样开发和部署前端代码？"></a><a href="https://github.com/fouber/blog/issues/6" target="_blank" rel="noopener">大公司里怎样开发和部署前端代码？</a></h2><ul>
+<li>No cache -&gt; 304 server side cache -&gt; local cache</li>
+<li>Client don’t know whether assets updated, as it use local cache and do not communicate with server<ul>
+<li>add query parmeter after assets’ path (<code>?v=1.0.0</code>)</li>
+</ul>
+</li>
+<li>有時有D file內容冇變，將version換做content hash</li>
+<li>當有用CDN時，<ul>
+<li>update page先：如果有user係deploy期間訪問，始終會cache左舊嘅file</li>
+<li>update asset先：冇cache嘅user係舊page攞左新assets</li>
+<li>Solution係將hash加入file path，同時host新舊version嘅assets，但係記住要update assets先</li>
+</ul>
+</li>
+</ul>
+<h2 id="Exceptions-Why-throw-early-Why-catch-late"><a href="#Exceptions-Why-throw-early-Why-catch-late" class="headerlink" title="Exceptions: Why throw early? Why catch late?"></a><a href="https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late" target="_blank" rel="noopener">Exceptions: Why throw early? Why catch late?</a></h2><ul>
+<li>Software layering provide key context on how you handle expection</li>
+<li>Throw exception at the point where error occurs</li>
+<li>Rethrow exeception when you cannot handle the error, but you should add more information that would save a developer having to work through all the layers to understand the problem.</li>
+<li>Catch and handle the error when you can make the finial decision</li>
+<li>Prefer throw exception than return error</li>
+</ul>
+<h2 id="Using-a-logbook-to-improve-your-programming"><a href="#Using-a-logbook-to-improve-your-programming" class="headerlink" title="Using a logbook to improve your programming"></a><a href="https://routley.io/tech/2017/11/23/logbook.html" target="_blank" rel="noopener">Using a logbook to improve your programming</a></h2><p>Log低每一個做左嘅task，之後可以review</p>
+<ol>
+<li>Consider the problem you’re attempting to solve</li>
+<li>Describe your method for solving it</li>
+<li>Describe the process of carrying out the method</li>
+<li>Record what happened, and ask how it could be improved<br>入邊提到一本叫How to solve it嘅書係有CS版，有時間揾黎睇下</li>
+</ol>
+<h2 id="別被自己的-CDN-背叛：來用-Subresource-Integrity"><a href="#別被自己的-CDN-背叛：來用-Subresource-Integrity" class="headerlink" title="別被自己的 CDN 背叛：來用 Subresource Integrity"></a><a href="https://blog.mozilla.com.tw/posts/8023/subresource-integrity" target="_blank" rel="noopener">別被自己的 CDN 背叛：來用 Subresource Integrity</a></h2><p>Subresource Integrity 提供browser一個verify 由第三方提供嘅javascript認證功能。如果個file係傳輸過程俾人惡意修改，透過checksum可以發現。</p>
+<p>但係要用E個feature，有好多野要先準備好。</p>
+<ul>
+<li>Inegrity check fail之後嘅fallback scripts</li>
+<li>係CI/CD flow calculate file嘅checksum</li>
+<li>係HTML上面嘅hash要update，仲有CDN cache嘅野要handle</li>
+</ul>
+<h2 id="How-to-Write-an-Engineering-Blog"><a href="#How-to-Write-an-Engineering-Blog" class="headerlink" title="How to Write an Engineering Blog"></a><a href="https://medium.com/collaborne-engineering/how-to-write-an-engineering-blog-4e20280c0aa6" target="_blank" rel="noopener">How to Write an Engineering Blog</a></h2><p>講一間公司應該係佢地嘅engineering blog寫D咩</p>
+<ul>
+<li>Separate the engineering blog from product blog</li>
+<li>Development嘅時候已經要諗定有咩可以share</li>
+<li>Minimize writing time<ul>
+<li>Not require proofread before publish</li>
+<li>Can write other’s idea, especially they don’t gave time to write about it</li>
+<li>Use free Flicker image to illustrate the post</li>
+</ul>
+</li>
+<li>Write with a narrow focus on a topic of wide interest</li>
+<li>Use keyword-rich titles</li>
+</ul>
+<h3 id="13-Jan-2019"><a href="#13-Jan-2019" class="headerlink" title="13 Jan 2019"></a>13 Jan 2019</h3><p>My summary is good enough</p>
+<h2 id="Improving-Scroll-Performance-with-Passive-Event-Listeners"><a href="#Improving-Scroll-Performance-with-Passive-Event-Listeners" class="headerlink" title="Improving Scroll Performance with Passive Event Listeners"></a><a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners" target="_blank" rel="noopener">Improving Scroll Performance with Passive Event Listeners</a></h2><ul>
+<li>Scroll jank: Laggy scroll</li>
+<li>Browser don’t know whether event handlers will cancel scrolls, so it always wait the handler finish before scroll, causing scroll jank</li>
+<li>Passive event listeners means the handlers will not cancel scrolls, so browser does not wait the handler finish</li>
+</ul>
+<h2 id="What-is-the-difference-between-“-”-and-“-”-in-Bash"><a href="#What-is-the-difference-between-“-”-and-“-”-in-Bash" class="headerlink" title="What is the difference between “$@” and “$*” in Bash?"></a><a href="https://stackoverflow.com/questions/3008695/what-is-the-difference-between-and-in-bash" target="_blank" rel="noopener">What is the difference between “$@” and “$*” in Bash?</a></h2><p>bash script入邊嘅$@係’array’ of argument，而$*就係成條嘅argument string</p>
 
       
     </div>

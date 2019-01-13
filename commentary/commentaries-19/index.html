@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Change, Adapt, Survival">
 <meta property="og:description" content="A quick look at the git object storeCan read git doc to know more about git’s internal  git is a key value object store. With file as value, and file’s SHA1 hash as key. git use first two charactors a">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-12-27T12:41:20.596Z">
+<meta property="og:updated_time" content="2019-01-12T16:28:35.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評十九">
 <meta name="twitter:description" content="A quick look at the git object storeCan read git doc to know more about git’s internal  git is a key value object store. With file as value, and file’s SHA1 hash as key. git use first two charactors a">
@@ -99,7 +99,64 @@
 <li>Branch is a pointer to a commit</li>
 </ul>
 <a id="more"></a>
-<h2 id="Burnout-What-Happens-When-You-Take-On-Too-Much"><a href="#Burnout-What-Happens-When-You-Take-On-Too-Much" class="headerlink" title="Burnout: What Happens When You Take On Too Much"></a><a href="https://dev.to/mary_grace/burnout-what-happens-when-you-take-on-too-much-74d" target="_blank" rel="noopener">Burnout: What Happens When You Take On Too Much</a></h2><p>Talk about how to handle burnou</p>
+<h2 id="HTML-CSS-我心目中的「完美按鈕」"><a href="#HTML-CSS-我心目中的「完美按鈕」" class="headerlink" title="[HTML/CSS] 我心目中的「完美按鈕」"></a><a href="https://medium.com/@_ktu/html-css-%E6%88%91%E5%BF%83%E7%9B%AE%E4%B8%AD%E7%9A%84-%E5%AE%8C%E7%BE%8E%E6%8C%89%E9%88%95-83ff9cc57764" target="_blank" rel="noopener">[HTML/CSS] 我心目中的「完美按鈕」</a></h2><p>整個button好似好簡單，但係實際上可以引出engineer同designer合作上嘅溝通問題。文中仲列出左比較好implement嘅button係點樣</p>
+<ul>
+<li>固定寬度以及限制文字數目</li>
+<li>字體或是內容可依照螢幕寬度改變</li>
+<li>寬度以及排版可照樣板寬度調整，但是又保有自我煞車的機制</li>
+<li>就算有斷句的狀況下也可以保持置中</li>
+</ul>
+<h2 id="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"><a href="#线上抓娃娃机的架构设计及实现，看这一篇文章就够了" class="headerlink" title="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"></a><a href="https://mp.weixin.qq.com/s?__biz=MzI4MTY5NTk4Ng==&amp;mid=2247489111&amp;idx=1&amp;sn=9413e9797ad32d06512f21a132eb7f05&amp;source=41" target="_blank" rel="noopener">线上抓娃娃机的架构设计及实现，看这一篇文章就够了</a></h2><ul>
+<li>Low latency is difficult, use some tricks make the requirement simpler but still having good UX<ul>
+<li>Only need to ensure low latency for player, not a must for audience</li>
+</ul>
+</li>
+<li>Explain their design on protocol<ul>
+<li>TCP on web but streaming is UDP</li>
+<li>Drop frame with timeout mechanism</li>
+</ul>
+</li>
+<li>Explain their infra<ul>
+<li>Load balancing</li>
+<li>Evaluate network quality from time to time<ul>
+<li>To determine the cluster position</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How to pick encoding</li>
+</ul>
+<h3 id="12-Jan-2019"><a href="#12-Jan-2019" class="headerlink" title="12 Jan 2019"></a>12 Jan 2019</h3><p>Explain detail on audio encoding.</p>
+<h2 id="The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing"><a href="#The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing" class="headerlink" title="The 100% correct way to structure a React app (or why there’s no such thing)"></a><a href="https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed" target="_blank" rel="noopener">The 100% correct way to structure a React app (or why there’s no such thing)</a></h2><p>篇文講左點樣organize react app嘅directory structure。由於有講organize嘅principle，仲有example。所以幾值得深入研究。有時間再睇。</p>
+<h2 id="How-to-Get-a-B-A-in-International-Relations-in-5-Minutes"><a href="#How-to-Get-a-B-A-in-International-Relations-in-5-Minutes" class="headerlink" title="How to Get a B.A. in International Relations in 5 Minutes"></a><a href="https://foreignpolicy.com/2014/05/19/how-to-get-a-b-a-in-international-relations-in-5-minutes/" target="_blank" rel="noopener">How to Get a B.A. in International Relations in 5 Minutes</a></h2><p>簡介International relation嘅一D中心assumption同思考角度。</p>
+<ol>
+<li>Anarchy<ul>
+<li>There is no authoritative judge or central authority in international relation</li>
+</ul>
+</li>
+<li>The balance of Power<ul>
+<li>tells you a lot about how states identify potential allies</li>
+</ul>
+</li>
+<li>Comparative Advantage<ul>
+<li>states will be better off if they all specialize in producing items in which they have some relative advantage</li>
+</ul>
+</li>
+<li>Misperception and Miscalculation<ul>
+<li>National leaders (and sometimes whole countries) frequently misunderstand each other and often do remarkably stupid things</li>
+</ul>
+</li>
+<li>Social Construction<ul>
+<li>Human are often shaped by changing norms and identities, and that these norms and identities are themselves are neither divinely ordained nor fixed</li>
+</ul>
+</li>
+</ol>
+<p>金句</p>
+<ul>
+<li>A wise friend of mine likes to say that most of international politics can be summed up in three words: fear, greed, and stupidity.</li>
+</ul>
+<h3 id="13-Jan-2019"><a href="#13-Jan-2019" class="headerlink" title="13 Jan 2019"></a>13 Jan 2019</h3><p>It is paid content, clicking the link consume your quota. I guess the summary is good enough.</p>
+<h1 id="以下無需重讀"><a href="#以下無需重讀" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="Burnout-What-Happens-When-You-Take-On-Too-Much"><a href="#Burnout-What-Happens-When-You-Take-On-Too-Much" class="headerlink" title="Burnout: What Happens When You Take On Too Much"></a><a href="https://dev.to/mary_grace/burnout-what-happens-when-you-take-on-too-much-74d" target="_blank" rel="noopener">Burnout: What Happens When You Take On Too Much</a></h2><p>Talk about how to handle burnout</p>
 <h3 id="Handle-burnout"><a href="#Handle-burnout" class="headerlink" title="Handle burnout"></a>Handle burnout</h3><ul>
 <li>Schedule Time Off<ul>
 <li>need to actually disconnect, such as disable notification or turn on do not disturb</li>
@@ -123,67 +180,13 @@
 </ul>
 </li>
 </ul>
+<h3 id="12-Jan-2019-1"><a href="#12-Jan-2019-1" class="headerlink" title="12 Jan 2019"></a>12 Jan 2019</h3><p>The summary is good enough</p>
 <h2 id="9-Promising-Promise-Tips"><a href="#9-Promising-Promise-Tips" class="headerlink" title="9 Promising Promise Tips"></a><a href="https://dev.to/kepta/promising-promise-tips--c8f" target="_blank" rel="noopener">9 Promising Promise Tips</a></h2><p>Simple but easy to read basic tutorial on Promise</p>
-<h2 id="HTML-CSS-我心目中的「完美按鈕」"><a href="#HTML-CSS-我心目中的「完美按鈕」" class="headerlink" title="[HTML/CSS] 我心目中的「完美按鈕」"></a><a href="https://medium.com/@_ktu/html-css-%E6%88%91%E5%BF%83%E7%9B%AE%E4%B8%AD%E7%9A%84-%E5%AE%8C%E7%BE%8E%E6%8C%89%E9%88%95-83ff9cc57764" target="_blank" rel="noopener">[HTML/CSS] 我心目中的「完美按鈕」</a></h2><p>整個button好似好簡單，但係實際上可以引出engineer同designer合作上嘅溝通問題。文中仲列出左比較好implement嘅button係點樣</p>
-<ul>
-<li>固定寬度以及限制文字數目</li>
-<li>字體或是內容可依照螢幕寬度改變</li>
-<li>寬度以及排版可照樣板寬度調整，但是又保有自我煞車的機制</li>
-<li>就算有斷句的狀況下也可以保持置中</li>
-</ul>
 <h2 id="Avoid-Burnout-and-Get-Back-to-the-Basics"><a href="#Avoid-Burnout-and-Get-Back-to-the-Basics" class="headerlink" title="Avoid Burnout and Get Back to the Basics"></a><a href="https://dev.to/restoreddev/avoid-burnout-and-get-back-to-the-basics-4j46" target="_blank" rel="noopener">Avoid Burnout and Get Back to the Basics</a></h2><ul>
 <li>Do Not Try to Learn Every New Programming Language</li>
 <li>Focus on Writing Good Tests and Secure Software</li>
 </ul>
-<h2 id="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"><a href="#线上抓娃娃机的架构设计及实现，看这一篇文章就够了" class="headerlink" title="线上抓娃娃机的架构设计及实现，看这一篇文章就够了"></a><a href="https://mp.weixin.qq.com/s?__biz=MzIwMzg1ODcwMw%3D%3D&amp;mid=2247487567&amp;idx=1&amp;sn=13f3842928f075bcdf47ff6b88605f1e&amp;chksm=96c9a62fa1be2f39b9194a6f9a797f8deb79bdea5e10f3c2a12b4791493e7cf561030fde148c#rd" target="_blank" rel="noopener">线上抓娃娃机的架构设计及实现，看这一篇文章就够了</a></h2><ul>
-<li>Low latency is difficult, use some tricks make the requirement simpler but still having good UX<ul>
-<li>Only need to ensure low latency for player, not a must for audience</li>
-</ul>
-</li>
-<li>Explain their design on protocol<ul>
-<li>TCP on web but streaming is UDP</li>
-<li>Drop frame with timeout mechanism</li>
-</ul>
-</li>
-<li>Explain their infra<ul>
-<li>Load balancing</li>
-<li>Evaluate network quality from time to time<ul>
-<li>To determine the cluster position</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>How to pick encoding</li>
-</ul>
 <h2 id="Riemann’s-paradox-pi-infinity-minus-infinity"><a href="#Riemann’s-paradox-pi-infinity-minus-infinity" class="headerlink" title="Riemann’s paradox: pi = infinity minus infinity"></a><a href="https://ed.ted.com/featured/JLpGMgtS" target="_blank" rel="noopener">Riemann’s paradox: pi = infinity minus infinity</a></h2><p>透過rearrange infinite sequence嘅次序，就可以改變個sequence嘅sum</p>
-<h2 id="The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing"><a href="#The-100-correct-way-to-structure-a-React-app-or-why-there’s-no-such-thing" class="headerlink" title="The 100% correct way to structure a React app (or why there’s no such thing)"></a><a href="https://hackernoon.com/the-100-correct-way-to-structure-a-react-app-or-why-theres-no-such-thing-3ede534ef1ed" target="_blank" rel="noopener">The 100% correct way to structure a React app (or why there’s no such thing)</a></h2><p>篇文講左點樣organize react app嘅directory structure。由於有講organize嘅principle，仲有example。所以幾值得深入研究。有時間再睇。</p>
-<h2 id="How-to-Get-a-B-A-in-International-Relations-in-5-Minutes"><a href="#How-to-Get-a-B-A-in-International-Relations-in-5-Minutes" class="headerlink" title="How to Get a B.A. in International Relations in 5 Minutes"></a><a href="https://foreignpolicy.com/2014/05/19/how-to-get-a-b-a-in-international-relations-in-5-minutes/" target="_blank" rel="noopener">How to Get a B.A. in International Relations in 5 Minutes</a></h2><p>簡介International relation嘅一D中心assumption同思考角度。</p>
-<ol>
-<li>Anarchy<ul>
-<li>There is no authoritative judge or central authority in international relation</li>
-</ul>
-</li>
-<li>The balance of Power<ul>
-<li>tells you a lot about how states identify potential allies</li>
-</ul>
-</li>
-<li>Comparative Advantage<ul>
-<li>states will be better off if they all specialize in producing items in which they have some relative advantage</li>
-</ul>
-</li>
-<li>Misperception and Miscalculation<ul>
-<li>ational leaders (and sometimes whole countries) frequently misunderstand each other and often do remarkably stupid things</li>
-</ul>
-</li>
-<li>Social Construction<ul>
-<li>Human are often shaped by changing norms and identities, and that these norms and identities are themselves are neither divinely ordained nor fixed</li>
-</ul>
-</li>
-</ol>
-<p>金句</p>
-<ul>
-<li>A wise friend of mine likes to say that most of international politics can be summed up in three words: fear, greed, and stupidity.</li>
-</ul>
 <h2 id="Gladius-Using-Blockchain-As-Global-CDN-amp-DDoS-Mitigation-System"><a href="#Gladius-Using-Blockchain-As-Global-CDN-amp-DDoS-Mitigation-System" class="headerlink" title="Gladius Using Blockchain As Global CDN &amp; DDoS Mitigation System"></a><a href="https://www.newsbtc.com/2017/10/02/gladius-using-blockchain-global-cdn-ddos-mitigation-system/" target="_blank" rel="noopener">Gladius Using Blockchain As Global CDN &amp; DDoS Mitigation System</a></h2><p>如果你D server有足夠嘅bandwidth，用以用Gladius嘅service租出去，幫人地擋DDoS，或姐俾人當CDN用。E成個trading system， Gladius係用blockchain去implement</p>
 
       
