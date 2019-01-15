@@ -88,28 +88,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="So-you’re-stuck"><a href="#So-you’re-stuck" class="headerlink" title="So you’re stuck"></a><a href="https://dev.to/isaacandsuch/so-youre-stuck-30el" target="_blank" rel="noopener">So you’re stuck</a></h2><ol>
-<li>Be self-aware<ul>
-<li>Taking care of yourself and paying attention to the way you feel</li>
+        <h2 id="Why-vendors-perform-code-diagnostics-before-taking-over-an-app-developed-by-a-third-party"><a href="#Why-vendors-perform-code-diagnostics-before-taking-over-an-app-developed-by-a-third-party" class="headerlink" title="Why vendors perform code diagnostics before taking over an app developed by a third party"></a><a href="https://blog.oursky.com/2018/03/19/code-review-better-software-project-estimate/" target="_blank" rel="noopener">Why vendors perform code diagnostics before taking over an app developed by a third party</a></h2><p>2 steps before taking over the code base</p>
+<ul>
+<li>Codebase review<ul>
+<li>is it complete (and matches the deployed version)</li>
+<li>does it have clear commit messages</li>
+<li>is it easy to setup the environment</li>
 </ul>
 </li>
-<li>Timebox your frustration</li>
-<li>Rubber-duck it</li>
-<li>Draw it</li>
-<li>Take five<ul>
-<li>After you understand the problem, take a break</li>
+<li>Exploratory test<ul>
+<li>find out bugs in the existing product</li>
+<li>understand what needs to be fixed, or what bugs existed prior to any new development work</li>
 </ul>
 </li>
-<li>Ask for help</li>
-<li>Isolate the problem</li>
-<li>Ask the Internet<ul>
-<li>Describe the problem and prepare code sample</li>
-<li>Find a friend to read what you write</li>
-<li>Ask for help on Internet</li>
 </ul>
-</li>
-<li>Find a workaround<br>Finally: Document the solution</li>
-</ol>
+<h3 id="14-Jan-2019"><a href="#14-Jan-2019" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><p>Good to know how vendor take over an unknown code base.</p>
         
           <p class="article-more-link">
             <a href="/commentary/commentaries-24/#more">Read More</a>
@@ -487,7 +480,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Winning-at-Rock-Paper-Scissors"><a href="#Winning-at-Rock-Paper-Scissors" class="headerlink" title="Winning at Rock Paper Scissors"></a><a href="https://ed.ted.com/featured/kK5wpbjf" target="_blank" rel="noopener">Winning at Rock Paper Scissors</a></h2><p>就算個system係公平，但係人嘅decision係irration，始終存在策略<br>Stragegy: play backward (Rock -&gt; Scissor -&gt; Paper)</p>
+        <h2 id="MonolithFirst"><a href="#MonolithFirst" class="headerlink" title="MonolithFirst"></a><a href="https://martinfowler.com/bliki/MonolithFirst.html" target="_blank" rel="noopener">MonolithFirst</a></h2><ul>
+<li>You shouldn’t start a new project with microservices, even if you’re sure your application will be big enough to make it worthwhile.<ul>
+<li>This remind me “Pattern is discovered, not invented”</li>
+</ul>
+</li>
+<li>It is difficult to refactor services with wrong bounded contexts.<ul>
+<li>Better identify the boundaries by building monolith architecture</li>
+</ul>
+</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/commentary/commentaries-22/#more">Read More</a>

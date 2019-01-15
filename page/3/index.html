@@ -260,212 +260,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在壓力之下人要如何「防呆」？"><a href="#在壓力之下人要如何「防呆」？" class="headerlink" title="在壓力之下人要如何「防呆」？"></a><a href="http://pansci.asia/archives/127198" target="_blank" rel="noopener">在壓力之下人要如何「防呆」？</a></h2><ul>
-<li>所有講究精準的任務，在高度壓力下都會失焦</li>
-<li><p>係高壓環境工作嘅專業人士有工種方法</p>
-<ul>
-<li>壓力預防（stress inoculation）</li>
-<li>反覆練習</li>
-</ul>
-</li>
-<li><p>金句</p>
-<ul>
-<li>Stressed is just desserts if you can reverse</li>
-</ul>
-</li>
-</ul>
-<h2 id="Git-hook-Lost-the-reference"><a href="#Git-hook-Lost-the-reference" class="headerlink" title="Git hook (Lost the reference)"></a>Git hook (Lost the reference)</h2><p>Hooks are local to git repo, will not be copy when clone repo<br>Local vs server-side hook</p>
-<ul>
-<li>Local hooks<ul>
-<li>pre hooks let you alter the action</li>
-<li>post hooks only for notification</li>
-<li>Pre commit<ul>
-<li>can use this to inspect the snapshot which is going to commit</li>
-<li>return non zero value abort the commit</li>
-</ul>
-</li>
-<li>Prepare commit message<ul>
-<li>A good place to alter the automatically generated commit messages for squashed or merged commits. (Auto correct spell check?)</li>
-</ul>
-</li>
-<li>Commit message<ul>
-<li>Call after user enter commit message</li>
-</ul>
-</li>
-<li>Post commit<ul>
-<li>Good place for notifying commit action to other server (send email to other after commit)</li>
-</ul>
-</li>
-<li>Post checkout hook<ul>
-<li>Good place for clearing out generated files in working directory to prevent confusion (dist/</li>
-</ul>
-</li>
-<li>Pre rebase<ul>
-<li>Good place to prevent user rebase branch</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Server side hooks<ul>
-<li>Pre receive<ul>
-<li>Call once when git push is executed</li>
-<li>Can reject user pushing bad commit</li>
-<li>Other commit use case<ul>
-<li>Reject changes involve an upstream rebase</li>
-<li>Preventing non-fast-forward merges</li>
-<li>Checking user permissions</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Update<ul>
-<li>It is execute for each branch push (a push can update multiple branches)</li>
-</ul>
-</li>
-<li>Post receive<ul>
-<li>Better place then post commit for notification, because the commit is public now</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Seems there are also other hooks</li>
-</ul>
-<h2 id="An-Overview-of-Caching-Methods"><a href="#An-Overview-of-Caching-Methods" class="headerlink" title="An Overview of Caching Methods"></a><a href="https://blog.codeship.com/an-overview-of-caching-methods/" target="_blank" rel="noopener">An Overview of Caching Methods</a></h2><ul>
+        <h2 id="An-Overview-of-Caching-Methods"><a href="#An-Overview-of-Caching-Methods" class="headerlink" title="An Overview of Caching Methods"></a><a href="https://blog.codeship.com/an-overview-of-caching-methods/" target="_blank" rel="noopener">An Overview of Caching Methods</a></h2><ul>
 <li>Two main caching categories<ul>
 <li>time base</li>
 <li>content base</li>
 </ul>
 </li>
 </ul>
-<h2 id="What’s-Next-Exploring-the-future-of-React-now"><a href="#What’s-Next-Exploring-the-future-of-React-now" class="headerlink" title="What’s Next? Exploring the future of React, now"></a><a href="https://www.youtube.com/watch?v=MxFfUs6sYnw" target="_blank" rel="noopener">What’s Next? Exploring the future of React, now</a></h2><p>This video talk about design concept of Next.js</p>
-<ul>
-<li>Static is a subset of dynamic</li>
-<li>Will have less powerful machine to code -&gt; defer build to cloud</li>
-<li>Send manifest only not built files -&gt; dev machine network is not good enough</li>
-<li>Reduce dependency, config the pipeline for you</li>
-<li>Code sharing between back end and front end is impossible. Backend render some HTML and front end take over the rendering</li>
-<li>React lifecycle concept help universal rendering<ul>
-<li>separate data and render logic (next add a get init prop hook for server side rendering, so the component can be reused in backend and frontend)</li>
+<h3 id="14-Jan-2019"><a href="#14-Jan-2019" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><ul>
+<li>Caching challenges<ul>
+<li>Expire by time</li>
+<li>Expire by update</li>
 </ul>
 </li>
-<li>Each page is individual, no default common header and footer</li>
-</ul>
-<h2 id="How-long-do-browsers-cache-HTTP-301s"><a href="#How-long-do-browsers-cache-HTTP-301s" class="headerlink" title="How long do browsers cache HTTP 301s?"></a><a href="https://stackoverflow.com/questions/9130422/how-long-do-browsers-cache-http-301s" target="_blank" rel="noopener">How long do browsers cache HTTP 301s?</a></h2><p>Avoid 301 cache, as it the cache default have no expire date.</p>
-<h2 id="HAProxy从零开始到掌握"><a href="#HAProxy从零开始到掌握" class="headerlink" title="HAProxy从零开始到掌握"></a><a href="https://www.jianshu.com/p/c9f6d55288c0" target="_blank" rel="noopener">HAProxy从零开始到掌握</a></h2><ul>
-<li>Load balancer</li>
-<li>Provide L4 (TCP) and L7 (HTTP) load balancing</li>
-<li>Support different load balance hash algo</li>
-<li>Rewrite cookies</li>
-<li>URL redirect</li>
-<li>Parse SSL, redirect HTTPS to server as HTTP</li>
-<li>Monitor and stats</li>
-</ul>
-<h2 id="Exceptions-Why-throw-early-Why-catch-late"><a href="#Exceptions-Why-throw-early-Why-catch-late" class="headerlink" title="Exceptions: Why throw early? Why catch late?"></a><a href="https://softwareengineering.stackexchange.com/questions/231057/exceptions-why-throw-early-why-catch-late" target="_blank" rel="noopener">Exceptions: Why throw early? Why catch late?</a></h2><p>Related to system boundary and layer<br>3 ways to handle</p>
-<ol>
-<li>catch -&gt; rethrow</li>
-<li>catch -&gt; handle</li>
-<li>catch -&gt; error return</li>
-</ol>
-<h2 id="Recommendation-system"><a href="#Recommendation-system" class="headerlink" title="Recommendation system"></a><a href="https://www.facebook.com/groups/616369245163622/permalink/1191340024333205/" target="_blank" rel="noopener">Recommendation system</a></h2><p>Collaborative filtering</p>
-<ul>
-<li>Cluster user -&gt; give suggestion base on the action of user in the same cluster</li>
-<li>Don’t need to understand the semantic of the action, just send the recommendation base on similar user’s action</li>
-<li>Have open source solution</li>
-<li>Require ppl with data mining knowledge</li>
-<li>Difficult to evaluate cluster performance</li>
-<li>Need someone to interpret the user cluster</li>
-<li>Need time to build up recommendation of new object (need to wait user reaction)<br>Content based</li>
-<li>Build user profile by user history, find recommendation base on user profile</li>
-<li>Build recommendation quicker, don’t need to wait user</li>
-<li>User profile easier to understand</li>
-<li>Don’t need data mining?</li>
-<li>Need NLP, add tags</li>
-<li>Build system to track tags</li>
-</ul>
-<h2 id="測試案例設計入門"><a href="#測試案例設計入門" class="headerlink" title="測試案例設計入門"></a><a href="https://hackmd.io/s/HJmQYaknZ" target="_blank" rel="noopener">測試案例設計入門</a></h2><ul>
-<li>Balance quality, speed and cost</li>
-<li>Need to understand business use case to good test spec</li>
-<li>Test base on tech spec vs businesss<ul>
-<li>Thoughts<ul>
-<li>after we have separate the module for tech requirement and business requirement, it is easy to know which test to write</li>
-<li>unit test for technical requirement, integration test for business requirement</li>
+<li>Common cache methods<ul>
+<li>Browser caching<ul>
+<li>It talks about HTTP cache header, re-read when needed</li>
 </ul>
 </li>
-<li>They are not conflict, good spec should take care both business use case and tech spec</li>
+<li>Application-level cache<ul>
+<li>In memory cache for slow functions</li>
 </ul>
 </li>
-<li>Test need to have priority</li>
-<li>V model<ul>
-<li>Acceptance Testing<ul>
-<li>Test do in early stage, not much tech details</li>
-</ul>
-</li>
-<li>System Testing<ul>
-<li>Involve more tech details</li>
-<li>We can use 等價類劃分法 and 邊界值分析 to define test cases</li>
-</ul>
-</li>
-<li>Integration Testing<ul>
-<li>No clear definition</li>
-</ul>
-</li>
-<li>Unit Testing<ul>
-<li>Test small units</li>
-<li>Useful during refactoring</li>
+<li>Key-value data caching<ul>
+<li>Centralized cache like Redis</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Select which platform to test<ul>
-<li>最舊的版本</li>
-<li>最新的版本</li>
-<li>最小的螢幕</li>
-<li>最大的螢幕</li>
-<li>最多人使用</li>
 </ul>
-</li>
-<li>Pairwise Testing<ul>
-<li>No idea what is it</li>
-</ul>
-</li>
-<li>Test case order<ul>
-<li>新功能測試</li>
-<li>回歸測試<ul>
-<li>探索測試<ul>
-<li>由tester隨心咁試</li>
-<li>仰賴的是測試人員對於產品與技術的熟悉程度</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>驗收測試</li>
-</ul>
-</li>
-</ul>
-<h2 id="Reduced-Test-Cases"><a href="#Reduced-Test-Cases" class="headerlink" title="Reduced Test Cases"></a><a href="https://css-tricks.com/reduced-test-cases/" target="_blank" rel="noopener">Reduced Test Cases</a></h2><p>This article is focus on reduced test case for web page, but the principle can be apply to other area.</p>
-<ul>
-<li>A reduced test case is a demo/example page you create which reproduces the problem you are having with the least amount of code possible<ul>
-<li>Help isolate the problem</li>
-<li>Easier for others to help you</li>
-</ul>
-</li>
-<li>How to set up a reduced test case<ul>
-<li>Make it static<ul>
-<li>mock the dependencies (data, function call, 3rd party api, etc)</li>
-</ul>
-</li>
-<li>Make it isolated<ul>
-<li>Move the related codes to a separated project/repo</li>
-</ul>
-</li>
-<li>Remove the code not related to the problem</li>
-<li>Document it</li>
-</ul>
-</li>
-<li>You need to know the core problem, before asking for help</li>
-</ul>
-<h2 id="Maintaning-more-than-65535-connections-on-single-IP"><a href="#Maintaning-more-than-65535-connections-on-single-IP" class="headerlink" title="Maintaning more than 65535 connections on single IP"></a><a href="https://stackoverflow.com/questions/36172875/maintaning-more-than-65535-connections-on-single-ip" target="_blank" rel="noopener">Maintaning more than 65535 connections on single IP</a></h2><p>之前對socket有一個誤解：部機最多有65535個port，每一個connection要用一個port，咁一個server點同時handle到10k嘅connections?<br>解說：個server application只需要用一個port黎listen client，無論有幾多個connection連過黎，都只需要用一個port。反之，一個server每連出去外面一個application，就要用一個port，因此一部機最多連去65535部機。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-25/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">

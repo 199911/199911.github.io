@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Change, Adapt, Survival">
 <meta property="og:description" content="發現開始有太多article save低左冇時間睇。有D文就算仔細睇，都係得着唔多。嘗試用limited time速睇，就算睇未曬或睇唔明都要process左先，好過積住係度。 一至千萬的藝術（二）– 從零蓋起雲端儲存的巨量倉庫「一致性雜湊環〈Consistent hash ring〉可以令re-shard果時唔洗成個database D record都要搬，更加易scale。DynamoDB 好">
 <meta property="og:locale" content="commentary">
-<meta property="og:updated_time" content="2018-12-27T12:44:21.953Z">
+<meta property="og:updated_time" content="2019-01-15T13:03:23.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="簡評二十三">
 <meta name="twitter:description" content="發現開始有太多article save低左冇時間睇。有D文就算仔細睇，都係得着唔多。嘗試用limited time速睇，就算睇未曬或睇唔明都要process左先，好過積住係度。 一至千萬的藝術（二）– 從零蓋起雲端儲存的巨量倉庫「一致性雜湊環〈Consistent hash ring〉可以令re-shard果時唔洗成個database D record都要搬，更加易scale。DynamoDB 好">
@@ -114,20 +114,6 @@
 </ul>
 </li>
 </ul>
-<h2 id="如何时刻保持在目标的正确轨道上"><a href="#如何时刻保持在目标的正确轨道上" class="headerlink" title="如何时刻保持在目标的正确轨道上"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html" target="_blank" rel="noopener">如何时刻保持在目标的正确轨道上</a></h2><p>養成習慣係堅持目標上面有好大幫助。</p>
-<ul>
-<li>Set due date</li>
-<li>保持身體在最佳狀態</li>
-<li>計劃其中一個作用係俾自己一個反思嘅機會<ul>
-<li>了解到平時有D工作係自己忽略左</li>
-<li>了解到現實有好多意外，要隨時修正</li>
-</ul>
-</li>
-<li>係固定嘅時間做固定嘅野<ul>
-<li>身體一但習慣，就會事先準備好，咁就可以更有productivity</li>
-</ul>
-</li>
-</ul>
 <h2 id="高级程序员应具有的素质"><a href="#高级程序员应具有的素质" class="headerlink" title="高级程序员应具有的素质"></a><a href="http://www.cnblogs.com/flying_bat/archive/2009/05/20/1467324.html" target="_blank" rel="noopener">高级程序员应具有的素质</a></h2><ol>
 <li>理解requirement<ul>
 <li>要從user冇technical background嘅feature request歸納出背後需要，預先計劃</li>
@@ -149,6 +135,7 @@
 </ul>
 </li>
 </ol>
+<h3 id="14-Jan-2019"><a href="#14-Jan-2019" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><p>Does the points work with Agile development?</p>
 <h2 id="Learning-DDD-as-a-Team"><a href="#Learning-DDD-as-a-Team" class="headerlink" title="Learning DDD as a Team"></a><a href="https://dzone.com/articles/learning-ddd-as-a-team" target="_blank" rel="noopener">Learning DDD as a Team</a></h2><p>This article talk about how their team run DDD and their restrospect:</p>
 <ul>
 <li>Activities when running DDD</li>
@@ -158,19 +145,39 @@
 </ul>
 <h2 id="Please-Stop-Using-Local-Storage"><a href="#Please-Stop-Using-Local-Storage" class="headerlink" title="Please Stop Using Local Storage"></a><a href="https://dev.to/rdegges/please-stop-using-local-storage-1i04" target="_blank" rel="noopener">Please Stop Using Local Storage</a></h2><p>This article talk about the drawback of local storage</p>
 <ul>
-<li>It can only store string</li>
-<li>Local storage api is sync (blocking)</li>
-<li>Cannot be used by web worker</li>
+<li>Drawback of local storage<ul>
+<li>Only store string</li>
+<li>It is synchronous</li>
+<li>Cannot be used by web workers</li>
 <li>Have limited storage</li>
 <li>Not secure, as all js can access it (XSS)<ul>
 <li>Important point</li>
 <li>Never save JWT in session storage<br>Where to save sensitive information</li>
+</ul>
+</li>
 <li>Use cookies</li>
 <li>Set cookies to http only</li>
 <li>Set SameSite=strict and secure=true (SSL)</li>
 <li>Use session with cookies<br>Non string data</li>
 <li>Use IndexedDB</li>
 <li>Can use with Cache API to handle offline case</li>
+</ul>
+</li>
+</ul>
+<h2 id="Scaling-Scrum-Why-Scrum-Masters-SHOULD-NOT-be-coordinating-between-Development-Teams"><a href="#Scaling-Scrum-Why-Scrum-Masters-SHOULD-NOT-be-coordinating-between-Development-Teams" class="headerlink" title="Scaling Scrum:Why Scrum Masters SHOULD NOT be coordinating between Development Teams"></a><a href="https://www.linkedin.com/pulse/scaling-scrumwhy-scrum-masters-should-coordinating-srinivasan-cst/" target="_blank" rel="noopener">Scaling Scrum:Why Scrum Masters SHOULD NOT be coordinating between Development Teams</a></h2><p>文中嘅問題係team嘅responsibility拆得唔岩，並解釋咁拆會有咩問題。<br>每條team應該係獨立build一個customer facing嘅feature。</p>
+<h3 id="14-Jan-2019-1"><a href="#14-Jan-2019-1" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><p>Re-read after I have more solid understanding in scrum.</p>
+<h2 id="About-“Difficult-Conversations”-book-recommended-by-Phil-Haack"><a href="#About-“Difficult-Conversations”-book-recommended-by-Phil-Haack" class="headerlink" title="About “Difficult Conversations” (book recommended by Phil Haack)"></a><a href="https://dev.to/elemarjr/about-difficult-conversations-book-recommended-by-phil-haack--1ahc" target="_blank" rel="noopener">About “Difficult Conversations” (book recommended by Phil Haack)</a></h2><p>Decipher the underlying structure of every difficult conversation<br>Start a conversation without defensiveness<br>Listen for the meaning of what is not said<br>Stay balanced in the face of attacks and accusations<br>Move from emotion to productive problem solving</p>
+<h1 id="以下無需重讀"><a href="#以下無需重讀" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="如何时刻保持在目标的正确轨道上"><a href="#如何时刻保持在目标的正确轨道上" class="headerlink" title="如何时刻保持在目标的正确轨道上"></a><a href="http://www.cnblogs.com/flying_bat/archive/2007/11/15/959875.html" target="_blank" rel="noopener">如何时刻保持在目标的正确轨道上</a></h2><p>養成習慣係堅持目標上面有好大幫助。</p>
+<ul>
+<li>Set due date</li>
+<li>保持身體在最佳狀態</li>
+<li>計劃其中一個作用係俾自己一個反思嘅機會<ul>
+<li>了解到平時有D工作係自己忽略左</li>
+<li>了解到現實有好多意外，要隨時修正</li>
+</ul>
+</li>
+<li>係固定嘅時間做固定嘅野<ul>
+<li>身體一但習慣，就會事先準備好，咁就可以更有productivity</li>
 </ul>
 </li>
 </ul>
@@ -202,8 +209,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Scaling-Scrum-Why-Scrum-Masters-SHOULD-NOT-be-coordinating-between-Development-Teams"><a href="#Scaling-Scrum-Why-Scrum-Masters-SHOULD-NOT-be-coordinating-between-Development-Teams" class="headerlink" title="Scaling Scrum:Why Scrum Masters SHOULD NOT be coordinating between Development Teams"></a><a href="https://www.linkedin.com/pulse/scaling-scrumwhy-scrum-masters-should-coordinating-srinivasan-cst/" target="_blank" rel="noopener">Scaling Scrum:Why Scrum Masters SHOULD NOT be coordinating between Development Teams</a></h2><p>文中嘅問題係team嘅responsibility拆得唔岩，並解釋咁拆會有咩問題。<br>每條team應該係獨立build一個customer facing嘅feature。</p>
-<h2 id="About-“Difficult-Conversations”-book-recommended-by-Phil-Haack"><a href="#About-“Difficult-Conversations”-book-recommended-by-Phil-Haack" class="headerlink" title="About “Difficult Conversations” (book recommended by Phil Haack)"></a><a href="https://dev.to/elemarjr/about-difficult-conversations-book-recommended-by-phil-haack--1ahc" target="_blank" rel="noopener">About “Difficult Conversations” (book recommended by Phil Haack)</a></h2><p>Decipher the underlying structure of every difficult conversation<br>Start a conversation without defensiveness<br>Listen for the meaning of what is not said<br>Stay balanced in the face of attacks and accusations<br>Move from emotion to productive problem solving</p>
+<h3 id="14-Jan-2019-2"><a href="#14-Jan-2019-2" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><p>The summary is good enough</p>
 
       
     </div>
