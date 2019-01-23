@@ -62,6 +62,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-commentaries-34" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-34/" class="article-date">
+  <time datetime="2018-01-22T16:00:00.000Z" itemprop="datePublished">2018-01-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-34/">簡評三十四</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Shared-Code：讓我們變成博格人吧"><a href="#Shared-Code：讓我們變成博格人吧" class="headerlink" title="Shared Code：讓我們變成博格人吧"></a><a href="http://teddy-chen-tw.blogspot.com/2010/03/shared-code.html" target="_blank" rel="noopener">Shared Code：讓我們變成博格人吧</a></h2><ul>
+<li>Sharded code 嘅好處<ul>
+<li>高品質的 source code<ul>
+<li>怕被人笑寫爛code</li>
+</ul>
+</li>
+<li>提高工作分派的彈性<ul>
+<li>個個都有掂過下唔同野</li>
+</ul>
+</li>
+<li>提昇開發人員的技能<ul>
+<li>輪流做唔同嘅野，互相學習寫嘅code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引入Shared code嘅步驟<ol>
+<li>開頭按專長同興趣分組</li>
+<li>引入CI<ul>
+<li>確保唔同人寫嘅code可以integrate到</li>
+</ul>
+</li>
+<li>要求寫unit test</li>
+<li>等系統雛型大致穩定之後，鼓勵大家 pair programming<ul>
+<li>最少一到兩個月</li>
+</ul>
+</li>
+<li>Keep住，直至每一個模組至少都有兩個人非常熟悉</li>
+</ol>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-34/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-34/" data-id="cjr9d3e7l0002qp65g24bzpxh" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-34/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-quirkology" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/quirkology/" class="article-date">
@@ -121,6 +198,66 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-deployment-strategies" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/deployment-strategies/" class="article-date">
+  <time datetime="2018-01-09T16:00:00.000Z" itemprop="datePublished">2018-01-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/deployment-strategies/">Six Strategies for Application Deployment</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Six-Strategies-for-Application-Deployment"><a href="#Six-Strategies-for-Application-Deployment" class="headerlink" title="Six Strategies for Application Deployment"></a><a href="https://thenewstack.io/deployment-strategies/?utm_content=buffer07391&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="_blank" rel="noopener">Six Strategies for Application Deployment</a></h1><p>Recreate</p>
+<ul>
+<li>Version A is terminated then version B is rolled out.</li>
+<li>High down time<br>Ramped (also known as rolling-update or incremental)</li>
+<li>Version B is slowly rolled out and replacing version A.</li>
+<li>Both new and old version exist during deployment, need to support multiple version at the same time<br>Blue/Green</li>
+<li>Version B is released alongside version A, then the traffic is switched to version B.<br>Canary</li>
+<li>Version B is released to a subset of users, then proceed to a full rollout.</li>
+<li>Usually used when low confidence on new release<br>A/B testing</li>
+<li>Version B is released to a subset of users under specific condition.</li>
+<li>Requires intelligent load balancer</li>
+<li>Difficult to troubleshoot erros for a given session<br>Shadow</li>
+<li>Version B receives real-world traffic alongside version A and doesn’t impact the response</li>
+<li>Can test system load</li>
+<li>Complex to set up, need to mock service</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/deployment-strategies/" data-id="cjqpaz1y40075bs65qztqvfsb" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/deployment-strategies/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article-review/">Article review</a></li></ul>
 
     </footer>
   </div>
@@ -190,66 +327,6 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-deployment-strategies" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/deployment-strategies/" class="article-date">
-  <time datetime="2018-01-09T16:00:00.000Z" itemprop="datePublished">2018-01-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/deployment-strategies/">Six Strategies for Application Deployment</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Six-Strategies-for-Application-Deployment"><a href="#Six-Strategies-for-Application-Deployment" class="headerlink" title="Six Strategies for Application Deployment"></a><a href="https://thenewstack.io/deployment-strategies/?utm_content=buffer07391&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer" target="_blank" rel="noopener">Six Strategies for Application Deployment</a></h1><p>Recreate</p>
-<ul>
-<li>Version A is terminated then version B is rolled out.</li>
-<li>High down time<br>Ramped (also known as rolling-update or incremental)</li>
-<li>Version B is slowly rolled out and replacing version A.</li>
-<li>Both new and old version exist during deployment, need to support multiple version at the same time<br>Blue/Green</li>
-<li>Version B is released alongside version A, then the traffic is switched to version B.<br>Canary</li>
-<li>Version B is released to a subset of users, then proceed to a full rollout.</li>
-<li>Usually used when low confidence on new release<br>A/B testing</li>
-<li>Version B is released to a subset of users under specific condition.</li>
-<li>Requires intelligent load balancer</li>
-<li>Difficult to troubleshoot erros for a given session<br>Shadow</li>
-<li>Version B receives real-world traffic alongside version A and doesn’t impact the response</li>
-<li>Can test system load</li>
-<li>Complex to set up, need to mock service</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/deployment-strategies/" data-id="cjqpaz1y40075bs65qztqvfsb" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/deployment-strategies/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article-review/">Article review</a></li></ul>
 
     </footer>
   </div>
@@ -337,6 +414,55 @@
 
 
   
+    <article id="post-living-without-money" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/living-without-money/" class="article-date">
+  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">2018-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/living-without-money/">無窮奶奶的富足人生</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>唔用錢過生活，以自己希望嘅服務去交換自己所需去過活。有D過份理想化，我唔覺得可以大規模進行。<br>曾成立交換中心，以點數代替金錢</p>
+<ul>
+<li>以另一種價值去評價一個人嘅工作</li>
+<li>點數會按時扣減，以鼓勵交換</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/living-without-money/" data-id="cjqpaz1z2008xbs65tkegv7iw" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/living-without-money/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-advantage-of-introverts" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/review/advantage-of-introverts/" class="article-date">
@@ -403,55 +529,6 @@
       <a data-url="http://199911.github.io/review/advantage-of-introverts/" data-id="cjqpaz1xj005wbs65t40lfz6v" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/advantage-of-introverts/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-living-without-money" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/living-without-money/" class="article-date">
-  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">2018-01-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/living-without-money/">無窮奶奶的富足人生</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>唔用錢過生活，以自己希望嘅服務去交換自己所需去過活。有D過份理想化，我唔覺得可以大規模進行。<br>曾成立交換中心，以點數代替金錢</p>
-<ul>
-<li>以另一種價值去評價一個人嘅工作</li>
-<li>點數會按時扣減，以鼓勵交換</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/living-without-money/" data-id="cjqpaz1z2008xbs65tkegv7iw" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/living-without-money/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
@@ -651,61 +728,6 @@
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/article-review/">Article review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-10" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-10/" class="article-date">
-  <time datetime="2017-11-11T16:00:00.000Z" itemprop="datePublished">2017-11-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-10/">簡評十</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Listen-up-intern"><a href="#Listen-up-intern" class="headerlink" title="Listen up intern"></a><a href="https://www.facebook.com/gary/videos/10154185928643350/" target="_blank" rel="noopener">Listen up intern</a></h2><ul>
-<li>It is impossible to learn everything in the industries in just a few months</li>
-<li>Get overview on the industry</li>
-<li>Focus on building connection instead</li>
-<li>Find people to learn from, attach to that people</li>
-</ul>
-<h3 id="22-May-2018"><a href="#22-May-2018" class="headerlink" title="22 May 2018"></a>22 May 2018</h3><p>This article give advice to interns, networking is much more important than the solid work skills.<br>We can share this video to the newbies.</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-10/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-10/" data-id="cjqpaz1ug000bbs65vdqaslvr" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-10/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">Security</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
 
     </footer>
   </div>

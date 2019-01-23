@@ -88,29 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Crafting-beautiful-UX-with-API-requests"><a href="#Crafting-beautiful-UX-with-API-requests" class="headerlink" title="Crafting beautiful UX with API requests"></a><a href="https://uxdesign.cc/crafting-beautiful-ux-with-api-requests-56e7dcc2f58e?gi=daafc363c8d3" target="_blank" rel="noopener">Crafting beautiful UX with API requests</a></h2><ul>
-<li>3個要係API calling concern嘅UX位<ul>
-<li>Timeout<ul>
-<li>如果個request係長嘅話，就直接整做Async算</li>
-</ul>
-</li>
-<li>Minimum wait time<ul>
-<li>就算有data，都得一陣先response</li>
-<li>避免個loading screen 閃一野就消失</li>
-<li>如果user expect個loading time係短，就唔好加長個loading time</li>
-</ul>
-</li>
-<li>Retry<ul>
-<li>避免炸爆個server，可以用exponential backoff<ul>
-<li>每次retry，個waiting time exponential咁增加</li>
-</ul>
-</li>
-<li>Set一個retry limit</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+        <h2 id="Teddy-的-Pair-Programming-之旅"><a href="#Teddy-的-Pair-Programming-之旅" class="headerlink" title="Teddy 的 Pair Programming 之旅"></a><a href="http://teddy-chen-tw.blogspot.com/2009/11/teddy-pair-programming.html" target="_blank" rel="noopener">Teddy 的 Pair Programming 之旅</a></h2><p>Pair programming 用2個人做一個task，productivity減半，點解重要做？用手術團隊做比喻，當「品質(人命)」比「速度 (生產力)」來的重要，pair programming係make sense。</p>
         
           <p class="article-more-link">
             <a href="/commentary/commentaries-33/#more">Read More</a>
@@ -271,215 +249,11 @@
 </li>
 <li>Browser 用event queue去處理trampolining，成個CPS嘅overview就係js async programming model</li>
 </ul>
-<h2 id="AARRR-指標能評判設計成效？UX-更需要的是分析使用者的行為數據-上-下"><a href="#AARRR-指標能評判設計成效？UX-更需要的是分析使用者的行為數據-上-下" class="headerlink" title="AARRR 指標能評判設計成效？UX 更需要的是分析使用者的行為數據 (上) (下)"></a>AARRR 指標能評判設計成效？UX 更需要的是分析使用者的行為數據 <a href="https://designtongue.me/not-only-aarrr-but-ux-user-flow-part1/" target="_blank" rel="noopener">(上)</a> <a href="https://designtongue.me/not-only-aarrr-but-ux-user-flow-part2/" target="_blank" rel="noopener">(下)</a></h2><ul>
-<li>AARRR 比較適用電商和內容網站，唔太適合有功能嘅產品<ul>
-<li>AARRR嘅數據係睇有幾多個user用，有幾多個user肯俾錢，唔可以直接了解到user嘅行為</li>
-<li>用AARRR去tune UX，好可能俾D細節騎劫左，最重要嘅使用者特性、行為同內在需求係冇調查到</li>
-</ul>
-</li>
-<li>直接測量關鍵行為的數據會好D</li>
-<li>睇行為事件間的流量轉移<ul>
-<li>如果user嘅行動流程同我地預計嘅唔同，表示我地要重新認識user</li>
-<li>透過觀察而去揾出insight</li>
-</ul>
-</li>
-</ul>
-<h2 id="Increase-your-self-awareness-with-one-simple-fix"><a href="#Increase-your-self-awareness-with-one-simple-fix" class="headerlink" title="Increase your self-awareness with one simple fix"></a><a href="https://www.ted.com/talks/tasha_eurich_increase_your_self_awareness_with_one_simple_fix" target="_blank" rel="noopener">Increase your self-awareness with one simple fix</a></h2><ul>
-<li>People who introspected were more stressed and depressed, less satisfied with their jobs and their relationships, less in control of their lives</li>
-<li>Thinking about ourselves isn’t related to knowing ourselves</li>
-<li>Don’t ask “Why”, ask “What”<ul>
-<li>Human cannot remove their unconscious thoughts, feelings and motives<ul>
-<li>We end up inventing answers that feel true but are often very wrong</li>
-</ul>
-</li>
-<li>Our feeling and thought easily affect by the event happened recently<ul>
-<li>We cannot answer “Why” rationally</li>
-<li>Answer of “Why” leads us away from our true nature</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Think about what you can do</li>
-</ul>
-<h2 id="Crafting-beautiful-UX-with-API-requests"><a href="#Crafting-beautiful-UX-with-API-requests" class="headerlink" title="Crafting beautiful UX with API requests"></a><a href="https://uxdesign.cc/crafting-beautiful-ux-with-api-requests-56e7dcc2f58e" target="_blank" rel="noopener">Crafting beautiful UX with API requests</a></h2><p>Handling API call in web app, to provide better UX to user</p>
-<ul>
-<li>Timeouts<ul>
-<li>Cancel my request if you’re slower to respond than I want</li>
-<li>Shouldn’t let user wait too long</li>
-<li>Use API client timeout config, instead of writing your own</li>
-</ul>
-</li>
-<li>Minimum wait time<ul>
-<li>Protect your app from fast API response</li>
-<li>If you have a loading state, and don’t want the data pop up suddenly</li>
-<li>Don’t use when user expect a very fast response<ul>
-<li>Avoid unnecessory wait time</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Retry<ul>
-<li>As an hotfix of some infrastructure problem</li>
-<li>Use exponential backoff, increase the retry interval exponentially</li>
-</ul>
-</li>
-</ul>
-<h2 id="速讀的殘酷真相"><a href="#速讀的殘酷真相" class="headerlink" title="速讀的殘酷真相"></a><a href="https://hk.lifestyle.appledaily.com/lifestyle/columnist/%E9%A6%AE%E7%9D%8E%E4%B9%BE/daily/article/20180915/20499746" target="_blank" rel="noopener">速讀的殘酷真相</a></h2><p>學野係要吸收要思考，好多位係快唔到。<br>速讀可以用係資訊含量低嘅文章到，高質嘅書始終要慢讀。<br>比起睇得快，㨂高質嘅書睇係更重要</p>
-<h2 id="Eagles-Don’t-Fly-With-Turkeys"><a href="#Eagles-Don’t-Fly-With-Turkeys" class="headerlink" title="Eagles Don’t Fly With Turkeys"></a><a href="https://www.xaprb.com/blog/eagles-dont-fly-with-turkeys/" target="_blank" rel="noopener">Eagles Don’t Fly With Turkeys</a></h2><ul>
-<li>Manager prefer not to deal with underperformer in the team<ul>
-<li>They believe that having someone in the position is better than an empty seat</li>
-<li>They know that hiring is a lot of work and they don’t want to do it</li>
-<li>They hope things will get better magically</li>
-</ul>
-</li>
-<li>This will demoralize high performaning member</li>
-<li>B-players hire C-players because they want to make themselves look good<ul>
-<li>The team will fill with lower-performing team member soon</li>
-</ul>
-</li>
-</ul>
-<h2 id="12-common-mistakes-made-when-using-Story-Points"><a href="#12-common-mistakes-made-when-using-Story-Points" class="headerlink" title="12 common mistakes made when using Story Points"></a><a href="https://medium.com/@mdalmijn/12-common-mistakes-made-when-using-story-points-f0bb9212d2f7" target="_blank" rel="noopener">12 common mistakes made when using Story Points</a></h2><ul>
-<li>Story point is a rough indication of how much time an item will take to complete</li>
-<li>Benefits<ul>
-<li>Quick estimation</li>
-<li>Estimation without giving a specific time commitment</li>
-<li>Embrace uncertainty that comes with estimation</li>
-</ul>
-</li>
-<li>Common mistakes<ol>
-<li>Equating Story Points to just complexity, uncertainty or value<ul>
-<li>Story points are about effort, we can take complexity and uncertainty into consideration</li>
-<li>Story is not simply equal to complexity or risk</li>
-</ul>
-</li>
-<li>Translate story points to hours</li>
-<li>Averaging the story point<ul>
-<li>If half of the team give 3 points and the other half give 5, pick either 3 or 5 story point to the item</li>
-</ul>
-</li>
-<li>Adjusting Story Point estimates of issues during sprint.<ul>
-<li>Change the story point lose the information of inaccurate estimation</li>
-<li>Keep inaccurate estimation as part of the historical velocity of a team</li>
-</ul>
-</li>
-<li>Story pointing bugs, unless the bug is unrelated to the current sprint<ul>
-<li>Bugs of feature to be implemented in this sprint is part of the feature story, we should not consider it is an extra task</li>
-</ul>
-</li>
-<li>Adding Story Points to small tasks<ul>
-<li>We should timebox the small task</li>
-<li>Tasks required a fixed amount of time to complete do not need story point</li>
-</ul>
-</li>
-<li>Adjusting reference of one story point<ul>
-<li>Velocity of different sprints is no longer comperable</li>
-</ul>
-</li>
-<li>Story pointing unfinished issues again</li>
-<li>Adjusting Story Point estimate because a specific developer will work on it<ul>
-<li>The same task will be assign to different people in some situation<ul>
-<li>e.g senior engineer fixing emergency bugs, junior engineer need to pick up the tasks</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Never adjusting story point’s reference<ul>
-<li>We should tune the reference when the team become mature</li>
-<li>or new junior members join the team</li>
-</ul>
-</li>
-<li>Conforming to the expert in the room<ul>
-<li>Let the rest of the team estimate without the expert</li>
-</ul>
-</li>
-<li>Not discussing incorrectly Story-Pointed issues in retrospective<ul>
-<li>We need to improve our estimation</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="History-through-the-eyes-of-a-chicken"><a href="#History-through-the-eyes-of-a-chicken" class="headerlink" title="History through the eyes of a chicken"></a><a href="https://www.ted.com/talks/chris_a_kniesly_history_through_the_eyes_of_a_chicken" target="_blank" rel="noopener">History through the eyes of a chicken</a></h2><ul>
-<li>Chicken orgin from India</li>
-<li>Chicken is cross breed of 4 species</li>
-<li>Chicken lay egg daily</li>
-</ul>
-<h2 id="Why-do-Americans-and-Canadians-celebrate-Labor-Day"><a href="#Why-do-Americans-and-Canadians-celebrate-Labor-Day" class="headerlink" title="Why do Americans and Canadians celebrate Labor Day?"></a><a href="https://ed.ted.com/lessons/why-do-americans-and-canadians-celebrate-labor-day-kenneth-c-davis" target="_blank" rel="noopener">Why do Americans and Canadians celebrate Labor Day?</a></h2><p>七月到十一月冇假，所以係九月放一日勞動節假。之後爆發一次嚴重嘅勞工運動，做成多人死亡。五月一日嘅國際勞動節就係記念E件事。</p>
-<h2 id="Behavior-Driven-Development-BDD-Crash-Course"><a href="#Behavior-Driven-Development-BDD-Crash-Course" class="headerlink" title="Behavior-Driven Development (BDD) Crash Course"></a><a href="https://dev.to/dev3l/behavior-driven-development-bdd-crash-course-170" target="_blank" rel="noopener">Behavior-Driven Development (BDD) Crash Course</a></h2><ul>
-<li><p>BDD steps</p>
-<ul>
-<li>Writing feature doc with customer</li>
-<li>Everyone agree with the feature</li>
-<li>Automated test will be generated from feature doc<ul>
-<li>It becomes TDD after test is generated</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>3 section of a feature doc</p>
-<ul>
-<li>Context</li>
-<li>Event</li>
-<li>Outcome</li>
-</ul>
-</li>
-<li>Having a clear definition on expected behaviour, can avoid overkill</li>
-<li>BDD test is slower than unit test<ul>
-<li>It is integration test or end to end test</li>
-</ul>
-</li>
-<li>BDD cannot help you locate the root of cause<ul>
-<li>Use unit test if you want it</li>
-</ul>
-</li>
-</ul>
-<h2 id="Intro-to-Chaos-Engineering"><a href="#Intro-to-Chaos-Engineering" class="headerlink" title="Intro to Chaos Engineering"></a><a href="https://www.youtube.com/watch?v=qHykK5pFRW4" target="_blank" rel="noopener">Intro to Chaos Engineering</a></h2><ul>
-<li>Chaos Engineering is to break things in purpose<ul>
-<li>Don’t do it in production</li>
-</ul>
-</li>
-<li>Call leader<ul>
-<li>Responsible for any type of incidents</li>
-<li>Requirements:<ul>
-<li>Good understanding on all services</li>
-<li>Know who are the different people that own the services</li>
-<li>Incident downstream and upstream impact</li>
-<li>Know who are the people you need to get online to fix the issue</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Which system to start chaos engineering<ul>
-<li>Critical service<ul>
-<li>System serve critical function or store critical data</li>
-</ul>
-</li>
-<li>Because<ul>
-<li>Better monitory and recovery tool set up already</li>
-<li>Better knowledge on the system</li>
-<li>Huge team which works on the system</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Prerequisities for Chaso Engineering<ul>
-<li>High Severity Incident (SEV) Management including SEV levels and definitions</li>
-<li>Availability monitoring, including a high level health dashboard for WWW and API</li>
-<li>Alerts and paging that call a human and wake them up for SEVs</li>
-</ul>
-</li>
-<li>Random error injection help less<ul>
-<li>It cannot provide much information</li>
-<li>Don’t do it unless you are very confident on the recovery systems</li>
-</ul>
-</li>
-<li>Give names to severe incidents<ul>
-<li>Easier to refer SEV back to the name</li>
-<li>Easier to remember the SEV</li>
-</ul>
-</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-32/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -582,6 +356,55 @@
       <a data-url="http://199911.github.io/review/日本溝通大師教你生氣的技術/" data-id="cjqpaz20u00c8bs65kdza8yy7" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/日本溝通大師教你生氣的技術/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-the-power-of-less" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/the-power-of-less/" class="article-date">
+  <time datetime="2018-10-13T16:00:00.000Z" itemprop="datePublished">2018-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/the-power-of-less/">少做一點不會死!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>現代人生活太多資訊，太多選擇，與其chur盡自己，提升productivity，倒不如簡化生活，選擇重要嘅野去做</p>
+        
+          <p class="article-more-link">
+            <a href="/review/the-power-of-less/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/the-power-of-less/" data-id="cjqpaz20a00b6bs650ild64jf" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/the-power-of-less/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
@@ -806,10 +629,10 @@
 
 
   
-    <article id="post-the-power-of-less" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-freakonomics" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/review/the-power-of-less/" class="article-date">
-  <time datetime="2018-10-13T16:00:00.000Z" itemprop="datePublished">2018-10-14</time>
+    <a href="/review/freakonomics/" class="article-date">
+  <time datetime="2018-10-06T16:00:00.000Z" itemprop="datePublished">2018-10-07</time>
 </a>
     
   <div class="article-category">
@@ -824,7 +647,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/review/the-power-of-less/">少做一點不會死!</a>
+      <a class="article-title" href="/review/freakonomics/">蘋果橘子經濟學</a>
     </h1>
   
 
@@ -832,18 +655,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>現代人生活太多資訊，太多選擇，與其chur盡自己，提升productivity，倒不如簡化生活，選擇重要嘅野去做</p>
+        <p>本書用一D經濟學嘅concept去分析社會現象嘅成因，用統計學同經驗學工具去分析問題。作者唔怕得罪人，唔怕指出一D政治唔正確嘅解釋，相當有趣。</p>
         
           <p class="article-more-link">
-            <a href="/review/the-power-of-less/#more">Read More</a>
+            <a href="/review/freakonomics/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/the-power-of-less/" data-id="cjqpaz20a00b6bs650ild64jf" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/review/freakonomics/" data-id="cjqpaz1yj007ubs65ev4rvpdq" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/review/the-power-of-less/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/review/freakonomics/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
@@ -893,55 +716,6 @@
       <a data-url="http://199911.github.io/review/好員工才難帶/" data-id="cjqpaz20s00c2bs65jet2tynm" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/review/好員工才難帶/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-freakonomics" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/freakonomics/" class="article-date">
-  <time datetime="2018-10-06T16:00:00.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/freakonomics/">蘋果橘子經濟學</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本書用一D經濟學嘅concept去分析社會現象嘅成因，用統計學同經驗學工具去分析問題。作者唔怕得罪人，唔怕指出一D政治唔正確嘅解釋，相當有趣。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/freakonomics/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/freakonomics/" data-id="cjqpaz1yj007ubs65ev4rvpdq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/freakonomics/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
