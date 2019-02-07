@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>簡評三十六 | Change, Adapt, Survival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="開發人員應遵循的七項持續整合要領 Commit code frequently 有 code change，CI build 出黎嘅野先有意義   Don’t commit broken code 每次建構失敗就代表著專案的健康狀態出了嚴重的問題，必須要立即花費時間與人力去修復 開發人員要對自己送交的程式負起責任，不要因為自己不小心而造成建構失敗   Fix broken builds immed">
+<meta property="og:type" content="article">
+<meta property="og:title" content="簡評三十六">
+<meta property="og:url" content="http://199911.github.io/commentary/commentaries-36/index.html">
+<meta property="og:site_name" content="Change, Adapt, Survival">
+<meta property="og:description" content="開發人員應遵循的七項持續整合要領 Commit code frequently 有 code change，CI build 出黎嘅野先有意義   Don’t commit broken code 每次建構失敗就代表著專案的健康狀態出了嚴重的問題，必須要立即花費時間與人力去修復 開發人員要對自己送交的程式負起責任，不要因為自己不小心而造成建構失敗   Fix broken builds immed">
+<meta property="og:locale" content="commentary">
+<meta property="og:updated_time" content="2019-02-07T12:18:07.890Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="簡評三十六">
+<meta name="twitter:description" content="開發人員應遵循的七項持續整合要領 Commit code frequently 有 code change，CI build 出黎嘅野先有意義   Don’t commit broken code 每次建構失敗就代表著專案的健康狀態出了嚴重的問題，必須要立即花費時間與人力去修復 開發人員要對自己送交的程式負起責任，不要因為自己不小心而造成建構失敗   Fix broken builds immed">
+  
+    <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Change, Adapt, Survival</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-commentaries-36" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-36/" class="article-date">
+  <time datetime="2018-02-06T16:00:00.000Z" itemprop="datePublished">2018-02-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      簡評三十六
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="開發人員應遵循的七項持續整合要領"><a href="#開發人員應遵循的七項持續整合要領" class="headerlink" title="開發人員應遵循的七項持續整合要領"></a><a href="https://teddy-chen-tw.blogspot.com/2012/07/blog-post.html" target="_blank" rel="noopener">開發人員應遵循的七項持續整合要領</a></h2><ol>
+<li>Commit code frequently<ul>
+<li>有 code change，CI build 出黎嘅野先有意義</li>
+</ul>
+</li>
+<li>Don’t commit broken code<ul>
+<li>每次建構失敗就代表著專案的健康狀態出了嚴重的問題，必須要立即花費時間與人力去修復</li>
+<li>開發人員要對自己送交的程式負起責任，不要因為自己不小心而造成建構失敗</li>
+</ul>
+</li>
+<li>Fix broken builds immediately<ul>
+<li>零容忍 broken build</li>
+<li>如果團隊都沒有人把建構失敗當作一回事，久而久之，持續整合就失去它的作用</li>
+</ul>
+</li>
+<li>Write automated developers tests<ul>
+<li>有 CI 冇 tests<ul>
+<li>持續整合頂多做做編譯的工作，無法藉由執行測試案例找出功能錯誤</li>
+</ul>
+</li>
+<li>冇 CI 有 tests<ul>
+<li>測試案例寫了一堆，但是卻擺在一旁很少執行</li>
+<li>不執行測試案例怎麼會知道系統有沒有問出題</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All tests and inspections must pass<ul>
+<li>測試或是inspection（可以想成靜態程式碼檢查）沒有通過，但是程式可以編譯，都唔算成功</li>
+</ul>
+</li>
+<li>Run private builds<ul>
+<li>在送交程式之前，先執行本地建構</li>
+</ul>
+</li>
+<li>Avoid getting broken code<ul>
+<li>兩個方法<ol>
+<li>Pull 之前 check CI</li>
+<li>CI 一炒左，叫大家唔好 pull，直至問題解決為止</li>
+</ol>
+</li>
+<li>用 integrate 左 CI 嘅 Github，build fail 根本 merge唔到，唔會出現E個情況</li>
+</ul>
+</li>
+</ol>
+<a id="more"></a>
+<h2 id="亂談軟體設計（6）：Single-Choice-Principle"><a href="#亂談軟體設計（6）：Single-Choice-Principle" class="headerlink" title="亂談軟體設計（6）：Single Choice Principle"></a><a href="https://teddy-chen-tw.blogspot.com/2012/01/6single-choice-principle.html" target="_blank" rel="noopener">亂談軟體設計（6）：Single Choice Principle</a></h2><ul>
+<li>Single Choice Principle<ul>
+<li>Whenever a software system must support a set of alternatives, one and only one module in the system should know their exhaustive list</li>
+<li>當一個軟體系統必須要支援一組替代方案的時候，系統中應該只有一個模組知道這些替代方案的所有清單</li>
+<li>程式中都有一個地方需要去「詳盡列舉（know their exhaustive list）出所有子類別（a set of alternatives）」<ul>
+<li>減少 duplicated code</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="除舊佈新-1"><a href="#除舊佈新-1" class="headerlink" title="除舊佈新 (1)"></a><a href="http://teddy-chen-tw.blogspot.com/2011/02/1.html" target="_blank" rel="noopener">除舊佈新 (1)</a></h2><ul>
+<li>Architecture is not a phase of development<ul>
+<li>因為軟體開發隨時都在做 architecture design</li>
+</ul>
+</li>
+<li>通常 over design 唯一個好處只是營造一種『自我感覺良好』的假象<ul>
+<li>爽到 architect ，艱苦到 programmers</li>
+</ul>
+</li>
+</ul>
+<h2 id="消除浪費-1-：Partially-Done-Work"><a href="#消除浪費-1-：Partially-Done-Work" class="headerlink" title="消除浪費 (1)：Partially Done Work"></a><a href="http://teddy-chen-tw.blogspot.com/2010/10/1partially-done-wrok.html" target="_blank" rel="noopener">消除浪費 (1)：Partially Done Work</a></h2><ul>
+<li>Spec 係「尚未被實做的需求文件」<ul>
+<li>都係 partially done work</li>
+</ul>
+</li>
+<li>好多 requirement 會係幾個 sprint 後變得冇效</li>
+</ul>
+<h2 id="持續整合樣式：中文補充說明"><a href="#持續整合樣式：中文補充說明" class="headerlink" title="持續整合樣式：中文補充說明"></a><a href="http://teddy-chen-tw.blogspot.com/2011/01/blog-post_07.html" target="_blank" rel="noopener">持續整合樣式：中文補充說明</a></h2><p>講 Cross platform software development 嘅 continuous integration pattern 點樣整。</p>
+<h2 id="Ever-wonder-why-the-most-popular-apps-are-starting-to-look-the-same-It-might-be-a-good-thing"><a href="#Ever-wonder-why-the-most-popular-apps-are-starting-to-look-the-same-It-might-be-a-good-thing" class="headerlink" title="Ever wonder why the most popular apps are starting to look the same? It might be a good thing"></a><a href="https://uxdesign.cc/ever-wonder-why-the-most-popular-apps-are-starting-to-look-the-same-it-might-be-a-good-thing-e54aadd50fd5" target="_blank" rel="noopener">Ever wonder why the most popular apps are starting to look the same? It might be a good thing</a></h2><ul>
+<li>解釋點解D出名 app 嘅 UI 開始相似，同埋解釋咁做嘅好處</li>
+<li>新嘅 UI 潮流<ul>
+<li>big, bold headlines with rounded sans-serif fonts</li>
+<li>minimal black and white interfaces with lots of negative space</li>
+<li>little to no color.</li>
+</ul>
+</li>
+<li>點解新 UI 潮流偏向簡潔<ul>
+<li>App fatigue<ul>
+<li>get tired of bouncing between too many apps</li>
+<li>get tired of learning how to use a new interface after every new download</li>
+</ul>
+</li>
+<li>More consistency means better usability<ul>
+<li>Consistency means no re-learn</li>
+</ul>
+</li>
+<li>Branding isn’t just how it looks, but how it works<ul>
+<li>A differentiated experience is more important than differentiated UI</li>
+</ul>
+</li>
+<li>In future, UX design on voice interface (like Siri) is more important than screen interface</li>
+</ul>
+</li>
+</ul>
+<h2 id="How-Dictators-Hack-Our-Feelings"><a href="#How-Dictators-Hack-Our-Feelings" class="headerlink" title="How Dictators Hack Our Feelings"></a><a href="https://www.facebook.com/TED/videos/1827447364036938/" target="_blank" rel="noopener">How Dictators Hack Our Feelings</a></h2><ul>
+<li>Fascism<ul>
+<li>My nation is superme</li>
+<li>Deny other identities</li>
+</ul>
+</li>
+<li>Nationalism<ul>
+<li>My nation is unique</li>
+</ul>
+</li>
+<li>Data is replacing land and machine as the most important assets<ul>
+<li>Politics is struggle to control the flow of data</li>
+<li>Dictatorship now means too much data is being concentrated in the hands of government</li>
+</ul>
+</li>
+<li>New technology makes dictatorships more efficient than democracies</li>
+<li>Dictator hack our feelings of feat and hate and vanity<ul>
+<li>Use these feelings to polarize and destory democracy from within</li>
+</ul>
+</li>
+</ul>
+<h2 id="What-is-the-coldest-thing-in-the-world"><a href="#What-is-the-coldest-thing-in-the-world" class="headerlink" title="What is the coldest thing in the world?"></a><a href="https://www.facebook.com/TEDEducation/videos/2080372115309317/" target="_blank" rel="noopener">What is the coldest thing in the world?</a></h2><ul>
+<li>The coldest thing is colder than outer space</li>
+<li>Use laser to slow down (cold down) atoms</li>
+<li>Cold atoms can be use as detector</li>
+</ul>
+<h2 id="Integration-database"><a href="#Integration-database" class="headerlink" title="Integration database"></a><a href="https://martinfowler.com/bliki/IntegrationDatabase.html" target="_blank" rel="noopener">Integration database</a></h2><ul>
+<li>An integration database is a database which acts as the data store for multiple applications</li>
+<li>Integration databases should be avoided<ul>
+<li>It is a point of coupling between the applications that access it</li>
+</ul>
+</li>
+</ul>
+<h2 id="從合約判斷類別行為是否相容"><a href="#從合約判斷類別行為是否相容" class="headerlink" title="從合約判斷類別行為是否相容"></a><a href="https://teddy-chen-tw.blogspot.com/2017/02/blog-post.html" target="_blank" rel="noopener">從合約判斷類別行為是否相容</a></h2><ul>
+<li>Liskov Substitution Principle 同 Design By Contract 嘅 Subcontracting 係同一樣野</li>
+<li>LSP<ul>
+<li>系統中基本型別（base types）出現的地方，都可以用子型別（ subtypes）來取代，而不會破壞程式原有的行為</li>
+</ul>
+</li>
+<li>DBC<ul>
+<li>子類別的 precondition 需要與父類別的 precondition 進行OR運算</li>
+<li>子類別的 postcondition 需要與父類別的 postcondition 進行AND運算</li>
+<li>子類別的 invariant 需要與父類別的 invariant 進行AND運算</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-36/" data-id="cjrumbhbw0003q465086h6nua" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-36/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/review/evaluate-sustainability-open-source-project/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          How to evaluate the sustainability of an open source project
+        
+      </div>
+    </a>
+  
+  
+    <a href="/review/manage-time-effectively/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">10 ways to have a better conversation</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parser/">Parser</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 11.82px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 13.64px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 13.64px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 17.27px;">Management</a> <a href="/tags/network/" style="font-size: 10px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/parser/" style="font-size: 10px;">Parser</a> <a href="/tags/philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/commentary/commentaries-33/">簡評三十三</a>
+          </li>
+        
+          <li>
+            <a href="/review/重遇未知的自己/">重遇未知的自己</a>
+          </li>
+        
+          <li>
+            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/commentaries-32/">簡評三十二</a>
+          </li>
+        
+          <li>
+            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/commentary/commentaries-36/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>
