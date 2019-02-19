@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>簡評三十七 | Change, Adapt, Survival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="BDD（17）Given-When-Then怎麼寫？ 用「capture and replay」的方式產生自動化驗收測試 沒有先撰寫一個失敗的驗收測試案例 唔算係BDD   依賴於使用者介面，導致很高的維護成本    如何讀懂別人的程式？ 睇明人地寫嘅 code 算係一種 reverse engineering A Pattern Language for Reverse Engineering">
+<meta property="og:type" content="article">
+<meta property="og:title" content="簡評三十七">
+<meta property="og:url" content="http://199911.github.io/commentary/commentaries-37/index.html">
+<meta property="og:site_name" content="Change, Adapt, Survival">
+<meta property="og:description" content="BDD（17）Given-When-Then怎麼寫？ 用「capture and replay」的方式產生自動化驗收測試 沒有先撰寫一個失敗的驗收測試案例 唔算係BDD   依賴於使用者介面，導致很高的維護成本    如何讀懂別人的程式？ 睇明人地寫嘅 code 算係一種 reverse engineering A Pattern Language for Reverse Engineering">
+<meta property="og:locale" content="commentary">
+<meta property="og:updated_time" content="2019-02-19T14:48:14.420Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="簡評三十七">
+<meta name="twitter:description" content="BDD（17）Given-When-Then怎麼寫？ 用「capture and replay」的方式產生自動化驗收測試 沒有先撰寫一個失敗的驗收測試案例 唔算係BDD   依賴於使用者介面，導致很高的維護成本    如何讀懂別人的程式？ 睇明人地寫嘅 code 算係一種 reverse engineering A Pattern Language for Reverse Engineering">
+  
+    <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Change, Adapt, Survival</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://199911.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-commentaries-37" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-37/" class="article-date">
+  <time datetime="2019-02-09T16:00:00.000Z" itemprop="datePublished">2019-02-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      簡評三十七
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="BDD（17）Given-When-Then怎麼寫？"><a href="#BDD（17）Given-When-Then怎麼寫？" class="headerlink" title="BDD（17）Given-When-Then怎麼寫？"></a><a href="https://teddy-chen-tw.blogspot.com/2017/03/bdd17given-when-then.html" target="_blank" rel="noopener">BDD（17）Given-When-Then怎麼寫？</a></h2><ul>
+<li>用「capture and replay」的方式產生自動化驗收測試<ul>
+<li>沒有先撰寫一個失敗的驗收測試案例<ul>
+<li>唔算係BDD</li>
+</ul>
+</li>
+<li>依賴於使用者介面，導致很高的維護成本</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何讀懂別人的程式？"><a href="#如何讀懂別人的程式？" class="headerlink" title="如何讀懂別人的程式？"></a><a href="https://teddy-chen-tw.blogspot.com/2016/08/blog-post.html" target="_blank" rel="noopener">如何讀懂別人的程式？</a></h2><ul>
+<li>睇明人地寫嘅 code 算係一種 reverse engineering</li>
+<li>A Pattern Language for Reverse Engineering<ol>
+<li>First Contact<ul>
+<li>Read All the Code in One Hour</li>
+<li>Skim the Documentation</li>
+<li>Interview During Demo<ul>
+<li>找懂系統的人來demo，然後在過程中問他問題</li>
+</ul>
+</li>
+<li>Confer with Colleagues</li>
+</ul>
+</li>
+<li>Initial Understanding<ul>
+<li>Speculate about Domain Objects<ul>
+<li>自己建立一個class model 去代表所要解決的問題領域</li>
+<li>透過閱讀程式碼來修正這個模型一直到你覺得模型穩定為止。</li>
+</ul>
+</li>
+<li>Analyze the Persistent Data<ul>
+<li>檢查資料庫中的實體（entities）並判斷他們是否代表有價值的物件</li>
+<li>可以透過資料庫的實體建立class model藉此理解系統。</li>
+</ul>
+</li>
+<li>Inspect the Largest Entities<ul>
+<li>在幾百萬行的程式碼中很難看出重要的功能位於何處<ul>
+<li>可以先透過度量工具掃描原始碼，從繼承階層、模組、類別、函數這些對象中找出較大或異常者</li>
+<li>從原始碼中判斷這些找出來的實體是否有實作特別重要的功能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Detailed Model Capture：詳細模型擷取階段，包含三個模式，<ul>
+<li>Derive the “true” Public Interface</li>
+<li>Step Through the Execution</li>
+<li>Reconstruct the Iterations</li>
+</ul>
+</li>
+<li>Prepare Reengineering：準備逆向工程階段，包含三個模式，<ul>
+<li>Write the Tests（寫測試）</li>
+<li>Refactor to Understand（透過重構了解系統）</li>
+<li>Build a Prototype（建立一個雛型）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Composition-vs-Delegation"><a href="#Composition-vs-Delegation" class="headerlink" title="Composition vs. Delegation"></a><a href="https://stackoverflow.com/questions/2137201/composition-vs-delegation" target="_blank" rel="noopener">Composition vs. Delegation</a></h2><ul>
+<li>They are talking different problem<ul>
+<li>Composition is about relationship between objects, which usually compare with inheritance<ul>
+<li>Composition is an “has-a” relationship<ul>
+<li>Composition implies that the child cannot exist without the context of the parent.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Delegation is about implementation detail<ul>
+<li>A public class does not contain implementation details, it is defer to other object.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="No-more-flaky-tests-on-the-Go-team"><a href="#No-more-flaky-tests-on-the-Go-team" class="headerlink" title="No more flaky tests on the Go team"></a><a href="https://www.thoughtworks.com/insights/blog/no-more-flaky-tests-go-team" target="_blank" rel="noopener">No more flaky tests on the Go team</a></h2><ul>
+<li>Fix the mind set of engineers</li>
+<li>Stop calling your build flaky<ul>
+<li>Fix all random success tests</li>
+</ul>
+</li>
+<li>Acceptance test builds can never be red<ul>
+<li>Quarantine the flaky test from acceptance test builds<ul>
+<li>When you cannot fix them immediately</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Budget time in the release plan to fix tests</li>
+<li>Refactor to make sure that no duplication is tolerated<ul>
+<li>Test code also need to have good quality<ul>
+<li>bad examples<ul>
+<li>random waits, duplication, massive inheritance hierarchies, weird object mothers, fixture objects that are highly complicated to construct</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Understand the nature of flakiness<ul>
+<li>Most flakiness is due to our own mistakes</li>
+</ul>
+</li>
+</ul>
+<h2 id="是什麼讓軟體架構師成功？"><a href="#是什麼讓軟體架構師成功？" class="headerlink" title="是什麼讓軟體架構師成功？"></a><a href="https://teddy-chen-tw.blogspot.com/2016/07/blog-post_27.html" target="_blank" rel="noopener">是什麼讓軟體架構師成功？</a></h2><ul>
+<li>文中採取《Software Architecture in Practice》一書的說法</li>
+<li>軟體架構的定義<ul>
+<li>軟體架構是理解系統所需的結構，每個結構包含了元件、元件之間的關係，以及元件與關係的屬性</li>
+</ul>
+</li>
+<li>軟體架構師的三種角色<ul>
+<li>Initial designer<ul>
+<li>設計重點<ul>
+<li>如何滿足重要的功能與非功能需求</li>
+<li>確保系統架構的概念完整性（conceptual integrity）</li>
+<li>架構最好可以和開發團隊的技能與經驗互相匹配，可以用增量方式開發，並且支持持續整合和持續交付</li>
+</ul>
+</li>
+<li>可能會參與實作，但其實作的主要目的在於製作雛型與驗證架構的可行性</li>
+</ul>
+</li>
+<li>Extender<ul>
+<li>了解現有系統並且尋求擴充與整合方案</li>
+<li>架構師需要實際動手操作系統程式碼以便或得第一手資訊</li>
+<li>假使增加的新功能不在Initial designer的規劃中<ul>
+<li>Extender便可能需要犧牲原本系統架構的概念完整性以達到擴充新功能的目的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sustainer<ul>
+<li>責任係避免改變系統的前提之下，儘量將其的價值發揮到最大</li>
+<li>最重要的能力是溝通<ul>
+<li>說服有關人等系統依然可以提供價值</li>
+<li>說明要以何種方式持續利用系統的剩餘價值</li>
+<li>如何以最小的代價繼續壓榨系統</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>失敗模式<ul>
+<li>Wrap-around<ul>
+<li>Sustainer -&gt; Initial designer<ul>
+<li>最懂舊系統唔代表識新系統，有可能無法勝任</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rising star<ul>
+<li>Extender -&gt; Initial designer</li>
+<li>可能沒有受過正規的分析與設計訓練<ul>
+<li>所設計出來的架構可以符合團隊的技能，但卻可能無法滿足重要的功能與非功能需求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Overprotective parent<ul>
+<li>Initial designer -&gt; Extender</li>
+<li>不甘心原本設計的架構為了滿足新功能而必須在概念完整性上有所妥協<ul>
+<li>所以採取昂貴、大規模修改的方式來擴充功能，因此導致系統無法快速交付新功能而被競爭者追過去</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="用戶故事中的霸主"><a href="#用戶故事中的霸主" class="headerlink" title="用戶故事中的霸主"></a><a href="https://teddy-chen-tw.blogspot.com/2016/04/blog-post_27.html" target="_blank" rel="noopener">用戶故事中的霸主</a></h2><ul>
+<li>如何切出大小適中的用戶故事？</li>
+<li>《User Story Mapping》這本書的觀點<ul>
+<li>由大至小<ul>
+<li>商業<ul>
+<li>從企業的角度來看，可以幫助企業達到某些商業上的成果</li>
+</ul>
+</li>
+<li>用戶與客戶<ul>
+<li>滿足用戶或是顧客的需要</li>
+</ul>
+</li>
+<li>開發團隊<ul>
+<li>開發團隊能夠在幾天內做完。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>管是叫epic或是feature，它們都是一種user story</li>
+</ul>
+</li>
+</ul>
+<h2 id="Don’t-fail-fast-fail-mindfully"><a href="#Don’t-fail-fast-fail-mindfully" class="headerlink" title="Don’t fail fast - fail mindfully"></a><a href="https://www.ted.com/talks/leticia_gasca_don_t_fail_fast_fail_mindfully" target="_blank" rel="noopener">Don’t fail fast - fail mindfully</a></h2><ul>
+<li>Business make of people, closing business have negative impact and consequences on people and society</li>
+</ul>
+<h2 id="5-Questions-Every-Unit-Test-Must-Answer"><a href="#5-Questions-Every-Unit-Test-Must-Answer" class="headerlink" title="5 Questions Every Unit Test Must Answer"></a><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d" target="_blank" rel="noopener">5 Questions Every Unit Test Must Answer</a></h2><ul>
+<li>Features provided by unit tests<ul>
+<li>Design aid</li>
+<li>Feature documentation (for developers)</li>
+<li>Test your developer understanding<ul>
+<li>Does the developer understand the problem enough to articulate in code all critical component requirements?</li>
+</ul>
+</li>
+<li>Quality Assurance<ul>
+<li>Prevent missing features that need testing after change, add, or remove features</li>
+</ul>
+</li>
+<li>Continuous Delivery Aid<ul>
+<li>Prevent broken builds from being deployed to production</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A failing test should read like a high-quality bug report<ul>
+<li>What were you testing?</li>
+<li>What should it do?</li>
+<li>What was the output (actual behavior)?</li>
+<li>What was the expected output (expected behavior)?</li>
+<li>How can the test be reproduced?</li>
+</ul>
+</li>
+</ul>
+<h2 id="Contract-Test"><a href="#Contract-Test" class="headerlink" title="Contract Test"></a><a href="https://martinfowler.com/bliki/ContractTest.html" target="_blank" rel="noopener">Contract Test</a></h2><ul>
+<li>Context<ul>
+<li>好多時我地會係test create一個test double 去取代 external service</li>
+</ul>
+</li>
+<li>Problem<ul>
+<li>由於external service 係第二條team maintain，test double 同 external service 可能會唔sync</li>
+</ul>
+</li>
+<li>Solution: Contract test<ul>
+<li>寫test case，用 test double 同 external service 各行一次，再對比結果</li>
+<li>唔洗成日行，一日一次己經好夠</li>
+<li>Contract test 炒左唔一定代表個repo有問題<ul>
+<li>但都有可能代表production 有 issue，要做urgent fix</li>
+</ul>
+</li>
+<li>可以 copy 份 test 俾 external team，加入佢地嘅CI pipeline，咁佢地 release之前已經可以知道對client黎講，有冇breaking change</li>
+</ul>
+</li>
+</ul>
+<h2 id="增加敏捷性的一種方法"><a href="#增加敏捷性的一種方法" class="headerlink" title="增加敏捷性的一種方法"></a><a href="https://teddy-chen-tw.blogspot.com/2015/04/blog-post_10.html" target="_blank" rel="noopener">增加敏捷性的一種方法</a></h2><ul>
+<li>defer commitment<ul>
+<li>把做決定的時間點推遲到不做決定的成本大於做決定的成本的那一刻</li>
+<li>要有足夠嘅information先做到，就要靠「增進上下游之間的關係增加敏捷性。」<ul>
+<li>了解user 需要咩feature，了解 UAT 嘅要求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-37/" data-id="cjsbvxf8t0003mb651zj3auoz" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-37/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/review/重遇未知的自己/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          重遇未知的自己
+        
+      </div>
+    </a>
+  
+  
+    <a href="/diary/express-freeze-by-sinon-fake-timer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Express freeze by sinon fake timer</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book-review/">Book Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code-review/">Code Review</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/commentary/">Commentary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/knowledge/">Knowledge</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/review/">Review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/agile/">Agile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/article-review/">Article review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book-review/">Book review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cache/">Cache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/communication/">Communication</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/">Data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debugging/">Debugging</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">Food</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gps/">GPS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/health/">Health</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/love/">Love</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/management/">Management</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">Network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/objective-c/">Objective C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opensource/">Opensource</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/parser/">Parser</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/recaptcha/">ReCAPTCHA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/regex/">Regex</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svg/">SVG</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">Security</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">Startup</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/swift/">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tv-show-review/">TV show review</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">Testing</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tools/">Tools</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui-ux/">UI/UX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/versioning/">Versioning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/agile/" style="font-size: 13.64px;">Agile</a> <a href="/tags/architecture/" style="font-size: 16.36px;">Architecture</a> <a href="/tags/article-review/" style="font-size: 19.09px;">Article review</a> <a href="/tags/book-review/" style="font-size: 20px;">Book review</a> <a href="/tags/css/" style="font-size: 11.82px;">CSS</a> <a href="/tags/cache/" style="font-size: 10px;">Cache</a> <a href="/tags/communication/" style="font-size: 14.55px;">Communication</a> <a href="/tags/data/" style="font-size: 11.82px;">Data</a> <a href="/tags/debugging/" style="font-size: 10px;">Debugging</a> <a href="/tags/design-pattern/" style="font-size: 10px;">Design Pattern</a> <a href="/tags/design-pattern/" style="font-size: 12.73px;">Design pattern</a> <a href="/tags/docker/" style="font-size: 10.91px;">Docker</a> <a href="/tags/fallcy/" style="font-size: 10px;">Fallcy</a> <a href="/tags/food/" style="font-size: 10px;">Food</a> <a href="/tags/gps/" style="font-size: 10px;">GPS</a> <a href="/tags/git/" style="font-size: 13.64px;">Git</a> <a href="/tags/html/" style="font-size: 10px;">HTML</a> <a href="/tags/health/" style="font-size: 13.64px;">Health</a> <a href="/tags/java/" style="font-size: 10px;">Java</a> <a href="/tags/javascript/" style="font-size: 15.45px;">Javascript</a> <a href="/tags/learning-skills/" style="font-size: 12.73px;">Learning skills</a> <a href="/tags/local-storage/" style="font-size: 10.91px;">Local storage</a> <a href="/tags/love/" style="font-size: 10px;">Love</a> <a href="/tags/management/" style="font-size: 17.27px;">Management</a> <a href="/tags/network/" style="font-size: 10px;">Network</a> <a href="/tags/objective-c/" style="font-size: 11.82px;">Objective C</a> <a href="/tags/opensource/" style="font-size: 11.82px;">Opensource</a> <a href="/tags/parser/" style="font-size: 10px;">Parser</a> <a href="/tags/philosophy/" style="font-size: 16.36px;">Philosophy</a> <a href="/tags/productivity/" style="font-size: 16.36px;">Productivity</a> <a href="/tags/recaptcha/" style="font-size: 10px;">ReCAPTCHA</a> <a href="/tags/regex/" style="font-size: 10px;">Regex</a> <a href="/tags/svg/" style="font-size: 10.91px;">SVG</a> <a href="/tags/security/" style="font-size: 10.91px;">Security</a> <a href="/tags/startup/" style="font-size: 12.73px;">Startup</a> <a href="/tags/swift/" style="font-size: 10px;">Swift</a> <a href="/tags/tv-show-review/" style="font-size: 10px;">TV show review</a> <a href="/tags/testing/" style="font-size: 13.64px;">Testing</a> <a href="/tags/tools/" style="font-size: 10.91px;">Tools</a> <a href="/tags/ui-ux/" style="font-size: 12.73px;">UI/UX</a> <a href="/tags/versioning/" style="font-size: 10px;">Versioning</a> <a href="/tags/video-review/" style="font-size: 18.18px;">Video review</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/review/重遇未知的自己/">重遇未知的自己</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/commentaries-37/">簡評三十七</a>
+          </li>
+        
+          <li>
+            <a href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
+          </li>
+        
+          <li>
+            <a href="/commentary/commentaries-36/">簡評三十六</a>
+          </li>
+        
+          <li>
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Sunday Ku<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'coding-sunday';
+  
+  var disqus_url = 'http://199911.github.io/commentary/commentaries-37/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-74410128-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+  </div>
+</body>
+</html>

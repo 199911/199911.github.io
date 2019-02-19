@@ -62,6 +62,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-bootstrap-3-learning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/bootstrap-3-learning/" class="article-date">
+  <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">2016-09-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code-review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/bootstrap-3-learning/">Learning from Bootstrap 3</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Reset-script"><a href="#Reset-script" class="headerlink" title="Reset script"></a>Reset script</h2><p>Different browsers have different default style. To make the user experience consistent among browsers, we have CSS reset script or normalize script. In Bootstrap 3, <code>normalize.less</code> reset the CSS.</p>
+<h2 id="HTML-accessibility"><a href="#HTML-accessibility" class="headerlink" title="HTML accessibility"></a>HTML accessibility</h2><p>Web page today have rich UI element. But for blind people, they use screen reader to read the page. They cannot understand image and icon. Bootstrap 3 provide <code>.sr-only</code> and <code>.sr-only-focusable</code> to show content to screen reader without affecting the visual content. <code>.sr-only-focusable</code> appears after the element focused by pressing the ‘tab’ key. Beside the Bootstrap 3 mixin, there are html attribute like <code>aria-label</code> for accessibility.</p>
+<h2 id="LESS-function"><a href="#LESS-function" class="headerlink" title="LESS function"></a>LESS function</h2><p>In LESS, class and mixin share the same syntax. To hide the a mixin, we can add an empty parenthesis after the mixin, like <code>.mixin()</code>. This may create some code like <code>.mixin { .mixin() }</code>. It looks redundant, but it is good in design, as the interface and implementation are separated.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/bootstrap-3-learning/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/bootstrap-3-learning/" data-id="cjqpaz1xq006abs65lvxc7j89" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/bootstrap-3-learning/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-bootstrap-3-mixins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/code-review/bootstrap-3-mixins/" class="article-date">
+  <time datetime="2016-08-27T16:00:00.000Z" itemprop="datePublished">2016-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code-review/">Code Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/code-review/bootstrap-3-mixins/">Implementation of Bootstrap 3 - mixins.less</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>mixins.less</code> contains utilities, components, skins and layout ‘functions’ of LESS.</p>
+<h2 id="Utilities-Mixins"><a href="#Utilities-Mixins" class="headerlink" title="Utilities Mixins"></a>Utilities Mixins</h2><h3 id="mixins-hide-text-less"><a href="#mixins-hide-text-less" class="headerlink" title="mixins/hide-text.less"></a><code>mixins/hide-text.less</code></h3><p>It is used to hide the text in the dom. Why don’t we use <code>display: none</code> or <code>visible: hidden</code>? Because screen reader cannot read it. An <a href="https://github.com/twbs/bootstrap/issues/10076" target="_blank" rel="noopener">issue</a> on GitHub show a use case. Screen reader don’t have OCR and cannot read the text in image, we can put the image in background of an DOM, put the text inside the DOM. So screen reader can read it. To hide the text from other users, we can use the <code>.hide-text</code> mixin.</p>
+<h3 id="mixins-opacity-less"><a href="#mixins-opacity-less" class="headerlink" title="mixins/opacity.less"></a><code>mixins/opacity.less</code></h3><p>It adds IE 8 support on <code>opacity</code>. If we don’t need to suppport IE 8, we can use the <code>opacify</code> directly.</p>
+        
+          <p class="article-more-link">
+            <a href="/code-review/bootstrap-3-mixins/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/code-review/bootstrap-3-mixins/" data-id="cjqpaz1xs006ebs656kiwx1lb" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/code-review/bootstrap-3-mixins/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-bootstrap-3-variables" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/code-review/bootstrap-3-variables/" class="article-date">
@@ -176,6 +274,61 @@
 
 
   
+    <article id="post-the-mythical-man-month-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/book-review/the-mythical-man-month-2/" class="article-date">
+  <time datetime="2016-08-19T16:00:00.000Z" itemprop="datePublished">2016-08-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/book-review/">Book Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/book-review/the-mythical-man-month-2/">Review of &#34;the mythical man month&#34; chapter 2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Why it is difficult to estimate the time cost of a software project?</p>
+<h2 id="Five-reasons"><a href="#Five-reasons" class="headerlink" title="Five reasons"></a>Five reasons</h2><ol>
+<li>Programmers are optimist, tends to underestimate the time cost.</li>
+<li>Having assumption that man and months are interchangeable.</li>
+<li>Software managers have less inherent courage and firmness.</li>
+<li>Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.</li>
+<li>When the schedule is lagged behind, more man power is added, which make the situation delay worser.</li>
+</ol>
+<h3 id="Why-programmers-are-optimist"><a href="#Why-programmers-are-optimist" class="headerlink" title="Why programmers are optimist?"></a>Why programmers are optimist?</h3><p>The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.</p>
+        
+          <p class="article-more-link">
+            <a href="/book-review/the-mythical-man-month-2/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/book-review/the-mythical-man-month-2/" data-id="cjqpaz20500awbs65y6lwsl78" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/book-review/the-mythical-man-month-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-commentaries-6" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/commentary/commentaries-6/" class="article-date">
@@ -252,61 +405,6 @@
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/management/">Management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">Productivity</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-the-mythical-man-month-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/book-review/the-mythical-man-month-2/" class="article-date">
-  <time datetime="2016-08-19T16:00:00.000Z" itemprop="datePublished">2016-08-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/book-review/">Book Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/book-review/the-mythical-man-month-2/">Review of &#34;the mythical man month&#34; chapter 2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Why it is difficult to estimate the time cost of a software project?</p>
-<h2 id="Five-reasons"><a href="#Five-reasons" class="headerlink" title="Five reasons"></a>Five reasons</h2><ol>
-<li>Programmers are optimist, tends to underestimate the time cost.</li>
-<li>Having assumption that man and months are interchangeable.</li>
-<li>Software managers have less inherent courage and firmness.</li>
-<li>Schedule process is poorly monitored. Technique and routine from other engineering does not work in software engineering, programming is some sense in a creativity activity.</li>
-<li>When the schedule is lagged behind, more man power is added, which make the situation delay worser.</li>
-</ol>
-<h3 id="Why-programmers-are-optimist"><a href="#Why-programmers-are-optimist" class="headerlink" title="Why programmers are optimist?"></a>Why programmers are optimist?</h3><p>The time cost of debugging and testing cannot be estimated until or after implementation. Programmer usually ignore the time cost of that.</p>
-        
-          <p class="article-more-link">
-            <a href="/book-review/the-mythical-man-month-2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/book-review/the-mythical-man-month-2/" data-id="cjqpaz20500awbs65y6lwsl78" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/book-review/the-mythical-man-month-2/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
     </footer>
   </div>
   
@@ -525,105 +623,6 @@
 
 
   
-    <article id="post-commentaries-1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-1/" class="article-date">
-  <time datetime="2016-06-28T16:00:00.000Z" itemprop="datePublished">2016-06-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-1/">簡評一</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日睇左一堆文，冇咩心機每篇都仔細去諗，寫一份感想。但係又有好多零碎嘅 insight，因些放曬係度，等得閒果時再睇返。</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-1/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-1/" data-id="cjqpaz1ud0009bs65c9sjiezf" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-1/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">Productivity</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-objc-interface-design" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/objc-interface-design/" class="article-date">
-  <time datetime="2016-06-25T16:00:00.000Z" itemprop="datePublished">2016-06-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/objc-interface-design/">&#34;objc@interface的设计哲学与设计技巧&#34;感想</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>作者係文中比較java同objective C 嘅 OO。Objective C 嘅pattern係比較嚴格，可以由當中學到一D OOP嘅good practise.</p>
-<p>Objective C 好似係冇所謂嘅public, private 同 protected 嘅 object function，作者係文中提及點樣可以做到E幾個keyword嘅效果。由於Objective C 歷史較長，佢冇E D keyword唔係因為佢design得唔好，可能係調返轉，果D keyword係由Objective C 啟發出來。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/objc-interface-design/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/objc-interface-design/" data-id="cjqpaz1z9009cbs65zheu2gtz" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/objc-interface-design/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/objective-c/">Objective C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -668,7 +667,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -681,23 +680,23 @@
       <ul>
         
           <li>
-            <a href="/commentary/commentaries-33/">簡評三十三</a>
-          </li>
-        
-          <li>
             <a href="/review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/commentary/commentaries-37/">簡評三十七</a>
           </li>
         
           <li>
-            <a href="/commentary/commentaries-32/">簡評三十二</a>
+            <a href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
           </li>
         
           <li>
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/commentary/commentaries-36/">簡評三十六</a>
+          </li>
+        
+          <li>
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
           </li>
         
       </ul>

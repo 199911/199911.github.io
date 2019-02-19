@@ -62,6 +62,723 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-重遇未知的自己" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/重遇未知的自己/" class="article-date">
+  <time datetime="2019-12-15T16:00:00.000Z" itemprop="datePublished">2019-12-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/重遇未知的自己/">重遇未知的自己</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>屬於心靈雞湯，靈性類嘅書籍。書入邊冇咩驚天大道理，都係D尋常野。<br>本書係大陸咁受歡迎嘅原因可能係因為文化問題，凡事以團體為先，忽略左個人嘅感受，而令E一類型嘅書受歡迎。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/重遇未知的自己/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/重遇未知的自己/" data-id="cjqpaz20w00cabs65b5c9xmx8" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/重遇未知的自己/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-37" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-37/" class="article-date">
+  <time datetime="2019-02-09T16:00:00.000Z" itemprop="datePublished">2019-02-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-37/">簡評三十七</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="BDD（17）Given-When-Then怎麼寫？"><a href="#BDD（17）Given-When-Then怎麼寫？" class="headerlink" title="BDD（17）Given-When-Then怎麼寫？"></a><a href="https://teddy-chen-tw.blogspot.com/2017/03/bdd17given-when-then.html" target="_blank" rel="noopener">BDD（17）Given-When-Then怎麼寫？</a></h2><ul>
+<li>用「capture and replay」的方式產生自動化驗收測試<ul>
+<li>沒有先撰寫一個失敗的驗收測試案例<ul>
+<li>唔算係BDD</li>
+</ul>
+</li>
+<li>依賴於使用者介面，導致很高的維護成本</li>
+</ul>
+</li>
+</ul>
+<h2 id="如何讀懂別人的程式？"><a href="#如何讀懂別人的程式？" class="headerlink" title="如何讀懂別人的程式？"></a><a href="https://teddy-chen-tw.blogspot.com/2016/08/blog-post.html" target="_blank" rel="noopener">如何讀懂別人的程式？</a></h2><ul>
+<li>睇明人地寫嘅 code 算係一種 reverse engineering</li>
+<li>A Pattern Language for Reverse Engineering<ol>
+<li>First Contact<ul>
+<li>Read All the Code in One Hour</li>
+<li>Skim the Documentation</li>
+<li>Interview During Demo<ul>
+<li>找懂系統的人來demo，然後在過程中問他問題</li>
+</ul>
+</li>
+<li>Confer with Colleagues</li>
+</ul>
+</li>
+<li>Initial Understanding<ul>
+<li>Speculate about Domain Objects<ul>
+<li>自己建立一個class model 去代表所要解決的問題領域</li>
+<li>透過閱讀程式碼來修正這個模型一直到你覺得模型穩定為止。</li>
+</ul>
+</li>
+<li>Analyze the Persistent Data<ul>
+<li>檢查資料庫中的實體（entities）並判斷他們是否代表有價值的物件</li>
+<li>可以透過資料庫的實體建立class model藉此理解系統。</li>
+</ul>
+</li>
+<li>Inspect the Largest Entities<ul>
+<li>在幾百萬行的程式碼中很難看出重要的功能位於何處<ul>
+<li>可以先透過度量工具掃描原始碼，從繼承階層、模組、類別、函數這些對象中找出較大或異常者</li>
+<li>從原始碼中判斷這些找出來的實體是否有實作特別重要的功能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Detailed Model Capture：詳細模型擷取階段，包含三個模式，<ul>
+<li>Derive the “true” Public Interface</li>
+<li>Step Through the Execution</li>
+<li>Reconstruct the Iterations</li>
+</ul>
+</li>
+<li>Prepare Reengineering：準備逆向工程階段，包含三個模式，<ul>
+<li>Write the Tests（寫測試）</li>
+<li>Refactor to Understand（透過重構了解系統）</li>
+<li>Build a Prototype（建立一個雛型）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Composition-vs-Delegation"><a href="#Composition-vs-Delegation" class="headerlink" title="Composition vs. Delegation"></a><a href="https://stackoverflow.com/questions/2137201/composition-vs-delegation" target="_blank" rel="noopener">Composition vs. Delegation</a></h2><ul>
+<li>They are talking different problem<ul>
+<li>Composition is about relationship between objects, which usually compare with inheritance<ul>
+<li>Composition is an “has-a” relationship<ul>
+<li>Composition implies that the child cannot exist without the context of the parent.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Delegation is about implementation detail<ul>
+<li>A public class does not contain implementation details, it is defer to other object.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="No-more-flaky-tests-on-the-Go-team"><a href="#No-more-flaky-tests-on-the-Go-team" class="headerlink" title="No more flaky tests on the Go team"></a><a href="https://www.thoughtworks.com/insights/blog/no-more-flaky-tests-go-team" target="_blank" rel="noopener">No more flaky tests on the Go team</a></h2><ul>
+<li>Fix the mind set of engineers</li>
+<li>Stop calling your build flaky<ul>
+<li>Fix all random success tests</li>
+</ul>
+</li>
+<li>Acceptance test builds can never be red<ul>
+<li>Quarantine the flaky test from acceptance test builds<ul>
+<li>When you cannot fix them immediately</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Budget time in the release plan to fix tests</li>
+<li>Refactor to make sure that no duplication is tolerated<ul>
+<li>Test code also need to have good quality<ul>
+<li>bad examples<ul>
+<li>random waits, duplication, massive inheritance hierarchies, weird object mothers, fixture objects that are highly complicated to construct</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Understand the nature of flakiness<ul>
+<li>Most flakiness is due to our own mistakes</li>
+</ul>
+</li>
+</ul>
+<h2 id="是什麼讓軟體架構師成功？"><a href="#是什麼讓軟體架構師成功？" class="headerlink" title="是什麼讓軟體架構師成功？"></a><a href="https://teddy-chen-tw.blogspot.com/2016/07/blog-post_27.html" target="_blank" rel="noopener">是什麼讓軟體架構師成功？</a></h2><ul>
+<li>文中採取《Software Architecture in Practice》一書的說法</li>
+<li>軟體架構的定義<ul>
+<li>軟體架構是理解系統所需的結構，每個結構包含了元件、元件之間的關係，以及元件與關係的屬性</li>
+</ul>
+</li>
+<li>軟體架構師的三種角色<ul>
+<li>Initial designer<ul>
+<li>設計重點<ul>
+<li>如何滿足重要的功能與非功能需求</li>
+<li>確保系統架構的概念完整性（conceptual integrity）</li>
+<li>架構最好可以和開發團隊的技能與經驗互相匹配，可以用增量方式開發，並且支持持續整合和持續交付</li>
+</ul>
+</li>
+<li>可能會參與實作，但其實作的主要目的在於製作雛型與驗證架構的可行性</li>
+</ul>
+</li>
+<li>Extender<ul>
+<li>了解現有系統並且尋求擴充與整合方案</li>
+<li>架構師需要實際動手操作系統程式碼以便或得第一手資訊</li>
+<li>假使增加的新功能不在Initial designer的規劃中<ul>
+<li>Extender便可能需要犧牲原本系統架構的概念完整性以達到擴充新功能的目的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sustainer<ul>
+<li>責任係避免改變系統的前提之下，儘量將其的價值發揮到最大</li>
+<li>最重要的能力是溝通<ul>
+<li>說服有關人等系統依然可以提供價值</li>
+<li>說明要以何種方式持續利用系統的剩餘價值</li>
+<li>如何以最小的代價繼續壓榨系統</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>失敗模式<ul>
+<li>Wrap-around<ul>
+<li>Sustainer -&gt; Initial designer<ul>
+<li>最懂舊系統唔代表識新系統，有可能無法勝任</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Rising star<ul>
+<li>Extender -&gt; Initial designer</li>
+<li>可能沒有受過正規的分析與設計訓練<ul>
+<li>所設計出來的架構可以符合團隊的技能，但卻可能無法滿足重要的功能與非功能需求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Overprotective parent<ul>
+<li>Initial designer -&gt; Extender</li>
+<li>不甘心原本設計的架構為了滿足新功能而必須在概念完整性上有所妥協<ul>
+<li>所以採取昂貴、大規模修改的方式來擴充功能，因此導致系統無法快速交付新功能而被競爭者追過去</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="用戶故事中的霸主"><a href="#用戶故事中的霸主" class="headerlink" title="用戶故事中的霸主"></a><a href="https://teddy-chen-tw.blogspot.com/2016/04/blog-post_27.html" target="_blank" rel="noopener">用戶故事中的霸主</a></h2><ul>
+<li>如何切出大小適中的用戶故事？</li>
+<li>《User Story Mapping》這本書的觀點<ul>
+<li>由大至小<ul>
+<li>商業<ul>
+<li>從企業的角度來看，可以幫助企業達到某些商業上的成果</li>
+</ul>
+</li>
+<li>用戶與客戶<ul>
+<li>滿足用戶或是顧客的需要</li>
+</ul>
+</li>
+<li>開發團隊<ul>
+<li>開發團隊能夠在幾天內做完。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>管是叫epic或是feature，它們都是一種user story</li>
+</ul>
+</li>
+</ul>
+<h2 id="Don’t-fail-fast-fail-mindfully"><a href="#Don’t-fail-fast-fail-mindfully" class="headerlink" title="Don’t fail fast - fail mindfully"></a><a href="https://www.ted.com/talks/leticia_gasca_don_t_fail_fast_fail_mindfully" target="_blank" rel="noopener">Don’t fail fast - fail mindfully</a></h2><ul>
+<li>Business make of people, closing business have negative impact and consequences on people and society</li>
+</ul>
+<h2 id="5-Questions-Every-Unit-Test-Must-Answer"><a href="#5-Questions-Every-Unit-Test-Must-Answer" class="headerlink" title="5 Questions Every Unit Test Must Answer"></a><a href="https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d" target="_blank" rel="noopener">5 Questions Every Unit Test Must Answer</a></h2><ul>
+<li>Features provided by unit tests<ul>
+<li>Design aid</li>
+<li>Feature documentation (for developers)</li>
+<li>Test your developer understanding<ul>
+<li>Does the developer understand the problem enough to articulate in code all critical component requirements?</li>
+</ul>
+</li>
+<li>Quality Assurance<ul>
+<li>Prevent missing features that need testing after change, add, or remove features</li>
+</ul>
+</li>
+<li>Continuous Delivery Aid<ul>
+<li>Prevent broken builds from being deployed to production</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A failing test should read like a high-quality bug report<ul>
+<li>What were you testing?</li>
+<li>What should it do?</li>
+<li>What was the output (actual behavior)?</li>
+<li>What was the expected output (expected behavior)?</li>
+<li>How can the test be reproduced?</li>
+</ul>
+</li>
+</ul>
+<h2 id="Contract-Test"><a href="#Contract-Test" class="headerlink" title="Contract Test"></a><a href="https://martinfowler.com/bliki/ContractTest.html" target="_blank" rel="noopener">Contract Test</a></h2><ul>
+<li>Context<ul>
+<li>好多時我地會係test create一個test double 去取代 external service</li>
+</ul>
+</li>
+<li>Problem<ul>
+<li>由於external service 係第二條team maintain，test double 同 external service 可能會唔sync</li>
+</ul>
+</li>
+<li>Solution: Contract test<ul>
+<li>寫test case，用 test double 同 external service 各行一次，再對比結果</li>
+<li>唔洗成日行，一日一次己經好夠</li>
+<li>Contract test 炒左唔一定代表個repo有問題<ul>
+<li>但都有可能代表production 有 issue，要做urgent fix</li>
+</ul>
+</li>
+<li>可以 copy 份 test 俾 external team，加入佢地嘅CI pipeline，咁佢地 release之前已經可以知道對client黎講，有冇breaking change</li>
+</ul>
+</li>
+</ul>
+<h2 id="增加敏捷性的一種方法"><a href="#增加敏捷性的一種方法" class="headerlink" title="增加敏捷性的一種方法"></a><a href="https://teddy-chen-tw.blogspot.com/2015/04/blog-post_10.html" target="_blank" rel="noopener">增加敏捷性的一種方法</a></h2><ul>
+<li>defer commitment<ul>
+<li>把做決定的時間點推遲到不做決定的成本大於做決定的成本的那一刻</li>
+<li>要有足夠嘅information先做到，就要靠「增進上下游之間的關係增加敏捷性。」<ul>
+<li>了解user 需要咩feature，了解 UAT 嘅要求</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-37/" data-id="cjsbvxf8t0003mb651zj3auoz" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-37/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-express-freeze-by-sinon-fake-timer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/express-freeze-by-sinon-fake-timer/" class="article-date">
+  <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">2019-02-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I have a integration test related to JWT on Express.js server. I want to add a test case on expired<br>JWT. So I use sinon to inject a fake timer. After I added the fake timer, the whole integration test<br>stop in the middle and give no response.</p>
+        
+          <p class="article-more-link">
+            <a href="/diary/express-freeze-by-sinon-fake-timer/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/" data-id="cjsbvxf940005mb65d7y6ncc5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-36" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-36/" class="article-date">
+  <time datetime="2019-02-06T16:00:00.000Z" itemprop="datePublished">2019-02-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-36/">簡評三十六</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="開發人員應遵循的七項持續整合要領"><a href="#開發人員應遵循的七項持續整合要領" class="headerlink" title="開發人員應遵循的七項持續整合要領"></a><a href="https://teddy-chen-tw.blogspot.com/2012/07/blog-post.html" target="_blank" rel="noopener">開發人員應遵循的七項持續整合要領</a></h2><ol>
+<li>Commit code frequently<ul>
+<li>有 code change，CI build 出黎嘅野先有意義</li>
+</ul>
+</li>
+<li>Don’t commit broken code<ul>
+<li>每次建構失敗就代表著專案的健康狀態出了嚴重的問題，必須要立即花費時間與人力去修復</li>
+<li>開發人員要對自己送交的程式負起責任，不要因為自己不小心而造成建構失敗</li>
+</ul>
+</li>
+<li>Fix broken builds immediately<ul>
+<li>零容忍 broken build</li>
+<li>如果團隊都沒有人把建構失敗當作一回事，久而久之，持續整合就失去它的作用</li>
+</ul>
+</li>
+<li>Write automated developers tests<ul>
+<li>有 CI 冇 tests<ul>
+<li>持續整合頂多做做編譯的工作，無法藉由執行測試案例找出功能錯誤</li>
+</ul>
+</li>
+<li>冇 CI 有 tests<ul>
+<li>測試案例寫了一堆，但是卻擺在一旁很少執行</li>
+<li>不執行測試案例怎麼會知道系統有沒有問出題</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>All tests and inspections must pass<ul>
+<li>測試或是inspection（可以想成靜態程式碼檢查）沒有通過，但是程式可以編譯，都唔算成功</li>
+</ul>
+</li>
+<li>Run private builds<ul>
+<li>在送交程式之前，先執行本地建構</li>
+</ul>
+</li>
+<li>Avoid getting broken code<ul>
+<li>兩個方法<ol>
+<li>Pull 之前 check CI</li>
+<li>CI 一炒左，叫大家唔好 pull，直至問題解決為止</li>
+</ol>
+</li>
+<li>用 integrate 左 CI 嘅 Github，build fail 根本 merge唔到，唔會出現E個情況</li>
+</ul>
+</li>
+</ol>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-36/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-36/" data-id="cjrumbhbw0003q465086h6nua" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-36/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-稻盛和夫的哲學-人為什麼活著" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/稻盛和夫的哲學-人為什麼活著/" class="article-date">
+  <time datetime="2019-02-01T16:00:00.000Z" itemprop="datePublished">2019-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>E本係稻盛和夫寫自己人生觀嘅書，可以睇到佢好受佛教影響。書中冇講到D咩特別有趣嘅道理，論證不但唔嚴謹，仲有邏輯問題。<br>本書唔係好好睇，不過一個人肯花時間整理自己嘅人生觀，其實都幾難得。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/稻盛和夫的哲學-人為什麼活著/" data-id="cjrumbhc10007q465daj1dp5l" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/稻盛和夫的哲學-人為什麼活著/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-35" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-35/" class="article-date">
+  <time datetime="2019-01-29T16:00:00.000Z" itemprop="datePublished">2019-01-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-35/">簡評三十五</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="白箱測試與黑箱測試（下）"><a href="#白箱測試與黑箱測試（下）" class="headerlink" title="白箱測試與黑箱測試（下）"></a><a href="https://teddy-chen-tw.blogspot.com/2014/06/blog-post_3.html" target="_blank" rel="noopener">白箱測試與黑箱測試（下）</a></h2><ul>
+<li>Black box testing technique<ul>
+<li>等價劃分（equivalence partitioning）<ul>
+<li>每一類input㨂一個test case</li>
+</ul>
+</li>
+<li>邊界值分析（boundary value analysis）</li>
+<li>狀態機測試（state-based testing）</li>
+<li>劇本測試 （scenario-based testing）<ul>
+<li>依據Use Case或是story來測試功能是否正常</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-35/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-35/" data-id="cjrumbhc00005q465tphqexu6" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-35/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-瞬間讀懂對方的秘密" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/瞬間讀懂對方的秘密/" class="article-date">
+  <time datetime="2019-01-26T16:00:00.000Z" itemprop="datePublished">2019-01-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/瞬間讀懂對方的秘密/">瞬間讀懂對方的秘密</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本書標題同內容不符，冇講到D咩秘密野，只係一D心理分析同理論，而且分析唔算獨到。<br>本書比較似係整合唔同書嘅內容，組織結構有D亂，冇集中講嘅主題。<br>作者唔係咩心理學專家，我對其中嘅一D分析有質疑。</p>
+<p>頭一兩章分析人講大話嘅心理，算係幾有趣。<br>中段講心理學理論，例如光環效應，吊橋效應，瞳孔放大現象，得寸進尺技巧等等。由於係其他書睇過，冇咩特別。<br>尾段講一D常用手勢嘅起源同意思，例如OK，V字手勢。同埋一D動作行為表現嘅心理，冇咩特別。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/瞬間讀懂對方的秘密/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/瞬間讀懂對方的秘密/" data-id="cjrumbhby0004q465pgftkz3r" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/瞬間讀懂對方的秘密/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-34" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-34/" class="article-date">
+  <time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished">2019-01-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-34/">簡評三十四</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Shared-Code：讓我們變成博格人吧"><a href="#Shared-Code：讓我們變成博格人吧" class="headerlink" title="Shared Code：讓我們變成博格人吧"></a><a href="http://teddy-chen-tw.blogspot.com/2010/03/shared-code.html" target="_blank" rel="noopener">Shared Code：讓我們變成博格人吧</a></h2><ul>
+<li>Sharded code 嘅好處<ul>
+<li>高品質的 source code<ul>
+<li>怕被人笑寫爛code</li>
+</ul>
+</li>
+<li>提高工作分派的彈性<ul>
+<li>個個都有掂過下唔同野</li>
+</ul>
+</li>
+<li>提昇開發人員的技能<ul>
+<li>輪流做唔同嘅野，互相學習寫嘅code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引入Shared code嘅步驟<ol>
+<li>開頭按專長同興趣分組</li>
+<li>引入CI<ul>
+<li>確保唔同人寫嘅code可以integrate到</li>
+</ul>
+</li>
+<li>要求寫unit test</li>
+<li>等系統雛型大致穩定之後，鼓勵大家 pair programming<ul>
+<li>最少一到兩個月</li>
+</ul>
+</li>
+<li>Keep住，直至每一個模組至少都有兩個人非常熟悉</li>
+</ol>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-34/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-34/" data-id="cjr9d3e7l0002qp65g24bzpxh" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-34/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-commentaries-33" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/commentary/commentaries-33/" class="article-date">
@@ -102,55 +819,6 @@
         <a href="http://199911.github.io/commentary/commentaries-33/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-重遇未知的自己" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/重遇未知的自己/" class="article-date">
-  <time datetime="2018-12-15T16:00:00.000Z" itemprop="datePublished">2018-12-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/重遇未知的自己/">重遇未知的自己</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>屬於心靈雞湯，靈性類嘅書籍。書入邊冇咩驚天大道理，都係D尋常野。<br>本書係大陸咁受歡迎嘅原因可能係因為文化問題，凡事以團體為先，忽略左個人嘅感受，而令E一類型嘅書受歡迎。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/重遇未知的自己/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/重遇未知的自己/" data-id="cjqpaz20w00cabs65b5c9xmx8" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/重遇未知的自己/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
     </footer>
   </div>
   
@@ -205,528 +873,6 @@
 
 
   
-    <article id="post-commentaries-32" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-32/" class="article-date">
-  <time datetime="2018-11-09T16:00:00.000Z" itemprop="datePublished">2018-11-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-32/">簡評三十二</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Asynchronous-programming-and-continuation-passing-style-in-JavaScript"><a href="#Asynchronous-programming-and-continuation-passing-style-in-JavaScript" class="headerlink" title="Asynchronous programming and continuation-passing style in JavaScript"></a><a href="http://2ality.com/2012/06/continuation-passing-style.html" target="_blank" rel="noopener">Asynchronous programming and continuation-passing style in JavaScript</a></h2><p>E篇文主要講Continuation passing style (CPS)。</p>
-<ul>
-<li>由synchronus function 係javascript改寫成 asynchronus function，其實姐係改寫成 CPS</li>
-<li>理解左CPS，就可以人手寫一D async function去處理loop，recursion，同tree iteration</li>
-<li>將E個技巧generize，就係Promise嘅implementation。</li>
-<li>Generator 係另一種async programming嘅寫法，其實背後都係用CPS implement出黎</li>
-<li>CPS 將nested嘅function拆開左做chain pattern，其實係一種inversion of control，令到D logic 好maintain左</li>
-<li>CPS similar to function implement with goto, does not use stack to hold variable</li>
-<li>All true CPS function calls are tail calls and can be optimized<ul>
-<li>As we mentioned that CPS does not use stack</li>
-</ul>
-</li>
-<li>Trampolining，姐係一種對tail recursion，以array 做 implementation嘅handling<ul>
-<li>條array其實係一條queue</li>
-</ul>
-</li>
-<li>Browser 用event queue去處理trampolining，成個CPS嘅overview就係js async programming model</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-32/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-32/" data-id="cjqpaz1vl0029bs65nxombgp4" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-32/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-101-business-ideas-that-will-change-the-way-you-work" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/101-business-ideas-that-will-change-the-way-you-work/" class="article-date">
-  <time datetime="2018-10-20T16:00:00.000Z" itemprop="datePublished">2018-10-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本書唔係講開會技巧，而係講一D工作嘅貼士。原文書名「101 Business Ideas That Will Change the Way You Work : Turning Clever Thinking into Smart Advice」比較貼題，又一中文書名亂譯例子，下次都係睇英文書名先。<br>書中部份內容係其他心理學嘅書睇過，可速睇。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/101-business-ideas-that-will-change-the-way-you-work/" data-id="cjqpaz1xl0062bs65pmakf2s3" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/101-business-ideas-that-will-change-the-way-you-work/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-日本溝通大師教你生氣的技術" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/日本溝通大師教你生氣的技術/" class="article-date">
-  <time datetime="2018-10-19T16:00:00.000Z" itemprop="datePublished">2018-10-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/日本溝通大師教你生氣的技術/">日本溝通大師教你生氣的技術</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>嬲都係一種溝通方式，可以用黎表達不滿。有時D人真係會唔發火就當你病貓。<br>其實本書唔係組織得好好，花左唔少時間整理要點</p>
-        
-          <p class="article-more-link">
-            <a href="/review/日本溝通大師教你生氣的技術/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/日本溝通大師教你生氣的技術/" data-id="cjqpaz20u00c8bs65kdza8yy7" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/日本溝通大師教你生氣的技術/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-31" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-31/" class="article-date">
-  <time datetime="2018-10-13T16:00:00.000Z" itemprop="datePublished">2018-10-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-31/">簡評三十一</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="技术绩效考量：你们可能都做错了"><a href="#技术绩效考量：你们可能都做错了" class="headerlink" title="技术绩效考量：你们可能都做错了"></a><a href="http://www.infoq.com/cn/articles/measuring-tech-performance-wrong" target="_blank" rel="noopener">技术绩效考量：你们可能都做错了</a></h2><ul>
-<li>評估software engineering team performance嘅心法<ul>
-<li>Focus on output，而唔係input<ul>
-<li>line of code 同加左幾多班唔係一個好嘅指標</li>
-</ul>
-</li>
-<li>Focus on team, not individual</li>
-</ul>
-</li>
-<li>不良嘅指標<ul>
-<li>Line of codes</li>
-<li>速度<ul>
-<li>每條team，每個task都唔同，唔係客觀嘅標準</li>
-<li>會減低同其他團隊合作嘅動機，因為會減慢自己嘅速度</li>
-</ul>
-</li>
-<li>利用率<ul>
-<li>唔係話每個人D task都排滿就係好</li>
-<li>排滿task會少左彈性</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>正面例子<ul>
-<li>Product delivery<ul>
-<li>節奏<ul>
-<li>交付周期</li>
-<li>Deploy頻率</li>
-</ul>
-</li>
-<li>穩定性<ul>
-<li>恢複服務時間</li>
-<li>變更失敗率</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>質量<ul>
-<li>簡單黎講就係deliver 出黎嘅價值</li>
-<li>好難有一個廣泛嘅定義，每個地方嘅情況都唔同</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Other learning<ul>
-<li>What is high performer?<ul>
-<li>Spent less time on rework and unplanned work</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Chaos-Engineering的历史、原则以及实践"><a href="#Chaos-Engineering的历史、原则以及实践" class="headerlink" title="Chaos Engineering的历史、原则以及实践"></a><a href="http://www.infoq.com/cn/articles/chaos-engineering-the-history-principles-and-practice" target="_blank" rel="noopener">Chaos Engineering的历史、原则以及实践</a></h2><h3 id="History"><a href="#History" class="headerlink" title="History"></a>History</h3><p>Chaos engineering 源自Netflix，由於cloud architecture太過複雜，好難debug，因此用「故障注入」去揾出系統嘅弱點。</p>
-<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ol>
-<li>預測系統係出現故障時嘅行為</li>
-<li>針對故障去設計測試</li>
-<li>制定rollback plan</li>
-<li>評估故障嘅影響，留意有冇出現非預期嘅副作用</li>
-<li>修複找到嘅潛在問題</li>
-</ol>
-<h3 id="常見對分布式系統做出嘅錯誤假設"><a href="#常見對分布式系統做出嘅錯誤假設" class="headerlink" title="常見對分布式系統做出嘅錯誤假設"></a>常見對分布式系統做出嘅錯誤假設</h3><ul>
-<li>網絡是可靠</li>
-<li>延遲係零</li>
-<li>Bandwidth係無限</li>
-<li>網絡係安全</li>
-<li>Topology係不變</li>
-<li>有管理員handle問題</li>
-<li>傳輸成本係零</li>
-<li>網絡係homogeneous</li>
-</ul>
-<h3 id="測試嘅執行順序"><a href="#測試嘅執行順序" class="headerlink" title="測試嘅執行順序"></a>測試嘅執行順序</h3><p>第一個known係注意到，第二個known係了解</p>
-<ol>
-<li>Known known</li>
-<li>Known unknown</li>
-<li>Unknown known</li>
-<li>Unknown unknown</li>
-</ol>
-<h2 id="閱讀筆記-–-如何執行可用性測試-從頭到尾-6-個步驟"><a href="#閱讀筆記-–-如何執行可用性測試-從頭到尾-6-個步驟" class="headerlink" title="閱讀筆記 – 如何執行可用性測試-從頭到尾 6 個步驟"></a><a href="https://softnshare.com/2018/09/08/note-how-to-conduct-ausability-test-in-six-steps-from-start-to-finish/" target="_blank" rel="noopener">閱讀筆記 – 如何執行可用性測試-從頭到尾 6 個步驟</a></h2><ul>
-<li>IBM報告表示每一元對可用性的投資都會帶出10~100元的回收</li>
-<li>6 steps<ol>
-<li>建一個原型或產品來測試</li>
-<li>起草測試計畫–兩個重要問題: 要測試什麼, 如何度量結果</li>
-<li>召集測試參與者<ul>
-<li>目標客戶或理想的客戶 Persona</li>
-</ul>
-</li>
-<li>執行測試<ul>
-<li>到企業安排現場有人主持與指引的測試，遠端在家平時樣子的測試</li>
-</ul>
-</li>
-<li>將測試結果做紀錄與文件化</li>
-<li>修正問題並改善性能</li>
-</ol>
-</li>
-</ul>
-<h3 id="16-Jan-2019"><a href="#16-Jan-2019" class="headerlink" title="16 Jan 2019"></a>16 Jan 2019</h3><p>Can read the origin article</p>
-<h1 id="以下無需重讀"><a href="#以下無需重讀" class="headerlink" title="以下無需重讀"></a>以下無需重讀</h1><h2 id="Airbnb-資深工程師分享：怎樣才是正確、有效的-code-review"><a href="#Airbnb-資深工程師分享：怎樣才是正確、有效的-code-review" class="headerlink" title="Airbnb 資深工程師分享：怎樣才是正確、有效的 code review"></a><a href="https://buzzorange.com/techorange/2016/08/16/airbnb-code-review/" target="_blank" rel="noopener">Airbnb 資深工程師分享：怎樣才是正確、有效的 code review</a></h2><ul>
-<li>Minimum require for a PR to be merged<ul>
-<li>At least one ppl review</li>
-<li>At least one code owner review</li>
-</ul>
-</li>
-<li>Don’t help other fix bug<ul>
-<li>Cannot help other grow</li>
-<li>Discourage others</li>
-</ul>
-</li>
-<li>What to check<ul>
-<li>Code style</li>
-<li>Readability</li>
-<li>Corner case (need senior ppl diswho familiar the business logic)</li>
-<li>Error handling</li>
-<li>Test case (need to review test case too!)</li>
-<li>Mini architecture (repeat code, consistent const, private vs public variable)</li>
-<li>Big architecture, folder structure, inheritance, design pattern</li>
-<li>Don’t be too emotional</li>
-</ul>
-</li>
-</ul>
-<h2 id="How-to-get-paid-what-you’re-worth"><a href="#How-to-get-paid-what-you’re-worth" class="headerlink" title="How to get paid what you’re worth"></a><a href="https://www.facebook.com/TED/videos/10160697873485652/" target="_blank" rel="noopener">How to get paid what you’re worth</a></h2><ul>
-<li>People only pay what they think you’re worth<ul>
-<li>But you control their thinking</li>
-<li>We need to clearly define and communicating your value</li>
-</ul>
-</li>
-<li>Key question to ask when evaluating your value<ul>
-<li>What are my clients’ needs and how do I meet them?</li>
-<li>What is my unique skill set that makes me better qualified to serve my clients?</li>
-<li>What do I do that no one else does?</li>
-<li>What problems do I solve for clients?</li>
-<li>What value do I add?</li>
-</ul>
-</li>
-</ul>
-<h2 id="為何休息後更焦慮更沒動力？可能我只是在打發時間"><a href="#為何休息後更焦慮更沒動力？可能我只是在打發時間" class="headerlink" title="為何休息後更焦慮更沒動力？可能我只是在打發時間"></a><a href="https://www.playpcesor.com/2018/09/true-rest.html" target="_blank" rel="noopener">為何休息後更焦慮更沒動力？可能我只是在打發時間</a></h2><ul>
-<li>「休息」和「打發時間」是不同的</li>
-<li>休息時有一件「需要專注投入的事情」</li>
-<li>休息時進行一個「相對沒壓力的挑戰與練習」</li>
-<li>「休息」是另一種有目標的行動</li>
-</ul>
-<h2 id="叫人意想不到的激勵科學-TED-中英文字幕"><a href="#叫人意想不到的激勵科學-TED-中英文字幕" class="headerlink" title="叫人意想不到的激勵科學 (TED 中英文字幕)"></a><a href="https://www.youtube.com/watch?v=rFVhkIrVDzM" target="_blank" rel="noopener">叫人意想不到的激勵科學 (TED 中英文字幕)</a></h2><p>外在獎勵可以令人集中，可以有效令人完成簡單嘅工作。<br>創意工作冇清晰嘅界定，冇單一嘅solution，外在獎勵令人視野更窄。唔可以改善創意工作嘅performance，有時候仲令情況惡化。<br>新世代嘅人力管理重點</p>
-<ul>
-<li>Autonomy</li>
-<li>Mastery</li>
-<li>Purpose</li>
-</ul>
-<h2 id="Why-do-mirrors-flip-horizontally-but-not-vertically"><a href="#Why-do-mirrors-flip-horizontally-but-not-vertically" class="headerlink" title="Why do mirrors flip horizontally (but not vertically)?"></a><a href="https://ed.ted.com/featured/HAILYIAb#review" target="_blank" rel="noopener">Why do mirrors flip horizontally (but not vertically)?</a></h2><p>Because we filp it horizontally when we present the item to mirror.</p>
-<h2 id="What-is-imposter-syndrome-and-how-can-you-combat-it"><a href="#What-is-imposter-syndrome-and-how-can-you-combat-it" class="headerlink" title="What is imposter syndrome and how can you combat it?"></a><a href="https://www.ted.com/talks/elizabeth_cox_what_is_imposter_syndrome_and_how_can_you_combat_it" target="_blank" rel="noopener">What is imposter syndrome and how can you combat it?</a></h2><p>How to combat imposter syndrome</p>
-<ul>
-<li>Receiving positive feedback, cannot ease feelings of fraudulence</li>
-<li>Hearing that an advisor or mentor has experienced feelings of imposterism can help relieve those feelings</li>
-<li>We can combat your own imposter syndrome by collecting and revisiting positive feedback</li>
-</ul>
-<h2 id="3-Lessons-on-decision-making-from-a-poker-champion"><a href="#3-Lessons-on-decision-making-from-a-poker-champion" class="headerlink" title="3 Lessons on decision making from a poker champion"></a><a href="https://www.ted.com/talks/liv_boeree_3_lessons_on_decision_making_from_a_poker_champion" target="_blank" rel="noopener">3 Lessons on decision making from a poker champion</a></h2><ul>
-<li>Think about how much go to ourselves when success. Avoid ignoring the luck factor and over-estimate our skills.</li>
-<li>Quantifying our thinking.<ul>
-<li>Train ourself think in number.</li>
-<li>Try to use more precise words, or speak in numbers</li>
-</ul>
-</li>
-<li>Gut feeling good at handling everyday-things we have lots of experiences<ul>
-<li>Slow and careful analysis is better for big things</li>
-</ul>
-</li>
-<li>3 Interesting memes by the speaker<ul>
-<li>Success is sweetest when you achieve it across a large sample size.</li>
-<li>Your gut is your friend and so is a cost-benefit analysis</li>
-<li>The future is unknown, but you can damn well try and estimate it.</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-31/" data-id="cjqpaz1vj0027bs65rxdgbwma" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-31/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-the-power-of-less" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/the-power-of-less/" class="article-date">
-  <time datetime="2018-10-13T16:00:00.000Z" itemprop="datePublished">2018-10-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/the-power-of-less/">少做一點不會死!</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>現代人生活太多資訊，太多選擇，與其chur盡自己，提升productivity，倒不如簡化生活，選擇重要嘅野去做</p>
-        
-          <p class="article-more-link">
-            <a href="/review/the-power-of-less/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/the-power-of-less/" data-id="cjqpaz20a00b6bs650ild64jf" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/the-power-of-less/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-好員工才難帶" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/好員工才難帶/" class="article-date">
-  <time datetime="2018-10-06T16:00:00.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/好員工才難帶/">好員工才難帶</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>講點樣去管理員工，每個charpter都有一個故事，幾易睇，不過有D故事感覺上流流地。<br>係網上揾唔到有關作者陳珺安嘅資料，作者嘅水平存疑，不過本書係淺，都算係一本唔錯嘅入門level嘅書。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/好員工才難帶/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/好員工才難帶/" data-id="cjqpaz20s00c2bs65jet2tynm" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/好員工才難帶/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-freakonomics" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/freakonomics/" class="article-date">
-  <time datetime="2018-10-06T16:00:00.000Z" itemprop="datePublished">2018-10-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/freakonomics/">蘋果橘子經濟學</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本書用一D經濟學嘅concept去分析社會現象嘅成因，用統計學同經驗學工具去分析問題。作者唔怕得罪人，唔怕指出一D政治唔正確嘅解釋，相當有趣。</p>
-        
-          <p class="article-more-link">
-            <a href="/review/freakonomics/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/freakonomics/" data-id="cjqpaz1yj007ubs65ev4rvpdq" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/freakonomics/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -771,7 +917,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -784,23 +930,23 @@
       <ul>
         
           <li>
-            <a href="/commentary/commentaries-33/">簡評三十三</a>
-          </li>
-        
-          <li>
             <a href="/review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/commentary/commentaries-37/">簡評三十七</a>
           </li>
         
           <li>
-            <a href="/commentary/commentaries-32/">簡評三十二</a>
+            <a href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
           </li>
         
           <li>
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/commentary/commentaries-36/">簡評三十六</a>
+          </li>
+        
+          <li>
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
           </li>
         
       </ul>

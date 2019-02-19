@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2018 | Change, Adapt, Survival</title>
+  <title>Express freeze by sinon fake timer | Change, Adapt, Survival</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Change, Adapt, Survival">
-<meta property="og:url" content="http://199911.github.io/archives/2018/page/8/index.html">
+  <meta name="description" content="I have a integration test related to JWT on Express.js server. I want to add a test case on expiredJWT. So I use sinon to inject a fake timer. After I added the fake timer, the whole integration tests">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Express freeze by sinon fake timer">
+<meta property="og:url" content="http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/index.html">
 <meta property="og:site_name" content="Change, Adapt, Survival">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="I have a integration test related to JWT on Express.js server. I want to add a test case on expiredJWT. So I use sinon to inject a fake timer. After I added the fake timer, the whole integration tests">
+<meta property="og:locale" content="diary">
+<meta property="og:updated_time" content="2019-02-09T13:46:24.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Change, Adapt, Survival">
+<meta name="twitter:title" content="Express freeze by sinon fake timer">
+<meta name="twitter:description" content="I have a integration test related to JWT on Express.js server. I want to add a test case on expiredJWT. So I use sinon to inject a fake timer. After I added the fake timer, the whole integration tests">
   
     <link rel="alternate" href="/atom.xml" title="Change, Adapt, Survival" type="application/atom+xml">
   
@@ -60,46 +64,88 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/review/advantage-of-introverts/" class="archive-article-date">
-  <time datetime="2017-12-31T16:00:00.000Z" itemprop="datePublished">Jan 1</time>
+        <section id="main"><article id="post-express-freeze-by-sinon-fake-timer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/diary/express-freeze-by-sinon-fake-timer/" class="article-date">
+  <time datetime="2019-02-08T16:00:00.000Z" itemprop="datePublished">2019-02-09</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/review/advantage-of-introverts/">內向者的優勢：安靜的人如何展現你的存在，並讓別人聽你的</a>
+    <h1 class="article-title" itemprop="name">
+      Express freeze by sinon fake timer
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
+      </header>
     
-    <a class="extend prev" rel="prev" href="/archives/2018/page/7/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2018/page/6/">6</a><a class="page-number" href="/archives/2018/page/7/">7</a><span class="page-number current">8</span>
-  </nav>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I have a integration test related to JWT on Express.js server. I want to add a test case on expired<br>JWT. So I use sinon to inject a fake timer. After I added the fake timer, the whole integration test<br>stop in the middle and give no response.</p>
+<a id="more"></a>
+<p>After investigation, I found out reason and the explanation in this <a href="https://github.com/expressjs/express/issues/2447" target="_blank" rel="noopener">Github issue</a>.</p>
+<p>It is because Express.js dependent on the global time function which is mocked by fake timer. As<br>“time” is frozen, the server does not run and give no response.</p>
+<p>The solution is to set <code>shouldAdvanceTime</code> to true in fake timer’s config. Mock the timer, without<br>freezing the time.</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/" data-id="cjsbvxf940005mb65d7y6ncc5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/commentary/commentaries-37/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          簡評三十七
+        
+      </div>
+    </a>
+  
+  
+    <a href="/commentary/commentaries-36/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">簡評三十六</div>
+    </a>
+  
+</nav>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Testing -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4208803683107796"
+     data-ad-slot="4489226860"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>  
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -137,7 +183,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -150,23 +196,23 @@
       <ul>
         
           <li>
-            <a href="/commentary/commentaries-33/">簡評三十三</a>
-          </li>
-        
-          <li>
             <a href="/review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/commentary/commentaries-37/">簡評三十七</a>
           </li>
         
           <li>
-            <a href="/commentary/commentaries-32/">簡評三十二</a>
+            <a href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
           </li>
         
           <li>
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/commentary/commentaries-36/">簡評三十六</a>
+          </li>
+        
+          <li>
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
           </li>
         
       </ul>
@@ -200,11 +246,13 @@
 <script>
   var disqus_shortname = 'coding-sunday';
   
+  var disqus_url = 'http://199911.github.io/diary/express-freeze-by-sinon-fake-timer/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

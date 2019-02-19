@@ -62,6 +62,346 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-commentaries-25" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-25/" class="article-date">
+  <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-25/">簡評二十五</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="An-Overview-of-Caching-Methods"><a href="#An-Overview-of-Caching-Methods" class="headerlink" title="An Overview of Caching Methods"></a><a href="https://blog.codeship.com/an-overview-of-caching-methods/" target="_blank" rel="noopener">An Overview of Caching Methods</a></h2><ul>
+<li>Two main caching categories<ul>
+<li>time base</li>
+<li>content base</li>
+</ul>
+</li>
+</ul>
+<h3 id="14-Jan-2019"><a href="#14-Jan-2019" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><ul>
+<li>Caching challenges<ul>
+<li>Expire by time</li>
+<li>Expire by update</li>
+</ul>
+</li>
+<li>Common cache methods<ul>
+<li>Browser caching<ul>
+<li>It talks about HTTP cache header, re-read when needed</li>
+</ul>
+</li>
+<li>Application-level cache<ul>
+<li>In memory cache for slow functions</li>
+</ul>
+</li>
+<li>Key-value data caching<ul>
+<li>Centralized cache like Redis</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-25/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-25/" data-id="cjqpaz1v9001pbs65vnxoa6ft" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-25/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">Architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cache/">Cache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fallcy/">Fallcy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">Network</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">Productivity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/testing/">Testing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-26" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-26/" class="article-date">
+  <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-26/">簡評二十六</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="What-are-the-main-uses-of-Command-design-pattern"><a href="#What-are-the-main-uses-of-Command-design-pattern" class="headerlink" title="What are the main uses of Command design pattern?"></a><a href="https://www.quora.com/What-are-the-main-uses-of-Command-design-pattern" target="_blank" rel="noopener">What are the main uses of Command design pattern?</a></h2><p>Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：</p>
+<ul>
+<li>GUI<ul>
+<li>因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC pattern</li>
+</ul>
+</li>
+<li>Marco recording<ul>
+<li>因為要record同replay行過嘅步驟，decouple左之後，只需要儲低個request object就做到</li>
+</ul>
+</li>
+<li>Multi-step undo<ul>
+<li>Similar to Marco recording</li>
+</ul>
+</li>
+<li>Networking<ul>
+<li>Remote execute嘅情況，request generate object 同 execute object唔係同一部機上邊，焗住要decouple</li>
+</ul>
+</li>
+<li>Progress bar<ul>
+<li>Decouple左個execution做一個個step之後，我地track住個request object，就可以知道個progress</li>
+</ul>
+</li>
+<li>Transaction<ul>
+<li>Similar to multi-step undo</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-26/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-26/" data-id="cjqpaz1vb001sbs657th6d8b5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-26/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gps/">GPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/startup/">Startup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-不焦慮-學冥想" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/不焦慮-學冥想/" class="article-date">
+  <time datetime="2018-07-08T16:00:00.000Z" itemprop="datePublished">2018-07-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/不焦慮-學冥想/">不焦慮 學冥想</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>E本書講冥想有咩好處，又有簡單介紹點樣冥想。不過文中有D例子唔係咁make sense，內容結構混亂，有D類似嘅point係唔同嘅章節重覆出現，略睇即可。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/不焦慮-學冥想/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/不焦慮-學冥想/" data-id="cjqpaz20p00bvbs65qkspixac" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/不焦慮-學冥想/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-59s-think-a-little-change-a-lot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/review/59s-think-a-little-change-a-lot/" class="article-date">
+  <time datetime="2018-07-07T16:00:00.000Z" itemprop="datePublished">2018-07-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/review/">Review</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/review/59s-think-a-little-change-a-lot/">怪咖心理學(2)：59秒啟動正能量</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>文中提供一D好簡單就做到嘅心理學技巧去改變自己。本書係幾得意同幾有用。</p>
+        
+          <p class="article-more-link">
+            <a href="/review/59s-think-a-little-change-a-lot/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/review/59s-think-a-little-change-a-lot/" data-id="cjqpaz1xh005sbs65nuxwjgdf" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/review/59s-think-a-little-change-a-lot/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-meeting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/knowledge/meeting/" class="article-date">
+  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/knowledge/">Knowledge</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/knowledge/meeting/">Meeting technique</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After reading this, you should be able to reduce time spending on meetings and make the meeting more efficient.</p>
+        
+          <p class="article-more-link">
+            <a href="/knowledge/meeting/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/knowledge/meeting/" data-id="cjqpaz1xa005cbs654mfrq9of" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/knowledge/meeting/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-code-smell" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/knowledge/code-smell/" class="article-date">
+  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/knowledge/">Knowledge</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/knowledge/code-smell/">Code smells</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Adding-a-new-feature-require-changes-of-different-module-in-different-place"><a href="#Adding-a-new-feature-require-changes-of-different-module-in-different-place" class="headerlink" title="Adding a new feature require changes of different module in different place"></a>Adding a new feature require changes of different module in different place</h2><p>It shows the code structure is bad, modules required to change is coupled.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/knowledge/code-smell/" data-id="cjqpaz1x0004pbs65g7b3wafs" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/knowledge/code-smell/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-cloud-infrastructure" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/knowledge/cloud-infrastructure/" class="article-date">
@@ -105,6 +445,69 @@
         <a href="http://199911.github.io/knowledge/cloud-infrastructure/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-commentaries-24" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-24/" class="article-date">
+  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-24/">簡評二十四</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Why-vendors-perform-code-diagnostics-before-taking-over-an-app-developed-by-a-third-party"><a href="#Why-vendors-perform-code-diagnostics-before-taking-over-an-app-developed-by-a-third-party" class="headerlink" title="Why vendors perform code diagnostics before taking over an app developed by a third party"></a><a href="https://blog.oursky.com/2018/03/19/code-review-better-software-project-estimate/" target="_blank" rel="noopener">Why vendors perform code diagnostics before taking over an app developed by a third party</a></h2><p>2 steps before taking over the code base</p>
+<ul>
+<li>Codebase review<ul>
+<li>is it complete (and matches the deployed version)</li>
+<li>does it have clear commit messages</li>
+<li>is it easy to setup the environment</li>
+</ul>
+</li>
+<li>Exploratory test<ul>
+<li>find out bugs in the existing product</li>
+<li>understand what needs to be fixed, or what bugs existed prior to any new development work</li>
+</ul>
+</li>
+</ul>
+<h3 id="14-Jan-2019"><a href="#14-Jan-2019" class="headerlink" title="14 Jan 2019"></a>14 Jan 2019</h3><p>Good to know how vendor take over an unknown code base.</p>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-24/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-24/" data-id="cjqpaz1v8001lbs65jsigzhme" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-24/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/health/">Health</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">Productivity</a></li></ul>
+
     </footer>
   </div>
   
@@ -238,361 +641,6 @@
 
 
   
-    <article id="post-commentaries-23" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-23/" class="article-date">
-  <time datetime="2018-06-02T16:00:00.000Z" itemprop="datePublished">2018-06-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-23/">簡評二十三</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>發現開始有太多article save低左冇時間睇。有D文就算仔細睇，都係得着唔多。<br>嘗試用limited time速睇，就算睇未曬或睇唔明都要process左先，好過積住係度。</p>
-<h2 id="一至千萬的藝術（二）–-從零蓋起雲端儲存的巨量倉庫"><a href="#一至千萬的藝術（二）–-從零蓋起雲端儲存的巨量倉庫" class="headerlink" title="一至千萬的藝術（二）– 從零蓋起雲端儲存的巨量倉庫"></a><a href="https://yowureport.com/9515/" target="_blank" rel="noopener">一至千萬的藝術（二）– 從零蓋起雲端儲存的巨量倉庫</a></h2><p>「一致性雜湊環〈Consistent hash ring〉可以令re-shard果時唔洗成個database D record都要搬，更加易scale。DynamoDB 好似係用E個technique。</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-23/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-23/" data-id="cjqpaz1v6001ibs655q0mb8fj" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-23/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/agile/">Agile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/health/">Health</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/local-storage/">Local storage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/productivity/">Productivity</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-19" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-19/" class="article-date">
-  <time datetime="2018-05-08T16:00:00.000Z" itemprop="datePublished">2018-05-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-19/">簡評十九</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="A-quick-look-at-the-git-object-store"><a href="#A-quick-look-at-the-git-object-store" class="headerlink" title="A quick look at the git object store"></a><a href="https://dev.to/imjacobclark/a-quick-look-at-the-git-object-store-290j" target="_blank" rel="noopener">A quick look at the git object store</a></h2><p>Can read git doc to know more about git’s internal</p>
-<ul>
-<li>git is a key value object store. With file as value, and file’s SHA1 hash as key.</li>
-<li>git use first two charactors as directory for the key value store</li>
-<li>Commit hash is the key of the commit object</li>
-<li>A commit object contain meta data of commit and the files and directories object created in this commit</li>
-<li>Branch is a pointer to a commit</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-19/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-19/" data-id="cjqpaz1uz0015bs65csz37qo5" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-19/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-talent-is-overrated" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/talent-is-overrated/" class="article-date">
-  <time datetime="2018-05-05T16:00:00.000Z" itemprop="datePublished">2018-05-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/talent-is-overrated/">Talent is Overrated: What Really Separates World-Class Performers from Everybody Else</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主要講刻意練習，有一D簡單嘅advice。睇完本書之後我睇過Amazon d review，似乎有其他更好嘅書教人點樣刻意練習。<br>成為卓越往往有好多代價同犧牲，花費幾十年嘅光陰係咪值得？</p>
-        
-          <p class="article-more-link">
-            <a href="/review/talent-is-overrated/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/talent-is-overrated/" data-id="cjqpaz1zy00afbs657xrtk3ou" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/talent-is-overrated/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-how-to-win-friends-and-influence-people" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/how-to-win-friends-and-influence-people/" class="article-date">
-  <time datetime="2018-05-03T16:00:00.000Z" itemprop="datePublished">2018-05-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/how-to-win-friends-and-influence-people/">How to Win Friends and Influence People</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>主要講點樣同人溝通，建立友誼同影響他人。<br>書嘅結構唔算好緊密，佢歸納左一D溝通技巧，再加上一D例子解釋。D技巧唔太複雜，但係點樣apply同咩時候apply就冇提及，而E D先係重點。</p>
-<p>本書嘅內容好正面，繁體版嘅名都好正常，但唔知點解簡體版就翻譯做「人性的弱點」，可能係同社會文化有關，用黎吸引讀者</p>
-        
-          <p class="article-more-link">
-            <a href="/review/how-to-win-friends-and-influence-people/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/how-to-win-friends-and-influence-people/" data-id="cjqpaz1yr008abs65kpuristx" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/how-to-win-friends-and-influence-people/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-22" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-22/" class="article-date">
-  <time datetime="2018-05-01T16:00:00.000Z" itemprop="datePublished">2018-05-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-22/">簡評二十二</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MonolithFirst"><a href="#MonolithFirst" class="headerlink" title="MonolithFirst"></a><a href="https://martinfowler.com/bliki/MonolithFirst.html" target="_blank" rel="noopener">MonolithFirst</a></h2><ul>
-<li>You shouldn’t start a new project with microservices, even if you’re sure your application will be big enough to make it worthwhile.<ul>
-<li>This remind me “Pattern is discovered, not invented”</li>
-</ul>
-</li>
-<li>It is difficult to refactor services with wrong bounded contexts.<ul>
-<li>Better identify the boundaries by building monolith architecture</li>
-</ul>
-</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-22/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-22/" data-id="cjqpaz1v5001fbs65ozzxw98o" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-22/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hammock-driven-development" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/hammock-driven-development/" class="article-date">
-  <time datetime="2018-04-30T16:00:00.000Z" itemprop="datePublished">2018-05-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/hammock-driven-development/">10 ways to have a better conversation</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This video is talking about how to solve difficult computer science problem, not about generic programming.<br>In the context of video, building feature is not solving problem. The video suggest you to write everything down.</p>
-        
-          <p class="article-more-link">
-            <a href="/review/hammock-driven-development/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/hammock-driven-development/" data-id="cjqpaz1yl007xbs65r6g4gprx" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/hammock-driven-development/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-commentaries-21" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/commentary/commentaries-21/" class="article-date">
-  <time datetime="2018-04-29T16:00:00.000Z" itemprop="datePublished">2018-04-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-21/">簡評二十一</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going"><a href="#A-Brief-History-of-CSS-in-JS-How-We-Got-Here-and-Where-We’re-Going" class="headerlink" title="A Brief History of CSS-in-JS: How We Got Here and Where We’re Going"></a><a href="https://levelup.gitconnected.com/a-brief-history-of-css-in-js-how-we-got-here-and-where-were-going-ea6261c19f04" target="_blank" rel="noopener">A Brief History of CSS-in-JS: How We Got Here and Where We’re Going</a></h2><p>以前D人decouple webpage做html, css 同javascript，點解D人又要merge返埋三樣野？<br>主要係因為生態嘅改變，以前嘅web只係document，但係易家個web越黎越流行web app，用component為單位。<br>Separation of conern 嘅改變做就左CSS in JS.</p>
-        
-          <p class="article-more-link">
-            <a href="/commentary/commentaries-21/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-21/" data-id="cjqpaz1v3001dbs65q0g5qd15" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/commentary/commentaries-21/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -637,7 +685,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -650,23 +698,23 @@
       <ul>
         
           <li>
-            <a href="/commentary/commentaries-33/">簡評三十三</a>
-          </li>
-        
-          <li>
             <a href="/review/重遇未知的自己/">重遇未知的自己</a>
           </li>
         
           <li>
-            <a href="/diary/tuning-mysql-query-performance/">Tuning MySQL query performance</a>
+            <a href="/commentary/commentaries-37/">簡評三十七</a>
           </li>
         
           <li>
-            <a href="/commentary/commentaries-32/">簡評三十二</a>
+            <a href="/diary/express-freeze-by-sinon-fake-timer/">Express freeze by sinon fake timer</a>
           </li>
         
           <li>
-            <a href="/review/101-business-ideas-that-will-change-the-way-you-work/">什麼時候不去開會比較好？</a>
+            <a href="/commentary/commentaries-36/">簡評三十六</a>
+          </li>
+        
+          <li>
+            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
           </li>
         
       </ul>
