@@ -62,6 +62,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-commentaries-26" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/commentary/commentaries-26/" class="article-date">
+  <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/commentary/commentaries-26/">簡評二十六</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="What-are-the-main-uses-of-Command-design-pattern"><a href="#What-are-the-main-uses-of-Command-design-pattern" class="headerlink" title="What are the main uses of Command design pattern?"></a><a href="https://www.quora.com/What-are-the-main-uses-of-Command-design-pattern" target="_blank" rel="noopener">What are the main uses of Command design pattern?</a></h2><p>Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：</p>
+<ul>
+<li>GUI<ul>
+<li>因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC pattern</li>
+</ul>
+</li>
+<li>Marco recording<ul>
+<li>因為要record同replay行過嘅步驟，decouple左之後，只需要儲低個request object就做到</li>
+</ul>
+</li>
+<li>Multi-step undo<ul>
+<li>Similar to Marco recording</li>
+</ul>
+</li>
+<li>Networking<ul>
+<li>Remote execute嘅情況，request generate object 同 execute object唔係同一部機上邊，焗住要decouple</li>
+</ul>
+</li>
+<li>Progress bar<ul>
+<li>Decouple左個execution做一個個step之後，我地track住個request object，就可以知道個progress</li>
+</ul>
+</li>
+<li>Transaction<ul>
+<li>Similar to multi-step undo</li>
+</ul>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/commentary/commentaries-26/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/commentary/commentaries-26/" data-id="cjqpaz1vb001sbs657th6d8b5" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/commentary/commentaries-26/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gps/">GPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/startup/">Startup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-commentaries-25" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/commentary/commentaries-25/" class="article-date">
@@ -139,14 +214,14 @@
 
 
   
-    <article id="post-commentaries-26" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-bug-caused-by-duck-typing" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/commentary/commentaries-26/" class="article-date">
+    <a href="/diary/bug-caused-by-duck-typing/" class="article-date">
   <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/commentary/">Commentary</a>
+    <a class="article-category-link" href="/categories/diary/">Diary</a>
   </div>
 
   </div>
@@ -157,7 +232,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/commentary/commentaries-26/">簡評二十六</a>
+      <a class="article-title" href="/diary/bug-caused-by-duck-typing/">Bug caused by duck typing</a>
     </h1>
   
 
@@ -165,47 +240,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="What-are-the-main-uses-of-Command-design-pattern"><a href="#What-are-the-main-uses-of-Command-design-pattern" class="headerlink" title="What are the main uses of Command design pattern?"></a><a href="https://www.quora.com/What-are-the-main-uses-of-Command-design-pattern" target="_blank" rel="noopener">What are the main uses of Command design pattern?</a></h2><p>Command pattern 有時好似有D dummy，無端端要decouple generate request 同 execute request 嘅object。但係現實中有以下場境：</p>
-<ul>
-<li>GUI<ul>
-<li>因為UI(request generate object)，成日要轉，所以最好拆開，亦姐係MVC pattern</li>
-</ul>
-</li>
-<li>Marco recording<ul>
-<li>因為要record同replay行過嘅步驟，decouple左之後，只需要儲低個request object就做到</li>
-</ul>
-</li>
-<li>Multi-step undo<ul>
-<li>Similar to Marco recording</li>
-</ul>
-</li>
-<li>Networking<ul>
-<li>Remote execute嘅情況，request generate object 同 execute object唔係同一部機上邊，焗住要decouple</li>
-</ul>
-</li>
-<li>Progress bar<ul>
-<li>Decouple左個execution做一個個step之後，我地track住個request object，就可以知道個progress</li>
-</ul>
-</li>
-<li>Transaction<ul>
-<li>Similar to multi-step undo</li>
-</ul>
-</li>
-</ul>
+        <p>之前寫Javascript，無意中發現左一個唔小心用左duck typing 而做成嘅bug。</p>
         
           <p class="article-more-link">
-            <a href="/commentary/commentaries-26/#more">Read More</a>
+            <a href="/diary/bug-caused-by-duck-typing/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://199911.github.io/commentary/commentaries-26/" data-id="cjqpaz1vb001sbs657th6d8b5" class="article-share-link">Share</a>
+      <a data-url="http://199911.github.io/diary/bug-caused-by-duck-typing/" data-id="cjqpaz1w0002xbs65cja6nke5" class="article-share-link">Share</a>
       
-        <a href="http://199911.github.io/commentary/commentaries-26/#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://199911.github.io/diary/bug-caused-by-duck-typing/#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/design-pattern/">Design pattern</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gps/">GPS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/learning-skills/">Learning skills</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/philosophy/">Philosophy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/startup/">Startup</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-review/">Video review</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">Javascript</a></li></ul>
 
     </footer>
   </div>
@@ -312,53 +361,6 @@
 
 
   
-    <article id="post-meeting" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/knowledge/meeting/" class="article-date">
-  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/knowledge/">Knowledge</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/knowledge/meeting/">Meeting technique</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After reading this, you should be able to reduce time spending on meetings and make the meeting more efficient.</p>
-        
-          <p class="article-more-link">
-            <a href="/knowledge/meeting/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/knowledge/meeting/" data-id="cjqpaz1xa005cbs654mfrq9of" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/knowledge/meeting/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-code-smell" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/knowledge/code-smell/" class="article-date">
@@ -443,6 +445,53 @@
       <a data-url="http://199911.github.io/knowledge/cloud-infrastructure/" data-id="cjqpaz1wu004dbs65pp9jkhn9" class="article-share-link">Share</a>
       
         <a href="http://199911.github.io/knowledge/cloud-infrastructure/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-meeting" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/knowledge/meeting/" class="article-date">
+  <time datetime="2018-07-01T16:00:00.000Z" itemprop="datePublished">2018-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/knowledge/">Knowledge</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/knowledge/meeting/">Meeting technique</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After reading this, you should be able to reduce time spending on meetings and make the meeting more efficient.</p>
+        
+          <p class="article-more-link">
+            <a href="/knowledge/meeting/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://199911.github.io/knowledge/meeting/" data-id="cjqpaz1xa005cbs654mfrq9of" class="article-share-link">Share</a>
+      
+        <a href="http://199911.github.io/knowledge/meeting/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -564,83 +613,6 @@
 
 
   
-    <article id="post-dont-believe-everything-you-think" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/review/dont-believe-everything-you-think/" class="article-date">
-  <time datetime="2018-06-03T16:00:00.000Z" itemprop="datePublished">2018-06-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/review/">Review</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/review/dont-believe-everything-you-think/">別掉入思考的陷阱</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本書講人嘅六大偏見，唔係好hardcore，幾易睇，有D point已經聽過。比較superise係，有D以前聽過嘅結論原來係流嘅。睇黎可能要係Todo list加個求證category。</p>
-<p>諗返起，可信性高嘅收費媒體都值得訂閱，下下求證都幾煩下。</p>
-<ul>
-<li>六大思考陷阱<ol>
-<li>偏愛故事，而唔係數字<ul>
-<li>熟人嘅故事令人印像深刻，好易以偏蓋全</li>
-</ul>
-</li>
-<li>尋求支持性意見<ul>
-<li>Infinite monkey theorem</li>
-<li>你主動去揾大量嘅證據你想證明嘅野，總會有一日撞中你想揾嘅野，但唔代表就係可信<ul>
-<li>說服他人嘅時候要諗下E樣野</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>鮮少正視機遇同巧合係人生中嘅扮演角色</li>
-<li>對世界有錯誤感知<ul>
-<li>大腦好易呃，幻覺比你想像中常見</li>
-</ul>
-</li>
-<li>過份簡化事物</li>
-<li>記憶好易出錯<ul>
-<li>可以引導人諗起唔存在嘅記憶</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/review/dont-believe-everything-you-think/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://199911.github.io/review/dont-believe-everything-you-think/" data-id="cjqpaz1y9007fbs65at9pw8rf" class="article-share-link">Share</a>
-      
-        <a href="http://199911.github.io/review/dont-believe-everything-you-think/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/book-review/">Book review</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -685,7 +657,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
     </div>
   </div>
 
@@ -702,6 +674,10 @@
           </li>
         
           <li>
+            <a href="/review/活著，這件事/">關於活著這件事（第一部）</a>
+          </li>
+        
+          <li>
             <a href="/commentary/commentaries-37/">簡評三十七</a>
           </li>
         
@@ -711,10 +687,6 @@
         
           <li>
             <a href="/commentary/commentaries-36/">簡評三十六</a>
-          </li>
-        
-          <li>
-            <a href="/review/稻盛和夫的哲學-人為什麼活著/">稻盛和夫的哲學：人為什麼活著</a>
           </li>
         
       </ul>
